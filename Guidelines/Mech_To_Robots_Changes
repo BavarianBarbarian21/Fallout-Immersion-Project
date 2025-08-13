@@ -1,0 +1,35 @@
+Conduct Rimworld patch operations according to the following list.
+In ThingDef and PawnKindDef change the node Label according to the following list.
+In ThingDef change the node Description to a fitting Fallout themed description of the respective robot.
+In ThingDef change the node statBase and give everybody a move speed of 2.0.
+If in the list entry of the respective mech there is a change from for example Medium to Light then replace the ParentName of the respective mech in ThingDef from for example MediumMechanoid to LightMechanoid as well as in PawnKindDef change from MediumMechanoidKind to LightMechanoidKind.
+In ThingDef add work types according to the list.
+
+
+Mech_Militor: Change Label to Eyebot; Light
+Mech_Lifter: Change Label to Collectron; Light; Enable Work Type PlantCutting Hauling
+Mech_Constructoid: Change Label to Constructron; Light; Enable Work Type Construction
+Mech_Fabricor: Change Label to Factotron; Light, Enable Work Type Crafting Smithing Tailoring
+Mech_Agrihand: Change Label to Mister Farmhand; Light; Enable Work Type Growing Handling 
+Mech_Cleansweeper: Change Label to Mister Handy; Light; Enable Work Type Cooking Cleaning Firefighter BasicWorker 
+Mech_Paramedic: Change Label to Miss Nanny; Light Enable Work Type Nursing Doctor Warden 
+
+Mech_Scyther: Change Label to Mister Gutsy Chopper; Medium
+Mech_Pikeman: Change Label to Protectron; Light
+Mech_Lancer: Change Label to Mister Gutsy Gunner; Medium 
+Mech_CentipedeBlaster: Change Label to Sentry Bot Rocket Launcher; Heavy
+Mech_CentipedeGunner: Change Label to Sentry Bot Gunner; Heavy
+Mech_CentipedeBurner: Change Label to Sentry Bot Flamer; Heavy
+Mech_Legionary: Change Label to Cyberdog; Heavy; 
+Mech_Tesseron:Change Label to Assaultron; Heavy
+Mech_Scorcher: Change Label to Mister Gutsy Flamer; Medium
+Mech_Tunneler: Change Label to Utilitron; Light
+Mech_Diabolus: Change Label to Hydra; SuperHeavy
+Mech_Centurion: Change Label to Robobrain; Heavy
+Mech_Warqueen: Change Label to Sheepsquatch; Super Heavy
+
+Mech_Cyclops: Change Label to Eyebot Duraframe; Medium
+
+Mech_WarUrchin: Change Label to Hydra Eyebot; Super Heavy
+Mech_Termite: Change Label to Crashed Vertibird Robot; Super Heavy
+Mech_Apocriton: Change Label to Deathbot; Super Heavy

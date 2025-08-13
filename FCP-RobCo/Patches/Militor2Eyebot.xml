@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Eyebot ThingDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Mech_Militor"]</xpath>
+    <value>
+        <label>Eyebot</label>
+        <description>This is an Eyebot.</description>
+        <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <lifeStageAges>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>0</minAge>
+                <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+                <soundCall>Pawn_Mech_Militor_Call</soundCall>
+            </li>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>100</minAge>
+                <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+                <soundCall>Pawn_Mech_Militor_Call</soundCall>
+            </li>
+            </lifeStageAges>
+        </race>
+    </value>
+  </Operation>
+
+  <!-- Eyebot PawnKindDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+    <value>
+        <label>Eyebot</label>
+        <race>Mech_Militor</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/Militor</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/MilitorAncient</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunShortRange</li>
+      </weaponTags>
+    </value>
+  </Operation>
+</Patch>
+
+  <!-- Eyebot RecipeDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="GestateMech_Militor"]</xpath>
+    <value>
+        <label>gestate Eyebot</label>
+        <description>Gestate an Eyebot.</description>
+        <products>
+        <Mech_Militor>1</Mech_Militor>
+        </products>
+        <descriptionHyperlinks>
+        <ThingDef>Mech_Militor</ThingDef>
+        </descriptionHyperlinks>
+    </value>
+  </Operation>
+
