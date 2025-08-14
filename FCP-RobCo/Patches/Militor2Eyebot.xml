@@ -30,6 +30,13 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="Mech_Militor"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoid</value>
+  </Operation>
+
+
   <!-- Eyebot PawnKindDef -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
@@ -70,7 +77,12 @@
       </weaponTags>
     </value>
   </Operation>
-</Patch>
+
+ <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoidKind</value>
+  </Operation>
 
   <!-- Eyebot RecipeDef -->
   <Operation Class="PatchOperationReplace">
@@ -87,3 +99,6 @@
     </value>
   </Operation>
 
+</Patch>
+
+ 
