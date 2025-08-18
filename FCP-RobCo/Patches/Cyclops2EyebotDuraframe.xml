@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Eyebot ThingDef -->
+  <!-- Eyebot Duraframe ThingDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Mech_Militor"]</xpath>
+    <xpath>Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
     <value>
-        <label>Eyebot</label>
-        <description>This is an Eyebot.</description>
+        <label>Eyebot Duraframe</label>
+        <description>This is an Eyebot Duraframe.</description>
         <statBases>
             <MoveSpeed>2</MoveSpeed>
         </statBases>
@@ -14,37 +14,37 @@
             <li>
                 <def>MechanoidFullyFormed</def>
                 <minAge>0</minAge>
-                <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-                <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-                <soundCall>Pawn_Mech_Militor_Call</soundCall>
+                <soundWounded>Pawn_Mech_Cyclops_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Cyclops_Death</soundDeath>
+                <soundCall>Pawn_Mech_Cyclops_Call</soundCall>
             </li>
             <li>
                 <def>MechanoidFullyFormed</def>
                 <minAge>100</minAge>
-                <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-                <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-                <soundCall>Pawn_Mech_Militor_Call</soundCall>
+                <soundWounded>Pawn_Mech_Cyclops_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Cyclops_Death</soundDeath>
+                <soundCall>Pawn_Mech_Cyclops_Call</soundCall>
             </li>
             </lifeStageAges>
         </race>
     </value>
   </Operation>
   <Operation Class="PatchOperationAttributeSet">
-    <xpath>Defs/ThingDef[defName="Mech_Militor"]</xpath>
+    <xpath>Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
     <attribute>ParentName</attribute>
     <value>LightMechanoid</value>
   </Operation>
-  <!-- Eyebot PawnKindDef -->
+  <!-- Eyebot Duraframe PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+    <xpath>Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
     <value>
-        <label>Eyebot</label>
-        <race>Mech_Militor</race>
+        <label>Eyebot Duraframe</label>
+        <race>Mech_Cyclops</race>
         <combatPower>45</combatPower>
         <lifeStages>
             <li>
             <bodyGraphicData>
-                <texPath>Things/Pawn/Mechanoid/Militor</texPath>
+                <texPath>Things/Pawn/Mechanoid/Cyclops</texPath>
                 <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
                 <shaderType>CutoutWithOverlay</shaderType>
                 <graphicClass>Graphic_Multi</graphicClass>
@@ -57,7 +57,7 @@
             </li>
             <li>
             <bodyGraphicData>
-                <texPath>Things/Pawn/Mechanoid/MilitorAncient</texPath>
+                <texPath>Things/Pawn/Mechanoid/CyclopsAncient</texPath>
                 <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
                 <shaderType>CutoutWithOverlay</shaderType>
                 <graphicClass>Graphic_Multi</graphicClass>
@@ -75,21 +75,21 @@
     </value>
   </Operation>
  <Operation Class="PatchOperationAttributeSet">
-    <xpath>Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+    <xpath>Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
     <attribute>ParentName</attribute>
     <value>LightMechanoidKind</value>
   </Operation>
-  <!-- Eyebot RecipeDef -->
+  <!-- Eyebot Duraframe RecipeDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/RecipeDef[defName="GestateMech_Militor"]</xpath>
+    <xpath>Defs/RecipeDef[defName="GestateMech_Cyclops"]</xpath>
     <value>
-        <label>gestate Eyebot</label>
-        <description>Gestate an Eyebot.</description>
+        <label>gestate Eyebot Duraframe</label>
+        <description>Gestate an Eyebot Duraframe.</description>
         <products>
-        <Mech_Militor>1</Mech_Militor>
+        <Mech_Cyclops>1</Mech_Cyclops>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Militor</ThingDef>
+        <ThingDef>Mech_Cyclops</ThingDef>
         </descriptionHyperlinks>
     </value>
   </Operation>
