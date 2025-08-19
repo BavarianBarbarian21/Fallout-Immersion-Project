@@ -1,140 +1,115 @@
 <Patch>
-  <!-- Patch for updating label and description of specified building ThingDefs -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Core</li>
-    </mods>
-    <match>
-      <Operation Class="PatchOperationSequence">
-        <operations>
-          <!-- AncientExostriderRemains -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderRemains"]/label</xpath>
-            <value>crashed Vertibird</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderRemains"]/description</xpath>
-            <value>The remains of a Vertibird, a pre-war military transport aircraft. Scattered with Fallout tech.</value>
-          </li>
-          <!-- AncientExostriderHead -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderHead"]/label</xpath>
-            <value>Vertibird cockpit</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderHead"]/description</xpath>
-            <value>The cockpit of a crashed Vertibird, filled with old controls and shattered glass.</value>
-          </li>
-          <!-- AncientExostriderLeg -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderLeg"]/label</xpath>
-            <value>Vertibird landing gear</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderLeg"]/description</xpath>
-            <value>Landing gear from a Vertibird, twisted and scorched from the crash.</value>
-          </li>
-          <!-- AncientExostriderCannon -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderCannon"]/label</xpath>
-            <value>Vertibird autocannon</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="AncientExostriderCannon"]/description</xpath>
-            <value>A heavy autocannon salvaged from a Vertibird wreck.</value>
-          </li>
-          <!-- BandNode -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BandNode"]/label</xpath>
-            <value>RobCo band node</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BandNode"]/description</xpath>
-            <value>Node for managing RobCo robot control bands.</value>
-          </li>
-          <!-- BurnoutMechlinkBooster -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BurnoutMechlinkBooster"]/label</xpath>
-            <value>RobCo booster</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
-            <value>Boosts the performance of RobCo robots, but risks burnout if overused.</value>
-          </li>
-          <!-- MechbandDish -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="MechbandDish"]/label</xpath>
-            <value>RobCo antenna dish</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="MechbandDish"]/description</xpath>
-            <value>Large dish for broadcasting RobCo robot control signals.</value>
-          </li>
-          <!-- MechGestator -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="MechGestator"]/label</xpath>
-            <value>RobCo gestaltor</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="MechGestator"]/description</xpath>
-            <value>Device for assembling RobCo robots from components.</value>
-          </li>
-          <!-- LargeMechGestator -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="LargeMechGestator"]/label</xpath>
-            <value>military grade RobCo gestaltor</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="LargeMechGestator"]/description</xpath>
-            <value>Advanced device for assembling larger and more complex RobCo robots.</value>
-          </li>
-          <!-- SubcoreEncoder -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreEncoder"]/label</xpath>
-            <value>RobCo encoder</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreEncoder"]/description</xpath>
-            <value>Encodes RobCo circuitboards for robot assembly.</value>
-          </li>
-          <!-- SubcoreSoftscanner -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreSoftscanner"]/label</xpath>
-            <value>RobCo AI scanner</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreSoftscanner"]/description</xpath>
-            <value>Scans and programs RobCo AI subcores.</value>
-          </li>
-          <!-- SubcoreRipscanner -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreRipscanner"]/label</xpath>
-            <value>General Atomic brain extractor</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="SubcoreRipscanner"]/description</xpath>
-            <value>Extracts and analyzes brains for advanced RobCo robot AI.</value>
-          </li>
-          <!-- BasicRecharger -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BasicRecharger"]/label</xpath>
-            <value>RobCo recharger</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BasicRecharger"]/description</xpath>
-            <value>Lightweight RobCo robots can recharge here. Produces and stores wastepacks internally.</value>
-          </li>
-          <!-- StandardRecharger -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="StandardRecharger"]/label</xpath>
-            <value>military grade RobCo recharger</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="StandardRecharger"]/description</xpath>
-            <value>Medium, heavy, and ultraheavy RobCo robots can recharge here. Produces and stores wastepacks internally.</value>
-          </li>
-        </operations>
-      </Operation>
-    </match>
+  <!-- AncientExostriderRemains -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderRemains"]/label</xpath>
+    <value>crashed Vertibird</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderRemains"]/description</xpath>
+    <value>The remains of a Vertibird, a pre-war military transport aircraft. Scattered with pre-war tech.</value>
+  </Operation>
+  <!-- AncientExostriderHead -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderHead"]/label</xpath>
+    <value>Vertibird cockpit</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderHead"]/description</xpath>
+    <value>The cockpit of a crashed Vertibird, filled with old controls and shattered glass.</value>
+  </Operation>
+  <!-- AncientExostriderLeg -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderLeg"]/label</xpath>
+    <value>Vertibird landing gear</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderLeg"]/description</xpath>
+    <value>Landing gear from a Vertibird, twisted and scorched from the crash.</value>
+  </Operation>
+  <!-- AncientExostriderCannon -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderCannon"]/label</xpath>
+    <value>Vertibird autocannon</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientExostriderCannon"]/description</xpath>
+    <value>A heavy autocannon salvaged from a Vertibird wreck.</value>
+  </Operation>
+  <!-- BandNode -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BandNode"]/label</xpath>
+    <value>RobCo band node</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BandNode"]/description</xpath>
+    <value>Node for managing RobCo robot control bands.</value>
+  </Operation>
+  <!-- BurnoutMechlinkBooster -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BurnoutMechlinkBooster"]/label</xpath>
+    <value>RobCo booster</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
+    <value>Boosts the performance of RobCo robots, but risks burnout if overused.</value>
+  </Operation>
+  <!-- MechbandDish -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MechbandDish"]/label</xpath>
+    <value>RobCo antenna dish</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MechbandDish"]/description</xpath>
+    <value>Large dish for broadcasting RobCo robot control signals.</value>
+  </Operation>
+  <!-- MechGestator -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/label</xpath>
+    <value>RobCo Workbench</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/description</xpath>
+    <value>Device for assembling RobCo robots from components.</value>
+  </Operation>
+  <!-- BasicRecharger -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="BasicRecharger"]/description</xpath>
+    <value>Lightweight RobCo robots can recharge here. Produces and stores wastepacks internally.</value>
+  </Operation>
+  <!-- StandardRecharger -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="StandardRecharger"]/label</xpath>
+    <value>military grade RobCo recharger</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="StandardRecharger"]/description</xpath>
+    <value>Medium, heavy, and ultraheavy RobCo robots can recharge here. Produces and stores wastepacks internally.</value>
+  </Operation>
+      <!-- SubcoreEncoder -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreEncoder"]/label</xpath>
+    <value>RobCo AI coding terminal</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreEncoder"]/description</xpath>
+    <value>This terminal can be used to create RobCo AI routines.</value>
+  </Operation>
+    <!-- SubcoreSoftscanner -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreSoftscanner"]/label</xpath>
+    <value>RobCo AI subroutine scanner</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreSoftscanner"]/description</xpath>
+    <value>This machine can create AI subroutines by mimicking human brain activity.</value>
+  </Operation>
+     <!-- SubcoreRipscanner -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreRipscanner"]/label</xpath>
+    <value>General Atomics Brain Extractor</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SubcoreRipscanner"]/description</xpath>
+    <value>A General Atomics machine to carefully extract human processor units.</value>
   </Operation>
 </Patch>

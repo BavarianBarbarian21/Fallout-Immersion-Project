@@ -1,50 +1,38 @@
 <Patch>
-  <!-- Patch for updating labels and descriptions for overworld objects and factions -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Core</li>
-    </mods>
-    <match>
-      <Operation Class="PatchOperationSequence">
-        <operations>
-          <!-- AncientComplex_Mechanitor -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/WorldObjectDef[defName="AncientComplex_Mechanitor"]/label</xpath>
-            <value>RobCo ancient complex</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/WorldObjectDef[defName="AncientComplex_Mechanitor"]/description</xpath>
-            <value>An ancient RobCo facility filled with pre-war robotics technology and secrets.</value>
-          </li>
-          <!-- ShuttleCrashing_Mechanitor -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing_Mechanitor"]/label</xpath>
-            <value>RobCo shuttle crash site</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
-            <value>The crash site of a RobCo shuttle, possibly containing valuable robotics salvage.</value>
-          </li>
-          <!-- Mechanitor (Faction) -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/FactionDef[defName="Mechanitor"]/label</xpath>
-            <value>RobCo mechanitor</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/FactionDef[defName="Mechanitor"]/description</xpath>
-            <value>RobCo mechanitors are skilled engineers specializing in pre-war robotics and automation.</value>
-          </li>
-          <!-- Mechanoid (Faction) -->
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/FactionDef[defName="Mechanoid"]/label</xpath>
-            <value>RobCo Industries</value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/FactionDef[defName="Mechanoid"]/description</xpath>
-            <value>RobCo Industries, the legendary robotics manufacturer, now commands armies of robots across the wasteland. Their machines are unified in purpose, but not always well-coordinated in action. Some see them as relics of a lost age, others as the new rulers of the world.</value>
-          </li>
-        </operations>
-      </Operation>
-    </match>
+  <!-- AncientComplex_Mechanitor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="AncientComplex_Mechanitor"]/label</xpath>
+    <value>Ancient RobCo Factory</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="AncientComplex_Mechanitor"]/description</xpath>
+    <value>An ancient RobCo facility filled with pre-war robotics technology and secrets.</value>
+  </Operation>
+  <!-- ShuttleCrashing_Mechanitor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing_Mechanitor"]/label</xpath>
+    <value>Vertibot crash site</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
+    <value>The crash site of a Vertibot, possibly containing valuable robotics salvage.</value>
+  </Operation>
+  <!-- Mechanitor (Faction) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Mechanitor"]/label</xpath>
+    <value>RobCo mechanic</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Mechanitor"]/description</xpath>
+    <value>RobCo mechanics are skilled engineers specializing in pre-war robotics and automation.</value>
+  </Operation>
+  <!-- Mechanoid (Faction) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Mechanoid"]/label</xpath>
+    <value>RobCo Industries</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Mechanoid"]/description</xpath>
+    <value>RobCo Industries, the legendary robotics manufacturer, designed their products to be autonomous. Two centuries after the apocalypse their rouge robots still operate.</value>
   </Operation>
 </Patch>
