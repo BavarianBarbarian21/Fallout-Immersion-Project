@@ -2,8 +2,10 @@
 <Patch>
   <!-- Mister Farmhand ThingDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Mech_Agrihand"]</xpath>
+    <xpath>/Defs/ThingDef[defName="Mech_Agrihand"]</xpath>
     <value>
+    <ThingDef ParentName="LightMechanoid">
+        <defName>Mech_Agrihand</defName>
         <label>Mister Farmhand</label>
         <description>This is a Mister Farmhand.</description>
         <statBases>
@@ -27,17 +29,15 @@
             </li>
             </lifeStageAges>
         </race>
+        </ThingDef>
     </value>
-  </Operation>
-  <Operation Class="PatchOperationAttributeSet">
-    <xpath>Defs/ThingDef[defName="Mech_Agrihand"]</xpath>
-    <attribute>ParentName</attribute>
-    <value>LightMechanoid</value>
   </Operation>
   <!-- Mister Farmhand PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PawnKindDef[defName="Mech_Agrihand"]</xpath>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Agrihand"]</xpath>
     <value>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Agrihand</defName>
         <label>Mister Farmhand</label>
         <race>Mech_Agrihand</race>
         <combatPower>45</combatPower>
@@ -72,17 +72,15 @@
         <weaponTags>
             <li>MechanoidGunShortRange</li>
       </weaponTags>
+      </PawnKindDef>
     </value>
-  </Operation>
- <Operation Class="PatchOperationAttributeSet">
-    <xpath>Defs/PawnKindDef[defName="Mech_Agrihand"]</xpath>
-    <attribute>ParentName</attribute>
-    <value>LightMechanoidKind</value>
   </Operation>
   <!-- Mister Farmhand RecipeDef -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/RecipeDef[defName="GestateMech_Agrihand"]</xpath>
+    <xpath>/Defs/RecipeDef[defName="GestateMech_Agrihand"]</xpath>
     <value>
+    <RecipeDef ParentName="GestateMechanoid">
+        <defName>GestateMech_Agrihand</defName>
         <label>gestate Mister Farmhand</label>
         <description>Gestate a Mister Farmhand.</description>
         <products>
@@ -91,6 +89,7 @@
         <descriptionHyperlinks>
         <ThingDef>Mech_Agrihand</ThingDef>
         </descriptionHyperlinks>
+        </RecipeDef>
     </value>
   </Operation>
 </Patch>
