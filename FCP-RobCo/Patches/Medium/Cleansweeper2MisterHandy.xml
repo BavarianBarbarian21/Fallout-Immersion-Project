@@ -4,14 +4,22 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/ThingDef[defName="Mech_Cleansweeper"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
+    <ThingDef ParentName="BaseMechanoidWalker">
     <defName>Mech_Cleansweeper</defName>
     <label>Mister Handy</label>
     <description>This is a Mister Handy.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>5</MoveSpeed>
     </statBases>
     <race>
+      <body>Mech_Cleansweeper</body>
+        <mechEnabledWorkTypes>
+          <li>Cooking</li>
+          <li>Cleaning</li>
+        </mechEnabledWorkTypes>
+        <mechWorkTypePriorities>
+          <Cleaning>2</Cleaning>
+        </mechWorkTypePriorities>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
@@ -81,8 +89,8 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="GestateMech_Cleansweeper"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Cleansweeper</defName>
+      <RecipeDef ParentName="MediumMechanoidRecipe">
+        <defName>Cleansweeper</defName>
         <label>gestate Mister Handy</label>
         <description>Gestate a Mister Handy.</description>
         <products>

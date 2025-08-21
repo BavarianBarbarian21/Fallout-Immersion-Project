@@ -4,14 +4,22 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="Mech_Agrihand"]</xpath>
     <value>
-    <ThingDef ParentName="LightMechanoid">
+    <ThingDef ParentName="BaseMechanoidWalker">
         <defName>Mech_Agrihand</defName>
         <label>Mister Farmhand</label>
         <description>This is a Mister Farmhand.</description>
         <statBases>
-            <MoveSpeed>2</MoveSpeed>
+            <MoveSpeed>5</MoveSpeed>
         </statBases>
         <race>
+            <body>Mech_Agrihand</body>
+        <mechEnabledWorkTypes>
+          <li>Growing</li>
+          <li>Handling</li>
+        </mechEnabledWorkTypes>
+        <mechWorkTypePriorities>
+          <Growing>2</Growing>
+        </mechWorkTypePriorities>
             <lifeStageAges>
             <li>
                 <def>MechanoidFullyFormed</def>
@@ -79,8 +87,8 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/RecipeDef[defName="GestateMech_Agrihand"]</xpath>
     <value>
-    <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Agrihand</defName>
+    <RecipeDef ParentName="MediumMechanoidRecipe">
+        <defName>Agrihand</defName>
         <label>gestate Mister Farmhand</label>
         <description>Gestate a Mister Farmhand.</description>
         <products>

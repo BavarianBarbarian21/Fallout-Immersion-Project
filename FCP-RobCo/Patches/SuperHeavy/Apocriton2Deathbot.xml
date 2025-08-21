@@ -4,7 +4,7 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/ThingDef[defName="Mech_Apocriton"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
+    <ThingDef ParentName="SuperHeavyMechanoid">
     <defName>Mech_Apocriton</defName>
     <label>Deathbot</label>
     <description>This is a Deathbot.</description>
@@ -37,7 +37,7 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/PawnKindDef[defName="Mech_Apocriton"]</xpath>
   <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="HeavyMechanoidKind">
     <defName>Mech_Apocriton</defName>
     <label>Deathbot</label>
     <race>Mech_Apocriton</race>
@@ -81,8 +81,8 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="GestateMech_Apocriton"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Apocriton</defName>
+      <RecipeDef ParentName="SuperHeavyMechanoidRecipe">
+        <defName>Apocriton</defName>
         <label>gestate Deathbot</label>
         <description>Gestate a Deathbot.</description>
         <products>

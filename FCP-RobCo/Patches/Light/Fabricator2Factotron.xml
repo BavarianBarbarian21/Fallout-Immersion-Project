@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Collectron ThingDef -->
+  <!-- Factotron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Lifter"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Fabricor"]</xpath>
   <value>
     <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Lifter</defName>
-    <label>Collectron</label>
-    <description>This is an Collectron.</description>
+    <defName>Mech_Fabricor</defName>
+    <label>Factotron</label>
+    <description>This is an Factotron.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
     </statBases>
     <race>
+      <body>Mech_Fabricor</body>
+        <mechEnabledWorkTypes>
+          <li>Crafting</li>
+          <li>Smithing</li>
+          <li>Tailoring</li>
+        </mechEnabledWorkTypes>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Lifter_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Lifter_Death</soundDeath>
-        <soundCall>Pawn_Mech_Lifter_Call</soundCall>
+        <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+        <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Lifter_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Lifter_Death</soundDeath>
-        <soundCall>Pawn_Mech_Lifter_Call</soundCall>
+        <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+        <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +39,19 @@
   </value>
   </Operation>
   
-  <!-- Collectron PawnKindDef -->
+  <!-- Factotron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Lifter"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Fabricor"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Lifter</defName>
-    <label>Collectron</label>
-    <race>Mech_Lifter</race>
+    <defName>Mech_Fabricor</defName>
+    <label>Factotron</label>
+    <race>Mech_Fabricor</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Lifter</texPath>
+        <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +64,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/LifterAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +83,19 @@
   </value>
   </Operation>
   
-  <!-- Collectron RecipeDef -->
+  <!-- Factotron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Lifter"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Fabricor"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Lifter</defName>
-        <label>gestate Collectron</label>
-        <description>Gestate an Collectron.</description>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Fabricor</defName>
+        <label>gestate Factotron</label>
+        <description>Gestate an Factotron.</description>
         <products>
-        <Mech_Lifter>1</Mech_Lifter>
+        <Mech_Fabricoator>1</Mech_Fabricoator>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Lifter</ThingDef>
+        <ThingDef>Mech_Fabricor</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

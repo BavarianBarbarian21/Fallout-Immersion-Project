@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Constructron ThingDef -->
+  <!-- Robobrain ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Centurion"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Constructoid</defName>
-    <label>Constructron</label>
-    <description>This is an Constructron.</description>
+    <ThingDef ParentName="HeavyMechanoid">
+    <defName>Mech_Centurion</defName>
+    <label>Robobrain</label>
+    <description>This is an Robobrain.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>3</MoveSpeed>
     </statBases>
     <race>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Constructoid_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Constructoid_Death</soundDeath>
-        <soundCall>Pawn_Mech_Constructoid_Call</soundCall>
+        <soundWounded>Pawn_Mech_Centurion_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Centurion_Death</soundDeath>
+        <soundCall>Pawn_Mech_Centurion_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Constructoid_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Constructoid_Death</soundDeath>
-        <soundCall>Pawn_Mech_Constructoid_Call</soundCall>
+        <soundWounded>Pawn_Mech_Centurion_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Centurion_Death</soundDeath>
+        <soundCall>Pawn_Mech_Centurion_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Constructron PawnKindDef -->
+  <!-- Robobrain PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Centurion"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Constructoid</defName>
-    <label>Constructron</label>
-    <race>Mech_Constructoid</race>
+    <defName>Mech_Centurion</defName>
+    <label>Robobrain</label>
+    <race>Mech_Centurion</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Constructoid</texPath>
+        <texPath>Things/Pawn/Mechanoid/Centurion</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/ConstructoidAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/CenturionAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Constructron RecipeDef -->
+  <!-- Robobrain RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Constructoid"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Centurion"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Constructoid</defName>
-        <label>gestate Constructron</label>
-        <description>Gestate an Constructron.</description>
+      <RecipeDef ParentName="HeavyMechanoidRecipe">
+        <defName>Centurion</defName>
+        <label>gestate Robobrain</label>
+        <description>Gestate an Robobrain.</description>
         <products>
-        <Mech_Constructoid>1</Mech_Constructoid>
+        <Mech_Centurion>1</Mech_Centurion>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Constructoid</ThingDef>
+        <ThingDef>Mech_Centurion</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

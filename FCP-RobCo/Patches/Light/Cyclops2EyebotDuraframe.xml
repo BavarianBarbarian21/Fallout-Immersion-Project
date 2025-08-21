@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Sentry Bot Gunner ThingDef -->
+  <!-- Eyebot Duraframe ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_CentipedeGunner"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_CentipedeGunner</defName>
-    <label>Sentry Bot Gunner</label>
-    <description>This is a Sentry Bot Gunner.</description>
+    <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Cyclops</defName>
+    <label>Eyebot Duraframe</label>
+    <description>This is an Eyebot Duraframe.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>5</MoveSpeed>
     </statBases>
     <race>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_CentipedeGunner_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_CentipedeGunner_Death</soundDeath>
-        <soundCall>Pawn_Mech_CentipedeGunner_Call</soundCall>
+        <soundWounded>Pawn_Mech_Cyclops_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Cyclops_Death</soundDeath>
+        <soundCall>Pawn_Mech_Cyclops_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_CentipedeGunner_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_CentipedeGunner_Death</soundDeath>
-        <soundCall>Pawn_Mech_CentipedeGunner_Call</soundCall>
+        <soundWounded>Pawn_Mech_Cyclops_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Cyclops_Death</soundDeath>
+        <soundCall>Pawn_Mech_Cyclops_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Sentry Bot Gunner PawnKindDef -->
+  <!-- Eyebot Duraframe PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_CentipedeGunner"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_CentipedeGunner</defName>
-    <label>Sentry Bot Gunner</label>
-    <race>Mech_CentipedeGunner</race>
+    <defName>Mech_Cyclops</defName>
+    <label>Eyebot Duraframe</label>
+    <race>Mech_Cyclops</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/CentipedeGunner</texPath>
+        <texPath>Things/Pawn/Mechanoid/Cyclops</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/CentipedeGunnerAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/CyclopsAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Sentry Bot Gunner RecipeDef -->
+  <!-- Eyebot Duraframe RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_CentipedeGunner"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Cyclops"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_CentipedeGunner</defName>
-        <label>gestate Sentry Bot Gunner</label>
-        <description>Gestate a Sentry Bot Gunner.</description>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Cyclops</defName>
+        <label>gestate Eyebot Duraframe</label>
+        <description>Gestate an Eyebot Duraframe.</description>
         <products>
-        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+        <Mech_Cyclops>1</Mech_Cyclops>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_CentipedeGunner</ThingDef>
+        <ThingDef>Mech_Cyclops</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

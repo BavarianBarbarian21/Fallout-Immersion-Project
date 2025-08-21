@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Mister Gutsy Gunner ThingDef -->
+  <!-- Hydra ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Lancer"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Diabolus"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Lancer</defName>
-    <label>Mister Gutsy Gunner</label>
-    <description>This is an Mister Gutsy Gunner.</description>
+    <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Diabolus</defName>
+    <label>Hydra</label>
+    <description>This is an Hydra.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>5</MoveSpeed>
     </statBases>
     <race>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Lancer_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Lancer_Death</soundDeath>
-        <soundCall>Pawn_Mech_Lancer_Call</soundCall>
+        <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+        <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Lancer_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Lancer_Death</soundDeath>
-        <soundCall>Pawn_Mech_Lancer_Call</soundCall>
+        <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+        <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Gunner PawnKindDef -->
+  <!-- Hydra PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Lancer"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Diabolus"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Lancer</defName>
-    <label>Mister Gutsy Gunner</label>
-    <race>Mech_Lancer</race>
+    <defName>Mech_Diabolus</defName>
+    <label>Hydra</label>
+    <race>Mech_Diabolus</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Lancer</texPath>
+        <texPath>Things/Pawn/Mechanoid/Diabolus</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/LancerAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/DiabolusAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Gunner RecipeDef -->
+  <!-- Hydra RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Lancer"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Diabolus"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Lancer</defName>
-        <label>gestate Mister Gutsy Gunner</label>
-        <description>Gestate an Mister Gutsy Gunner.</description>
+      <RecipeDef ParentName="MediumMechanoidRecipe">
+        <defName>Diabolus</defName>
+        <label>gestate Hydra</label>
+        <description>Gestate an Hydra.</description>
         <products>
-        <Mech_Lancer>1</Mech_Lancer>
+        <Mech_Diabolus>1</Mech_Diabolus>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Lancer</ThingDef>
+        <ThingDef>Mech_Diabolus</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

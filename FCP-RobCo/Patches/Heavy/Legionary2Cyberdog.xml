@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Miss Nanny ThingDef -->
+  <!-- Cyberdog ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Paramedic"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Legionary"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Paramedic</defName>
-    <label>Miss Nanny</label>
-    <description>This is an Miss Nanny.</description>
+    <ThingDef ParentName="HeavyMechanoid">
+    <defName>Mech_Legionary</defName>
+    <label>Cyberdog</label>
+    <description>This is an Cyberdog.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>5</MoveSpeed>
     </statBases>
     <race>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Paramedic_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Paramedic_Death</soundDeath>
-        <soundCall>Pawn_Mech_Paramedic_Call</soundCall>
+        <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+        <soundCall>Pawn_Mech_Legionary_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Paramedic_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Paramedic_Death</soundDeath>
-        <soundCall>Pawn_Mech_Paramedic_Call</soundCall>
+        <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+        <soundCall>Pawn_Mech_Legionary_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Miss Nanny PawnKindDef -->
+  <!-- Cyberdog PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Paramedic"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Legionary"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Paramedic</defName>
-    <label>Miss Nanny</label>
-    <race>Mech_Paramedic</race>
+    <defName>Mech_Legionary</defName>
+    <label>Cyberdog</label>
+    <race>Mech_Legionary</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Paramedic</texPath>
+        <texPath>Things/Pawn/Mechanoid/Legionary</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/ParamedicAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/LegionaryAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Miss Nanny RecipeDef -->
+  <!-- Cyberdog RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Paramedic"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Legionary"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Paramedic</defName>
-        <label>gestate Miss Nanny</label>
-        <description>Gestate an Miss Nanny.</description>
+      <RecipeDef ParentName="HeavyMechanoidRecipe">
+        <defName>Legionary</defName>
+        <label>gestate Cyberdog</label>
+        <description>Gestate an Eyebot.</description>
         <products>
-        <Mech_Paramedic>1</Mech_Paramedic>
+        <Mech_Legionary>1</Mech_Legionary>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Paramedic</ThingDef>
+        <ThingDef>Mech_Legionary</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

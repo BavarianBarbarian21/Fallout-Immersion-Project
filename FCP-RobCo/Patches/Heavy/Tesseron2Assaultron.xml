@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Mister Gutsy Chopper ThingDef -->
+  <!-- Assaultron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Scyther"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Tesseron"]</xpath>
   <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Scyther</defName>
-    <label>Mister Gutsy Chopper</label>
-    <description>This is an Mister Gutsy Chopper.</description>
+    <ThingDef ParentName="HeavyMechanoid">
+    <defName>Mech_Tesseron</defName>
+    <label>Assaultron</label>
+    <description>This is an Assaultron.</description>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>4.5</MoveSpeed>
     </statBases>
     <race>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-        <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        <soundWounded>Pawn_Mech_Tesseron_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Tesseron_Death</soundDeath>
+        <soundCall>Pawn_Mech_Tesseron_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-        <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        <soundWounded>Pawn_Mech_Tesseron_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Tesseron_Death</soundDeath>
+        <soundCall>Pawn_Mech_Tesseron_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Chopper PawnKindDef -->
+  <!-- Assaultron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Scyther"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Scyther</defName>
-    <label>Mister Gutsy Chopper</label>
-    <race>Mech_Scyther</race>
+    <defName>Mech_Tesseron</defName>
+    <label>Assaultron</label>
+    <race>Mech_Tesseron</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Scyther</texPath>
+        <texPath>Things/Pawn/Mechanoid/Tesseron</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/ScytherAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/TesseronAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Chopper RecipeDef -->
+  <!-- Assaultron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Scyther"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Tesseron"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Scyther</defName>
-        <label>gestate Mister Gutsy Chopper</label>
-        <description>Gestate an Mister Gutsy Chopper.</description>
+      <RecipeDef ParentName="HeavyMechanoidRecipe">
+        <defName>Tesseron</defName>
+        <label>gestate Assaultron</label>
+        <description>Gestate an Assaultron.</description>
         <products>
-        <Mech_Scyther>1</Mech_Scyther>
+        <Mech_Tesseron>1</Mech_Tesseron>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Scyther</ThingDef>
+        <ThingDef>Mech_Tesseron</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

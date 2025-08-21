@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Mister Gutsy Flamer ThingDef -->
+  <!-- Protectron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Scorcher"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Pikeman"]</xpath>
   <value>
     <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Scorcher</defName>
-    <label>Mister Gutsy Flamer</label>
-    <description>This is an Mister Gutsy Flamer.</description>
+    <defName>Mech_Pikeman</defName>
+    <label>Protectron</label>
+    <description>This is an Protectron.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
     </statBases>
@@ -16,16 +16,16 @@
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
-        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+        <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+        <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Scorcher_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Scorcher_Death</soundDeath>
-        <soundCall>Pawn_Mech_Scorcher_Call</soundCall>
+        <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+        <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +33,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Flamer PawnKindDef -->
+  <!-- Protectron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Scorcher"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Pikeman"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Scorcher</defName>
-    <label>Mister Gutsy Flamer</label>
-    <race>Mech_Scorcher</race>
+    <defName>Mech_Pikeman</defName>
+    <label>Protectron</label>
+    <race>Mech_Pikeman</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Scorcher</texPath>
+        <texPath>Things/Pawn/Mechanoid/Pikeman</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +58,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/ScorcherAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/PikemanAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +77,19 @@
   </value>
   </Operation>
   
-  <!-- Mister Gutsy Flamer RecipeDef -->
+  <!-- Protectron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_Scorcher"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Pikeman"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_Scorcher</defName>
-        <label>gestate Mister Gutsy Flamer</label>
-        <description>Gestate an Mister Gutsy Flamer.</description>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Pikeman</defName>
+        <label>gestate Protectron</label>
+        <description>Gestate an Protectron.</description>
         <products>
-        <Mech_Scorcher>1</Mech_Scorcher>
+        <Mech_Pikeman>1</Mech_Pikeman>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Scorcher</ThingDef>
+        <ThingDef>Mech_Pikeman</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Head of Hydra ThingDef -->
+  <!-- Utilitron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_WarUrchin"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Tunneler"]</xpath>
   <value>
     <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_WarUrchin</defName>
-    <label>Head Of Hydra</label>
-    <description>This is an Head Of Hydra.</description>
+    <defName>Mech_Tunneler</defName>
+    <label>Utilitron</label>
+    <description>This is an Utilitron.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
     </statBases>
     <race>
+      <body>Mech_Tunneler</body>
+        <mechEnabledWorkTypes>
+          <li>Mining</li>
+        </mechEnabledWorkTypes>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_WarUrchin_Death</soundDeath>
-        <soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+        <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+        <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_WarUrchin_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_WarUrchin_Death</soundDeath>
-        <soundCall>Pawn_Mech_WarUrchin_Call</soundCall>
+        <soundWounded>Pawn_Mech_Tunneler_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Tunneler_Death</soundDeath>
+        <soundCall>Pawn_Mech_Tunneler_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +37,19 @@
   </value>
   </Operation>
   
-  <!-- Head of Hydra PawnKindDef -->
+  <!-- Utilitron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_WarUrchin"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Tunneler"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_WarUrchin</defName>
-    <label>Head Of Hydra</label>
-    <race>Mech_WarUrchin</race>
+    <defName>Mech_Tunneler</defName>
+    <label>Utilitron</label>
+    <race>Mech_Tunneler</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+        <texPath>Things/Pawn/Mechanoid/Tunneler</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +62,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/WarUrchinAncient</texPath>
+        <texPath>Things/Pawn/Mechanoid/TunnelerAncient</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -77,19 +81,19 @@
   </value>
   </Operation>
   
-  <!-- Head of Hydra RecipeDef -->
+  <!-- Utilitron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="GestateMech_WarUrchin"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="GestateMech_Tunneler"]</xpath>
     <value>
-      <RecipeDef ParentName="GestateMechanoid">
-        <defName>GestateMech_WarUrchin</defName>
-        <label>gestate Head Of Hydra</label>
-        <description>Gestate an Head Of Hydra.</description>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Tunneler</defName>
+        <label>gestate Utilitron</label>
+        <description>Gestate an Utilitron.</description>
         <products>
-        <Mech_WarUrchin>1</Mech_WarUrchin>
+        <Mech_Tunneler>1</Mech_Tunneler>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_WarUrchin</ThingDef>
+        <ThingDef>Mech_Tunneler</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

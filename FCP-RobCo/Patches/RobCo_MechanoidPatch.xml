@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Combined crafting recipes for mechanoid categories -->
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="LightMechanoidRecipe"]</xpath>
+			<value>
+				<RecipeDef>
+					<defName>LightMechanoidRecipe</defName>
+					<label>craft light RobCo robot</label>
+					<description>Combine parts to craft a light RobCo robot.</description>
+					<workAmount>12000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>100</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SubcoreBasic</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<products>
+						<RobCo_LightMechanoid>1</RobCo_LightMechanoid>
+					</products>
+					<workSkill>Crafting</workSkill>
+				</RecipeDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="MediumMechanoidRecipe"]</xpath>
+			<value>
+				<RecipeDef>
+					<defName>MediumMechanoidRecipe</defName>
+					<label>craft medium RobCo robot</label>
+					<description>Combine parts to craft a medium RobCo robot.</description>
+					<workAmount>18000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>75</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SignalChip</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SubcoreRegular</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<products>
+						<RobCo_MediumMechanoid>1</RobCo_MediumMechanoid>
+					</products>
+					<workSkill>Crafting</workSkill>
+				</RecipeDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="HeavyMechanoidRecipe"]</xpath>
+			<value>
+				<RecipeDef>
+					<defName>HeavyMechanoidRecipe</defName>
+					<label>craft heavy RobCo robot</label>
+					<description>Combine parts to craft a heavy RobCo robot.</description>
+					<workAmount>24000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>100</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Plasteel</li>
+								</thingDefs>
+							</filter>
+							<count>50</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ComponentSpacer</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>PowerfocusChip</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SubcoreHigh</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<products>
+						<RobCo_HeavyMechanoid>1</RobCo_HeavyMechanoid>
+					</products>
+					<workSkill>Crafting</workSkill>
+				</RecipeDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="SuperHeavyMechanoidRecipe"]</xpath>
+			<value>
+				<RecipeDef>
+					<defName>SuperHeavyMechanoidRecipe</defName>
+					<label>craft super-heavy RobCo robot</label>
+					<description>Combine parts to craft a super-heavy RobCo robot.</description>
+					<workAmount>32000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+							</filter>
+							<count>200</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Plasteel</li>
+								</thingDefs>
+							</filter>
+							<count>200</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>NanostructuringChip</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ComponentSpacer</li>
+								</thingDefs>
+							</filter>
+							<count>2</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SubcoreHigh</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<products>
+						<RobCo_SuperHeavyMechanoid>1</RobCo_SuperHeavyMechanoid>
+					</products>
+					<workSkill>Crafting</workSkill>
+				</RecipeDef>
+			</value>
+		</Operation>
+
+	<!-- PatchOperationReplace for specified mechanoid weapons -->
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_BeamGraser"]</xpath>
+			<value>
+				<ThingDef ParentName="BaseGun">
+					<defName>Gun_BeamGraser</defName>
+					<label>beam graser</label>
+					<description>A powerful RobCo beam graser, designed for advanced mechanoids.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<!-- No Gun_InfernoCannon in provided files, skipping or add if needed -->
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_NeedleLauncher"]</xpath>
+			<value>
+				<ThingDef ParentName="NeedleGunBase">
+					<defName>Gun_NeedleLauncher</defName>
+					<label>needle launcher</label>
+					<description>A RobCo needle launcher, fires high-velocity projectiles for piercing armor.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<!-- No Gun_ThumpCannon in provided files, skipping or add if needed -->
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_ChargeBlasterTurret"]</xpath>
+			<value>
+				<ThingDef ParentName="BaseWeaponTurret">
+					<defName>Gun_ChargeBlasterTurret</defName>
+					<label>charge blaster turret</label>
+					<description>A RobCo charge blaster turret, automated for defense.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_HellsphereCannon"]</xpath>
+			<value>
+				<ThingDef ParentName="BaseGun">
+					<defName>Gun_HellsphereCannon</defName>
+					<label>hellsphere cannon</label>
+					<description>A RobCo hellsphere cannon, unleashes devastating plasma energy.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_MiniFlameblaster"]</xpath>
+			<value>
+				<ThingDef ParentName="LightMechanoidGunRanged">
+					<defName>Gun_MiniFlameblaster</defName>
+					<label>mini-flameblaster</label>
+					<description>A RobCo mini-flameblaster, compact but deadly.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_MiniShotgun"]</xpath>
+			<value>
+				<ThingDef ParentName="LightMechanoidGunRanged">
+					<defName>Gun_MiniShotgun</defName>
+					<label>mini-shotgun</label>
+					<description>A RobCo mini-shotgun, designed for close-quarters combat.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_Slugthrower"]</xpath>
+			<value>
+				<ThingDef ParentName="LightMechanoidGunRanged">
+					<defName>Gun_Slugthrower</defName>
+					<label>slugthrower</label>
+					<description>A RobCo slugthrower, fires heavy projectiles at high speed.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_Spiner"]</xpath>
+			<value>
+				<ThingDef ParentName="LightMechanoidGunRanged">
+					<defName>Gun_Spiner</defName>
+					<label>spiner</label>
+					<description>A RobCo spiner, rapid-fire weapon for suppressive fire.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+	<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
+			<value>
+				<ThingDef ParentName="BaseGun">
+					<defName>Gun_ToxicNeedle</defName>
+					<label>toxic needle gun</label>
+					<description>A RobCo toxic needle gun, fires toxin-infused projectiles.</description>
+				</ThingDef>
+			</value>
+		</Operation>
+</Patch>

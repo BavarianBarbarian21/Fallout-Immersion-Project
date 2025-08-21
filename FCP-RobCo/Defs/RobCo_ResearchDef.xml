@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThingDef ParentName="MechResourceBase">
+    <defName>RobCoManual</defName>
+    <label>RobCo Manual</label>
+    <description>A pre-war manual on RobCo electronics. Researching it can unlock a basic understanding of robotics.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/SignalChip</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>92349061</analysisID>
+        <requiresMechanitor>true</requiresMechanitor>
+
+        <!-- Analyzable -->
+
+        <analysisDurationHours>0.5</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>Signal RobCo manual: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By studying the RobCo manual, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+
+        <!-- Interactable -->
+
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the RobCo manual.</activateDescString>
+        <jobString>Analyze RobCo manual</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+  </ThingDef>
