@@ -73,17 +73,21 @@
   </Operation>
   <!-- BasicRecharger -->
   <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="BasicRecharger"]/label</xpath>
+  <value><label>Civilian RobCo Recharger</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="BasicRecharger"]/description</xpath>
-  <value><description>Lightweight RobCo robots can recharge here. Produces and stores wastepacks internally.</description></value>
+  <value><description>Civilian RobCo robots can recharge here. Produces and stores wastepacks internally.</description></value>
   </Operation>
   <!-- StandardRecharger -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="StandardRecharger"]/label</xpath>
-  <value><label>military grade RobCo recharger</label></value>
+  <value><label>Military-grade RobCo recharger</label></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="StandardRecharger"]/description</xpath>
-  <value><description>Medium, heavy, and ultraheavy RobCo robots can recharge here. Produces and stores wastepacks internally.</description></value>
+  <value><description>Combat RobCo robots can recharge here. Produces and stores wastepacks internally.</description></value>
   </Operation>
       <!-- SubcoreEncoder -->
   <Operation Class="PatchOperationReplace">
@@ -101,15 +105,15 @@
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="SubcoreSoftscanner"]/description</xpath>
-    <value>This machine can create AI subroutines by mimicking human brain activity.</value>
+    <value><description>This machine can create AI subroutines by mimicking human brain activity.</description></value>
   </Operation>
      <!-- SubcoreRipscanner -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="SubcoreRipscanner"]/label</xpath>
-    <value>General Atomics Brain Extractor</value>
+    <value><label>General Atomics Brain Extractor</label></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="SubcoreRipscanner"]/description</xpath>
-    <value>A General Atomics machine to carefully extract human processor units.</value>
+    <value><description>A General Atomics machine to carefully extract human processor units.</description></value>
   </Operation>
 </Patch>
