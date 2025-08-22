@@ -8,7 +8,8 @@
 					<defName>LightMechanoidRecipe</defName>
 					<label>craft light RobCo robot</label>
 					<description>Combine parts to craft a light RobCo robot.</description>
-					<workAmount>12000</workAmount>
+					<researchPrerequisite>BasicMechtech</researchPrerequisite>
+					<gestationCycles>1</gestationCycles>
 					<ingredients>
 						<li>
 							<filter>
@@ -49,7 +50,8 @@
 					<defName>MediumMechanoidRecipe</defName>
 					<label>craft medium RobCo robot</label>
 					<description>Combine parts to craft a medium RobCo robot.</description>
-					<workAmount>18000</workAmount>
+					<gestationCycles>2</gestationCycles>
+					<researchPrerequisite>StandardMechtech</researchPrerequisite>
 					<ingredients>
 						<li>
 							<filter>
@@ -98,7 +100,8 @@
 					<defName>HeavyMechanoidRecipe</defName>
 					<label>craft heavy RobCo robot</label>
 					<description>Combine parts to craft a heavy RobCo robot.</description>
-					<workAmount>24000</workAmount>
+					<gestationCycles>4</gestationCycles>
+					<researchPrerequisite>HighMechtech</researchPrerequisite>
 					<ingredients>
 						<li>
 							<filter>
@@ -155,7 +158,8 @@
 					<defName>SuperHeavyMechanoidRecipe</defName>
 					<label>craft super-heavy RobCo robot</label>
 					<description>Combine parts to craft a super-heavy RobCo robot.</description>
-					<workAmount>32000</workAmount>
+					<gestationCycles>12</gestationCycles>
+					<researchPrerequisite>UltraMechtech</researchPrerequisite>
 					<ingredients>
 						<li>
 							<filter>
@@ -203,100 +207,6 @@
 					</products>
 					<workSkill>Crafting</workSkill>
 				</RecipeDef>
-			</value>
-		</Operation>
-
-	<!-- PatchOperationReplace for specified mechanoid weapons -->
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_BeamGraser"]</xpath>
-			<value>
-				<ThingDef ParentName="BaseGun">
-					<defName>Gun_BeamGraser</defName>
-					<label>beam graser</label>
-					<description>A powerful RobCo beam graser, designed for advanced mechanoids.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<!-- No Gun_InfernoCannon in provided files, skipping or add if needed -->
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_NeedleLauncher"]</xpath>
-			<value>
-				<ThingDef ParentName="NeedleGunBase">
-					<defName>Gun_NeedleLauncher</defName>
-					<label>needle launcher</label>
-					<description>A RobCo needle launcher, fires high-velocity projectiles for piercing armor.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<!-- No Gun_ThumpCannon in provided files, skipping or add if needed -->
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_ChargeBlasterTurret"]</xpath>
-			<value>
-				<ThingDef ParentName="BaseWeaponTurret">
-					<defName>Gun_ChargeBlasterTurret</defName>
-					<label>charge blaster turret</label>
-					<description>A RobCo charge blaster turret, automated for defense.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_HellsphereCannon"]</xpath>
-			<value>
-				<ThingDef ParentName="BaseGun">
-					<defName>Gun_HellsphereCannon</defName>
-					<label>hellsphere cannon</label>
-					<description>A RobCo hellsphere cannon, unleashes devastating plasma energy.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_MiniFlameblaster"]</xpath>
-			<value>
-				<ThingDef ParentName="LightMechanoidGunRanged">
-					<defName>Gun_MiniFlameblaster</defName>
-					<label>mini-flameblaster</label>
-					<description>A RobCo mini-flameblaster, compact but deadly.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_MiniShotgun"]</xpath>
-			<value>
-				<ThingDef ParentName="LightMechanoidGunRanged">
-					<defName>Gun_MiniShotgun</defName>
-					<label>mini-shotgun</label>
-					<description>A RobCo mini-shotgun, designed for close-quarters combat.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_Slugthrower"]</xpath>
-			<value>
-				<ThingDef ParentName="LightMechanoidGunRanged">
-					<defName>Gun_Slugthrower</defName>
-					<label>slugthrower</label>
-					<description>A RobCo slugthrower, fires heavy projectiles at high speed.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_Spiner"]</xpath>
-			<value>
-				<ThingDef ParentName="LightMechanoidGunRanged">
-					<defName>Gun_Spiner</defName>
-					<label>spiner</label>
-					<description>A RobCo spiner, rapid-fire weapon for suppressive fire.</description>
-				</ThingDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
-			<value>
-				<ThingDef ParentName="BaseGun">
-					<defName>Gun_ToxicNeedle</defName>
-					<label>toxic needle gun</label>
-					<description>A RobCo toxic needle gun, fires toxin-infused projectiles.</description>
-				</ThingDef>
 			</value>
 		</Operation>
 </Patch>
