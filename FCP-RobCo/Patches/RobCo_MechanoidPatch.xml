@@ -4,10 +4,7 @@
 	<Operation Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="LightMechanoidRecipe"]</xpath>
 			<value>
-				<RecipeDef>
-					<defName>LightMechanoidRecipe</defName>
-					<label>craft light RobCo robot</label>
-					<description>Combine parts to craft a light RobCo robot.</description>
+				<RecipeDef Name="LightMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<researchPrerequisite>BasicMechtech</researchPrerequisite>
 					<gestationCycles>1</gestationCycles>
 					<ingredients>
@@ -36,9 +33,6 @@
 							<count>1</count>
 						</li>
 					</ingredients>
-					<products>
-						<RobCo_LightMechanoid>1</RobCo_LightMechanoid>
-					</products>
 					<workSkill>Crafting</workSkill>
 				</RecipeDef>
 			</value>
@@ -46,10 +40,7 @@
 	<Operation Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="MediumMechanoidRecipe"]</xpath>
 			<value>
-				<RecipeDef>
-					<defName>MediumMechanoidRecipe</defName>
-					<label>craft medium RobCo robot</label>
-					<description>Combine parts to craft a medium RobCo robot.</description>
+				<RecipeDef Name="MediumMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>2</gestationCycles>
 					<researchPrerequisite>StandardMechtech</researchPrerequisite>
 					<ingredients>
@@ -86,9 +77,6 @@
 							<count>1</count>
 						</li>
 					</ingredients>
-					<products>
-						<RobCo_MediumMechanoid>1</RobCo_MediumMechanoid>
-					</products>
 					<workSkill>Crafting</workSkill>
 				</RecipeDef>
 			</value>
@@ -96,10 +84,7 @@
 	<Operation Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="HeavyMechanoidRecipe"]</xpath>
 			<value>
-				<RecipeDef>
-					<defName>HeavyMechanoidRecipe</defName>
-					<label>craft heavy RobCo robot</label>
-					<description>Combine parts to craft a heavy RobCo robot.</description>
+				<RecipeDef Name="HeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>4</gestationCycles>
 					<researchPrerequisite>HighMechtech</researchPrerequisite>
 					<ingredients>
@@ -144,9 +129,6 @@
 							<count>1</count>
 						</li>
 					</ingredients>
-					<products>
-						<RobCo_HeavyMechanoid>1</RobCo_HeavyMechanoid>
-					</products>
 					<workSkill>Crafting</workSkill>
 				</RecipeDef>
 			</value>
@@ -154,10 +136,7 @@
 	<Operation Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="SuperHeavyMechanoidRecipe"]</xpath>
 			<value>
-				<RecipeDef>
-					<defName>SuperHeavyMechanoidRecipe</defName>
-					<label>craft super-heavy RobCo robot</label>
-					<description>Combine parts to craft a super-heavy RobCo robot.</description>
+				<RecipeDef Name="SuperHeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>12</gestationCycles>
 					<researchPrerequisite>UltraMechtech</researchPrerequisite>
 					<ingredients>
@@ -202,9 +181,6 @@
 							<count>1</count>
 						</li>
 					</ingredients>
-					<products>
-						<RobCo_SuperHeavyMechanoid>1</RobCo_SuperHeavyMechanoid>
-					</products>
 					<workSkill>Crafting</workSkill>
 				</RecipeDef>
 			</value>
