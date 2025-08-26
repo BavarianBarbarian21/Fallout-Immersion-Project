@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Patch>
+<Defs>
 	<!-- Combined crafting recipes for mechanoid categories -->
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="LightMechanoidRecipe"]</xpath>
-			<value>
-				<RecipeDef Name="LightMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+				<RecipeDef Name="RobCo_LightMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<researchPrerequisite>BasicMechtech</researchPrerequisite>
 					<gestationCycles>1</gestationCycles>
 					<ingredients>
@@ -35,12 +32,8 @@
 					</ingredients>
 					<displayPriority>100</displayPriority>
 				</RecipeDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="MediumMechanoidRecipe"]</xpath>
-			<value>
-				<RecipeDef Name="MediumMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+			
+				<RecipeDef Name="RobCo_MediumMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>2</gestationCycles>
 					<researchPrerequisite>StandardMechtech</researchPrerequisite>
 					<ingredients>
@@ -79,12 +72,8 @@
 					</ingredients>
 					<displayPriority>200</displayPriority>
 				</RecipeDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="HeavyMechanoidRecipe"]</xpath>
-			<value>
-				<RecipeDef Name="HeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		
+				<RecipeDef Name="RobCo_HeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>4</gestationCycles>
 					<researchPrerequisite>HighMechtech</researchPrerequisite>
 					<ingredients>
@@ -131,12 +120,8 @@
 					</ingredients>
 					<displayPriority>300</displayPriority>
 				</RecipeDef>
-			</value>
-		</Operation>
-	<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="SuperHeavyMechanoidRecipe"]</xpath>
-			<value>
-				<RecipeDef Name="SuperHeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+			
+				<RecipeDef Name="RobCo_SuperHeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 					<gestationCycles>12</gestationCycles>
 					<researchPrerequisite>UltraMechtech</researchPrerequisite>
 					<ingredients>
@@ -183,6 +168,5 @@
 					</ingredients>
 					<displayPriority>400</displayPriority>
 				</RecipeDef>
-			</value>
-		</Operation>
-</Patch>
+			
+</Defs>
