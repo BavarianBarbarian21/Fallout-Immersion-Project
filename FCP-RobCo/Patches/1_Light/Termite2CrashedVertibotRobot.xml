@@ -2,17 +2,17 @@
 <Patch>
   <!-- Constructron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Termite"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Termite_Breach"]</xpath>
   <value>
     <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Termite</defName>
+    <defName>Mech_Termite_Breach</defName>
     <label>Crashed Vertibot Robot</label>
     <description>This is a strange Robot.</description>
     <statBases>
       <MoveSpeed>2</MoveSpeed>
     </statBases>
     <race>
-      <body>Mech_Termite</body>
+      <body>Mech_Termite_Breach</body>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
@@ -41,7 +41,7 @@
     <PawnKindDef ParentName="LightMechanoidKind">
     <defName>Mech_Termite_Breach</defName>
     <label>Crashed Vertibot Robot</label>
-    <race>Mech_Termite</race>
+    <race>Mech_Termite_Breach</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
