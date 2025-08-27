@@ -21,9 +21,9 @@
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Lifter_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Lifter_Death</soundDeath>
-        <soundCall>Pawn_Mech_Lifter_Call</soundCall>
+  <soundWounded>Protectron_Placeholder</soundWounded>
+  <soundDeath>Protectron_Placeholder</soundDeath>
+  <soundCall>Protectron_Placeholder</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
@@ -50,7 +50,7 @@
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Lifter</texPath>
+        <texPath>FCP-RobCo/Sprites/Protectron_Placeholder</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -63,7 +63,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/LifterAncient</texPath>
+        <texPath>FCP-RobCo/Sprites/Protectron_Placeholder</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -86,7 +86,7 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="Lifter"]</xpath>
     <value>
-      <RecipeDef ParentName="RobCo_LightMechanoidRecipe">
+      <RecipeDef ParentName="LightMechanoidRecipe">
         <defName>Lifter</defName>
         <label>gestate Collectron</label>
         <description>Gestate an Collectron.</description>

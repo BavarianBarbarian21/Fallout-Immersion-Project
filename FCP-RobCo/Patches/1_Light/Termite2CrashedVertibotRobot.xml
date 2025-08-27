@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Assaultron ThingDef -->
+  <!-- Constructron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Tesseron"]</xpath>
+  <xpath>/Defs/ThingDef[defName="Mech_Termite"]</xpath>
   <value>
-    <ThingDef ParentName="HeavyMechanoid">
-    <defName>Mech_Tesseron</defName>
-    <label>Assaultron</label>
-    <description>This is an Assaultron.</description>
+    <ThingDef ParentName="LightMechanoid">
+    <defName>Mech_Termite</defName>
+    <label>Crashed Vertibot Robot</label>
+    <description>This is a strange Robot.</description>
     <statBases>
-      <MoveSpeed>4.5</MoveSpeed>
+      <MoveSpeed>2</MoveSpeed>
     </statBases>
     <race>
+      <body>Mech_Termite</body>
       <lifeStageAges>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>0</minAge>
-        <soundWounded>Pawn_Mech_Tesseron_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Tesseron_Death</soundDeath>
-        <soundCall>Pawn_Mech_Tesseron_Call</soundCall>
+  <soundWounded>Protectron_Placeholder</soundWounded>
+  <soundDeath>Protectron_Placeholder</soundDeath>
+  <soundCall>Protectron_Placeholder</soundCall>
       </li>
       <li>
         <def>MechanoidFullyFormed</def>
         <minAge>100</minAge>
-        <soundWounded>Pawn_Mech_Tesseron_Wounded</soundWounded>
-        <soundDeath>Pawn_Mech_Tesseron_Death</soundDeath>
-        <soundCall>Pawn_Mech_Tesseron_Call</soundCall>
+        <soundWounded>Pawn_Mech_Constructoid_Wounded</soundWounded>
+        <soundDeath>Pawn_Mech_Constructoid_Death</soundDeath>
+        <soundCall>Pawn_Mech_Constructoid_Call</soundCall>
       </li>
       </lifeStageAges>
     </race>
@@ -33,19 +34,19 @@
   </value>
   </Operation>
   
-  <!-- Assaultron PawnKindDef -->
+  <!-- Constructron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
+  <xpath>/Defs/PawnKindDef[defName="Mech_Termite_Breach"]</xpath>
   <value>
     <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Tesseron</defName>
-    <label>Assaultron</label>
-    <race>Mech_Tesseron</race>
+    <defName>Mech_Termite_Breach</defName>
+    <label>Crashed Vertibot Robot</label>
+    <race>Mech_Termite</race>
     <combatPower>45</combatPower>
     <lifeStages>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/Tesseron</texPath>
+        <texPath>FCP-RobCo/Sprites/Protectron_Placeholder</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -58,7 +59,7 @@
       </li>
       <li>
       <bodyGraphicData>
-        <texPath>Things/Pawn/Mechanoid/TesseronAncient</texPath>
+        <texPath>FCP-RobCo/Sprites/Protectron_Placeholder</texPath>
         <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
         <shaderType>CutoutWithOverlay</shaderType>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -71,27 +72,27 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>HellsphereCannonGun</li>
+      <li>MechanoidGunShortRange</li>
     </weaponTags>
     </PawnKindDef>
   </value>
   </Operation>
   
-  <!-- Assaultron RecipeDef -->
+  <!-- Constructron RecipeDef 
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Tesseron"]</xpath>
+  <xpath>/Defs/RecipeDef[defName="Termite"]</xpath>
     <value>
-      <RecipeDef ParentName="HeavyMechanoidRecipe">
-        <defName>Tesseron</defName>
-        <label>gestate Assaultron</label>
-        <description>Gestate an Assaultron.</description>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Termite</defName>
+        <label>gestate Crashed Vertibot Robot</label>
+        <description>Gestate an Crashed Vertibot Robot.</description>
         <products>
-        <Mech_Tesseron>1</Mech_Tesseron>
+        <Mech_Constructoid>1</Mech_Constructoid>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Tesseron</ThingDef>
+        <ThingDef>Mech_Constructoid</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>
-  </Operation>
+  </Operation>-->
 </Patch>

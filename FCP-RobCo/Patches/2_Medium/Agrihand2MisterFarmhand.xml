@@ -24,16 +24,16 @@
             <li>
                 <def>MechanoidFullyFormed</def>
                 <minAge>0</minAge>
-                <soundWounded>Pawn_Mech_Agrihand_Wounded</soundWounded>
-                <soundDeath>Pawn_Mech_Agrihand_Death</soundDeath>
-                <soundCall>Pawn_Mech_Agrihand_Call</soundCall>
+                <soundWounded>Handy_Placeholder</soundWounded>
+                <soundDeath>Handy_Placeholder</soundDeath>
+                <soundCall>Handy_Placeholder</soundCall>
             </li>
             <li>
                 <def>MechanoidFullyFormed</def>
                 <minAge>100</minAge>
-                <soundWounded>Pawn_Mech_Agrihand_Wounded</soundWounded>
-                <soundDeath>Pawn_Mech_Agrihand_Death</soundDeath>
-                <soundCall>Pawn_Mech_Agrihand_Call</soundCall>
+                <soundWounded>Handy_Placeholder</soundWounded>
+                <soundDeath>Handy_Placeholder</soundDeath>
+                <soundCall>Handy_Placeholder</soundCall>
             </li>
             </lifeStageAges>
         </race>
@@ -52,7 +52,7 @@
         <lifeStages>
             <li>
             <bodyGraphicData>
-                <texPath>Things/Pawn/Mechanoid/Agrihand</texPath>
+                <texPath>FCP-RobCo/Sprites/Handy_Placeholder</texPath>
                 <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
                 <shaderType>CutoutWithOverlay</shaderType>
                 <graphicClass>Graphic_Multi</graphicClass>
@@ -65,7 +65,7 @@
             </li>
             <li>
             <bodyGraphicData>
-                <texPath>Things/Pawn/Mechanoid/AgrihandAncient</texPath>
+                <texPath>FCP-RobCo/Sprites/Handy_Placeholder</texPath>
                 <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
                 <shaderType>CutoutWithOverlay</shaderType>
                 <graphicClass>Graphic_Multi</graphicClass>
@@ -87,7 +87,7 @@
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="Agrihand"]</xpath>
     <value>
-    <RecipeDef ParentName="RobCo_MediumMechanoidRecipe">
+    <RecipeDef ParentName="MediumMechanoidRecipe">
         <defName>Agrihand</defName>
         <label>gestate Mister Farmhand</label>
         <description>Gestate a Mister Farmhand.</description>
