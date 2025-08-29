@@ -168,5 +168,22 @@
 					</ingredients>
 					<displayPriority>400</displayPriority>
 				</RecipeDef>
+
+<ThingDef ParentName="BaseMechanoid" Name="BaseMechanoidWalker" Abstract="True">
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+    <butcherProducts>
+      <Steel>15</Steel>
+    </butcherProducts>
+  </ThingDef>
 			
 </Defs>
