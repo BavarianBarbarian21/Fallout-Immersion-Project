@@ -78,4 +78,14 @@
       <text>You are a RobCo Mechanitor, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
     </value>
   </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
+    <value>
+      <li Class="ScenPart_StartingThing_Defined">
+        <def>StartingThing_Defined</def>
+        <thingDef>Mech_Tunneler</thingDef>
+        <count>1</count>
+      </li>
+    </value>
+  </Operation>
 </Patch>
