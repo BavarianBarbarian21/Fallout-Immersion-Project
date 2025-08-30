@@ -2,98 +2,98 @@
 <Patch>
   <!-- Constructron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
-  <value>
-    <ThingDef ParentName="LightMechanoid">
-    <defName>Mech_Constructoid</defName>
-    <label>Constructron</label>
-    <description>This is an Constructron.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>Mech_Light</body>
-        <mechEnabledWorkTypes>
-          <li>Construction</li>
-        </mechEnabledWorkTypes>
-      <lifeStageAges>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-  <soundWounded>Protectron_Placeholder</soundWounded>
-  <soundDeath>Protectron_Placeholder</soundDeath>
-  <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-  <soundWounded>Protectron_Placeholder</soundWounded>
-  <soundDeath>Protectron_Placeholder</soundDeath>
-  <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      </lifeStageAges>
-    </race>
-    </ThingDef>
-  </value>
+    <xpath>/Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+      <ThingDef ParentName="LightMechanoid">
+        <defName>Mech_Constructoid</defName>
+        <label>Constructron</label>
+        <description>This is an Constructron.</description>
+        <statBases>
+          <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Mech_Light</body>
+          <mechEnabledWorkTypes>
+            <li>Construction</li>
+          </mechEnabledWorkTypes>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
   </Operation>
-  
+
   <!-- Constructron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
-  <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Constructoid</defName>
-    <label>Constructron</label>
-    <race>Mech_Constructoid</race>
-    <combatPower>45</combatPower>
-    <lifeStages>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Utilitron</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Utilitron</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-    </weaponTags>
-    </PawnKindDef>
-  </value>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+      <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Constructoid</defName>
+        <label>Constructron</label>
+        <race>Mech_Constructoid</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Utilitron</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Utilitron</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>MechanoidGunShortRange</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
   </Operation>
-  
+
   <!-- Constructron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Constructoid"]</xpath>
+    <xpath>/Defs/RecipeDef[defName="Constructoid"]</xpath>
     <value>
       <RecipeDef ParentName="LightMechanoidRecipe">
         <defName>Constructoid</defName>
         <label>gestate Constructron</label>
         <description>Gestate an Constructron.</description>
         <products>
-        <Mech_Constructoid>1</Mech_Constructoid>
+          <Mech_Constructoid>1</Mech_Constructoid>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Constructoid</ThingDef>
+          <ThingDef>Mech_Constructoid</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

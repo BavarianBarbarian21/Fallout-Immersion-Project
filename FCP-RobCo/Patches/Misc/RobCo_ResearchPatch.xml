@@ -13,45 +13,62 @@
   <!-- Patch labels and descriptions for RobCo theme -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]/label</xpath>
-  <value><label>Civilian RobCo Circuitry</label></value>
+    <value>
+      <label>Civilian RobCo Circuitry</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]/description</xpath>
-  <value><description>Unlocks the secrets of pre-war RobCo robotics. Required for all further RobCo robot research.</description></value>
+    <value>
+      <description>Unlocks the secrets of pre-war RobCo robotics. Required for all further RobCo robot research.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]</xpath>
-  <value>
-    <requiredAnalyzed>
-      <li>RobCoManual</li>
-    </requiredAnalyzed></value>
+    <value>
+      <requiredAnalyzed>
+        <li>RobCoManual</li>
+      </requiredAnalyzed>
+    </value>
   </Operation>
- 
+
 
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="StandardMechtech"]/label</xpath>
-  <value><label>Military RobCo Circuitry</label></value>
+    <value>
+      <label>Military RobCo Circuitry</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="StandardMechtech"]/description</xpath>
-  <value><description>Enables construction and control of standard RobCo robots.</description></value>
+    <value>
+      <description>Enables construction and control of standard RobCo robots.</description>
+    </value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="HighMechtech"]/label</xpath>
-  <value><label>Advanced General Atomic Cybernetics</label></value>
+    <value>
+      <label>Advanced General Atomic Cybernetics</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="HighMechtech"]/description</xpath>
-  <value><description>Unlocks advanced RobCo robot types and upgrades.</description></value>
+    <value>
+      <description>Unlocks advanced RobCo robot types and upgrades.</description>
+    </value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="UltraMechtech"]/label</xpath>
-  <value><label>Secret General Atomics Design Documents</label></value>
+    <value>
+      <label>Secret General Atomics Design Documents</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="UltraMechtech"]/description</xpath>
-  <value><description>Unlocks the most powerful and secret RobCo robots.</description></value>
+    <value>
+      <description>Unlocks the most powerful and secret RobCo robots.</description>
+    </value>
   </Operation>
 </Patch>

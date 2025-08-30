@@ -2,95 +2,95 @@
 <Patch>
   <!-- Assaultron ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Tesseron"]</xpath>
-  <value>
-    <ThingDef ParentName="HeavyMechanoid">
-    <defName>Mech_Tesseron</defName>
-    <label>Assaultron</label>
-    <description>This is an Assaultron.</description>
-    <statBases>
-      <MoveSpeed>4.5</MoveSpeed>
-    </statBases>
-    <race>
-    <body>Mech_Light</body>
-      <lifeStageAges>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-        <soundWounded>Protectron_Placeholder</soundWounded>
-        <soundDeath>Protectron_Placeholder</soundDeath>
-        <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-        <soundWounded>Protectron_Placeholder</soundWounded>
-        <soundDeath>Protectron_Placeholder</soundDeath>
-        <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      </lifeStageAges>
-    </race>
-    </ThingDef>
-  </value>
+    <xpath>/Defs/ThingDef[defName="Mech_Tesseron"]</xpath>
+    <value>
+      <ThingDef ParentName="HeavyMechanoid">
+        <defName>Mech_Tesseron</defName>
+        <label>Assaultron</label>
+        <description>This is an Assaultron.</description>
+        <statBases>
+          <MoveSpeed>4.5</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Mech_Light</body>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
   </Operation>
-  
+
   <!-- Assaultron PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
-  <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Tesseron</defName>
-    <label>Assaultron</label>
-    <race>Mech_Tesseron</race>
-    <combatPower>45</combatPower>
-    <lifeStages>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>HellsphereCannonGun</li>
-    </weaponTags>
-    </PawnKindDef>
-  </value>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
+    <value>
+      <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Tesseron</defName>
+        <label>Assaultron</label>
+        <race>Mech_Tesseron</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>HellsphereCannonGun</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
   </Operation>
-  
+
   <!-- Assaultron RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Tesseron"]</xpath>
+    <xpath>/Defs/RecipeDef[defName="Tesseron"]</xpath>
     <value>
       <RecipeDef ParentName="HeavyMechanoidRecipe">
         <defName>Tesseron</defName>
         <label>gestate Assaultron</label>
         <description>Gestate an Assaultron.</description>
         <products>
-        <Mech_Tesseron>1</Mech_Tesseron>
+          <Mech_Tesseron>1</Mech_Tesseron>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Tesseron</ThingDef>
+          <ThingDef>Mech_Tesseron</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

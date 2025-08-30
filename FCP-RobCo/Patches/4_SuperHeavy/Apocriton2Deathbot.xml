@@ -2,82 +2,82 @@
 <Patch>
   <!-- Deathbot ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Apocriton"]</xpath>
-  <value>
-    <ThingDef ParentName="SuperHeavyMechanoid">
-    <defName>Mech_Apocriton</defName>
-    <label>Deathbot</label>
-    <description>This is a Deathbot.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-    <body>Apocriton</body>
-      <lifeStageAges>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-        <soundWounded>Protectron_Placeholder</soundWounded>
-        <soundDeath>Protectron_Placeholder</soundDeath>
-        <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-        <soundWounded>Protectron_Placeholder</soundWounded>
-        <soundDeath>Protectron_Placeholder</soundDeath>
-        <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      </lifeStageAges>
-    </race>
-    </ThingDef>
-  </value>
+    <xpath>/Defs/ThingDef[defName="Mech_Apocriton"]</xpath>
+    <value>
+      <ThingDef ParentName="SuperHeavyMechanoid">
+        <defName>Mech_Apocriton</defName>
+        <label>Deathbot</label>
+        <description>This is a Deathbot.</description>
+        <statBases>
+          <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Apocriton</body>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
   </Operation>
-  
+
   <!-- Deathbot PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Apocriton"]</xpath>
-  <value>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>Mech_Apocriton</defName>
-    <label>Deathbot</label>
-    <race>Mech_Apocriton</race>
-    <combatPower>45</combatPower>
-    <lifeStages>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-    </weaponTags>
-    </PawnKindDef>
-  </value>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Apocriton"]</xpath>
+    <value>
+      <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>Mech_Apocriton</defName>
+        <label>Deathbot</label>
+        <race>Mech_Apocriton</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>MechanoidGunShortRange</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
   </Operation>
-  
+
   <!-- Deathbot RecipeDef
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="Apocriton"]</xpath>

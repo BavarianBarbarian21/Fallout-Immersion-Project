@@ -2,95 +2,95 @@
 <Patch>
   <!-- Eyebot ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Militor"]</xpath>
-  <value>
-    <ThingDef ParentName="BaseMechanoidWalker">
-    <defName>Mech_Militor</defName>
-    <label>Eyebot</label>
-    <description>This is an Eyebot.</description>
-    <statBases>
-      <MoveSpeed>5</MoveSpeed>
-    </statBases>
-    <race>
-    <body>Mech_Agrihand</body>
-      <lifeStageAges>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-  <soundWounded>Protectron_Placeholder</soundWounded>
-  <soundDeath>Protectron_Placeholder</soundDeath>
-  <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-        <soundWounded>Protectron_Placeholder</soundWounded>
-        <soundDeath>Protectron_Placeholder</soundDeath>
-        <soundCall>Protectron_Placeholder</soundCall>
-      </li>
-      </lifeStageAges>
-    </race>
-    </ThingDef>
-  </value>
+    <xpath>/Defs/ThingDef[defName="Mech_Militor"]</xpath>
+    <value>
+      <ThingDef ParentName="BaseMechanoidWalker">
+        <defName>Mech_Militor</defName>
+        <label>Eyebot</label>
+        <description>This is an Eyebot.</description>
+        <statBases>
+          <MoveSpeed>5</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Mech_Agrihand</body>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Protectron_Placeholder</soundWounded>
+              <soundDeath>Protectron_Placeholder</soundDeath>
+              <soundCall>Protectron_Placeholder</soundCall>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
   </Operation>
-  
+
   <!-- Eyebot PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
-  <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Militor</defName>
-    <label>Eyebot</label>
-    <race>Mech_Militor</race>
-    <combatPower>45</combatPower>
-    <lifeStages>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-    </weaponTags>
-    </PawnKindDef>
-  </value>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+    <value>
+      <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Militor</defName>
+        <label>Eyebot</label>
+        <race>Mech_Militor</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>MechanoidGunShortRange</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
   </Operation>
-  
+
   <!-- Eyebot RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Militor"]</xpath>
+    <xpath>/Defs/RecipeDef[defName="Militor"]</xpath>
     <value>
       <RecipeDef ParentName="LightMechanoidRecipe">
         <defName>Militor</defName>
         <label>gestate Eyebot</label>
         <description>Gestate an Eyebot.</description>
         <products>
-        <Mech_Militor>1</Mech_Militor>
+          <Mech_Militor>1</Mech_Militor>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Militor</ThingDef>
+          <ThingDef>Mech_Militor</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
     </value>

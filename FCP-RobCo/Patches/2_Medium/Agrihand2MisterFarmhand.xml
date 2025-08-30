@@ -4,100 +4,100 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="Mech_Agrihand"]</xpath>
     <value>
-    <ThingDef ParentName="BaseMechanoidWalker">
+      <ThingDef ParentName="BaseMechanoidWalker">
         <defName>Mech_Agrihand</defName>
         <label>Mister Farmhand</label>
         <description>This is a Mister Farmhand.</description>
         <statBases>
-            <MoveSpeed>5</MoveSpeed>
+          <MoveSpeed>5</MoveSpeed>
         </statBases>
         <race>
-            <body>Mech_Agrihand</body>
-        <mechEnabledWorkTypes>
-          <li>Growing</li>
-          <li>Handling</li>
-        </mechEnabledWorkTypes>
-        <mechWorkTypePriorities>
-          <Growing>2</Growing>
-        </mechWorkTypePriorities>
-            <lifeStageAges>
+          <body>Mech_Agrihand</body>
+          <mechEnabledWorkTypes>
+            <li>Growing</li>
+            <li>Handling</li>
+          </mechEnabledWorkTypes>
+          <mechWorkTypePriorities>
+            <Growing>2</Growing>
+          </mechWorkTypePriorities>
+          <lifeStageAges>
             <li>
-                <def>MechanoidFullyFormed</def>
-                <minAge>0</minAge>
-                <soundWounded>Handy_Placeholder</soundWounded>
-                <soundDeath>Handy_Placeholder</soundDeath>
-                <soundCall>Handy_Placeholder</soundCall>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Handy_Placeholder</soundWounded>
+              <soundDeath>Handy_Placeholder</soundDeath>
+              <soundCall>Handy_Placeholder</soundCall>
             </li>
             <li>
-                <def>MechanoidFullyFormed</def>
-                <minAge>100</minAge>
-                <soundWounded>Handy_Placeholder</soundWounded>
-                <soundDeath>Handy_Placeholder</soundDeath>
-                <soundCall>Handy_Placeholder</soundCall>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Handy_Placeholder</soundWounded>
+              <soundDeath>Handy_Placeholder</soundDeath>
+              <soundCall>Handy_Placeholder</soundCall>
             </li>
-            </lifeStageAges>
+          </lifeStageAges>
         </race>
-        </ThingDef>
+      </ThingDef>
     </value>
   </Operation>
   <!-- Mister Farmhand PawnKindDef -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Mech_Agrihand"]</xpath>
     <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
+      <PawnKindDef ParentName="LightMechanoidKind">
         <defName>Mech_Agrihand</defName>
         <label>Mister Farmhand</label>
         <race>Mech_Agrihand</race>
         <combatPower>45</combatPower>
         <lifeStages>
-            <li>
+          <li>
             <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-                <shaderType>CutoutWithOverlay</shaderType>
-                <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>1.25</drawSize>
-                <shadowData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
                 <volume>(0.3, 0.4, 0.3)</volume>
                 <offset>(0,0,-0.25)</offset>
-                </shadowData>
+              </shadowData>
             </bodyGraphicData>
-            </li>
-            <li>
+          </li>
+          <li>
             <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-                <shaderType>CutoutWithOverlay</shaderType>
-                <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>1.25</drawSize>
-                <shadowData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
                 <volume>(0.3, 0.4, 0.3)</volume>
                 <offset>(0,0,-0.25)</offset>
-                </shadowData>
+              </shadowData>
             </bodyGraphicData>
-            </li>
+          </li>
         </lifeStages>
         <weaponTags>
-            <li>MechanoidGunShortRange</li>
-      </weaponTags>
+          <li>MechanoidGunShortRange</li>
+        </weaponTags>
       </PawnKindDef>
     </value>
   </Operation>
   <!-- Mister Farmhand RecipeDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Agrihand"]</xpath>
+    <xpath>/Defs/RecipeDef[defName="Agrihand"]</xpath>
     <value>
-    <RecipeDef ParentName="MediumMechanoidRecipe">
+      <RecipeDef ParentName="MediumMechanoidRecipe">
         <defName>Agrihand</defName>
         <label>gestate Mister Farmhand</label>
         <description>Gestate a Mister Farmhand.</description>
         <products>
-        <Mech_Agrihand>1</Mech_Agrihand>
+          <Mech_Agrihand>1</Mech_Agrihand>
         </products>
         <descriptionHyperlinks>
-        <ThingDef>Mech_Agrihand</ThingDef>
+          <ThingDef>Mech_Agrihand</ThingDef>
         </descriptionHyperlinks>
-        </RecipeDef>
+      </RecipeDef>
     </value>
   </Operation>
 </Patch>

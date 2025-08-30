@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
- <!-- ThingDef -->
+  <!-- ThingDef -->
 
   <ThingDef Abstract="True" Name="MotorBlade" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
@@ -9,13 +9,13 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
-        <li Class="CompProperties_Art">
-            <nameMaker>NamerArtWeaponMelee</nameMaker>
-            <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
-            <minQualityForArtistic>Excellent</minQualityForArtistic>
-        </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
     </comps>
-	<recipeMaker>
+    <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
@@ -24,8 +24,8 @@
         <li>TableMachining</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-	  <researchPrerequisite>Machining</researchPrerequisite>
-	  <skillRequirements>
+      <researchPrerequisite>Machining</researchPrerequisite>
+      <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
     </recipeMaker>
@@ -36,7 +36,7 @@
     </thingCategories>
   </ThingDef>
 
- <!-- Ripper -->
+  <!-- Ripper -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Ripper</defName>
@@ -46,17 +46,17 @@
       <texPath>Weapons/FCP_Ripper</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	  <statBases>
+    <statBases>
       <MarketValue>340</MarketValue>
       <Mass>3.5</Mass>
-	    <WorkToMake>12000</WorkToMake>
+      <WorkToMake>12000</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>30</Steel>
-	    <Chemfuel>20</Chemfuel>
+      <Chemfuel>20</Chemfuel>
       <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
-	  <equippedStatOffsets>
+    <equippedStatOffsets>
       <PlantWorkSpeed>0.15</PlantWorkSpeed>
       <ButcheryMechanoidSpeed>0.15</ButcheryMechanoidSpeed>
     </equippedStatOffsets>
@@ -68,7 +68,7 @@
         </capacities>
         <power>4</power>
         <cooldownTime>1</cooldownTime>
-		    <armorPenetration>0.15</armorPenetration>
+        <armorPenetration>0.15</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -77,15 +77,15 @@
         </capacities>
         <power>7</power>
         <cooldownTime>1</cooldownTime>
-		    <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.18</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
+    <weaponTags>
       <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Buzzsaw -->
+  <!-- Buzzsaw -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Buzzsaw</defName>
@@ -95,18 +95,18 @@
       <texPath>Weapons/FCP_Buzzsaw</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	  <statBases>
+    <statBases>
       <MarketValue>580</MarketValue>
       <Mass>4.0</Mass>
-	    <WorkToMake>13000</WorkToMake>
+      <WorkToMake>13000</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>50</Steel>
       <WoodLog>10</WoodLog>
-	    <Chemfuel>20</Chemfuel>
+      <Chemfuel>20</Chemfuel>
       <ComponentIndustrial>7</ComponentIndustrial>
     </costList>
-	  <equippedStatOffsets>
+    <equippedStatOffsets>
       <PlantWorkSpeed>0.30</PlantWorkSpeed>
       <ConstructionSpeed>0.80</ConstructionSpeed>
     </equippedStatOffsets>
@@ -118,7 +118,7 @@
         </capacities>
         <power>5</power>
         <cooldownTime>2.1</cooldownTime>
-		    <armorPenetration>0.25</armorPenetration>
+        <armorPenetration>0.25</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -127,15 +127,15 @@
         </capacities>
         <power>8</power>
         <cooldownTime>2.1</cooldownTime>
-		    <armorPenetration>0.30</armorPenetration>
+        <armorPenetration>0.30</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
-    <li>MedievalMeleeAdvanced</li>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Crowbar -->
+  <!-- Crowbar -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Crowbar</defName>
@@ -145,15 +145,15 @@
       <texPath>Weapons/FCP_Crowbar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	  <statBases>
+    <statBases>
       <MarketValue>100</MarketValue>
       <Mass>3</Mass>
-	    <WorkToMake>9000</WorkToMake>
+      <WorkToMake>9000</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>55</Steel>
     </costList>
-	  <equippedStatOffsets>
+    <equippedStatOffsets>
       <ConstructionSpeed>0.10</ConstructionSpeed>
     </equippedStatOffsets>
     <tools>
@@ -164,7 +164,7 @@
         </capacities>
         <power>5</power>
         <cooldownTime>1.6</cooldownTime>
-		    <armorPenetration>0.1</armorPenetration>
+        <armorPenetration>0.1</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -173,15 +173,15 @@
         </capacities>
         <power>8</power>
         <cooldownTime>1.6</cooldownTime>
-		    <armorPenetration>0.1</armorPenetration>
+        <armorPenetration>0.1</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
-    <li>MedievalMeleeAdvanced</li>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Baseball Bat -->
+  <!-- Baseball Bat -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Baseball_Bat</defName>
@@ -192,12 +192,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>-90</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>120</MarketValue>
       <Mass>4.0</Mass>
-	    <WorkToMake>5000</WorkToMake>
+      <WorkToMake>5000</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
     </costList>
@@ -209,17 +209,17 @@
         </capacities>
         <power>10</power>
         <cooldownTime>2.5</cooldownTime>
-		    <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.18</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
-    <li>MedievalMeleeAdvanced</li>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Scissor Pipe -->
+  <!-- Scissor Pipe -->
 
-   <ThingDef ParentName="MotorBlade">
+  <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Scissor_Pipe</defName>
     <label>scissor pipe</label>
     <description>A homemade weapon composed of a pair of scissors duct taped to a metal pipe. While it’s somewhat unwieldy, it is capable of dealing sharp and blunt damage at the same time. Quite an adaptable, if crude, weapon.</description>
@@ -228,12 +228,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>180</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>85</MarketValue>
       <Mass>2.5</Mass>
-	    <WorkToMake>8500</WorkToMake>
+      <WorkToMake>8500</WorkToMake>
     </statBases>
-	<costList>
+    <costList>
       <Steel>45</Steel>
     </costList>
     <tools>
@@ -244,7 +244,7 @@
         </capacities>
         <power>4</power>
         <cooldownTime>2.3</cooldownTime>
-		    <armorPenetration>0.1</armorPenetration>
+        <armorPenetration>0.1</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -253,17 +253,17 @@
         </capacities>
         <power>5</power>
         <cooldownTime>2.3</cooldownTime>
-		    <armorPenetration>0.1</armorPenetration>
+        <armorPenetration>0.1</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
-    <li>MedievalMeleeAdvanced</li>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Wack Saw -->
+  <!-- Wack Saw -->
 
-    <ThingDef ParentName="MotorBlade">
+  <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Wack_Saw</defName>
     <label>wack saw</label>
     <description>A makeshift weapon made of a thin sawblade attached to a metal pipe with duct tape wrapped around the handle to offer increased grip. A dangerous weapon and a useful tool for cutting or harvesting plants.</description>
@@ -272,12 +272,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>225</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>95</MarketValue>
       <Mass>1.5</Mass>
-	    <WorkToMake>8200</WorkToMake>
+      <WorkToMake>8200</WorkToMake>
     </statBases>
-	<costList>
+    <costList>
       <Steel>35</Steel>
     </costList>
     <equippedStatOffsets>
@@ -291,15 +291,15 @@
         </capacities>
         <power>10</power>
         <cooldownTime>2</cooldownTime>
-		<armorPenetration>0.2</armorPenetration>
+        <armorPenetration>0.2</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
-    <li>MedievalMeleeAdvanced</li>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Throat Cutter -->
+  <!-- Throat Cutter -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Throat_Cutter</defName>
@@ -310,12 +310,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>225</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>80</MarketValue>
       <Mass>1.2</Mass>
-	    <WorkToMake>7500</WorkToMake>
+      <WorkToMake>7500</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>30</Steel>
     </costList>
     <tools>
@@ -326,15 +326,15 @@
         </capacities>
         <power>8</power>
         <cooldownTime>1.75</cooldownTime>
-		    <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.18</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
+    <weaponTags>
       <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Wrench Knife -->
+  <!-- Wrench Knife -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Wrench_Knife</defName>
@@ -345,12 +345,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>225</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>75</MarketValue>
       <Mass>1.1</Mass>
-	    <WorkToMake>7600</WorkToMake>
+      <WorkToMake>7600</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>35</Steel>
     </costList>
     <equippedStatOffsets>
@@ -364,15 +364,15 @@
         </capacities>
         <power>8</power>
         <cooldownTime>1.8</cooldownTime>
-		    <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.18</armorPenetration>
       </li>
     </tools>
-	  <weaponTags>
+    <weaponTags>
       <li>MedievalMeleeAdvanced</li>
     </weaponTags>
   </ThingDef>
 
- <!-- Sishkebab -->
+  <!-- Sishkebab -->
 
   <ThingDef ParentName="MotorBlade">
     <defName>FCP_Melee_Sishkebab</defName>
@@ -383,14 +383,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>-45</equippedAngleOffset>
-	  <statBases>
+    <statBases>
       <MarketValue>800</MarketValue>
       <Mass>3.5</Mass>
-	    <WorkToMake>15000</WorkToMake>
+      <WorkToMake>15000</WorkToMake>
     </statBases>
-	  <costList>
+    <costList>
       <Steel>45</Steel>
-	    <Chemfuel>25</Chemfuel>
+      <Chemfuel>25</Chemfuel>
       <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <tools>
@@ -401,23 +401,23 @@
         </capacities>
         <power>10</power>
         <cooldownTime>2.</cooldownTime>
-		    <armorPenetration>0.65</armorPenetration>
-          <extraMeleeDamages>
-            <li>
-              <def>Flame</def>
-              <amount>10</amount>
-              <chance>0.7</chance>
-            </li>
+        <armorPenetration>0.65</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>0.7</chance>
+          </li>
         </extraMeleeDamages>
       </li>
     </tools>
-	  <weaponTags>
+    <weaponTags>
       <li>IndustrialGunAdvanced</li>
     </weaponTags>
 
   </ThingDef>
 
- <!-- MPL -->
+  <!-- MPL -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_MPL</defName>
@@ -498,7 +498,7 @@
     </projectile>
   </ThingDef>
 
- <!-- Tomacuzzi -->
+  <!-- Tomacuzzi -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Tomacuzi</defName>
@@ -515,7 +515,9 @@
         <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <Mass>3.3</Mass>
@@ -580,7 +582,7 @@
     </projectile>
   </ThingDef>
 
- <!-- Sawn Off Shotgun -->
+  <!-- Sawn Off Shotgun -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Sawn_Off_Shotgun</defName>
@@ -625,7 +627,7 @@
     </verbs>
     <weaponTags>
       <li>IndustrialGunAdvanced</li>
-		</weaponTags>
+    </weaponTags>
     <tools>
       <li>
         <label>stock</label>
@@ -663,9 +665,9 @@
     </projectile>
   </ThingDef>
 
-  
 
- <!-- Pumpie -->
+
+  <!-- Pumpie -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Pumpie</defName>
@@ -708,7 +710,7 @@
     </verbs>
     <weaponTags>
       <li>IndustrialGunAdvanced</li>
-		</weaponTags>
+    </weaponTags>
     <tools>
       <li>
         <label>stock</label>
@@ -746,7 +748,7 @@
     </projectile>
   </ThingDef>
 
- <!-- Kalash Rifle -->
+  <!-- Kalash Rifle -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Kalash_Rifle</defName>
@@ -763,7 +765,9 @@
         <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>38000</WorkToMake>
       <Mass>3.5</Mass>
@@ -828,7 +832,7 @@
     </projectile>
   </ThingDef>
 
- <!-- Makeshift AMR -->
+  <!-- Makeshift AMR -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Makeshift_AMR</defName>
@@ -873,9 +877,9 @@
         <muzzleFlashScale>10</muzzleFlashScale>
       </li>
     </verbs>
-		<weaponTags>
+    <weaponTags>
       <li>IndustrialGunAdvanced</li>
-		</weaponTags>
+    </weaponTags>
     <tools>
       <li>
         <label>stock</label>
@@ -896,7 +900,7 @@
       </li>
     </tools>
   </ThingDef>
- 
+
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_MKSAMR</defName>
     <label>AMR Bullet</label>
@@ -911,7 +915,7 @@
     </projectile>
   </ThingDef>
 
- <!-- Nikov -->
+  <!-- Nikov -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Nikov_Rifle</defName>
@@ -928,7 +932,9 @@
         <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>38000</WorkToMake>
       <Mass>3.5</Mass>
@@ -993,7 +999,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Syringer -->
+  <!-- Syringer -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>FCP_Gun_Syringer</defName>
@@ -1038,9 +1044,9 @@
         <muzzleFlashScale>6</muzzleFlashScale>
       </li>
     </verbs>
-		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
-		</weaponTags>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
     <tools>
       <li>
         <label>stock</label>
@@ -1061,7 +1067,7 @@
       </li>
     </tools>
   </ThingDef>
- 
+
   <ThingDef ParentName="BaseBullet">
     <defName>Dart_Syringer</defName>
     <label>syringer dart</label>
@@ -1098,9 +1104,9 @@
     <isRanged>true</isRanged>
     <makesAnimalsFlee>true</makesAnimalsFlee>
   </DamageDef>
-<!-- Makeshift Pistols -->
+  <!-- Makeshift Pistols -->
 
-<!-- Bulldog -->
+  <!-- Bulldog -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSW_Gun_Bulldog</defName>
@@ -1112,7 +1118,9 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <soundInteract>Interact_Revolver</soundInteract>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>4000</WorkToMake>
       <Mass>1.7</Mass>
@@ -1170,22 +1178,22 @@
       </li>
     </tools>
   </ThingDef>
-    <ThingDef ParentName="BaseBullet">
-        <defName>MSW_Bullet_Revolver</defName>
-        <label>MSW revolver bullet</label>
-        <graphicData>
-        <texPath>Things/Projectile/Bullet_Small</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <projectile>
-        <damageDef>Bullet</damageDef>
-        <damageAmountBase>18</damageAmountBase>
-        <armorPenetrationBase>0.14</armorPenetrationBase>
-        <speed>55</speed>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MSW_Bullet_Revolver</defName>
+    <label>MSW revolver bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
 
-<!-- Stapler -->
+  <!-- Stapler -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MKS_Gun_Stapler</defName>
@@ -1272,7 +1280,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Scrap Pistol -->
+  <!-- Scrap Pistol -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSW_Gun_Scrap_Pistol</defName>
@@ -1356,7 +1364,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Junk Pistol -->
+  <!-- Junk Pistol -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSW_Gun_Junk_Pistol</defName>
@@ -1440,7 +1448,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Ratvolver -->
+  <!-- Ratvolver -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSW_Gun_Ratvolver</defName>
@@ -1452,7 +1460,9 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <soundInteract>Interact_Revolver</soundInteract>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>3700</WorkToMake>
       <Mass>1.7</Mass>
@@ -1510,22 +1520,22 @@
       </li>
     </tools>
   </ThingDef>
-    <ThingDef ParentName="BaseBullet">
-        <defName>MSW_Bullet_Ratvolver</defName>
-        <label>MSW ratvolver bullet</label>
-        <graphicData>
-        <texPath>Things/Projectile/Bullet_Small</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <projectile>
-        <damageDef>Bullet</damageDef>
-        <damageAmountBase>16</damageAmountBase>
-        <armorPenetrationBase>0.12</armorPenetrationBase>
-        <speed>55</speed>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MSW_Bullet_Ratvolver</defName>
+    <label>MSW ratvolver bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
 
-<!-- Nailgun -->
+  <!-- Nailgun -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MKS_Gun_Nailgun</defName>
@@ -1612,9 +1622,9 @@
     </projectile>
   </ThingDef>
 
-<!--__________ Makeshift Pistols __________-->
+  <!--__________ Makeshift Pistols __________-->
 
-<!-- Hunting Rifle -->
+  <!-- Hunting Rifle -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSWR_Gun_Hunting_Rifle</defName>
@@ -1626,7 +1636,9 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <soundInteract>Interact_Rifle</soundInteract>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>30000</WorkToMake>
       <Mass>1.7</Mass>
@@ -1683,22 +1695,22 @@
       </li>
     </tools>
   </ThingDef>
-    <ThingDef ParentName="BaseBullet">
-        <defName>MSWR_Bullet_Hunting_Rifle</defName>
-        <label>MSWR Hunting Rifle bullet</label>
-        <graphicData>
-        <texPath>Things/Projectile/Bullet_Small</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <projectile>
-        <damageDef>Bullet</damageDef>
-        <damageAmountBase>15</damageAmountBase>
-        <armorPenetrationBase>0.14</armorPenetrationBase>
-        <speed>65</speed>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MSWR_Bullet_Hunting_Rifle</defName>
+    <label>MSWR Hunting Rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
 
-<!-- Owen Rifle -->
+  <!-- Owen Rifle -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSWR_Gun_Owen_Rifle</defName>
@@ -1782,7 +1794,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Pipe Rifle -->
+  <!-- Pipe Rifle -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSWR_Gun_Pipe_Rifle</defName>
@@ -1865,7 +1877,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Blowback -->
+  <!-- Blowback -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSWR_Gun_Blowback</defName>
@@ -1951,7 +1963,7 @@
     </projectile>
   </ThingDef>
 
-<!-- Pipe Rifle R -->
+  <!-- Pipe Rifle R -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MSW_Gun_Pipe_Rifle_R</defName>
@@ -1963,7 +1975,9 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <soundInteract>Interact_Revolver</soundInteract>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
     <statBases>
       <WorkToMake>3700</WorkToMake>
       <Mass>1.7</Mass>
@@ -2020,22 +2034,22 @@
       </li>
     </tools>
   </ThingDef>
-    <ThingDef ParentName="BaseBullet">
-        <defName>MSW_Bullet_Pipe_Rifle_R</defName>
-        <label>MSWR Pipe Rifle R bullet</label>
-        <graphicData>
-        <texPath>Things/Projectile/Bullet_Small</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <projectile>
-        <damageDef>Bullet</damageDef>
-        <damageAmountBase>11</damageAmountBase>
-        <armorPenetrationBase>0.09</armorPenetrationBase>
-        <speed>50</speed>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MSW_Bullet_Pipe_Rifle_R</defName>
+    <label>MSWR Pipe Rifle R bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.09</armorPenetrationBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
 
-<!-- SVT -->
+  <!-- SVT -->
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>MKS_Gun_SVT</defName>

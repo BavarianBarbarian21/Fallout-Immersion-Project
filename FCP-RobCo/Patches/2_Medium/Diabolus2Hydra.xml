@@ -2,82 +2,82 @@
 <Patch>
   <!-- Hydra ThingDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/ThingDef[defName="Mech_Diabolus"]</xpath>
-  <value>
-    <ThingDef ParentName="BaseMechanoidWalker">
-    <defName>Mech_Diabolus</defName>
-    <label>Hydra</label>
-    <description>This is an Hydra.</description>
-    <statBases>
-      <MoveSpeed>5</MoveSpeed>
-    </statBases>
-    <race>
-    <body>Mech_Agrihand</body>
-      <lifeStageAges>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>0</minAge>
-  <soundWounded>Handy_Placeholder</soundWounded>
-  <soundDeath>Handy_Placeholder</soundDeath>
-  <soundCall>Handy_Placeholder</soundCall>
-      </li>
-      <li>
-        <def>MechanoidFullyFormed</def>
-        <minAge>100</minAge>
-        <soundWounded>Handy_Placeholder</soundWounded>
-        <soundDeath>Handy_Placeholder</soundDeath>
-        <soundCall>Handy_Placeholder</soundCall>
-      </li>
-      </lifeStageAges>
-    </race>
-    </ThingDef>
-  </value>
+    <xpath>/Defs/ThingDef[defName="Mech_Diabolus"]</xpath>
+    <value>
+      <ThingDef ParentName="BaseMechanoidWalker">
+        <defName>Mech_Diabolus</defName>
+        <label>Hydra</label>
+        <description>This is an Hydra.</description>
+        <statBases>
+          <MoveSpeed>5</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Mech_Agrihand</body>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Handy_Placeholder</soundWounded>
+              <soundDeath>Handy_Placeholder</soundDeath>
+              <soundCall>Handy_Placeholder</soundCall>
+            </li>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>100</minAge>
+              <soundWounded>Handy_Placeholder</soundWounded>
+              <soundDeath>Handy_Placeholder</soundDeath>
+              <soundCall>Handy_Placeholder</soundCall>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
   </Operation>
-  
+
   <!-- Hydra PawnKindDef -->
   <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/PawnKindDef[defName="Mech_Diabolus"]</xpath>
-  <value>
-    <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>Mech_Diabolus</defName>
-    <label>Hydra</label>
-    <race>Mech_Diabolus</race>
-    <combatPower>45</combatPower>
-    <lifeStages>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-      <li>
-      <bodyGraphicData>
-        <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
-        <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
-        <shaderType>CutoutWithOverlay</shaderType>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <drawSize>1.25</drawSize>
-        <shadowData>
-        <volume>(0.3, 0.4, 0.3)</volume>
-        <offset>(0,0,-0.25)</offset>
-        </shadowData>
-      </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-    </weaponTags>
-    </PawnKindDef>
-  </value>
+    <xpath>/Defs/PawnKindDef[defName="Mech_Diabolus"]</xpath>
+    <value>
+      <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Diabolus</defName>
+        <label>Hydra</label>
+        <race>Mech_Diabolus</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>FCP-RobCo/Sprites/Placeholder</texPath>
+              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>MechanoidGunShortRange</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
   </Operation>
-  
+
   <!-- Hydra RecipeDef 
   <Operation Class="PatchOperationReplace">
   <xpath>/Defs/RecipeDef[defName="Diabolus"]</xpath>
