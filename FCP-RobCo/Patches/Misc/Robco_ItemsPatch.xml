@@ -55,6 +55,13 @@
       <description>This is a human brain... in a jar.</description>
     </value>
   </Operation>
+    <!-- Patch texture for SubcoreHigh to Cybernetic Brain -->
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="SubcoreHigh"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>Misc/Cybernetic_Brain</texPath>
+      </value>
+    </Operation>
 
   <!-- Patch label and description for SignalChip -->
   <Operation Class="PatchOperationReplace">
