@@ -20,15 +20,16 @@
       </li>
     </subSounds>
   </SoundDef>
+  
   <SoundDef>
-    <defName>Protectron_Hurt</defName>
+    <defName>Protectron_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Protectron/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Protectron/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -95,14 +96,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Cyberdog_Hurt</defName>
+    <defName>Cyberdog_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Cyberdog/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Cyberdog/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -169,14 +170,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Handy_Hurt</defName>
+    <defName>Handy_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Handy/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Handy/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -243,14 +244,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Gutsy_Hurt</defName>
+    <defName>Gutsy_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Gutsy/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Gutsy/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -317,14 +318,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Robobrain_Hurt</defName>
+    <defName>Robobrain_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Robobrain/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Robobrain/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -391,14 +392,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Sentrybot_Hurt</defName>
+    <defName>Sentrybot_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Sentrybot/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Sentrybot/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -483,14 +484,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Eyebot_Hurt</defName>
+    <defName>Eyebot_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Eyebot/Hurt</clipFolderPath>
+            <clipFolderPath>Eyebot/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -539,14 +540,14 @@
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>Assaultron_Hurt</defName>
+    <defName>Assaultron_Wounded</defName>
     <context>MapOnly</context>
     <maxVoices>1</maxVoices>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>RobCo/Assaultron/Hurt</clipFolderPath>
+            <clipFolderPath>RobCo/Assaultron/Wounded</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
@@ -583,6 +584,80 @@
         <grains>
           <li Class="AudioGrain_Folder">
             <clipFolderPath>RobCo/Assaultron/Death</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Nanny -->
+  <SoundDef>
+    <defName>Nanny_Call</defName>
+    <context>MapOnly</context>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>RobCo/Nanny/Call</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Nanny_Wounded</defName>
+    <context>MapOnly</context>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>RobCo/Nanny/Wounded</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Nanny_Angry</defName>
+    <context>MapOnly</context>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>RobCo/Nanny/Angry</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Nanny_Death</defName>
+    <context>MapOnly</context>
+    <maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>RobCo/Nanny/Death</clipFolderPath>
           </li>
         </grains>
         <volumeRange>20</volumeRange>
