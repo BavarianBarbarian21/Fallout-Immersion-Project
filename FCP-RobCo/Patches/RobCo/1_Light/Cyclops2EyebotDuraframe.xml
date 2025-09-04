@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
   <!-- Eyebot Duraframe ThingDef -->
-  <Operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
     <xpath>/Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
     <value>
       <ThingDef ParentName="Floating">
@@ -37,7 +37,7 @@
   </Operation>
 
   <!-- Eyebot Duraframe PawnKindDef -->
-  <Operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
     <xpath>/Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
     <value>
       <PawnKindDef ParentName="LightMechanoidKind">
@@ -80,7 +80,7 @@
   </Operation>
 
   <!-- Eyebot Duraframe RecipeDef -->
-  <Operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
     <xpath>/Defs/RecipeDef[defName="Cyclops"]</xpath>
     <value>
       <RecipeDef ParentName="LightMechanoidRecipe">

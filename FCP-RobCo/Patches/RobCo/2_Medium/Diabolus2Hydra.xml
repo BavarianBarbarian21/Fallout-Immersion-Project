@@ -79,10 +79,10 @@
     </value>
   </Operation>
 
-  <!-- Hydra RecipeDef 
-  <Operation Class="PatchOperationReplace">
+  <!-- Hydra RecipeDef -->
+  <Operation Class="PatchOperationRemove">
   <xpath>/Defs/RecipeDef[defName="Diabolus"]</xpath>
-    <value>
+    <!--<value>
       <RecipeDef ParentName="MediumMechanoidRecipe">
         <defName>Diabolus</defName>
         <label>gestate Hydra</label>
@@ -94,6 +94,6 @@
         <ThingDef>Mech_Diabolus</ThingDef>
         </descriptionHyperlinks>
       </RecipeDef>
-    </value>
-  </Operation>-->
+    </value>-->
+  </Operation>
 </Patch>
