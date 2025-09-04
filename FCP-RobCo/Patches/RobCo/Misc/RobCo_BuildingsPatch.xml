@@ -196,4 +196,43 @@
       <description>A General Atomics machine to carefully extract human processor units.</description>
     </value>
   </Operation>
+
+    <!-- Patch MechGestator recipes -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <recipes>
+        <li>Constructoid</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">Cyclops</li>
+        <li>Fabricor</li>
+        <li>Lifter</li>
+        <li>Militor</li>
+        <li>Pikeman</li>
+        <li>Tunneler</li>
+        <li>Agrihand</li>
+        <li>Cleansweeper</li>
+        <li>Lancer</li>
+        <li>Paramedic</li>
+        <li>Scorcher</li>
+        <li>Scyther</li>
+        <li>ResurrectMediumMech</li>
+      </recipes>
+    </value>
+  </Operation>
+
+  <!-- Patch LargeMechGestator recipes -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <recipes>
+        <li>Centurion</li>
+        <li>Legionary</li>
+        <li>Tesseron</li>
+        <li>CentipedeBlaster</li>
+        <li>CentipedeGunner</li>
+        <li>CentipedeBurner</li>
+        <li>ResurrectHeavyMech</li>
+      </recipes>
+    </value>
+  </Operation>
 </Patch>

@@ -1,99 +1,98 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Eyebot Duraframe ThingDef -->
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>/Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
-    <value>
-      <ThingDef ParentName="Floating">
-        <defName>Mech_Cyclops</defName>
-        <label>Eyebot Duraframe</label>
-        <description>This is an Eyebot Duraframe.</description>
-        <statBases>
-          <MoveSpeed>5</MoveSpeed>
-        </statBases>
-        <race>
-          <body>Mech_Agrihand</body>
-          <lifeStageAges>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>0</minAge>
-              <soundWounded>Eyebot_Wounded</soundWounded>
-              <soundDeath>Eyebot_Death</soundDeath>
-              <soundCall>Eyebot_Call</soundCall>
-              <soundAngry>Eyebot_Angry</soundAngry>
-            </li>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>100</minAge>
-              <soundWounded>Eyebot_Wounded</soundWounded>
-              <soundDeath>Eyebot_Death</soundDeath>
-              <soundCall>Eyebot_Call</soundCall>
-              <soundAngry>Eyebot_Angry</soundAngry>
-            </li>
-          </lifeStageAges>
-        </race>
-      </ThingDef>
-    </value>
-  </Operation>
 
-  <!-- Eyebot Duraframe PawnKindDef -->
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>/Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
-    <value>
-      <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>Mech_Cyclops</defName>
-        <label>Eyebot Duraframe</label>
-        <race>Mech_Cyclops</race>
-        <combatPower>45</combatPower>
-        <lifeStages>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Eyebot/Eyebot</texPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Eyebot/Eyebot</texPath>
-              
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-        </lifeStages>
-        <weaponTags>
-          <li>MechanoidGunShortRange</li>
-        </weaponTags>
-      </PawnKindDef>
-    </value>
-  </Operation>
-
-  <!-- Eyebot Duraframe RecipeDef -->
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>/Defs/RecipeDef[defName="Cyclops"]</xpath>
-    <value>
-      <RecipeDef ParentName="LightMechanoidRecipe">
-        <defName>Cyclops</defName>
-        <label>gestate Eyebot Duraframe</label>
-        <description>Gestate an Eyebot Duraframe.</description>
-        <products>
-          <Mech_Cyclops>1</Mech_Cyclops>
-        </products>
-        <descriptionHyperlinks>
-          <ThingDef>Mech_Cyclops</ThingDef>
-        </descriptionHyperlinks>
-      </RecipeDef>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/ThingDef[defName="Mech_Cyclops"]</xpath>
+        <value>
+          <ThingDef ParentName="Floating">
+            <defName>Mech_Cyclops</defName>
+            <label>Eyebot Duraframe</label>
+            <description>This is an Eyebot Duraframe.</description>
+            <statBases>
+              <MoveSpeed>5</MoveSpeed>
+            </statBases>
+            <race>
+              <body>Mech_Agrihand</body>
+              <lifeStageAges>
+                <li>
+                  <def>MechanoidFullyFormed</def>
+                  <minAge>0</minAge>
+                  <soundWounded>Eyebot_Wounded</soundWounded>
+                  <soundDeath>Eyebot_Death</soundDeath>
+                  <soundCall>Eyebot_Call</soundCall>
+                  <soundAngry>Eyebot_Angry</soundAngry>
+                </li>
+                <li>
+                  <def>MechanoidFullyFormed</def>
+                  <minAge>100</minAge>
+                  <soundWounded>Eyebot_Wounded</soundWounded>
+                  <soundDeath>Eyebot_Death</soundDeath>
+                  <soundCall>Eyebot_Call</soundCall>
+                  <soundAngry>Eyebot_Angry</soundAngry>
+                </li>
+              </lifeStageAges>
+            </race>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
+        <value>
+          <PawnKindDef ParentName="LightMechanoidKind">
+            <defName>Mech_Cyclops</defName>
+            <label>Eyebot Duraframe</label>
+            <race>Mech_Cyclops</race>
+            <combatPower>45</combatPower>
+            <lifeStages>
+              <li>
+                <bodyGraphicData>
+                  <texPath>RobCo/Eyebot/Eyebot</texPath>
+                  <shaderType>CutoutWithOverlay</shaderType>
+                  <graphicClass>Graphic_Multi</graphicClass>
+                  <drawSize>1.25</drawSize>
+                  <shadowData>
+                    <volume>(0.3, 0.4, 0.3)</volume>
+                    <offset>(0,0,-0.25)</offset>
+                  </shadowData>
+                </bodyGraphicData>
+              </li>
+              <li>
+                <bodyGraphicData>
+                  <texPath>RobCo/Eyebot/Eyebot</texPath>
+                  <shaderType>CutoutWithOverlay</shaderType>
+                  <graphicClass>Graphic_Multi</graphicClass>
+                  <drawSize>1.25</drawSize>
+                  <shadowData>
+                    <volume>(0.3, 0.4, 0.3)</volume>
+                    <offset>(0,0,-0.25)</offset>
+                  </shadowData>
+                </bodyGraphicData>
+              </li>
+            </lifeStages>
+            <weaponTags>
+              <li>MechanoidGunShortRange</li>
+            </weaponTags>
+          </PawnKindDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/RecipeDef[defName="Cyclops"]</xpath>
+        <value>
+          <RecipeDef ParentName="LightMechanoidRecipe">
+            <defName>Cyclops</defName>
+            <label>gestate Eyebot Duraframe</label>
+            <description>Gestate an Eyebot Duraframe.</description>
+            <products>
+              <Mech_Cyclops>1</Mech_Cyclops>
+            </products>
+            <descriptionHyperlinks>
+              <ThingDef>Mech_Cyclops</ThingDef>
+            </descriptionHyperlinks>
+          </RecipeDef>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>
