@@ -74,7 +74,7 @@
   </Operation>
     <!-- Remove CompProperties_UseEffectDestroySelf from MechbandAntenna -->
     <Operation Class="PatchOperationRemove">
-      <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps/li[compClass="CompProperties_UseEffectDestroySelf"]</xpath>
+      <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps/li[@Class="CompProperties_UseEffectDestroySelf"]</xpath>
     </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
@@ -100,7 +100,7 @@
   </Operation>
     <!-- Remove CompProperties_UseEffectDestroySelf from MechbandDish -->
     <Operation Class="PatchOperationRemove">
-      <xpath>/Defs/ThingDef[defName="MechbandDish"]/comps/li[compClass="CompProperties_UseEffectDestroySelf"]</xpath>
+      <xpath>/Defs/ThingDef[defName="MechbandDish"]/comps/li[@Class="CompProperties_UseEffectDestroySelf"]</xpath>
     </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="MechbandDish"]/description</xpath>

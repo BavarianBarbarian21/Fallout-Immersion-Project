@@ -76,6 +76,12 @@
       <description>Still functional parts of a Mister Handy unit thruster.</description>
     </value>
   </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="SignalChip"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>RobCo/Misc/GoodAsNewThrusters</texPath>
+      </value>
+    </Operation>
 
   <!-- Patch label and description for PowerfocusChip -->
   <Operation Class="PatchOperationReplace">
@@ -90,6 +96,7 @@
       <description>The severed head of a broken assaultron.</description>
     </value>
   </Operation>
+ c
 
   <!-- Patch label and description for NanostructuringChip -->
   <Operation Class="PatchOperationReplace">
@@ -104,6 +111,12 @@
       <description>The depletet remains of a Sentry Bot fusion cell.</description>
     </value>
   </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="NanostructuringChip"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>RobCo/Misc/DepletedFusionCore</texPath>
+      </value>
+    </Operation>
 
   <!-- Patch label and description for UnfinishedSubcore -->
   <Operation Class="PatchOperationReplace">

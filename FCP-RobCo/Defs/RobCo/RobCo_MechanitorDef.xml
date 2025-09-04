@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Def>
+<Defs>
+<!--
 <ScenarioDef ParentName="ScenarioBase">
     <defName>Mechanitor</defName>
     <label>The Mechanitor</label>
@@ -8,14 +9,14 @@
       <summary>One mechanitor and a few servant mechanoids.</summary>
       <parts>
 
-        <!-- Game start dialog -->
+         Game start dialog
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
           <text>You knew you could only achieve greatness with help. People were too unreliable, so you chose to take on mechanoids as your servants, workers, and warriors.\n\nAs you gained strength, others became fearful. It became clear you needed to get away from the influence of humanity.\n\nNow you've migrated to this sparsely-populated rimworld with some of your metallic helpers. Finally, you have the space to grasp your true potential!</text>
           <closeSound>GameStartSting</closeSound>
         </li>
 
-        <!-- Config pages -->
+         Config pages
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
           <def>ConfigurePawnsKindDefs</def>
           <pawnChoiceCount>8</pawnChoiceCount>
@@ -29,14 +30,14 @@
           </kindCounts>
         </li>
 
-        <!-- Player starting stuff spawn method-->
+        Player starting stuff spawn method
         <li Class="ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>
           <visible>false</visible>
           <method>DropPods</method>
         </li>
         
-        <!-- Starting research -->
+         Starting research 
         <li Class="ScenPart_StartingResearch">
           <def>StartingResearch</def>
           <project>MicroelectronicsBasics</project>
@@ -50,7 +51,7 @@
           <project>Batteries</project>
         </li>
 
-        <!-- Starting mechs -->
+        Starting mechs 
         <li Class="ScenPart_StartingMech">
           <def>StartingMech</def>
           <mechKind>Mech_Lifter</mechKind>
@@ -68,7 +69,7 @@
         </li>
         
 
-        <!-- Player starting things -->
+        Player starting things 
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>Silver</thingDef>
@@ -112,4 +113,21 @@
       </parts>
     </scenario>
   </ScenarioDef>
-</Def>
+
+
+<FactionDef> 
+
+   <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="Mechanitor"]/label</xpath>
+    <value>
+      <label>RobCo mechanic</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="Mechanitor"]/description</xpath>
+    <value>
+      <description>RobCo mechanics are skilled engineers specializing in pre-war robotics and automation.</description>
+    </value>
+  </Operation>
+-->
+</Defs>
