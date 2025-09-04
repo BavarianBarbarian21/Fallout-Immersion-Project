@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="MechResourceBase">
-    <defName>RobCoManual</defName>
-    <label>RobCo Manual</label>
-    <description>A pre-war manual on RobCo electronics. Researching it can unlock a basic understanding of robotics.</description>
+    <defName>BrokenEyebotFrame</defName>
+    <label>Broken Eyebot Frame chip</label>
+    <description>A mechanoid-band synchronization micro-organ. It is necessary to produce certain advanced types of mechanoids and equipment.\n\nA mechanitor can study this chip to help unlock higher tiers of mechtech research.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/SignalChip</texPath>
+      <texPath>RobCo/Misc/BrokenEyebotFrame</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -13,15 +13,16 @@
     </statBases>
     <comps>
       <li Class="CompProperties_CompAnalyzableUnlockResearch">
-        <analysisID>12345678</analysisID>
+        <!--No idea what analysisID does but I changed it.-->
+        <analysisID>15001500</analysisID>
         <requiresMechanitor>true</requiresMechanitor>
 
         <!-- Analyzable -->
 
         <analysisDurationHours>0.5</analysisDurationHours>
         <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
-        <completedLetterLabel>RobCo manual: {RESEARCH} unlocked</completedLetterLabel>
-        <completedLetter>By studying the RobCo manual, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
+        <completedLetterLabel>Broken Eyebot frame studied: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By studying the broken Eyebot frame, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
         <completedLetterDef>PositiveEvent</completedLetterDef>
 
         <!-- Interactable -->
@@ -29,8 +30,8 @@
         <activateTexPath>UI/Icons/Study</activateTexPath>
 
         <activateLabelString>Analyze...</activateLabelString>
-        <activateDescString>Analyze the RobCo manual.</activateDescString>
-        <jobString>Analyze RobCo manual</jobString>
+        <activateDescString>Analyze the broken Eyebot frame.</activateDescString>
+        <jobString>Analyze broken Eyebot frame</jobString>
         <guiLabelString>Choose who should analyze this</guiLabelString>
         <inspectString>Can be analyzed by a colonist.</inspectString>
 
@@ -43,4 +44,74 @@
       </li>
     </comps>
   </ThingDef>
+
+<ThingDef ParentName="BuildingBase">
+    <defName>MechbandReceiver</defName>
+    <label>Mechband Receiver</label>
+    <description>Boosts the performance of the comms console.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/MechbandAntenna</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,5)</drawSize>
+      <shadowData>
+        <volume>(1.7, 0.75, 0.8)</volume>
+        <offset>(0.15, 0, 0)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>Biotech</li>
+      </buildingTags>
+    </building>
+    <designationCategory>Biotech</designationCategory>
+    <uiOrder>2450</uiOrder>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,1)</size>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <killedLeavings>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+    </killedLeavings>
+    <researchPrerequisites>
+      <li>BasicMechtech</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerObject</useJob>
+        <useLabel>Summon Hydra threat</useLabel>
+        <useDuration>900</useDuration>
+        <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+        <layerWhitelist>
+          <li>Surface</li>
+        </layerWhitelist>
+      </li>
+      <li Class="CompProperties_Useable_CallBossgroup">
+        <bossgroupDef>Hydra</bossgroupDef>
+        <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+        <prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
+        <unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+        <unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+        <delayTicks>120</delayTicks>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <delayTicks>120</delayTicks>
+        <spawnKilledLeavings>true</spawnKilledLeavings>
+        <effecterDef>MechbandBuildingDestroyed</effecterDef>
+      </li>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <filthLeaving>Filth_MachineBits</filthLeaving>
+  </ThingDef>
+
 </Defs>
