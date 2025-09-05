@@ -4,10 +4,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_ThumpCannon"]</xpath>
     <value>
-      <ThingDef ParentName="BaseGun">
-        <defName>Gun_ThumpCannon</defName>
-        <label>thump cannon</label>
-        <description>A breaching explosive launcher used by mechanoids. It fires a concussion bomb that is extremely effective against walls and structures, but does much less damage to small targets.</description>
+        <ThingDef ParentName="BaseGun">
+          <defName>Gun_ThumpCannon</defName>
+          <label>RobCo breacher cannon</label>
+          <description>A RobCo robot breaching launcher. Fires a concussion bomb designed for demolition and siege, optimized for robot assault tactics.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/ThumpCannon</texPath> -->
@@ -70,7 +70,7 @@
         <label>thump bomb</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/Bullet_Thump</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/Charge_Small</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>Projectile_Explosive</thingClass>
@@ -90,9 +90,9 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
     <value>
-      <ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_ChargeBlasterHeavyBase">
-        <label>heavy charge blaster</label>
-        <description>A pulse-charged rapid-fire blaster for area suppressive fire. Heavy cooling allows long, deadly bursts.</description>
+        <ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_ChargeBlasterHeavyBase">
+          <label>RobCo heavy pulse blaster</label>
+          <description>RobCo robot rapid-fire pulse blaster. Engineered for suppressive fire and extended bursts during robot combat operations.</description>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
@@ -135,7 +135,7 @@
         <label>charge blaster shot</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/Charge_Small</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/Charge_Small</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <shaderType>TransparentPostLight</shaderType>
         </graphicData>
@@ -152,9 +152,9 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_InfernoCannon"]</xpath>
     <value>
-      <ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_InfernoCannonBase">
-        <label>inferno cannon</label>
-        <description>An incendiary-shot mini-artillery device. It fires a large incendiary warhead.</description>
+        <ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_InfernoCannonBase">
+          <label>RobCo incinerator cannon</label>
+          <description>RobCo robot incinerator cannon. Launches incendiary warheads for area denial and robot battlefield control.</description>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
@@ -193,7 +193,7 @@
         <label>inferno cannon shell</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/LauncherShot</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/LauncherShot</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <shaderType>TransparentPostLight</shaderType>
           <color>(254,189,58)</color>
@@ -216,10 +216,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_Needle"]</xpath>
     <value>
-      <ThingDef ParentName="BaseGun" Name="NeedleGunBase">
-        <defName>Gun_Needle</defName>
-        <label>needle gun</label>
-        <description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
+        <ThingDef ParentName="BaseGun" Name="NeedleGunBase">
+          <defName>Gun_Needle</defName>
+          <label>RobCo precision laser blaster</label>
+          <description>RobCo robot precision blaster. Fires high-velocity beam for long-range, accurate strikes by Eyebot models.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/NeedleGun</texPath> -->
@@ -252,7 +252,7 @@
             <defaultProjectile>Bullet_NeedleGun</defaultProjectile>
             <warmupTime>2.5</warmupTime>
             <range>44.9</range>
-            <soundCast>Shot_NeedleGun</soundCast>
+            <soundCast>RobCo_Laser</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
           </li>
@@ -276,10 +276,10 @@
     <value>
       <ThingDef ParentName="BaseBullet">
         <defName>Bullet_NeedleGun</defName>
-        <label>needle shot</label>
+        <label>laser shot</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/Needle</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/Charge_Small</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>1.3</drawSize>
         </graphicData>
@@ -298,10 +298,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_ChargeBlasterTurret"]</xpath>
     <value>
-      <ThingDef ParentName="BaseWeaponTurret">
-        <defName>Gun_ChargeBlasterTurret</defName>
-        <label>charge blaster turret</label>
-        <description>A small charge blaster designed for use on a defense turret.</description>
+        <ThingDef ParentName="BaseWeaponTurret">
+          <defName>Gun_ChargeBlasterTurret</defName>
+          <label>RobCo turret pulse blaster</label>
+          <description>RobCo robot turret blaster. Compact pulse weapon for automated robot defense turrets.</description>
         <tradeability>None</tradeability>
         <destroyOnDrop>true</destroyOnDrop>
         <graphicData>
@@ -321,7 +321,7 @@
             <verbClass>Verb_Shoot</verbClass>
             <defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
             <range>44.9</range>
-            <soundCast>Shot_ChargeBlaster</soundCast>
+            <soundCast>RobCo_Laser</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
             <defaultCooldownTime>2.5</defaultCooldownTime>
@@ -338,10 +338,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_HellsphereCannon"]</xpath>
     <value>
-      <ThingDef ParentName="BaseGun">
-        <defName>Gun_HellsphereCannon</defName>
-        <label>hellsphere cannon</label>
-        <description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+        <ThingDef ParentName="BaseGun">
+          <defName>Gun_HellsphereCannon</defName>
+          <label>RobCo hellsphere projector</label>
+          <description>RobCo robot siege projector. Charges and releases a devastating energy wave, engineered for robot siegebreaking and demolition.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/HellsphereCannon</texPath> -->
@@ -417,7 +417,7 @@
         <thingClass>Projectile_HellsphereCannon</thingClass>
         <graphicData>
           <!-- <texPath>Things/Projectile/HellsphereCannon</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/HellsphereCannon</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <shaderType>MoteGlow</shaderType>
           <drawSize>(1.5, 3)</drawSize>
@@ -479,10 +479,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_MiniShotgun"]</xpath>
     <value>
-      <ThingDef ParentName="LightMechanoidGunRanged">
-        <defName>Gun_MiniShotgun</defName>
-        <label>mini-shotgun</label>
-        <description>A compact, short-range shotgun designed to be mounted on a light combat mechanoid.</description>
+        <ThingDef ParentName="LightMechanoidGunRanged">
+          <defName>Gun_MiniShotgun</defName>
+          <label>RobCo compact scattergun</label>
+          <description>RobCo robot scattergun. Short-range, rapid-fire weapon for light robot units and close-quarters defense.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/MiniShotgun</texPath> -->
@@ -526,12 +526,12 @@
         <label>shotgun blast</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/Bullet_MiniShotgun</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/Bullet_MiniShotgun</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
           <damageDef>Bullet</damageDef>
-          <damageAmountBase>10</damageAmountBase>
+          <damageAmountBase>15</damageAmountBase>
           <stoppingPower>2.5</stoppingPower>
           <armorPenetrationBase>0.12</armorPenetrationBase>
           <speed>55</speed>
@@ -544,10 +544,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_Slugthrower"]</xpath>
     <value>
-      <ThingDef ParentName="LightMechanoidGunRanged">
-        <defName>Gun_Slugthrower</defName>
-        <label>slugthrower</label>
-        <description>A compact single-shot slug thrower designed to be mounted on a light combat mechanoid.</description>
+        <ThingDef ParentName="LightMechanoidGunRanged">
+          <defName>Gun_Slugthrower</defName>
+          <label>RobCo slug launcher</label>
+          <description>RobCo robot slug launcher. Fires heavy projectiles for precision strikes by light robot units.</description>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/Slugthrower</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
@@ -617,10 +617,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_Spiner"]</xpath>
     <value>
-      <ThingDef ParentName="LightMechanoidGunRanged">
-        <defName>Gun_Spiner</defName>
-        <label>spiner</label>
-        <description>A very small gun used by war urchins which quickly fires spine-like projectiles. It is short-ranged but deadly.</description>
+        <ThingDef ParentName="LightMechanoidGunRanged">
+          <defName>Gun_Spiner</defName>
+          <label>RobCo minilaser</label>
+          <description>RobCo robot minilaser. Miniaturized weapon for small robots, firing deadly laser at close range.</description>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/SpinerGun</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
@@ -647,7 +647,7 @@
             <range>6.9</range>
             <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
             <burstShotCount>1</burstShotCount>
-            <soundCast>Shot_Spiner</soundCast>
+            <soundCast>RobCo_Laser</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
           </li>
@@ -663,7 +663,7 @@
         <label>spine</label>
         <graphicData>
           <!-- <texPath>Things/Projectile/Bullet_Small</texPath> -->
-          <texPath>RobCo/Misc/Invisible</texPath>
+          <texPath>Things/Projectile/Charge_Small</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -679,10 +679,10 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_MiniFlameblaster"]</xpath>
     <value>
-      <ThingDef ParentName="LightMechanoidGunRanged">
-        <defName>Gun_MiniFlameblaster</defName>
-        <label>mini-flameblaster</label>
-        <description>A small burst-oriented flamethrower used by mechanoids.</description>
+        <ThingDef ParentName="LightMechanoidGunRanged">
+          <defName>Gun_MiniFlameblaster</defName>
+          <label>RobCo micro flamer</label>
+          <description>RobCo robot micro flamer. Compact flamethrower for light robots, designed for area denial and close-range attacks.</description>
         <graphicData>
           <!-- <texPath>Things/Item/Equipment/WeaponRanged/MiniFlameblaster</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
@@ -716,14 +716,14 @@
     </value>
   </Operation>
 
-  <!--Toxic Needle Gun/Hydra-->
+  <!--BeamGreaser-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_BeamGraser"]</xpath>
     <value>
-      <ThingDef ParentName="BaseGun">
-        <defName>Gun_BeamGraser</defName>
-        <label>beam graser</label>
-        <description>A gamma ray laser which fires a sweeping beam. The narrow, high-energy beam can pierce thick armor and ignite targets.</description>
+        <ThingDef ParentName="BaseGun">
+          <defName>Gun_BeamGraser</defName>
+          <label>RobCo gamma beam emitter</label>
+          <description>RobCo robot gamma emitter. Fires sweeping high-energy beams for armor penetration and ignition, used by advanced robots.</description>
         <tradeability>Sellable</tradeability>
         <relicChance>0</relicChance>
         <smeltable>false</smeltable>
@@ -795,16 +795,18 @@
       </ThingDef>
     </value>
   </Operation>
+
+  <!--Toxic Needle Gun-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
     <value>
-      <ThingDef ParentName="BaseGun">
-        <defName>Gun_ToxicNeedle</defName>
-        <label>toxic needle gun</label>
-        <description>A mechanoid-built gun that fires toxin-infused metal needles. It can fire long distances and will poison the target in addition to doing physical damage.</description>
+        <ThingDef ParentName="BaseGun">
+          <defName>Gun_ToxicNeedle</defName>
+          <label>RobCo toxin injector</label>
+          <description>RobCo robot toxin injector. Fires poison-tipped needles for disabling targets at long range, a specialty of RobCo robots.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-          <texPath>Things/Item/Equipment/WeaponRanged/ToxicNeedleGun</texPath>
+          <texPath>RobCo/Misc/Invisible</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <tradeability>None</tradeability>
@@ -833,7 +835,7 @@
             <defaultProjectile>Bullet_ToxicNeedleGun</defaultProjectile>
             <warmupTime>2.35</warmupTime>
             <range>44.9</range>
-            <soundCast>Shot_ToxicNeedleGun</soundCast>
+            <soundCast>RobCo_Laser</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
           </li>
@@ -859,7 +861,7 @@
         <defName>Bullet_ToxicNeedleGun</defName>
         <label>toxic needle</label>
         <graphicData>
-          <texPath>Things/Projectile/ToxicNeedleShot</texPath>
+          <texPath>Things/Projectile/Charge_Small</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -877,15 +879,15 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_NeedleLauncher"]</xpath>
     <value>
-      <ThingDef ParentName="NeedleGunBase">
-        <defName>Gun_NeedleLauncher</defName>
-        <label>needle launcher</label>
-        <description>This mechanoid weapon is a compact version of the needle gun. Named after its needle-like projectiles, it fires single shots with great accuracy. The needle launcher has less range than its counterpart but is lightweight, allowing it to be wielded by fast-moving mechs.</description>
+        <ThingDef ParentName="NeedleGunBase">
+          <defName>Gun_NeedleLauncher</defName>
+          <label>RobCo laser blaster</label>
+          <description>RobCo robot rapid laser blaster. Compact, lightweight, and accurate, ideal for any RobCo robots in skirmishes.</description>
         <statBases>
           <Mass>2.6</Mass>
         </statBases>
         <graphicData>
-          <texPath>Things/Item/Equipment/WeaponRanged/NeedleLauncher</texPath>
+          <texPath>RobCo/Misc/Invisible</texPath>
         </graphicData>
         <weaponTags Inherit="False">
           <li>MechanoidGunNeedleLauncher</li>
