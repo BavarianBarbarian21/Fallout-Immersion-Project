@@ -1,459 +1,478 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  
-  <!-- Crashed Vertibot Robot -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossDef[defName="Diabolus"]</xpath>
-    <value>
-      <BossDef>
-        <defName>Diabolus</defName>
-        <kindDef>Mech_Termite_Breach</kindDef>
-        <appearAfterTicks>3600000</appearAfterTicks><!-- 1 years -->
-      </BossDef>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossgroupDef[defName="Diabolus"]</xpath>
-      <value>
-        <BossgroupDef ParentName="BaseBossgroup">
-          <defName>Diabolus</defName>
-          <boss>Diabolus</boss>
-          <waves>
-            <li> <!-- 0 -->
-              <bossCount>1</bossCount>
-              <escorts>
-                <Mech_Militor>1</Mech_Militor>
-                <Mech_Pikeman>2</Mech_Pikeman>
-                <Mech_Scorcher>1</Mech_Scorcher>
-              </escorts>
-            </li>
-            <li> <!-- 1 -->
-              <bossCount>1</bossCount>
-              <escorts>
-                <Mech_Militor>2</Mech_Militor>
-                <Mech_Pikeman>2</Mech_Pikeman>
-                <Mech_Scyther>1</Mech_Scyther>
-                <Mech_Lancer>1</Mech_Lancer>
-              </escorts>
-            </li>
-            <li> <!-- 2 -->
-              <bossCount>1</bossCount>
-              <escorts>
-                <Mech_Militor>2</Mech_Militor>
-                <Mech_Pikeman>2</Mech_Pikeman>
-                <Mech_Scorcher>1</Mech_Scorcher>
-                <Mech_Scyther>1</Mech_Scyther>
-                <Mech_Lancer>1</Mech_Lancer>
-              </escorts>
-              <bossApparel>
-                <li>
-                  <thing>Apparel_HeavyShield</thing>
-                </li>
-              </bossApparel>
-            </li>
-            <li> <!-- 3 -->
-                <bossCount>1</bossCount>
-              <escorts>
-                <Mech_Militor>2</Mech_Militor>
-                <Mech_Pikeman>3</Mech_Pikeman>
-                <Mech_Scorcher>1</Mech_Scorcher>
-                <Mech_Scyther>1</Mech_Scyther>
-                <Mech_Lancer>1</Mech_Lancer>
-              </escorts>
-              <bossApparel>
-                <li>
-                  <thing>Apparel_HeavyShield</thing>
-                </li>
-              </bossApparel>
-            </li>
-            <li> <!-- 4 -->
-                <bossCount>1</bossCount>
-              <escorts>
-                <Mech_Militor>2</Mech_Militor>
-                <Mech_Pikeman>4</Mech_Pikeman>
-                <Mech_Scorcher>2</Mech_Scorcher>
-                <Mech_Scyther>1</Mech_Scyther>
-                <Mech_Lancer>1</Mech_Lancer>
-              </escorts>
-              <bossApparel>
-                <li>
-                  <thing>Apparel_HeavyShield</thing>
-                </li>
-              </bossApparel>
-            </li>
-              <li> <!-- 5 -->
-                  <bossCount>1</bossCount>
-                <escorts>
-                  <Mech_Militor>3</Mech_Militor>
-                  <Mech_Pikeman>5</Mech_Pikeman>
-                  <Mech_Scorcher>2</Mech_Scorcher>
-                  <Mech_Scyther>2</Mech_Scyther>
-                  <Mech_Lancer>2</Mech_Lancer>
-                </escorts>
-                <bossApparel>
-                  <li>
-                    <thing>Apparel_HeavyShield</thing>
-                  </li>
-                </bossApparel>
-              </li>
-              <li> <!-- 6 -->
-                  <bossCount>1</bossCount>
-                <escorts>
-                  <Mech_Militor>3</Mech_Militor>
-                  <Mech_Pikeman>6</Mech_Pikeman>
-                  <Mech_Scorcher>3</Mech_Scorcher>
-                  <Mech_Scyther>2</Mech_Scyther>
-                  <Mech_Lancer>2</Mech_Lancer>
-                </escorts>
-                <bossApparel>
-                  <li>
-                    <thing>Apparel_HeavyShield</thing>
-                  </li>
-                </bossApparel>
-              </li>
-              <li> <!-- 7 -->
-                  <bossCount>1</bossCount>
-                <escorts>
-                  <Mech_Militor>4</Mech_Militor>
-                  <Mech_Pikeman>8</Mech_Pikeman>
-                  <Mech_Scorcher>3</Mech_Scorcher>
-                  <Mech_Scyther>3</Mech_Scyther>
-                  <Mech_Lancer>3</Mech_Lancer>
-                </escorts>
-                <bossApparel>
-                  <li>
-                    <thing>Apparel_HeavyShield</thing>
-                  </li>
-                </bossApparel>
-              </li>
-          </waves>
-          <leaderDescription>We captured the distress signal of a nearby pre-war relic. We could answer the call.</leaderDescription>
-          <rewardDef>BrokenEyebotFrame</rewardDef>
-        </BossgroupDef>
-      </value>
-  </Operation>
-
-
-  <!-- Sheepsquatch -->
-
-    <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossDef[defName="Warqueen"]</xpath>
-      <value>
-  <BossDef>
-    <defName>Warqueen</defName>
-    <kindDef>Mech_Warqueen</kindDef>
-    <appearAfterTicks>14400000</appearAfterTicks><!-- 4 years -->
-  </BossDef>
-  </value>
-  </Operation>
-
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossgroupDef[defName="Warqueen"]</xpath>
-      <value>
-  <BossgroupDef ParentName="BaseBossgroup">
-    <defName>Warqueen</defName>
-    <boss>Warqueen</boss>
-      <waves>
-        <li> <!-- 0 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>2</Mech_Militor>
-            <Mech_Pikeman>4</Mech_Pikeman>
-            <Mech_Scorcher>1</Mech_Scorcher>
-          </escorts>
-        </li>
-        <li> <!-- 1 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>3</Mech_Militor>
-            <Mech_Pikeman>5</Mech_Pikeman>
-            <Mech_Scyther>1</Mech_Scyther>
-            <Mech_Lancer>1</Mech_Lancer>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-        <li> <!-- 2 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>4</Mech_Militor>
-            <Mech_Pikeman>6</Mech_Pikeman>
-            <Mech_Scorcher>2</Mech_Scorcher>
-            <Mech_Scyther>2</Mech_Scyther>
-            <Mech_Lancer>2</Mech_Lancer>
-            <Mech_Tesseron>1</Mech_Tesseron>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-        <li> <!-- 3 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>5</Mech_Militor>
-            <Mech_Pikeman>8</Mech_Pikeman>
-            <Mech_Scorcher>3</Mech_Scorcher>
-            <Mech_Scyther>3</Mech_Scyther>
-            <Mech_Lancer>3</Mech_Lancer>
-            <Mech_Centurion>1</Mech_Centurion>
-            <Mech_Tesseron>2</Mech_Tesseron>
-            <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-          <li> <!-- 4 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>6</Mech_Militor>
-              <Mech_Pikeman>10</Mech_Pikeman>
-              <Mech_Scorcher>4</Mech_Scorcher>
-              <Mech_Scyther>4</Mech_Scyther>
-              <Mech_Lancer>4</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> <!-- 5 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>7</Mech_Militor>
-              <Mech_Pikeman>12</Mech_Pikeman>
-              <Mech_Scorcher>5</Mech_Scorcher>
-              <Mech_Scyther>5</Mech_Scyther>
-              <Mech_Lancer>5</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> <!-- 6 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>8</Mech_Militor>
-              <Mech_Pikeman>15</Mech_Pikeman>
-              <Mech_Scorcher>6</Mech_Scorcher>
-              <Mech_Scyther>6</Mech_Scyther>
-              <Mech_Lancer>6</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> 
-            <!-- 7 -->
-                <bossCount>1</bossCount>
-                <escorts>
-                  <Mech_Militor>9</Mech_Militor>
-                  <Mech_Pikeman>16</Mech_Pikeman>
-                  <Mech_Scorcher>7</Mech_Scorcher>
-                  <Mech_Scyther>7</Mech_Scyther>
-                  <Mech_Lancer>7</Mech_Lancer>
-                  <Mech_Centurion>2</Mech_Centurion>
-                  <Mech_Tesseron>4</Mech_Tesseron>
-                  <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-                </escorts>
-                <bossApparel>
-                  <li>
-                    <thing>Apparel_HeavyShield</thing>
-                  </li>
-                </bossApparel>
-              </li>
-      </waves>
-    <leaderDescription>Both pre-war and recent accounts tell o this fabled cryptid, the {LEADERKIND_label}, but little is actually known about it.</leaderDescription>
-    <rewardDef>PowerfocusChip</rewardDef>
-  </BossgroupDef>
-  </value></Operation>
-
-
-  <!-- Deathbot -->
-   <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossDef[defName="Apocriton"]</xpath>
-      <value>
-  <BossDef>
-    <defName>Apocriton</defName>
-    <kindDef>Mech_Apocriton</kindDef>
-    <appearAfterTicks>21600000</appearAfterTicks><!-- 6 years -->
-  </BossDef>
-  </value></Operation>
-
-     <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/BossgroupDef[defName="Apocriton"]</xpath>
-      <value>
-  <BossgroupDef ParentName="BaseBossgroup">
-    <defName>Apocriton</defName>
-    <boss>Apocriton</boss>
-      <waves>
-        <li> <!-- 0 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>2</Mech_Militor>
-            <Mech_Pikeman>3</Mech_Pikeman>
-            <Mech_Scorcher>1</Mech_Scorcher>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-        <li> <!-- 1 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>3</Mech_Militor>
-            <Mech_Pikeman>4</Mech_Pikeman>
-            <Mech_Scyther>1</Mech_Scyther>
-            <Mech_Lancer>1</Mech_Lancer>
-              <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-        <li> <!-- 2 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>4</Mech_Militor>
-            <Mech_Pikeman>5</Mech_Pikeman>
-            <Mech_Scorcher>2</Mech_Scorcher>
-            <Mech_Scyther>2</Mech_Scyther>
-            <Mech_Lancer>2</Mech_Lancer>
-            <Mech_Tesseron>1</Mech_Tesseron>
-              <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-        <li> <!-- 3 -->
-          <bossCount>1</bossCount>
-          <escorts>
-            <Mech_Militor>5</Mech_Militor>
-            <Mech_Pikeman>6</Mech_Pikeman>
-            <Mech_Scorcher>2</Mech_Scorcher>
-            <Mech_Scyther>2</Mech_Scyther>
-            <Mech_Lancer>2</Mech_Lancer>
-            <Mech_Centurion>1</Mech_Centurion>
-            <Mech_Tesseron>2</Mech_Tesseron>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-              <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-          </escorts>
-          <bossApparel>
-            <li>
-              <thing>Apparel_HeavyShield</thing>
-            </li>
-          </bossApparel>
-        </li>
-          <li> <!-- 4 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>6</Mech_Militor>
-              <Mech_Pikeman>10</Mech_Pikeman>
-              <Mech_Scorcher>4</Mech_Scorcher>
-              <Mech_Scyther>4</Mech_Scyther>
-              <Mech_Lancer>4</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-              <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> <!-- 5 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>7</Mech_Militor>
-              <Mech_Pikeman>12</Mech_Pikeman>
-              <Mech_Scorcher>5</Mech_Scorcher>
-              <Mech_Scyther>5</Mech_Scyther>
-              <Mech_Lancer>5</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> <!-- 6 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>8</Mech_Militor>
-              <Mech_Pikeman>15</Mech_Pikeman>
-              <Mech_Scorcher>6</Mech_Scorcher>
-              <Mech_Scyther>6</Mech_Scyther>
-              <Mech_Lancer>6</Mech_Lancer>
-              <Mech_Centurion>1</Mech_Centurion>
-              <Mech_Tesseron>3</Mech_Tesseron>
-              <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-          <li> <!-- 7 -->
-            <bossCount>1</bossCount>
-            <escorts>
-              <Mech_Militor>10</Mech_Militor>
-              <Mech_Pikeman>18</Mech_Pikeman>
-              <Mech_Scorcher>7</Mech_Scorcher>
-              <Mech_Scyther>7</Mech_Scyther>
-              <Mech_Lancer>7</Mech_Lancer>
-              <Mech_Centurion>2</Mech_Centurion>
-              <Mech_Tesseron>5</Mech_Tesseron>
-              <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-              <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-              <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
-            </escorts>
-            <bossApparel>
-              <li>
-                <thing>Apparel_HeavyShield</thing>
-              </li>
-            </bossApparel>
-          </li>
-      </waves>
-    <leaderDescription>The Deathbot was the pre-war answer to the question: what if you combined a guard dog with a nuclear warhead?</leaderDescription>
-    <rewardDef>NanostructuringChip</rewardDef>
-  </BossgroupDef></value></Operation>
-
+	<!-- Crashed Vertibot Robot -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossDef[defName="Diabolus"]</xpath>
+		<value>
+			<BossDef>
+				<defName>Diabolus</defName>
+				<kindDef>Mech_Termite_Breach</kindDef>
+				<appearAfterTicks>3600000</appearAfterTicks>
+				<!-- 1 years -->
+			</BossDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossgroupDef[defName="Diabolus"]</xpath>
+		<value>
+			<BossgroupDef ParentName="BaseBossgroup">
+				<defName>Diabolus</defName>
+				<boss>Diabolus</boss>
+				<waves>
+					<li>
+						<!-- 0 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>1</Mech_Militor>
+							<Mech_Pikeman>2</Mech_Pikeman>
+							<Mech_Scorcher>1</Mech_Scorcher>
+						</escorts>
+					</li>
+					<li>
+						<!-- 1 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>2</Mech_Pikeman>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+						</escorts>
+					</li>
+					<li>
+						<!-- 2 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>2</Mech_Pikeman>
+							<Mech_Scorcher>1</Mech_Scorcher>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 3 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>3</Mech_Pikeman>
+							<Mech_Scorcher>1</Mech_Scorcher>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 4 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>4</Mech_Pikeman>
+							<Mech_Scorcher>2</Mech_Scorcher>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 5 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>3</Mech_Militor>
+							<Mech_Pikeman>5</Mech_Pikeman>
+							<Mech_Scorcher>2</Mech_Scorcher>
+							<Mech_Scyther>2</Mech_Scyther>
+							<Mech_Lancer>2</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 6 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>3</Mech_Militor>
+							<Mech_Pikeman>6</Mech_Pikeman>
+							<Mech_Scorcher>3</Mech_Scorcher>
+							<Mech_Scyther>2</Mech_Scyther>
+							<Mech_Lancer>2</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 7 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>4</Mech_Militor>
+							<Mech_Pikeman>8</Mech_Pikeman>
+							<Mech_Scorcher>3</Mech_Scorcher>
+							<Mech_Scyther>3</Mech_Scyther>
+							<Mech_Lancer>3</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+				</waves>
+				<leaderDescription>We captured the distress signal of a nearby pre-war relic. We could answer the call.</leaderDescription>
+				<rewardDef>BrokenEyebotFrame</rewardDef>
+			</BossgroupDef>
+		</value>
+	</Operation>
+	<!-- Sheepsquatch -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossDef[defName="Warqueen"]</xpath>
+		<value>
+			<BossDef>
+				<defName>Warqueen</defName>
+				<kindDef>Mech_Warqueen</kindDef>
+				<appearAfterTicks>14400000</appearAfterTicks>
+				<!-- 4 years -->
+			</BossDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossgroupDef[defName="Warqueen"]</xpath>
+		<value>
+			<BossgroupDef ParentName="BaseBossgroup">
+				<defName>Warqueen</defName>
+				<boss>Warqueen</boss>
+				<waves>
+					<li>
+						<!-- 0 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>4</Mech_Pikeman>
+							<Mech_Scorcher>1</Mech_Scorcher>
+						</escorts>
+					</li>
+					<li>
+						<!-- 1 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>3</Mech_Militor>
+							<Mech_Pikeman>5</Mech_Pikeman>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 2 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>4</Mech_Militor>
+							<Mech_Pikeman>6</Mech_Pikeman>
+							<Mech_Scorcher>2</Mech_Scorcher>
+							<Mech_Scyther>2</Mech_Scyther>
+							<Mech_Lancer>2</Mech_Lancer>
+							<Mech_Tesseron>1</Mech_Tesseron>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 3 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>5</Mech_Militor>
+							<Mech_Pikeman>8</Mech_Pikeman>
+							<Mech_Scorcher>3</Mech_Scorcher>
+							<Mech_Scyther>3</Mech_Scyther>
+							<Mech_Lancer>3</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>2</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 4 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>6</Mech_Militor>
+							<Mech_Pikeman>10</Mech_Pikeman>
+							<Mech_Scorcher>4</Mech_Scorcher>
+							<Mech_Scyther>4</Mech_Scyther>
+							<Mech_Lancer>4</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 5 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>7</Mech_Militor>
+							<Mech_Pikeman>12</Mech_Pikeman>
+							<Mech_Scorcher>5</Mech_Scorcher>
+							<Mech_Scyther>5</Mech_Scyther>
+							<Mech_Lancer>5</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 6 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>8</Mech_Militor>
+							<Mech_Pikeman>15</Mech_Pikeman>
+							<Mech_Scorcher>6</Mech_Scorcher>
+							<Mech_Scyther>6</Mech_Scyther>
+							<Mech_Lancer>6</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 7 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>9</Mech_Militor>
+							<Mech_Pikeman>16</Mech_Pikeman>
+							<Mech_Scorcher>7</Mech_Scorcher>
+							<Mech_Scyther>7</Mech_Scyther>
+							<Mech_Lancer>7</Mech_Lancer>
+							<Mech_Centurion>2</Mech_Centurion>
+							<Mech_Tesseron>4</Mech_Tesseron>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+				</waves>
+				<leaderDescription>Both pre-war and recent accounts tell o this fabled cryptid, the {LEADERKIND_label}, but little is actually known about it.</leaderDescription>
+				<rewardDef>PowerfocusChip</rewardDef>
+			</BossgroupDef>
+		</value>
+	</Operation>
+	<!-- Deathbot -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossDef[defName="Apocriton"]</xpath>
+		<value>
+			<BossDef>
+				<defName>Apocriton</defName>
+				<kindDef>Mech_Apocriton</kindDef>
+				<appearAfterTicks>21600000</appearAfterTicks>
+				<!-- 6 years -->
+			</BossDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BossgroupDef[defName="Apocriton"]</xpath>
+		<value>
+			<BossgroupDef ParentName="BaseBossgroup">
+				<defName>Apocriton</defName>
+				<boss>Apocriton</boss>
+				<waves>
+					<li>
+						<!-- 0 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>2</Mech_Militor>
+							<Mech_Pikeman>3</Mech_Pikeman>
+							<Mech_Scorcher>1</Mech_Scorcher>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 1 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>3</Mech_Militor>
+							<Mech_Pikeman>4</Mech_Pikeman>
+							<Mech_Scyther>1</Mech_Scyther>
+							<Mech_Lancer>1</Mech_Lancer>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 2 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>4</Mech_Militor>
+							<Mech_Pikeman>5</Mech_Pikeman>
+							<Mech_Scorcher>2</Mech_Scorcher>
+							<Mech_Scyther>2</Mech_Scyther>
+							<Mech_Lancer>2</Mech_Lancer>
+							<Mech_Tesseron>1</Mech_Tesseron>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 3 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>5</Mech_Militor>
+							<Mech_Pikeman>6</Mech_Pikeman>
+							<Mech_Scorcher>2</Mech_Scorcher>
+							<Mech_Scyther>2</Mech_Scyther>
+							<Mech_Lancer>2</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>2</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 4 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>6</Mech_Militor>
+							<Mech_Pikeman>10</Mech_Pikeman>
+							<Mech_Scorcher>4</Mech_Scorcher>
+							<Mech_Scyther>4</Mech_Scyther>
+							<Mech_Lancer>4</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 5 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>7</Mech_Militor>
+							<Mech_Pikeman>12</Mech_Pikeman>
+							<Mech_Scorcher>5</Mech_Scorcher>
+							<Mech_Scyther>5</Mech_Scyther>
+							<Mech_Lancer>5</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 6 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>8</Mech_Militor>
+							<Mech_Pikeman>15</Mech_Pikeman>
+							<Mech_Scorcher>6</Mech_Scorcher>
+							<Mech_Scyther>6</Mech_Scyther>
+							<Mech_Lancer>6</Mech_Lancer>
+							<Mech_Centurion>1</Mech_Centurion>
+							<Mech_Tesseron>3</Mech_Tesseron>
+							<Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+					<li>
+						<!-- 7 -->
+						<bossCount>1</bossCount>
+						<escorts>
+							<Mech_Militor>10</Mech_Militor>
+							<Mech_Pikeman>18</Mech_Pikeman>
+							<Mech_Scorcher>7</Mech_Scorcher>
+							<Mech_Scyther>7</Mech_Scyther>
+							<Mech_Lancer>7</Mech_Lancer>
+							<Mech_Centurion>2</Mech_Centurion>
+							<Mech_Tesseron>5</Mech_Tesseron>
+							<Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
+							<Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+							<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+						</escorts>
+						<bossApparel>
+							<li>
+								<thing>Apparel_HeavyShield</thing>
+							</li>
+						</bossApparel>
+					</li>
+				</waves>
+				<leaderDescription>The Deathbot was the pre-war answer to the question: what if you combined a guard dog with a nuclear warhead?</leaderDescription>
+				<rewardDef>NanostructuringChip</rewardDef>
+			</BossgroupDef>
+		</value>
+	</Operation>
 </Patch>

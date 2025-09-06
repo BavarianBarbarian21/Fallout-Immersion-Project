@@ -1,193 +1,174 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-  <!-- Mechanitor Stats -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechBandwidth"]/label</xpath>
-    <value>
-      <label>robot bandwidth</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechBandwidth"]/description</xpath>
-    <value>
-      <description>How much bandwidth a robot has. More bandwidth allows a mechanic to produce and control more robots at the same time.\n\nLosing bandwidth means losing control of robots, leaving them without an overseer. Such mechs can eventually become feral if not re-dominated.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechControlGroups"]/label</xpath>
-    <value>
-      <label>robot control groups</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechControlGroups"]/description</xpath>
-    <value>
-      <description>How many control groups this mechanic can direct independently. Each control group can be given its own separate orders.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteRepairDistance"]/label</xpath>
-    <value>
-      <label>robot remote repair distance</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteRepairDistance"]/description</xpath>
-    <value>
-      <description>How far away a robot can be during remote repair.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteShieldDistance"]/label</xpath>
-    <value>
-      <label>robot remote shield distance</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteShieldDistance"]/description</xpath>
-    <value>
-      <description>The maximum range at which a mechanic can place a shield on a robot.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteShieldEnergy"]/label</xpath>
-    <value>
-      <label>robot remote shield energy</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRemoteShieldEnergy"]/description</xpath>
-    <value>
-      <description>The energy a remote shield will have when created by a mechanic.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechFormingSpeed"]/label</xpath>
-    <value>
-      <label>robot assembly speed</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechFormingSpeed"]/description</xpath>
-    <value>
-      <description>A multiplier on the speed at which this mechanic can create new robots at a assembler.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRepairSpeed"]/label</xpath>
-    <value>
-      <label>robot repair speed</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechRepairSpeed"]/description</xpath>
-    <value>
-      <description>A multiplier on how fast a mechanic can repair robots.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="SubcoreEncodingSpeed"]/label</xpath>
-    <value>
-      <label>circuitry soldering speed</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="SubcoreEncodingSpeed"]/description</xpath>
-    <value>
-      <description>A multiplier on how fast a mechanic can solder circuitry.</description>
-    </value>
-  </Operation>
-
-  <!-- Mech Stats-->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="BandwidthCost"]/label</xpath>
-    <value>
-      <label>bandwidth cost</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="BandwidthCost"]/description</xpath>
-    <value>
-      <description>How much bandwidth this robot consumes when under mechanic control.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="ControlTakingTime"]/label</xpath>
-    <value>
-      <label>control taking time</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="ControlTakingTime"]/description</xpath>
-    <value>
-      <description>How many seconds it will take for a mechanic to take control of this mech.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechEnergyUsageFactor"]/label</xpath>
-    <value>
-      <label>energy usage multiplier</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechEnergyUsageFactor"]/description</xpath>
-    <value>
-      <description>A multiplier on how fast a robot consumes its energy reserves while operating.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="WastepacksPerRecharge"]/label</xpath>
-    <value>
-      <label>wastepacks per recharge</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="WastepacksPerRecharge"]/description</xpath>
-    <value>
-      <description>How many toxic wastepacks this robot will generate at a RobCo recharger when going from 0 to 100% energy. Larger robots will generally create more toxic wastepacks.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechEnergyLossPerHP"]/label</xpath>
-    <value>
-      <label>repair energy cost</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/StatDef[defName="MechEnergyLossPerHP"]/description</xpath>
-    <value>
-      <description>The amount of energy that this robot loses for every 100 damage repaired.</description>
-    </value>
-  </Operation>
-
-  <!-- Mech Work Modes -->
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/WorkTypeDef[defName="Smithing"]/description</xpath>
-    <value>
-      <description>Create weapons and tools from raw materials, either as a blacksmith or by machining. Also repair robots, if the colonist is a mechanic.</description>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/MechWorkModeDef[defName="Escort"]/description</xpath>
-    <value>
-      <description>Stay near the mechanic and fight nearby enemies. Follow the mechanic, even off the map.</description>
-    </value>
-  </Operation>
-
+	<!-- Mechanitor Stats -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechBandwidth"]/label</xpath>
+		<value>
+			<label>robot bandwidth</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechBandwidth"]/description</xpath>
+		<value>
+			<description>How much bandwidth a robot has. More bandwidth allows a mechanic to produce and control more robots at the same time.\n\nLosing bandwidth means losing control of robots, leaving them without an overseer. Such mechs can eventually become feral if not re-dominated.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechControlGroups"]/label</xpath>
+		<value>
+			<label>robot control groups</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechControlGroups"]/description</xpath>
+		<value>
+			<description>How many control groups this mechanic can direct independently. Each control group can be given its own separate orders.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteRepairDistance"]/label</xpath>
+		<value>
+			<label>robot remote repair distance</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteRepairDistance"]/description</xpath>
+		<value>
+			<description>How far away a robot can be during remote repair.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteShieldDistance"]/label</xpath>
+		<value>
+			<label>robot remote shield distance</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteShieldDistance"]/description</xpath>
+		<value>
+			<description>The maximum range at which a mechanic can place a shield on a robot.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteShieldEnergy"]/label</xpath>
+		<value>
+			<label>robot remote shield energy</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRemoteShieldEnergy"]/description</xpath>
+		<value>
+			<description>The energy a remote shield will have when created by a mechanic.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechFormingSpeed"]/label</xpath>
+		<value>
+			<label>robot assembly speed</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechFormingSpeed"]/description</xpath>
+		<value>
+			<description>A multiplier on the speed at which this mechanic can create new robots at a assembler.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRepairSpeed"]/label</xpath>
+		<value>
+			<label>robot repair speed</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechRepairSpeed"]/description</xpath>
+		<value>
+			<description>A multiplier on how fast a mechanic can repair robots.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="SubcoreEncodingSpeed"]/label</xpath>
+		<value>
+			<label>circuitry soldering speed</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="SubcoreEncodingSpeed"]/description</xpath>
+		<value>
+			<description>A multiplier on how fast a mechanic can solder circuitry.</description>
+		</value>
+	</Operation>
+	<!-- Mech Stats-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="BandwidthCost"]/label</xpath>
+		<value>
+			<label>bandwidth cost</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="BandwidthCost"]/description</xpath>
+		<value>
+			<description>How much bandwidth this robot consumes when under mechanic control.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="ControlTakingTime"]/label</xpath>
+		<value>
+			<label>control taking time</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="ControlTakingTime"]/description</xpath>
+		<value>
+			<description>How many seconds it will take for a mechanic to take control of this mech.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechEnergyUsageFactor"]/label</xpath>
+		<value>
+			<label>energy usage multiplier</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechEnergyUsageFactor"]/description</xpath>
+		<value>
+			<description>A multiplier on how fast a robot consumes its energy reserves while operating.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="WastepacksPerRecharge"]/label</xpath>
+		<value>
+			<label>wastepacks per recharge</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="WastepacksPerRecharge"]/description</xpath>
+		<value>
+			<description>How many toxic wastepacks this robot will generate at a RobCo recharger when going from 0 to 100% energy. Larger robots will generally create more toxic wastepacks.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechEnergyLossPerHP"]/label</xpath>
+		<value>
+			<label>repair energy cost</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StatDef[defName="MechEnergyLossPerHP"]/description</xpath>
+		<value>
+			<description>The amount of energy that this robot loses for every 100 damage repaired.</description>
+		</value>
+	</Operation>
+	<!-- Mech Work Modes -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Smithing"]/description</xpath>
+		<value>
+			<description>Create weapons and tools from raw materials, either as a blacksmith or by machining. Also repair robots, if the colonist is a mechanic.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/MechWorkModeDef[defName="Escort"]/description</xpath>
+		<value>
+			<description>Stay near the mechanic and fight nearby enemies. Follow the mechanic, even off the map.</description>
+		</value>
+	</Operation>
 </Patch>

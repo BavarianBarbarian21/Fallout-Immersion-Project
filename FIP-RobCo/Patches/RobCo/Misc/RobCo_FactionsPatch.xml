@@ -1,101 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- AncientComplex_Mechanitor -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/label</xpath>
-    <value>
-      <label>Ancient RobCo Factory</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/description</xpath>
-    <value>
-      <description>An ancient RobCo facility filled with pre-war robotics technology and secrets. Might contain a useable Pipboy.</description>
-    </value>
-  </Operation>
-  <!-- ShuttleCrashing_Mechanitor -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/label</xpath>
-    <value>
-      <label>Vertibot crash site</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
-    <value>
-      <description>The crash site of a Vertibot, possibly containing valuable robotics salvage.</description>
-    </value>
-  </Operation>
-  <!-- Ship_ShuttleCrashing_Mechanitor -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/TransportShipDef[defName="Ship_ShuttleCrashing_Mechanitor"]/label</xpath>
-    <value>
-      <label>Vertibot crash site</label>
-    </value>
-  </Operation>
-  <!-- Mechanitor (Faction)
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/FactionDef[defName="Mechanitor"]/label</xpath>
-    <value>
-      <label>RobCo mechanic</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/FactionDef[defName="Mechanitor"]/description</xpath>
-    <value>
-      <description>RobCo mechanics are skilled engineers specializing in pre-war robotics and automation.</description>
-    </value>
-  </Operation>-->
-   <!--Mechanoid (Faction)-->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/FactionDef[defName="Mechanoid"]/label</xpath>
-    <value>
-      <label>RobCo Industries</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/FactionDef[defName="Mechanoid"]/description</xpath>
-    <value>
-      <description>RobCo Industries, the legendary robotics manufacturer, designed their products to be autonomous. Two centuries after the apocalypse their rouge robots still operate.</description>
-    </value>
-  </Operation>
-  <!-- Mechanitor Scenario Patch -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
-    <value>
-      <label>RobCo Mechanitor</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
-    <value>
-      <description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
-    <value>
-      <text>You are a RobCo Mechanitor, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
-    <value>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>Mech_Centurion</mechKind>
-          <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>Mech_Militor</mechKind>
-          <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-        </li>
-        <li Class="ScenPart_StartingMech">
-          <def>StartingMech</def>
-          <mechKind>Mech_Pikeman</mechKind>
-          <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-        </li>
-    </value>
-  </Operation>
+	<!-- AncientComplex_Mechanitor -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/label</xpath>
+		<value>
+			<label>Ancient RobCo Factory</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/description</xpath>
+		<value>
+			<description>An ancient RobCo facility filled with pre-war robotics technology and secrets. Might contain a useable Pipboy.</description>
+		</value>
+	</Operation>
+	<!-- ShuttleCrashing_Mechanitor -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/label</xpath>
+		<value>
+			<label>Vertibot crash site</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
+		<value>
+			<description>The crash site of a Vertibot, possibly containing valuable robotics salvage.</description>
+		</value>
+	</Operation>
+	<!-- Ship_ShuttleCrashing_Mechanitor -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TransportShipDef[defName="Ship_ShuttleCrashing_Mechanitor"]/label</xpath>
+		<value>
+			<label>Vertibot crash site</label>
+		</value>
+	</Operation>
+	<!-- Mechanitor (Faction)
+  <Operation Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/label</xpath><value><label>RobCo mechanic</label></value></Operation><Operation Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/description</xpath><value><description>RobCo mechanics are skilled engineers specializing in pre-war robotics and automation.</description></value></Operation>-->
+	<!--Mechanoid (Faction)-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[defName="Mechanoid"]/label</xpath>
+		<value>
+			<label>RobCo Industries</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[defName="Mechanoid"]/description</xpath>
+		<value>
+			<description>RobCo Industries, the legendary robotics manufacturer, designed their products to be autonomous. Two centuries after the apocalypse their rouge robots still operate.</description>
+		</value>
+	</Operation>
+	<!-- Mechanitor Scenario Patch -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
+		<value>
+			<label>RobCo Mechanitor</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
+		<value>
+			<description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
+		<value>
+			<text>You are a RobCo Mechanitor, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
+		<value>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>Mech_Centurion</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>Mech_Militor</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>Mech_Pikeman</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+		</value>
+	</Operation>
 </Patch>

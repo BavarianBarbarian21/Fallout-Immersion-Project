@@ -1,98 +1,96 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Robobrain ThingDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Mech_Centurion"]</xpath>
-    <value>
-      <ThingDef ParentName="HeavyMechanoid">
-        <defName>Mech_Centurion</defName>
-        <label>Robobrain</label>
-        <description>This is an Robobrain.</description>
-        <statBases>
-          <MoveSpeed>3</MoveSpeed>
-        </statBases>
-        <race>
-          <body>Robobrain</body>
-          <lifeStageAges>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>0</minAge>
-              <soundWounded>Robobrain_Wounded</soundWounded>
-              <soundDeath>Robobrain_Death</soundDeath>
-              <soundCall>Robobrain_Call</soundCall>
-              <soundAngry>Robobrain_Angry</soundAngry>
-            </li>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>100</minAge>
-              <soundWounded>Robobrain_Wounded</soundWounded>
-              <soundDeath>Robobrain_Death</soundDeath>
-              <soundCall>Robobrain_Call</soundCall>
-              <soundAngry>Robobrain_Angry</soundAngry>
-            </li>
-          </lifeStageAges>
-        </race>
-      </ThingDef>
-    </value>
-  </Operation>
-
-  <!-- Robobrain PawnKindDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/PawnKindDef[defName="Mech_Centurion"]</xpath>
-    <value>
-      <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>Mech_Centurion</defName>
-        <label>Robobrain</label>
-        <race>Mech_Centurion</race>
-        <combatPower>250</combatPower>
-        <lifeStages>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Robobrain/Robobrain</texPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-        </lifeStages>
-        <weaponTags>
-          <li>MechanoidGunShortRange</li>
-        </weaponTags>
-      </PawnKindDef>
-    </value>
-  </Operation>
-
-  <!-- Robobrain RecipeDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/RecipeDef[defName="Centurion"]</xpath>
-    <value>
-      <RecipeDef ParentName="HeavyMechanoidRecipe">
-        <defName>Centurion</defName>
-        <label>gestate Robobrain</label>
-        <description>Gestate an Robobrain.</description>
-        <products>
-          <Mech_Centurion>1</Mech_Centurion>
-        </products>
-        <descriptionHyperlinks>
-          <ThingDef>Mech_Centurion</ThingDef>
-        </descriptionHyperlinks>
-      </RecipeDef>
-    </value>
-  </Operation>
+	<!-- Robobrain ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Centurion"]</xpath>
+		<value>
+			<ThingDef ParentName="HeavyMechanoid">
+				<defName>Mech_Centurion</defName>
+				<label>Robobrain</label>
+				<description>This is an Robobrain.</description>
+				<statBases>
+					<MoveSpeed>3</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Robobrain</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Robobrain_Wounded</soundWounded>
+							<soundDeath>Robobrain_Death</soundDeath>
+							<soundCall>Robobrain_Call</soundCall>
+							<soundAngry>Robobrain_Angry</soundAngry>
+						</li>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>100</minAge>
+							<soundWounded>Robobrain_Wounded</soundWounded>
+							<soundDeath>Robobrain_Death</soundDeath>
+							<soundCall>Robobrain_Call</soundCall>
+							<soundAngry>Robobrain_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Robobrain PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Centurion"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Centurion</defName>
+				<label>Robobrain</label>
+				<race>Mech_Centurion</race>
+				<combatPower>250</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Robobrain/Robobrain</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunShortRange</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Robobrain RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Centurion"]</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>Centurion</defName>
+				<label>gestate Robobrain</label>
+				<description>Gestate an Robobrain.</description>
+				<products>
+					<Mech_Centurion>1</Mech_Centurion>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Centurion</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
 </Patch>

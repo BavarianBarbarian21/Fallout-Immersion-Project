@@ -1,99 +1,59 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Constructron ThingDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Mech_Termite"]</xpath>
-    <value>
-      <ThingDef ParentName="Floating">
-        <defName>Mech_Termite</defName>
-        <label>Crashed Vertibot Robot</label>
-        <description>This is a strange Robot.</description>
-        <statBases>
-          <MoveSpeed>2</MoveSpeed>
-        </statBases>
-        <race>
-          <body>Eyebot</body>
-          <lifeStageAges>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>0</minAge>
-              <soundWounded>Eyebot_Wounded</soundWounded>
-              <soundDeath>Eyebot_Death</soundDeath>
-              <soundCall>Eyebot_Call</soundCall>
-              <soundAngry>Eyebot_Angry</soundAngry>
-            </li>
-           <!--   <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>100</minAge>
-              <soundWounded>Eyebot_Wounded</soundWounded>
-              <soundDeath>Eyebot_Death</soundDeath>
-              <soundCall>Eyebot_Call</soundCall>
-              <soundAngry>Eyebot_Angry</soundAngry>
-            </li>-->
-          </lifeStageAges>
-        </race>
-      </ThingDef>
-    </value>
-  </Operation>
-
-  <!-- Constructron PawnKindDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/PawnKindDef[defName="Mech_Termite_Breach"]</xpath>
-    <value>
-      <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>Mech_Termite_Breach</defName>
-        <label>Crashed Vertibot Robot</label>
-        <race>Mech_Termite</race>
-        <combatPower>300</combatPower>
-        <lifeStages>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Eyebot/Eyebot</texPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-          <!--  <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Eyebot/Eyebot</texPath>
-              
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>-->
-        </lifeStages>
-        <weaponTags>
-          <li>MechanoidGunLongRange</li>
-        </weaponTags>
-      </PawnKindDef>
-    </value>
-  </Operation>
-
-  <!-- Constructron RecipeDef
-  <Operation Class="PatchOperationReplace">
-  <xpath>/Defs/RecipeDef[defName="Termite"]</xpath>
-    <value>
-      <RecipeDef ParentName="LightMechanoidRecipe">
-        <defName>Termite</defName>
-        <label>gestate Crashed Vertibot Robot</label>
-        <description>Gestate an Crashed Vertibot Robot.</description>
-        <products>
-        <Mech_Constructoid>1</Mech_Constructoid>
-        </products>
-        <descriptionHyperlinks>
-        <ThingDef>Mech_Constructoid</ThingDef>
-        </descriptionHyperlinks>
-      </RecipeDef>
-    </value>
-  </Operation>-->
+	<!-- Constructron ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Termite"]</xpath>
+		<value>
+			<ThingDef ParentName="Floating">
+				<defName>Mech_Termite</defName>
+				<label>Crashed Vertibot Robot</label>
+				<description>This is a strange Robot.</description>
+				<statBases>
+					<MoveSpeed>2</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Eyebot</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Eyebot_Wounded</soundWounded>
+							<soundDeath>Eyebot_Death</soundDeath>
+							<soundCall>Eyebot_Call</soundCall>
+							<soundAngry>Eyebot_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Constructron PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Termite_Breach"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Termite_Breach</defName>
+				<label>Crashed Vertibot Robot</label>
+				<race>Mech_Termite</race>
+				<combatPower>300</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Eyebot/Eyebot</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunLongRange</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
 </Patch>

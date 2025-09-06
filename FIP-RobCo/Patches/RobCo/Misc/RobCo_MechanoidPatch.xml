@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Remove light, heavy, and ultraheavy resurrection recipes -->
-  <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/RecipeDef[defName="ResurrectLightMech"]</xpath>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/RecipeDef[defName="ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
-    <value>
-      <thingDefs>
-        <!-- 3_Heavy robots -->
-        <li>Corpse_Mech_Tesseron</li>
-        <li>Corpse_Mech_Legionary</li>
-        <li>Corpse_Mech_Centurion</li>
-        <!-- 4_SuperHeavy robots -->
-        <li>Corpse_Mech_CentipedeBlaster</li>
-        <li>Corpse_Mech_CentipedeGunner</li>
-        <li>Corpse_Mech_CentipedeBurner</li>
-        
-      </thingDefs>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>/Defs/RecipeDef[defName="ResurrectUltraheavyMech"]</xpath>
-  </Operation>
-
-  <!-- Patch medium resurrection recipe to include all mechanoid corpses -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
-    <value>
-      <thingDefs>
-        <!-- 1_Light robots -->
-        <li>Corpse_Mech_Lifter</li>
-        <li>Corpse_Mech_Constructoid</li>        
-        <li>Corpse_Mech_Militor</li>        
-        <li>Corpse_Mech_Fabricor</li>
-        <li MayRequire="Ludeon.RimWorld.Odyssey">Corpse_Mech_Cyclops</li>
-        <li>Corpse_Mech_Pikeman</li>
-        <li>Corpse_Mech_Tunneler</li>
-        <!-- 2_Medium robots -->
-        <li>Corpse_Mech_Scorcher</li>
-        <li>Corpse_Mech_Scyther</li>
-        <li>Corpse_Mech_Lancer</li>
-        <li>Corpse_Mech_Cleansweeper</li>
-        <li>Corpse_Mech_Agrihand</li>
-        <li>Corpse_Mech_Paramedic</li>
-      </thingDefs>
-    </value>
-  </Operation>
-  </Patch>
+	<!-- Remove light, heavy, and ultraheavy resurrection recipes -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/RecipeDef[defName="ResurrectLightMech"]</xpath>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+		<value>
+			<thingDefs>
+				<!-- 3_Heavy robots -->
+				<li>Corpse_Mech_Tesseron</li>
+				<li>Corpse_Mech_Legionary</li>
+				<li>Corpse_Mech_Centurion</li>
+				<!-- 4_SuperHeavy robots -->
+				<li>Corpse_Mech_CentipedeBlaster</li>
+				<li>Corpse_Mech_CentipedeGunner</li>
+				<li>Corpse_Mech_CentipedeBurner</li>
+			</thingDefs>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/RecipeDef[defName="ResurrectUltraheavyMech"]</xpath>
+	</Operation>
+	<!-- Patch medium resurrection recipe to include all mechanoid corpses -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+		<value>
+			<thingDefs>
+				<!-- 1_Light robots -->
+				<li>Corpse_Mech_Lifter</li>
+				<li>Corpse_Mech_Constructoid</li>
+				<li>Corpse_Mech_Militor</li>
+				<li>Corpse_Mech_Fabricor</li>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">Corpse_Mech_Cyclops</li>
+				<li>Corpse_Mech_Pikeman</li>
+				<li>Corpse_Mech_Tunneler</li>
+				<!-- 2_Medium robots -->
+				<li>Corpse_Mech_Scorcher</li>
+				<li>Corpse_Mech_Scyther</li>
+				<li>Corpse_Mech_Lancer</li>
+				<li>Corpse_Mech_Cleansweeper</li>
+				<li>Corpse_Mech_Agrihand</li>
+				<li>Corpse_Mech_Paramedic</li>
+			</thingDefs>
+		</value>
+	</Operation>
+</Patch>

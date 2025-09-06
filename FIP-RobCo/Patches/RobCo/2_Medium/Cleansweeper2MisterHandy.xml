@@ -1,106 +1,83 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Mister Handy ThingDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Mech_Cleansweeper"]</xpath>
-    <value>
-      <ThingDef ParentName="Floating">
-        <defName>Mech_Cleansweeper</defName>
-        <label>Mister Handy</label>
-        <description>This is a Mister Handy.</description>
-        <statBases>
-          <MoveSpeed>5</MoveSpeed>
-        </statBases>
-        <race>
-          <body>Handy</body>
-          <mechEnabledWorkTypes>
-            <li>Cooking</li>
-            <li>Cleaning</li>
-          </mechEnabledWorkTypes>
-          <mechWorkTypePriorities>
-            <Cleaning>2</Cleaning>
-          </mechWorkTypePriorities>
-          <lifeStageAges>
-            <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>0</minAge>
-              <soundWounded>Handy_Wounded</soundWounded>
-              <soundDeath>Handy_Death</soundDeath>
-              <soundCall>Handy_Call</soundCall>
-              <soundAngry>Handy_Angry</soundAngry>
-            </li>
-            <!--  <li>
-              <def>MechanoidFullyFormed</def>
-              <minAge>100</minAge>
-              <soundWounded>Handy_Wounded</soundWounded>
-              <soundDeath>Handy_Death</soundDeath>
-              <soundCall>Handy_Call</soundCall>
-              <soundAngry>Handy_Angry</soundAngry>
-            </li>-->
-          </lifeStageAges>
-        </race>
-      </ThingDef>
-    </value>
-  </Operation>
-
-  <!-- Mister Handy PawnKindDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/PawnKindDef[defName="Mech_Cleansweeper"]</xpath>
-    <value>
-      <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>Mech_Cleansweeper</defName>
-        <label>Mister Handy</label>
-        <race>Mech_Cleansweeper</race>
-        <combatPower>10</combatPower>
-        <lifeStages>
-          <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Handy/Handy</texPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>
-          <!--  <li>
-            <bodyGraphicData>
-              <texPath>RobCo/Handy/Handy</texPath>
-              
-              <shaderType>CutoutWithOverlay</shaderType>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawSize>1.25</drawSize>
-              <shadowData>
-                <volume>(0.3, 0.4, 0.3)</volume>
-                <offset>(0,0,-0.25)</offset>
-              </shadowData>
-            </bodyGraphicData>
-          </li>-->
-        </lifeStages>
-        <weaponTags>
-          <li>MechanoidGunSpiner</li>
-        </weaponTags>
-      </PawnKindDef>
-    </value>
-  </Operation>
-
-  <!-- Mister Handy RecipeDef -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/RecipeDef[defName="Cleansweeper"]</xpath>
-    <value>
-      <RecipeDef ParentName="MediumMechanoidRecipe">
-        <defName>Cleansweeper</defName>
-        <label>gestate Mister Handy</label>
-        <description>Gestate a Mister Handy.</description>
-        <products>
-          <Mech_Cleansweeper>1</Mech_Cleansweeper>
-        </products>
-        <descriptionHyperlinks>
-          <ThingDef>Mech_Cleansweeper</ThingDef>
-        </descriptionHyperlinks>
-      </RecipeDef>
-    </value>
-  </Operation>
+	<!-- Mister Handy ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Cleansweeper"]</xpath>
+		<value>
+			<ThingDef ParentName="Floating">
+				<defName>Mech_Cleansweeper</defName>
+				<label>Mister Handy</label>
+				<description>This is a Mister Handy.</description>
+				<statBases>
+					<MoveSpeed>5</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Handy</body>
+					<mechEnabledWorkTypes>
+						<li>Cooking</li>
+						<li>Cleaning</li>
+					</mechEnabledWorkTypes>
+					<mechWorkTypePriorities>
+						<Cleaning>2</Cleaning>
+					</mechWorkTypePriorities>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Handy_Wounded</soundWounded>
+							<soundDeath>Handy_Death</soundDeath>
+							<soundCall>Handy_Call</soundCall>
+							<soundAngry>Handy_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Mister Handy PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Cleansweeper"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Cleansweeper</defName>
+				<label>Mister Handy</label>
+				<race>Mech_Cleansweeper</race>
+				<combatPower>10</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Handy/Handy</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunSpiner</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Mister Handy RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Cleansweeper"]</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>Cleansweeper</defName>
+				<label>gestate Mister Handy</label>
+				<description>Gestate a Mister Handy.</description>
+				<products>
+					<Mech_Cleansweeper>1</Mech_Cleansweeper>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Cleansweeper</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
 </Patch>
