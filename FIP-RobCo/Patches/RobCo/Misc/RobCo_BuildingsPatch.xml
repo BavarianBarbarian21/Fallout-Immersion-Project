@@ -196,6 +196,20 @@
       <description>A General Atomics machine to carefully extract human processor units.</description>
     </value>
   </Operation>
+    <!-- Change MechBooster to RobCo Booster -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechBooster"]/label</xpath>
+    <value>
+      <label>RobCo Booster</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechBooster"]/description</xpath>
+    <value>
+      <description>A RobCo-branded remote energy and computation enhancement device. Any friendly RobCo robots in its effect radius will move and work faster, thanks to proprietary RobCo signal technology.</description>
+    </value>
+  </Operation>
 
     <!-- Patch MechGestator recipes -->
   <Operation Class="PatchOperationReplace">

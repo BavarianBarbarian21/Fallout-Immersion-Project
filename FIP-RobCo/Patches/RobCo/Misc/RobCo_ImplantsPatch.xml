@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <!-- Change Mechlink to Pipboy -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Mechlink"]/label</xpath>
+        <value><label>Pipboy</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Mechlink"]/description</xpath>
+        <value><description>The Pipboy is a wrist-mounted device used to control RobCo robots. It provides remote access, status monitoring, and direct command capabilities for all RobCo mechanized units.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Mechlink"]/graphicData/texPath</xpath>
+        <value><texPath>RobCo/Misc/Pipboy</texPath></value>
+      </li>
+
+      <!-- ControlSublinkImplant HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ControlSublink"]/label</xpath>
+        <value><label>Pipboy Control Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ControlSublink"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to expand control groups for RobCo robots. Insert into the Pipboy to upgrade your robot command capabilities.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ControlSublink"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="ControlSublinkImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which increases a mechanitor's control group count and the work speed of a mechanitor's mechs. This advanced sublink is encoded with proprietary RobCo firmware for optimal control and reliability. Can be installed up to 6 times for maximum effect.</description></value>
+      </li>
+      <!--<li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="ControlSublinkImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo holotape implant for advanced mech control. Install up to 6 times.</descriptionShort></value>
+      </li>-->
+
+      <!-- MechFormfeeder ThingDef & HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MechFormfeeder"]/label</xpath>
+        <value><label>Pipboy Gestation Processor Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MechFormfeeder"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to optimize the gestation process for RobCo robots. Insert into the Pipboy to increase mech production speed.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="MechFormfeeder"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="MechFormfeederImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which accelerates mech gestation in the gestator. RobCo's proprietary processor firmware ensures maximum efficiency and reliability. Can be installed up to 6 times for increased effect.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="MechFormfeederImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo holotape implant for faster mech gestation. Install up to 6 times.</descriptionShort></value>
+      </li>
+
+      <!-- RepairProbe ThingDef & HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RepairProbe"]/label</xpath>
+        <value><label>Pipboy Repair Probe Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RepairProbe"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to optimize repair speed for RobCo robots. Insert into the Pipboy to increase mech repair efficiency.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RepairProbe"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RepairProbeImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which increases the speed of mech repairs. Direct neural interface and proprietary RobCo diagnostics allow rapid and reliable restoration. Can be installed up to 6 times for increased effect.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RepairProbeImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo holotape implant for faster mech repairs. Install up to 6 times.</descriptionShort></value>
+      </li>
+
+      <!-- RemoteShielder ThingDef & HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RemoteShielder"]/label</xpath>
+        <value><label>Pipboy Remote Shielder Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RemoteShielder"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to project remote shields onto RobCo robots. Insert into the Pipboy to enable advanced shielding capabilities.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RemoteShielder"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RemoteShielderImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which allows remote projection of personal defense shields onto mechs. Proprietary RobCo firmware ensures reliable shield deployment. Can be installed up to 3 times for increased range and energy.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RemoteShielderImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo holotape implant for remote mech shielding. Install up to 3 times.</descriptionShort></value>
+      </li>
+
+      <!-- RemoteRepairer ThingDef & HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RemoteRepairer"]/label</xpath>
+        <value><label>Pipboy Remote Repairer Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RemoteRepairer"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to enable remote repair of RobCo robots. Insert into the Pipboy to activate advanced repair protocols.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="RemoteRepairer"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RemoteRepairerImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which allows remote repair of mechs. Proprietary RobCo firmware enables psychically guided mechanite restoration. Can be installed up to 3 times for increased range.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="RemoteRepairerImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo holotape implant for remote mech repair. Install up to 3 times.</descriptionShort></value>
+      </li>
+
+      <!-- ControlSublinkHigh ThingDef & HediffDef -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ControlSublinkHigh"]/label</xpath>
+        <value><label>Pipboy High-Tier Control Holotape</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ControlSublinkHigh"]/description</xpath>
+        <value><description>A holotape for the Pipboy, used to expand control groups for RobCo robots beyond standard limits. Insert into the Pipboy to unlock high-tier robot command capabilities.</description></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ControlSublinkHigh"]</xpath>
+        <value><graphicData><texPath>RobCo/Misc/Holotape</texPath></graphicData></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="ControlSublinkImplant"]/description</xpath>
+        <value><description>A RobCo holotape implant which increases a mechanitor's control group count and the work speed of a mechanitor's mechs. This high-tier sublink is encoded with proprietary RobCo firmware for optimal control and reliability. Can be installed up to 6 times for maximum effect.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="ControlSublinkImplant"]/descriptionShort</xpath>
+        <value><descriptionShort>RobCo high-tier holotape implant for advanced mech control. Install up to 6 times.</descriptionShort></value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
