@@ -10,7 +10,6 @@
           <description>A RobCo robot breaching launcher. Fires a concussion bomb designed for demolition and siege, optimized for robot assault tactics.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-          <!-- <texPath>Things/Item/Equipment/WeaponRanged/ThumpCannon</texPath> -->
           <texPath>RobCo/Misc/Invisible</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
@@ -439,7 +438,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_MiniShotgun"]</xpath>
     <value>
-        <ThingDef ParentName="LightMechanoidGunRanged">
+        <ThingDef ParentName="LightMechanoidGun">
           <defName>Gun_MiniShotgun</defName>
           <label>RobCo compact scattergun</label>
           <description>RobCo robot scattergun. Short-range, rapid-fire weapon for light robot units and close-quarters defense.</description>
@@ -504,7 +503,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_Slugthrower"]</xpath>
     <value>
-        <ThingDef ParentName="LightMechanoidGunRanged">
+        <ThingDef ParentName="LightMechanoidGun">
           <defName>Gun_Slugthrower</defName>
           <label>RobCo slug launcher</label>
           <description>RobCo robot slug launcher. Fires heavy projectiles for precision strikes by light robot units.</description>
@@ -577,7 +576,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_Spiner"]</xpath>
     <value>
-        <ThingDef ParentName="LightMechanoidGunRanged">
+        <ThingDef ParentName="LightMechanoidGun">
           <defName>Gun_Spiner</defName>
           <label>RobCo minilaser</label>
           <description>RobCo robot minilaser. Miniaturized weapon for small robots, firing deadly laser at close range.</description>
@@ -639,7 +638,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Gun_MiniFlameblaster"]</xpath>
     <value>
-        <ThingDef ParentName="LightMechanoidGunRanged">
+        <ThingDef ParentName="LightMechanoidGun">
           <defName>Gun_MiniFlameblaster</defName>
           <label>RobCo micro flamer</label>
           <description>RobCo robot micro flamer. Compact flamethrower for light robots, designed for area denial and close-range attacks.</description>
