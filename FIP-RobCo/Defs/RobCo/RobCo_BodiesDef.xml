@@ -1,40 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!--Robot Braintank-->
-<BodyPartDef ParentName="Skull">
-    <defName>RobCo_CyberneticBraintank</defName>
-    <label>cybernetic braintank</label>
-    <hitPoints>30</hitPoints>
-  </BodyPartDef>
-  <BodyPartDef ParentName="Brain">
-    <defName>RobCo_CyberneticBrain</defName>
-    <label>cybernetic brain</label>
-    <hitPoints>30</hitPoints>
-  </BodyPartDef>
-  <!--Robot Chassis-->
-  <BodyPartDef ParentName="MechanicalThorax">
-    <defName>RobCo_Chassis</defName>
-    <label>chassis</label>
-  </BodyPartDef>
-  <BodyPartDef ParentName="MechanicalThorax">
-    <defName>ArmoredChassis</defName>
-    <label>armored chassis</label>
-    <hitPoints>60</hitPoints>
-  </BodyPartDef>
-  <BodyPartDef ParentName="ArtificialBrain">
-    <defName>RobCo_Processor</defName>
-    <label>processor</label>
-  </BodyPartDef>
-  <!--Sensors-->
-  <BodyPartDef ParentName="sightSensor">
-    <defName>RobCo_Scanner</defName>
-    <label>scanner</label>
-  </BodyPartDef>
-  <BodyPartDef ParentName="HearingSensor">
-    <defName>RobCo_Microphone</defName>
-    <label>microphone</label>
-  </BodyPartDef>
-
 	<!-- Protectron: Walking humanoid robot with stiff mechanical parts -->
 	<BodyDef>
 		<defName>Protectron</defName>
@@ -46,7 +11,7 @@
 			<parts>
 				<li>
 					<def>RobCo_Processor</def>
-					<coverage>0.10</coverage>
+					<coverage>0.06</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
@@ -67,6 +32,9 @@
 						<li>
 							<def>MechanicalHead</def>
 							<coverage>0.80</coverage>
+							<groups>
+								<li>HeadAttackTool</li>
+							</groups>
 							<parts>
 								<li>
 									<def>RobCo_Scanner</def>
@@ -87,7 +55,7 @@
 				<li>
 					<def>MechanicalShoulder</def>
 					<customLabel>left shoulder</customLabel>
-					<coverage>0.17</coverage>
+					<coverage>0.16</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
@@ -102,17 +70,17 @@
 								<li>
 									<def>MechanicalFinger</def>
 									<customLabel>left claw finger 1</customLabel>
-									<coverage>0.15</coverage>
+									<coverage>0.12</coverage>
 								</li>
 								<li>
 									<def>MechanicalFinger</def>
 									<customLabel>left claw finger 2</customLabel>
-									<coverage>0.15</coverage>
+									<coverage>0.12</coverage>
 								</li>
 								<li>
 									<def>MechanicalFinger</def>
 									<customLabel>left claw finger 3</customLabel>
-									<coverage>0.15</coverage>
+									<coverage>0.12</coverage>
 								</li>
 							</parts>
 						</li>
@@ -121,7 +89,7 @@
 				<li>
 					<def>MechanicalShoulder</def>
 					<customLabel>right shoulder</customLabel>
-					<coverage>0.17</coverage>
+					<coverage>0.16</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
@@ -136,17 +104,17 @@
 										<li>
 											<def>MechanicalFinger</def>
 											<customLabel>right claw finger 1</customLabel>
-											<coverage>0.15</coverage>
+											<coverage>0.12</coverage>
 										</li>
 										<li>
 											<def>MechanicalFinger</def>
 											<customLabel>right claw finger 2</customLabel>
-											<coverage>0.15</coverage>
+											<coverage>0.12</coverage>
 										</li>
 										<li>
 											<def>MechanicalFinger</def>
 											<customLabel>right claw finger 3</customLabel>
-											<coverage>0.15</coverage>
+											<coverage>0.12</coverage>
 										</li>
 									</parts>
 								</li>
@@ -190,14 +158,14 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-                <li>
+				<li>
 					<def>RobCo_Processor</def>
-					<coverage>0.10</coverage>
+					<coverage>0.06</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>MechanicalNeck</def>
-					<coverage>0.10</coverage>
+					<coverage>0.9</coverage>
 					<height>Top</height>
 					<parts>
 						<li>
@@ -339,15 +307,15 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-                <li>
+				<li>
 					<def>RobCo_Processor</def>
-					<coverage>0.10</coverage>
+					<coverage>0.08</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>chassis</customLabel>
-					<coverage>0.15</coverage>
+					<coverage>0.1</coverage>
 					<depth>Inside</depth>
 					<parts>
 						<li>
@@ -375,12 +343,12 @@
 				<li>
 					<def>MechanicalArm</def>
 					<customLabel>welding laser arm</customLabel>
-					<coverage>0.15</coverage>
+					<coverage>0.10</coverage>
 				</li>
 				<li>
 					<def>MechanicalShoulder</def>
 					<customLabel>left shoulder</customLabel>
-					<coverage>0.17</coverage>
+					<coverage>0.10</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
@@ -409,12 +377,12 @@
 				<li>
 					<def>MechanicalArm</def>
 					<customLabel>multi-tool arm</customLabel>
-					<coverage>0.15</coverage>
+					<coverage>0.10</coverage>
 				</li>
 				<li>
 					<def>RobCo_Microphone</def>
 					<customLabel>left sound sensor</customLabel>
-					<coverage>0.10</coverage>
+					<coverage>0.07</coverage>
 				</li>
 				<li>
 					<def>Reactor</def>
@@ -429,7 +397,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	<!-- Robobrain: Rolling on tracks, braintank, two crude arms -->
+	<!-- Robobrain -->
 	<BodyDef>
 		<defName>Robobrain</defName>
 		<label>robobrain</label>
@@ -438,30 +406,30 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-                <li>
+				<li>
 					<def>RobCo_Processor</def>
-					<coverage>0.10</coverage>
+					<coverage>0.05</coverage>
 					<depth>Inside</depth>
 				</li>
-                <li>
-                    <def>RobCo_Scanner</def>
-                    <coverage>0.13</coverage>
-                </li>
-                <li>
-                    <def>FluidReprocessor</def>
-                    <coverage>0.04</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>RobCo_Microphone</def>
-                  <customLabel>left hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                    <def>reactor</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
+				<li>
+					<def>RobCo_Scanner</def>
+					<coverage>0.05</coverage>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>RobCo_Microphone</def>
+					<customLabel>left hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>Reactor</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>left track</customLabel>
@@ -489,12 +457,12 @@
 					</parts>
 				</li>
 				<li>
-					<def>CyberneticBraintank</def>
-					<coverage>0.20</coverage>
+					<def>RobCo_CyberneticBraintank</def>
+					<coverage>0.9</coverage>
 					<height>Top</height>
 					<parts>
 						<li>
-							<def>CyberneticBrain</def>
+							<def>RobCo_CyberneticBrain</def>
 							<coverage>0.10</coverage>
 							<depth>Inside</depth>
 						</li>
@@ -503,7 +471,7 @@
 				<li>
 					<def>MechanicalArm</def>
 					<customLabel>left crude arm</customLabel>
-					<coverage>0.15</coverage>
+					<coverage>0.1</coverage>
 					<parts>
 						<li>
 							<def>MechanicalHand</def>
@@ -532,7 +500,7 @@
 				<li>
 					<def>MechanicalArm</def>
 					<customLabel>right crude arm</customLabel>
-					<coverage>0.15</coverage>
+					<coverage>0.1</coverage>
 					<parts>
 						<li>
 							<def>MechanicalHand</def>
@@ -570,23 +538,23 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-                <li>
+				<li>
 					<def>RobCo_Processor</def>
 					<coverage>0.10</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>MechanicalLeg</def>
-                    <customLabel>floater</customLabel>
+					<customLabel>floater</customLabel>
 					<coverage>0.15</coverage>
 					<depth>Inside</depth>
-                    <parts>
-                        <li>
-                            <def>MechanicalFoot</def>
-                            <customLabel>booster</customLabel>
-                            <coverage>0.1</coverage>
-                        </li>
-                    </parts>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>booster</customLabel>
+							<coverage>0.1</coverage>
+						</li>
+					</parts>
 				</li>
 				<li>
 					<def>RobCo_Scanner</def>
@@ -600,7 +568,7 @@
 				</li>
 				<li>
 					<def>SmellSensor</def>
-                    <customLabel>antenna</customLabel>
+					<customLabel>antenna</customLabel>
 					<coverage>0.10</coverage>
 				</li>
 				<li>
@@ -627,159 +595,159 @@
 			<parts>
 				<li>
 					<def>Tail</def>
-					<coverage>0.08</coverage>
+					<coverage>0.06</coverage>
 					<height>Bottom</height>
 				</li>
 				<li>
 					<def>Spine</def>
-					<coverage>0.07</coverage>
+					<coverage>0.05</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>Heart</def>
-					<coverage>0.05</coverage>
+					<coverage>0.04</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>Lung</def>
 					<customLabel>left lung</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>Lung</def>
 					<customLabel>right lung</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>Stomach</def>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
 					<def>Kidney</def>
 					<customLabel>left kidney</customLabel>
+					<coverage>0.02</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
 					<coverage>0.03</coverage>
 					<depth>Inside</depth>
 				</li>
 				<li>
-                    <def>fluidReprocessor</def>
-                    <coverage>0.04</coverage>
-                    <depth>Inside</depth>
-                </li>
-				<li>
 					<def>Liver</def>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<depth>Inside</depth>
 				</li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>front left leg</customLabel>
-                    <coverage>0.20</coverage>
-                    <height>Bottom</height>
-                    <parts>
-                        <li>
-					        <def>Paw</def>
-					        <customLabel>front left paw</customLabel>
-					        <coverage>0.1</coverage>
-					        <height>Bottom</height>
-                            </li>
-                    </parts>
+				<li>
+					<def>Leg</def>
+					<customLabel>front left leg</customLabel>
+					<coverage>0.13</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>Paw</def>
+							<customLabel>front left paw</customLabel>
+							<coverage>0.07</coverage>
+							<height>Bottom</height>
+						</li>
+					</parts>
 				</li>
 				<li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>front right cybernetic leg</customLabel>
-                    <coverage>0.20</coverage>
-                    <height>Bottom</height>
-                    <parts>
-                        <li>
-					        <def>MechanicalFoot</def>
-					        <customLabel>front right cybernetic paw</customLabel>
-					        <coverage>0.1</coverage>
-					        <height>Bottom</height>
-                            </li>
-                    </parts>
+					<def>MechanicalLeg</def>
+					<customLabel>front right cybernetic leg</customLabel>
+					<coverage>0.13</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>front right cybernetic paw</customLabel>
+							<coverage>0.07</coverage>
+							<height>Bottom</height>
+						</li>
+					</parts>
 				</li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>rear left cybernetic leg</customLabel>
-                    <coverage>0.20</coverage>
-                    <height>Bottom</height>
-                    <parts>
-                        <li>
-					        <def>MechanicalFoot</def>
-					        <customLabel>rear left cybernetic paw</customLabel>
-					        <coverage>0.1</coverage>
-					        <height>Bottom</height>
-                            </li>
-                    </parts>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>rear left cybernetic leg</customLabel>
+					<coverage>0.13</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>MechanicalFoot</def>
+							<customLabel>rear left cybernetic paw</customLabel>
+							<coverage>0.07</coverage>
+							<height>Bottom</height>
+						</li>
+					</parts>
 				</li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>rear right leg</customLabel>
-                    <coverage>0.20</coverage>
-                    <height>Bottom</height>
-                    <parts>
-                        <li>
-					        <def>Paw</def>
-					        <customLabel>rear right paw</customLabel>
-					        <coverage>0.1</coverage>
-					        <height>Bottom</height> 
-                            </li>
-                    </parts>
+				<li>
+					<def>Leg</def>
+					<customLabel>rear right leg</customLabel>
+					<coverage>0.13</coverage>
+					<height>Bottom</height>
+					<parts>
+						<li>
+							<def>Paw</def>
+							<customLabel>rear right paw</customLabel>
+							<coverage>0.07</coverage>
+							<height>Bottom</height>
+						</li>
+					</parts>
 				</li>
 				<li>
 					<def>Neck</def>
-					<coverage>0.075</coverage>
+					<coverage>0.06</coverage>
 					<height>Top</height>
 					<parts>
 						<li>
 							<def>Head</def>
-							<coverage>0.80</coverage>
+							<coverage>0.60</coverage>
 							<parts>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>left eye</customLabel>
-                                    <coverage>0.03</coverage>
-                                    <height>Top</height>
-                                </li>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>right eye</customLabel>
-                                    <coverage>0.03</coverage>
-                                    <height>Top</height>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>left ear</customLabel>
-                                    <coverage>0.02</coverage>
-                                    <height>Top</height>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>right ear</customLabel>
-                                    <coverage>0.02</coverage>
-                                    <height>Top</height>
-                                </li>
-                                <li>
-                                    <def>Nose</def>
-                                    <coverage>0.02</coverage>
-                                    <height>Top</height>
-                                </li>
-                                <li>
-                                    <def>AnimalJaw</def>
-                                    <coverage>0.03</coverage>
-                                    <height>Top</height>
-                                </li>
 								<li>
-									<def>CyberneticBraintank</def>
-									<coverage>0.20</coverage>
+									<def>Eye</def>
+									<customLabel>left eye</customLabel>
+									<coverage>0.02</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>right eye</customLabel>
+									<coverage>0.02</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>left ear</customLabel>
+									<coverage>0.01</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>right ear</customLabel>
+									<coverage>0.01</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>Nose</def>
+									<coverage>0.01</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>AnimalJaw</def>
+									<coverage>0.02</coverage>
+									<height>Top</height>
+								</li>
+								<li>
+									<def>RobCo_CyberneticBraintank</def>
+									<coverage>0.10</coverage>
 									<height>Top</height>
 									<parts>
 										<li>
-											<def>CyberneticBrain</def>
-											<coverage>0.10</coverage>
+											<def>RobCo_CyberneticBrain</def>
+											<coverage>0.05</coverage>
 											<depth>Inside</depth>
 										</li>
 									</parts>
@@ -800,15 +768,15 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-                <li>
-                    <def>RobCo_Processor</def>
-                    <coverage>0.10</coverage>
-                    <depth>Inside</depth>
-                </li>
+				<li>
+					<def>RobCo_Processor</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>rear roller leg</customLabel>
-					<coverage>0.13</coverage>
+					<coverage>0.10</coverage>
 					<height>Bottom</height>
 					<parts>
 						<li>
@@ -821,7 +789,7 @@
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>left leg</customLabel>
-					<coverage>0.13</coverage>
+					<coverage>0.10</coverage>
 					<height>Bottom</height>
 					<parts>
 						<li>
@@ -834,7 +802,7 @@
 				<li>
 					<def>MechanicalLeg</def>
 					<customLabel>right leg</customLabel>
-					<coverage>0.13</coverage>
+					<coverage>0.05</coverage>
 					<height>Bottom</height>
 					<parts>
 						<li>
@@ -847,7 +815,7 @@
 				<li>
 					<def>MechanicalShoulder</def>
 					<customLabel>left shoulder</customLabel>
-					<coverage>0.17</coverage>
+					<coverage>0.1</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
@@ -883,7 +851,7 @@
 				<li>
 					<def>MechanicalShoulder</def>
 					<customLabel>right shoulder</customLabel>
-					<coverage>0.17</coverage>
+					<coverage>0.1</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
@@ -918,7 +886,7 @@
 				</li>
 				<li>
 					<def>MechanicalNeck</def>
-					<coverage>0.10</coverage>
+					<coverage>0.08</coverage>
 					<height>Top</height>
 					<parts>
 						<li>
@@ -954,12 +922,12 @@
 					<depth>Inside</depth>
 				</li>
 				<li>
-					<def>CyberneticBraintank</def>
+					<def>RobCo_CyberneticBraintank</def>
 					<coverage>0.20</coverage>
 					<height>Top</height>
 					<parts>
 						<li>
-							<def>CyberneticBrain</def>
+							<def>RobCo_CyberneticBrain</def>
 							<coverage>0.10</coverage>
 							<depth>Inside</depth>
 						</li>
