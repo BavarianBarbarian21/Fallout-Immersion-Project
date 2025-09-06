@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Patch BasicMechtech to require RobCoManual analysis -->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]</xpath>
-    <value>
-      <requiredAnalyzed>
-        <li>BrokenEyebotFrame</li>
-      </requiredAnalyzed>
-    </value>
-  </Operation>
 
   <!-- Patch labels and descriptions for RobCo theme -->
   <Operation Class="PatchOperationReplace">

@@ -96,7 +96,13 @@
       <description>The severed head of a broken assaultron.</description>
     </value>
   </Operation>
- c
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="PowerfocusChip"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>RobCo/Misc/ScrapAssaultronHead</texPath>
+      </value>
+    </Operation>
+ 
 
   <!-- Patch label and description for NanostructuringChip -->
   <Operation Class="PatchOperationReplace">
