@@ -6,7 +6,7 @@
 		<value>
 			<ThingDef ParentName="SuperHeavyMechanoid">
 				<defName>Mech_CentipedeGunner</defName>
-				<label>Sentry Bot Gunner</label>
+				<label>Sentry Bot</label>
 				<description>This is a Sentry Bot.</description>
 				<statBases>
 					<MoveSpeed>2</MoveSpeed>
@@ -24,6 +24,7 @@
 						</li>
 						<!--  <li><def>MechanoidFullyFormed</def><minAge>100</minAge><soundWounded>Sentrybot_Wounded</soundWounded><soundDeath>Sentrybot_Death</soundDeath><soundCall>Sentrybot_Call</soundCall><soundAngry>Sentrybot_Angry</soundAngry></li>-->
 					</lifeStageAges>
+					<baseHealthScale>4</baseHealthScale>
 				</race>
 			</ThingDef>
 		</value>
@@ -64,8 +65,8 @@
 		<value>
 			<RecipeDef ParentName="SuperHeavyMechanoidRecipe">
 				<defName>CentipedeGunner</defName>
-				<label>gestate Sentry Bot Gunner</label>
-				<description>Gestate a Sentry Bot Gunner.</description>
+				<label>craft Sentry Bot Gunner</label>
+				<description>Craft a Sentry Bot Gunner.</description>
 				<products>
 					<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
 				</products>

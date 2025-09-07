@@ -23,7 +23,23 @@
 							<soundAngry>Gutsy_Angry</soundAngry>
 						</li>
 					</lifeStageAges>
+					<baseHealthScale>3</baseHealthScale>
+      <dutyBoss>Hydra</dutyBoss>
 				</race>
+				
+				<comps>
+      <li Class="CompProperties_MechCarrier">
+        <spawnPawnKind>Mech_WarUrchin</spawnPawnKind>
+        <fixedIngredient>Steel</fixedIngredient>
+        <costPerPawn>25</costPerPawn>
+        <startingIngredientCount>600</startingIngredientCount>
+        <maxIngredientCount>600</maxIngredientCount>
+        <spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+        <spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+        <attachSpawnedEffecter>true</attachSpawnedEffecter>
+        <attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+      </li>
+    </comps>
 			</ThingDef>
 		</value>
 	</Operation>

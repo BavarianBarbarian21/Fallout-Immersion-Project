@@ -498,20 +498,19 @@
 		<value>
 			<ThingDef ParentName="LightMechanoidGun">
 				<defName>Gun_Slugthrower</defName>
-				<label>RobCo slug launcher</label>
-				<description>RobCo robot slug launcher. Fires heavy projectiles for precision strikes by light robot units.</description>
+				<label>sonic bark emitter</label>
+				<description>RobCo robot sonic bark emitter. Emits a powerful sonic wave that stuns all targets in a small area, including humans and robots, without causing physical harm.</description>
 				<graphicData>
-					<!-- <texPath>Things/Item/Equipment/WeaponRanged/Slugthrower</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 				</graphicData>
 				<statBases>
 					<MarketValue>1000</MarketValue>
 					<Mass>1.5</Mass>
-					<AccuracyTouch>0.20</AccuracyTouch>
-					<AccuracyShort>0.30</AccuracyShort>
-					<AccuracyMedium>0.40</AccuracyMedium>
-					<AccuracyLong>0.95</AccuracyLong>
+					<AccuracyTouch>1.0</AccuracyTouch>
+					<AccuracyShort>1.0</AccuracyShort>
+					<AccuracyMedium>1.0</AccuracyMedium>
+					<AccuracyLong>1.0</AccuracyLong>
 					<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
 				</statBases>
 				<weaponTags>
@@ -523,23 +522,21 @@
 						<hasStandardCommand>true</hasStandardCommand>
 						<defaultProjectile>Bullet_Slugthrower</defaultProjectile>
 						<warmupTime>0.3</warmupTime>
-						<range>19.9</range>
-						<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+						<range>15.0</range>
 						<burstShotCount>1</burstShotCount>
-						<soundCast>Shot_Slugthrower</soundCast>
+						<soundCast>SonicBark</soundCast>
 						<soundCastTail>GunTail_Light</soundCastTail>
 						<muzzleFlashScale>9</muzzleFlashScale>
 					</li>
 				</verbs>
 				<tools>
 					<li>
-						<label>barrel</label>
+						<label>bite</label>
 						<capacities>
-							<li>Blunt</li>
-							<li>Poke</li>
+							<li>Stab</li>
 						</capacities>
-						<power>9</power>
-						<cooldownTime>2.6</cooldownTime>
+						<power>12</power>
+						<cooldownTime>2.2</cooldownTime>
 					</li>
 				</tools>
 			</ThingDef>
@@ -549,17 +546,20 @@
 		<xpath>Defs/ThingDef[defName="Bullet_Slugthrower"]</xpath>
 		<value>
 			<ThingDef ParentName="BaseBullet">
-				<defName>Bullet_Slugthrower</defName>
-				<label>slug</label>
+				<defName>Bullet_SonicBark</defName>
+				<label>sonic bark</label>
 				<graphicData>
-					<!-- <texPath>Things/Projectile/Bullet_Small</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 				</graphicData>
 				<projectile>
-					<damageDef>Bullet</damageDef>
-					<damageAmountBase>12</damageAmountBase>
+					<damageDef>EMP</damageDef>
+					<explosionRadius>3.5</explosionRadius>
 					<speed>70</speed>
+					<applyDamageToExplosionCellsNeighbors>false</applyDamageToExplosionCellsNeighbors>
+					<preExplosionSpawnThing>Filth_Dirt</preExplosionSpawnThing>
+					<preExplosionSpawnChance>0.05</preExplosionSpawnChance>
+					<preExplosionSpawnCount>1</preExplosionSpawnCount>
 				</projectile>
 			</ThingDef>
 		</value>

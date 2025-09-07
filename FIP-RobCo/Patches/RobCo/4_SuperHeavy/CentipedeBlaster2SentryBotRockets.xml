@@ -23,6 +23,7 @@
 							<soundAngry>Sentrybot_Angry</soundAngry>
 						</li>
 					</lifeStageAges>
+					<baseHealthScale>4</baseHealthScale>
 				</race>
 			</ThingDef>
 		</value>
@@ -33,7 +34,7 @@
 		<value>
 			<PawnKindDef ParentName="HeavyMechanoidKind">
 				<defName>Mech_CentipedeBlaster</defName>
-				<label>Sentry Bot Rockets</label>
+				<label>Sentry Bot Siege</label>
 				<race>Mech_CentipedeBlaster</race>
 				<combatPower>600</combatPower>
 				<lifeStages>
@@ -62,8 +63,8 @@
 		<value>
 			<RecipeDef ParentName="SuperHeavyMechanoidRecipe">
 				<defName>CentipedeBlaster</defName>
-				<label>gestate Sentry Bot Rockets</label>
-				<description>Gestate a Sentry Bot Rockets.</description>
+				<label>craft Sentry Bot Rockets</label>
+				<description>Craft a Sentry Bot Rockets.</description>
 				<products>
 					<Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
 				</products>

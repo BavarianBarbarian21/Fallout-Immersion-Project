@@ -31,7 +31,11 @@
 							<soundAngry>Assaultron_Angry</soundAngry>
 						</li>
 					</lifeStageAges>
+					<baseHealthScale>3</baseHealthScale>
 				</race>
+				<comps>
+        <li Class="CompProperties_TargetingBeam" />
+      </comps>
 			</ThingDef>
 		</value>
 	</Operation>
@@ -82,8 +86,8 @@
 		<value>
 			<RecipeDef ParentName="HeavyMechanoidRecipe">
 				<defName>Tesseron</defName>
-				<label>gestate Assaultron</label>
-				<description>Gestate an Assaultron.</description>
+				<label>craft Assaultron</label>
+				<description>Craft an Assaultron.</description>
 				<products>
 					<Mech_Tesseron>1</Mech_Tesseron>
 				</products>
