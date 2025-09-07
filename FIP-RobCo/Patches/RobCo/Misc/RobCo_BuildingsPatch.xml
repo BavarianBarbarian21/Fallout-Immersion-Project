@@ -4,52 +4,66 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/label</xpath>
 		<value>
-			<label>crashed Vertibird</label>
+			<label>crashed Vertibot</label>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/description</xpath>
 		<value>
-			<description>The remains of a Vertibird, a pre-war military transport aircraft. Scattered with pre-war tech.</description>
+			<description>The remains of a Vertibot, a pre-war military transport aircraft. Scattered with pre-war tech.</description>
+		</value>
+	</Operation>
+	<!-- Patch letterText for CompProperties_ProximityLetter -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_ProximityLetter"]/letterText</xpath>
+		<value>
+			<letterText>A crashed Vertibot lies here, its hull twisted and scorched. Pre-war technology and secrets may be hidden within the wreckage.</letterText>
+		</value>
+	</Operation>
+	<!-- Patch letterText for CompProperties_LeavingsLetter -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_LeavingsLetter"]/letterText</xpath>
+		<value>
+			<letterText>The Vertibot wreckage has been disturbed, scattering remnants of pre-war tech and memories of its final flight.</letterText>
 		</value>
 	</Operation>
 	<!-- AncientExostriderHead -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderHead"]/label</xpath>
 		<value>
-			<label>Vertibird cockpit</label>
+			<label>Vertibot cockpit</label>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderHead"]/description</xpath>
 		<value>
-			<description>The cockpit of a crashed Vertibird, filled with old controls and shattered glass.</description>
+			<description>The cockpit of a crashed Vertibot, filled with old controls and shattered glass.</description>
 		</value>
 	</Operation>
 	<!-- AncientExostriderLeg -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderLeg"]/label</xpath>
 		<value>
-			<label>Vertibird landing gear</label>
+			<label>Vertibot landing gear</label>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderLeg"]/description</xpath>
 		<value>
-			<description>Landing gear from a Vertibird, twisted and scorched from the crash.</description>
+			<description>Landing gear from a Vertibot, twisted and scorched from the crash.</description>
 		</value>
 	</Operation>
 	<!-- AncientExostriderCannon -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderCannon"]/label</xpath>
 		<value>
-			<label>Vertibird autocannon</label>
+			<label>Vertibot autocannon</label>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AncientExostriderCannon"]/description</xpath>
 		<value>
-			<description>A heavy autocannon salvaged from a Vertibird wreck.</description>
+			<description>A heavy autocannon salvaged from a Vertibot wreck.</description>
 		</value>
 	</Operation>
 	<!-- BandNode -->

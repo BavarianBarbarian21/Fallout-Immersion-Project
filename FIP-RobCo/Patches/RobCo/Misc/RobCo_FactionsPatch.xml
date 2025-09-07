@@ -7,6 +7,19 @@
 			<label>Ancient RobCo Factory</label>
 		</value>
 	</Operation>
+		<!-- Patch ShuttleCrashed_Exitable_Mechanitor label and description -->
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/label</xpath>
+			<value>
+				<label>Vertibot crash site</label>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/description</xpath>
+			<value>
+				<description>The crash site of a Vertibot, possibly containing valuable robotics salvage and pre-war technology.</description>
+			</value>
+		</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/description</xpath>
 		<value>
@@ -61,10 +74,62 @@
 			<description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
 		</value>
 	</Operation>
+	<!-- Patch MechanitorShip questDescription -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(), 'questDescription->')]</xpath>
+		<value>
+			<li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
+
+The ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can create and control robots for work and combat. By extracting the deceased mechanitor's mechlink, you can turn one of your own colonists into a mechanitor.
+
+Beware - the ship also contains hostile RobCo robots. The robot group is composed of:
+
+[mechList]</li>
+		</value>
+	</Operation>
+	<!-- Patch MechanitorShip questContentRules -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'mechanitorShuttleCrashedLetterLabel->')]</xpath>
+		<value>
+			<li>mechanitorShuttleCrashedLetterLabel->Vertibot crash site</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'mechanitorShuttleCrashedLetterText->')]</xpath>
+		<value>
+			<li>mechanitorShuttleCrashedLetterText->A Vertibot ship containing rogue RobCo robots has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'assaultBeginLetterLabel->')]</xpath>
+		<value>
+			<li>assaultBeginLetterLabel->RobCo robot attack</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'assaultBeginLetterText->')]</xpath>
+		<value>
+			<li>assaultBeginLetterText->The rogue RobCo robots are coming to assault the colony!</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), "mechlinkAvailableLetterLabel->")]</xpath>
+		<value>
+			<li>mechlinkAvailableLetterLabel->[mechanitor_nameDef]'s Pipboy available</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), "mechlinkAvailableLetterText->")]</xpath>
+		<value>
+			<li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient RobCo mechanitor.
+
+Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
+		</value>
+	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
 		<value>
-			<text>You are a RobCo Mechanitor, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
+			<text>You are a mechanic, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
