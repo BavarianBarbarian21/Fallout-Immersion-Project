@@ -39,37 +39,30 @@
 			<description>Military-grade RobCo hardware.</description>
 		</value>
 	</Operation>
-	<!-- Patch label and description for SubcoreHigh -->
+	<!-- Patch SubcoreHigh -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="SubcoreHigh"]/label</xpath>
-		<value>
-			<label>Human Brain</label>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="SubcoreHigh"]/description</xpath>
-		<value>
-			<description>This is a human brain... in a jar.</description>
-		</value>
-	</Operation>
-	<!-- Add rottable comp to SubcoreHigh -->
-	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="SubcoreHigh"]</xpath>
 		<value>
-			<comps>
-				<li Class="CompProperties_Rottable">
-					<daysToRotStart>1</daysToRotStart>
-					<rotDestroys>true</rotDestroys>
-				</li>
-			</comps>
-		</value>
-	</Operation>
-	<!-- Patch texture for SubcoreHigh to Cybernetic Brain -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="SubcoreHigh"]/graphicData/texPath</xpath>
-		<value>
-			<texPath>RobCo/Misc/CyberneticBrain</texPath>
-		</value>
+			<ThingDef ParentName="SubcoreBase">
+				<defName>SubcoreHigh</defName>
+				<label>Human Brain</label>
+				<description>This is a human brain... in a jar.</description>
+				<graphicData>
+				<texPath>RobCo/Misc/CyberneticBrain</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<statBases>
+					<MarketValue>1000</MarketValue>
+				</statBases>
+				<!--Rottable Brain-->
+				<!--<comps> 
+					<li Class="CompProperties_Rottable">
+						<daysToRotStart>1</daysToRotStart>
+						<rotDestroys>true</rotDestroys>
+					</li>
+				</comps>-->
+			</ThingDef>
+  		</value>
 	</Operation>
 	<!-- Patch label and description for SignalChip -->
 	<Operation Class="PatchOperationReplace">
