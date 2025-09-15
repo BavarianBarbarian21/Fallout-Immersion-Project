@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>Eyebot_AccuracyAura</defName>
+    <label>accuracy aura</label>
+    <description>Boosts the shooting accuracy of all nearby allies.</description>
+    <effectRadius>5</effectRadius>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityEffectRadius</verbClass>
+    </verbProperties>
+    <comps>
+      <li Class="FIP_RobCo.CompAbilityEffect_AccuracyAura" />
+    </comps>
+  </AbilityDef>
+</Defs>

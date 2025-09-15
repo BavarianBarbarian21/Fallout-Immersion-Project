@@ -87,6 +87,27 @@ Beware - the ship also contains hostile RobCo robots. The robot group is compose
 [mechList]</li>
 		</value>
 	</Operation>
+	<!-- Patch MechanitorShip mechGroups to spawn 1 Mech_Termite and 2 Mech_Pikeman only -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/root/mechGroups</xpath>
+		<value>
+			<mechGroups>
+				<li>
+					<options>
+						<li>
+							<pawnKind>Mech_Termite</pawnKind>
+							<weight>1</weight>
+							<requireOneOf>true</requireOneOf>
+						</li>
+						<li>
+							<pawnKind>Mech_Pikeman</pawnKind>
+							<weight>2</weight>
+						</li>
+					</options>
+				</li>
+			</mechGroups>
+		</value>
+	</Operation>
 	<!-- Patch MechanitorShip questContentRules -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'mechanitorShuttleCrashedLetterLabel->')]</xpath>
