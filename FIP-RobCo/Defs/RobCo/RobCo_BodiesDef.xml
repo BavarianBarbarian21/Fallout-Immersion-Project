@@ -313,8 +313,23 @@
 					<depth>Inside</depth>
 				</li>
 				<li>
+					<def>RobCo_Microphone</def>
+					<customLabel>left sound sensor</customLabel>
+					<coverage>0.07</coverage>
+				</li>
+				<li>
+					<def>Reactor</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
 					<def>MechanicalLeg</def>
-					<customLabel>chassis</customLabel>
+					<customLabel>thruster</customLabel>
 					<coverage>0.1</coverage>
 					<depth>Inside</depth>
 					<parts>
@@ -341,17 +356,43 @@
 					<coverage>0.10</coverage>
 				</li>
 				<li>
-					<def>MechanicalArm</def>
-					<customLabel>welding laser arm</customLabel>
-					<coverage>0.10</coverage>
-				</li>
-				<li>
 					<def>MechanicalShoulder</def>
-					<customLabel>left shoulder</customLabel>
+					<customLabel>front mechanism</customLabel>
 					<coverage>0.10</coverage>
 					<parts>
 						<li>
 							<def>MechanicalArm</def>
+							<customLabel>front mechanical arm</customLabel>
+							<coverage>0.15</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>MechanicalHand</def>
+							<customLabel>front mechanical claw</customLabel>
+							<coverage>0.5</coverage>
+							<parts>
+								<li>
+									<def>MechanicalFinger</def>
+									<customLabel>front claw finger 1</customLabel>
+									<coverage>0.15</coverage>
+								</li>
+								<li>
+									<def>MechanicalFinger</def>
+									<customLabel>front claw finger 2</customLabel>
+									<coverage>0.15</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalShoulder</def>
+					<customLabel>left mechanism</customLabel>
+					<coverage>0.10</coverage>
+					<parts>
+						<li>
+							<def>MechanicalArm</def>
+							<customLabel>left mechanical arm</customLabel>
 							<coverage>0.15</coverage>
 							<depth>Inside</depth>
 						</li>
@@ -375,24 +416,34 @@
 					</parts>
 				</li>
 				<li>
-					<def>MechanicalArm</def>
-					<customLabel>multi-tool arm</customLabel>
+					<def>MechanicalShoulder</def>
+					<customLabel>right mechanism</customLabel>
 					<coverage>0.10</coverage>
-				</li>
-				<li>
-					<def>RobCo_Microphone</def>
-					<customLabel>left sound sensor</customLabel>
-					<coverage>0.07</coverage>
-				</li>
-				<li>
-					<def>Reactor</def>
-					<coverage>0.06</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>FluidReprocessor</def>
-					<coverage>0.04</coverage>
-					<depth>Inside</depth>
+					<parts>
+						<li>
+							<def>MechanicalArm</def>
+							<customLabel>right mechanical arm</customLabel>
+							<coverage>0.15</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>MechanicalHand</def>
+							<customLabel>right mechanical claw</customLabel>
+							<coverage>0.5</coverage>
+							<parts>
+								<li>
+									<def>MechanicalFinger</def>
+									<customLabel>right claw finger 1</customLabel>
+									<coverage>0.15</coverage>
+								</li>
+								<li>
+									<def>MechanicalFinger</def>
+									<customLabel>right claw finger 2</customLabel>
+									<coverage>0.15</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
 				</li>
 			</parts>
 		</corePart>
