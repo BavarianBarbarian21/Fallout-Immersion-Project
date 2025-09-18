@@ -6,12 +6,12 @@ namespace FIP_RobCo
 {
     public class CompAbilityEffect_AccuracyAura : CompAbilityEffect
     {
-        public new CompProperties_AbilityEffectRadius Props => (CompProperties_AbilityEffectRadius)props;
+        public int Radius => (props.GetType().GetProperty("radius")?.GetValue(props) as int?) ?? 5;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             var map = parent.pawn.Map;
-            var pawns = GenRadial.RadialDistinctThingsAround(target.Cell, map, Props.radius, true)
+            var pawns = GenRadial.RadialDistinctThingsAround(target.Cell, map, Radius, true)
                 .OfType<Pawn>()
                 .Where(p => p.Faction == parent.pawn.Faction && p != parent.pawn);
 
