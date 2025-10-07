@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="PsychicAbility_Deaf"]</xpath>
+    <value>
+      <displayCategory>MoreGenePsychicTraits</displayCategory>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="PsychicAbility_Deaf"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>PsychicAbility</li>
+        <li>MoreGenePsychicTraits</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="PsychicAbility_Dull"]</xpath>
+    <value>
+      <displayCategory>MoreGenePsychicTraits</displayCategory>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GeneDef[defName="PsychicAbility_Dull"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>PsychicAbility</li>
+        <li>MoreGenePsychicTraits</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+</Patch>
