@@ -1,0 +1,73 @@
+<!-- Pungaling -->
+
+  <ThingDef ParentName="DryadBase">
+    <defName>Dryad_Pungaling</defName>
+    <label>pungaling treeminder</label>
+    <description>A slow, bumbling caste of treeminder which specializes in pungs production. Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, treeminders are mammal-like creatures that have a symbiotic relationship with the treefather. They reproduce together with their tree, which contains FEV samples. Treeminders can morph into various specialized castes.</description>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+    </statBases>
+    <uiIconScale>1.25</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>Ambrosia</ThingDef>
+    </descriptionHyperlinks>
+    <race>
+      <useMeatFrom>Dryad_Basic</useMeatFrom>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded> <!-- Uses Woodmaker sounds -->
+          <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li>
+        <li>(0.22, 0, 0.08)</li>
+        <li>(0, 0, 0.05)</li>
+        <li>(-0.22, 0, 0.08)</li>
+      </headPosPerRotation>
+    </race>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>Ambrosia</thingToSpawn>
+        <spawnCount>21</spawnCount>
+        <spawnIntervalRange>120000</spawnIntervalRange>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="DryadKindBase">
+    <defName>Dryad_Pungaling</defName>
+    <label>pungaling treeminder</label>
+    <race>Dryad_Pungaling</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/DryadWoodmaker</texPath>  <!-- Uses Woodmaker textures -->
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/Dessicated_DryadWoodmaker</texPath>   <!-- Uses Woodmaker textures -->
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+<GauranlenTreeModeDef>
+    <defName>Pungaling</defName>
+    <label>pungaling</label>
+    <description>A slow, bumbling caste of treeminder which specializes in pungs production. Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+    <drawPosition>(0, 0.5)</drawPosition>
+    <pawnKindDef>Dryad_Pungaling</pawnKindDef>
+    <displayedStats>
+      <li>MaxHitPoints</li>
+      <li>MoveSpeed</li>
+    </displayedStats>
+    <hyperlinks>
+      <ThingDef>Dryad_Pungaling</ThingDef>
+      <ThingDef>Ambrosia</ThingDef>
+    </hyperlinks>
+  </GauranlenTreeModeDef>
