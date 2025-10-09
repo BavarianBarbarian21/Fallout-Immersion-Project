@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- IncidentDef: GauranlenPodSpawn -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/label</xpath>
+    <value><label>Treefather pod sprouting</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterLabel</xpath>
+    <value><letterLabel>Treefather pod has sprouted</letterLabel></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterText</xpath>
+    <value><letterText>A new Treefather pod has sprouted, ready to grow a new treeminder. Tend to it carefully to ensure a healthy symbiote.</letterText></value>
+  </Operation>
+
+  <!-- JobDef: ChangeTreeMode -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/JobDef[defName="ChangeTreeMode"]/reportString</xpath>
+    <value><reportString>Changing Treefather's dryad caste</reportString></value>
+  </Operation>
+
+  <!-- ThingDef: DryadCocoon -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DryadCocoon"]/label</xpath>
+    <value><label>treeminder cocoon</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DryadCocoon"]/description</xpath>
+    <value><description>A cocoon where a treeminder morphs into a new caste, guided by the Treefather's FEV-infused roots.</description></value>
+  </Operation>
+
+  <!-- ThingDef: DryadHealingPod -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DryadHealingPod"]/label</xpath>
+    <value><label>healing pod</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DryadHealingPod"]/description</xpath>
+    <value><description>A pod filled with restorative Treefather sap, used to heal injured treeminders.</description></value>
+  </Operation>
+
+  <!-- ThingDef: GaumakerCocoon -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/label</xpath>
+    <value><label>sproutling cocoon</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/description</xpath>
+    <value><description>A cocoon where sproutlings merge to create a new Treefather pod, continuing the symbiotic cycle.</description></value>
+  </Operation>
+
+  <!-- ThingDef: Plant_TreeGauranlen -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/label</xpath>
+    <value><label>Treefather</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/description</xpath>
+    <value><description>A mutated tree infused with FEV, able to produce treeminders and pods. Its roots run deep, connecting it to the wasteland's secrets.</description></value>
+  </Operation>
+
+  <!-- ThingDef: Dryad_Basic -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Dryad_Basic"]/label</xpath>
+    <value><label>treeminder</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Dryad_Basic"]/description</xpath>
+    <value><description>A basic treeminder, mammal-like and loyal to its Treefather. It can morph into specialized castes as needed.</description></value>
+  </Operation>
+
+  <!-- PawnKindDef: Dryad_Basic -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Dryad_Basic"]/label</xpath>
+    <value><label>treeminder</label></value>
+  </Operation>
+
+  <!-- ThoughtDef: DryadDied (stages) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="DryadDied"]/stages/li/label</xpath>
+    <value><label>treeminder died</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="DryadDied"]/stages/li/description</xpath>
+    <value><description>My Treefather's treeminder is gone forever. You shall be missed, little one.</description></value>
+  </Operation>
+
+  <!-- WorkGiverDef: ChangeTreeMode -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/label</xpath>
+    <value><label>Change Treefather caste</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/verb</xpath>
+    <value><verb>change</verb></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/gerund</xpath>
+    <value><gerund>changing</gerund></value>
+  </Operation>
+
+  <!-- LanguageData: Keyed replacements -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/AlertGauranlenTreeWithoutDryadTypeLabel</xpath>
+    <value>Treefather has no treeminder caste</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/AlertGauranlenTreeWithoutDryadTypeDesc</xpath>
+    <value>This Treefather is not producing any treeminders. Assign a caste to begin the symbiotic cycle.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/AlertConnectedPawnNotAssignedToPlantCuttingDesc</xpath>
+    <value>The connected person is not assigned to plant cutting. They must help maintain the Treefather's health.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ChangeMode</xpath>
+    <value>Change caste</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ChooseProductionModeInitialDesc</xpath>
+    <value>Choose which treeminder caste the Treefather will produce first.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/CommandHealInHealingPodDesc</xpath>
+    <value>Order a treeminder to heal in the pod, restoring its health with Treefather sap.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/LetterTextPawnConnected</xpath>
+    <value>{PAWN_nameDef} has connected to a Treefather, beginning a new symbiotic relationship.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/LetterTextConnectedTreeDestroyed</xpath>
+    <value>The Treefather that {PAWN_nameDef} was connected to has been destroyed. The symbiotic bond is broken.</value>
+  </Operation>
+
+  <!-- LanguageData: Misc replacements -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/GauranlenModeChangeDescFull</xpath>
+    <value>Changing {TREE_definite}'s treeminder caste takes time and energy. After the connected person interacts with the tree, all treeminders will spend {DURATION} days inside cocoons while they morph to the selected caste. Existing cocoons will cancel their transformation so they can morph to the current caste.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ChangeModeDesc</xpath>
+    <value>Change the type of treeminders created by {TREE_definite}.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ConnectionStrengthDesc</xpath>
+    <value>Determines how many treeminders this tree can support.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/MaximumDryads</xpath>
+    <value>Max treeminders</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/MaximumDryadsDesc</xpath>
+    <value>The maximum number of treeminders this tree can support.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/MaxDryadsBasedOnConnectionStrength</xpath>
+    <value>Max treeminders based on connection strength</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/DesiredConnectionStrengthDesc</xpath>
+    <value>{CONNECTEDPAWN_nameDef} will prune {TREE_definite} often enough to keep connection strength above this level. Higher connection strength allows supporting more treeminders, but also falls faster and thus takes more frequent pruning to maintain. You can click on the bar to adjust the desired target connection strength. Connection strength fall per day: {FALL} Connection strength is affected by nearby buildings.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/WaitingForConnectorToChangeCaste</xpath>
+    <value>Waiting for {CONNECTEDPAWN_nameDef} to change treeminder caste.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/GauranlenTreeMode</xpath>
+    <value>Treeminder caste</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/GauranlenTreeModeDesc</xpath>
+    <value>Determines the currently created treeminder caste.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/SpawningDryadIn</xpath>
+    <value>Spawning {DRYAD_label} treeminder in {TIME}</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ChangingDryadIntoType</xpath>
+    <value>Morphing {DRYAD_labelShort} treeminder into {TYPE_label}.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/DryadProducesResourcesDesc</xpath>
+    <value>{DRYAD_labelPlural} treeminders produce {RESOURCES} every {DURATION}.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/DryadCannotChangeMaster</xpath>
+    <value>{ANIMAL_nameDef} is connected to {MASTER_nameDef} through {ANIMAL_possessive} Treefather. {ANIMAL_possessive} master cannot be changed.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/ConnectionStrengthTooWeakForGaumakerPod</xpath>
+    <value>Connection strength too low to create Treefather pod.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/DryadPlural</xpath>
+    <value>Treeminders</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>LanguageData/NotEnoughConnectionStrengthForSingleDryad</xpath>
+    <value>{0} connection strength needed to support a treeminder.</value>
+  </Operation>
+</Patch>
