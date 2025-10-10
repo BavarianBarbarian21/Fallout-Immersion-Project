@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Megascarab: Replace with giant ant -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Megascarab"]/label</xpath>
+    <value><label>giant worker ant</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Megascarab"]/description</xpath>
+    <value><description>A massive ant engineered for strength and resilience. Giant ants are known for their powerful mandibles and hive loyalty.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Megascarab"]/label</xpath>
+    <value><label>giant worker ant</label></value>
+  </Operation>
+
+  <!-- Spelopede: Replace with giant ant -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Spelopede"]/label</xpath>
+    <value><label>giant ant</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Spelopede"]/description</xpath>
+    <value><description>A giant ant adapted for underground life. Its tough exoskeleton and digging ability make it a formidable tunnel dweller.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Spelopede"]/label</xpath>
+    <value><label>giant ant</label></value>
+  </Operation>
+
+  <!-- Megaspider: Replace with giant ant -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Megaspider"]/label</xpath>
+    <value><label>giant soldier ant</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Megaspider"]/description</xpath>
+    <value><description>The most aggressive of the giant ants. These creatures defend their hive with relentless ferocity and powerful jaws.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Megaspider"]/label</xpath>
+    <value><label>giant soldie ant</label></value>
+  </Operation>
+
+  <!-- Larva: Replace with ant larva (Odyssey DLC) -->
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/ThingDef[defName="Larva"]/description</xpath>
+    <value><description>The juvenile stage of a giant ant. Ant larvae are cared for by worker ants and will eventually grow into powerful hive members.</description></value>
+  </Operation>
+
+  <!-- HiveQueen: Replace with ant queen (Odyssey DLC) -->
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/ThingDef[defName="HiveQueen"]/label</xpath>
+    <value><label>giant ant queen</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/ThingDef[defName="HiveQueen"]/description</xpath>
+    <value><description>The queen of a giant ant hive. She is responsible for laying eggs and directing the colony's growth and defense.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/PawnKindDef[defName="HiveQueen"]/label</xpath>
+    <value><label>giant ant queen</label></value>
+  </Operation>
+
+  <!-- Locust: Replace with flying ant (Odyssey DLC) -->
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/ThingDef[defName="Locust"]/label</xpath>
+    <value><label>giant ant drone</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/ThingDef[defName="Locust"]/description</xpath>
+    <value><description>A giant ant capable of flight. Ant drones only live to mate with the queen.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Odyssey">
+    <xpath>Defs/PawnKindDef[defName="Locust"]/label</xpath>
+    <value><label>giant ant drone</label></value>
+  </Operation>
+</Patch>
