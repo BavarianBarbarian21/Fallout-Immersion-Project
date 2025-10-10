@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ThingDefs: Replace labels and descriptions with Fallout Wendigo Shakes lore -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestCasket"]/label</xpath>
+    <value><label>the box</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestCasket"]/description</xpath>
+    <value><description>A containment casket for those suffering from cannibal's vitamin deficiency syndrome known as "The Shakes".</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/label</xpath>
+    <value><label>vitaminpump</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestAccelerator"]/description</xpath>
+    <value><description>A blood pump used to hasten recovery from vitamin deficiency.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Hemopump"]/label</xpath>
+    <value><label>bloodpump</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Hemopump"]/description</xpath>
+    <value><description>A blood pump used to help with bloodflow and relax muscles.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HemogenAmplifier"]/label</xpath>
+    <value><label>proteinpump</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="HemogenAmplifier"]/description</xpath>
+    <value><description>A blood pump used to increase hemogen absorption.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GlucosoidPump"]/label</xpath>
+    <value><label>mineralpump</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GlucosoidPump"]/description</xpath>
+    <value><description>A blood pump used to create muscle mineral reserves.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PsychofluidPump"]/label</xpath>
+    <value><label>chempump</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PsychofluidPump"]/description</xpath>
+    <value><description>A blood pump for stabilizing mental symptoms, relaxing their mind and helping them to focus.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestCapacitySerum"]/label</xpath>
+    <value><label>Wendigo Capacity Serum</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeathrestCapacitySerum"]/description</xpath>
+    <value><description>A serum designed to increase the body's ability to withstand Wendigo sickness.</description></value>
+  </Operation>
+
+  <!-- HediffDefs: Replace labels and descriptions -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="HemogenAmplified"]/label</xpath>
+    <value><label>Hemogen Boost</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="HemogenAmplified"]/description</xpath>
+    <value><description>Blood production is temporarily boosted to counteract the effects of the Wendigo Shakes.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GlucosoidRush"]/label</xpath>
+    <value><label>Glucosoid Rush</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GlucosoidRush"]/description</xpath>
+    <value><description>Metabolic activity is temporarily increased to fight the Wendigo Shakes.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="PsychofluidRush"]/label</xpath>
+    <value><label>Psychofluid Rush</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="PsychofluidRush"]/description</xpath>
+    <value><description>Mental stability is temporarily increased to resist the Wendigo Shakes.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="InterruptedDeathrest"]/label</xpath>
+    <value><label>Interrupted Recovery</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="InterruptedDeathrest"]/description</xpath>
+    <value><description>Recovery from the Wendigo Shakes was interrupted, worsening symptoms.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="DeathrestExhaustion"]/label</xpath>
+    <value><label>Wendigo Shakes Exhaustion</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="DeathrestExhaustion"]/description</xpath>
+    <value><description>Severe exhaustion caused by prolonged Wendigo Shakes.</description></value>
+  </Operation>
+
+  <!-- JobDef: Deathrest reportString -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/JobDef[defName="Deathrest"]/reportString</xpath>
+    <value><reportString>Recovering from Wendigo Shakes</reportString></value>
+  </Operation>
+
+  <!-- NeedDef: Deathrest label, description -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/NeedDef[defName="Deathrest"]/label</xpath>
+    <value><label>Wendigo Shakes Recovery</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/NeedDef[defName="Deathrest"]/description</xpath>
+    <value><description>Recovery process for those suffering from cannibal vitamin deficiency syndrome.</description></value>
+  </Operation>
+
+  <!-- ResearchProjectDef: Deathrest label, description -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/label</xpath>
+    <value><label>Wendigo Shakes Treatment</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="Deathrest"]/description</xpath>
+    <value><description>Research into advanced treatments for the Wendigo Shakes.</description></value>
+  </Operation>
+
+  <!-- RoomRoleDef: label -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoomRoleDef[defName="Deathrest"]/label</xpath>
+    <value><label>the box</label></value>
+  </Operation>
+</Patch>

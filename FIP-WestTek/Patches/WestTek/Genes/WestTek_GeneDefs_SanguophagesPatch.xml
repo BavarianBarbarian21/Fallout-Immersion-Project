@@ -30,7 +30,11 @@
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="Deathrest"]/label</xpath>
-    <value><label>the shakes</label></value>
+    <value><label>"The Shakes"</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Deathrest"]/description</xpath>
+    <value><description>Carriers of this gene suffer from Wendigo Sickness, often called "The Shakes" or "Wendigo Shakes"—a vitamin deficiency caused by exclusive cannibalism. This condition causes the gums to withdraw, leaving the appearance of long, fang-like teeth. Afflicted individuals frequently experience catatonic muscle shakes, giving the syndrome its name.</description></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="ArchiteMetabolism"]/label</xpath>
