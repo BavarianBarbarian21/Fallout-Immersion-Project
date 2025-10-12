@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Arktos Origins memes, for use in ideologies that start with the Arktos faction.
+  These memes represent large-scale societal structures and are intended to be
+  chosen at the start of a new ideology. They all require either Honorable or
+  Accepted -->
+<Defs>
+<!-- Helper rulepacks for Arktos structures -->
+  <RulePackDef>
+    <defName>NamerArktosGeneric</defName>
+    <include>
+      <li>NamerDeityGlobal</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+        <li>name->Arktos Council</li>
+        <li>name->The Presidency</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerArktosCanaan</defName>
+    <include>
+      <li>NamerDeityGlobal</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+        <li>name->Canaanite Synod</li>
+        <li>name->House of Covenant</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerArktosMary</defName>
+    <include>
+      <li>NamerDeityGlobal</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+        <li>name->Our Lady of the Waters</li>
+        <li>name->Lady of the Waters</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerArktosAtom</defName>
+    <include>
+      <li>NamerDeityGlobal</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+        <li>name->The Atom</li>
+        <li>name->The Core</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerKrvibi</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+        <li>name->Ug-Qualtoth</li>
+        <li>name->Krvibi</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>DietyTypeMakerArktos</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityType->[adj] god</li>
+        <li>adj->ancient</li>
+        <li>adj->revered</li>
+        <li>adj->sacred</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
+
+  

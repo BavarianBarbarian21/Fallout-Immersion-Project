@@ -72,4 +72,12 @@
       <ThingDef>Ambrosia</ThingDef>
     </hyperlinks>
   </GauranlenTreeModeDef>
+  
+  <!-- WorkGiverDef: ConnectedTreeDied (overrides basegame def by providing a Def with the same defName) -->
+  <WorkGiverDef>
+    <defName>ConnectedTreeDied</defName>
+    <label>Treefather died</label>
+    <giverClass>WorkGiver_Warden</giverClass>
+    <!-- This WorkGiverDef is intentionally minimal: it's present to override basegame text and provide localized labels. -->
+  </WorkGiverDef>
 </Defs>
