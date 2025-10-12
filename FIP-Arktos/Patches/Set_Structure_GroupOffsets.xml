@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Set consistent drawOffset for structure MemeGroupDefs (governments top row, religions bottom row) -->
+<Patch>
+  <!-- Religions: bottom row (y = 0.35), evenly spaced x = 0.2, 0.4, 0.6, 0.8 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_OldWorldChurch']/drawOffset</xpath>
+    <value><drawOffset>(0.2,0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_NewWorldChurch']/drawOffset</xpath>
+    <value><drawOffset>(0.4,0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_Syncretism']/drawOffset</xpath>
+    <value><drawOffset>(0.6,0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Theist_Embodied']/drawOffset</xpath>
+    <value><drawOffset>(0.8,0.35)</drawOffset></value>
+  </Operation>
+
+  <!-- Governments: top row (y = -0.35), evenly spaced x = 0.2, 0.4, 0.6, 0.8 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_Democratic']/drawOffset</xpath>
+    <value><drawOffset>(0.2,-0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_Plutocratic']/drawOffset</xpath>
+    <value><drawOffset>(0.4,-0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_Despotic']/drawOffset</xpath>
+    <value><drawOffset>(0.6,-0.35)</drawOffset></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Arktos_Bureaucratic']/drawOffset</xpath>
+    <value><drawOffset>(0.8,-0.35)</drawOffset></value>
+  </Operation>
+
+  <!-- Vanilla theist abstract group also placed bottom-right to balance layout -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>//MemeGroupDef[defName='Theist_Abstract']/drawOffset</xpath>
+    <value><drawOffset>(1.0,0.35)</drawOffset></value>
+  </Operation>
+</Patch>

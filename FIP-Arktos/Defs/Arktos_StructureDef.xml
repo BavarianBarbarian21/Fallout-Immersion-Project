@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Arktos meme groups for structures -->
-  <Defs>
     <MemeGroupDef>
       <defName>Arktos_OldWorldChurch</defName>
-      <drawOffset>(0.2,0)</drawOffset>
+      <!-- Religions: lower row (positive Y) -->
+      <drawOffset>(0.2,0.4)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_NewWorldChurch</defName>
-      <drawOffset>(0.4,0)</drawOffset>
+      <drawOffset>(0.4,0.4)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Syncretism</defName>
-      <drawOffset>(0.6,0)</drawOffset>
+      <drawOffset>(0.6,0.4)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Democratic</defName>
-      <drawOffset>(0.8,0)</drawOffset>
+      <!-- Governments: upper row (negative Y) -->
+      <drawOffset>(0.2,-0.35)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Plutocratic</defName>
-      <drawOffset>(0.8,0)</drawOffset>
+      <drawOffset>(0.4,-0.35)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Despotic</defName>
-      <drawOffset>(0.8,0)</drawOffset>
+      <drawOffset>(0.6,-0.35)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Bureaucratic</defName>
-      <drawOffset>(0.8,0)</drawOffset>
+      <drawOffset>(0.8,-0.35)</drawOffset>
     </MemeGroupDef>
-  </Defs>
 
   <!-- Abstract parent for Arktos structure memes -->
   <MemeDef Name="Arktos_StructureOriginBase" Abstract="True">
@@ -38,12 +38,19 @@
     <iconPath>Arktos/Structure</iconPath>
     <impact>0</impact>
     <deityCount>1</deityCount>
-    <symbolPackOverride>true</symbolPackOverride>
+    <!--<symbolPackOverride>true</symbolPackOverride>-->
     <descriptionMaker>
       <patterns>
         <li><def>Arktos_StructureOriginStory</def></li>
       </patterns>
     </descriptionMaker>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->ADJECTIVEPLACEHOLDER</li>
+        <li>memeLeaderNoun->LEADERNOUNPLACEHOLDER</li>
+        <li>memeMoralist->MORALISTPLACEHOLDER</li>
+      </rulesStrings>
+    </generalRules>
   </MemeDef>
 
   <!-- Old world -->
@@ -186,7 +193,7 @@
     <deityNameMakerOverride>Arktos_NameMaker_Senate</deityNameMakerOverride>
     <deityTypeMakerOverride>Arktos_TypeMaker_Senate</deityTypeMakerOverride>
     <worshipRoomLabel>chamber</worshipRoomLabel>
-    <groupDef>Arktos_Government</groupDef>
+    <groupDef>Arktos_Democratic</groupDef>
   </MemeDef>
 
   <MemeDef ParentName="Arktos_StructureOriginBase">
@@ -196,7 +203,7 @@
     <deityNameMakerOverride>Arktos_NameMaker_Parliament</deityNameMakerOverride>
     <deityTypeMakerOverride>Arktos_TypeMaker_Parliament</deityTypeMakerOverride>
     <worshipRoomLabel>assembly hall</worshipRoomLabel>
-    <groupDef>Arktos_Government</groupDef>
+    <groupDef>Arktos_Democratic</groupDef>
   </MemeDef>
 
   <MemeDef ParentName="Arktos_StructureOriginBase">
@@ -206,7 +213,7 @@
     <deityNameMakerOverride>Arktos_NameMaker_Syndicate</deityNameMakerOverride>
     <deityTypeMakerOverride>Arktos_TypeMaker_Syndicate</deityTypeMakerOverride>
     <worshipRoomLabel>guildhall</worshipRoomLabel>
-    <groupDef>Arktos_Government</groupDef>
+    <groupDef>Arktos_Democratic</groupDef>
   </MemeDef>
 
   <MemeDef ParentName="Arktos_StructureOriginBase">
@@ -216,7 +223,7 @@
     <deityNameMakerOverride>Arktos_NameMaker_Union</deityNameMakerOverride>
     <deityTypeMakerOverride>Arktos_TypeMaker_Union</deityTypeMakerOverride>
     <worshipRoomLabel>townhall</worshipRoomLabel>
-    <groupDef>Arktos_Government</groupDef>
+    <groupDef>Arktos_Democratic</groupDef>
   </MemeDef>
 
   <!-- Plutocratic -->
