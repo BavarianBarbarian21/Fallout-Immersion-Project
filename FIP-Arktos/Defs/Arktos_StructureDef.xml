@@ -1,1147 +1,575 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!-- Arktos meme groups for structures -->
-    <MemeGroupDef>
-      <defName>Arktos_OldWorldChurch</defName>
-      <!-- Religions: lower row (positive Y) -->
-      <drawOffset>(0.2,0.4)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_NewWorldChurch</defName>
-      <drawOffset>(0.4,0.4)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_Syncretism</defName>
-      <drawOffset>(0.6,0.4)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_Democratic</defName>
-      <drawOffset>(0.2,-0.35)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_Plutocratic</defName>
-      <drawOffset>(0.4,-0.35)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_Despotic</defName>
-      <drawOffset>(0.6,-0.35)</drawOffset>
-    </MemeGroupDef>
-    <MemeGroupDef>
-      <defName>Arktos_Bureaucratic</defName>
-      <drawOffset>(0.8,-0.35)</drawOffset>
-    </MemeGroupDef>
 
-  <!-- Abstract parent for Arktos structure memes -->
-  <MemeDef Name="Arktos_StructureOriginBase" Abstract="True">
-    <category>Structure</category>
-    <iconPath>Arktos/Structure</iconPath>
-    <impact>0</impact>
-    <deityCount>1</deityCount>
-    <!--<symbolPackOverride>true</symbolPackOverride>-->
-    <descriptionMaker>
-      <patterns>
-        <li><def>Arktos_StructureOriginStory</def></li>
-      </patterns>
-    </descriptionMaker>
-    <generalRules>
-      <rulesStrings>
-        <li>memeAdjective->ADJECTIVEPLACEHOLDER</li>
-        <li>memeLeaderNoun->LEADERNOUNPLACEHOLDER</li>
-        <li>memeMoralist->MORALISTPLACEHOLDER</li>
-      </rulesStrings>
-    </generalRules>
+
+	<!-- Meme Groups for Structures -->
+	<MemeGroupDef>
+		<defName>Arktos_Democratic</defName>
+		<drawOffset>(0.2,0.4)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_Despotic</defName>
+		<drawOffset>(0.6,-0.35)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_Tribal</defName>
+		<drawOffset>(0.2,-0.6)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_Raider</defName>
+		<drawOffset>(0.6,-0.6)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_OldWorldChurch</defName>
+		<drawOffset>(0.2,0.4)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_NewWorldChurch</defName>
+		<drawOffset>(0.4,0.4)</drawOffset>
+	</MemeGroupDef>
+	<MemeGroupDef>
+		<defName>Arktos_Syncretism</defName>
+		<drawOffset>(0.6,0.4)</drawOffset>
+	</MemeGroupDef>
+
+
+	<!-- Abstract parent for Arktos structure memes -->
+	<MemeDef Name="Arktos_Structure_Base" Abstract="True">
+		<category>Structure</category>
+		<iconPath>Arktos/Structure</iconPath>
+		<impact>0</impact>
+		<deityCount>1</deityCount>
+		<!--<symbolPackOverride>true</symbolPackOverride>-->
+		<descriptionMaker>
+			<patterns>
+				<li>
+					<def>Arktos_Structure_Story</def>
+				</li>
+			</patterns>
+		</descriptionMaker>
+		<generalRules>
+			<rulesStrings>
+				<li>memeLeaderNoun ->memeLeaderNounPLACEHOLDER</li>
+				<li>memeLeaderAdjective ->memeLeaderAdjectivePLACEHOLDER</li>
+				<li>memeMoralist ->memeMoralistPLACEHOLDER</li>
+        <li>memeCreed ->memeCreedPLACEHOLDER</li>
+				<li>memeHyphenPrefix ->memeHyphenPrefixPLACEHOLDER</li>
+				<li>memeAdjective ->memeAdjectivePLACEHOLDER</li>
+			</rulesStrings>
+		</generalRules>
+	</MemeDef>
+
+<MemeDef Name="Arktos_Structure_Government_Basis" ParentName="Arktos_Structure_Base" Abstract="True">
+    <deityCount>0</deityCount>
   </MemeDef>
 
-  <!-- Old world -->
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_FollowerOfTheApocalypse</defName>
-    <label>Follower of the Apocalypse</label>
-    <description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
-    <worshipRoomLabel>church</worshipRoomLabel>
-    <groupDef>Arktos_OldWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Christian</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_CanaaniteChurch</defName>
-    <label>Canaanite Church</label>
-    <description>A restorationist movement that mixes frontier theocracy and strict social order, inspired by old doctrinal texts.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_CanaaniteChurch</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_CanaaniteChurch</deityTypeMakerOverride>
-    <worshipRoomLabel>church</worshipRoomLabel>
-    <groupDef>Arktos_OldWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Christian</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_AbbeyOfTheRoad</defName>
-    <label>Abbey of the Road</label>
-    <description>A protestant-style order built around scripture and the travelling pulpit; it prizes scripture, preaching and humble worship.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_AbbeyOfTheRoad</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_AbbeyOfTheRoad</deityTypeMakerOverride>
-    <worshipRoomLabel>church</worshipRoomLabel>
-    <groupDef>Arktos_OldWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Christian</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_OrderOfOurLadyOfTheWaters</defName>
-    <label>Order of Our Lady of the Waters of Life</label>
-    <description>A Catholic-style order deeply devoted to Mary and the saints, keeping older sacramental practices alive.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</deityTypeMakerOverride>
-    <worshipRoomLabel>church</worshipRoomLabel>
-    <groupDef>Arktos_OldWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Christian</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <!-- New world -->
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_ChildrenOfAtom</defName>
-    <label>Church of the Children of Atom</label>
-    <description>A new cult that treats radiation and atomic remnants as sacred, with ritualised exposure and offerings.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfAtom</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfAtom</deityTypeMakerOverride>
-    <worshipRoomLabel>church</worshipRoomLabel>
-    <groupDef>Arktos_NewWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Morbid</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_ChildrenOfTheCathedral</defName>
-    <label>Church of the Children of the Cathedral</label>
-    <description>A cathedral-centered faith with strong civic influence and ceremonial public worship.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfTheCathedral</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfTheCathedral</deityTypeMakerOverride>
-    <worshipRoomLabel>cathedral</worshipRoomLabel>
-    <groupDef>Arktos_NewWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Morbid</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_CultOfKrvibi</defName>
-    <label>Cult of Krvibi</label>
-    <description>A Lovecraftian cult venerating Ug-Qualtoth and the forerunners; rituals here are strange and alien to most.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_CultOfKrvibi</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_CultOfKrvibi</deityTypeMakerOverride>
-    <worshipRoomLabel>temple</worshipRoomLabel>
-    <groupDef>Arktos_NewWorldChurch</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Morbid</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <!-- Syncretic -->
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_SyncreticOrder</defName>
-    <label>Father of the Cave</label>
-    <description>A believe mixing elements of Christianity with tribal spirit worship.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_SyncreticOrder</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_SyncreticOrder</deityTypeMakerOverride>
-    <worshipRoomLabel>grove</worshipRoomLabel>
-    <groupDef>Arktos_Syncretism</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Totemic</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>
-
-  <!--Democratic-->
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_People</defName>
-    <label>People's Assembly</label>
-    <description>A democratic body representing various facets of society including governance, skilled trades, and labor, working together to deliberate, regulate, and advocate for collective interests.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_People</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_People</deityTypeMakerOverride>
-    <worshipRoomLabel>assembly hall</worshipRoomLabel>
-    <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>
-  <RulePackDef>
-    <defName>Arktos_NameMaker_People</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-
-        <li>name->[adj] Assembly</li>
-        <li>name->[adj] Council</li>
-        <li>name->[adj] Congress</li>
-        <li>name->[adj] Forum</li>
-        <li>name->[adj] Coalition</li>
-        <li>name->[adj] Synod</li>
-        <li>name->[adj] Confederation</li>
-        <li>name->[adj] Collective</li>
-
-        <li>adj->United</li>
-        <li>adj->Grand</li>
-        <li>adj->Common</li>
-        <li>adj->Unified</li>
-        <li>adj->People's</li>
-        <li>adj->Free</li>
-        <li>adj->Popular</li>
-        <li>adj->Sovereign</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_People</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-
-        <li>type->Representative body</li>
-        <li>type->Deliberative assembly</li>
-        <li>type->Legislative council</li>
-        <li>type->Governance forum</li>
-        <li>type->Political coalition</li>
-        <li>type->Consultative congress</li>
-        <li>type->Democratic confederation</li>
-        <li>type->Worker collective</li>
-        <li>type->Trade federation</li>
-
-        <li>r_adjective->[adj]</li>
-        <li>adj->inclusive</li>
-        <li>adj->sovereign</li>
-        <li>adj->representative</li>
-        <li>adj->unified</li>
-        <li>adj->popular</li>
-
-        <li>type->[adj] [baseType]</li>
-        <li>baseType->assembly</li>
-        <li>baseType->council</li>
-        <li>baseType->body</li>
-        <li>baseType->chamber</li>
-        <li>baseType->institution</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!--Plotocratic-->
-  <RulePackDef>
-  <defName>Arktos_NameMaker_PlutoRaider</defName>
-  <rulePack>
-    <rulesStrings>
-      <li>r_deityName->[name]</li>
-
-      <li>name->The [adj] [org]</li>
-      <li>name->[org] of [power]</li>
-      <li>name->[adj] [org]</li>
-
-      <li>adj->Black</li>
-      <li>adj->Gilded</li>
-      <li>adj->Iron</li>
-      <li>adj->Crimson</li>
-      <li>adj->Obsidian</li>
-      <li>adj->Executive</li>
-      <li>adj->Golden</li>
-      <li>adj->Sovereign</li>
-      <li>adj->Privileged</li>
-      <li>adj->Warborn</li>
-
-      <li>org->Syndicate</li>
-      <li>org->Exchange</li>
-      <li>org->Board</li>
-      <li>org->Combine</li>
-      <li>org->Cartel</li>
-      <li>org->Trust</li>
-      <li>org->Dominion</li>
-      <li>org->Command</li>
-      <li>org->Conglomerate</li>
-      <li>org->Chain</li>
-
-      <li>power->Iron Wealth</li>
-      <li>power->Credit</li>
-      <li>power->Shares</li>
-      <li>power->Blood Contracts</li>
-      <li>power->Dominance</li>
-      <li>power->Gold</li>
-      <li>power->the Market</li>
-      <li>power->the Old World</li>
-      <li>power->Profit</li>
-    </rulesStrings>
-  </rulePack>
-</RulePackDef>
-<RulePackDef>
-  <defName>Arktos_TypeMaker_PlutoRaider</defName>
-  <rulePack>
-    <rulesStrings>
-      <li>r_deityType->[type]</li>
-
-      <li>type->mercantile warband</li>
-      <li>type->raider oligarchy</li>
-      <li>type->plutocratic war council</li>
-      <li>type->executive cabal</li>
-      <li>type->shareholder dominion</li>
-      <li>type->privatized army-state</li>
-      <li>type->gold-backed autocracy</li>
-      <li>type->credit cartel</li>
-      <li>type->contract-based governance</li>
-      <li>type->economic raider order</li>
-
-      <li>r_adj->[adj]</li>
-      <li>adj->hostile</li>
-      <li>adj->ruthless</li>
-      <li>adj->corporate</li>
-      <li>adj->elite</li>
-      <li>adj->lawless</li>
-      <li>adj->contractual</li>
-      <li>adj->feudal</li>
-      <li>adj->post-capitalist</li>
-
-      <li>type->[adj] cartel</li>
-      <li>type->[adj] plutocracy</li>
-      <li>type->[adj] dominion</li>
-      <li>type->[adj] enterprise</li>
-    </rulesStrings>
-  </rulePack>
-</RulePackDef>
-
-<!--Despotic-->
-
-  <!-- Democratic 
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Senate</defName>
-    <label>Senate</label>
-    <description>A representative democratic body tasked with deliberation and lawmaking.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Senate</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Senate</deityTypeMakerOverride>
-    <worshipRoomLabel>chamber</worshipRoomLabel>
-    <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Parliament</defName>
-    <label>Parliament</label>
-    <description>An elected assembly representing the populace and debating public policy.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Parliament</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Parliament</deityTypeMakerOverride>
-    <worshipRoomLabel>assembly hall</worshipRoomLabel>
-    <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Guilds</defName>
-    <label>Guilds</label>
-    <description>Organisations of skilled trades who control production, standards and political influence.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Guilds</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Guilds</deityTypeMakerOverride>
-    <worshipRoomLabel>guildhall</worshipRoomLabel>
-    <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Union</defName>
-    <label>Union</label>
-    <description>A democratic worker organisation that coordinates labour, rights and collective bargaining.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Union</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Union</deityTypeMakerOverride>
-    <worshipRoomLabel>townhall</worshipRoomLabel>
-    <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>-->
-
-  <!-- Plutocratic 
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_GreatFamilies</defName>
-    <label>Great Families</label>
-    <description>Noble houses who govern through lineage, wealth and patronage.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_GreatFamilies</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_GreatFamilies</deityTypeMakerOverride>
-    <worshipRoomLabel>manor</worshipRoomLabel>
-    <groupDef>Arktos_Plutocratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Clans</defName>
-    <label>Clans</label>
-    <description>Kin-based ruling groups who organise society around family ties and obligations.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Clans</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Clans</deityTypeMakerOverride>
-    <worshipRoomLabel>longhouse</worshipRoomLabel>
-    <groupDef>Arktos_Plutocratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Boss</defName>
-    <label>Boss</label>
-    <description>A plutocratic ruler who commands through patronage, coercion and wealth.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Boss</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Boss</deityTypeMakerOverride>
-    <worshipRoomLabel>hideout</worshipRoomLabel>
-    <groupDef>Arktos_Plutocratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Syndicate</defName>
-    <label>Syndicate</label>
-    <description>A networked, democratic institution combining industry and politics in a corporatist manner.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Syndicate</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Syndicate</deityTypeMakerOverride>
-    <worshipRoomLabel>guildhall</worshipRoomLabel>
-    <groupDef>Arktos_Plutocratic</groupDef>
-  </MemeDef>-->
-
-  <!-- Despotic 
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Overseer</defName>
-    <label>Overseer</label>
-    <description>A centralised managerial ruler who presides over settlements and enforces order.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Overseer</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Overseer</deityTypeMakerOverride>
-    <worshipRoomLabel>administration</worshipRoomLabel>
-    <groupDef>Arktos_Despotic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Chieftain</defName>
-    <label>Chieftain</label>
-    <description>A tribal leader who commands loyalty through custom, ceremony, and martial prowess.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Chieftain</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Chieftain</deityTypeMakerOverride>
-    <worshipRoomLabel>greathall</worshipRoomLabel>
-    <groupDef>Arktos_Despotic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_King</defName>
-    <label>King</label>
-    <description>A hereditary monarch embodying sovereignty, tradition and dynastic rule.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_King</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_King</deityTypeMakerOverride>
-    <worshipRoomLabel>throneroom</worshipRoomLabel>
-    <groupDef>Arktos_Despotic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Elder</defName>
-    <label>Elder</label>
-    <description>A council of elders or single elder who maintains societal stability through experience and precedent.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Elder</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Elder</deityTypeMakerOverride>
-    <worshipRoomLabel>council chamber</worshipRoomLabel>
-    <groupDef>Arktos_Despotic</groupDef>
-  </MemeDef>-->
-
-  <!-- Technocratic 
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Academy</defName>
-    <label>Academy</label>
-    <description>An institution focused on knowledge, research and the training of technical elites.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Academy</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Academy</deityTypeMakerOverride>
-    <worshipRoomLabel>hall</worshipRoomLabel>
-    <groupDef>Arktos_Bureaucratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_ElderCouncil</defName>
-    <label>Elder Council</label>
-    <description>A council composed of senior experts and administrators; decisions are guided by institutional knowledge.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_ElderCouncil</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_ElderCouncil</deityTypeMakerOverride>
-    <worshipRoomLabel>council hall</worshipRoomLabel>
-    <groupDef>Arktos_Bureaucratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Ministry</defName>
-    <label>Ministry</label>
-    <description>A bureaucratic body organising governance through specialised departments and technocratic oversight.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Ministry</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Ministry</deityTypeMakerOverride>
-    <worshipRoomLabel>department</worshipRoomLabel>
-    <groupDef>Arktos_Bureaucratic</groupDef>
-  </MemeDef>
-
-  <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Shaman</defName>
-    <label>Shaman</label>
-    <description>A technocratic-religious hybrid: a curator of ritual knowledge and practical technique for the community.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Shaman</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Shaman</deityTypeMakerOverride>
-    <worshipRoomLabel>circle</worshipRoomLabel>
-    <groupDef>Arktos_Bureaucratic</groupDef>
-    <thingStyleCategories>
-      <li>
-        <category>Totemic</category>
-        <priority>4</priority>
-      </li>
-    </thingStyleCategories>
-  </MemeDef>-->
-
-  <!-- RulePackDefs: Name and Type makers for each Structure MemeDef -->
-  <!--Follower of the Apocalypse-->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_FollowerOfTheApocalypse</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Humanitarianism</li>
-        <li>name->The Mission</li>
-        <li>name->The Sancturary</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_FollowerOfTheApocalypse</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->movement</li>
-        <li>type->charity</li>
-        <li>type->aid organisation</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Canaanite Church -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_CanaaniteChurch</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Synod of the Covenant</li>
-        <li>name->Canaanic Order</li>
-        <li>name->House of the Covenant</li>
-        <li>name->Council of Rites</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_CanaaniteChurch</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->restorationist church</li>
-        <li>type->doctrinal synod</li>
-        <li>type->clerical order</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Abbey of the Road -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_AbbeyOfTheRoad</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Abbey of the Pilgrim Way</li>
-        <li>name->Brotherhood of the Road</li>
-        <li>name->Order of the Travelling Pulpit</li>
-        <li>name->The Roadward Clergy</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_AbbeyOfTheRoad</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->itinerant order</li>
-        <li>type->preaching fraternity</li>
-        <li>type->missionary abbey</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Order of Our Lady of the Waters -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Order of Our Lady of the Waters</li>
-        <li>name->Mother of the Living Spring</li>
-        <li>name->Marian Confraternity</li>
-        <li>name->The Watery Lady</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->sacramental order</li>
-        <li>type->marian confraternity</li>
-        <li>type->liturgical community</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Children of Atom -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_ChildrenOfAtom</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Temple of the Core</li>
-        <li>name->Order of the Great Glow</li>
-        <li>name->The Radiant Assembly</li>
-        <li>name->Children of the Core</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_ChildrenOfAtom</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->cult of radiation</li>
-        <li>type->atomic cult</li>
-        <li>type->sacred technocracy</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Children of the Cathedral -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_ChildrenOfTheCathedral</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Cathedral Chapter</li>
-        <li>name->Chapter of the Great Nave</li>
-        <li>name->The Cathedral Order</li>
-        <li>name->The Civic Cathedral</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_ChildrenOfTheCathedral</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->cathedral cult</li>
-        <li>type->ceremonial church</li>
-        <li>type->public cult</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Cult of Krvibi -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_CultOfKrvibi</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Cabal of Krvibi</li>
-        <li>name->The Silent Order</li>
-        <li>name->Shrine of Ug-Qualtoth</li>
-        <li>name->The Deep Chorus</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_CultOfKrvibi</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->eldritch cult</li>
-        <li>type->forerunner sect</li>
-        <li>type->ancient mystery</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Syncretic Order -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_SyncreticOrder</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Father of the Cave</li>
-        <li>name->Cavefather Congregation</li>
-        <li>name->The Blended Rite</li>
-        <li>name->Order of the Twin Spirits</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_SyncreticOrder</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->syncretic cult</li>
-        <li>type->tribal liturgy</li>
-        <li>type->folk-rite community</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Democratic institutions -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Senate</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Senate of the Commonwealth</li>
-        <li>name->Grand Senate</li>
-        <li>name->The Deliberative Assembly</li>
-        <li>name->Council of Representatives</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Senate</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->legislative senate</li>
-        <li>type->representative chamber</li>
-        <li>type->deliberative assembly</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Parliament</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Parliament of the People</li>
-        <li>name->House of Delegates</li>
-        <li>name->The Popular Assembly</li>
-        <li>name->The People's Chamber</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Parliament</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->elected assembly</li>
-        <li>type->legislative house</li>
-        <li>type->popular chamber</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Syndicate</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->The Syndicate of Trade</li>
-        <li>name->Network of Guild Houses</li>
-        <li>name->Corporation of Interests</li>
-        <li>name->Industrial Syndic</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Syndicate</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->corporatist syndicate</li>
-        <li>type->industrial cartel</li>
-        <li>type->trade confederation</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Union</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Workers' Union of the Basin</li>
-        <li>name->Coalition of Labour</li>
-        <li>name->Guild of Free Hands</li>
-        <li>name->Collective of Industry</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Union</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->labour union</li>
-        <li>type->workers' collective</li>
-        <li>type->industrial council</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Plutocratic -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_GreatFamilies</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->House of the Great Families</li>
-        <li>name->Lineage of Patricians</li>
-        <li>name->The Noble Houses</li>
-        <li>name->Dynasts of the Basin</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_GreatFamilies</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->noble houses</li>
-        <li>type->patrician dynasty</li>
-        <li>type->hereditary aristocracy</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Clans</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Clan Council</li>
-        <li>name->Kinhold Assembly</li>
-        <li>name->Family Circle</li>
-        <li>name->House of Lines</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Clans</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->clan confederacy</li>
-        <li>type->kinship council</li>
-        <li>type->tribal house</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Boss</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->The Boss's Court</li>
-        <li>name->House of the Boss</li>
-        <li>name->Patron Line</li>
-        <li>name->The Syndic's Hold</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Boss</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->patron lordship</li>
-        <li>type->plutocratic dominion</li>
-        <li>type->patronage network</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Guilds</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Guild of Master Crafts</li>
-        <li>name->Brotherhood of Makers</li>
-        <li>name->Order of the Guildmasters</li>
-        <li>name->Consortium of Trades</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Guilds</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->trade guild</li>
-        <li>type->crafts consortium</li>
-        <li>type->professional order</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Rulers -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Overseer</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Overseer's Directorate</li>
-        <li>name->Directorate of Order</li>
-        <li>name->Office of the Overseer</li>
-        <li>name->The Administrative Throne</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Overseer</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->administrative office</li>
-        <li>type->managerial regime</li>
-        <li>type->central directorate</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Chieftain</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Chieftain's Circle</li>
-        <li>name->Hearth of the Chieftain</li>
-        <li>name->The Warline House</li>
-        <li>name->Elder's Hold</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Chieftain</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->chieftaincy</li>
-        <li>type->tribal rulership</li>
-        <li>type->hereditary chieftain</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_King</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Crown of the Basin</li>
-        <li>name->Royal House</li>
-        <li>name->The King's Court</li>
-        <li>name->Dynasty of the Throne</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_King</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->royal monarchy</li>
-        <li>type->hereditary monarchy</li>
-        <li>type->sovereign dynasty</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Elder</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Council of Elders</li>
-        <li>name->The Elder Circle</li>
-        <li>name->Seat of the Ancients</li>
-        <li>name->Convocation of Elders</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Elder</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->elder council</li>
-        <li>type->ancestral convocation</li>
-        <li>type->advisory council</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Technocratic -->
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Academy</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Academy of the Basin</li>
-        <li>name->Scholastic Institute</li>
-        <li>name->The Technical Conservatory</li>
-        <li>name->House of Inquiry</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Academy</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->scholastic academy</li>
-        <li>type->research institute</li>
-        <li>type->technical academy</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_ElderCouncil</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Elder Council of Sciences</li>
-        <li>name->Council of Senior Scholars</li>
-        <li>name->The Advisory Collegium</li>
-        <li>name->Institute Council</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_ElderCouncil</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->expert council</li>
-        <li>type->advisory collegium</li>
-        <li>type->administrative commission</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Ministry</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Ministry of Public Order</li>
-        <li>name->Department of Administration</li>
-        <li>name->The Ministry House</li>
-        <li>name->Bureau of State</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Ministry</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->ministrial bureaucracy</li>
-        <li>type->administrative body</li>
-        <li>type->state department</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <RulePackDef>
-    <defName>Arktos_NameMaker_Shaman</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityName->[name]</li>
-        <li>name->Circle of Shamans</li>
-        <li>name->House of Rites</li>
-        <li>name->The Spiritwrights</li>
-        <li>name->The Ritekeepers</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-  <RulePackDef>
-    <defName>Arktos_TypeMaker_Shaman</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_deityType->[type]</li>
-        <li>type->shamanic house</li>
-        <li>type->ritual guild</li>
-        <li>type->spirit technocracy</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef>
-
-  <!-- Arktos generic structure origin story: modular, randomized, references survival after the Great War and rebuilding -->
-  <IdeoStoryPatternDef>
-    <defName>Arktos_StructureOriginStory</defName>
-    <segments>
-      <li>intro</li>
-      <li>hardship</li>
-      <li>response</li>
-      <li>legacy</li>
-    </segments>
-    <rules>
-      <include>
-        <li>IdeoDescriptionGlobal</li>
-      </include>
-      <rulesStrings>
-        <!-- allow zero or more optional hardship episodes -->
-        <li>hardship(priority=-1)-></li>
-
-        <!-- intro: a short establishing sentence about ancestors and the Great War -->
-        <li>intro->Our ancestors were born into the ruins after the Great War, and learned to survive by cunning and shared labour.</li>
-        <li>intro->After the Great War, the first generations faced hunger, storms and scavengers; they bound together to endure.</li>
-        <li>intro->When the Great War ended, those who remained had to remake their habits and their homes from wreckage and memory.</li>
-
-        <!-- hardship: variable episodes describing challenges -->
-        <li>hardship(uses=1)->They battled the ruined machines and the roving bands that claimed the old cities.</li>
-        <li>hardship(uses=1)->Plagues and cold nights took many, but surviving families learned to share what little they had.</li>
-        <li>hardship(uses=1)->The land itself was poisoned in places; ancestors dug deep and learned where life stubbornly returned.</li>
-        <li>hardship(uses=1)->At first there was no law; disputes were settled with fire and blade until councils formed to order life.</li>
-
-        <!-- response: how ancestors rebuilt institutions, faith and craft -->
-        <li>response->They taught their children to repair, to pray, to farm by moonlight, and to bind their fortunes together.</li>
-        <li>response->They gathered tools and texts from the old world and mixed them with local rites until new customs grew.</li>
-        <li>response->By pooling knowledge of seed, engine and story, they built settlements that could outlast another winter.</li>
-        <li>response->Out of broken steel and whispered memory they formed new rites, new leaders, and rules that kept the peace.</li>
-
-        <!-- legacy: tie to present and universal cultural origin line -->
-        <li>legacy->This way — of craft, council and ritual — is how our people endured. It became the pattern that shaped our laws and our prayers.</li>
-        <li>legacy->From those nights grew our ceremonies and our councils; what once was survival became the custom we follow today.</li>
-        <li>legacy->Thus our children learn craft as liturgy, and the old stories teach us why our settlements stand where they do.</li>
-
-        <!-- small variable pieces to spice sentences -->
-        <li>place_descriptor->the broken plains</li>
-        <li>place_descriptor->the ruined coasts</li>
-        <li>place_descriptor->the ash-cloaked cities</li>
-        <li>survivorType->engineers</li>
-        <li>survivorType->farmers</li>
-        <li>survivorType->scavengers</li>
-      </rulesStrings>
-    </rules>
-  </IdeoStoryPatternDef>
-
-
+	<!-- Government Origin Story Pattern -->
+	<IdeoStoryPatternDef>
+		<defName>Arktos_Structure_Story</defName>
+		<segments>
+			<li>intro</li>
+			<li>hardship</li>
+			<li>response</li>
+			<li>legacy</li>
+		</segments>
+		<rules>
+			<include>
+				<li>IdeoDescriptionGlobal</li>
+			</include>
+			<rulesStrings>
+				<li>intro->After the Great War, survivors banded together to form new governments, tribes, and gangs to endure the wasteland.</li>
+				<li>hardship(uses=1)->They faced raiders, famine, storms, and the collapse of old laws.</li>
+				<li>hardship(uses=1)->Tribal bands and city-states clashed over resources and territory.</li>
+				<li>hardship(uses=1)->Corrupt rulers and warlords rose and fell, shaping the fate of settlements.</li>
+				<li>response->Some built councils and assemblies, others followed chiefs, kings, or warlords.</li>
+				<li>response->Tribes and gangs adapted, trading, raiding, or forging alliances to survive.</li>
+				<li>response->Religions and cults grew, offering hope and order in chaos.</li>
+				<li>legacy->From these struggles, new societies emerged—democratic, despotic, tribal, and raider—each with their own laws and customs.</li>
+				<li>legacy->The wasteland remembers the rise and fall of many, but the strongest endure and shape the future.</li>
+			</rulesStrings>
+		</rules>
+	</IdeoStoryPatternDef>
+
+
+	<!-- Democratic -->
+	<MemeDef ParentName="Arktos_Structure_Government_Basis">
+		<defName>Arktos_Government_Democratic</defName>
+		<label>Democratic City-State</label>
+		<description>A democratic government inspired by NCR and prewar city-states, with elected councils, traders, and wild west caravans.</description>
+		<groupDef>Arktos_Democratic</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Democratic</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->[adj] [noun]</li>
+				<li>name->[noun] of [place]</li>
+				<li>name->[adj] [noun] of [place]</li>
+				<li>adj->Free</li>
+				<li>adj->United</li>
+				<li>adj->Commonwealth</li>
+				<li>adj->Grand</li>
+				<li>adj->Sovereign</li>
+				<li>adj->Popular</li>
+				<li>adj->Frontier</li>
+				<li>adj->Republican</li>
+				<li>adj->Western</li>
+				<li>noun->Assembly</li>
+				<li>noun->Council</li>
+				<li>noun->Confederation</li>
+				<li>noun->Caravan</li>
+				<li>noun->City-State</li>
+				<li>noun->Union</li>
+				<li>noun->Forum</li>
+				<li>noun->Coalition</li>
+				<li>noun->League</li>
+				<li>place->the Wastes</li>
+				<li>place->the Basin</li>
+				<li>place->the Frontier</li>
+				<li>place->the Republic</li>
+				<li>place->the Range</li>
+				<li>place->the Valley</li>
+				<li>place->the Outlands</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Despotic -->
+	<MemeDef ParentName="Arktos_Structure_Government_Basis">
+		<defName>Arktos_Government_Despotic</defName>
+		<label>Despotic Rule</label>
+		<description>A government led by mayors, kings, chiefs, or sheriffs, often corrupt or neutral peacekeepers, ruling by force or tradition.</description>
+		<groupDef>Arktos_Despotic</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Despotic</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->[title] [noun]</li>
+				<li>name->[noun] of [place]</li>
+				<li>name->[title] [noun] of [place]</li>
+				<li>title->Mayor</li>
+				<li>title->King</li>
+				<li>title->Chief</li>
+				<li>title->Sheriff</li>
+				<li>title->Overseer</li>
+				<li>title->Warlord</li>
+				<li>title->Baron</li>
+				<li>title->Boss</li>
+				<li>noun->Court</li>
+				<li>noun->House</li>
+				<li>noun->Hold</li>
+				<li>noun->Throne</li>
+				<li>noun->Domain</li>
+				<li>noun->Fortress</li>
+				<li>noun->Palace</li>
+				<li>noun->Stronghold</li>
+				<li>place->the Wastes</li>
+				<li>place->the Basin</li>
+				<li>place->the Outlands</li>
+				<li>place->the Range</li>
+				<li>place->the Valley</li>
+				<li>place->the Badlands</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Tribal -->
+	<MemeDef ParentName="Arktos_Structure_Government_Basis">
+		<defName>Arktos_Government_Tribal</defName>
+		<label>Tribal Society</label>
+		<description>Tribal societies ranging from peaceful natives and spiritualists to aggressive nomads and warbands.</description>
+		<groupDef>Arktos_Tribal</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Tribal</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->[adj] [noun]</li>
+				<li>name->[noun] of [place]</li>
+				<li>name->[adj] [noun] of [place]</li>
+				<li>adj->Sorrows</li>
+				<li>adj->Dead Horses</li>
+				<li>adj->Painted</li>
+				<li>adj->Ghost</li>
+				<li>adj->River</li>
+				<li>adj->Sun</li>
+				<li>adj->Stone</li>
+				<li>adj->Fire</li>
+				<li>adj->Storm</li>
+				<li>adj->Canyon</li>
+				<li>adj->Night</li>
+				<li>adj->Red</li>
+				<li>adj->White</li>
+				<li>adj->Black</li>
+				<li>adj->Wild</li>
+				<li>noun->Tribe</li>
+				<li>noun->Band</li>
+				<li>noun->Clan</li>
+				<li>noun->People</li>
+				<li>noun->Nomads</li>
+				<li>noun->Wanderers</li>
+				<li>noun->Hunters</li>
+				<li>noun->Warriors</li>
+				<li>place->the Valley</li>
+				<li>place->the Basin</li>
+				<li>place->the Canyons</li>
+				<li>place->the Plains</li>
+				<li>place->the Wastes</li>
+				<li>place->the Range</li>
+				<li>place->the Badlands</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Raider -->
+	<MemeDef ParentName="Arktos_Structure_Government_Basis">
+		<defName>Arktos_Government_Raider</defName>
+		<label>Raider Gang</label>
+		<description>Survivalist gangs, mercenaries, looters, and warbands who thrive in chaos and conflict.</description>
+		<groupDef>Arktos_Raider</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Raider</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->[adj] [noun]</li>
+				<li>name->[noun] of [place]</li>
+				<li>name->[adj] [noun] of [place]</li>
+				<li>adj->Iron</li>
+				<li>adj->Savage</li>
+				<li>adj->Black</li>
+				<li>adj->Red</li>
+				<li>adj->Wild</li>
+				<li>adj->Broken</li>
+				<li>adj->Lost</li>
+				<li>adj->Dust</li>
+				<li>adj->Steel</li>
+				<li>adj->Blood</li>
+				<li>adj->Rusted</li>
+				<li>adj->Grim</li>
+				<li>adj->Merc</li>
+				<li>adj->Wanderer</li>
+				<li>noun->Gang</li>
+				<li>noun->Band</li>
+				<li>noun->Pack</li>
+				<li>noun->Crew</li>
+				<li>noun->Company</li>
+				<li>noun->Raiders</li>
+				<li>noun->Survivors</li>
+				<li>noun->Mercenaries</li>
+				<li>noun->Scavengers</li>
+				<li>noun->Outcasts</li>
+				<li>place->the Wastes</li>
+				<li>place->the Basin</li>
+				<li>place->the Outlands</li>
+				<li>place->the Badlands</li>
+				<li>place->the Range</li>
+				<li>place->the Valley</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Old world -->
+	<!-- Follower of the Apocalypse -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_FollowerOfTheApocalypse</defName>
+		<label>Follower of the Apocalypse</label>
+		<description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
+		<worshipRoomLabel>church</worshipRoomLabel>
+		<groupDef>Arktos_OldWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Christian</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_FollowerOfTheApocalypse</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->The Mission</li>
+				<li>name->The Sanctuary</li>
+				<li>name->Humanitarian Collective</li>
+				<li>name->Order of Mercy</li>
+				<li>name->Basin Relief</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Canaanite Church -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_CanaaniteChurch</defName>
+		<label>Canaanite Church</label>
+		<description>A restorationist movement that mixes frontier theocracy and strict social order, inspired by old doctrinal texts.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_CanaaniteChurch</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_CanaaniteChurch</deityTypeMakerOverride>
+		<worshipRoomLabel>church</worshipRoomLabel>
+		<groupDef>Arktos_OldWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Christian</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_CanaaniteChurch</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Canaanite Ward</li>
+				<li>name->Canaanite Assembly</li>
+				<li>name->Canaanite Order</li>
+				<li>name->Canaanite Fellowship</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Abbey of the Road -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_AbbeyOfTheRoad</defName>
+		<label>Abbey of the Road</label>
+		<description>A protestant-style order built around scripture and the travelling pulpit; it prizes scripture, preaching and humble worship.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_AbbeyOfTheRoad</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_AbbeyOfTheRoad</deityTypeMakerOverride>
+		<worshipRoomLabel>church</worshipRoomLabel>
+		<groupDef>Arktos_OldWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Christian</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_AbbeyOfTheRoad</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Abbey of the Road</li>
+				<li>name->Roadward Abbey</li>
+				<li>name->Brotherhood of Scripture</li>
+				<li>name->Pilgrim Preachers</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Order of Our Lady of the Waters of Life -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_OrderOfOurLadyOfTheWaters</defName>
+		<label>Order of Our Lady of the Waters of Life</label>
+		<description>A Catholic-style order deeply devoted to Mary and the saints, keeping older sacramental practices alive.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</deityTypeMakerOverride>
+		<worshipRoomLabel>church</worshipRoomLabel>
+		<groupDef>Arktos_OldWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Christian</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Order of Our Lady of the Waters</li>
+				<li>name->Sisters of the Living Spring</li>
+				<li>name->Confraternity of the Watery Lady</li>
+				<li>name->Marian Confraternity</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- New world -->
+	<!-- Children of Atom -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_ChildrenOfAtom</defName>
+		<label>Church of the Children of Atom</label>
+		<description>A new cult that treats radiation and atomic remnants as sacred, with ritualised exposure and offerings.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_ChildrenOfAtom</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfAtom</deityTypeMakerOverride>
+		<worshipRoomLabel>church</worshipRoomLabel>
+		<groupDef>Arktos_NewWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Morbid</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_ChildrenOfAtom</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Temple of the Core</li>
+				<li>name->Order of the Great Glow</li>
+				<li>name->Radiant Congregation</li>
+				<li>name->Church of the Core</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Children of the Cathedral -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_ChildrenOfTheCathedral</defName>
+		<label>Church of the Children of the Cathedral</label>
+		<description>A cathedral-centered faith with strong civic influence and ceremonial public worship.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_ChildrenOfTheCathedral</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfTheCathedral</deityTypeMakerOverride>
+		<worshipRoomLabel>cathedral</worshipRoomLabel>
+		<groupDef>Arktos_NewWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Morbid</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_ChildrenOfTheCathedral</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Cathedral Chapter</li>
+				<li>name->Chapter of the Great Nave</li>
+				<li>name->Civic Cathedral</li>
+				<li>name->Cathedral Order</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Cult of Krvibi -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_CultOfKrvibi</defName>
+		<label>Cult of Krvibi</label>
+		<description>A Lovecraftian cult venerating Ug-Qualtoth and the forerunners; rituals here are strange and alien to most.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_CultOfKrvibi</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_CultOfKrvibi</deityTypeMakerOverride>
+		<worshipRoomLabel>temple</worshipRoomLabel>
+		<groupDef>Arktos_NewWorldChurch</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Morbid</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_CultOfKrvibi</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->The Deep Chorus</li>
+				<li>name->Shrine of Ug-Qualtoth</li>
+				<li>name->Cabal of Krvibi</li>
+				<li>name->Order of the Pale Echo</li>
+				<li>name->The Silent Choir</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<!-- Syncretic -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_SyncreticOrder</defName>
+		<label>Father of the Cave</label>
+		<description>A believe mixing elements of Christianity with tribal spirit worship.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_SyncreticOrder</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_SyncreticOrder</deityTypeMakerOverride>
+		<worshipRoomLabel>grove</worshipRoomLabel>
+		<groupDef>Arktos_Syncretism</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Totemic</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Syncretism</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->[adj] [noun]</li>
+				<li>name->[noun] of [place]</li>
+				<li>adj->Twin</li>
+				<li>adj->Blended</li>
+				<li>adj->Spirit</li>
+				<li>adj->Sacred</li>
+				<li>adj->Lost</li>
+				<li>adj->Blessed</li>
+				<li>noun->Order</li>
+				<li>noun->Congregation</li>
+				<li>noun->Rite</li>
+				<li>noun->Grove</li>
+				<li>place->the Valley</li>
+				<li>place->the Basin</li>
+				<li>place->the Outlands</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Dharma -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_Dharma</defName>
+		<label>Dharma Order</label>
+		<description>An order following the Dharma: meditation, balance, and rites aiming to restore inner and social harmony after the fall of civilisation.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Dharma</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Dharma</deityTypeMakerOverride>
+		<worshipRoomLabel>shrine</worshipRoomLabel>
+		<groupDef>Arktos_NewWorldChurch</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Dharma</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->Dharma Sangha</li>
+				<li>name->Order of the Dharma</li>
+				<li>name->Sangha of the Still Path</li>
+				<li>name->The Dharma Fellowship</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<!-- Native -->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_Native</defName>
+		<label>Native Way</label>
+		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Native</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Native</deityTypeMakerOverride>
+		<worshipRoomLabel>grove</worshipRoomLabel>
+		<groupDef>Arktos_Syncretism</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Totemic</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Native</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName->[name]</li>
+				<li>name->People of the Stone</li>
+				<li>name->Keepers of the Grove</li>
+				<li>name->Clan of the River</li>
+				<li>name->Ancestral Circle</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
 </Defs>
