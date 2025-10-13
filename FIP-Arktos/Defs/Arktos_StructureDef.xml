@@ -16,7 +16,6 @@
     </MemeGroupDef>
     <MemeGroupDef>
       <defName>Arktos_Democratic</defName>
-      <!-- Governments: upper row (negative Y) -->
       <drawOffset>(0.2,-0.35)</drawOffset>
     </MemeGroupDef>
     <MemeGroupDef>
@@ -185,7 +184,158 @@
     </thingStyleCategories>
   </MemeDef>
 
-  <!-- Democratic -->
+  <!--Democratic-->
+  <MemeDef ParentName="Arktos_StructureOriginBase">
+    <defName>Arktos_Structure_People</defName>
+    <label>People's Assembly</label>
+    <description>A democratic body representing various facets of society including governance, skilled trades, and labor, working together to deliberate, regulate, and advocate for collective interests.</description>
+    <deityNameMakerOverride>Arktos_NameMaker_People</deityNameMakerOverride>
+    <deityTypeMakerOverride>Arktos_TypeMaker_People</deityTypeMakerOverride>
+    <worshipRoomLabel>assembly hall</worshipRoomLabel>
+    <groupDef>Arktos_Democratic</groupDef>
+  </MemeDef>
+  <RulePackDef>
+    <defName>Arktos_NameMaker_People</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->[name]</li>
+
+        <li>name->[adj] Assembly</li>
+        <li>name->[adj] Council</li>
+        <li>name->[adj] Congress</li>
+        <li>name->[adj] Forum</li>
+        <li>name->[adj] Coalition</li>
+        <li>name->[adj] Synod</li>
+        <li>name->[adj] Confederation</li>
+        <li>name->[adj] Collective</li>
+
+        <li>adj->United</li>
+        <li>adj->Grand</li>
+        <li>adj->Common</li>
+        <li>adj->Unified</li>
+        <li>adj->People's</li>
+        <li>adj->Free</li>
+        <li>adj->Popular</li>
+        <li>adj->Sovereign</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>Arktos_TypeMaker_People</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityType->[type]</li>
+
+        <li>type->Representative body</li>
+        <li>type->Deliberative assembly</li>
+        <li>type->Legislative council</li>
+        <li>type->Governance forum</li>
+        <li>type->Political coalition</li>
+        <li>type->Consultative congress</li>
+        <li>type->Democratic confederation</li>
+        <li>type->Worker collective</li>
+        <li>type->Trade federation</li>
+
+        <li>r_adjective->[adj]</li>
+        <li>adj->inclusive</li>
+        <li>adj->sovereign</li>
+        <li>adj->representative</li>
+        <li>adj->unified</li>
+        <li>adj->popular</li>
+
+        <li>type->[adj] [baseType]</li>
+        <li>baseType->assembly</li>
+        <li>baseType->council</li>
+        <li>baseType->body</li>
+        <li>baseType->chamber</li>
+        <li>baseType->institution</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!--Plotocratic-->
+  <RulePackDef>
+  <defName>Arktos_NameMaker_PlutoRaider</defName>
+  <rulePack>
+    <rulesStrings>
+      <li>r_deityName->[name]</li>
+
+      <li>name->The [adj] [org]</li>
+      <li>name->[org] of [power]</li>
+      <li>name->[adj] [org]</li>
+
+      <li>adj->Black</li>
+      <li>adj->Gilded</li>
+      <li>adj->Iron</li>
+      <li>adj->Crimson</li>
+      <li>adj->Obsidian</li>
+      <li>adj->Executive</li>
+      <li>adj->Golden</li>
+      <li>adj->Sovereign</li>
+      <li>adj->Privileged</li>
+      <li>adj->Warborn</li>
+
+      <li>org->Syndicate</li>
+      <li>org->Exchange</li>
+      <li>org->Board</li>
+      <li>org->Combine</li>
+      <li>org->Cartel</li>
+      <li>org->Trust</li>
+      <li>org->Dominion</li>
+      <li>org->Command</li>
+      <li>org->Conglomerate</li>
+      <li>org->Chain</li>
+
+      <li>power->Iron Wealth</li>
+      <li>power->Credit</li>
+      <li>power->Shares</li>
+      <li>power->Blood Contracts</li>
+      <li>power->Dominance</li>
+      <li>power->Gold</li>
+      <li>power->the Market</li>
+      <li>power->the Old World</li>
+      <li>power->Profit</li>
+    </rulesStrings>
+  </rulePack>
+</RulePackDef>
+<RulePackDef>
+  <defName>Arktos_TypeMaker_PlutoRaider</defName>
+  <rulePack>
+    <rulesStrings>
+      <li>r_deityType->[type]</li>
+
+      <li>type->mercantile warband</li>
+      <li>type->raider oligarchy</li>
+      <li>type->plutocratic war council</li>
+      <li>type->executive cabal</li>
+      <li>type->shareholder dominion</li>
+      <li>type->privatized army-state</li>
+      <li>type->gold-backed autocracy</li>
+      <li>type->credit cartel</li>
+      <li>type->contract-based governance</li>
+      <li>type->economic raider order</li>
+
+      <li>r_adj->[adj]</li>
+      <li>adj->hostile</li>
+      <li>adj->ruthless</li>
+      <li>adj->corporate</li>
+      <li>adj->elite</li>
+      <li>adj->lawless</li>
+      <li>adj->contractual</li>
+      <li>adj->feudal</li>
+      <li>adj->post-capitalist</li>
+
+      <li>type->[adj] cartel</li>
+      <li>type->[adj] plutocracy</li>
+      <li>type->[adj] dominion</li>
+      <li>type->[adj] enterprise</li>
+    </rulesStrings>
+  </rulePack>
+</RulePackDef>
+
+<!--Despotic-->
+
+  <!-- Democratic 
   <MemeDef ParentName="Arktos_StructureOriginBase">
     <defName>Arktos_Structure_Senate</defName>
     <label>Senate</label>
@@ -207,11 +357,11 @@
   </MemeDef>
 
   <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Syndicate</defName>
-    <label>Syndicate</label>
-    <description>A networked, democratic institution combining industry and politics in a corporatist manner.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Syndicate</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Syndicate</deityTypeMakerOverride>
+    <defName>Arktos_Structure_Guilds</defName>
+    <label>Guilds</label>
+    <description>Organisations of skilled trades who control production, standards and political influence.</description>
+    <deityNameMakerOverride>Arktos_NameMaker_Guilds</deityNameMakerOverride>
+    <deityTypeMakerOverride>Arktos_TypeMaker_Guilds</deityTypeMakerOverride>
     <worshipRoomLabel>guildhall</worshipRoomLabel>
     <groupDef>Arktos_Democratic</groupDef>
   </MemeDef>
@@ -224,9 +374,9 @@
     <deityTypeMakerOverride>Arktos_TypeMaker_Union</deityTypeMakerOverride>
     <worshipRoomLabel>townhall</worshipRoomLabel>
     <groupDef>Arktos_Democratic</groupDef>
-  </MemeDef>
+  </MemeDef>-->
 
-  <!-- Plutocratic -->
+  <!-- Plutocratic 
   <MemeDef ParentName="Arktos_StructureOriginBase">
     <defName>Arktos_Structure_GreatFamilies</defName>
     <label>Great Families</label>
@@ -258,16 +408,16 @@
   </MemeDef>
 
   <MemeDef ParentName="Arktos_StructureOriginBase">
-    <defName>Arktos_Structure_Guilds</defName>
-    <label>Guilds</label>
-    <description>Organisations of skilled trades who control production, standards and political influence.</description>
-    <deityNameMakerOverride>Arktos_NameMaker_Guilds</deityNameMakerOverride>
-    <deityTypeMakerOverride>Arktos_TypeMaker_Guilds</deityTypeMakerOverride>
+    <defName>Arktos_Structure_Syndicate</defName>
+    <label>Syndicate</label>
+    <description>A networked, democratic institution combining industry and politics in a corporatist manner.</description>
+    <deityNameMakerOverride>Arktos_NameMaker_Syndicate</deityNameMakerOverride>
+    <deityTypeMakerOverride>Arktos_TypeMaker_Syndicate</deityTypeMakerOverride>
     <worshipRoomLabel>guildhall</worshipRoomLabel>
     <groupDef>Arktos_Plutocratic</groupDef>
-  </MemeDef>
+  </MemeDef>-->
 
-  <!-- Despotic -->
+  <!-- Despotic 
   <MemeDef ParentName="Arktos_StructureOriginBase">
     <defName>Arktos_Structure_Overseer</defName>
     <label>Overseer</label>
@@ -306,9 +456,9 @@
     <deityTypeMakerOverride>Arktos_TypeMaker_Elder</deityTypeMakerOverride>
     <worshipRoomLabel>council chamber</worshipRoomLabel>
     <groupDef>Arktos_Despotic</groupDef>
-  </MemeDef>
+  </MemeDef>-->
 
-  <!-- Technocratic -->
+  <!-- Technocratic 
   <MemeDef ParentName="Arktos_StructureOriginBase">
     <defName>Arktos_Structure_Academy</defName>
     <label>Academy</label>
@@ -346,14 +496,14 @@
     <deityNameMakerOverride>Arktos_NameMaker_Shaman</deityNameMakerOverride>
     <deityTypeMakerOverride>Arktos_TypeMaker_Shaman</deityTypeMakerOverride>
     <worshipRoomLabel>circle</worshipRoomLabel>
-    <groupDef>Arktos_Syncretism</groupDef>
+    <groupDef>Arktos_Bureaucratic</groupDef>
     <thingStyleCategories>
       <li>
         <category>Totemic</category>
         <priority>4</priority>
       </li>
     </thingStyleCategories>
-  </MemeDef>
+  </MemeDef>-->
 
   <!-- RulePackDefs: Name and Type makers for each Structure MemeDef -->
   <!--Follower of the Apocalypse-->
