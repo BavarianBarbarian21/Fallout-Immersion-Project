@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Syncretic, Native, Dharma -->
+     <!--Syncretic-->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_Syncretic</defName>
+		<label>Father of the Cave</label>
+		<description>A believe mixing elements of Christianity with tribal spirit worship.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Syncretic</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Syncretic</deityTypeMakerOverride>
+		<worshipRoomLabel>grove</worshipRoomLabel>
+		<groupDef>Arktos_Tribal</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Totemic</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Syncretic</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityName -> [s_name_form]</li>
+
+<li>s_name_form -> The [s_quality] [s_nature_deity]</li>
+<li>s_name_form -> [s_christ_title] of [s_elemental_force]</li>
+<li>s_name_form -> The Spirit of [s_animal_or_tree]</li>
+<li>s_name_form -> [s_animal_or_tree], Vessel of the [s_quality]</li>
+
+<li>s_quality -> Radiant</li>
+<li>s_quality -> Sacred</li>
+<li>s_quality -> Hidden</li>
+<li>s_quality -> Burning</li>
+
+<li>s_nature_deity -> Tree of Light</li>
+<li>s_nature_deity -> Sky Father</li>
+<li>s_nature_deity -> River Christ</li>
+<li>s_nature_deity -> Stone Shepherd</li>
+
+<li>s_christ_title -> Healer</li>
+<li>s_christ_title -> Shepherd</li>
+<li>s_christ_title -> Son</li>
+<li>s_christ_title -> Fire-Bearer</li>
+
+<li>s_elemental_force -> the Winds</li>
+<li>s_elemental_force -> the Waters</li>
+<li>s_elemental_force -> the Sun Path</li>
+<li>s_elemental_force -> Thunder</li>
+
+<li>s_animal_or_tree -> Eagle</li>
+<li>s_animal_or_tree -> Cedar</li>
+<li>s_animal_or_tree -> Deer</li>
+<li>s_animal_or_tree -> White Oak</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+    <RulePackDef>
+		<defName>Arktos_TypeMaker_Syncretic</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityTitle -> [s_title_form]</li>
+
+<li>s_title_form -> [s_role] of [s_realm]</li>
+<li>s_title_form -> Keeper of the [s_symbol]</li>
+<li>s_title_form -> [s_epithet], who Walks with [s_element]</li>
+
+<li>s_role -> Guardian</li>
+<li>s_role -> Flame Walker</li>
+<li>s_role -> Dream Speaker</li>
+<li>s_role -> Spirit Guide</li>
+
+<li>s_realm -> the Crossroads</li>
+<li>s_realm -> Ancestors</li>
+<li>s_realm -> Hidden Fire</li>
+<li>s_realm -> the Womb of the Earth</li>
+
+<li>s_symbol -> Blood Tree</li>
+<li>s_symbol -> Sky Drum</li>
+<li>s_symbol -> Sacred Scar</li>
+
+<li>s_epithet -> One Who Watches</li>
+<li>s_epithet -> The Veiled</li>
+<li>s_epithet -> Song in the Dust</li>
+
+<li>s_element -> Rain</li>
+<li>s_element -> Smoke</li>
+<li>s_element -> Shadows</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+    <!--Dharma-->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_Dharma</defName>
+		<label>Dharma Order</label>
+		<description>An order following the Dharma: meditation, balance, and rites aiming to restore inner and social harmony after the fall of civilisation.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Dharma</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Dharma</deityTypeMakerOverride>
+		<worshipRoomLabel>shrine</worshipRoomLabel>
+		<groupDef>Arktos_Tribal</groupDef>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Dharma</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityName -> [d_name_structure]</li>
+
+<li>d_name_structure -> [d_prefix] [d_deity_core]</li>
+<li>d_name_structure -> The [d_virtue] One</li>
+<li>d_name_structure -> [d_deity_core] of [d_realm]</li>
+<li>d_name_structure -> [d_epithet] of the [d_aspect]</li>
+
+<li>d_prefix -> Mahā</li>
+<li>d_prefix -> Sri</li>
+<li>d_prefix -> Lokesh</li>
+<li>d_prefix -> Bhagavan</li>
+
+<li>d_deity_core -> Vishva</li>
+<li>d_deity_core -> Tathāgata</li>
+<li>d_deity_core -> Shakti</li>
+<li>d_deity_core -> Avatāra</li>
+
+<li>d_virtue -> Enlightened</li>
+<li>d_virtue -> Blissful</li>
+<li>d_virtue -> Serene</li>
+<li>d_virtue -> Infinite</li>
+
+<li>d_realm -> Dharma</li>
+<li>d_realm -> Nirvāṇa</li>
+<li>d_realm -> Kāla</li>
+<li>d_realm -> the Ten Thousand Worlds</li>
+
+<li>d_epithet -> Lotus-Born</li>
+<li>d_epithet -> Ocean of Wisdom</li>
+<li>d_epithet -> Wheel-Turner</li>
+
+<li>d_aspect -> Endless Path</li>
+<li>d_aspect -> Pure Land</li>
+<li>d_aspect -> Celestial Flame</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	<RulePackDef>
+		<defName>Arktos_TypeMaker_Dharma</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityTitle -> [d_title_structure]</li>
+
+<li>d_title_structure -> [d_role] of [d_principle]</li>
+<li>d_title_structure -> Lord of [d_cycle]</li>
+<li>d_title_structure -> The [d_quality] Guide</li>
+
+<li>d_role -> Preserver</li>
+<li>d_role -> Destroyer</li>
+<li>d_role -> Awakener</li>
+<li>d_role -> Embodiment</li>
+
+<li>d_principle -> Dharma</li>
+<li>d_principle -> Karma</li>
+<li>d_principle -> the Eightfold Path</li>
+<li>d_principle -> the Middle Way</li>
+
+<li>d_cycle -> Samsāra</li>
+<li>d_cycle -> Rebirth</li>
+<li>d_cycle -> the Kalpa</li>
+<li>d_cycle -> Time Without End</li>
+
+<li>d_quality -> Silent</li>
+<li>d_quality -> Compassionate</li>
+<li>d_quality -> Timeless</li>
+<li>d_quality -> All-Seeing</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+    <!--Native-->
+	<MemeDef ParentName="Arktos_Structure_Base">
+		<defName>Arktos_Structure_Native</defName>
+		<label>Native Way</label>
+		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Native</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Native</deityTypeMakerOverride>
+		<worshipRoomLabel>grove</worshipRoomLabel>
+		<groupDef>Arktos_Tribal</groupDef>
+		<thingStyleCategories>
+			<li>
+				<category>Totemic</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Native</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityName -> [n_name_structure]</li>
+
+<li>n_name_structure -> [n_directional] [n_spirit_name]</li>
+<li>n_name_structure -> Spirit of the [n_natural_force]</li>
+<li>n_name_structure -> [n_animal], Child of [n_element]</li>
+<li>n_name_structure -> [n_totem] Who [n_totem_action]</li>
+
+<li>n_directional -> Great</li>
+<li>n_directional -> Old</li>
+<li>n_directional -> Skyward</li>
+<li>n_directional -> Deep</li>
+
+<li>n_spirit_name -> Thunderbird</li>
+<li>n_spirit_name -> Earthmaker</li>
+<li>n_spirit_name -> First Flame</li>
+<li>n_spirit_name -> Grandmother Wind</li>
+
+<li>n_natural_force -> Mountain</li>
+<li>n_natural_force -> River</li>
+<li>n_natural_force -> Storm</li>
+<li>n_natural_force -> Fire</li>
+
+<li>n_animal -> Bear</li>
+<li>n_animal -> Coyote</li>
+<li>n_animal -> Raven</li>
+<li>n_animal -> Turtle</li>
+
+<li>n_element -> Fire</li>
+<li>n_element -> Sky</li>
+<li>n_element -> Earth</li>
+<li>n_element -> Ice</li>
+
+<li>n_totem -> Tree</li>
+<li>n_totem -> Cloud</li>
+<li>n_totem -> Wind</li>
+<li>n_totem -> Moon</li>
+
+<li>n_totem_action -> Speaks</li>
+<li>n_totem_action -> Remembers</li>
+<li>n_totem_action -> Dreams</li>
+<li>n_totem_action -> Watches</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	<RulePackDef>
+		<defName>Arktos_TypeMaker_Native</defName>
+		<rulePack>
+			<rulesStrings>
+<li>r_deityTitle -> [n_title_form]</li>
+
+<li>n_title_form -> [n_function] of [n_domain]</li>
+<li>n_title_form -> Giver of [n_gift]</li>
+<li>n_title_form -> The One Who [n_action_phrase]</li>
+
+<li>n_function -> Walker</li>
+<li>n_function -> Keeper</li>
+<li>n_function -> Dancer</li>
+<li>n_function -> Singer</li>
+
+<li>n_domain -> the Four Winds</li>
+<li>n_domain -> Hidden Trails</li>
+<li>n_domain -> the Red Earth</li>
+<li>n_domain -> Spirit Fires</li>
+
+<li>n_gift -> Dreams</li>
+<li>n_gift -> Rain</li>
+<li>n_gift -> Balance</li>
+<li>n_gift -> the Vision</li>
+
+<li>n_action_phrase -> Watches in Silence</li>
+<li>n_action_phrase -> Sings to the Bones</li>
+<li>n_action_phrase -> Lights the Stars</li>
+<li>n_action_phrase -> Opens the Circle</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>
