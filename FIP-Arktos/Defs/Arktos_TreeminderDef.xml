@@ -74,10 +74,15 @@
   </GauranlenTreeModeDef>
   
   <!-- WorkGiverDef: ConnectedTreeDied (overrides basegame def by providing a Def with the same defName) -->
-  <WorkGiverDef>
+  <ThoughtDef>
     <defName>ConnectedTreeDied</defName>
-    <label>Treefather died</label>
-    <giverClass>WorkGiver_Warden</giverClass>
-    <!-- This WorkGiverDef is intentionally minimal: it's present to override basegame text and provide localized labels. -->
-  </WorkGiverDef>
+    <durationDays>10</durationDays>
+    <stages>
+      <li>
+        <label>Treefather death</label>
+        <description>My tree... its calming presence became pure pain, then went silent. Its suffering echoes in my mind...</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Remove vanilla Structure_* MemeDefs (keeps Arktos_ prefixed defs) -->
 <Patch>
-    <!--<Operation Class="PatchOperationRemove">
-        <xpath>//MemeDef[starts-with(defName, 'Structure_')]</xpath>
-    </Operation>-->
+    <!--<Operation Class="PatchOperationRemove"><xpath>//MemeDef[starts-with(defName, 'Structure_')]</xpath></Operation>-->
     <Operation Class="PatchOperationRemove">
         <xpath>//FactionDef/structureMemeWeights</xpath>
     </Operation>
@@ -12,30 +10,20 @@
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
             <structureMemeWeights>
-                <Arktos_Structure_FollowerOfTheApocalypse>1</Arktos_Structure_FollowerOfTheApocalypse>
-                <Arktos_Structure_CanaaniteChurch>1</Arktos_Structure_CanaaniteChurch>
-                <Arktos_Structure_AbbeyOfTheRoad>1</Arktos_Structure_AbbeyOfTheRoad>
-                <Arktos_Structure_OrderOfOurLadyOfTheWaters>1</Arktos_Structure_OrderOfOurLadyOfTheWaters>
-                <Arktos_Structure_ChildrenOfAtom>1</Arktos_Structure_ChildrenOfAtom>
-                <Arktos_Structure_ChildrenOfTheCathedral>1</Arktos_Structure_ChildrenOfTheCathedral>
-                <Arktos_Structure_CultOfKrvibi>1</Arktos_Structure_CultOfKrvibi>
-                <Arktos_Structure_SyncreticOrder>1</Arktos_Structure_SyncreticOrder>
-                <Arktos_Structure_Senate>1</Arktos_Structure_Senate>
-                <Arktos_Structure_Parliament>1</Arktos_Structure_Parliament>
-                <Arktos_Structure_Syndicate>1</Arktos_Structure_Syndicate>
-                <Arktos_Structure_Union>1</Arktos_Structure_Union>
-                <Arktos_Structure_GreatFamilies>1</Arktos_Structure_GreatFamilies>
-                <Arktos_Structure_Clans>1</Arktos_Structure_Clans>
-                <Arktos_Structure_Boss>1</Arktos_Structure_Boss>
-                <Arktos_Structure_Guilds>1</Arktos_Structure_Guilds>
-                <Arktos_Structure_Overseer>1</Arktos_Structure_Overseer>
-                <Arktos_Structure_Chieftain>1</Arktos_Structure_Chieftain>
-                <Arktos_Structure_King>1</Arktos_Structure_King>
-                <Arktos_Structure_Elder>1</Arktos_Structure_Elder>
-                <Arktos_Structure_Academy>1</Arktos_Structure_Academy>
-                <Arktos_Structure_ElderCouncil>1</Arktos_Structure_ElderCouncil>
-                <Arktos_Structure_Ministry>1</Arktos_Structure_Ministry>
-                <Arktos_Structure_Shaman>1</Arktos_Structure_Shaman>
+                <Arktos_Religion_FollowerOfTheApocalypse>1</Arktos_Religion_FollowerOfTheApocalypse>
+                <Arktos_Religion_CanaaniteChurch>1</Arktos_Religion_CanaaniteChurch>
+                <Arktos_Religion_AbbeyOfTheRoad>1</Arktos_Religion_AbbeyOfTheRoad>
+                <Arktos_Religion_OrderOfOurLadyOfTheWaters>1</Arktos_Religion_OrderOfOurLadyOfTheWaters>
+                <Arktos_Religion_ChildrenOfAtom>1</Arktos_Religion_ChildrenOfAtom>
+                <Arktos_Religion_ChildrenOfTheCathedral>1</Arktos_Religion_ChildrenOfTheCathedral>
+                <Arktos_Religion_CultOfKrvibi>1</Arktos_Religion_CultOfKrvibi>
+                <Arktos_Religion_Syncretic>1</Arktos_Religion_Syncretic>
+                <Arktos_Religion_Dharma>1</Arktos_Religion_Dharma>
+                <Arktos_Religion_Native>1</Arktos_Religion_Native>
+                <Arktos_Government_Democratic>1</Arktos_Government_Democratic>
+                <Arktos_Government_Despotic>1</Arktos_Government_Despotic>
+                <Arktos_Government_Raider>1</Arktos_Government_Raider>
+                <Arktos_Government_Tribal>1</Arktos_Government_Tribal>
             </structureMemeWeights>
         </value>
     </Operation>

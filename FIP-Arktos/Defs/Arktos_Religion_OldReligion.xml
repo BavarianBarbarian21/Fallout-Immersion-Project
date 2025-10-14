@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Old world religions -->
+    <!--Secular-->
+    <MemeDef ParentName="Arktos_Religion_Base">
+        <defName>Arktos_Religion_FollowerOfTheApocalypse</defName>
+        <label>Follower of the Apocalypse</label>
+        <description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
+        <deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
+        <deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
+        <worshipRoomLabel>church</worshipRoomLabel>
+        <groupDef>Arktos_OldWorldChurch</groupDef>
+        <thingStyleCategories>
+            <li>
+                <category>Christian</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
+    <RulePackDef>
+        <defName>Arktos_NameMaker_FollowerOfTheApocalypse</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->The [adj][name]</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <RulePackDef>
+        <defName>Arktos_TypeMaker_FollowerOfTheApocalypse</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->Humanitarian</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <!--Mormon-->
+    <MemeDef ParentName="Arktos_Religion_Base">
+        <defName>Arktos_Religion_CanaaniteChurch</defName>
+        <label>Canaanite Church</label>
+        <description>A restorationist movement that mixes frontier theocracy and strict social order, inspired by old doctrinal texts.</description>
+        <deityNameMakerOverride>Arktos_NameMaker_CanaaniteChurch</deityNameMakerOverride>
+        <deityTypeMakerOverride>Arktos_TypeMaker_CanaaniteChurch</deityTypeMakerOverride>
+        <worshipRoomLabel>church</worshipRoomLabel>
+        <groupDef>Arktos_OldWorldChurch</groupDef>
+        <thingStyleCategories>
+            <li>
+                <category>Christian</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
+    <RulePackDef>
+        <defName>Arktos_NameMaker_CanaaniteChurch</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName -> [m_name_form]</li>
+                <li>m_name_form -> The [m_descriptor] [m_name_core]</li>
+                <li>m_name_form -> [m_name_prefix] of [m_realm]</li>
+                <li>m_name_form -> The [m_name_core] of [m_mystery]</li>
+                <li>m_descriptor -> Eternal</li>
+                <li>m_descriptor -> Most Exalted</li>
+                <li>m_descriptor -> Divine</li>
+                <li>m_descriptor -> Infinite</li>
+                <li>m_name_core -> Elohim</li>
+                <li>m_name_core -> Kolobian Lord</li>
+                <li>m_name_core -> God of Glory</li>
+                <li>m_name_core -> Father of Worlds</li>
+                <li>m_name_prefix -> Lightbearer</li>
+                <li>m_name_prefix -> Lord</li>
+                <li>m_name_prefix -> Radiance</li>
+                <li>m_realm -> Kolob</li>
+                <li>m_realm -> the Celestial Plane</li>
+                <li>m_realm -> the Starbound Heavens</li>
+                <li>m_mystery -> the First Estate</li>
+                <li>m_mystery -> Eternal Progression</li>
+                <li>m_mystery -> the Sealed Records</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <RulePackDef>
+        <defName>Arktos_TypeMaker_CanaaniteChurch</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityTitle -> [m_title_pattern]</li>
+                <li>m_title_pattern -> [m_title_lead] of [m_domain]</li>
+                <li>m_title_pattern -> [m_reverent_form], Keeper of [m_secret]</li>
+                <li>m_title_pattern -> [m_actioner] of [m_destiny]</li>
+                <li>m_title_lead -> Architect</li>
+                <li>m_title_lead -> Shepherd</li>
+                <li>m_title_lead -> Origin</li>
+                <li>m_title_lead -> Builder</li>
+                <li>m_domain -> the Celestial Law</li>
+                <li>m_domain -> Divine Order</li>
+                <li>m_domain -> Zion Restored</li>
+                <li>m_reverent_form -> The Great One</li>
+                <li>m_reverent_form -> Holy Progenitor</li>
+                <li>m_reverent_form -> The First Light</li>
+                <li>m_secret -> the Sealed Plates</li>
+                <li>m_secret -> the Eternal Genealogy</li>
+                <li>m_secret -> Sacred Ordinances</li>
+                <li>m_actioner -> Giver</li>
+                <li>m_actioner -> Guardian</li>
+                <li>m_actioner -> Witness</li>
+                <li>m_destiny -> Divine Exaltation</li>
+                <li>m_destiny -> the Final Judgement</li>
+                <li>m_destiny -> the Eternal Inheritance</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <!--Protestant-->
+    <MemeDef ParentName="Arktos_Religion_Base">
+        <defName>Arktos_Religion_AbbeyOfTheRoad</defName>
+        <label>Abbey of the Road</label>
+        <description>A protestant-style order built around scripture and the travelling pulpit; it prizes scripture, preaching and humble worship.</description>
+        <deityNameMakerOverride>Arktos_NameMaker_AbbeyOfTheRoad</deityNameMakerOverride>
+        <deityTypeMakerOverride>Arktos_TypeMaker_AbbeyOfTheRoad</deityTypeMakerOverride>
+        <worshipRoomLabel>church</worshipRoomLabel>
+        <groupDef>Arktos_OldWorldChurch</groupDef>
+        <thingStyleCategories>
+            <li>
+                <category>Christian</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
+    <RulePackDef>
+        <defName>Arktos_NameMaker_AbbeyOfTheRoad</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName -> [p_name_Religion]</li>
+                <li>p_name_Religion -> The [p_quality] [p_identity]</li>
+                <li>p_name_Religion -> [p_identity] of [p_authority]</li>
+                <li>p_name_Religion -> The [p_identity], [p_epithet]</li>
+                <li>p_quality -> Sovereign</li>
+                <li>p_quality -> Just</li>
+                <li>p_quality -> Almighty</li>
+                <li>p_quality -> Gracious</li>
+                <li>p_identity -> Lord</li>
+                <li>p_identity -> Redeemer</li>
+                <li>p_identity -> Almighty One</li>
+                <li>p_identity -> King of Kings</li>
+                <li>p_authority -> Heaven and Earth</li>
+                <li>p_authority -> the Covenant</li>
+                <li>p_authority -> the Living Word</li>
+                <li>p_epithet -> Judge of Nations</li>
+                <li>p_epithet -> Rock of Ages</li>
+                <li>p_epithet -> Alpha and Omega</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <RulePackDef>
+        <defName>Arktos_TypeMaker_AbbeyOfTheRoad</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityTitle -> [p_title_format]</li>
+                <li>p_title_format -> [p_title_prefix] of [p_concept]</li>
+                <li>p_title_format -> The [p_nature] Shepherd</li>
+                <li>p_title_format -> The [p_conceptual] Deliverer</li>
+                <li>p_title_prefix -> Defender</li>
+                <li>p_title_prefix -> Beacon</li>
+                <li>p_title_prefix -> Voice</li>
+                <li>p_concept -> Salvation</li>
+                <li>p_concept -> Grace</li>
+                <li>p_concept -> the Word</li>
+                <li>p_nature -> Righteous</li>
+                <li>p_nature -> Eternal</li>
+                <li>p_nature -> True</li>
+                <li>p_conceptual -> Light</li>
+                <li>p_conceptual -> Hope</li>
+                <li>p_conceptual -> Lamb</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <!--Catholic-->
+    <MemeDef ParentName="Arktos_Religion_Base">
+        <defName>Arktos_Religion_OrderOfOurLadyOfTheWaters</defName>
+        <label>Order of Our Lady of the Waters of Life</label>
+        <description>A Catholic-style order deeply devoted to Mary and the saints, keeping older sacramental practices alive.</description>
+        <deityNameMakerOverride>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</deityNameMakerOverride>
+        <deityTypeMakerOverride>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</deityTypeMakerOverride>
+        <worshipRoomLabel>church</worshipRoomLabel>
+        <groupDef>Arktos_OldWorldChurch</groupDef>
+        <thingStyleCategories>
+            <li>
+                <category>Christian</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
+    <RulePackDef>
+        <defName>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName -> [c_name_pattern]</li>
+                <li>c_name_pattern -> [c_title] [c_name]</li>
+                <li>c_name_pattern -> [c_name] of [c_place]</li>
+                <li>c_name_pattern -> [c_title] [c_epithet] of [c_mystery]</li>
+                <li>c_title -> Our Lady</li>
+                <li>c_title -> Blessed</li>
+                <li>c_title -> Holy</li>
+                <li>c_title -> Queen</li>
+                <li>c_name -> Mary</li>
+                <li>c_name -> the Immaculate</li>
+                <li>c_name -> Mother of Sorrows</li>
+                <li>c_name -> the Merciful</li>
+                <li>c_place -> Heaven</li>
+                <li>c_place -> the Rosary</li>
+                <li>c_place -> Calvary</li>
+                <li>c_place -> the Sacred Heart</li>
+                <li>c_epithet -> Pure</li>
+                <li>c_epithet -> Glorious</li>
+                <li>c_epithet -> Serene</li>
+                <li>c_mystery -> the Annunciation</li>
+                <li>c_mystery -> Divine Grace</li>
+                <li>c_mystery -> Eternal Mercy</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+    <RulePackDef>
+        <defName>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityTitle -> [c_title_form]</li>
+                <li>c_title_form -> [c_role] of [c_domain]</li>
+                <li>c_title_form -> The [c_quality] [c_role]</li>
+                <li>c_title_form -> [c_intercessor], Guardian of [c_sanctity]</li>
+                <li>c_role -> Mother</li>
+                <li>c_role -> Queen</li>
+                <li>c_role -> Intercessor</li>
+                <li>c_role -> Comforter</li>
+                <li>c_domain -> Mercy</li>
+                <li>c_domain -> the Faithful</li>
+                <li>c_domain -> the Holy Souls</li>
+                <li>c_quality -> Compassionate</li>
+                <li>c_quality -> Blessed</li>
+                <li>c_quality -> Tender</li>
+                <li>c_intercessor -> Heavenly Advocate</li>
+                <li>c_intercessor -> Divine Mediator</li>
+                <li>c_sanctity -> the Sacred Heart</li>
+                <li>c_sanctity -> the Holy Rosary</li>
+                <li>c_sanctity -> the Eternal Light</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+</Defs>

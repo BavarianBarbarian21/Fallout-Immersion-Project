@@ -25,20 +25,22 @@
 		<defName>Arktos_NewWorldChurch</defName>
 		<drawOffset>(0.4,0.4)</drawOffset>
 	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_Tribal</defName>
-		<drawOffset>(0.6,0.4)</drawOffset>
-	</MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_Syncretic</defName>
+    <drawOffset>(0.6,0.4)</drawOffset>
+  </MemeGroupDef>
 	<!-- Abstract parent for Arktos structure memes -->
-	<MemeDef Name="Arktos_Structure_Base" Abstract="True">
+	<MemeDef Name="Arktos_Religion_Base" Abstract="True">
 		<category>Structure</category>
 		<iconPath>Arktos/Structure</iconPath>
 		<impact>0</impact>
 		<deityCount>1</deityCount>
+    <worshipRoomLabel>sanctuary</worshipRoomLabel>
 		<descriptionMaker>
 			<patterns>
 				<li>
 					<def>Arktos_Structure_Story</def>
+          <weight>10</weight>
 				</li>
 			</patterns>
 		</descriptionMaker>
@@ -53,12 +55,12 @@
 			</rulesStrings>
 		</generalRules>
 	</MemeDef>
-	<MemeDef Name="Arktos_Structure_Government_Basis" ParentName="Arktos_Structure_Base" Abstract="True">
+	<MemeDef Name="Arktos_Government_Basis" ParentName="Arktos_Religion_Base" Abstract="True">
 		<deityCount>0</deityCount>
 	</MemeDef>
 	<!-- Government Origin Story Pattern -->
 <IdeoStoryPatternDef>
-  <defName>Fallout_Origin_Story</defName>
+  <defName>Arktos_Structure_Story</defName>
   <segments>
     <li>intro</li>
     <li>crisis</li>
@@ -73,10 +75,12 @@
     <rulesStrings>
       <!-- INTRO: Setting the scene after the apocalypse -->
         <li>intro->[introprefix], [introsuffix]</li>
+
         <li>introprefix->After the bombs fell and the old world crumbled</li>
         <li>introprefix->In the aftermath of nuclear fire</li>
         <li>introprefix->The Great War left behind scars deeper than the deserts and ruins</li>
         <li>introprefix->When civilization fell</li>
+        
         <li>introsuffix->scattered survivors clung to life in the irradiated wastes.</li>
         <li>introsuffix->the ashes gave birth to new tribes, gangs, and settlements struggling for survival.</li>
         <li>introsuffix->from these scars rose fledgling communities.</li>
@@ -140,6 +144,7 @@
          <li>legacyprefix->Though the wastes are harsh</li>
          <li>legacyprefix->As the old world fades</li>
          <li>legacyprefix->Time will judge them</li>
+
       <li>legacysuffix->their name echoes across the wasteland, a beacon to allies and a warning to foes.</li>
       <li>legacysuffix->they carved a place in the new world, shaping the future from the ashes.</li>
       <li>legacysuffix->a testament to the strength found in unity amid ruin.</li>

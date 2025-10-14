@@ -2,14 +2,14 @@
 <Defs>
 	<!-- Syncretic, Native, Dharma -->
      <!--Syncretic-->
-	<MemeDef ParentName="Arktos_Structure_Base">
-		<defName>Arktos_Structure_Syncretic</defName>
+	<MemeDef ParentName="Arktos_Religion_Base">
+		<defName>Arktos_Religion_Syncretic</defName>
 		<label>Father of the Cave</label>
 		<description>A believe mixing elements of Christianity with tribal spirit worship.</description>
 		<deityNameMakerOverride>Arktos_NameMaker_Syncretic</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Syncretic</deityTypeMakerOverride>
 		<worshipRoomLabel>grove</worshipRoomLabel>
-		<groupDef>Arktos_Tribal</groupDef>
+		<groupDef>Arktos_Syncretic</groupDef>
 		<thingStyleCategories>
 			<li>
 				<category>Totemic</category>
@@ -90,25 +90,25 @@
 		</rulePack>
 	</RulePackDef>
     <!--Dharma-->
-	<MemeDef ParentName="Arktos_Structure_Base">
-		<defName>Arktos_Structure_Dharma</defName>
+	<MemeDef ParentName="Arktos_Religion_Base">
+		<defName>Arktos_Religion_Dharma</defName>
 		<label>Dharma Order</label>
 		<description>An order following the Dharma: meditation, balance, and rites aiming to restore inner and social harmony after the fall of civilisation.</description>
 		<deityNameMakerOverride>Arktos_NameMaker_Dharma</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Dharma</deityTypeMakerOverride>
 		<worshipRoomLabel>shrine</worshipRoomLabel>
-		<groupDef>Arktos_Tribal</groupDef>
+		<groupDef>Arktos_Syncretic</groupDef>
 	</MemeDef>
 	<RulePackDef>
 		<defName>Arktos_NameMaker_Dharma</defName>
 		<rulePack>
 			<rulesStrings>
-<li>r_deityName -> [d_name_structure]</li>
+<li>r_deityName -> [d_name_Religion]</li>
 
-<li>d_name_structure -> [d_prefix] [d_deity_core]</li>
-<li>d_name_structure -> The [d_virtue] One</li>
-<li>d_name_structure -> [d_deity_core] of [d_realm]</li>
-<li>d_name_structure -> [d_epithet] of the [d_aspect]</li>
+<li>d_name_Religion -> [d_prefix] [d_deity_core]</li>
+<li>d_name_Religion -> The [d_virtue] One</li>
+<li>d_name_Religion -> [d_deity_core] of [d_realm]</li>
+<li>d_name_Religion -> [d_epithet] of the [d_aspect]</li>
 
 <li>d_prefix -> Mahā</li>
 <li>d_prefix -> Sri</li>
@@ -144,11 +144,11 @@
 		<defName>Arktos_TypeMaker_Dharma</defName>
 		<rulePack>
 			<rulesStrings>
-<li>r_deityTitle -> [d_title_structure]</li>
+<li>r_deityTitle -> [d_title_Religion]</li>
 
-<li>d_title_structure -> [d_role] of [d_principle]</li>
-<li>d_title_structure -> Lord of [d_cycle]</li>
-<li>d_title_structure -> The [d_quality] Guide</li>
+<li>d_title_Religion -> [d_role] of [d_principle]</li>
+<li>d_title_Religion -> Lord of [d_cycle]</li>
+<li>d_title_Religion -> The [d_quality] Guide</li>
 
 <li>d_role -> Preserver</li>
 <li>d_role -> Destroyer</li>
@@ -173,14 +173,14 @@
 		</rulePack>
 	</RulePackDef>
     <!--Native-->
-	<MemeDef ParentName="Arktos_Structure_Base">
-		<defName>Arktos_Structure_Native</defName>
+	<MemeDef ParentName="Arktos_Religion_Base">
+		<defName>Arktos_Religion_Native</defName>
 		<label>Native Way</label>
 		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>
 		<deityNameMakerOverride>Arktos_NameMaker_Native</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Native</deityTypeMakerOverride>
 		<worshipRoomLabel>grove</worshipRoomLabel>
-		<groupDef>Arktos_Tribal</groupDef>
+		<groupDef>Arktos_Syncretic</groupDef>
 		<thingStyleCategories>
 			<li>
 				<category>Totemic</category>
@@ -192,12 +192,12 @@
 		<defName>Arktos_NameMaker_Native</defName>
 		<rulePack>
 			<rulesStrings>
-<li>r_deityName -> [n_name_structure]</li>
+<li>r_deityName -> [n_name_Religion]</li>
 
-<li>n_name_structure -> [n_directional] [n_spirit_name]</li>
-<li>n_name_structure -> Spirit of the [n_natural_force]</li>
-<li>n_name_structure -> [n_animal], Child of [n_element]</li>
-<li>n_name_structure -> [n_totem] Who [n_totem_action]</li>
+<li>n_name_Religion -> [n_directional] [n_spirit_name]</li>
+<li>n_name_Religion -> Spirit of the [n_natural_force]</li>
+<li>n_name_Religion -> [n_animal], Child of [n_element]</li>
+<li>n_name_Religion -> [n_totem] Who [n_totem_action]</li>
 
 <li>n_directional -> Great</li>
 <li>n_directional -> Old</li>
