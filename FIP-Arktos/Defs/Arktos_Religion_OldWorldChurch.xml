@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- Old world religions -->
-     <MemeDef ParentName="Arktos_Religion_Base" Abstract="true">
-		<defName>Arktos_Religion_OldWorldChurch_Base</defName>
+     <MemeDef Name="Arktos_Religion_OldWorldChurch_Base" ParentName="Arktos_Religion_Base" Abstract="true">
 		<worshipRoomLabel>church</worshipRoomLabel>
         <groupDef>Arktos_OldWorldChurch</groupDef>
+        <iconPath>Arktos/OldWorldChurch</iconPath>
         <thingStyleCategories>
             <li>
                 <category>Christian</category>
@@ -31,6 +31,10 @@
         <rulePack>
             <rulesStrings>
                 <li>r_deityName->The [adj][name]</li>
+                <li>adj->Last</li>
+                <li>adj->Final</li>
+                <li>name->Hope</li>
+                <li>name->Light</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -171,7 +175,7 @@
     <!--Catholic-->
     <MemeDef ParentName="Arktos_Religion_OldWorldChurch_Base">
         <defName>Arktos_Religion_OrderOfOurLadyOfTheWaters</defName>
-        <label>Order of Our Lady of the Waters of Life</label>
+        <label>Waters of Life</label>
         <description>A Catholic-style order deeply devoted to Mary and the saints, keeping older sacramental practices alive.</description>
         <deityNameMakerOverride>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</deityTypeMakerOverride>

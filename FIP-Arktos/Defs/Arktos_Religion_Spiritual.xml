@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- Syncretic, Native, Dharma -->
-	 <MemeDef ParentName="Arktos_Religion_Base" Abstract="true">
-		<defName>Arktos_Religion_Spiritual</defName>
+	 <MemeDef Name="Arktos_Religion_Spiritual_Base" ParentName="Arktos_Religion_Base" Abstract="true">
 		<worshipRoomLabel>grove</worshipRoomLabel>
 		<groupDef>Arktos_Spiritual</groupDef>
+		<iconPath>Arktos/Spiritual</iconPath>
 		<thingStyleCategories>
 			<li>
 				<category>Totemic</category>
@@ -20,7 +20,7 @@
 	</MemeDef>
 
      <!--Syncretic-->
-	<MemeDef ParentName="Arktos_Religion_Spiritual">
+	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Syncretic</defName>
 		<label>Father of the Cave</label>
 		<description>A believe mixing elements of Christianity with tribal spirit worship.</description>
@@ -102,7 +102,7 @@
 		</rulePack>
 	</RulePackDef>
     <!--Dharma-->
-	<MemeDef ParentName="Arktos_Religion_Spiritual">
+	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Dharma</defName>
 		<label>Dharma Order</label>
 		<description>An order following the Dharma: meditation, balance, and rites aiming to restore inner and social harmony after the fall of civilisation.</description>
@@ -184,7 +184,7 @@
 		</rulePack>
 	</RulePackDef>
     <!--Native-->
-	<MemeDef ParentName="Arktos_Religion_Spiritual">
+	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Native</defName>
 		<label>Native</label>
 		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>

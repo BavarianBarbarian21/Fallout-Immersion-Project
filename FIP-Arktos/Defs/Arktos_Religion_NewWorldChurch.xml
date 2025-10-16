@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- New world religions -->
-    <MemeDef ParentName="Arktos_Religion_Base" Abstract="true">
-		<defName>Arktos_Religion_NewWorldChurch_Base</defName>
+    <MemeDef Name="Arktos_Religion_NewWorldChurch_Base" ParentName="Arktos_Religion_Base" Abstract="true">
 		<worshipRoomLabel>tempel</worshipRoomLabel>
-        <groupDef>ArktosNewdWorldChurch</groupDef>
+        <groupDef>Arktos_NewWorldChurch</groupDef>
+        <iconPath>Arktos/NewWorldChurch</iconPath>
         <thingStyleCategories>
             <li>
                 <category>Morbid</category>
@@ -19,8 +19,8 @@
 
     <!--Children of Atom-->
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
-        <defName>Arktos_Religion_NewWorldChurch_Base</defName>
-        <label>Church of the Children of Atom</label>
+        <defName>Arktos_Religion_ChildrenOfAtom</defName>
+        <label>Children of Atom</label>
         <description>A new cult that treats radiation and atomic remnants as sacred, with ritualised exposure and offerings.</description>
         <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfAtom</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfAtom</deityTypeMakerOverride>
@@ -76,7 +76,7 @@
     <!--Children of the Cathedral-->
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
         <defName>Arktos_Religion_ChildrenOfTheCathedral</defName>
-        <label>Church of the Children of the Cathedral</label>
+        <label>Children of the Cathedral</label>
         <description>A cathedral-centered faith with strong civic influence and ceremonial public worship.</description>
         <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfTheCathedral</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfTheCathedral</deityTypeMakerOverride>
