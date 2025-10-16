@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- Old world religions -->
-    <!--Secular-->
-    <MemeDef ParentName="Arktos_Religion_Base">
-        <defName>Arktos_Religion_FollowerOfTheApocalypse</defName>
-        <label>Follower of the Apocalypse</label>
-        <description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
-        <deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
-        <deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
-        <worshipRoomLabel>church</worshipRoomLabel>
+     <MemeDef ParentName="Arktos_Religion_Base" Abstract="true">
+		<defName>Arktos_Religion_OldWorldChurch_Base</defName>
+		<worshipRoomLabel>church</worshipRoomLabel>
         <groupDef>Arktos_OldWorldChurch</groupDef>
         <thingStyleCategories>
             <li>
@@ -16,7 +11,21 @@
                 <priority>4</priority>
             </li>
         </thingStyleCategories>
+        <symbolPackOverride>true</symbolPackOverride>
+        <symbolPacks>
+            <li><ideoName>Follower</ideoName><adjective>Follower</adjective><member>Follower</member><prefix>true</prefix></li>
+        </symbolPacks>
+	</MemeDef>
+
+    <!--Follower-->
+    <MemeDef ParentName="Arktos_Religion_OldWorldChurch_Base">
+        <defName>Arktos_Religion_FollowerOfTheApocalypse</defName>
+        <label>Follower of the Apocalypse</label>
+        <description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
+        <deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
+        <deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
     </MemeDef>
+
     <RulePackDef>
         <defName>Arktos_NameMaker_FollowerOfTheApocalypse</defName>
         <rulePack>
@@ -29,26 +38,20 @@
         <defName>Arktos_TypeMaker_FollowerOfTheApocalypse</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_deityType->Humanitarian</li>
+                <li>r_deityType->Humanity</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
+
     <!--Mormon-->
-    <MemeDef ParentName="Arktos_Religion_Base">
+    <MemeDef ParentName="Arktos_Religion_OldWorldChurch_Base">
         <defName>Arktos_Religion_CanaaniteChurch</defName>
         <label>Canaanite Church</label>
         <description>A restorationist movement that mixes frontier theocracy and strict social order, inspired by old doctrinal texts.</description>
         <deityNameMakerOverride>Arktos_NameMaker_CanaaniteChurch</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_CanaaniteChurch</deityTypeMakerOverride>
-        <worshipRoomLabel>church</worshipRoomLabel>
-        <groupDef>Arktos_OldWorldChurch</groupDef>
-        <thingStyleCategories>
-            <li>
-                <category>Christian</category>
-                <priority>4</priority>
-            </li>
-        </thingStyleCategories>
     </MemeDef>
+
     <RulePackDef>
         <defName>Arktos_NameMaker_CanaaniteChurch</defName>
         <rulePack>
@@ -81,7 +84,7 @@
         <defName>Arktos_TypeMaker_CanaaniteChurch</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_deityTitle -> [m_title_pattern]</li>
+                <li>r_deityType -> [m_title_pattern]</li>
                 <li>m_title_pattern -> [m_title_lead] of [m_domain]</li>
                 <li>m_title_pattern -> [m_reverent_form], Keeper of [m_secret]</li>
                 <li>m_title_pattern -> [m_actioner] of [m_destiny]</li>
@@ -107,22 +110,16 @@
             </rulesStrings>
         </rulePack>
     </RulePackDef>
+
     <!--Protestant-->
-    <MemeDef ParentName="Arktos_Religion_Base">
+    <MemeDef ParentName="Arktos_Religion_OldWorldChurch_Base">
         <defName>Arktos_Religion_AbbeyOfTheRoad</defName>
         <label>Abbey of the Road</label>
         <description>A protestant-style order built around scripture and the travelling pulpit; it prizes scripture, preaching and humble worship.</description>
         <deityNameMakerOverride>Arktos_NameMaker_AbbeyOfTheRoad</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_AbbeyOfTheRoad</deityTypeMakerOverride>
-        <worshipRoomLabel>church</worshipRoomLabel>
-        <groupDef>Arktos_OldWorldChurch</groupDef>
-        <thingStyleCategories>
-            <li>
-                <category>Christian</category>
-                <priority>4</priority>
-            </li>
-        </thingStyleCategories>
     </MemeDef>
+
     <RulePackDef>
         <defName>Arktos_NameMaker_AbbeyOfTheRoad</defName>
         <rulePack>
@@ -152,7 +149,7 @@
         <defName>Arktos_TypeMaker_AbbeyOfTheRoad</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_deityTitle -> [p_title_format]</li>
+                <li>r_deityType -> [p_title_format]</li>
                 <li>p_title_format -> [p_title_prefix] of [p_concept]</li>
                 <li>p_title_format -> The [p_nature] Shepherd</li>
                 <li>p_title_format -> The [p_conceptual] Deliverer</li>
@@ -172,7 +169,7 @@
         </rulePack>
     </RulePackDef>
     <!--Catholic-->
-    <MemeDef ParentName="Arktos_Religion_Base">
+    <MemeDef ParentName="Arktos_Religion_OldWorldChurch_Base">
         <defName>Arktos_Religion_OrderOfOurLadyOfTheWaters</defName>
         <label>Order of Our Lady of the Waters of Life</label>
         <description>A Catholic-style order deeply devoted to Mary and the saints, keeping older sacramental practices alive.</description>
@@ -186,6 +183,10 @@
                 <priority>4</priority>
             </li>
         </thingStyleCategories>
+        <symbolPackOverride>true</symbolPackOverride>
+        <symbolPacks>
+            <li><ideoName>Follower</ideoName><adjective>Follower</adjective><member>Follower</member><prefix>true</prefix></li>
+        </symbolPacks>
     </MemeDef>
     <RulePackDef>
         <defName>Arktos_NameMaker_OrderOfOurLadyOfTheWaters</defName>
@@ -220,7 +221,7 @@
         <defName>Arktos_TypeMaker_OrderOfOurLadyOfTheWaters</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_deityTitle -> [c_title_form]</li>
+                <li>r_deityType -> [c_title_form]</li>
                 <li>c_title_form -> [c_role] of [c_domain]</li>
                 <li>c_title_form -> The [c_quality] [c_role]</li>
                 <li>c_title_form -> [c_intercessor], Guardian of [c_sanctity]</li>

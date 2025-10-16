@@ -26,16 +26,18 @@
 		<drawOffset>(0.4,0.4)</drawOffset>
 	</MemeGroupDef>
   <MemeGroupDef>
-    <defName>Arktos_Syncretic</defName>
+    <defName>Arktos_Spiritual</defName>
     <drawOffset>(0.6,0.4)</drawOffset>
   </MemeGroupDef>
+
+
+
 	<!-- Abstract parent for Arktos structure memes -->
-	<MemeDef Name="Arktos_Religion_Base" Abstract="True">
+	<MemeDef Name="Arktos_Government_Base" Abstract="True">
 		<category>Structure</category>
 		<iconPath>Arktos/Structure</iconPath>
 		<impact>0</impact>
-		<deityCount>1</deityCount>
-    <worshipRoomLabel>sanctuary</worshipRoomLabel>
+		<deityCount>0</deityCount>
 		<descriptionMaker>
 			<patterns>
 				<li>
@@ -55,10 +57,12 @@
 			</rulesStrings>
 		</generalRules>
 	</MemeDef>
-	<MemeDef Name="Arktos_Government_Basis" ParentName="Arktos_Religion_Base" Abstract="True">
-		<deityCount>0</deityCount>
+
+	<MemeDef Name="Arktos_Religion_Basis" ParentName="Arktos_Government_Base" Abstract="True">
+		<deityCount>1</deityCount>
 	</MemeDef>
-	<!-- Government Origin Story Pattern -->
+  
+<!-- Government Origin Story Pattern -->
 <IdeoStoryPatternDef>
   <defName>Arktos_Structure_Story</defName>
   <segments>
