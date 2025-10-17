@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- DLC: Ideology - Structures & Misc (transformed labels/descriptions for Arktos) -->
+
+  <MemeDef>
+    <defName>Structure_Animist</defName>
+    <label>Arktos: tribal spirit-worship</label>
+    <description>In the irradiated wastes, the old world's spirits were reborn in wreckage and ruins; the faithful read omens in busted radios, glowing fungi, and broken power cores.</description>
+    <category>Structure</category>
+    <iconPath>UI/Structures/Animist</iconPath>
+    <impact>0</impact>
+    <worshipRoomLabel>temple</worshipRoomLabel>
+    <randomizationSelectionWeightFactor>2</randomizationSelectionWeightFactor>
+    <deityCount>0</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeLeaderNoun->curate</li>
+        <li>memeLeaderNoun->speaker</li>
+        <li>memeLeaderAdjective->universe</li>
+        <li>memeLeaderAdjective->spirit</li>
+        <li>memeLeaderAdjective->anima</li>
+        <li>memeHyphenPrefix->ani</li>
+        <li>memeMoralist->shaman</li>
+        <li>memeMoralist->priest</li>
+        <li>memeMoralist->elder</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>AnimistDescription</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_animist</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <theme>animism</theme>
+        <adjective>animist</adjective>
+        <member>animist</member>
+      </li>
+      <li>
+        <theme>spiritism</theme>
+        <adjective>spiritist</adjective>
+        <member>spiritist</member>
+      </li>
+    </symbolPacks>
+    <thingStyleCategories>
+      <li>
+        <category>Animalist</category>
+        <priority>1</priority>
+      </li>
+    </thingStyleCategories>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Structure_TheistEmbodied</defName>
+    <label>Arktos: embodied theist</label>
+    <description>Old-world saints and fallen heroes are worshipped as titans—pilgrims venerate rusted exoskeletons, radiation-scarred banners, and cracked statues.</description>
+    <category>Structure</category>
+    <groupDef>Theist_Embodied</groupDef>
+    <iconPath>UI/Structures/Structure_EmbodiedTheist</iconPath>
+    <impact>0</impact>
+    <worshipRoomLabel>pantheon</worshipRoomLabel>
+    <deityCount>2~4</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeCreed->sect</li>
+        <li>memeCreed->cult</li>
+        <li>memeCreed->temple</li>
+        <li>memeCreed->faith</li>
+        <li>memeHyphenPrefix->theo</li>
+        <li>memeConcept->creation</li>
+        <li>memeConcept->life</li>
+        <li>memeLeaderNoun->templar</li>
+        <li>memeLeaderAdjective->divine</li>
+        <li>memeMoralist->priest</li>
+        <li>memeMoralist->cleric</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>TheistMyth</def></li>
+        <li><def>TheistFounder</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_theist</key><value>true</value></li>
+        <li><key>structure_theistEmbodied</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Spiritism</ideoName>
+        <theme>spiritualism</theme>
+        <adjective>spiritual</adjective>
+        <member>spiritist</member>
+      </li>
+      <li>
+        <ideoName>Faith</ideoName>
+        <theme>faith</theme>
+        <adjective>faithful</adjective>
+        <member>faithholder</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Structure_TheistAbstract</defName>
+    <label>Arktos: abstract theist</label>
+    <description>Believers find divinity in static and code—pre-War transmissions and ancient AIs become ineffable gods whose will is read in blinking lights.</description>
+    <category>Structure</category>
+    <groupDef>Theist_Abstract</groupDef>
+    <iconPath>UI/Structures/AbstractTheist</iconPath>
+    <impact>0</impact>
+    <worshipRoomLabel>temple</worshipRoomLabel>
+    <deityCount>1~4</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeCreed->temple</li>
+        <li>memeCreed->sect</li>
+        <li>memeCreed->cult</li>
+        <li>memeCreed->faith</li>
+        <li>memeHyphenPrefix->theo</li>
+        <li>memeConcept->creation</li>
+        <li>memeConcept->life</li>
+        <li>memeLeaderNoun->bishop</li>
+        <li>memeLeaderNoun->cardinal</li>
+        <li>memeLeaderNoun->pope</li>
+        <li>memeLeaderNoun->divus</li>
+        <li>memeLeaderAdjective->holy</li>
+        <li>memeLeaderAdjective->divine</li>
+        <li>memeMoralist->priest</li>
+        <li>memeMoralist->pastor</li>
+        <li>memeMoralist->cleric</li>
+        <li>memeMoralist->preacher</li>
+        <li>memeMoralist->rector</li>
+        <li>memeMoralist->abbot</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>TheistMyth</def></li>
+        <li><def>TheistFounder</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_theist</key><value>true</value></li>
+        <li><key>structure_theistAbstract</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Spiritism</ideoName>
+        <theme>spiritualism</theme>
+        <adjective>spiritual</adjective>
+        <member>spiritist</member>
+      </li>
+      <li>
+        <ideoName>Faith</ideoName>
+        <theme>faith</theme>
+        <adjective>faithful</adjective>
+        <member>faithholder</member>
+      </li>
+      <li>
+        <ideoName>Divinism</ideoName>
+        <theme>divinity</theme>
+        <adjective>divinist</adjective>
+        <member>divinist</member>
+      </li>
+      <li>
+        <ideoName>Holyism</ideoName>
+        <theme>holiness</theme>
+        <adjective>holyist</adjective>
+        <member>holyist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Structure_Ideological</defName>
+    <label>Arktos: ideological</label>
+    <description>New dogmas cling to pre-War ideologies reinterpreted through ruin and barter — no gods, only stories and survival.</description>
+    <category>Structure</category>
+    <iconPath>UI/Structures/Structure_Ideological</iconPath>
+    <impact>0</impact>
+    <worshipRoomLabel>sanctuary</worshipRoomLabel>
+    <randomizationSelectionWeightFactor>5</randomizationSelectionWeightFactor>
+    <deityCount>0</deityCount>
+    <consumableBuildings>
+      <li>SacrificialFlag</li>
+    </consumableBuildings>
+    <renderOrder>-1</renderOrder>
+    <generalRules>
+      <rulesStrings>
+        <li>memeHyphenPrefix->ideo</li>
+        <li>memeLeaderNoun->mind</li>
+        <li>memeLeaderNoun->decider</li>
+        <li>memeLeaderNoun->leader</li>
+        <li>memeLeaderAdjective->ethical</li>
+        <li>memeLeaderAdjective->moral</li>
+        <li>memeLeaderAdjective->awoken</li>
+        <li>memeMoralist->counselor</li>
+        <li>memeMoralist->ethicist</li>
+        <li>memeMoralist->moralist</li>
+        <li>memeMoralist->philosopher</li>
+        <li>memeMoralist->thinker</li>
+        <li>memeMoralist->academic</li>
+        <li>memeMoralist->sophist</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li>
+          <def>IdeologicalFounder</def>
+          <weight>1</weight>
+        </li>
+        <li>
+          <def>IdeologicalLesson</def>
+          <weight>3</weight>
+        </li>
+      </patterns>
+      <constants>
+        <li><key>structure_ideological</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Ethics</ideoName>
+        <theme>ethics</theme>
+        <adjective>ethical</adjective>
+        <member>ethicist</member>
+      </li>
+      <li>
+        <ideoName>Ideology</ideoName>
+        <theme>ideology</theme>
+        <adjective>ideological</adjective>
+        <member>ideologist</member>
+      </li>
+      <li>
+        <ideoName>Justice</ideoName>
+        <theme>justice</theme>
+        <adjective>just</adjective>
+        <member>justicar</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Structure_Archist</defName>
+    <label>Arktos: archist</label>
+    <description>Tech-cults revere pre-War machines as gods; salvaged servers and power cores are altars to a logic no living mind fully understands.</description>
+    <category>Structure</category>
+    <iconPath>UI/Structures/Archist</iconPath>
+    <impact>0</impact>
+    <randomizationSelectionWeightFactor>3</randomizationSelectionWeightFactor>
+    <deityCount>0</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->archic</li>
+        <li>memeAdjective->archotechnic</li>
+        <li>memeAdjective->archonic</li>
+        <li>memeHyphenPrefix->archo</li>
+        <li>memeHyphenPrefix->arch</li>
+        <li>memeLeaderNoun->archist</li>
+        <li>memeLeaderNoun->archotechnist</li>
+        <li>memeLeaderAdjective->archic</li>
+        <li>memeLeaderAdjective->exochrome</li>
+        <li>memeMoralist->priest</li>
+        <li>memeMoralist->cleric</li>
+        <li>memeMoralist->rector</li>
+        <li>memeMoralist->abbot</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>ArchistDescription</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_archist</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <worshipRoomLabel>shrine</worshipRoomLabel>
+    <symbolPacks>
+      <li>
+        <ideoName>Archotechnics</ideoName>
+        <theme>archotechnology</theme>
+        <adjective>archotechnic</adjective>
+        <member>archotechnist</member>
+      </li>
+      <li>
+        <ideoName>Archism</ideoName>
+        <theme>archism</theme>
+        <adjective>archist</adjective>
+        <member>archist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <!-- DLC: Ideology - Misc Memes (transformed) -->
+
+  <MemeDef>
+    <defName>AnimalPersonhood</defName>
+    <label>Arktos: animal personhood</label>
+    <description>After the Fall some cults treat mutated animals as kin; beasts are granted rights and reverence, and are guarded like relics.</description>
+    <iconPath>UI/Memes/AnimalPersonhood</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>3</impact>
+    <renderOrder>80</renderOrder>
+    <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
+    <exclusionTags>
+      <li>AnimalTreatment</li>
+    </exclusionTags>
+    <requireOne>
+      <li>
+        <li>AnimalConnection_Strong</li>
+      </li>
+      <li>
+        <li>AnimalSlaughter_Prohibited</li>
+        <li>AnimalSlaughter_Horrible</li>
+        <li>AnimalSlaughter_Disapproved</li>
+      </li>
+      <li>
+        <li>KillingInnocentAnimals_Abhorrent</li>
+        <li>KillingInnocentAnimals_Horrible</li>
+        <li>KillingInnocentAnimals_Disapproved</li>
+      </li>
+      <li>
+        <li>MeatEating_Abhorrent</li>
+        <li>MeatEating_Horrible</li>
+        <li>MeatEating_Disapproved</li>
+      </li>
+      <li>
+        <li>Fishing_Prohibited</li>
+        <li>Fishing_Disapproved</li>
+      </li>
+    </requireOne>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->animal</li>
+        <li>memeAdjective->furry</li>
+        <li>memeCreed->pack</li>
+        <li>memeCreed->herd</li>
+        <li>memeCreed->flock</li>
+        <li>memeConcept->animals</li>
+        <li>memeLeaderNoun->beast</li>
+        <li>memeLeaderNoun->animal</li>
+        <li>memeLeaderAdjective->alpha</li>
+        <li>memeMoralist->whisperer</li>
+        <li>memeMoralist->herder</li>
+        <li>memeMoralist->shepherd</li>
+      </rulesStrings>
+    </generalRules>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Transhumanist</defName>
+    <label>Arktos: transhumanist</label>
+    <description>In the ruins, some believe salvation lies in grafting old-world tech into flesh — a doctrine of nuts, wires and starved ambition.</description>
+    <iconPath>UI/Memes/Transhumanist</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <exclusionTags>
+      <li>FleshAugmentation</li>
+    </exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->technological</li>
+        <li>memeAdjective->machine</li>
+        <li>memeAdjective->industrial</li>
+        <li>memeCreed->school</li>
+        <li>memeCreed->academy</li>
+        <li>memeCreed->university</li>
+        <li>memeCreed->philosophy</li>
+        <li>memeHyphenPrefix->techno</li>
+        <li>memeHyphenPrefix->cyber</li>
+        <li>memeHyphenPrefix->haxor</li>
+        <li>memeHyphenPrefix->wire</li>
+        <li>memeConcept->technology</li>
+        <li>memeConcept->silicon</li>
+        <li>memeConcept->artifice</li>
+        <li>memeConcept->augmentation</li>
+        <li>memeConcept->enhancement</li>
+        <li>memeLeaderNoun->haxor</li>
+        <li>memeLeaderNoun->superuser</li>
+        <li>memeLeaderNoun->booster</li>
+        <li>memeLeaderAdjective->techno</li>
+        <li>memeLeaderAdjective->cyber</li>
+        <li>memeMoralist->installer</li>
+        <li>memeMoralist->fixer</li>
+        <li>memeMoralist->uplifter</li>
+        <li>memeMoralist->technologist</li>
+      </rulesStrings>
+    </generalRules>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>FleshPurity</defName>
+    <label>Arktos: flesh purity</label>
+    <description>Some hold that the human body is sacred and must be kept unmodified — a backlash against the grafting cults and their mutated saints.</description>
+    <iconPath>UI/Memes/FleshPurity</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+  </MemeDef>
+
+  <!-- DLC: Ideology - Primacy -->
+
+  <MemeDef>
+    <defName>HumanPrimacy</defName>
+    <label>Arktos: human primacy</label>
+    <description>In some settlements humans are elevated above all, a reaction born from desperation: survival means humans must hold dominion.</description>
+    <iconPath>UI/Memes/PrimacyHuman</iconPath>
+    <groupDef>Primacy</groupDef>
+    <impact>2</impact>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>NaturePrimacy</defName>
+    <label>Arktos: nature primacy</label>
+    <description>Other groups revere the land itself — the mutated flora and fauna are sacred, and the machines that scarred the earth are blasphemy.</description>
+    <iconPath>UI/Memes/PrimacyNature</iconPath>
+    <groupDef>Primacy</groupDef>
+    <impact>2</impact>
+  </MemeDef>
+
+  <!-- DLC: Ideology - Individualism / Collectivism -->
+
+  <MemeDef>
+    <defName>Individualist</defName>
+    <label>Arktos: individualist</label>
+    <description>After the collapse many cling to fierce personal liberty — 'my life, my rules' carved into the ruins' walls.</description>
+    <iconPath>UI/Memes/Individualist</iconPath>
+    <groupDef>Individualism</groupDef>
+    <impact>1</impact>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Collectivist</defName>
+    <label>Arktos: collectivist</label>
+    <description>Other bands prioritize the group; survival is communal, and selfishness is punished harshly in the name of shared hope.</description>
+    <iconPath>UI/Memes/Collectivist</iconPath>
+    <groupDef>Individualism</groupDef>
+    <impact>1</impact>
+  </MemeDef>
+
+  <!-- DLC: Ideology - Group Relation / Supremacy -->
+
+  <MemeDef>
+    <defName>Supremacist</defName>
+    <label>Arktos: supremacist</label>
+    <description>Some factions believe they are destined to rule — brutality dressed as destiny, carved into flags of scavenged steel.</description>
+    <iconPath>UI/Memes/Supremacist</iconPath>
+    <groupDef>GroupRelation</groupDef>
+    <impact>1</impact>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Loyalist</defName>
+    <label>Arktos: loyalist</label>
+    <description>Loyalty to clan and code is everything; betrayal is the worst sin and is repaid in blood and exile.</description>
+    <iconPath>UI/Memes/Loyalist</iconPath>
+    <groupDef>GroupRelation</groupDef>
+    <impact>1</impact>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Guilty</defName>
+    <label>Arktos: guilty</label>
+    <description>Some groups carry ritual guilt as virtue — purification by penance is how they survive their pasts.</description>
+    <iconPath>UI/Memes/Guilty</iconPath>
+    <groupDef>GroupRelation</groupDef>
+    <impact>1</impact>
+  </MemeDef>
+
+  <!-- DLC: Ideology - Gender Supremacy variants -->
+
+  <MemeDef>
+    <defName>MaleSupremacy</defName>
+    <label>Arktos: male supremacy</label>
+    <description>In a few warped sects masculinity is worshipped as purity — a harsh, authoritarian creed twisted from pre-War myths.</description>
+    <iconPath>UI/Memes/SupremacyMale</iconPath>
+    <groupDef>GenderSupremacy</groupDef>
+    <impact>2</impact>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>FemaleSupremacy</defName>
+    <label>Arktos: female supremacy</label>
+    <description>Other sects elevate women to sovereign status; rituals and matriarchal councils enforce a different iron order.</description>
+    <iconPath>UI/Memes/SupremacyFemale</iconPath>
+    <groupDef>GenderSupremacy</groupDef>
+    <impact>2</impact>
+  </MemeDef>
+
+  <!-- DLC: Biotech - Bloodfeeding (already included but normalized) -->
+
+  <MemeDef>
+    <defName>Bloodfeeding</defName>
+    <label>Arktos: blood-feasting cult</label>
+    <description>Rituals of blood and mutation promise power; some cults worship hunger itself and trade in flesh and organs.</description>
+    <iconPath>UI/Memes/Bloodfeeding</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>999</renderOrder>
+  </MemeDef>
+
+  <!-- DLC: Anomaly & Odyssey - Misc cults -->
+
+  <MemeDef>
+    <defName>Inhuman</defName>
+    <label>Arktos: inhuman</label>
+    <description>Some forsake their humanity for machine worship or mutation; they become strange cults, terrifying and efficient.</description>
+    <iconPath>UI/Memes/Inhuman</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>3</impact>
+    <renderOrder>1100</renderOrder>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Ritualist</defName>
+    <label>Arktos: ritualist</label>
+    <description>Belief in ritual—ceremony binds communities together; candles, relics, and sacrifice keep the old truths alive.</description>
+    <iconPath>UI/Memes/Ritualist</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>1101</renderOrder>
+  </MemeDef>
+
+  <MemeDef>
+    <defName>Shipborn</defName>
+    <label>Arktos: shipborn</label>
+    <description>Tales of stars and great engines became liturgy; a few dream of reclaiming the void or restoring the lost ship-mothers.</description>
+    <iconPath>UI/Memes/Shipborn</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>1105</renderOrder>
+  </MemeDef>
+
+</Defs>
