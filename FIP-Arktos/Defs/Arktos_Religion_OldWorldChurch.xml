@@ -24,6 +24,11 @@
         <description>A secular movement born from the Old World's collapse; its followers have sworn to help those in need.</description>
         <deityNameMakerOverride>Arktos_NameMaker_FollowerOfTheApocalypse</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_FollowerOfTheApocalypse</deityTypeMakerOverride>
+        <generalRules>
+            <rulesStrings>
+                <li>memeMoralist ->missionary</li>
+            </rulesStrings>
+        </generalRules>
     </MemeDef>
 
     <RulePackDef>
@@ -197,16 +202,15 @@
         <rulePack>
             <rulesStrings>
                 <li>r_deityName -> [c_name_pattern]</li>
-                <li>c_name_pattern -> [c_title] [c_name]</li>
-                <li>c_name_pattern -> [c_name] of [c_place]</li>
-                <li>c_name_pattern -> [c_title] [c_epithet] of [c_mystery]</li>
+                <li>c_name_pattern -> [c_title] Mary [c_name]</li>
+                <li>c_name_pattern -> [c_name] Mary of [c_place]</li>
+                <li>c_name_pattern -> [c_title] Mary the [c_epithet] of [c_mystery]</li>
                 <li>c_title -> Our Lady</li>
                 <li>c_title -> Blessed</li>
                 <li>c_title -> Holy</li>
                 <li>c_title -> Queen</li>
-                <li>c_name -> Mary</li>
                 <li>c_name -> the Immaculate</li>
-                <li>c_name -> Mother of Sorrows</li>
+                <li>c_name -> the Mother of Sorrows</li>
                 <li>c_name -> the Merciful</li>
                 <li>c_place -> Heaven</li>
                 <li>c_place -> the Rosary</li>

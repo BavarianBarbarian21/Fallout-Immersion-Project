@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Remove vanilla Structure_* MemeDefs (keeps Arktos_ prefixed defs) -->
 <Patch>
-    <!--<Operation Class="PatchOperationRemove"><xpath>//MemeDef[starts-with(defName, 'Structure_')]</xpath></Operation>-->
+    <!--Remove all Structures and Cultures-->
     <Operation Class="PatchOperationRemove">
         <xpath>//FactionDef/structureMemeWeights</xpath>
     </Operation>
-    <!-- Add Arktos structure weights to FactionBase so factions default to Arktos structures -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/factionNameMaker</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/settlementNameMaker</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/allowedCultures</xpath>
+    </Operation>
+    <!-- Structure Patch -->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
@@ -25,6 +34,27 @@
                 <Arktos_Government_Raider>1</Arktos_Government_Raider>
                 <Arktos_Government_Tribal>1</Arktos_Government_Tribal>
             </structureMemeWeights>
+        </value>
+    </Operation>
+    <!-- FactionNameMaker Patch -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+           <factionNameMaker>Arktos_NamerFaction</factionNameMaker>
+        </value>
+    </Operation>
+    <!-- SettlementNameMaker Patch -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+           <settlementNameMaker>Arktos_NamerSettlement</settlementNameMaker>
+        </value>
+    </Operation>
+    <!-- Culture Patch -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+           <allowedCultures><li>Arktos_American</li></allowedCultures>
         </value>
     </Operation>
 </Patch>
