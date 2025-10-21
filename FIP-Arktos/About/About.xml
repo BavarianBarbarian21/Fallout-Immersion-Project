@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>FIP-Arktos</name>
+  <packageId>FIP.Arktos</packageId>
   <author>Feil</author>
-  <description>Explore the flora and fauna of Project Paradise by Arktos Pharma.</description>
+  <name>FIP - Arktos</name>
+  <description>From the Fallout rises a new Paradise, create it in your own image.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <packageId>FalloutImmersionProject.Arktos</packageId>
+  <modDependencies>
+    <li>
+      <packageId>Feil.Donaustahl</packageId>
+      <displayName>FIP - Donaustahl</displayName>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3563825876</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Feil.Donaustahl</li>
+  </loadAfter>
 </ModMetaData>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>Donaustahl_CivilCaliforniaState</defName>
+    <label>Civil California State</label>
+    <description>The Civil California State is a faction of survivors and settlers who have banded together to rebuild society in the aftermath of a devastating conflict. They are known for their resourcefulness, resilience, and commitment to community values. The CCS emphasizes cooperation and mutual aid among its members, striving to create a safe and prosperous environment despite the challenges they face in the post-apocalyptic world.</description>
+    <pawnSingular>civil</pawnSingular>
+    <pawnsPlural>civilians</pawnsPlural>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+    <categoryTag>Outlander</categoryTag>
+    <techLevel>Industrial</techLevel>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>President</leaderTitle>
+    <settlementNameMaker>FCP_Namer_Settlement_NCR</settlementNameMaker>
+    <allowedCultures><li>FCP_Culture_NCR_Californian</li></allowedCultures>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>          
+        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+</Defs>
