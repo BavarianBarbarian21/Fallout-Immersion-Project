@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Add/replace the genes list for every XenotypeDef to include WestTek gene tiers -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/XenotypeDef</xpath>
+        <value>
+            <genes>
+                <li>WestTek_Strength_A</li>
+                <li>WestTek_Strength_B</li>
+                <li>WestTek_Strength_C</li>
+                <li>WestTek_Strength_D</li>
+
+                <li>WestTek_Perception_A</li>
+                <li>WestTek_Perception_B</li>
+                <li>WestTek_Perception_C</li>
+                <li>WestTek_Perception_D</li>
+
+                <li>WestTek_Endurance_A</li>
+                <li>WestTek_Endurance_B</li>
+                <li>WestTek_Endurance_C</li>
+                <li>WestTek_Endurance_D</li>
+
+                <li>WestTek_Charisma_A</li>
+                <li>WestTek_Charisma_B</li>
+                <li>WestTek_Charisma_C</li>
+                <li>WestTek_Charisma_D</li>
+
+                <li>WestTek_Intelligence_A</li>
+                <li>WestTek_Intelligence_B</li>
+                <li>WestTek_Intelligence_C</li>
+                <li>WestTek_Intelligence_D</li>
+
+                <li>WestTek_Agility_A</li>
+                <li>WestTek_Agility_B</li>
+                <li>WestTek_Agility_C</li>
+                <li>WestTek_Agility_D</li>
+
+                <li>WestTek_Luck_A</li>
+                <li>WestTek_Luck_B</li>
+                <li>WestTek_Luck_C</li>
+                <li>WestTek_Luck_D</li>
+            </genes>
+        </value>
+    </Operation>
+</Patch>

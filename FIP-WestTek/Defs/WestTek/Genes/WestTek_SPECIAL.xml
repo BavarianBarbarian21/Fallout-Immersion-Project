@@ -8,7 +8,7 @@
     <displayPriorityInGenepack>-1996</displayPriorityInGenepack>
   </GeneCategoryDef>
 
-  <GeneDef Name="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Gene_SPECIAL" Abstract="True">
     <displayCategory>SPECIAL</displayCategory>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <endogeneCategory>None</endogeneCategory>
@@ -17,15 +17,15 @@
   </GeneDef>
 
   <!-- Strength -->
-  <GeneDef Name="WestTek_Strength" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Strength" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/S</iconPath>
     <exclusionTags>
-      <li>S_Strength</li>
+      <li>WestTek_Strength</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Strength">
-    <defName>WestTek_Strength_Below</defName>
+    <defName>WestTek_Strength_A</defName>
     <label>Wet Noodle</label>
     <labelShortAdj>weak</labelShortAdj>
     <description>Carriers of this gene are the definition of frail, struggling to lift even the lightest gear and finding meals a challenge to chew and digest. Their bodies tire quickly, and every burden feels heavier than it should.</description>
@@ -34,7 +34,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Strength">
-    <defName>WestTek_Strength_Average</defName>
+    <defName>WestTek_Strength_B</defName>
     <label>Average Joe</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene possess the strength of the everyday wastelander, able to carry their own and survive on standard rations. They neither excel nor falter in feats of muscle or digestion.</description>
@@ -43,7 +43,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Strength">
-    <defName>WestTek_Strength_Above</defName>
+    <defName>WestTek_Strength_C</defName>
     <label>Circus Strongman</label>
     <labelShortAdj>strong</labelShortAdj>
     <description>Carriers of this gene are built for the wastes, hauling heavy loads with ease and devouring even the toughest meals. Their bodies are resilient, and their stamina rarely fails them.</description>
@@ -52,7 +52,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Strength">
-    <defName>WestTek_Strength_Legendary</defName>
+    <defName>WestTek_Strength_D</defName>
     <label>Legendary Strength</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are legends among survivors, able to lift, carry, and consume with unmatched power. Their strength is the stuff of pre-war myths, and nothing seems too heavy or too tough for them.</description>
@@ -62,15 +62,15 @@
   </GeneDef>
 
   <!-- Perception -->
-  <GeneDef Name="WestTek_Perception" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Perception" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/P</iconPath>
     <exclusionTags>
-      <li>Perception</li>
+      <li>WestTek_Perception</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Perception">
-    <defName>WestTek_Perception_Below</defName>
+    <defName>WestTek_Perception_A</defName>
     <label>Senile Mole</label>
     <labelShortAdj>dull</labelShortAdj>
     <description>Carriers of this gene stumble through the wastes, missing every subtle sound and shadow. Their senses are dulled, making ambushes and hidden dangers a constant threat.</description>
@@ -79,7 +79,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Perception">
-    <defName>WestTek_Perception_Average</defName>
+    <defName>WestTek_Perception_B</defName>
     <label>Alert Coyote</label>
     <labelShortAdj>alert</labelShortAdj>
     <description>Carriers of this gene see and hear as well as the next vault dweller, catching most details but sometimes missing the finer points. Their awareness is reliable, if unremarkable.</description>
@@ -88,7 +88,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Perception">
-    <defName>WestTek_Perception_Above</defName>
+    <defName>WestTek_Perception_C</defName>
     <label>Sniper Hawk</label>
     <labelShortAdj>sharp</labelShortAdj>
     <description>Carriers of this gene have eyes like a hawk and ears tuned to the faintest whisper. They spot threats and opportunities before others, making them invaluable scouts and sharpshooters.</description>
@@ -97,7 +97,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Perception">
-    <defName>WestTek_Perception_Legendary</defName>
+    <defName>WestTek_Perception_D</defName>
     <label>Legendary Perception</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are the wasteland’s living sensors, detecting danger and secrets with supernatural clarity. No ambush or hidden cache escapes their notice.</description>
@@ -107,15 +107,15 @@
   </GeneDef>
 
   <!-- Endurance -->
-  <GeneDef Name="WestTek_Endurance" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Endurance" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/E</iconPath>
     <exclusionTags>
-      <li>Endurance</li>
+      <li>WestTek_Endurance</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Endurance">
-    <defName>WestTek_Endurance_Below</defName>
+    <defName>WestTek_Endurance_A</defName>
     <label>Do Not Bend</label>
     <labelShortAdj>fragile</labelShortAdj>
     <description>Carriers of this gene are fragile, succumbing quickly to wounds, toxins, and pain. The harsh realities of the wasteland take their toll, and survival is a daily struggle.</description>
@@ -124,7 +124,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Endurance">
-    <defName>WestTek_Endurance_Average</defName>
+    <defName>WestTek_Endurance_B</defName>
     <label>Stain Resistant</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene endure the wasteland’s hardships as well as most, surviving wounds and illness with no special advantage or disadvantage. Their bodies are steady, if not exceptional.</description>
@@ -133,7 +133,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Endurance">
-    <defName>WestTek_Endurance_Above</defName>
+    <defName>WestTek_Endurance_C</defName>
     <label>Bullet Proof</label>
     <labelShortAdj>tough</labelShortAdj>
     <description>Carriers of this gene shrug off pain, toxins, and blood loss, surviving injuries that would fell lesser folk. Their stamina and resistance are a testament to their hardy lineage.</description>
@@ -142,7 +142,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Endurance">
-  <defName>WestTek_Endurance_Legendary</defName>
+  <defName>WestTek_Endurance_D</defName>
     <label>Legendary Endurance</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are nearly unstoppable, enduring wounds, poisons, and agony with legendary grit. Their bodies seem built for survival, no matter the odds.</description>
@@ -152,15 +152,15 @@
   </GeneDef>
 
   <!-- Charisma -->
-  <GeneDef Name="WestTek_Charisma" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Charisma" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/C</iconPath>
     <exclusionTags>
-      <li>Charisma</li>
+      <li>WestTek_Charisma</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Charisma">
-    <defName>WestTek_Charisma_Below</defName>
+    <defName>WestTek_Charisma_A</defName>
     <label>Misantrope</label>
     <labelShortAdj>awkward</labelShortAdj>
     <description>Carriers of this gene repel others with awkwardness and rough manners, struggling to make friends or influence anyone. Their words fall flat, and their looks do little to help.</description>
@@ -169,7 +169,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Charisma">
-    <defName>WestTek_Charisma_Average</defName>
+    <defName>WestTek_Charisma_B</defName>
     <label>Substitute Teacher</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene blend into the crowd, able to hold a conversation and get by, but rarely leaving a lasting impression. Their beauty and speech are unremarkable.</description>
@@ -178,7 +178,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Charisma">
-    <defName>WestTek_Charisma_Above</defName>
+    <defName>WestTek_Charisma_C</defName>
     <label>Movie Star</label>
     <labelShortAdj>charming</labelShortAdj>
     <description>Carriers of this gene charm and persuade with ease, their words and looks opening doors and winning allies. They are the face of any group, and their presence is felt by all.</description>
@@ -188,7 +188,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Charisma">
-    <defName>WestTek_Charisma_Legendary</defName>
+    <defName>WestTek_Charisma_D</defName>
     <label>Legendary Charisma</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland celebrities, captivating crowds and swaying opinions with a glance or a word. Their beauty and eloquence are the stuff of legend.</description>
@@ -197,15 +197,15 @@
   </GeneDef>
 
   <!-- Intelligence -->
-  <GeneDef Name="WestTek_Intelligence" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Intelligence" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/I</iconPath>
     <exclusionTags>
-      <li>Intelligence</li>
+      <li>WestTek_Intelligence</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Intelligence">
-    <defName>WestTek_Intelligence_Below</defName>
+    <defName>WestTek_Intelligence_A</defName>
     <label>Sub Brick</label>
     <labelShortAdj>dull</labelShortAdj>
     <description>Carriers of this gene struggle with even simple concepts, learning slowly and teaching little. The mysteries of technology and science remain forever out of reach.</description>
@@ -214,7 +214,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Intelligence">
-    <defName>WestTek_Intelligence_Average</defName>
+    <defName>WestTek_Intelligence_B</defName>
     <label>Knowledgeable</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene grasp new ideas at a normal pace, able to learn and teach as well as most. Their minds are steady, if not brilliant.</description>
@@ -223,7 +223,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Intelligence">
-    <defName>WestTek_Intelligence_Above</defName>
+    <defName>WestTek_Intelligence_C</defName>
     <label>Genius</label>
     <labelShortAdj>smart</labelShortAdj>
     <description>Carriers of this gene are quick thinkers, mastering skills and sharing knowledge with ease. Their intellect is a valuable asset in the wastes.</description>
@@ -232,7 +232,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Intelligence">
-    <defName>WestTek_Intelligence_Legendary</defName>
+    <defName>WestTek_Intelligence_D</defName>
     <label>Legendary Intelligence</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland prodigies, solving problems and teaching others with genius-level insight. Their minds shape the future of civilization.</description>
@@ -242,15 +242,15 @@
   </GeneDef>
 
   <!-- Agility -->
-  <GeneDef Name="WestTek_Agility" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Agility" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/A</iconPath>
     <exclusionTags>
-      <li>Agility</li>
+      <li>WestTek_Agility</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Agility">
-    <defName>WestTek_Agility_Below</defName>
+    <defName>WestTek_Agility_A</defName>
     <label>Walking Disaster</label>
     <labelShortAdj>clumsy</labelShortAdj>
     <description>Carriers of this gene stumble and trip, moving slowly and awkwardly through the ruins. Their lack of coordination makes escape and pursuit a challenge.</description>
@@ -259,7 +259,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Agility">
-    <defName>WestTek_Agility_Average</defName>
+    <defName>WestTek_Agility_B</defName>
     <label>Under Control</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene move at a standard pace, able to keep up with the group but rarely outpace danger. Their reflexes are reliable, if not remarkable.</description>
@@ -268,7 +268,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Agility">
-    <defName>WestTek_Agility_Above</defName>
+    <defName>WestTek_Agility_C</defName>
     <label>Acrobatic Marvel</label>
     <labelShortAdj>nimble</labelShortAdj>
     <description>Carriers of this gene are nimble and quick, darting through the wasteland with impressive speed. Their reflexes and coordination are a cut above the rest.</description>
@@ -277,7 +277,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Agility">
-    <defName>WestTek_Agility_Legendary</defName>
+    <defName>WestTek_Agility_D</defName>
     <label>Legendary Agility</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are legends of movement, outrunning threats and navigating obstacles with acrobatic grace. Their speed is matched only by their finesse.</description>
@@ -287,15 +287,15 @@
   </GeneDef>
 
   <!-- Luck -->
-  <GeneDef Name="WestTek_Luck" ParentName="Arktos_Gene_SPECIAL" Abstract="True">
+  <GeneDef Name="WestTek_Luck" ParentName="WestTek_Gene_SPECIAL" Abstract="True">
     <iconPath>WestTek/Genes/L</iconPath>
     <exclusionTags>
-      <li>Luck</li>
+      <li>WestTek_Luck</li>
      </exclusionTags>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Luck">
-    <defName>WestTek_Luck_Below</defName>
+    <defName>WestTek_Luck_A</defName>
     <label>13 Black Cats</label>
     <labelShortAdj>unlucky</labelShortAdj>
     <description>Carriers of this gene seem cursed, suffering frequent illness and slow recovery from wounds. Fortune rarely favors them, and danger is a constant companion.</description>
@@ -304,7 +304,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Luck">
-    <defName>WestTek_Luck_Average</defName>
+    <defName>WestTek_Luck_B</defName>
     <label>Coin Flip</label>
     <labelShortAdj>average</labelShortAdj>
     <description>Carriers of this gene experience the usual ups and downs of wasteland life, neither blessed nor cursed. Their health and fortune are as unpredictable as the weather.</description>
@@ -313,7 +313,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Luck">
-    <defName>WestTek_Luck_Above</defName>
+    <defName>WestTek_Luck_C</defName>
     <label>21 Clover Leaf</label>
     <labelShortAdj>lucky</labelShortAdj>
     <description>Carriers of this gene are favored by fate, dodging disease and healing quickly from injuries. Good things seem to happen to them more often than not.</description>
@@ -322,7 +322,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Luck">
-    <defName>WestTek_Luck_Legendary</defName>
+    <defName>WestTek_Luck_D</defName>
     <label>Legendary Luck</label>
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland legends, immune to misfortune and blessed with miraculous recoveries. Their luck is the envy of all who know them.</description>
