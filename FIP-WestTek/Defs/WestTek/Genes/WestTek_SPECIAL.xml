@@ -30,6 +30,20 @@
     <labelShortAdj>weak</labelShortAdj>
     <description>Carriers of this gene are the definition of frail, struggling to lift even the lightest gear and finding meals a challenge to chew and digest. Their bodies tire quickly, and every burden feels heavier than it should.</description>
     <displayOrderInCategory>1111</displayOrderInCategory>
+    <statFactors>
+      <CarryingCapacity>0.9</CarryingCapacity>
+      <ForagedNutritionPerDay>0.9</ForagedNutritionPerDay>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Eating</capacity>
+        <offset>-0.1</offset>
+      </li>
+      <li>
+        <capacity>Metabolism</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -48,6 +62,20 @@
     <labelShortAdj>strong</labelShortAdj>
     <description>Carriers of this gene are built for the wastes, hauling heavy loads with ease and devouring even the toughest meals. Their bodies are resilient, and their stamina rarely fails them.</description>
     <displayOrderInCategory>11</displayOrderInCategory>
+    <statFactors>
+      <CarryingCapacity>1.1</CarryingCapacity>
+      <ForagedNutritionPerDay>1.1</ForagedNutritionPerDay>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Eating</capacity>
+        <offset>0.1</offset>
+      </li>
+      <li>
+        <capacity>Metabolism</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -57,6 +85,20 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are legends among survivors, able to lift, carry, and consume with unmatched power. Their strength is the stuff of pre-war myths, and nothing seems too heavy or too tough for them.</description>
     <displayOrderInCategory>1</displayOrderInCategory>
+    <statFactors>
+      <CarryingCapacity>1.2</CarryingCapacity>
+      <ForagedNutritionPerDay>1.2</ForagedNutritionPerDay>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Eating</capacity>
+        <offset>0.2</offset>
+      </li>
+      <li>
+        <capacity>Metabolism</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
     <biostatCpx>2</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
@@ -75,6 +117,20 @@
     <labelShortAdj>dull</labelShortAdj>
     <description>Carriers of this gene stumble through the wastes, missing every subtle sound and shadow. Their senses are dulled, making ambushes and hidden dangers a constant threat.</description>
     <displayOrderInCategory>2222</displayOrderInCategory>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.1</offset>
+      </li>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>-0.1</offset>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -93,6 +149,20 @@
     <labelShortAdj>sharp</labelShortAdj>
     <description>Carriers of this gene have eyes like a hawk and ears tuned to the faintest whisper. They spot threats and opportunities before others, making them invaluable scouts and sharpshooters.</description>
     <displayOrderInCategory>22</displayOrderInCategory>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>0.1</offset>
+      </li>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.1</offset>
+      </li>
+      <li>
+        <capacity>Hearing</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -120,6 +190,24 @@
     <labelShortAdj>fragile</labelShortAdj>
     <description>Carriers of this gene are fragile, succumbing quickly to wounds, toxins, and pain. The harsh realities of the wasteland take their toll, and survival is a daily struggle.</description>
     <displayOrderInCategory>3333</displayOrderInCategory>
+    <statFactors>
+      <MentalBreakThreshold>0.9</MentalBreakThreshold>
+      <PainShockThreshold>0.9</PainShockThreshold>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Breathing</capacity>
+        <offset>-0.1</offset>
+      </li>
+      <li>
+        <capacity>BloodFiltration</capacity>
+        <offset>-0.1</offset>
+      </li>
+      <li>
+        <capacity>BloodPumping</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -138,6 +226,24 @@
     <labelShortAdj>tough</labelShortAdj>
     <description>Carriers of this gene shrug off pain, toxins, and blood loss, surviving injuries that would fell lesser folk. Their stamina and resistance are a testament to their hardy lineage.</description>
     <displayOrderInCategory>33</displayOrderInCategory>
+    <statFactors>
+      <MentalBreakThreshold>1.1</MentalBreakThreshold>
+      <PainShockThreshold>1.1</PainShockThreshold>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Breathing</capacity>
+        <offset>0.1</offset>
+      </li>
+      <li>
+        <capacity>BloodFiltration</capacity>
+        <offset>0.1</offset>
+      </li>
+      <li>
+        <capacity>BloodPumping</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -147,6 +253,24 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are nearly unstoppable, enduring wounds, poisons, and agony with legendary grit. Their bodies seem built for survival, no matter the odds.</description>
     <displayOrderInCategory>3</displayOrderInCategory>
+    <statFactors>
+      <MentalBreakThreshold>1.2</MentalBreakThreshold>
+      <PainShockThreshold>1.2</PainShockThreshold>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Breathing</capacity>
+        <offset>0.2</offset>
+      </li>
+      <li>
+        <capacity>BloodFiltration</capacity>
+        <offset>0.2</offset>
+      </li>
+      <li>
+        <capacity>BloodPumping</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
     <biostatCpx>2</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
@@ -165,6 +289,15 @@
     <labelShortAdj>awkward</labelShortAdj>
     <description>Carriers of this gene repel others with awkwardness and rough manners, struggling to make friends or influence anyone. Their words fall flat, and their looks do little to help.</description>
     <displayOrderInCategory>4444</displayOrderInCategory>
+    <statFactors>
+      <Beauty>0.9</Beauty>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Talking</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -183,6 +316,15 @@
     <labelShortAdj>charming</labelShortAdj>
     <description>Carriers of this gene charm and persuade with ease, their words and looks opening doors and winning allies. They are the face of any group, and their presence is felt by all.</description>
     <displayOrderInCategory>44</displayOrderInCategory>
+    <statFactors>
+      <Beauty>1.1</Beauty>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Talking</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>1</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
@@ -193,6 +335,15 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland celebrities, captivating crowds and swaying opinions with a glance or a word. Their beauty and eloquence are the stuff of legend.</description>
     <displayOrderInCategory>4</displayOrderInCategory>
+    <statFactors>
+      <Beauty>1.2</Beauty>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Talking</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
     <biostatCpx>2</biostatCpx>
   </GeneDef>
 
@@ -210,6 +361,10 @@
     <labelShortAdj>dull</labelShortAdj>
     <description>Carriers of this gene struggle with even simple concepts, learning slowly and teaching little. The mysteries of technology and science remain forever out of reach.</description>
     <displayOrderInCategory>5555</displayOrderInCategory>
+    <statFactors>
+      <GlobalLearningFactor>0.9</GlobalLearningFactor>
+      <LearningRateFactor>0.9</LearningRateFactor>
+    </statFactors>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -228,6 +383,10 @@
     <labelShortAdj>smart</labelShortAdj>
     <description>Carriers of this gene are quick thinkers, mastering skills and sharing knowledge with ease. Their intellect is a valuable asset in the wastes.</description>
     <displayOrderInCategory>55</displayOrderInCategory>
+    <statFactors>
+      <GlobalLearningFactor>1.1</GlobalLearningFactor>
+      <LearningRateFactor>1.1</LearningRateFactor>
+    </statFactors>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -237,6 +396,10 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland prodigies, solving problems and teaching others with genius-level insight. Their minds shape the future of civilization.</description>
     <displayOrderInCategory>5</displayOrderInCategory>
+    <statFactors>
+      <GlobalLearningFactor>1.2</GlobalLearningFactor>
+      <LearningRateFactor>1.2</LearningRateFactor>
+    </statFactors>
     <biostatCpx>2</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
@@ -255,6 +418,16 @@
     <labelShortAdj>clumsy</labelShortAdj>
     <description>Carriers of this gene stumble and trip, moving slowly and awkwardly through the ruins. Their lack of coordination makes escape and pursuit a challenge.</description>
     <displayOrderInCategory>6666</displayOrderInCategory>
+    <statFactors>
+      <CrawlSpeed>0.9</CrawlSpeed>
+      <MoveSpeed>0.9</MoveSpeed>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -273,6 +446,16 @@
     <labelShortAdj>nimble</labelShortAdj>
     <description>Carriers of this gene are nimble and quick, darting through the wasteland with impressive speed. Their reflexes and coordination are a cut above the rest.</description>
     <displayOrderInCategory>66</displayOrderInCategory>
+    <statFactors>
+      <CrawlSpeed>1.1</CrawlSpeed>
+      <MoveSpeed>1.1</MoveSpeed>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -282,6 +465,16 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are legends of movement, outrunning threats and navigating obstacles with acrobatic grace. Their speed is matched only by their finesse.</description>
     <displayOrderInCategory>6</displayOrderInCategory>
+    <statFactors>
+      <CrawlSpeed>1.2</CrawlSpeed>
+      <MoveSpeed>1.2</MoveSpeed>
+    </statFactors>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
     <biostatCpx>2</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
@@ -300,6 +493,10 @@
     <labelShortAdj>unlucky</labelShortAdj>
     <description>Carriers of this gene seem cursed, suffering frequent illness and slow recovery from wounds. Fortune rarely favors them, and danger is a constant companion.</description>
     <displayOrderInCategory>7777</displayOrderInCategory>
+    <statFactors>
+      <ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+      <InjuryHealingFactor>0.9</InjuryHealingFactor>
+    </statFactors>
     <biostatCpx>-1</biostatCpx>
   </GeneDef>
 
@@ -318,6 +515,10 @@
     <labelShortAdj>lucky</labelShortAdj>
     <description>Carriers of this gene are favored by fate, dodging disease and healing quickly from injuries. Good things seem to happen to them more often than not.</description>
     <displayOrderInCategory>77</displayOrderInCategory>
+    <statFactors>
+      <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+      <InjuryHealingFactor>1.1</InjuryHealingFactor>
+    </statFactors>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
 
@@ -327,6 +528,10 @@
     <labelShortAdj>legendary</labelShortAdj>
     <description>Carriers of this gene are wasteland legends, immune to misfortune and blessed with miraculous recoveries. Their luck is the envy of all who know them.</description>
     <displayOrderInCategory>7</displayOrderInCategory>
+    <statFactors>
+      <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+      <InjuryHealingFactor>1.2</InjuryHealingFactor>
+    </statFactors>
     <biostatCpx>2</biostatCpx>
     <selectionWeight>0.3</selectionWeight>
   </GeneDef>
