@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- Syncretic, Native, Dharma -->
-	 <MemeDef Name="Arktos_Religion_Spiritual_Base" ParentName="Arktos_Religion_Base" Abstract="true">
+	<MemeDef Name="Arktos_Religion_Spiritual_Base" ParentName="Arktos_Religion_Base" Abstract="true">
 		<worshipRoomLabel>grove</worshipRoomLabel>
 		<groupDef>Arktos_Spiritual</groupDef>
 		<iconPath>Arktos/Spiritual</iconPath>
@@ -12,14 +12,24 @@
 			</li>
 		</thingStyleCategories>
 		<symbolPackOverride>true</symbolPackOverride>
-        <symbolPacks>
-            <li><ideoName>People</ideoName><adjective>People</adjective><member>People</member><prefix>true</prefix></li>
-			<li><ideoName>Nation</ideoName><adjective>Nation</adjective><member>Nation</member><prefix>true</prefix></li>
-        </symbolPacks>
+		<symbolPacks>
+			<li>
+				<ideoName>People</ideoName>
+				<adjective>People</adjective>
+				<member>People</member>
+				<prefix>true</prefix>
+			</li>
+			<li>
+				<ideoName>Nation</ideoName>
+				<adjective>Nation</adjective>
+				<member>Nation</member>
+				<prefix>true</prefix>
+			</li>
+		</symbolPacks>
 
 	</MemeDef>
 
-     <!--Syncretic-->
+	<!--Syncretic-->
 	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Syncretic</defName>
 		<label>Gentiles</label>
@@ -27,7 +37,7 @@
 		<deityNameMakerOverride>Arktos_NameMaker_Syncretic</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Syncretic</deityTypeMakerOverride>
 	</MemeDef>
-	
+
 	<RulePackDef>
 		<defName>Arktos_NameMaker_Syncretic</defName>
 		<rulePack>
@@ -67,7 +77,7 @@
 		</rulePack>
 	</RulePackDef>
 
-    <RulePackDef>
+	<RulePackDef>
 		<defName>Arktos_TypeMaker_Syncretic</defName>
 		<rulePack>
 			<rulesStrings>
@@ -101,11 +111,12 @@
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
-    <!--Dharma-->
+	<!--Dharma-->
 	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Dharma</defName>
 		<label>Dharma Order</label>
-		<description>An order following the Dharma: meditation, balance, and rites aiming to restore inner and social harmony after the fall of civilisation.</description>
+		<description>An order following the Dharma: meditation, balance, and rites aiming to restore
+			inner and social harmony after the fall of civilisation.</description>
 		<deityNameMakerOverride>Arktos_NameMaker_Dharma</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Dharma</deityTypeMakerOverride>
 	</MemeDef>
@@ -183,11 +194,12 @@
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
-    <!--Native-->
+	<!--Native-->
 	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Native</defName>
 		<label>Native</label>
-		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>
+		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and
+			seasonal ceremonies hold communities together.</description>
 		<deityNameMakerOverride>Arktos_NameMaker_Native</deityNameMakerOverride>
 		<deityTypeMakerOverride>Arktos_TypeMaker_Native</deityTypeMakerOverride>
 	</MemeDef>

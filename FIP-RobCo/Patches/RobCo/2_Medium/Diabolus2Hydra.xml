@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	<!-- Hydra ThingDef -->
 	<Operation Class="PatchOperationReplace">
@@ -25,20 +25,20 @@
 					</lifeStageAges>
 					<baseHealthScale>3</baseHealthScale>
 				</race>
-				
+
 				<comps>
-      <li Class="CompProperties_MechCarrier">
-        <spawnPawnKind>Mech_WarUrchin</spawnPawnKind>
-        <fixedIngredient>Steel</fixedIngredient>
-        <costPerPawn>25</costPerPawn>
-        <startingIngredientCount>600</startingIngredientCount>
-        <maxIngredientCount>600</maxIngredientCount>
-        <spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
-        <spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
-        <attachSpawnedEffecter>true</attachSpawnedEffecter>
-        <attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
-      </li>
-    </comps>
+					<li Class="CompProperties_MechCarrier">
+						<spawnPawnKind>Mech_WarUrchin</spawnPawnKind>
+						<fixedIngredient>Steel</fixedIngredient>
+						<costPerPawn>25</costPerPawn>
+						<startingIngredientCount>600</startingIngredientCount>
+						<maxIngredientCount>600</maxIngredientCount>
+						<spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+						<spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+						<attachSpawnedEffecter>true</attachSpawnedEffecter>
+						<attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+					</li>
+				</comps>
 			</ThingDef>
 		</value>
 	</Operation>

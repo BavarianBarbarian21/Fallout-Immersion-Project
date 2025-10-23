@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	<!-- Robobrain ThingDef -->
 	<Operation Class="PatchOperationReplace">
@@ -7,7 +7,8 @@
 			<ThingDef ParentName="HeavyMechanoid">
 				<defName>Mech_Centurion</defName>
 				<label>Robobrain</label>
-				<description>Human intellect entombed in steel. Their eerie, monotone logic is a reminder of what happens when war and science mix too freely.</description>
+				<description>Human intellect entombed in steel. Their eerie, monotone logic is a
+					reminder of what happens when war and science mix too freely.</description>
 				<statBases>
 					<MoveSpeed>3</MoveSpeed>
 				</statBases>
@@ -34,22 +35,22 @@
 					<baseHealthScale>3</baseHealthScale>
 				</race>
 				<comps>
-      <li Class="CompProperties_ProjectileInterceptor">
-        <radius>6</radius>
-        <interceptGroundProjectiles>true</interceptGroundProjectiles>
-        <color>(0.4, 0.4, 0.4)</color>
-        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-        <activeSound>BulletShield_Ambience</activeSound>
-        <hitPoints>300</hitPoints>
-        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-        <chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
-        <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
-        <minIdleAlpha>0.2</minIdleAlpha>
-        <drawWithNoSelection>True</drawWithNoSelection>
-        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-      </li>
-    </comps>
+					<li Class="CompProperties_ProjectileInterceptor">
+						<radius>6</radius>
+						<interceptGroundProjectiles>true</interceptGroundProjectiles>
+						<color>(0.4, 0.4, 0.4)</color>
+						<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+						<activeSound>BulletShield_Ambience</activeSound>
+						<hitPoints>300</hitPoints>
+						<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+						<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+						<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+						<minIdleAlpha>0.2</minIdleAlpha>
+						<drawWithNoSelection>True</drawWithNoSelection>
+						<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+						<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+					</li>
+				</comps>
 			</ThingDef>
 		</value>
 	</Operation>

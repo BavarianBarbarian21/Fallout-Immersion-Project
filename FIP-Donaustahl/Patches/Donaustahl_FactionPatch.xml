@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Remove vanilla Structure_* MemeDefs (keeps Arktos_ prefixed defs) -->
 <Patch>
-    <!--Remove all Structures and Cultures-->
+    <!--Remove
+    all Structures and Cultures-->
     <Operation Class="PatchOperationRemove">
         <xpath>//FactionDef/structureMemeWeights</xpath>
     </Operation>
@@ -41,21 +42,23 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
-           <factionNameMaker>Donaustahl_FactionNameMaker_General</factionNameMaker>
+            <factionNameMaker>Donaustahl_FactionNameMaker_General</factionNameMaker>
         </value>
     </Operation>
     <!-- SettlementNameMaker Patch -->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
-           <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
+            <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
         </value>
     </Operation>
     <!-- Culture Patch -->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
-           <allowedCultures><li>Donaustahl_American</li></allowedCultures>
+            <allowedCultures>
+                <li>Donaustahl_American</li>
+            </allowedCultures>
         </value>
     </Operation>
 </Patch>

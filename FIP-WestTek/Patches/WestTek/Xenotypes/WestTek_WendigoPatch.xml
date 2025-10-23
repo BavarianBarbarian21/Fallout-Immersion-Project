@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-<!--+6-->
+  <!--+6-->
   <!-- Patch Sanguophages xenotype label to Wendigo -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/XenotypeDef[defName="Sanguophage"]/label</xpath>
-    <value><label>Wendigo</label></value>
+    <value>
+      <label>Wendigo</label>
+    </value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
@@ -31,7 +33,7 @@
         <li>XenogermReimplanter</li>
         <li>PerfectImmunity</li>
         <li>Ageless</li>
-        <li>DiseaseFree</li> 
+        <li>DiseaseFree</li>
       </genes>
     </value>
   </Operation>

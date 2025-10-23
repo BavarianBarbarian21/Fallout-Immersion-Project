@@ -3,316 +3,464 @@
   <!-- IncidentDef: GauranlenPodSpawn -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/label</xpath>
-    <value><label>Treefather pod sprouting</label></value>
+    <value>
+      <label>Treefather pod sprouting</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterLabel</xpath>
-    <value><letterLabel>Treefather pod has sprouted</letterLabel></value>
+    <value>
+      <letterLabel>Treefather pod has sprouted</letterLabel>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterText</xpath>
-    <value><letterText>A new Treefather pod has sprouted, ready to grow a new treeminder. Tend to it carefully to ensure a healthy symbiote.</letterText></value>
+    <value>
+      <letterText>A new Treefather pod has sprouted, ready to grow a new treeminder. Tend to it
+        carefully to ensure a healthy symbiote.</letterText>
+    </value>
   </Operation>
 
   <!-- JobDef: ChangeTreeMode -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/JobDef[defName="ChangeTreeMode"]/reportString</xpath>
-    <value><reportString>Changing Treefather's dryad caste</reportString></value>
+    <value>
+      <reportString>Changing Treefather's dryad caste</reportString>
+    </value>
   </Operation>
 
   <!-- ThingDef: DryadCocoon -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DryadCocoon"]/label</xpath>
-    <value><label>treeminder cocoon</label></value>
+    <value>
+      <label>treeminder cocoon</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DryadCocoon"]/description</xpath>
-    <value><description>A cocoon where a treeminder morphs into a new caste, guided by the Treefather's FEV-infused roots.</description></value>
+    <value>
+      <description>A cocoon where a treeminder morphs into a new caste, guided by the Treefather's
+        FEV-infused roots.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: DryadHealingPod -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DryadHealingPod"]/label</xpath>
-    <value><label>healing pod</label></value>
+    <value>
+      <label>healing pod</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DryadHealingPod"]/description</xpath>
-    <value><description>A pod filled with restorative Treefather sap, used to heal injured treeminders.</description></value>
+    <value>
+      <description>A pod filled with restorative Treefather sap, used to heal injured treeminders.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: GaumakerCocoon -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/label</xpath>
-    <value><label>sproutling cocoon</label></value>
+    <value>
+      <label>sproutling cocoon</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/description</xpath>
-    <value><description>A cocoon where sproutlings merge to create a new Treefather pod, continuing the symbiotic cycle.</description></value>
+    <value>
+      <description>A cocoon where sproutlings merge to create a new Treefather pod, continuing the
+        symbiotic cycle.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: Plant_TreeGauranlen -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/label</xpath>
-    <value><label>Treefather</label></value>
+    <value>
+      <label>Treefather</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/description</xpath>
-    <value><description>A mutated tree infused with FEV, able to produce treeminders and pods. Its roots run deep, connecting it to the wasteland's secrets.</description></value>
+    <value>
+      <description>A mutated tree infused with FEV, able to produce treeminders and pods. Its roots
+        run deep, connecting it to the wasteland's secrets.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: Dryad_Basic -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Dryad_Basic"]/label</xpath>
-    <value><label>treeminder</label></value>
+    <value>
+      <label>treeminder</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Dryad_Basic"]/description</xpath>
-    <value><description>A basic treeminder, mammal-like and loyal to its Treefather. It can morph into specialized castes as needed.</description></value>
+    <value>
+      <description>A basic treeminder, mammal-like and loyal to its Treefather. It can morph into
+        specialized castes as needed.</description>
+    </value>
   </Operation>
 
   <!-- PawnKindDef: Dryad_Basic -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Dryad_Basic"]/label</xpath>
-    <value><label>treeminder</label></value>
+    <value>
+      <label>treeminder</label>
+    </value>
   </Operation>
 
   <!-- ThoughtDef: DryadDied (stages) -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="DryadDied"]/stages/li/label</xpath>
-    <value><label>treeminder died</label></value>
+    <value>
+      <label>treeminder died</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="DryadDied"]/stages/li/description</xpath>
-    <value><description>My Treefather's treeminder is gone forever. You shall be missed, little one.</description></value>
+    <value>
+      <description>My Treefather's treeminder is gone forever. You shall be missed, little one.</description>
+    </value>
   </Operation>
 
   <!-- WorkGiverDef: ChangeTreeMode -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/label</xpath>
-    <value><label>change treeminder types</label></value>
+    <value>
+      <label>change treeminder types</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/verb</xpath>
-    <value><verb>change treeminder caste for</verb></value>
+    <value>
+      <verb>change treeminder caste for</verb>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkGiverDef[defName="ChangeTreeMode"]/gerund</xpath>
-    <value><gerund>changing treeminder caste for</gerund></value>
+    <value>
+      <gerund>changing treeminder caste for</gerund>
+    </value>
   </Operation>
-
 
 
   <!-- PreceptDef: TreeConnection description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PreceptDef[defName="TreeConnection"]/description</xpath>
-    <value><description>Belief in the sacred bond between colonist and Treefather, a mutated tree that produces treeminders and pods.</description></value>
+    <value>
+      <description>Belief in the sacred bond between colonist and Treefather, a mutated tree that
+        produces treeminders and pods.</description>
+    </value>
   </Operation>
 
   <!-- IssueDef: GauranlenConnection label -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IssueDef[defName="GauranlenConnection"]/label</xpath>
-    <value><label>Treefather connection</label></value>
+    <value>
+      <label>Treefather connection</label>
+    </value>
   </Operation>
 
   <!-- HistoryEventDef: PlantedGauranlenTree label -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HistoryEventDef[defName="PlantedGauranlenTree"]/label</xpath>
-    <value><label>planted Treefather</label></value>
+    <value>
+      <label>planted Treefather</label>
+    </value>
   </Operation>
 
   <!-- PreceptDef: GauranlenConnection_Strong description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/description</xpath>
-    <value><description>Strong belief in maintaining a powerful connection to the Treefather, source of treeminders and pods.</description></value>
+    <value>
+      <description>Strong belief in maintaining a powerful connection to the Treefather, source of
+        treeminders and pods.</description>
+    </value>
   </Operation>
 
   <!-- PreceptDef: GauranlenConnection_Strong comps: thoughtStageDescriptions -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[1]</xpath>
-    <value><li>Treefather connection</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[1]</xpath>
+    <value>
+      <li>Treefather connection</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[2]</xpath>
-    <value><li>Want Treefather connection (min expectation: Very low)</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[2]</xpath>
+    <value>
+      <li>Want Treefather connection (min expectation: Very low)</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[3]</xpath>
-    <value><li>Want Treefather connection (min expectation: Low)</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[3]</xpath>
+    <value>
+      <li>Want Treefather connection (min expectation: Low)</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[4]</xpath>
-    <value><li>Want Treefather connection (min expectation: Moderate)</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[4]</xpath>
+    <value>
+      <li>Want Treefather connection (min expectation: Moderate)</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[5]</xpath>
-    <value><li>Want Treefather connection (min expectation: High)</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[5]</xpath>
+    <value>
+      <li>Want Treefather connection (min expectation: High)</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[6]</xpath>
-    <value><li>Want Treefather connection (min expectation: Sky high)</li></value>
+    <xpath>
+      Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/thoughtStageDescriptions/li[6]</xpath>
+    <value>
+      <li>Want Treefather connection (min expectation: Sky high)</li>
+    </value>
   </Operation>
 
   <!-- PreceptComp_DevelopmentPoints: eventLabel -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li/eventLabel</xpath>
-    <value><eventLabel>planted Treefather</eventLabel></value>
+    <value>
+      <eventLabel>planted Treefather</eventLabel>
+    </value>
   </Operation>
 
   <!-- ThoughtDef: GauranlenConnectionDesired stages -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[1]/label</xpath>
-    <value><label>Treefather connection</label></value>
+    <value>
+      <label>Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[1]/description</xpath>
-    <value><description>I am happily connected to a Treefather.</description></value>
+    <value>
+      <description>I am happily connected to a Treefather.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[2]/label</xpath>
-    <value><label>want Treefather connection</label></value>
+    <value>
+      <label>want Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[2]/description</xpath>
-    <value><description>Without a connection to a Treefather, I feel disconnected from nature.</description></value>
+    <value>
+      <description>Without a connection to a Treefather, I feel disconnected from nature.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[3]/label</xpath>
-    <value><label>want Treefather connection</label></value>
+    <value>
+      <label>want Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[3]/description</xpath>
-    <value><description>Without a connection to a Treefather, I feel disconnected from nature.</description></value>
+    <value>
+      <description>Without a connection to a Treefather, I feel disconnected from nature.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[4]/label</xpath>
-    <value><label>want Treefather connection</label></value>
+    <value>
+      <label>want Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[4]/description</xpath>
-    <value><description>Without a connection to a Treefather, I feel disconnected from nature.</description></value>
+    <value>
+      <description>Without a connection to a Treefather, I feel disconnected from nature.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[5]/label</xpath>
-    <value><label>want Treefather connection</label></value>
+    <value>
+      <label>want Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[5]/description</xpath>
-    <value><description>Without a connection to a Treefather, I feel disconnected from nature.</description></value>
+    <value>
+      <description>Without a connection to a Treefather, I feel disconnected from nature.</description>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[6]/label</xpath>
-    <value><label>want Treefather connection</label></value>
+    <value>
+      <label>want Treefather connection</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages/li[6]/description</xpath>
-    <value><description>Without a connection to a Treefather, I feel disconnected from nature.</description></value>
+    <value>
+      <description>Without a connection to a Treefather, I feel disconnected from nature.</description>
+    </value>
   </Operation>
 
   <!-- RitualAttachableOutcomeEffectDef: GauranlenTreePod -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/label</xpath>
-    <value><label>Treefather pod sprout</label></value>
+    <value>
+      <label>Treefather pod sprout</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/effectDesc</xpath>
-    <value><effectDesc>a Treefather pod will sprout at a random location on the map, if it can.</effectDesc></value>
+    <value>
+      <effectDesc>a Treefather pod will sprout at a random location on the map, if it can.</effectDesc>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/letterInfoText</xpath>
-    <value><letterInfoText>A Treefather pod sprouted nearby.</letterInfoText></value>
+    <value>
+      <letterInfoText>A Treefather pod sprouted nearby.</letterInfoText>
+    </value>
   </Operation>
 
   <!-- IdeoPresetDef: Tree_Worshippers description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IdeoPresetDef[defName="Tree_Worshippers"]/description</xpath>
-    <value><description>Followers revere the Treefather, a mutated tree that produces treeminders and pods, and maintain a sacred bond with nature.</description></value>
+    <value>
+      <description>Followers revere the Treefather, a mutated tree that produces treeminders and
+        pods, and maintain a sacred bond with nature.</description>
+    </value>
   </Operation>
   <!-- IdeoPresetDef: Feral_People description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/IdeoPresetDef[defName="Feral_People"]/description</xpath>
-    <value><description>Feral people live in harmony with the Treefather, relying on hunting and gathering for survival in the wasteland.</description></value>
+    <value>
+      <description>Feral people live in harmony with the Treefather, relying on hunting and
+        gathering for survival in the wasteland.</description>
+    </value>
   </Operation>
 
   <!-- RitualBehaviorDef: TreeConnection customChildDisallowMessage -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/RitualBehaviorDef[defName="TreeConnection"]/roles/li/customChildDisallowMessage</xpath>
-    <value><customChildDisallowMessage>Only adults can connect to the Treefather.</customChildDisallowMessage></value>
+    <value>
+      <customChildDisallowMessage>Only adults can connect to the Treefather.</customChildDisallowMessage>
+    </value>
   </Operation>
 
   <!-- RitualOutcomeEffectDef: ConnectToTree extraPredictedOutcomeDescriptions -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/RitualOutcomeEffectDef[defName="ConnectToTree"]/extraPredictedOutcomeDescriptions/li[1]</xpath>
-    <value><li>The connector will start with 25-45% connection strength, depending on ritual quality.</li></value>
+    <xpath>
+      Defs/RitualOutcomeEffectDef[defName="ConnectToTree"]/extraPredictedOutcomeDescriptions/li[1]</xpath>
+    <value>
+      <li>The connector will start with 25-45% connection strength, depending on ritual quality.</li>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/RitualOutcomeEffectDef[defName="ConnectToTree"]/extraPredictedOutcomeDescriptions/li[2]</xpath>
-    <value><li>Every 2% increase in quality will grow a patch of Treefather moss around the tree, beautifying the area.</li></value>
+    <xpath>
+      Defs/RitualOutcomeEffectDef[defName="ConnectToTree"]/extraPredictedOutcomeDescriptions/li[2]</xpath>
+    <value>
+      <li>Every 2% increase in quality will grow a patch of Treefather moss around the tree,
+        beautifying the area.</li>
+    </value>
   </Operation>
 
   <!-- StatDef: PruningSpeed label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/StatDef[defName="PruningSpeed"]/label</xpath>
-    <value><label>Treefather pruning speed</label></value>
+    <value>
+      <label>Treefather pruning speed</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/StatDef[defName="PruningSpeed"]/description</xpath>
-    <value><description>How quickly a colonist can prune the Treefather, maintaining its connection strength and treeminder production.</description></value>
+    <value>
+      <description>How quickly a colonist can prune the Treefather, maintaining its connection
+        strength and treeminder production.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: ChoppedStump_Gauranlen label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="ChoppedStump_Gauranlen"]/label</xpath>
-    <value><label>chopped Treefather stump</label></value>
+    <value>
+      <label>chopped Treefather stump</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="ChoppedStump_Gauranlen"]/description</xpath>
-    <value><description>The remains of a Treefather, chopped down and left as a stump.</description></value>
+    <value>
+      <description>The remains of a Treefather, chopped down and left as a stump.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: SmashedStump_Gauranlen label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="SmashedStump_Gauranlen"]/label</xpath>
-    <value><label>smashed Treefather stump</label></value>
+    <value>
+      <label>smashed Treefather stump</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="SmashedStump_Gauranlen"]/description</xpath>
-    <value><description>The remains of a Treefather, smashed and left as a stump.</description></value>
+    <value>
+      <description>The remains of a Treefather, smashed and left as a stump.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: Plant_MossGauranlen label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_MossGauranlen"]/label</xpath>
-    <value><label>Treefather moss</label></value>
+    <value>
+      <label>Treefather moss</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_MossGauranlen"]/description</xpath>
-    <value><description>A patch of moss that grows around the Treefather, beautifying the area and aiding treeminder production.</description></value>
+    <value>
+      <description>A patch of moss that grows around the Treefather, beautifying the area and aiding
+        treeminder production.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: Plant_PodGauranlen label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_PodGauranlen"]/label</xpath>
-    <value><label>Treefather pod</label></value>
+    <value>
+      <label>Treefather pod</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Plant_PodGauranlen"]/description</xpath>
-    <value><description>A pod produced by the Treefather, containing the seeds of new treeminders.</description></value>
+    <value>
+      <description>A pod produced by the Treefather, containing the seeds of new treeminders.</description>
+    </value>
   </Operation>
 
   <!-- ThingDef: GauranlenSeed label, description -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GauranlenSeed"]/label</xpath>
-    <value><label>Treefather seed</label></value>
+    <value>
+      <label>Treefather seed</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GauranlenSeed"]/description</xpath>
-    <value><description>A seed from the Treefather, able to grow a new mutated tree and begin the symbiotic cycle.</description></value>
+    <value>
+      <description>A seed from the Treefather, able to grow a new mutated tree and begin the
+        symbiotic cycle.</description>
+    </value>
   </Operation>
 
   <!-- WorkGiverDef: PruneGauranlenTree label -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorkGiverDef[defName="PruneGauranlenTree"]/label</xpath>
-    <value><label>Prune Treefather</label></value>
+    <value>
+      <label>Prune Treefather</label>
+    </value>
   </Operation>
-  
+
 </Patch>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	<!-- Mechanitor Stats -->
 	<Operation Class="PatchOperationReplace">
@@ -10,7 +10,10 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StatDef[defName="MechBandwidth"]/description</xpath>
 		<value>
-			<description>How much bandwidth a robot has. More bandwidth allows a mechanic to produce and control more robots at the same time.\n\nLosing bandwidth means losing control of robots, leaving them without an overseer. Such mechs can eventually become feral if not re-dominated.</description>
+			<description>How much bandwidth a robot has. More bandwidth allows a mechanic to produce
+				and control more robots at the same time.\n\nLosing bandwidth means losing control
+				of robots, leaving them without an overseer. Such mechs can eventually become feral
+				if not re-dominated.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
@@ -22,7 +25,8 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StatDef[defName="MechControlGroups"]/description</xpath>
 		<value>
-			<description>How many control groups this mechanic can direct independently. Each control group can be given its own separate orders.</description>
+			<description>How many control groups this mechanic can direct independently. Each
+				control group can be given its own separate orders.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
@@ -70,7 +74,8 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StatDef[defName="MechFormingSpeed"]/description</xpath>
 		<value>
-			<description>A multiplier on the speed at which this mechanic can create new robots at a assembler.</description>
+			<description>A multiplier on the speed at which this mechanic can create new robots at a
+				assembler.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
@@ -131,7 +136,8 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StatDef[defName="MechEnergyUsageFactor"]/description</xpath>
 		<value>
-			<description>A multiplier on how fast a robot consumes its energy reserves while operating.</description>
+			<description>A multiplier on how fast a robot consumes its energy reserves while
+				operating.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
@@ -143,7 +149,9 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StatDef[defName="WastepacksPerRecharge"]/description</xpath>
 		<value>
-			<description>How many toxic wastepacks this robot will generate at a RobCo recharger when going from 0 to 100% energy. Larger robots will generally create more toxic wastepacks.</description>
+			<description>How many toxic wastepacks this robot will generate at a RobCo recharger
+				when going from 0 to 100% energy. Larger robots will generally create more toxic
+				wastepacks.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
@@ -162,13 +170,15 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkTypeDef[defName="Smithing"]/description</xpath>
 		<value>
-			<description>Create weapons and tools from raw materials, either as a blacksmith or by machining. Also repair robots, if the colonist is a mechanic.</description>
+			<description>Create weapons and tools from raw materials, either as a blacksmith or by
+				machining. Also repair robots, if the colonist is a mechanic.</description>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/MechWorkModeDef[defName="Escort"]/description</xpath>
 		<value>
-			<description>Stay near the mechanic and fight nearby enemies. Follow the mechanic, even off the map.</description>
+			<description>Stay near the mechanic and fight nearby enemies. Follow the mechanic, even
+				off the map.</description>
 		</value>
 	</Operation>
 </Patch>

@@ -7,7 +7,8 @@
 			<ThingDef ParentName="BaseGun">
 				<defName>Gun_ThumpCannon</defName>
 				<label>RobCo breacher cannon</label>
-				<description>A RobCo robot breaching launcher. Fires a concussion bomb designed for demolition and siege, optimized for robot assault tactics.</description>
+				<description>A RobCo robot breaching launcher. Fires a concussion bomb designed for
+					demolition and siege, optimized for robot assault tactics.</description>
 				<techLevel>Spacer</techLevel>
 				<graphicData>
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -76,7 +77,7 @@
 				<projectile>
 					<damageDef>Thump</damageDef>
 					<damageAmountBase>9</damageAmountBase>
-					<explosionRadius>1.9</explosionRadius >
+					<explosionRadius>1.9</explosionRadius>
 					<stoppingPower>3</stoppingPower>
 					<speed>50</speed>
 					<soundExplode>ThumpCannon_Impact</soundExplode>
@@ -84,13 +85,15 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Heavy charge blaster/Sentry Bot Gunner/Death Bot-->
+	<!--Heavy
+	charge blaster/Sentry Bot Gunner/Death Bot-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ChargeBlasterHeavy"]</xpath>
 		<value>
 			<ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_ChargeBlasterHeavyBase">
 				<label>RobCo heavy pulse blaster</label>
-				<description>RobCo robot rapid-fire pulse blaster. Engineered for suppressive fire and extended bursts during robot combat operations.</description>
+				<description>RobCo robot rapid-fire pulse blaster. Engineered for suppressive fire
+					and extended bursts during robot combat operations.</description>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -145,13 +148,15 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Inferno cannon/Sentry Bot Incinerator-->
+	<!--Inferno
+	cannon/Sentry Bot Incinerator-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_InfernoCannon"]</xpath>
 		<value>
 			<ThingDef Abstract="True" ParentName="BaseGun" Name="Gun_InfernoCannonBase">
 				<label>RobCo incinerator cannon</label>
-				<description>RobCo robot incinerator cannon. Launches incendiary warheads for area denial and robot battlefield control.</description>
+				<description>RobCo robot incinerator cannon. Launches incendiary warheads for area
+					denial and robot battlefield control.</description>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -200,7 +205,7 @@
 					<damageDef>Flame</damageDef>
 					<!-- Use default damage from explosion def -->
 					<speed>45</speed>
-					<explosionRadius>2.4</explosionRadius >
+					<explosionRadius>2.4</explosionRadius>
 					<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 					<preExplosionSpawnChance>0.27</preExplosionSpawnChance>
 					<ai_IsIncendiary>true</ai_IsIncendiary>
@@ -215,7 +220,8 @@
 			<ThingDef ParentName="LightMechanoidGun" Name="NeedleGunBase">
 				<defName>Gun_Needle</defName>
 				<label>RobCo precision laser blaster</label>
-				<description>RobCo robot precision blaster. Fires high-velocity beam for long-range, accurate strikes by Eyebot models.</description>
+				<description>RobCo robot precision blaster. Fires high-velocity beam for long-range,
+					accurate strikes by Eyebot models.</description>
 				<techLevel>Spacer</techLevel>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/NeedleGun</texPath> -->
@@ -289,14 +295,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Charge Blaster Turret/Robobrain-->
+	<!--Charge
+	Blaster Turret/Robobrain-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ChargeBlasterTurret"]</xpath>
 		<value>
 			<ThingDef ParentName="BaseWeaponTurret">
 				<defName>Gun_ChargeBlasterTurret</defName>
 				<label>RobCo turret pulse blaster</label>
-				<description>RobCo robot turret blaster. Compact pulse weapon for automated robot defense turrets.</description>
+				<description>RobCo robot turret blaster. Compact pulse weapon for automated robot
+					defense turrets.</description>
 				<tradeability>None</tradeability>
 				<destroyOnDrop>true</destroyOnDrop>
 				<graphicData>
@@ -328,14 +336,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Hellsphere cannon/Assaultron/Sheepsquatch-->
+	<!--Hellsphere
+	cannon/Assaultron/Sheepsquatch-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_HellsphereCannon"]</xpath>
 		<value>
 			<ThingDef ParentName="BaseGun">
 				<defName>Gun_HellsphereCannon</defName>
 				<label>RobCo hellsphere projector</label>
-				<description>RobCo robot siege projector. Charges and releases a devastating energy wave, engineered for robot siegebreaking and demolition.</description>
+				<description>RobCo robot siege projector. Charges and releases a devastating energy
+					wave, engineered for robot siegebreaking and demolition.</description>
 				<techLevel>Spacer</techLevel>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/HellsphereCannon</texPath> -->
@@ -428,14 +438,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Mini Shotgun/Mister Gutsy Gunner-->
+	<!--Mini
+	Shotgun/Mister Gutsy Gunner-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_MiniShotgun"]</xpath>
 		<value>
 			<ThingDef ParentName="LightMechanoidGun">
 				<defName>Gun_MiniShotgun</defName>
 				<label>RobCo compact scattergun</label>
-				<description>RobCo robot scattergun. Short-range, rapid-fire weapon for light robot units and close-quarters defense.</description>
+				<description>RobCo robot scattergun. Short-range, rapid-fire weapon for light robot
+					units and close-quarters defense.</description>
 				<techLevel>Spacer</techLevel>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/MiniShotgun</texPath> -->
@@ -499,7 +511,9 @@
 			<ThingDef ParentName="LightMechanoidGun">
 				<defName>Gun_Slugthrower</defName>
 				<label>sonic bark emitter</label>
-				<description>RobCo robot sonic bark emitter. Emits a powerful sonic wave that stuns all targets in a small area, including humans and robots, without causing physical harm.</description>
+				<description>RobCo robot sonic bark emitter. Emits a powerful sonic wave that stuns
+					all targets in a small area, including humans and robots, without causing
+					physical harm.</description>
 				<graphicData>
 					<texPath>RobCo/Misc/Invisible</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -561,14 +575,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Spiner/Hydra Head-->
+	<!--Spiner/Hydra
+	Head-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_Spiner"]</xpath>
 		<value>
 			<ThingDef ParentName="LightMechanoidGun">
 				<defName>Gun_Spiner</defName>
 				<label>RobCo minilaser</label>
-				<description>RobCo robot minilaser. Miniaturized weapon for small robots, firing deadly laser at close range.</description>
+				<description>RobCo robot minilaser. Miniaturized weapon for small robots, firing
+					deadly laser at close range.</description>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/SpinerGun</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -622,14 +638,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Mini Flameblaster/Mister Gutsy Flamer-->
+	<!--Mini
+	Flameblaster/Mister Gutsy Flamer-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_MiniFlameblaster"]</xpath>
 		<value>
 			<ThingDef ParentName="LightMechanoidGun">
 				<defName>Gun_MiniFlameblaster</defName>
 				<label>RobCo micro flamer</label>
-				<description>RobCo robot micro flamer. Compact flamethrower for light robots, designed for area denial and close-range attacks.</description>
+				<description>RobCo robot micro flamer. Compact flamethrower for light robots,
+					designed for area denial and close-range attacks.</description>
 				<graphicData>
 					<!-- <texPath>Things/Item/Equipment/WeaponRanged/MiniFlameblaster</texPath> -->
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -669,7 +687,8 @@
 			<ThingDef ParentName="BaseGun">
 				<defName>Gun_BeamGraser</defName>
 				<label>RobCo gamma beam emitter</label>
-				<description>RobCo robot gamma emitter. Fires sweeping high-energy beams for armor penetration and ignition, used by advanced robots.</description>
+				<description>RobCo robot gamma emitter. Fires sweeping high-energy beams for armor
+					penetration and ignition, used by advanced robots.</description>
 				<tradeability>Sellable</tradeability>
 				<relicChance>0</relicChance>
 				<smeltable>false</smeltable>
@@ -741,14 +760,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Toxic Needle Gun-->
+	<!--Toxic
+	Needle Gun-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
 		<value>
 			<ThingDef ParentName="BaseGun">
 				<defName>Gun_ToxicNeedle</defName>
 				<label>RobCo toxin injector</label>
-				<description>RobCo robot toxin injector. Fires poison-tipped needles for disabling targets at long range, a specialty of RobCo robots.</description>
+				<description>RobCo robot toxin injector. Fires poison-tipped needles for disabling
+					targets at long range, a specialty of RobCo robots.</description>
 				<techLevel>Spacer</techLevel>
 				<graphicData>
 					<texPath>RobCo/Misc/Invisible</texPath>
@@ -819,14 +840,16 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Needle Launcher/Protectron-->
+	<!--Needle
+	Launcher/Protectron-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Gun_NeedleLauncher"]</xpath>
 		<value>
 			<ThingDef ParentName="NeedleGunBase">
 				<defName>Gun_NeedleLauncher</defName>
 				<label>RobCo laser blaster</label>
-				<description>RobCo robot rapid laser blaster. Compact, lightweight, and accurate, ideal for any RobCo robots in skirmishes.</description>
+				<description>RobCo robot rapid laser blaster. Compact, lightweight, and accurate,
+					ideal for any RobCo robots in skirmishes.</description>
 				<statBases>
 					<Mass>2.6</Mass>
 				</statBases>
@@ -851,5 +874,6 @@
 			</ThingDef>
 		</value>
 	</Operation>
-	<!--Protectron + Handy Variants: Melee-->
+	<!--Protectron
+	+ Handy Variants: Melee-->
 </Patch>

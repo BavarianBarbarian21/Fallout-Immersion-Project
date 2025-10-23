@@ -1,63 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Meme Groups for Structures -->
-	<MemeGroupDef>
-		<defName>Arktos_Democratic</defName>
+  <!-- Meme Groups for Structures -->
+  <MemeGroupDef>
+    <defName>Arktos_Democratic</defName>
     <drawOffset>(0.0,0.3)</drawOffset>
-	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_Despotic</defName>
+  </MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_Despotic</defName>
     <drawOffset>(0.25,0.3)</drawOffset>
-	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_Tribal</defName>
+  </MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_Tribal</defName>
     <drawOffset>(0.5,0.3)</drawOffset>
-	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_Raider</defName>
+  </MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_Raider</defName>
     <drawOffset>(0.75,0.3)</drawOffset>
-	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_OldWorldChurch</defName>
+  </MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_OldWorldChurch</defName>
     <drawOffset>(0.05,0.45)</drawOffset>
-	</MemeGroupDef>
-	<MemeGroupDef>
-		<defName>Arktos_NewWorldChurch</defName>
+  </MemeGroupDef>
+  <MemeGroupDef>
+    <defName>Arktos_NewWorldChurch</defName>
     <drawOffset>(0.35,0.45)</drawOffset>
-	</MemeGroupDef>
+  </MemeGroupDef>
   <MemeGroupDef>
     <defName>Arktos_Spiritual</defName>
     <drawOffset>(0.7,0.45)</drawOffset>
   </MemeGroupDef>
 
 
-
-	<!-- Abstract parent for Arktos structure memes -->
-	<MemeDef Name="Arktos_Government_Base" Abstract="True">
-		<category>Structure</category>
-		<iconPath>Arktos/Structure</iconPath>
-		<impact>0</impact>
-		<deityCount>0</deityCount>
-		<descriptionMaker>
-			<patterns>
-				<li>
-					<def>Arktos_Structure_Story</def>
+  <!-- Abstract parent for Arktos structure memes -->
+  <MemeDef Name="Arktos_Government_Base" Abstract="True">
+    <category>Structure</category>
+    <iconPath>Arktos/Structure</iconPath>
+    <impact>0</impact>
+    <deityCount>0</deityCount>
+    <descriptionMaker>
+      <patterns>
+        <li>
+          <def>Arktos_Structure_Story</def>
           <weight>10</weight>
-				</li>
-			</patterns>
-		</descriptionMaker>
+        </li>
+      </patterns>
+    </descriptionMaker>
     <generalRules>
       <rulesStrings>
         <li>memeLeaderNoun ->leader</li>
-				<li>memeLeaderAdjective ->great</li>
+        <li>memeLeaderAdjective ->great</li>
         <li>memeMoralist ->speaker</li>
       </rulesStrings>
     </generalRules>
-		<!--<generalRules>
-        <li>memeCreed ->weapons and warfare|community and cooperation|loyalty and obedience|spiritual enlightenment|exploration and conquest</li>
+    <!--<generalRules>
+        <li>memeCreed ->weapons and warfare|community and cooperation|loyalty and obedience|spiritual
+    enlightenment|exploration and conquest</li>
         <li>memeHyphenPrefix ->post-apocalyptic|wasteland|nuclear|radiated|mutant-infested|scrap-built</li>
         <li>memeAdjective ->fierce|unyielding|resourceful|merciless|devout|indomitable</li>
-        <li>memeLeaderNoun ->tribal chieftain|warlord|elected official|despot|raider king|high priest|spiritual guide</li>
+        <li>memeLeaderNoun ->tribal chieftain|warlord|elected official|despot|raider king|high
+    priest|spiritual guide</li>
         <li>memeLeaderAdjective ->resilient|ruthless|cunning|visionary|fearsome|devout|wise</li>
 
 			<rulesStrings>
@@ -69,205 +70,241 @@
 				<li>memeAdjective ->memeAdjectivePLACEHOLDER</li>
 			</rulesStrings>
 		</generalRules>-->
-	</MemeDef>
+  </MemeDef>
 
-	<MemeDef Name="Arktos_Religion_Base" ParentName="Arktos_Government_Base" Abstract="True">
-		<deityCount>1</deityCount>
-	</MemeDef>
-  
-<!-- Government Origin Story Pattern -->
-<IdeoStoryPatternDef>
-  <defName>Arktos_Structure_Story</defName>
-  <segments>
-    <li>intro</li>
-    <li>crisis</li>
-    <li>response</li>
-    <li>transformation</li>
-    <li>legacy</li>
-  </segments>
-  <rules>
-    <include>
-      <li>IdeoDescriptionGlobal</li>
-    </include>
-    <rulesStrings>
-      <!-- INTRO: Setting the scene after the apocalypse -->
+  <MemeDef Name="Arktos_Religion_Base" ParentName="Arktos_Government_Base" Abstract="True">
+    <deityCount>1</deityCount>
+  </MemeDef>
+
+  <!-- Government Origin Story Pattern -->
+  <IdeoStoryPatternDef>
+    <defName>Arktos_Structure_Story</defName>
+    <segments>
+      <li>intro</li>
+      <li>crisis</li>
+      <li>response</li>
+      <li>transformation</li>
+      <li>legacy</li>
+    </segments>
+    <rules>
+      <include>
+        <li>IdeoDescriptionGlobal</li>
+      </include>
+      <rulesStrings>
+        <!-- INTRO: Setting the scene after the apocalypse -->
         <li>intro->[introprefix], [introsuffix]</li>
 
         <li>introprefix->After the bombs fell and the old world crumbled</li>
         <li>introprefix->In the aftermath of nuclear fire</li>
         <li>introprefix->The Great War left behind scars deeper than the deserts and ruins</li>
         <li>introprefix->When civilization fell</li>
-        
+
         <li>introsuffix->scattered survivors clung to life in the irradiated wastes.</li>
-        <li>introsuffix->the ashes gave birth to new tribes, gangs, and settlements struggling for survival.</li>
+        <li>introsuffix->the ashes gave birth to new tribes, gangs, and settlements struggling for
+          survival.</li>
         <li>introsuffix->from these scars rose fledgling communities.</li>
-        <li>introsuffix->the desperate and the hopeful gathered around flickering campfires beneath shattered skies.</li>
+        <li>introsuffix->the desperate and the hopeful gathered around flickering campfires beneath
+          shattered skies.</li>
 
 
-      <!-- CRISIS: The hardships the community faced -->
-      <li>crisis(uses=2)->They battled savage raiders who preyed on the weak and plundered precious supplies.</li>
-      <li>crisis(uses=2)->Starvation stalked their settlements, forcing desperate scavenging beyond known borders.</li>
-      <li>crisis(uses=2)->Radiation storms swept the lands, poisoning earth and mind alike, testing their resolve.</li>
-      <li>crisis(uses=2)->Mutated beasts and twisted horrors lurked in the darkness, threatening every step.</li>
-      <li>crisis(uses=2)->Internal strife tore at their unity as fear and suspicion grew among the survivors.</li>
-      <li>crisis(uses=2)->The ghosts of old wars echoed in ruined cities, where rival factions fought over crumbling power.</li>
-      <li>crisis(uses=2)->Wasteland diseases, born of radiation and filth, swept through the community, claiming the young and old alike with no cure in sight.</li>
-        <li>crisis(uses=2)->Unstable water sources dried up or became poisoned, forcing perilous journeys to distant, unknown oases.</li>
-        <li>crisis(uses=2)->The skies burned with ash and firestorms, blotting out the sun and chilling the land to a bone-deep cold.</li>
-        <li>crisis(uses=2)->Rival warbands unleashed ruthless raids, razing farms and villages, scattering families and shattering fragile alliances.</li>
-        <li>crisis(uses=2)->Old world technology faltered and broke, leaving survivors to cobble together weapons and tools from scrap, often at great risk.</li>
-        <li>crisis(uses=2)->Whispers of a lurking, unnatural menace—mutants twisted by science gone mad—spread terror and paranoia among the people.</li>
+        <!-- CRISIS: The hardships the community faced -->
+        <li>crisis(uses=2)->They battled savage raiders who preyed on the weak and plundered
+          precious supplies.</li>
+        <li>crisis(uses=2)->Starvation stalked their settlements, forcing desperate scavenging
+          beyond known borders.</li>
+        <li>crisis(uses=2)->Radiation storms swept the lands, poisoning earth and mind alike,
+          testing their resolve.</li>
+        <li>crisis(uses=2)->Mutated beasts and twisted horrors lurked in the darkness, threatening
+          every step.</li>
+        <li>crisis(uses=2)->Internal strife tore at their unity as fear and suspicion grew among the
+          survivors.</li>
+        <li>crisis(uses=2)->The ghosts of old wars echoed in ruined cities, where rival factions
+          fought over crumbling power.</li>
+        <li>crisis(uses=2)->Wasteland diseases, born of radiation and filth, swept through the
+          community, claiming the young and old alike with no cure in sight.</li>
+        <li>crisis(uses=2)->Unstable water sources dried up or became poisoned, forcing perilous
+          journeys to distant, unknown oases.</li>
+        <li>crisis(uses=2)->The skies burned with ash and firestorms, blotting out the sun and
+          chilling the land to a bone-deep cold.</li>
+        <li>crisis(uses=2)->Rival warbands unleashed ruthless raids, razing farms and villages,
+          scattering families and shattering fragile alliances.</li>
+        <li>crisis(uses=2)->Old world technology faltered and broke, leaving survivors to cobble
+          together weapons and tools from scrap, often at great risk.</li>
+        <li>crisis(uses=2)->Whispers of a lurking, unnatural menace—mutants twisted by science gone
+          mad—spread terror and paranoia among the people.</li>
 
-      <!-- RESPONSE: How the community organized or reacted -->
-       <li>response->[responseprefix], [responsesuffix]</li>
+        <!-- RESPONSE: How the community organized or reacted -->
+        <li>response->[responseprefix], [responsesuffix]</li>
 
-       <li>responseprefix->Some turned to the old ways</li>
-       <li>responseprefix->Leaders rose—warlords</li>
-       <li>responseprefix->They forged fragile alliances with neighboring groups</li>
-       <li>responseprefix->Others embraced ruthless survivalism</li>
-       <li>responseprefix->Religious cults and strange new faiths blossomed</li>
-       <li>responseprefix->Skilled scavengers and engineers repurposed old technology</li>
+        <li>responseprefix->Some turned to the old ways</li>
+        <li>responseprefix->Leaders rose—warlords</li>
+        <li>responseprefix->They forged fragile alliances with neighboring groups</li>
+        <li>responseprefix->Others embraced ruthless survivalism</li>
+        <li>responseprefix->Religious cults and strange new faiths blossomed</li>
+        <li>responseprefix->Skilled scavengers and engineers repurposed old technology</li>
 
-      <li>responsesuffix->embracing tribal rites and ancestral spirits for guidance.</li>
-      <li>responsesuffix->elected councils—each claiming authority over their people.</li>
-      <li>responsesuffix->trading knowledge, weapons, and hope.</li>
-      <li>responsesuffix->striking first and showing no mercy to enemies.</li>
-      <li>responsesuffix->offering meaning in the chaos.</li>
-      <li>responsesuffix->to defend and sustain their homes.</li>
+        <li>responsesuffix->embracing tribal rites and ancestral spirits for guidance.</li>
+        <li>responsesuffix->elected councils—each claiming authority over their people.</li>
+        <li>responsesuffix->trading knowledge, weapons, and hope.</li>
+        <li>responsesuffix->striking first and showing no mercy to enemies.</li>
+        <li>responsesuffix->offering meaning in the chaos.</li>
+        <li>responsesuffix->to defend and sustain their homes.</li>
 
-      <!-- TRANSFORMATION: How the community changed and solidified -->
-       <li>transformation->[transformationprefix], [transformationsuffix]</li>
+        <!-- TRANSFORMATION: How the community changed and solidified -->
+        <li>transformation->[transformationprefix], [transformationsuffix]</li>
 
-         <li>transformationprefix->Over time, their customs hardened into laws</li>
-         <li>transformationprefix->What began as scattered survivors grew into a formidable force</li>
-         <li>transformationprefix->Their banners rose on battlefields and council halls alike</li>
-         <li>transformationprefix->Some settled the ruins of ancient cities</li>
-         <li>transformationprefix->The scars of hardship branded them</li>
-         <li>transformationprefix->Legends grew around their leaders</li>
+        <li>transformationprefix->Over time, their customs hardened into laws</li>
+        <li>transformationprefix->What began as scattered survivors grew into a formidable force</li>
+        <li>transformationprefix->Their banners rose on battlefields and council halls alike</li>
+        <li>transformationprefix->Some settled the ruins of ancient cities</li>
+        <li>transformationprefix->The scars of hardship branded them</li>
+        <li>transformationprefix->Legends grew around their leaders</li>
 
-      <li>transformationsuffix->ceremonies, and unbreakable oaths.</li>
-      <li>transformationsuffix->feared and respected across the wastes.</li>
-      <li>transformationsuffix->symbols of unity and power.</li>
-      <li>transformationsuffix->turning decay into bastions of hope.</li>
-      <li>transformationsuffix->forging a people who would never bow to the horrors outside their walls.</li>
-      <li>transformationsuffix->tales told by firelight to inspire future generations.</li>
+        <li>transformationsuffix->ceremonies, and unbreakable oaths.</li>
+        <li>transformationsuffix->feared and respected across the wastes.</li>
+        <li>transformationsuffix->symbols of unity and power.</li>
+        <li>transformationsuffix->turning decay into bastions of hope.</li>
+        <li>transformationsuffix->forging a people who would never bow to the horrors outside their
+          walls.</li>
+        <li>transformationsuffix->tales told by firelight to inspire future generations.</li>
 
-      <!-- LEGACY: What the community means now or their future -->
-         <li>legacy->[legacyprefix], [legacysuffix]</li>
-    
-         <li>legacyprefix->Now</li>
-         <li>legacyprefix->From shattered beginnings</li>
-         <li>legacyprefix->Their story is one of resilience</li>
-         <li>legacyprefix->Though the wastes are harsh</li>
-         <li>legacyprefix->As the old world fades</li>
-         <li>legacyprefix->Time will judge them</li>
+        <!-- LEGACY: What the community means now or their future -->
+        <li>legacy->[legacyprefix], [legacysuffix]</li>
 
-      <li>legacysuffix->their name echoes across the wasteland, a beacon to allies and a warning to foes.</li>
-      <li>legacysuffix->they carved a place in the new world, shaping the future from the ashes.</li>
-      <li>legacysuffix->a testament to the strength found in unity amid ruin.</li>
-      <li>legacysuffix->their legacy endures—etched in stone, whispered in the winds.</li>
-      <li>legacysuffix->their new order rises, a fragile hope in a savage land.</li>
-      <li>legacysuffix->they stand as saviors or monsters—but their impact is undeniable.</li>
-    </rulesStrings>
-  </rules>
-</IdeoStoryPatternDef>
+        <li>legacyprefix->Now</li>
+        <li>legacyprefix->From shattered beginnings</li>
+        <li>legacyprefix->Their story is one of resilience</li>
+        <li>legacyprefix->Though the wastes are harsh</li>
+        <li>legacyprefix->As the old world fades</li>
+        <li>legacyprefix->Time will judge them</li>
 
-<!-- Government Origin Story Pattern -->
-<IdeoStoryPatternDef>
-  <defName>Arktos_IdeoStoryPattern_General</defName>
-  <segments>
-    <li>intro</li>
-    <li>crisis</li>
-    <li>response</li>
-    <li>transformation</li>
-    <li>legacy</li>
-  </segments>
-  <rules>
-    <include>
-      <li>IdeoDescriptionGlobal</li>
-    </include>
-    <rulesStrings>
+        <li>legacysuffix->their name echoes across the wasteland, a beacon to allies and a warning
+          to foes.</li>
+        <li>legacysuffix->they carved a place in the new world, shaping the future from the ashes.</li>
+        <li>legacysuffix->a testament to the strength found in unity amid ruin.</li>
+        <li>legacysuffix->their legacy endures—etched in stone, whispered in the winds.</li>
+        <li>legacysuffix->their new order rises, a fragile hope in a savage land.</li>
+        <li>legacysuffix->they stand as saviors or monsters—but their impact is undeniable.</li>
+      </rulesStrings>
+    </rules>
+  </IdeoStoryPatternDef>
 
-<!-- INTRO: Setting the scene after the apocalypse -->
-<li>intro->[introprefix], [introsuffix] In [place_name], the [place_adjective] settlement and [place_summary], survivors find a fragile foothold.</li>
+  <!-- Government Origin Story Pattern -->
+  <IdeoStoryPatternDef>
+    <defName>Arktos_IdeoStoryPattern_General</defName>
+    <segments>
+      <li>intro</li>
+      <li>crisis</li>
+      <li>response</li>
+      <li>transformation</li>
+      <li>legacy</li>
+    </segments>
+    <rules>
+      <include>
+        <li>IdeoDescriptionGlobal</li>
+      </include>
+      <rulesStrings>
 
-<li>introprefix->After the bombs fell and the old world crumbled</li>
-<li>introprefix->In the aftermath of nuclear fire</li>
-<li>introprefix->The Great War left behind scars deeper than the deserts and ruins</li>
-<li>introprefix->When civilization fell</li>
+        <!-- INTRO: Setting the scene after the apocalypse -->
+        <li>intro->[introprefix], [introsuffix] In [place_name], the [place_adjective] settlement
+          and [place_summary], survivors find a fragile foothold.</li>
 
-<li>introsuffix->scattered survivors clung to life in the irradiated wastes.</li>
-<li>introsuffix->the ashes gave birth to new tribes, gangs, and settlements struggling for survival.</li>
-<li>introsuffix->from these scars rose fledgling communities.</li>
-<li>introsuffix->the desperate and the hopeful gathered around flickering campfires beneath shattered skies.</li>
+        <li>introprefix->After the bombs fell and the old world crumbled</li>
+        <li>introprefix->In the aftermath of nuclear fire</li>
+        <li>introprefix->The Great War left behind scars deeper than the deserts and ruins</li>
+        <li>introprefix->When civilization fell</li>
 
-<!-- CRISIS: The hardships the community faced -->
-<li>crisis(uses=2)->They battled savage raiders led by a [place_foeLeader], commanding ruthless [place_foeSoldiers].</li>
-<li>crisis(uses=2)->Starvation stalked their settlements, forcing desperate scavenging beyond known borders.</li>
-<li>crisis(uses=2)->Radiation storms swept the lands, poisoning earth and mind alike, testing their resolve.</li>
-<li>crisis(uses=2)->Mutated beasts and twisted horrors lurked in the darkness, threatening every step.</li>
-<li>crisis(uses=2)->Internal strife tore at their unity as fear and suspicion grew among the survivors.</li>
-<li>crisis(uses=2)->The ghosts of old wars echoed in ruined cities, where rival factions fought over crumbling power centered on the [place_powerCenter].</li>
-<li>crisis(uses=2)->Wasteland diseases, born of radiation and filth, swept through the community, claiming the young and old alike with no cure in sight.</li>
-<li>crisis(uses=2)->Unstable water sources dried up or became poisoned, forcing perilous journeys to distant, unknown oases.</li>
-<li>crisis(uses=2)->The skies burned with ash and firestorms, blotting out the sun and chilling the land to a bone-deep cold.</li>
-<li>crisis(uses=2)->Rival warbands unleashed ruthless raids, razing farms and villages, scattering families and shattering fragile alliances.</li>
-<li>crisis(uses=2)->Old world technology faltered and broke, leaving survivors to cobble together weapons and tools from scrap, often at great risk.</li>
-<li>crisis(uses=2)->Whispers of a lurking, unnatural menace—mutants twisted by science gone mad—spread terror and paranoia among the people.</li>
+        <li>introsuffix->scattered survivors clung to life in the irradiated wastes.</li>
+        <li>introsuffix->the ashes gave birth to new tribes, gangs, and settlements struggling for
+          survival.</li>
+        <li>introsuffix->from these scars rose fledgling communities.</li>
+        <li>introsuffix->the desperate and the hopeful gathered around flickering campfires beneath
+          shattered skies.</li>
 
-<!-- RESPONSE: How the community organized or reacted -->
-<li>response->[responseprefix], [responsesuffix] Around hubs like the [place_community], the [place_adjective] people rallied, including [place_job]s who kept the fragile peace.</li>
+        <!-- CRISIS: The hardships the community faced -->
+        <li>crisis(uses=2)->They battled savage raiders led by a [place_foeLeader], commanding
+          ruthless [place_foeSoldiers].</li>
+        <li>crisis(uses=2)->Starvation stalked their settlements, forcing desperate scavenging
+          beyond known borders.</li>
+        <li>crisis(uses=2)->Radiation storms swept the lands, poisoning earth and mind alike,
+          testing their resolve.</li>
+        <li>crisis(uses=2)->Mutated beasts and twisted horrors lurked in the darkness, threatening
+          every step.</li>
+        <li>crisis(uses=2)->Internal strife tore at their unity as fear and suspicion grew among the
+          survivors.</li>
+        <li>crisis(uses=2)->The ghosts of old wars echoed in ruined cities, where rival factions
+          fought over crumbling power centered on the [place_powerCenter].</li>
+        <li>crisis(uses=2)->Wasteland diseases, born of radiation and filth, swept through the
+          community, claiming the young and old alike with no cure in sight.</li>
+        <li>crisis(uses=2)->Unstable water sources dried up or became poisoned, forcing perilous
+          journeys to distant, unknown oases.</li>
+        <li>crisis(uses=2)->The skies burned with ash and firestorms, blotting out the sun and
+          chilling the land to a bone-deep cold.</li>
+        <li>crisis(uses=2)->Rival warbands unleashed ruthless raids, razing farms and villages,
+          scattering families and shattering fragile alliances.</li>
+        <li>crisis(uses=2)->Old world technology faltered and broke, leaving survivors to cobble
+          together weapons and tools from scrap, often at great risk.</li>
+        <li>crisis(uses=2)->Whispers of a lurking, unnatural menace—mutants twisted by science gone
+          mad—spread terror and paranoia among the people.</li>
 
-<li>responseprefix->Some turned to the old ways</li>
-<li>responseprefix->Leaders rose—warlords</li>
-<li>responseprefix->They forged fragile alliances with neighboring groups</li>
-<li>responseprefix->Others embraced ruthless survivalism</li>
-<li>responseprefix->Religious cults and strange new faiths blossomed</li>
-<li>responseprefix->Skilled scavengers and engineers repurposed old technology</li>
+        <!-- RESPONSE: How the community organized or reacted -->
+        <li>response->[responseprefix], [responsesuffix] Around hubs like the [place_community], the
+          [place_adjective] people rallied, including [place_job]s who kept the fragile peace.</li>
 
-<li>responsesuffix->embracing tribal rites and ancestral spirits for guidance.</li>
-<li>responsesuffix->elected councils—each claiming authority over their people.</li>
-<li>responsesuffix->trading knowledge, weapons, and hope.</li>
-<li>responsesuffix->striking first and showing no mercy to enemies.</li>
-<li>responsesuffix->offering meaning in the chaos.</li>
-<li>responsesuffix->to defend and sustain their homes.</li>
+        <li>responseprefix->Some turned to the old ways</li>
+        <li>responseprefix->Leaders rose—warlords</li>
+        <li>responseprefix->They forged fragile alliances with neighboring groups</li>
+        <li>responseprefix->Others embraced ruthless survivalism</li>
+        <li>responseprefix->Religious cults and strange new faiths blossomed</li>
+        <li>responseprefix->Skilled scavengers and engineers repurposed old technology</li>
 
-<!-- TRANSFORMATION: How the community changed and solidified -->
-<li>transformation->[transformationprefix], [transformationsuffix] Their halls, like the [place_powerCenter], became symbols of order in the chaos.</li>
+        <li>responsesuffix->embracing tribal rites and ancestral spirits for guidance.</li>
+        <li>responsesuffix->elected councils—each claiming authority over their people.</li>
+        <li>responsesuffix->trading knowledge, weapons, and hope.</li>
+        <li>responsesuffix->striking first and showing no mercy to enemies.</li>
+        <li>responsesuffix->offering meaning in the chaos.</li>
+        <li>responsesuffix->to defend and sustain their homes.</li>
 
-<li>transformationprefix->Over time, their customs hardened into laws</li>
-<li>transformationprefix->What began as scattered survivors grew into a formidable force</li>
-<li>transformationprefix->Their banners rose on battlefields and council halls alike</li>
-<li>transformationprefix->Some settled the ruins of ancient cities</li>
-<li>transformationprefix->The scars of hardship branded them</li>
-<li>transformationprefix->Legends grew around their leaders</li>
+        <!-- TRANSFORMATION: How the community changed and solidified -->
+        <li>transformation->[transformationprefix], [transformationsuffix] Their halls, like the
+          [place_powerCenter], became symbols of order in the chaos.</li>
 
-<li>transformationsuffix->ceremonies, and unbreakable oaths.</li>
-<li>transformationsuffix->feared and respected across the wastes.</li>
-<li>transformationsuffix->symbols of unity and power.</li>
-<li>transformationsuffix->turning decay into bastions of hope.</li>
-<li>transformationsuffix->forging a people who would never bow to the horrors outside their walls.</li>
-<li>transformationsuffix->tales told by firelight to inspire future generations.</li>
+        <li>transformationprefix->Over time, their customs hardened into laws</li>
+        <li>transformationprefix->What began as scattered survivors grew into a formidable force</li>
+        <li>transformationprefix->Their banners rose on battlefields and council halls alike</li>
+        <li>transformationprefix->Some settled the ruins of ancient cities</li>
+        <li>transformationprefix->The scars of hardship branded them</li>
+        <li>transformationprefix->Legends grew around their leaders</li>
 
-<!-- LEGACY: What the community means now or their future -->
-<li>legacy->[legacyprefix], [legacysuffix] Once a mere cluster of survivors in [place_name], they now stand as a testament to resilience.</li>
+        <li>transformationsuffix->ceremonies, and unbreakable oaths.</li>
+        <li>transformationsuffix->feared and respected across the wastes.</li>
+        <li>transformationsuffix->symbols of unity and power.</li>
+        <li>transformationsuffix->turning decay into bastions of hope.</li>
+        <li>transformationsuffix->forging a people who would never bow to the horrors outside their
+          walls.</li>
+        <li>transformationsuffix->tales told by firelight to inspire future generations.</li>
 
-<li>legacyprefix->Now</li>
-<li>legacyprefix->From shattered beginnings</li>
-<li>legacyprefix->Their story is one of resilience</li>
-<li>legacyprefix->Though the wastes are harsh</li>
-<li>legacyprefix->As the old world fades</li>
-<li>legacyprefix->Time will judge them</li>
+        <!-- LEGACY: What the community means now or their future -->
+        <li>legacy->[legacyprefix], [legacysuffix] Once a mere cluster of survivors in [place_name],
+          they now stand as a testament to resilience.</li>
 
-<li>legacysuffix->their name echoes across the wasteland, a beacon to allies and a warning to foes.</li>
-<li>legacysuffix->they carved a place in the new world, shaping the future from the ashes.</li>
-<li>legacysuffix->a testament to the strength found in unity amid ruin.</li>
-<li>legacysuffix->their legacy endures—etched in stone, whispered in the winds.</li>
-<li>legacysuffix->their new order rises, a fragile hope in a savage land.</li>
-<li>legacysuffix->they stand as saviors or monsters—but their impact is undeniable.</li>
+        <li>legacyprefix->Now</li>
+        <li>legacyprefix->From shattered beginnings</li>
+        <li>legacyprefix->Their story is one of resilience</li>
+        <li>legacyprefix->Though the wastes are harsh</li>
+        <li>legacyprefix->As the old world fades</li>
+        <li>legacyprefix->Time will judge them</li>
 
-    </rulesStrings>
-  </rules>
-</IdeoStoryPatternDef>
+        <li>legacysuffix->their name echoes across the wasteland, a beacon to allies and a warning
+          to foes.</li>
+        <li>legacysuffix->they carved a place in the new world, shaping the future from the ashes.</li>
+        <li>legacysuffix->a testament to the strength found in unity amid ruin.</li>
+        <li>legacysuffix->their legacy endures—etched in stone, whispered in the winds.</li>
+        <li>legacysuffix->their new order rises, a fragile hope in a savage land.</li>
+        <li>legacysuffix->they stand as saviors or monsters—but their impact is undeniable.</li>
+
+      </rulesStrings>
+    </rules>
+  </IdeoStoryPatternDef>
 
 </Defs>

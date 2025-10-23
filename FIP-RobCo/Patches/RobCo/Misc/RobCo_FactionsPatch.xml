@@ -7,23 +7,25 @@
 			<label>Ancient RobCo Factory</label>
 		</value>
 	</Operation>
-		<!-- Patch ShuttleCrashed_Exitable_Mechanitor label and description -->
-		<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/label</xpath>
-			<value>
-				<label>Vertibot crash site</label>
-			</value>
-		</Operation>
-		<Operation Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/description</xpath>
-			<value>
-				<description>The crash site of a Vertibot, possibly containing valuable robotics salvage and pre-war technology.</description>
-			</value>
-		</Operation>
+	<!-- Patch ShuttleCrashed_Exitable_Mechanitor label and description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/label</xpath>
+		<value>
+			<label>Vertibot crash site</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/description</xpath>
+		<value>
+			<description>The crash site of a Vertibot, possibly containing valuable robotics salvage
+				and pre-war technology.</description>
+		</value>
+	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/description</xpath>
 		<value>
-			<description>An ancient RobCo facility filled with pre-war robotics technology and secrets. Might contain a useable Pipboy.</description>
+			<description>An ancient RobCo facility filled with pre-war robotics technology and
+				secrets. Might contain a useable Pipboy.</description>
 		</value>
 	</Operation>
 	<!-- ShuttleCrashing_Mechanitor -->
@@ -36,7 +38,8 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
 		<value>
-			<description>The crash site of a Vertibot, possibly containing valuable robotics salvage.</description>
+			<description>The crash site of a Vertibot, possibly containing valuable robotics
+				salvage.</description>
 		</value>
 	</Operation>
 	<!-- Ship_ShuttleCrashing_Mechanitor -->
@@ -47,8 +50,14 @@
 		</value>
 	</Operation>
 	<!-- Mechanitor (Faction)
-  <Operation Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/label</xpath><value><label>RobCo mechanic</label></value></Operation><Operation Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/description</xpath><value><description>RobCo mechanics are skilled engineers specializing in pre-war robotics and automation.</description></value></Operation>-->
-	<!--Mechanoid (Faction)-->
+  <Operation
+	Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/label</xpath><value><label>RobCo
+	mechanic</label></value></Operation><Operation
+	Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="Mechanitor"]/description</xpath><value><description>RobCo
+	mechanics are skilled engineers specializing in pre-war robotics and
+	automation.</description></value></Operation>-->
+	<!--Mechanoid
+	(Faction)-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[defName="Mechanoid"]/label</xpath>
 		<value>
@@ -58,7 +67,9 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[defName="Mechanoid"]/description</xpath>
 		<value>
-			<description>RobCo Industries, the legendary robotics manufacturer, designed their products to be autonomous. Two centuries after the apocalypse their rouge robots still operate.</description>
+			<description>RobCo Industries, the legendary robotics manufacturer, designed their
+				products to be autonomous. Two centuries after the apocalypse their rouge robots
+				still operate.</description>
 		</value>
 	</Operation>
 	<!-- Mechanitor Scenario Patch -->
@@ -71,20 +82,28 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
 		<value>
-			<description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
+			<description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity
+				behind to pursue your true potential with your mechanical servants. Can you survive
+				and thrive on the rimworld? Note: This scenario is challenging due to your unique
+				skills and starting conditions.</description>
 		</value>
 	</Operation>
 	<!-- Patch MechanitorShip questDescription -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(), 'questDescription->')]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),
+			'questDescription->')]</xpath>
 		<value>
-			<li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
+			<li>questDescription->You have decrypted an ancient RobCo transponder, revealing the
+				location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal
+				it to land nearby.
 
-The ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can create and control robots for work and combat. By extracting the deceased mechanitor's mechlink, you can turn one of your own colonists into a mechanitor.
+				The ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can
+				create and control robots for work and combat. By extracting the deceased
+				mechanitor's mechlink, you can turn one of your own colonists into a mechanitor.
+				Beware - the ship also contains hostile RobCo robots. The robot group is composed
+				of:
 
-Beware - the ship also contains hostile RobCo robots. The robot group is composed of:
-
-[mechList]</li>
+				[mechList]</li>
 		</value>
 	</Operation>
 	<!-- Patch MechanitorShip mechGroups to spawn 1 Mech_Termite and 2 Mech_Pikeman only -->
@@ -110,47 +129,58 @@ Beware - the ship also contains hostile RobCo robots. The robot group is compose
 	</Operation>
 	<!-- Patch MechanitorShip questContentRules -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'mechanitorShuttleCrashedLetterLabel->')]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			'mechanitorShuttleCrashedLetterLabel->')]</xpath>
 		<value>
 			<li>mechanitorShuttleCrashedLetterLabel->Vertibot crash site</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'mechanitorShuttleCrashedLetterText->')]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			'mechanitorShuttleCrashedLetterText->')]</xpath>
 		<value>
-			<li>mechanitorShuttleCrashedLetterText->A Vertibot ship containing rogue RobCo robots has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
+			<li>mechanitorShuttleCrashedLetterText->A Vertibot ship containing rogue RobCo robots
+				has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'assaultBeginLetterLabel->')]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			'assaultBeginLetterLabel->')]</xpath>
 		<value>
 			<li>assaultBeginLetterLabel->RobCo robot attack</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), 'assaultBeginLetterText->')]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			'assaultBeginLetterText->')]</xpath>
 		<value>
 			<li>assaultBeginLetterText->The rogue RobCo robots are coming to assault the colony!</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), "mechlinkAvailableLetterLabel->")]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			"mechlinkAvailableLetterLabel->")]</xpath>
 		<value>
 			<li>mechlinkAvailableLetterLabel->[mechanitor_nameDef]'s Pipboy available</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(), "mechlinkAvailableLetterText->")]</xpath>
+		<xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
+			"mechlinkAvailableLetterText->")]</xpath>
 		<value>
-			<li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient RobCo mechanitor.
+			<li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient
+				RobCo mechanitor.
 
-Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
+				Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking
+				the corpse.</li>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
 		<value>
-			<text>You are a mechanic, a robotics engineer who left humanity behind. With your loyal mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and build a new future?</text>
+			<text>You are a mechanic, a robotics engineer who left humanity behind. With your loyal
+				mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and
+				build a new future?</text>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">

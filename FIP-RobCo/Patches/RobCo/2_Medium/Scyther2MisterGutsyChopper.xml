@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	<!-- Mister Gutsy Chopper ThingDef -->
 	<Operation Class="PatchOperationReplace">
@@ -7,7 +7,8 @@
 			<ThingDef ParentName="Floating">
 				<defName>Mech_Scyther</defName>
 				<label>Mister Gutsy Chopper</label>
-				<description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry and a drill-sergeant personality.</description>
+				<description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry
+					and a drill-sergeant personality.</description>
 				<statBases>
 					<MoveSpeed>5</MoveSpeed>
 				</statBases>
@@ -32,19 +33,19 @@
 						</li>
 					</lifeStageAges>
 					<baseHealthScale>2</baseHealthScale>
-							</race>
-							<tools>
-								<li>
-									<label>sawblade</label>
-									<capacities>
-										<li>Cut</li>
-									</capacities>
-									<power>10</power>
-									<cooldownTime>2</cooldownTime>
-									<chanceFactor>1</chanceFactor>
-									<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-								</li>
-							</tools>
+				</race>
+				<tools>
+					<li>
+						<label>sawblade</label>
+						<capacities>
+							<li>Cut</li>
+						</capacities>
+						<power>10</power>
+						<cooldownTime>2</cooldownTime>
+						<chanceFactor>1</chanceFactor>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+					</li>
+				</tools>
 			</ThingDef>
 		</value>
 	</Operation>

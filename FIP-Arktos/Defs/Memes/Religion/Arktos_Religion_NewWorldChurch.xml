@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- New world religions -->
-    <MemeDef Name="Arktos_Religion_NewWorldChurch_Base" ParentName="Arktos_Religion_Base" Abstract="true">
-		<worshipRoomLabel>tempel</worshipRoomLabel>
+    <MemeDef Name="Arktos_Religion_NewWorldChurch_Base" ParentName="Arktos_Religion_Base"
+        Abstract="true">
+        <worshipRoomLabel>tempel</worshipRoomLabel>
         <groupDef>Arktos_NewWorldChurch</groupDef>
         <iconPath>Arktos/NewWorldChurch</iconPath>
         <thingStyleCategories>
@@ -13,15 +14,22 @@
         </thingStyleCategories>
         <symbolPackOverride>true</symbolPackOverride>
         <symbolPacks>
-            <li><ideoName>Children</ideoName><adjective>Children</adjective><member>Children</member><prefix>true</prefix></li>
+            <li>
+                <ideoName>Children</ideoName>
+                <adjective>Children</adjective>
+                <member>Children</member>
+                <prefix>true</prefix>
+            </li>
         </symbolPacks>
-	</MemeDef>
+    </MemeDef>
 
-    <!--Children of Atom-->
+    <!--Children
+    of Atom-->
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
         <defName>Arktos_Religion_ChildrenOfAtom</defName>
         <label>Children of Atom</label>
-        <description>A new cult that treats radiation and atomic remnants as sacred, with ritualised exposure and offerings.</description>
+        <description>A new cult that treats radiation and atomic remnants as sacred, with ritualised
+            exposure and offerings.</description>
         <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfAtom</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfAtom</deityTypeMakerOverride>
     </MemeDef>
@@ -48,7 +56,7 @@
             </rulesStrings>
         </rulePack>
     </RulePackDef>
-    
+
     <RulePackDef>
         <defName>Arktos_TypeMaker_ChildrenOfAtom</defName>
         <rulePack>
@@ -74,11 +82,13 @@
         </rulePack>
     </RulePackDef>
 
-    <!--Children of the Cathedral-->
+    <!--Children
+    of the Cathedral-->
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
         <defName>Arktos_Religion_ChildrenOfTheCathedral</defName>
         <label>Children of the Cathedral</label>
-        <description>A cathedral-centered faith with strong civic influence and ceremonial public worship.</description>
+        <description>A cathedral-centered faith with strong civic influence and ceremonial public
+            worship.</description>
         <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfTheCathedral</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfTheCathedral</deityTypeMakerOverride>
         <worshipRoomLabel>cathedral</worshipRoomLabel>
@@ -118,7 +128,7 @@
                 <li>u_role -> father</li>
                 <li>u_role -> herald</li>
                 <li>u_role -> prophet</li>
-                <li>u_role ->  lightbearer</li>
+                <li>u_role -> lightbearer</li>
                 <li>u_domain -> transcendence</li>
                 <li>u_domain -> the flesh</li>
                 <li>u_domain -> the collective mind</li>
@@ -136,7 +146,8 @@
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
         <defName>Arktos_Religion_ChildrenOfKrvibi</defName>
         <label>Children of Krvibi</label>
-        <description>A Lovecraftian cult venerating Ug-Qualtoth and the forerunners; rituals here are strange and alien to most.</description>
+        <description>A Lovecraftian cult venerating Ug-Qualtoth and the forerunners; rituals here
+            are strange and alien to most.</description>
         <deityNameMakerOverride>Arktos_NameMaker_ChildrenOfKrvibi</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_ChildrenOfKrvibi</deityTypeMakerOverride>
     </MemeDef>
@@ -203,7 +214,8 @@
     <MemeDef ParentName="Arktos_Religion_NewWorldChurch_Base">
         <defName>Arktos_Religion_Hubology</defName>
         <label>Hubology</label>
-        <description>A technospiritual faith devoted to the alignment of cosmic energies and the pursuit of mental purification through the Hub.</description>
+        <description>A technospiritual faith devoted to the alignment of cosmic energies and the
+            pursuit of mental purification through the Hub.</description>
         <deityNameMakerOverride>Arktos_NameMaker_Hubology</deityNameMakerOverride>
         <deityTypeMakerOverride>Arktos_TypeMaker_Hubology</deityTypeMakerOverride>
         <worshipRoomLabel>sanctum</worshipRoomLabel>

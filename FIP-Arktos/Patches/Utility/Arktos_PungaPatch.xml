@@ -3,76 +3,115 @@
   <!-- ThingDef: Ambrosia to Punga -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Ambrosia"]/label</xpath>
-    <value><label>punga fruit</label></value>
+    <value>
+      <label>punga fruit</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Ambrosia"]/description</xpath>
-    <value><description>A rare, mutated fruit found in the wasteland. Punga fruit is prized for its unique taste and the mild, uplifting high it provides. Consuming too much can lead to a subtle addiction, but survivors swear by its mood-boosting effects.</description></value>
+    <value>
+      <description>A rare, mutated fruit found in the wasteland. Punga fruit is prized for its
+        unique taste and the mild, uplifting high it provides. Consuming too much can lead to a
+        subtle addiction, but survivors swear by its mood-boosting effects.</description>
+    </value>
   </Operation>
 
   <!-- HediffDef: AmbrosiaHigh to Punga Warmth -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaHigh"]/label</xpath>
-    <value><label>punga warmth</label></value>
+    <value>
+      <label>punga warmth</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaHigh"]/description</xpath>
-    <value><description>Punga chemicals in the bloodstream. It lifts the mood and helps survivors forget the harshness of the wasteland.</description></value>
+    <value>
+      <description>Punga chemicals in the bloodstream. It lifts the mood and helps survivors forget
+        the harshness of the wasteland.</description>
+    </value>
   </Operation>
 
   <!-- ThoughtDef: AmbrosiaHigh to Punga Warmth -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="AmbrosiaHigh"]/stages/li/label</xpath>
-    <value><label>punga warmth</label></value>
+    <value>
+      <label>punga warmth</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="AmbrosiaHigh"]/stages/li/description</xpath>
-    <value><description>The punga fruit makes me feel relaxed and energized, a rare comfort in the wastes.</description></value>
+    <value>
+      <description>The punga fruit makes me feel relaxed and energized, a rare comfort in the
+        wastes.</description>
+    </value>
   </Operation>
 
   <!-- ChemicalDef: Ambrosia to Punga -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ChemicalDef[defName="Ambrosia"]/label</xpath>
-    <value><label>punga</label></value>
+    <value>
+      <label>punga</label>
+    </value>
   </Operation>
 
   <!-- NeedDef: Chemical_Ambrosia to Chemical_Punga -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/NeedDef[defName="Chemical_Ambrosia"]/label</xpath>
-    <value><label>punga</label></value>
+    <value>
+      <label>punga</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/NeedDef[defName="Chemical_Ambrosia"]/description</xpath>
-    <value><description>Because of a punga addiction, this person needs to regularly consume punga fruit to avoid withdrawal symptoms.</description></value>
+    <value>
+      <description>Because of a punga addiction, this person needs to regularly consume punga fruit
+        to avoid withdrawal symptoms.</description>
+    </value>
   </Operation>
 
   <!-- HediffDef: AmbrosiaTolerance to Punga Tolerance -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaTolerance"]/label</xpath>
-    <value><label>punga tolerance</label></value>
+    <value>
+      <label>punga tolerance</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaTolerance"]/description</xpath>
-    <value><description>A built-up tolerance to punga fruit. The more severe this tolerance is, the more punga it takes to get the same effect.</description></value>
+    <value>
+      <description>A built-up tolerance to punga fruit. The more severe this tolerance is, the more
+        punga it takes to get the same effect.</description>
+    </value>
   </Operation>
 
   <!-- HediffDef: AmbrosiaAddiction to Punga Addiction -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaAddiction"]/label</xpath>
-    <value><label>punga addiction</label></value>
+    <value>
+      <label>punga addiction</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/HediffDef[defName="AmbrosiaAddiction"]/description</xpath>
-    <value><description>A chemical addiction to punga fruit. Long-term use has caused neurological changes, making it hard to function without the fruit. Withdrawal is tough, but with time, the body can recover.</description></value>
+    <value>
+      <description>A chemical addiction to punga fruit. Long-term use has caused neurological
+        changes, making it hard to function without the fruit. Withdrawal is tough, but with time,
+        the body can recover.</description>
+    </value>
   </Operation>
 
   <!-- ThoughtDef: AmbrosiaWithdrawal to Punga Withdrawal -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="AmbrosiaWithdrawal"]/stages/li[2]/label</xpath>
-    <value><label>punga withdrawal</label></value>
+    <value>
+      <label>punga withdrawal</label>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThoughtDef[defName="AmbrosiaWithdrawal"]/stages/li[2]/description</xpath>
-    <value><description>I feel heavy and cold all the time. I never thought I'd want a piece of punga fruit so much.</description></value>
+    <value>
+      <description>I feel heavy and cold all the time. I never thought I'd want a piece of punga
+        fruit so much.</description>
+    </value>
   </Operation>
 </Patch>

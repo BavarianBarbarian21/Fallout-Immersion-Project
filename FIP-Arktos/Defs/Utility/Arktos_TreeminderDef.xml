@@ -4,7 +4,12 @@
   <ThingDef ParentName="DryadBase">
     <defName>Dryad_Pungaling</defName>
     <label>pungaling treeminder</label>
-    <description>A slow, bumbling caste of treeminder which specializes in pungs production. Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, treeminders are mammal-like creatures that have a symbiotic relationship with the treefather. They reproduce together with their tree, which contains FEV samples. Treeminders can morph into various specialized castes.</description>
+    <description>A slow, bumbling caste of treeminder which specializes in pungs production.
+      Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis.
+      However, it is slow and ineffective at work or combat.\n\nIn general, treeminders are
+      mammal-like creatures that have a symbiotic relationship with the treefather. They reproduce
+      together with their tree, which contains FEV samples. Treeminders can morph into various
+      specialized castes.</description>
     <statBases>
       <MoveSpeed>3</MoveSpeed>
     </statBases>
@@ -46,21 +51,25 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/DryadWoodmaker</texPath>  <!-- Uses Woodmaker textures -->
+          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/DryadWoodmaker</texPath>  <!-- Uses Woodmaker
+          textures -->
           <drawSize>1.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/Dessicated_DryadWoodmaker</texPath>   <!-- Uses Woodmaker textures -->
+          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/Dessicated_DryadWoodmaker</texPath>   <!-- Uses
+          Woodmaker textures -->
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
   </PawnKindDef>
 
-<GauranlenTreeModeDef>
+  <GauranlenTreeModeDef>
     <defName>Pungaling</defName>
     <label>pungaling</label>
-    <description>A slow, bumbling caste of treeminder which specializes in pungs production. Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+    <description>A slow, bumbling caste of treeminder which specializes in pungs production.
+      Together with its Gauranlen tree, this dryad can generate punga fruit on an ongoing basis.
+      However, it is slow and ineffective at work or combat.</description>
     <drawPosition>(0, 0.5)</drawPosition>
     <pawnKindDef>Dryad_Pungaling</pawnKindDef>
     <displayedStats>
@@ -72,15 +81,17 @@
       <ThingDef>Ambrosia</ThingDef>
     </hyperlinks>
   </GauranlenTreeModeDef>
-  
-  <!-- WorkGiverDef: ConnectedTreeDied (overrides basegame def by providing a Def with the same defName) -->
+
+  <!-- WorkGiverDef: ConnectedTreeDied (overrides basegame def by providing a Def with the same
+  defName) -->
   <ThoughtDef>
     <defName>ConnectedTreeDied</defName>
     <durationDays>10</durationDays>
     <stages>
       <li>
         <label>Treefather death</label>
-        <description>My tree... its calming presence became pure pain, then went silent. Its suffering echoes in my mind...</description>
+        <description>My tree... its calming presence became pure pain, then went silent. Its
+          suffering echoes in my mind...</description>
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
