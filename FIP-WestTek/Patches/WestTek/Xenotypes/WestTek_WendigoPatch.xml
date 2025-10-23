@@ -9,23 +9,29 @@
     </value>
   </Operation>
 
-    <Operation Class="PatchOperationRemove">
-    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
-    <value>
-        <li>MoveSpeed_Quick</li>
-        <li>UVSensitivity_Mild</li>
-        <li>Aggression_Aggressive</li>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="MoveSpeed_Quick"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="UVSensitivity_Mild"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="Aggression_Aggressive"]</xpath>
+      </li>
+    </operations>
   </Operation>
 
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
     <value>
-        <li>MoveSpeed_VeryQuick</li>
-        <li>Mood_Pessimist</li>
-        <li>UVSensitivity_Intense</li>
-        <li>Aggression_HyperAggressive</li>
-        <li>KillThirst</li>
+      <li>MoveSpeed_VeryQuick</li>
+      <li>Mood_Pessimist</li>
+      <li>UVSensitivity_Intense</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>KillThirst</li>
     </value>
   </Operation>
 
