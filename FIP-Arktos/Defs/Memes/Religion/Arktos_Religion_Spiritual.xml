@@ -111,89 +111,100 @@
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
-	<!--Dharma-->
+	<!--Karma-->
 	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
-		<defName>Arktos_Religion_Dharma</defName>
-		<label>Dharma Order</label>
-		<description>An order following the Dharma: meditation, balance, and rites aiming to restore
-			inner and social harmony after the fall of civilisation.</description>
-		<deityNameMakerOverride>Arktos_NameMaker_Dharma</deityNameMakerOverride>
-		<deityTypeMakerOverride>Arktos_TypeMaker_Dharma</deityTypeMakerOverride>
+		<defName>Arktos_Religion_Karma</defName>
+		<label>Karma</label>
+		<description>An order devoted to the law of Karma — the eternal cycle of cause and
+			consequence.
+			Through mindful action and reflection, followers seek to purify their deeds and restore
+			harmony
+			to the world’s moral balance after the collapse of civilisation.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Karma</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Karma</deityTypeMakerOverride>
+		<thingStyleCategories>
+			<li>
+				<category>Hindu</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
 	</MemeDef>
 
 	<RulePackDef>
-		<defName>Arktos_NameMaker_Dharma</defName>
+		<defName>Arktos_NameMaker_Karma</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>r_deityName -> [d_name_Religion]</li>
+				<li>r_deityName -> [k_name_Religion]</li>
 
-				<li>d_name_Religion -> [d_prefix] [d_deity_core]</li>
-				<li>d_name_Religion -> The [d_virtue] One</li>
-				<li>d_name_Religion -> [d_deity_core] of [d_realm]</li>
-				<li>d_name_Religion -> [d_epithet] of the [d_aspect]</li>
+				<li>k_name_Religion -> [k_prefix] [k_deity_core]</li>
+				<li>k_name_Religion -> The [k_virtue] Judge</li>
+				<li>k_name_Religion -> [k_deity_core] of [k_realm]</li>
+				<li>k_name_Religion -> [k_epithet] of the [k_aspect]</li>
 
-				<li>d_prefix -> Mahā</li>
-				<li>d_prefix -> Sri</li>
-				<li>d_prefix -> Lokesh</li>
-				<li>d_prefix -> Bhagavan</li>
+				<li>k_prefix -> Mahā</li>
+				<li>k_prefix -> Sri</li>
+				<li>k_prefix -> Dharma</li>
+				<li>k_prefix -> Shakti</li>
 
-				<li>d_deity_core -> Vishva</li>
-				<li>d_deity_core -> Tathāgata</li>
-				<li>d_deity_core -> Shakti</li>
-				<li>d_deity_core -> Avatāra</li>
+				<li>k_deity_core -> Karmadeva</li>
+				<li>k_deity_core -> Niyati</li>
+				<li>k_deity_core -> Vidya</li>
+				<li>k_deity_core -> Shanta</li>
 
-				<li>d_virtue -> enlightened</li>
-				<li>d_virtue -> blissful</li>
-				<li>d_virtue -> serene</li>
-				<li>d_virtue -> infinite</li>
+				<li>k_virtue -> just</li>
+				<li>k_virtue -> impartial</li>
+				<li>k_virtue -> inexorable</li>
+				<li>k_virtue -> radiant</li>
 
-				<li>d_realm -> Dharma</li>
-				<li>d_realm -> Nirvāṇa</li>
-				<li>d_realm -> Kāla</li>
-				<li>d_realm -> the ten thousand worlds</li>
+				<li>k_realm -> Samsāra</li>
+				<li>k_realm -> the Cycle</li>
+				<li>k_realm -> the Weighing Hall</li>
+				<li>k_realm -> the River of Deeds</li>
 
-				<li>d_epithet -> lotus-born</li>
-				<li>d_epithet -> ocean of wisdom</li>
-				<li>d_epithet -> wheel-turner</li>
+				<li>k_epithet -> balance-keeper</li>
+				<li>k_epithet -> weaver of fates</li>
+				<li>k_epithet -> mirror of souls</li>
 
-				<li>d_aspect -> endless path</li>
-				<li>d_aspect -> pure land</li>
-				<li>d_aspect -> celestial flame</li>
+				<li>k_aspect -> returning path</li>
+				<li>k_aspect -> unseen current</li>
+				<li>k_aspect -> scales of truth</li>
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
+
 	<RulePackDef>
-		<defName>Arktos_TypeMaker_Dharma</defName>
+		<defName>Arktos_TypeMaker_Karma</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>r_deityType -> [d_title_Religion]</li>
+				<li>r_deityType -> [k_title_Religion]</li>
 
-				<li>d_title_Religion -> [d_role] of [d_principle]</li>
-				<li>d_title_Religion -> lord of [d_cycle]</li>
-				<li>d_title_Religion -> the [d_quality] guide</li>
+				<li>k_title_Religion -> [k_role] of [k_principle]</li>
+				<li>k_title_Religion -> keeper of [k_cycle]</li>
+				<li>k_title_Religion -> the [k_quality] arbiter</li>
 
-				<li>d_role -> preserver</li>
-				<li>d_role -> destroyer</li>
-				<li>d_role -> awakener</li>
-				<li>d_role -> embodiment</li>
+				<li>k_role -> judge</li>
+				<li>k_role -> preserver</li>
+				<li>k_role -> redeemer</li>
+				<li>k_role -> weaver</li>
 
-				<li>d_principle -> Dharma</li>
-				<li>d_principle -> Karma</li>
-				<li>d_principle -> the eightfold path</li>
-				<li>d_principle -> the middle way</li>
+				<li>k_principle -> Karma</li>
+				<li>k_principle -> consequence</li>
+				<li>k_principle -> retribution</li>
+				<li>k_principle -> the moral order</li>
 
-				<li>d_cycle -> Samsāra</li>
-				<li>d_cycle -> rebirth</li>
-				<li>d_cycle -> the kalpa</li>
-				<li>d_cycle -> time without end</li>
+				<li>k_cycle -> Samsāra</li>
+				<li>k_cycle -> rebirth</li>
+				<li>k_cycle -> the chain of deeds</li>
+				<li>k_cycle -> the turning wheel</li>
 
-				<li>d_quality -> silent</li>
-				<li>d_quality -> compassionate</li>
-				<li>d_quality -> timeless</li>
-				<li>d_quality -> all-seeing</li>
+				<li>k_quality -> impartial</li>
+				<li>k_quality -> serene</li>
+				<li>k_quality -> unwavering</li>
+				<li>k_quality -> merciful</li>
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
+
 	<!--Native-->
 	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
 		<defName>Arktos_Religion_Native</defName>
@@ -284,4 +295,106 @@
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
+
+	<!--Shi-->
+	<MemeDef ParentName="Arktos_Religion_Spiritual_Base">
+		<defName>Arktos_Religion_Shi</defName>
+		<label>Shi</label>
+		<description>The Shi follow the Way of the Emperor — a philosophical order born from the
+			fusion of
+			ancient wisdom and new science. Knowledge, discipline, and harmony are sacred
+			principles.
+			They seek balance between machine, mind, and nature, guided by the teachings of the Old
+			World.</description>
+		<deityNameMakerOverride>Arktos_NameMaker_Shi</deityNameMakerOverride>
+		<deityTypeMakerOverride>Arktos_TypeMaker_Shi</deityTypeMakerOverride>
+		<thingStyleCategories>
+			<li>
+				<category>Buddhist</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+
+	<RulePackDef>
+		<defName>Arktos_NameMaker_Shi</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityName -> [s_name_Religion]</li>
+
+				<li>s_name_Religion -> [s_prefix] [s_title]</li>
+				<li>s_name_Religion -> The [s_virtue] Emperor</li>
+				<li>s_name_Religion -> [s_title] of [s_domain]</li>
+				<li>s_name_Religion -> [s_epithet] of the [s_aspect]</li>
+
+				<li>s_prefix -> High</li>
+				<li>s_prefix -> Eternal</li>
+				<li>s_prefix -> Celestial</li>
+				<li>s_prefix -> Iron</li>
+
+				<li>s_title -> Zhuan</li>
+				<li>s_title -> Lao</li>
+				<li>s_title -> Han</li>
+				<li>s_title -> Wei</li>
+				<li>s_title -> Zhen</li>
+				<li>s_title -> Shen</li>
+
+				<li>s_virtue -> wise</li>
+				<li>s_virtue -> balanced</li>
+				<li>s_virtue -> serene</li>
+				<li>s_virtue -> enlightened</li>
+				<li>s_virtue -> perfected</li>
+
+				<li>s_domain -> Machine</li>
+				<li>s_domain -> Dao</li>
+				<li>s_domain -> Horizon</li>
+				<li>s_domain -> Inner Sea</li>
+				<li>s_domain -> Empire of Thought</li>
+
+				<li>s_epithet -> mind-forged</li>
+				<li>s_epithet -> keeper of balance</li>
+				<li>s_epithet -> architect of harmony</li>
+				<li>s_epithet -> iron sage</li>
+
+				<li>s_aspect -> celestial code</li>
+				<li>s_aspect -> way of order</li>
+				<li>s_aspect -> eternal engine</li>
+				<li>s_aspect -> living Dao</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>Arktos_TypeMaker_Shi</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityType -> [s_title_Religion]</li>
+
+				<li>s_title_Religion -> [s_role] of [s_principle]</li>
+				<li>s_title_Religion -> keeper of [s_cycle]</li>
+				<li>s_title_Religion -> the [s_quality] sage</li>
+
+				<li>s_role -> guardian</li>
+				<li>s_role -> overseer</li>
+				<li>s_role -> arbiter</li>
+				<li>s_role -> ascendant</li>
+
+				<li>s_principle -> balance</li>
+				<li>s_principle -> the Way</li>
+				<li>s_principle -> the Code</li>
+				<li>s_principle -> the Harmony</li>
+
+				<li>s_cycle -> progress</li>
+				<li>s_cycle -> renewal</li>
+				<li>s_cycle -> the Great Circuit</li>
+				<li>s_cycle -> the endless design</li>
+
+				<li>s_quality -> patient</li>
+				<li>s_quality -> analytical</li>
+				<li>s_quality -> luminous</li>
+				<li>s_quality -> steadfast</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
 </Defs>
