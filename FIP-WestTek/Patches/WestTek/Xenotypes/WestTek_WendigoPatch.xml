@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+<!--+6-->
   <!-- Patch Sanguophages xenotype label to Wendigo -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/XenotypeDef[defName="Sanguophage"]/label</xpath>
     <value><label>Wendigo</label></value>
   </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
+    <value>
+      <genes>
+        <li>MoveSpeed_VeryQuick</li>
+        <li>Mood_Pessimist</li>
+        <li>UVSensitivity_Intense</li>
+        <li>Aggression_HyperAggressive</li>
+        <li>MeleeDamage_Strong</li>
+        <li>KillThirst</li>
+        <li>LowSleep</li>
+        <li>Beauty_VeryUgly</li>
+        <li>DarkVision</li>
+        <li>Hemogenic</li>
+        <li>HemogenDrain</li>
+        <li>Coagulate</li>
+        <li>Bloodfeeder</li>
+        <li>LongjumpLegs</li>
+        <li>PiercingSpine</li>
+        <li>Deathless</li>
+        <li>TotalHealing</li>
+        <li>XenogermReimplanter</li>
+        <li>PerfectImmunity</li>
+        <li>Ageless</li>
+        <li>DiseaseFree</li> 
+      </genes>
+    </value>
+  </Operation>
+
 </Patch>

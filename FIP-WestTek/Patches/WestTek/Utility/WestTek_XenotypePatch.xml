@@ -2,9 +2,8 @@
 <Patch>
     <!-- Add/replace the genes list for every XenotypeDef to include WestTek gene tiers -->
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/XenotypeDef</xpath>
+        <xpath>Defs/XenotypeDef/genes</xpath>
         <value>
-            <genes>
                 <li>WestTek_Strength_A</li>
                 <li>WestTek_Strength_B</li>
                 <li>WestTek_Strength_C</li>
@@ -39,7 +38,6 @@
                 <li>WestTek_Luck_B</li>
                 <li>WestTek_Luck_C</li>
                 <li>WestTek_Luck_D</li>
-            </genes>
         </value>
     </Operation>
 </Patch>
