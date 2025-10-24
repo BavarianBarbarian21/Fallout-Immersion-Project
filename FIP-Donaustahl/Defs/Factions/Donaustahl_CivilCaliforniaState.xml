@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <FactionDef ParentName="FactionBase">
+  <FactionDef ParentName="Donaustahl_Settler_Factionbase">
     <defName>Donaustahl_CivilCaliforniaState</defName>
     <label>Civil California State</label>
     <description>The Civil California State is a faction of survivors and settlers who have banded
@@ -12,16 +12,6 @@
     <pawnsPlural>civilians</pawnsPlural>
     <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
     <categoryTag>Outlander</categoryTag>
-    <techLevel>Industrial</techLevel>
-    <settlementGenerationWeight>1</settlementGenerationWeight>
-    <requiredCountAtGameStart>1</requiredCountAtGameStart>
-    <canSiege>true</canSiege>
-    <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>President</leaderTitle>
-    <settlementNameMaker>FCP_Namer_Settlement_NCR</settlementNameMaker>
-    <allowedCultures>
-      <li>FCP_Culture_NCR_Californian</li>
-    </allowedCultures>
     <xenotypeSet>
       <xenotypeChances>
         <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
@@ -33,12 +23,5 @@
         <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
       </xenotypeChances>
     </xenotypeSet>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>Offworld</li>
-        </categories>
-      </li>
-    </backstoryFilters>
   </FactionDef>
 </Defs>
