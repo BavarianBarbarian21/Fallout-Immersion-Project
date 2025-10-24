@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <CultureDef>
-        <defName>Donaustahl_American</defName>
+    <!--American, Bear, Bull, Cascadia, Texico-->
+    <!--American-->
+    <CultureDef Name="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_American</defName>
         <label>American</label>
         <description>Culture originating from the pre-war United States.</description>
         <ideoNameMaker>NamerIdeoGlobal</ideoNameMaker>
@@ -9,6 +11,8 @@
         <deityTypeMaker>DeityTypeMakerGlobal</deityTypeMaker>
         <leaderTitleMaker>LeaderTitleMaker_Astropolitan</leaderTitleMaker>
         <festivalNameMaker>NamerFestivalGlobal</festivalNameMaker>
+        <pawnNameMaker>Donaustahl_PawnNameMaker_American_Male</pawnNameMaker>
+        <pawnNameMakerFemale>Donaustahl_PawnNameMaker_American_Female</pawnNameMakerFemale>
         <allowedPlaceTags>
             <li>OriginAmerican</li>
         </allowedPlaceTags>
@@ -51,5 +55,136 @@
             </li>
         </styleItemTags>
     </CultureDef>
+
+    <!--American - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_American_Tribal</defName>
+        <label>American-Tribal</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    </CultureDef>
+
+    <!--Bear-->
+    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Bear">
+    <defName>Donaustahl_Culture_Bear</defName>
+        <label>Bear</label>
+        <description>Culture originating from the pre-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginBear</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Bear - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_Bear">
+        <defName>Donaustahl_Culture_Bear_Tribal</defName>
+        <label>Bear-Tribal</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    </CultureDef>
+
+    <!--Bull-->
+    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Bull">
+        <defName>Donaustahl_Culture_Bull</defName>
+        <label>Bull</label>
+        <description>Culture originating from the pre-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginBull</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Bull - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_Bull">
+        <defName>Donaustahl_Culture_Bull_Tribal</defName>
+        <label>Bull-Tribal</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    </CultureDef>
+
+    <!--Cascadia-->
+    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Cascadia">
+    <defName>Donaustahl_Culture_Cascadia</defName>
+        <label>Cascadia</label>
+        <description>Culture originating from the pre-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginBear</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Cascadia - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_Cascadia">
+        <defName>Donaustahl_Culture_Cascadia_Tribal</defName>
+        <label>Cascadia-Tribal</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    </CultureDef>
+
+    <!--Texico-->
+    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Texico">
+    <defName>Donaustahl_Culture_Texico</defName>
+        <label>Texico</label>
+        <description>Culture originating from the pre-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginTexico</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Texico - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_Texico">
+        <defName>Donaustahl_Culture_Texico_Tribal</defName>
+        <label>Texico-Tribal</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
+    </CultureDef>
+
+    <!--Raider-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_Raider</defName>
+        <label>Raider</label>
+        <description>Culture originating from the post-war United States.</description>
+        <pawnNameMaker>Donaustahl_PawnNameMaker_Raider_Male</pawnNameMaker>
+        <pawnNameMakerFemale>Donaustahl_PawnNameMaker_Raider_Female</pawnNameMakerFemale>
+    </CultureDef>
+
+    <!--Mutant-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_SuperMutant</defName>
+        <label>Mutant</label>
+        <description>Culture originating from the post-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginChapter</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Ghoul-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_Ghoul</defName>
+        <label>Ghoul</label>
+        <description>Culture originating from the post-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginChapter</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Numen-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_Numen</defName>
+        <label>Numen</label>
+        <description>Culture originating from the post-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginWasteland</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
+    <!--Slanter-->
+    <CultureDef ParentName="Donaustahl_Culture_American">
+        <defName>Donaustahl_Culture_Slanter</defName>
+        <label>Slanter</label>
+        <description>Culture originating from the post-war United States.</description>
+        <allowedPlaceTags Inherit="False">
+            <li>OriginWasteland</li>
+        </allowedPlaceTags>
+    </CultureDef>
+
     
+
 </Defs>

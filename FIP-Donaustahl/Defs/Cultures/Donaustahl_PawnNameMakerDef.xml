@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--American Male-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_American_Male</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>First(p=10)->Names/Donaustahl_Names_American_Male</li>
+                <li>Last(p=10)->Names/Donaustahl_Names_American_Last</li>
+                <li>First(p=1)->Names/Donaustahl_Names_Chinese_Male</li>
+                <li>Last(p=1)->Names/Donaustahl_Names_Chinese_Last</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--American Female-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_American_Female</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>First(p=10)->Names/Donaustahl_Names_American_Female</li>
+                <li>Last(p=10)->Names/Donaustahl_Names_American_Last</li>
+                <li>First(p=1)->Names/Donaustahl_Names_Chinese_Female</li>
+                <li>Last(p=1)->Names/Donaustahl_Names_Chinese_Last</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Raider Male-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Raider_Male</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Male</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Raider_Male</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Raider Female-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Raider_Female</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Female</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Raider_Female</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Mutant Male-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_SuperMutant_Male</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Male</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Mutant</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Mutant Female-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Mutant_Female</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Female</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Mutant</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Ghoul Male-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Ghoul_Male</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Male</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Ghoul</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Ghoul Female-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Ghoul_Female</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Female</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Ghoul</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Numen Male-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Numen_Male</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Male</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Numen</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+
+    <!--Numen Female-->
+    <RulePackDef>
+        <defName>Donaustahl_PawnNameMaker_Numen_Female</defName>
+        <include>
+            <li>Donaustahl_PawnNameMaker_American_Female</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>name->[First] [Nick] [Last]</li>
+            </rulesStrings>
+            <rulesFiles>
+                <li>Nick->Names/Donaustahl_Names_Numen</li>
+            </rulesFiles>
+        </rulePack>
+    </RulePackDef>
+</Defs>

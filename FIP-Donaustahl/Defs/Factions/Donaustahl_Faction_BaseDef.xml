@@ -2,13 +2,14 @@
 <Defs>
 
   <FactionDef ParentName="FactionBase" Name="Donaustahl_Factionbase" Abstract="True">
+    <defName>Donaustahl_Factionbase</defName>
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <techLevel>Industrial</techLevel>
     <allowedCultures>
-      <li>Donaustahl_American</li>
+      <li>Donaustahl_Culture_American</li>
     </allowedCultures>
     <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
@@ -16,7 +17,8 @@
 
 
   <!-- Democratic/Despotic -->
-  <FactionDef ParentName="Donaustahl_Factionbase">
+  <FactionDef ParentName="Donaustahl_Factionbase" Name="Donaustahl_Settler_Democratic">
+  <defName>Donaustahl_Settler_Democratic</defName>
     <pawnSingular>settler</pawnSingular>
     <pawnsPlural>settlers</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
@@ -59,7 +61,6 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>
     <!--Gentile-->
-    <defName>Donaustahl_Settler_Democratic</defName>
     <factionNameMaker>Donaustahl_FactionNameMaker_Democratic</factionNameMaker>
     <classicIdeo>true</classicIdeo>
     <colorSpectrum>
@@ -69,8 +70,8 @@
     <configurationListOrderPriority>22</configurationListOrderPriority>
   </FactionDef>
   <!--Rough-->
-  <FactionDef ParentName="Donaustahl_Settler_Factionbase" Abstract="True">
-    <defName>Donaustahl_Settler_Despotic</defName>
+  <FactionDef ParentName="Donaustahl_Settler_Democratic" Name="Donaustahl_Settler_Despotic" Abstract="True">
+  <defName>Donaustahl_Settler_Despotic</defName>
     <factionNameMaker>Donaustahl_FactionNameMaker_Despotic</factionNameMaker>
     <classicIdeo>true</classicIdeo>
     <colorSpectrum>
@@ -81,7 +82,8 @@
   </FactionDef>
 
   <!-- Raider -->
-  <FactionDef ParentName="Donaustahl_Factionbase">
+  <FactionDef ParentName="Donaustahl_Factionbase" Name="Donaustahl_Raider">
+  <defName>Donaustahl_Raider</defName>
     <pawnSingular>raider</pawnSingular>
     <pawnsPlural>raiders</pawnsPlural>
     <listOrderPriority>20</listOrderPriority>
@@ -106,14 +108,14 @@
       <li>(0.9, 0.3, 0.3)</li>
     </colorSpectrum>
     <!--Global-->
-    <defName>Donaustahl_Raider</defName>
     <label>wasteland raider gang</label>
     <description>Ruthless scavengers and murderers who live for the thrill of domination. They often
       mark their armor with blood and chems, worshiping violence as the only truth.</description>
   </FactionDef>
 
   <!-- Tribal -->
-  <FactionDef ParentName="Donaustahl_Factionbase">
+  <FactionDef ParentName="Donaustahl_Factionbase" Name="FalloutTribalClan">
+  <defName>FalloutTribalClan</defName>
     <pawnSingular>tribal</pawnSingular>
     <pawnsPlural>tribals</pawnsPlural>
     <categoryTag>Tribal</categoryTag>
@@ -143,7 +145,6 @@
       <li>(0.6, 0.9, 0.4)</li>
     </colorSpectrum>
     <!--Global-->
-    <defName>FalloutTribalClan</defName>
     <label>wasteland tribe</label>
     <description>Descendants of vault dwellers or surface survivors who abandoned technology
       generations ago. They worship spirits of the old world and wield makeshift weapons crafted

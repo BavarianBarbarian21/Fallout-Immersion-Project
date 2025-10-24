@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Donaustahl: Fallout region PlaceDefs -->
-	<!-- Template: each PlaceDef has tags OriginAmerican + Origin{Group}, includes PlaceMakerCommon
-	and exactly: -->
-	<!-- one place_name, place_adjective, place_summary, place_powerCenter, place_foeLeader,
-	place_foeSoldiers -->
-	<!-- three place_job and three place_community entries -->
-	<!-- ========== Bear group ========== -->
+	<!--Bear, Bull, Chapter, Caravan, Cascadia, Texico-->
+	<!--Bear-->
 	<PlaceDef>
 		<defName>Donaustahl_ShadySands</defName>
 		<tags>
@@ -412,7 +407,7 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- ========== Bull group ========== -->
+	<!--Bull-->
 	<PlaceDef>
 		<defName>Donaustahl_Arizona</defName>
 		<tags>
@@ -710,7 +705,7 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- ========== Chapter group ========== -->
+	<!--Chapter-->
 	<PlaceDef>
 		<defName>Donaustahl_LostHills</defName>
 		<tags>
@@ -792,7 +787,7 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- ========== Caravan group ========== -->
+	<!--Caravan-->
 	<PlaceDef>
 		<defName>Donaustahl_TheLong15</defName>
 		<tags>
@@ -1063,7 +1058,7 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- ========== Cascadia group ========== -->
+	<!--Cascadia-->
 	<PlaceDef>
 		<defName>Cascadia_Seattle</defName>
 		<tags>
@@ -1118,7 +1113,7 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- ========== Texico group ========== -->
+	<!--Texico-->
 	<PlaceDef>
 		<defName>Texico_RioGrande</defName>
 		<tags>
@@ -1200,5 +1195,80 @@
 			</rulesStrings>
 		</placeRules>
 	</PlaceDef>
-	<!-- End of Donaustahl Places -->
+	<!--Wasteland-->
+	<PlaceDef>
+		<defName>Wasteland_Forest</defName>
+		<tags>
+			<li>OriginWasteland</li>
+		</tags>
+		<placeRules>
+			<include>
+				<li>PlaceMakerCommon</li>
+			</include>
+			<rulesStrings>
+				<li>place_name->The Forest</li>
+				<li>place_adjective->toxic</li>
+				<li>place_summary->mutated forest of iron-barked trees and bioluminescent fungus overgrowing military ruins</li>
+				<li>place_powerCenter->Rootspire Lab</li>
+				<li>place_foeLeader->The Green Saint</li>
+				<li>place_foeSoldiers->sporebound hunters</li>
+				<li>place_job->scavenger</li>
+				<li>place_job->botanist</li>
+				<li>place_job->reclaimer</li>
+				<li>place_community->shelters</li>
+				<li>place_community->overgrown watchtowers</li>
+			</rulesStrings>
+		</placeRules>
+	</PlaceDef>
+
+	<PlaceDef>
+		<defName>Wasteland_Desert</defName>
+		<tags>
+			<li>OriginWasteland</li>
+		</tags>
+		<placeRules>
+			<include>
+				<li>PlaceMakerCommon</li>
+			</include>
+			<rulesStrings>
+				<li>place_name->The Dunes</li>
+				<li>place_adjective->scorched</li>
+				<li>place_summary->sun-blasted desert of molten glass and buried skyscrapers where scavengers hunt for relics</li>
+				<li>place_powerCenter->Shard King’s Tower</li>
+				<li>place_foeLeader->The Shard King</li>
+				<li>place_foeSoldiers->glassborn raiders</li>
+				<li>place_job->trader</li>
+				<li>place_job->sandrunner</li>
+				<li>place_job->scavenger</li>
+				<li>place_community->oasis</li>
+				<li>place_community->sunken metro tunnels</li>
+			</rulesStrings>
+		</placeRules>
+	</PlaceDef>
+
+	<PlaceDef>
+		<defName>Wasteland_CityRuins</defName>
+		<tags>
+			<li>OriginWasteland</li>
+		</tags>
+		<placeRules>
+			<include>
+				<li>PlaceMakerCommon</li>
+			</include>
+			<rulesStrings>
+				<li>place_name->The City Ruins</li>
+				<li>place_adjective->ashen</li>
+				<li>place_summary->collapsed metropolis of leaning skyscrapers haunted by drones and digital ghosts</li>
+				<li>place_powerCenter->Core Spire</li>
+				<li>place_foeLeader->AI Custodian</li>
+				<li>place_foeSoldiers->drone enforcers</li>
+				<li>place_job->technician</li>
+				<li>place_job->data scavenger</li>
+				<li>place_job->urban nomad</li>
+				<li>place_community->camps</li>
+				<li>place_community->ruins</li>
+				<li>place_community->tunnels</li>
+			</rulesStrings>
+		</placeRules>
+	</PlaceDef>
 </Defs> 

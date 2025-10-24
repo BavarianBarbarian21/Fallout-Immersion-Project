@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Ghoul-->
+  <FactionDef ParentName="Donaustahl_Settler_Democratic">
+    <defName>Donaustahl_Mutant_Ghoul</defName>
+    <label>Civil Ghoul Ghosttown</label>
+    <description>The Civil Mutant Settlement is a faction of survivors and settlers who have banded
+      together to rebuild society in the aftermath of a devastating conflict. They are known for
+      their resourcefulness, resilience, and commitment to community values. The CCS emphasizes
+      cooperation and mutual aid among its members, striving to create a safe and prosperous
+      environment despite the challenges they face in the post-apocalyptic world.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_Ghoul MayRequire="Feil.WestTek">0.9</WestTek_Xenotype_Ghoul>
+        <WestTek_Xenotype_SuperMutant MayRequire="Feil.WestTek">0.1</WestTek_Xenotype_SuperMutant>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+  <!--Mutant-->
+  <FactionDef ParentName="Donaustahl_Settler_Despotic">
+    <defName>Donaustahl_Mutant_SuperMutant</defName>
+    <label>Rough Super Mutant Stronghold</label>
+    <description>The Rough Mutant Settlement is a loose collection of survivors hardened by the wasteland’s brutality. They value grit over grace, and survival over civility. Life here is harsh — trade is bartered through intimidation, disputes are settled with fists or gunfire, and law depends on who’s standing last. Despite their rough edges, they’ve carved out a functioning, if volatile, society where toughness earns respect and weakness finds no quarter.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_Ghoul MayRequire="Feil.WestTek">0.1</WestTek_Xenotype_Ghoul>
+        <WestTek_Xenotype_SuperMutant MayRequire="Feil.WestTek">0.9</WestTek_Xenotype_SuperMutant>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+  <!--Army-->
+  <FactionDef ParentName="Donaustahl_Raider">
+    <defName>Donaustahl_Mutant_Army</defName>
+    <label>Raider Mutant Army</label>
+    <description>The Mutant Raider Army thrives on chaos and plunder. Forged in the ashes of civilization, they scavenge, raid, and rule through fear. Their members are scarred, loud, and proud of their savagery, painting their armor with the symbols of past kills. They move in convoys of patched-together vehicles, hitting trade routes and settlements for supplies, slaves, or sport. To them, the wasteland isn’t a tragedy — it’s freedom without rules.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_Ghoul MayRequire="Feil.WestTek">0.5</WestTek_Xenotype_Ghoul>
+        <WestTek_Xenotype_SuperMutant MayRequire="Feil.WestTek">0.5</WestTek_Xenotype_SuperMutant>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+</Defs>
