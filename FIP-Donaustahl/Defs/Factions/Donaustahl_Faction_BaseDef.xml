@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <FactionDef ParentName="FactionBase" Name="Donaustahl_Factionbase" Abstract="True">
+  <FactionDef ParentName="OutlanderFactionBase" Name="Donaustahl_Factionbase" Abstract="True">
     <defName>Donaustahl_Factionbase</defName>
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -24,7 +24,7 @@
     <categoryTag>Outlander</categoryTag>
     <listOrderPriority>21</listOrderPriority>
     <leaderTitle>overseer</leaderTitle>
-    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <factionIconPath>Donaustahl/Democracy</factionIconPath>
     <structureMemeWeights>
       <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
       <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
@@ -79,6 +79,8 @@
       <li>(0.64, 0.8, 1)</li>
     </colorSpectrum>
     <configurationListOrderPriority>23</configurationListOrderPriority>
+        <factionIconPath>Donaustahl/Despotic</factionIconPath>
+
   </FactionDef>
 
   <!-- Raider -->
@@ -88,7 +90,7 @@
     <pawnsPlural>raiders</pawnsPlural>
     <listOrderPriority>20</listOrderPriority>
     <leaderTitle>warlord</leaderTitle>
-    <factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+    <factionIconPath>Donaustahl/Raider</factionIconPath>
     <factionNameMaker>Donaustahl_FactionNameMaker_Raider</factionNameMaker>
     <permanentEnemy>true</permanentEnemy>
     <requiredMemes>
@@ -121,7 +123,7 @@
     <categoryTag>Tribal</categoryTag>
     <listOrderPriority>11</listOrderPriority>
     <leaderTitle>chief</leaderTitle>
-    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <factionIconPath>Donaustahl/Tribal</factionIconPath>
     <techLevel>Neolithic</techLevel>
     <factionNameMaker>Donaustahl_FactionNameMaker_Tribal</factionNameMaker>
     <allowedCultures>
