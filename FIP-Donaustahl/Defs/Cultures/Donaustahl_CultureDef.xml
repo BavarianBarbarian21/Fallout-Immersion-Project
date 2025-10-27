@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!--American, Bear, Bull, Cascadia, Texico-->
+    <!--American, Bear, Bull, Cascadia,
+    Nuevo Texico-->
     <!--American-->
     <CultureDef Name="Donaustahl_Culture_American">
         <defName>Donaustahl_Culture_American</defName>
@@ -56,7 +57,8 @@
         </styleItemTags>
     </CultureDef>
 
-    <!--American - Tribal-->
+    <!--American
+    - Tribal-->
     <CultureDef ParentName="Donaustahl_Culture_American">
         <defName>Donaustahl_Culture_American_Tribal</defName>
         <label>American-Tribal</label>
@@ -66,7 +68,7 @@
 
     <!--Bear-->
     <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Bear">
-    <defName>Donaustahl_Culture_Bear</defName>
+        <defName>Donaustahl_Culture_Bear</defName>
         <label>Bear</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -74,7 +76,8 @@
         </allowedPlaceTags>
     </CultureDef>
 
-    <!--Bear - Tribal-->
+    <!--Bear
+    - Tribal-->
     <CultureDef ParentName="Donaustahl_Culture_Bear">
         <defName>Donaustahl_Culture_Bear_Tribal</defName>
         <label>Bear-Tribal</label>
@@ -92,7 +95,8 @@
         </allowedPlaceTags>
     </CultureDef>
 
-    <!--Bull - Tribal-->
+    <!--Bull
+    - Tribal-->
     <CultureDef ParentName="Donaustahl_Culture_Bull">
         <defName>Donaustahl_Culture_Bull_Tribal</defName>
         <label>Bull-Tribal</label>
@@ -102,7 +106,7 @@
 
     <!--Cascadia-->
     <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Cascadia">
-    <defName>Donaustahl_Culture_Cascadia</defName>
+        <defName>Donaustahl_Culture_Cascadia</defName>
         <label>Cascadia</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -110,7 +114,8 @@
         </allowedPlaceTags>
     </CultureDef>
 
-    <!--Cascadia - Tribal-->
+    <!--Cascadia
+    - Tribal-->
     <CultureDef ParentName="Donaustahl_Culture_Cascadia">
         <defName>Donaustahl_Culture_Cascadia_Tribal</defName>
         <label>Cascadia-Tribal</label>
@@ -118,20 +123,21 @@
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
-    <!--Texico-->
-    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Texico">
-    <defName>Donaustahl_Culture_Texico</defName>
-        <label>Texico</label>
+    <!--Nuevo Texico-->
+    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_NuevoTexico">
+        <defName>Donaustahl_Culture_NuevoTexico</defName>
+        <label>Nuevo Texico</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
-            <li>OriginTexico</li>
+            <li>OriginNuevoTexico</li>
         </allowedPlaceTags>
     </CultureDef>
 
-    <!--Texico - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_Texico">
-        <defName>Donaustahl_Culture_Texico_Tribal</defName>
-        <label>Texico-Tribal</label>
+    <!--Nuevo Texico
+    - Tribal-->
+    <CultureDef ParentName="Donaustahl_Culture_NuevoTexico">
+        <defName>Donaustahl_Culture_NuevoTexico_Tribal</defName>
+        <label>Nuevo Texico-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
@@ -185,6 +191,5 @@
         </allowedPlaceTags>
     </CultureDef>
 
-    
 
 </Defs>
