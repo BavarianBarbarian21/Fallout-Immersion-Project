@@ -42,21 +42,21 @@
             </value>
         </match>
     </Operation>
-    <!-- FactionNameMaker Patch -->
+    <!-- FactionNameMaker Patch (Useless?)-->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
             <factionNameMaker>Donaustahl_FactionNameMaker_General</factionNameMaker>
         </value>
     </Operation>
-    <!-- SettlementNameMaker Patch -->
+    <!-- SettlementNameMaker Patch (Useless?)-->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
             <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
         </value>
     </Operation>
-    <!-- Culture Patch -->
+    <!-- Culture (+PawnNameMaker) Patch (Useless?)-->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
         <value>
