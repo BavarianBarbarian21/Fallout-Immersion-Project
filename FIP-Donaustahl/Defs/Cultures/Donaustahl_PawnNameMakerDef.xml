@@ -5,13 +5,17 @@
         <defName>Donaustahl_PawnNameMaker_American_Male</defName>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Last]</li>
+                <li>r_name->[First] [Last]</li>
+                <li>First(p=10)->[FirstA]</li>
+                <li>Last(p=10)->[LastA]</li>
+                <li>First->[FirstB]</li>
+                <li>Last->[LastB]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>First(p=10)->Names/Donaustahl_Names_American_Male</li>
-                <li>Last(p=10)->Names/Donaustahl_Names_American_Last</li>
-                <li>First(p=1)->Names/Donaustahl_Names_Chinese_Male</li>
-                <li>Last(p=1)->Names/Donaustahl_Names_Chinese_Last</li>
+                <li>FirstA->Names/Donaustahl_Names_American_Male</li>
+                <li>LastA->Names/Donaustahl_Names_American_Last</li>
+                <li>FirstB->Names/Donaustahl_Names_Chinese_Male</li>
+                <li>LastB->Names/Donaustahl_Names_Chinese_Last</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -22,13 +26,17 @@
         <defName>Donaustahl_PawnNameMaker_American_Female</defName>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Last]</li>
+                <li>r_name->[First] [Last]</li>
+                <li>First(p=10)->[FirstA]</li>
+                <li>Last(p=10)->[LastA]</li>
+                <li>First->[FirstB]</li>
+                <li>Last->[LastB]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>First(p=10)->Names/Donaustahl_Names_American_Female</li>
-                <li>Last(p=10)->Names/Donaustahl_Names_American_Last</li>
-                <li>First(p=1)->Names/Donaustahl_Names_Chinese_Female</li>
-                <li>Last(p=1)->Names/Donaustahl_Names_Chinese_Last</li>
+                <li>FirstA->Names/Donaustahl_Names_American_Female</li>
+                <li>LastA->Names/Donaustahl_Names_American_Last</li>
+                <li>FirstB->Names/Donaustahl_Names_Chinese_Female</li>
+                <li>LastB->Names/Donaustahl_Names_Chinese_Last</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -42,7 +50,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Raider_Male</li>
@@ -59,7 +67,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Raider_Female</li>
@@ -76,7 +84,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Mutant</li>
@@ -93,7 +101,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Mutant</li>
@@ -110,7 +118,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Ghoul</li>
@@ -127,7 +135,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Ghoul</li>
@@ -144,7 +152,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Numen</li>
@@ -161,7 +169,7 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>name->[First] [Nick] [Last]</li>
+                <li>r_name->[First] [Nick] [Last]</li>
             </rulesStrings>
             <rulesFiles>
                 <li>Nick->Names/Donaustahl_Names_Numen</li>

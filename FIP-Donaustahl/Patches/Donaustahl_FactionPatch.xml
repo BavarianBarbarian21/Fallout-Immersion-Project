@@ -18,9 +18,9 @@
     <!-- Structure Patch -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>FIP - Arktos</li>
+            <li>FIP.Arktos</li>
         </mods>
-        <match Class="PatchOperationReplace">
+        <match Class="PatchOperationAdd">
             <xpath>/Defs/FactionDef[@Name="FactionBase"]/structureMemeWeights</xpath>
             <value>
                 <structureMemeWeights>
