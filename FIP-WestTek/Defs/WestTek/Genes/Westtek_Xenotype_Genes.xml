@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ========================================================= -->
+  <!-- 🧬 BASE DEF: Common template for all WestTek flavor genes -->
+  <!-- ========================================================= -->
+  <GeneDef Name="WestTek_Gene_Base" Abstract="True">
+    <displayCategory>Miscellaneous</displayCategory>
+    <iconPath>UI/Icons/Genes/Gene_Misc</iconPath>
+    <geneClass>Gene</geneClass>
+    <displayOrderInCategory>999</displayOrderInCategory>
+    <customEffectDescription>This gene has no gameplay effect.</customEffectDescription>
+    <exclusionTags>
+      <li>NonExtractable</li>
+    </exclusionTags>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  </GeneDef>
+
+  <!-- ========================================================= -->
+  <!-- Individual flavor genes                                   -->
+  <!-- ========================================================= -->
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Atlantic</defName>
+    <label>atlantic soul</label>
+    <description>The Atlantic embody adaptability — forged by ocean winds and shifting tides. Their blood sings with salt and stubborn endurance.</description>
+    <biostatMet>-3</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Cascadian</defName>
+    <label>cascadian wilds</label>
+    <description>Children of misty forests and basalt mountains. The Cascadians are unshaken by rain or solitude, ever patient and feral at heart.</description>
+    <biostatMet>-7</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Ghoul</defName>
+    <label>ghoul resilience</label>
+    <description>Scarred by centuries of decay, ghouls persist beyond reason — their will the last thing to rot.</description>
+    <biostatMet>-13</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_NatL"
+    <defName>WestTek_Gene_NatL</defName>
+    <label>nat'l diversity</label>
+    <description>The Ninety-Nine Tribes carry ancestral echoes — every heart a drumbeat in a chorus of shared memory.</description>
+    <biostatMet>-8</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Texico</defName>
+    <label>texico grit</label>
+    <description>Dust storms and refinery fumes forged the Texicans — weathered souls fueled by stubborn pride and old oil.</description>
+    <biostatMet>1</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Slanter</defName>
+    <label>slanter echo</label>
+    <description>The Slanters drift between worlds — dreamers and schemers with eyes like broken glass, caught between memory and myth.</description>
+    <biostatMet>10</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_SuperMutant</defName>
+    <label>super mutant might</label>
+    <description>The Super Mutants’ strength is legend — a fusion of pain and pride that outlived their makers.</description>
+    <biostatMet>-6</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_TwoCalifornia</defName>
+    <label>two-californian duality</label>
+    <description>Split between paradise and ruin, the Two Californians live in contradiction — both dreamers and survivors of their own myth.</description>
+    <biostatMet>-8</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_VaultDweller</defName>
+    <label>vault heritage</label>
+    <description>Raised under steel and silence, the Vault Dwellers’ heritage is order — a longing for structure even in chaos.</description>
+    <biostatMet>7</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Wendigo</defName>
+    <label>wendigo hunger</label>
+    <description>The Wendigo embody hunger made flesh — a spirit of endless wanting that no feast can sate.</description>
+    <biostatMet>7</biostatMet>
+  </GeneDef>
+
+</Defs>

@@ -6,4 +6,25 @@
       <label>New Pueblo</label>
     </value>
   </Operation>
+
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="PlayerTribe"]/allowedCultures</xpath>
+      <value>
+        <allowedCultures><li>Donaustahl_Culture_American_Tribal</li></allowedCultures>
+      </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="PlayerTribe"]/settlementNameMaker</xpath>
+      <value>
+        <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
+      </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FactionDef[defName="PlayerTribe"]/factionNameMaker</xpath>
+      <value>
+        <factionNameMaker>Donaustahl_FactionNameMaker_Tribal</factionNameMaker>
+      </value>
+    </Operation>
 </Patch>

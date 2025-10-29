@@ -3,7 +3,37 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/FactionDef[defName="PlayerColony"]/label</xpath>
     <value>
-      <label>New Outpost</label>
+      <label>New Settlement</label>
     </value>
   </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="PlayerColony"]/label</xpath>
+    <value>
+      <label>A new settlement of various outcasts and wanderers.</label>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/FactionDef[defName="PlayerColony"]/allowedCultures</xpath>
+  <value>
+    <allowedCultures>
+      <li>Donaustahl_Culture_American</li>
+    </allowedCultures>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/FactionDef[defName="PlayerColony"]/settlementNameMaker</xpath>
+  <value>
+    <settlementNameMaker>Donaustahl_SettlementNameMaker_General</settlementNameMaker>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/FactionDef[defName="PlayerColony"]/factionNameMaker</xpath>
+  <value>
+    <factionNameMaker>Donaustahl_FactionNameMaker_Raider</factionNameMaker>
+  </value>
+</Operation>
 </Patch>

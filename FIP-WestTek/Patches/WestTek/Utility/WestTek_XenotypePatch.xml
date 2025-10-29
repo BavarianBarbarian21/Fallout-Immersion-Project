@@ -2,6 +2,12 @@
 <Patch>
     <!-- Add/replace the genes list for every XenotypeDef to include WestTek gene tiers -->
     <Operation Class="PatchOperationAdd">
+        <xpath>Defs/XenotypeDef[defName="Baseliner"]</xpath>
+        <value>
+            <genes></genes>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
         <xpath>Defs/XenotypeDef/genes</xpath>
         <value>
             <li>WestTek_Strength_A</li>
