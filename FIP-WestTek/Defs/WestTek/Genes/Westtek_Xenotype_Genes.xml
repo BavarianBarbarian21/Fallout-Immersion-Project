@@ -6,12 +6,10 @@
   <!-- ========================================================= -->
   <GeneDef Name="WestTek_Gene_Base" Abstract="True">
     <displayCategory>Miscellaneous</displayCategory>
-    <iconPath>UI/Icons/Genes/Gene_Misc</iconPath>
-    <geneClass>Gene</geneClass>
+    <iconPath>WestTek/Genes/Placeholder</iconPath>
     <displayOrderInCategory>999</displayOrderInCategory>
-    <customEffectDescription>This gene has no gameplay effect.</customEffectDescription>
     <exclusionTags>
-      <li>NonExtractable</li>
+      <li>WestTek_Genes_Xenotype</li>
     </exclusionTags>
     <canGenerateInGeneSet>false</canGenerateInGeneSet>
   </GeneDef>
@@ -28,7 +26,7 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Gene_Base">
-    <defName>WestTek_Gene_Cascadian</defName>
+    <defName>WestTek_Gene_Cascadia</defName>
     <label>cascadian wilds</label>
     <description>Children of misty forests and basalt mountains. The Cascadians are unshaken by rain or solitude, ever patient and feral at heart.</description>
     <biostatMet>-7</biostatMet>
@@ -41,7 +39,7 @@
     <biostatMet>-13</biostatMet>
   </GeneDef>
 
-  <GeneDef ParentName="WestTek_Gene_NatL"
+  <GeneDef ParentName="WestTek_Gene_Base">
     <defName>WestTek_Gene_NatL</defName>
     <label>nat'l diversity</label>
     <description>The Ninety-Nine Tribes carry ancestral echoes — every heart a drumbeat in a chorus of shared memory.</description>
@@ -49,10 +47,23 @@
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Gene_Base">
-    <defName>WestTek_Gene_Texico</defName>
+    <defName>WestTek_Gene_NuevoTexico</defName>
     <label>texico grit</label>
     <description>Dust storms and refinery fumes forged the Texicans — weathered souls fueled by stubborn pride and old oil.</description>
     <biostatMet>1</biostatMet>
+  </GeneDef>
+
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_Numen</defName>
+    <label>numen roots</label>
+    <description>The Numen are entwined with the land — their spirits a living testament to survival against all odds.</description>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+  <GeneDef ParentName="WestTek_Gene_Base">
+    <defName>WestTek_Gene_PureHuman</defName>
+    <label>human spirit</label>
+    <description>The Pure Humans embody the resilience of unaltered humanity — a steadfast spirit that endures through every trial.</description>
+    <biostatMet>0</biostatMet>
   </GeneDef>
 
   <GeneDef ParentName="WestTek_Gene_Base">

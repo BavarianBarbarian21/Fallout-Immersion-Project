@@ -31,7 +31,6 @@
     <pawnSingular>settler</pawnSingular>
     <pawnsPlural>settlers</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
-    <listOrderPriority>21</listOrderPriority>
     <leaderTitle>overseer</leaderTitle>
     <factionIconPath>Donaustahl/Democracy</factionIconPath>
     <structureMemeWeights>
@@ -156,7 +155,8 @@
       <li>(0.35, 0.30, 0.60)</li>
       <li>(0.45, 0.40, 0.90)</li>
     </colorSpectrum>
-    <configurationListOrderPriority>22</configurationListOrderPriority>
+    <configurationListOrderPriority>6</configurationListOrderPriority>
+    <listOrderPriority>6</listOrderPriority>
   </FactionDef>
   <!--Rough/Despotic-->
   <FactionDef ParentName="Donaustahl_Settler_Democratic" Name="Donaustahl_Settler_Despotic" Abstract="True">
@@ -164,11 +164,12 @@
     <factionNameMaker>Donaustahl_FactionNameMaker_Despotic</factionNameMaker>
     <classicIdeo>true</classicIdeo>
     <naturalEnemy>true</naturalEnemy>
-    <colorSpectrum>
+    <colorSpectrum Inherit="False">
       <li>(0.8, 0.6, 0.05)</li>
       <li>(1, 0.85, 0.1)</li>
     </colorSpectrum>
-    <configurationListOrderPriority>23</configurationListOrderPriority>
+    <configurationListOrderPriority>7</configurationListOrderPriority>
+    <listOrderPriority>7</listOrderPriority>
     <factionIconPath>Donaustahl/Despotic</factionIconPath>
     <structureMemeWeights>
       <Arktos_Religion_ChildrenOfAtom MayRequire="FIP.Arktos">4</Arktos_Religion_ChildrenOfAtom>
@@ -187,7 +188,8 @@
     <defName>Donaustahl_Raider</defName>
     <pawnSingular>raider</pawnSingular>
     <pawnsPlural>raiders</pawnsPlural>
-    <listOrderPriority>20</listOrderPriority>
+    <configurationListOrderPriority>8</configurationListOrderPriority>
+    <listOrderPriority>8</listOrderPriority>
     <leaderTitle>warlord</leaderTitle>
     <factionIconPath>Donaustahl/Raider</factionIconPath>
     <factionNameMaker>Donaustahl_FactionNameMaker_Raider</factionNameMaker>
@@ -327,10 +329,11 @@
     <pawnSingular>tribal</pawnSingular>
     <pawnsPlural>tribals</pawnsPlural>
     <categoryTag>Tribal</categoryTag>
-    <listOrderPriority>11</listOrderPriority>
     <leaderTitle>chief</leaderTitle>
     <factionIconPath>Donaustahl/Tribal</factionIconPath>
     <techLevel>Neolithic</techLevel>
+    <configurationListOrderPriority>9</configurationListOrderPriority>
+    <listOrderPriority>9</listOrderPriority>
     <factionNameMaker>Donaustahl_FactionNameMaker_Tribal</factionNameMaker>
     <structureMemeWeights>
       <Arktos_Religion_ChildrenOfAtom MayRequire="FIP.Arktos">1</Arktos_Religion_ChildrenOfAtom>
@@ -415,6 +418,8 @@
           <Tribal_Hunter>10</Tribal_Hunter>
           <Tribal_HeavyArcher>10</Tribal_HeavyArcher>
           <Tribal_Berserker>5</Tribal_Berserker>
+          <Donaustahl_TribalChiefRanged>3</Donaustahl_TribalChiefRanged>
+          <Donaustahl_TribalChiefRanged>1.5</Donaustahl_TribalChiefRanged>
         </options>
       </li>
       <li>

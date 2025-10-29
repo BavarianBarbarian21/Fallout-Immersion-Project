@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<PawnKindDef ParentName="TribalBase" Name="Donaustahl_TribalChiefBase" Abstract="True">
+    <defName>Donaustahl_TribalChiefBase</defName>
+    <combatPower>85</combatPower>
+    <minGenerationAge>30</minGenerationAge>
+    <maxGenerationAge>999</maxGenerationAge>
+    <itemQuality>Normal</itemQuality>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <apparelMoney>450~750</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_TribalHeaddress</li>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <weaponMoney>500~1000</weaponMoney>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>19~30</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="Donaustahl_TribalChiefBase">
+    <defName>Donaustahl_TribalChiefMelee</defName>
+    <label>berserker chief</label>
+    <weaponTags>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <initialResistanceRange>38~58</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="Donaustahl_TribalChiefBase">
+    <defName>Donaustahl_TribalChiefRanged</defName>
+    <label>archer chief</label>
+    <weaponTags>
+      <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <initialResistanceRange>16~26</initialResistanceRange>
+  </PawnKindDef>
+</Defs>
