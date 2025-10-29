@@ -8,6 +8,22 @@
       <label>Wendigo</label>
     </value>
   </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/description</xpath>
+    <value>
+      <description>Once human, now cursed by hunger and cold, the Wendigo are vampiric remnants of
+        the old world’s darkest corners. Their bodies are gaunt, their skin pale as frost, their
+        eyes burning with feral hunger. They feed on blood and flesh not by choice, but by the
+        whisper of something ancient and terrible that will not let them die.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Sanguophage"]/descriptionShort</xpath>
+    <value>
+      <descriptionShort>Predators of the night who feast upon the flesh of the living to stave off
+        decay.</descriptionShort>
+    </value>
+  </Operation>
 
   <Operation Class="PatchOperationSequence">
     <success>Always</success>
