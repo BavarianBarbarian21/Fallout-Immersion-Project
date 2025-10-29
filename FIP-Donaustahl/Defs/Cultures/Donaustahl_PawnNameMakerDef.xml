@@ -5,17 +5,17 @@
         <defName>Donaustahl_PawnNameMaker_American_Male</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Last]</li>
-                <li>First(p=10)->[FirstA]</li>
-                <li>Last(p=10)->[LastA]</li>
-                <li>First->[FirstB]</li>
-                <li>Last->[LastB]</li>
+                <li>r_name->[firstName] [lastName]</li>
+                <li>firstName(p=10)->[firstNameA]</li>
+                <li>lastName(p=10)->[lastNameA]</li>
+                <li>firstName->[firstNameB]</li>
+                <li>lastName->[lastNameB]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>FirstA->Names/Donaustahl_Names_American_Male</li>
-                <li>LastA->Names/Donaustahl_Names_American_Last</li>
-                <li>FirstB->Names/Donaustahl_Names_Chinese_Male</li>
-                <li>LastB->Names/Donaustahl_Names_Chinese_Last</li>
+                <li>firstNameA->Names/Donaustahl_Names_American_Male</li>
+                <li>lastNameA->Names/Donaustahl_Names_American_lastName</li>
+                <li>firstNameB->Names/Donaustahl_Names_Chinese_Male</li>
+                <li>lastNameB->Names/Donaustahl_Names_Chinese_lastName</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -26,17 +26,17 @@
         <defName>Donaustahl_PawnNameMaker_American_Female</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Last]</li>
-                <li>First(p=10)->[FirstA]</li>
-                <li>Last(p=10)->[LastA]</li>
-                <li>First->[FirstB]</li>
-                <li>Last->[LastB]</li>
+                <li>r_name->[firstName] [lastName]</li>
+                <li>firstName(p=10)->[firstNameA]</li>
+                <li>lastName(p=10)->[lastNameA]</li>
+                <li>firstName->[firstNameB]</li>
+                <li>lastName->[lastNameB]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>FirstA->Names/Donaustahl_Names_American_Female</li>
-                <li>LastA->Names/Donaustahl_Names_American_Last</li>
-                <li>FirstB->Names/Donaustahl_Names_Chinese_Female</li>
-                <li>LastB->Names/Donaustahl_Names_Chinese_Last</li>
+                <li>firstNameA->Names/Donaustahl_Names_American_Female</li>
+                <li>lastNameA->Names/Donaustahl_Names_American_lastName</li>
+                <li>firstNameB->Names/Donaustahl_Names_Chinese_Female</li>
+                <li>lastNameB->Names/Donaustahl_Names_Chinese_lastName</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -50,10 +50,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Raider_Male</li>
+                <li>nickName->Names/Donaustahl_Names_Raider_Male</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -67,10 +67,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Raider_Female</li>
+                <li>nickName->Names/Donaustahl_Names_Raider_Female</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -84,10 +84,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Mutant</li>
+                <li>nickName->Names/Donaustahl_Names_Mutant</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -101,10 +101,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Mutant</li>
+                <li>nickName->Names/Donaustahl_Names_Mutant</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -118,10 +118,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Ghoul</li>
+                <li>nickName->Names/Donaustahl_Names_Ghoul</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -135,10 +135,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Ghoul</li>
+                <li>nickName->Names/Donaustahl_Names_Ghoul</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -152,10 +152,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Numen</li>
+                <li>nickName->Names/Donaustahl_Names_Numen</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
@@ -169,10 +169,10 @@
         </include>
         <rulePack>
             <rulesStrings>
-                <li>r_name->[First] [Nick] [Last]</li>
+                <li>r_name->[firstName] '[nickNameName]' [lastName]</li>
             </rulesStrings>
             <rulesFiles>
-                <li>Nick->Names/Donaustahl_Names_Numen</li>
+                <li>nickName->Names/Donaustahl_Names_Numen</li>
             </rulesFiles>
         </rulePack>
     </RulePackDef>
