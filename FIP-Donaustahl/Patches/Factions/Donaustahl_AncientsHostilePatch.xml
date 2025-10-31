@@ -3,7 +3,29 @@
   <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
     <xpath>Defs/FactionDef[defName="AncientsHostile"]/label</xpath>
     <value>
-      <label>Experimental Vault</label>
+      <label>Crazed Vault</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+    <value>
+      <pawnSingular>Mad Dweller</pawnSingular>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+    <value>
+      <pawnsPlural>Mad Dwellers</pawnsPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">1</WestTek_Xenotype_VaultDweller>
+        </xenotypeChances>
+      </xenotypeSet>
     </value>
   </Operation>
 </Patch>

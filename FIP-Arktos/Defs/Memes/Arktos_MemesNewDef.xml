@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<MemeDef Name="Arktos_MemesBase" Abstract="True">
+		<defName>Arktos_MemesBase</defName>
+		<impact>0</impact>
+		<generalRules>
+			<rulesStrings>
+				<li>memeNoun->survivor</li>
+				<li>memeAdjective->wasteland</li>
+				<li>memeConcept->survival</li>
+				<li>memeConcept->adaptation</li>
+				<li>memeConcept->community</li>
+			</rulesStrings>
+		</generalRules>
+	</MemeDef>
 	<!-- Slavery -->
 	<MemeDef>
 		<defName>Arktos_WorkingCamps</defName>
@@ -188,7 +201,7 @@
 			challenge societal norms and promote acceptance of mutants as valuable members
 			of the community.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>1</impact>
 		<requireOne>
 			<li>
 				<li>Corpses_DontCare</li>
@@ -212,7 +225,7 @@
 			and campaigns to eliminate mutants from society, leading to widespread fear and
 			tension between mutants and non-mutants.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>1</impact>
 		<requireOne>
 			<li>
 				<li>IdeoDiversity_Abhorrent</li>
@@ -388,7 +401,7 @@
 			Their influence often extends into local politics and economies, making them
 			powerful figures in the post-apocalyptic society.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>2</impact>
 		<requireOne>
 			<li>
 				<li>Ranching_Central</li>
@@ -422,7 +435,7 @@
 			income
 			and a means of escape from the harsh realities of life in the wasteland.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>2</impact>
 		<requireOne>
 			<li>
 				<li>DrugUse_MedicalOrSocial</li>
@@ -447,7 +460,7 @@
 			with horror by most, cannibalist families see their actions as a necessary
 			adaptation to the brutal realities of their environment.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>2</impact>
 		<requireOne>
 			<li>
 				<li>Cannibalism_RequiredRavenous</li>
@@ -478,7 +491,7 @@
 			They often stockpile supplies and maintain a strong focus on personal and community
 			defense.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>2</impact>
 		<requireOne>
 			<li>
 				<li>Cannibalism_Acceptable</li>
@@ -504,7 +517,7 @@
 			traditional food sources, turning instead to food derived fromunderground sources,
 			where they spend most of their time to avoid the toxic atmosphere.</description>
 		<iconPath>Arktos/Memes/Origin</iconPath>
-		<impact>3</impact>
+		<impact>2</impact>
 		<requireOne>
 			<li>
 				<li>Blindness_Respected</li>

@@ -6,4 +6,12 @@
       <label>Cryptids</label>
     </value>
   </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Entities"]/pawnSingular</xpath>
+  <value><pawnSingular>Legendary Shade</pawnSingular></value>
+</Operation>
+<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Entities"]/pawnsPlural</xpath>
+  <value><pawnsPlural>Legendary Shades</pawnsPlural></value>
+</Operation>
 </Patch>

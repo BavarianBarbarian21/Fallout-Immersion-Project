@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+  <Operation Class="PatchOperationReplace" MayRequire="FIP.WestTek">
     <xpath>Defs/FactionDef[defName="Sanguophages"]/label</xpath>
     <value>
       <label>Wendigo Cultsts</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="FIP.WestTek">
+    <xpath>Defs/FactionDef[defName="Sanguophages"]/description</xpath>
+    <value>
+      <description>In the frozen wilds, the Wendigo Cultists whisper dark rites to the ancient spirit of hunger and death. Their bones chilled by bitter winds, they embrace the curse of the Wendigo with fevered devotion. Beware their wild eyes — they hunger not just for flesh, but for souls.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Sanguophages"]/pawnSingular</xpath>
+  <value><pawnSingular>Feral Caller</pawnSingular></value>
+</Operation>
+<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Sanguophages"]/pawnsPlural</xpath>
+  <value><pawnsPlural>Feral Callers</pawnsPlural></value>
+</Operation>
+<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="Sanguophages"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">1</WestTek_Xenotype_PureHumans>
+        </xenotypeChances>
+      </xenotypeSet>
     </value>
   </Operation>
 </Patch>

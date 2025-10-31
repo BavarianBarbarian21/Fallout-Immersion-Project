@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Ideology">
+  <Operation Class="PatchOperationReplace" MayRequire="FIP.Arktos">
     <xpath>Defs/FactionDef[defName="Pilgrims"]/label</xpath>
     <value>
       <label>Wise Mothman Cultists</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="FIP.Arktos">
+    <xpath>Defs/FactionDef[defName="Pilgrims"]/description</xpath>
+    <value>
+      <description>Guardians of ancient wisdom, the Wise Mothman Cultists follow the elusive protector as a guide against the wasteland’s creeping horrors. Calm and watchful, they seek balance between man and myth, standing sentinel against the chaos that threatens to consume all.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Pilgrims"]/pawnSingular</xpath>
+  <value><pawnSingular>Watcher</pawnSingular></value>
+</Operation>
+<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+  <xpath>Defs/FactionDef[defName="Pilgrims"]/pawnsPlural</xpath>
+  <value><pawnsPlural>Watchers</pawnsPlural></value>
+</Operation>
+<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>Defs/FactionDef[defName="Pilgrims"]/xenotypeSet</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <WestTek_Xenotype_Cascadia MayRequire="FIP.WestTek">0.25</WestTek_Xenotype_Cascadia>
+          <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.25</WestTek_Xenotype_NatL>
+          <WestTek_Xenotype_TwoCalifornia MayRequire="FIP.WestTek">0.25</WestTek_Xenotype_TwoCalifornia>
+          <WestTek_Xenotype_NuevoTexico MayRequire="FIP.WestTek">0.25</WestTek_Xenotype_NuevoTexico>
+        </xenotypeChances>
+      </xenotypeSet>
     </value>
   </Operation>
 </Patch>
