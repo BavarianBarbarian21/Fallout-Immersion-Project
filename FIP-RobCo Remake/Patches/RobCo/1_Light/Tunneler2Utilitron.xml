@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Utilitron ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Tunneler"]</xpath>
+		<value>
+			<ThingDef ParentName="LightMechanoid">
+				<defName>Mech_Tunneler</defName>
+				<label>Utilitron</label>
+				<description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
+				<statBases>
+					<MoveSpeed>2</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Protectron</body>
+					<mechEnabledWorkTypes>
+						<li>Mining</li>
+					</mechEnabledWorkTypes>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Protectron_Wounded</soundWounded>
+							<soundDeath>Protectron_Death</soundDeath>
+							<soundCall>Protectron_Call</soundCall>
+							<soundAngry>Protectron_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Utilitron PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Tunneler"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Tunneler</defName>
+				<label>Utilitron</label>
+				<race>Mech_Tunneler</race>
+				<combatPower>10</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Utilitron/Utilitron</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunSpiner</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Utilitron RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Tunneler"]</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>Tunneler</defName>
+				<label>craft Utilitron</label>
+				<description>Craft an Utilitron.</description>
+				<products>
+					<Mech_Tunneler>1</Mech_Tunneler>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Tunneler</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

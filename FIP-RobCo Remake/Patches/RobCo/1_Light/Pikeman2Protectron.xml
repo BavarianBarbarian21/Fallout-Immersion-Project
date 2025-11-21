@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Protectron ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Pikeman"]</xpath>
+		<value>
+			<ThingDef ParentName="LightMechanoid">
+				<defName>Mech_Pikeman</defName>
+				<label>Protectron</label>
+				<description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
+				<statBases>
+					<MoveSpeed>2</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Protectron</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Protectron_Wounded</soundWounded>
+							<soundDeath>Protectron_Death</soundDeath>
+							<soundCall>Protectron_Call</soundCall>
+							<soundAngry>Protectron_Angry</soundAngry>
+						</li>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>10</minAge>
+							<soundWounded>Protectron_Wounded</soundWounded>
+							<soundDeath>Protectron_Death</soundDeath>
+							<soundCall>Protectron_Call</soundCall>
+							<soundAngry>Protectron_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+					<baseHealthScale>2</baseHealthScale>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Protectron PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Pikeman"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Pikeman</defName>
+				<label>Protectron</label>
+				<race>Mech_Pikeman</race>
+				<combatPower>100</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Protectron/Protectron</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunShortRange</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Protectron RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Pikeman"]</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>Pikeman</defName>
+				<label>craft Protectron</label>
+				<description>Craft an Protectron.</description>
+				<products>
+					<Mech_Pikeman>1</Mech_Pikeman>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Pikeman</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

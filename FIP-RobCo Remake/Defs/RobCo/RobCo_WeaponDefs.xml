@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- RobCo weapon set (RobCo_ prefixed) -->
+  <ThingDef ParentName="BaseGun">
+    <defName>RobCo_Gun_ThumpCannon</defName>
+    <label>RobCo breacher cannon</label>
+    <description>A RobCo robot breaching launcher. Fires a concussion bomb designed for demolition and siege, optimized for robot assault tactics.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>20</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <relicChance>0</relicChance>
+    <weaponTags>
+      <li>MechanoidGunBreach</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_ThumpCannon</defaultProjectile>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1</warmupTime>
+        <range>24.9</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>ThumpCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <noiseRadius>4</noiseRadius>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RobCo_Bullet_ThumpCannon</defName>
+    <label>thump bomb</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Thump</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius>
+      <stoppingPower>3</stoppingPower>
+      <speed>50</speed>
+      <soundExplode>ThumpCannon_Impact</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!-- Heavy pulse blaster base and bullet -->
+  <ThingDef Abstract="True" ParentName="BaseGun" Name="RobCo_Gun_ChargeBlasterHeavyBase">
+    <defName>RobCo_Gun_ChargeBlasterHeavy</defName>
+    <label>RobCo heavy pulse blaster</label>
+    <description>RobCo robot rapid-fire pulse blaster. Engineered for suppressive fire and extended bursts during robot combat operations.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>22</Mass>
+      <AccuracyTouch>0.18</AccuracyTouch>
+      <AccuracyShort>0.26</AccuracyShort>
+      <AccuracyMedium>0.26</AccuracyMedium>
+      <AccuracyLong>0.18</AccuracyLong>
+      <RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <relicChance>0</relicChance>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RobCo_Bullet_ChargeBlasterHeavy</defName>
+    <label>charge blaster shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Inferno cannon & shell -->
+  <ThingDef Abstract="True" ParentName="BaseGun" Name="RobCo_Gun_InfernoCannonBase">
+    <defName>RobCo_Gun_InfernoCannon</defName>
+    <label>RobCo incinerator cannon</label>
+    <description>RobCo robot incinerator cannon. Launches incendiary warheads for area denial and robot battlefield control.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>18</Mass>
+      <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <generateCommonality>0.5</generateCommonality>
+    <tradeability>None</tradeability>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <relicChance>0</relicChance>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RobCo_Bullet_InfernoCannon</defName>
+    <label>inferno cannon shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(254,189,58)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <speed>45</speed>
+      <explosionRadius>2.4</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.27</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+  <!-- Needle gun (long range) and bullet -->
+  <ThingDef ParentName="LightMechanoidGun" Name="RobCo_Gun_Needle">
+    <defName>RobCo_Gun_Needle</defName>
+    <label>RobCo precision laser blaster</label>
+    <description>RobCo robot precision blaster. Fires high-velocity beam for long-range, accurate strikes by Eyebot models.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>2.6</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MechanoidGunLongRange</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+      <li>LongShots</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_ChargeBlasterHeavy</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>44.9</range>
+        <soundCast>RobCo_Laser</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RobCo_Bullet_NeedleGun</defName>
+    <label>laser shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- Hellsphere cannon -->
+  <ThingDef ParentName="BaseGun">
+    <defName>RobCo_Gun_HellsphereCannon</defName>
+    <label>RobCo hellsphere projector</label>
+    <description>RobCo robot siege projector. Charges and releases a devastating energy wave, engineered for robot siegebreaking and demolition.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>20</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>HellsphereCannonGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_HellsphereCannonGun</defaultProjectile>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>1</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RobCo_Bullet_HellsphereCannonGun</defName>
+    <label>hellsphere shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>80</damageAmountBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

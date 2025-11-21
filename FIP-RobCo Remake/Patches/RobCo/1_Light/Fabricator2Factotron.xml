@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Factotron ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Fabricor"]</xpath>
+		<value>
+			<ThingDef ParentName="LightMechanoid">
+				<defName>Mech_Fabricor</defName>
+				<label>Factotron</label>
+				<description>Rare factory-automation unit, built to oversee entire assembly lines with chilling efficiency. A walking production floor.</description>
+				<statBases>
+					<MoveSpeed>2</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Protectron</body>
+					<mechEnabledWorkTypes>
+						<li>Crafting</li>
+						<li>Smithing</li>
+						<li>Tailoring</li>
+					</mechEnabledWorkTypes>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Protectron_Wounded</soundWounded>
+							<soundDeath>Protectron_Death</soundDeath>
+							<soundCall>Protectron_Call</soundCall>
+							<soundAngry>Protectron_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Factotron PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Fabricor"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Fabricor</defName>
+				<label>Factotron</label>
+				<race>Mech_Fabricor</race>
+				<combatPower>10</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Collectron/Collectron</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunSpiner</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Factotron RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Fabricor"]</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>Fabricor</defName>
+				<label>craft Factotron</label>
+				<description>Craft an Factotron.</description>
+				<products>
+					<Mech_Fabricor>1</Mech_Fabricor>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Fabricor</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

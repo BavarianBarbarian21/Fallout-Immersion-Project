@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Cyberdog ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Legionary"]</xpath>
+		<value>
+			<ThingDef ParentName="HeavyMechanoid">
+				<defName>Mech_Legionary</defName>
+				<label>Cyberdog</label>
+				<description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
+				<statBases>
+					<MoveSpeed>5</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Cyberdog</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Cyberdog_Wounded</soundWounded>
+							<soundDeath>Cyberdog_Death</soundDeath>
+							<soundCall>Cyberdog_Call</soundCall>
+							<soundAngry>Cyberdog_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+					<baseHealthScale>3</baseHealthScale>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Cyberdog PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Legionary"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Legionary</defName>
+				<label>Cyberdog</label>
+				<race>Mech_Legionary</race>
+				<combatPower>200</combatPower>
+				<alternateGraphicChance>0.25</alternateGraphicChance>
+				<alternateGraphics>
+					<li>
+						<texPath>RobCo/Cyberdog/Cyberdog</texPath>
+					</li>
+					<li>
+						<texPath>RobCo/Cyberdog/Cyberwolf</texPath>
+					</li>
+				</alternateGraphics>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Cyberdog/Cyberdog</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunSlugthrower</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Cyberdog RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Legionary"]</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>Legionary</defName>
+				<label>craft Cyberdog</label>
+				<description>Craft an Eyebot.</description>
+				<products>
+					<Mech_Legionary>1</Mech_Legionary>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Legionary</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

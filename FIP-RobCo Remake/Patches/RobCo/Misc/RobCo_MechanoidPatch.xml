@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Remove light, heavy, and ultraheavy resurrection recipes -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/RecipeDef[defName="ResurrectLightMech"]</xpath>
+	</Operation>
+
+	<!-- Add RobCo light robot recipes -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Constructron_Recipe</defName>
+				<label>craft Constructron</label>
+				<description>Craft a RobCo Constructron.</description>
+				<products>
+					<RobCo_Constructron>1</RobCo_Constructron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Constructron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_EyebotDuraframe_Recipe</defName>
+				<label>craft Eyebot Duraframe</label>
+				<description>Craft a RobCo Eyebot Duraframe.</description>
+				<products>
+					<RobCo_EyebotDuraframe>1</RobCo_EyebotDuraframe>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_EyebotDuraframe</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Factotron_Recipe</defName>
+				<label>craft Factotron</label>
+				<description>Craft a RobCo Factotron.</description>
+				<products>
+					<RobCo_Factotron>1</RobCo_Factotron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Factotron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Eyebot_Recipe</defName>
+				<label>craft Eyebot</label>
+				<description>Craft a RobCo Eyebot.</description>
+				<products>
+					<RobCo_Eyebot>1</RobCo_Eyebot>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Eyebot</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Protectron_Recipe</defName>
+				<label>craft Protectron</label>
+				<description>Craft a RobCo Protectron.</description>
+				<products>
+					<RobCo_Protectron>1</RobCo_Protectron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Protectron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Utilitron_Recipe</defName>
+				<label>craft Utilitron</label>
+				<description>Craft a RobCo Utilitron.</description>
+				<products>
+					<RobCo_Utilitron>1</RobCo_Utilitron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Utilitron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+		<value>
+			<thingDefs>
+				<!-- 3_Heavy robots -->
+				<li>Corpse_Mech_Tesseron</li>
+				<li>Corpse_Mech_Legionary</li>
+				<li>Corpse_Mech_Centurion</li>
+				<!-- 4_SuperHeavy robots -->
+				<li>Corpse_Mech_CentipedeBlaster</li>
+				<li>Corpse_Mech_CentipedeGunner</li>
+				<li>Corpse_Mech_CentipedeBurner</li>
+			</thingDefs>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/RecipeDef[defName="ResurrectUltraheavyMech"]</xpath>
+	</Operation>
+	<!-- Patch medium resurrection recipe to include all mechanoid corpses -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+		<value>
+			<thingDefs>
+				<!-- 1_Light robots -->
+				<li>Corpse_Mech_Lifter</li>
+				<li>Corpse_Mech_Constructoid</li>
+				<li>Corpse_Mech_Militor</li>
+				<li>Corpse_Mech_Fabricor</li>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">Corpse_Mech_Cyclops</li>
+				<li>Corpse_Mech_Pikeman</li>
+				<li>Corpse_Mech_Tunneler</li>
+				<!-- 2_Medium robots -->
+				<li>Corpse_Mech_Scorcher</li>
+				<li>Corpse_Mech_Scyther</li>
+				<li>Corpse_Mech_Lancer</li>
+				<li>Corpse_Mech_Cleansweeper</li>
+				<li>Corpse_Mech_Agrihand</li>
+				<li>Corpse_Mech_Paramedic</li>
+			</thingDefs>
+		</value>
+	</Operation>
+
+	<!-- Add RobCo Collectron recipe (new Defs converted from patch files) -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="LightMechanoidRecipe">
+				<defName>RobCo_Collectron_Recipe</defName>
+				<label>craft Collectron</label>
+				<description>Craft a RobCo Collectron.</description>
+				<products>
+					<RobCo_Collectron>1</RobCo_Collectron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Collectron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+    
+	<!-- Add RobCo super-heavy robot recipes -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="SuperHeavyMechanoidRecipe">
+				<defName>RobCo_CentipedeBlaster_Recipe</defName>
+				<label>craft Sentry Bot Rockets</label>
+				<description>Craft a Sentry Bot Rockets.</description>
+				<products>
+					<RobCo_SentryBotSiege>1</RobCo_SentryBotSiege>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_SentryBotSiege</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="SuperHeavyMechanoidRecipe">
+				<defName>RobCo_CentipedeBurner_Recipe</defName>
+				<label>craft Sentry Bot Burner</label>
+				<description>Craft a Sentry Bot Burner.</description>
+				<products>
+					<RobCo_SentryBotBurner>1</RobCo_SentryBotBurner>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_SentryBotBurner</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="SuperHeavyMechanoidRecipe">
+				<defName>RobCo_CentipedeGunner_Recipe</defName>
+				<label>craft Sentry Bot Gunner</label>
+				<description>Craft a Sentry Bot Gunner.</description>
+				<products>
+					<RobCo_SentryBotGunner>1</RobCo_SentryBotGunner>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_SentryBotGunner</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+    
+	<!-- Add RobCo medium robot recipes -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MisterFarmhand_Recipe</defName>
+				<label>craft Mister Farmhand</label>
+				<description>Craft a RobCo Mister Farmhand.</description>
+				<products>
+					<RobCo_MisterFarmhand>1</RobCo_MisterFarmhand>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MisterFarmhand</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MisterHandy_Recipe</defName>
+				<label>craft Mister Handy</label>
+				<description>Craft a RobCo Mister Handy.</description>
+				<products>
+					<RobCo_MisterHandy>1</RobCo_MisterHandy>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MisterHandy</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MisterGutsyGunner_Recipe</defName>
+				<label>craft Mister Gutsy Gunner</label>
+				<description>Craft a RobCo Mister Gutsy Gunner.</description>
+				<products>
+					<RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MisterGutsyGunner</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MissNanny_Recipe</defName>
+				<label>craft Miss Nanny</label>
+				<description>Craft a RobCo Miss Nanny.</description>
+				<products>
+					<RobCo_MissNanny>1</RobCo_MissNanny>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MissNanny</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MisterGutsyFlamer_Recipe</defName>
+				<label>craft Mister Gutsy Flamer</label>
+				<description>Craft a RobCo Mister Gutsy Flamer.</description>
+				<products>
+					<RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MisterGutsyFlamer</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>RobCo_MisterGutsyChopper_Recipe</defName>
+				<label>craft Mister Gutsy Chopper</label>
+				<description>Craft a RobCo Mister Gutsy Chopper.</description>
+				<products>
+					<RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_MisterGutsyChopper</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<!-- Add RobCo heavy robot recipes -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>RobCo_Robobrain_Recipe</defName>
+				<label>craft Robobrain</label>
+				<description>Craft a RobCo Robobrain.</description>
+				<products>
+					<RobCo_Robobrain>1</RobCo_Robobrain>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Robobrain</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>RobCo_Cyberdog_Recipe</defName>
+				<label>craft Cyberdog</label>
+				<description>Craft a RobCo Cyberdog.</description>
+				<products>
+					<RobCo_Cyberdog>1</RobCo_Cyberdog>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Cyberdog</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>RobCo_Assaultron_Recipe</defName>
+				<label>craft Assaultron</label>
+				<description>Craft a RobCo Assaultron.</description>
+				<products>
+					<RobCo_Assaultron>1</RobCo_Assaultron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>RobCo_Assaultron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Robobrain (Centurion) -->
+  <ThingDef ParentName="HeavyMechanoid">
+    <defName>RobCo_Robobrain</defName>
+    <label>Robobrain</label>
+    <description>A heavy command mechanoid fitted with a projectile interceptor and a thick hull.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <race>
+      <body>Heavy</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Centurion_Wounded</soundWounded>
+          <soundDeath>Centurion_Death</soundDeath>
+          <soundCall>Centurion_Call</soundCall>
+          <soundAngry>Centurion_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <baseHealthScale>3</baseHealthScale>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>2.8</radius>
+        <hitPoints>200</hitPoints>
+        <chargeDurationTicks>900</chargeDurationTicks>
+        <cooldownTicks>300</cooldownTicks>
+        <chargeCost>120</chargeCost>
+        <mapIcon>ProjectileInterceptorIcon</mapIcon>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_RobobrainKind</defName>
+    <label>Robobrain</label>
+    <race>RobCo_Robobrain</race>
+    <combatPower>650</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Robobrain/Robobrain</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>HellsphereCannonGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>RobCo_Robobrain_Recipe</defName>
+    <label>craft Robobrain</label>
+    <description>Craft a RobCo Robobrain.</description>
+    <products>
+      <RobCo_Robobrain>1</RobCo_Robobrain>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Robobrain</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Cyberdog (Legionary) -->
+  <ThingDef ParentName="HeavyMechanoid">
+    <defName>RobCo_Cyberdog</defName>
+    <label>Cyberdog</label>
+    <description>Legionary-pattern heavy unit, fast, deadly, and laden with ordinance.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <race>
+      <body>Heavy</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Legionary_Wounded</soundWounded>
+          <soundDeath>Legionary_Death</soundDeath>
+          <soundCall>Legionary_Call</soundCall>
+          <soundAngry>Legionary_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <baseHealthScale>2.5</baseHealthScale>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_CyberdogKind</defName>
+    <label>Cyberdog</label>
+    <race>RobCo_Cyberdog</race>
+    <combatPower>700</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Cyberdog/Cyberdog</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunLongRange</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>RobCo_Cyberdog_Recipe</defName>
+    <label>craft Cyberdog</label>
+    <description>Craft a RobCo Cyberdog.</description>
+    <products>
+      <RobCo_Cyberdog>1</RobCo_Cyberdog>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Cyberdog</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Assaultron (Tesseron) -->
+  <ThingDef ParentName="HeavyMechanoid">
+    <defName>RobCo_Assaultron</defName>
+    <label>Assaultron</label>
+    <description>A heavy assault chassis packing a Hellsphere Cannon and reinforced plating.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+    </statBases>
+    <race>
+      <body>Heavy</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Assaultron_Wounded</soundWounded>
+          <soundDeath>Assaultron_Death</soundDeath>
+          <soundCall>Assaultron_Call</soundCall>
+          <soundAngry>Assaultron_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_AssaultronKind</defName>
+    <label>Assaultron</label>
+    <race>RobCo_Assaultron</race>
+    <combatPower>900</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Assaultron/Assaultron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>HellsphereCannonGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="HeavyMechanoidRecipe">
+    <defName>RobCo_Assaultron_Recipe</defName>
+    <label>craft Assaultron</label>
+    <description>Craft a RobCo Assaultron.</description>
+    <products>
+      <RobCo_Assaultron>1</RobCo_Assaultron>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Assaultron</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- War Queen - Thing & PawnKind only; original patch removed recipe -->
+  <ThingDef ParentName="HeavyMechanoid">
+    <defName>RobCo_Sheepsquatch</defName>
+    <label>Sheepsquatch</label>
+    <description>A massive queen-class mechanoid that commands clusters of drones.</description>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+    </statBases>
+    <race>
+      <body>Heavy</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Warqueen_Wounded</soundWounded>
+          <soundDeath>Warqueen_Death</soundDeath>
+          <soundCall>Warqueen_Call</soundCall>
+          <soundAngry>Warqueen_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_SheepsquatchKind</defName>
+    <label>Sheepsquatch</label>
+    <race>RobCo_Sheepsquatch</race>
+    <combatPower>1200</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/WarQueen/WarQueen</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.0</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunLongRange</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

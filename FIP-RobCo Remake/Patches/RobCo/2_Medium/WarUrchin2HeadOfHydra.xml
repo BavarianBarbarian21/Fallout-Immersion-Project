@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Head of Hydra ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_WarUrchin"]</xpath>
+		<value>
+			<ThingDef ParentName="Floating">
+				<defName>Mech_WarUrchin</defName>
+				<label>Head Of Hydra</label>
+				<description>This is one of many heads of the Hydra.</description>
+				<statBases>
+					<MoveSpeed>5</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Handy</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Eyebot_Wounded</soundWounded>
+							<soundDeath>Eyebot_Death</soundDeath>
+							<soundCall>Eyebot_Call</soundCall>
+							<soundAngry>Eyebot_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Head of Hydra PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_WarUrchin"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_WarUrchin</defName>
+				<label>Head Of Hydra</label>
+				<race>Mech_WarUrchin</race>
+				<!--<combatPower>10</combatPower>-->
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.1</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunSpiner</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+</Patch>

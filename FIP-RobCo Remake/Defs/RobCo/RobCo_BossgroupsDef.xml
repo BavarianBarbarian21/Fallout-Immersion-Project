@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Hydra -->
+	<BossDef>
+		<defName>Hydra</defName>
+		<kindDef>Mech_Diabolus</kindDef>
+		<appearAfterTicks>7200000</appearAfterTicks>
+		<!-- 2 years -->
+	</BossDef>
+	<BossgroupDef ParentName="BaseBossgroup">
+		<defName>Hydra</defName>
+		<boss>Hydra</boss>
+		<waves>
+			<li>
+				<!-- 0 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>2</Mech_Militor>
+					<Mech_Pikeman>3</Mech_Pikeman>
+					<Mech_Scorcher>1</Mech_Scorcher>
+				</escorts>
+			</li>
+			<li>
+				<!-- 1 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>3</Mech_Militor>
+					<Mech_Pikeman>4</Mech_Pikeman>
+					<Mech_Scyther>1</Mech_Scyther>
+					<Mech_Lancer>1</Mech_Lancer>
+				</escorts>
+			</li>
+			<li>
+				<!-- 2 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>4</Mech_Militor>
+					<Mech_Pikeman>5</Mech_Pikeman>
+					<Mech_Scorcher>2</Mech_Scorcher>
+					<Mech_Scyther>2</Mech_Scyther>
+					<Mech_Lancer>2</Mech_Lancer>
+					<Mech_Tesseron>1</Mech_Tesseron>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li>
+				<!-- 3 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>5</Mech_Militor>
+					<Mech_Pikeman>6</Mech_Pikeman>
+					<Mech_Scorcher>2</Mech_Scorcher>
+					<Mech_Scyther>2</Mech_Scyther>
+					<Mech_Lancer>2</Mech_Lancer>
+					<Mech_Centurion>1</Mech_Centurion>
+					<Mech_Tesseron>2</Mech_Tesseron>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li>
+				<!-- 4 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>5</Mech_Militor>
+					<Mech_Pikeman>8</Mech_Pikeman>
+					<Mech_Scorcher>3</Mech_Scorcher>
+					<Mech_Scyther>3</Mech_Scyther>
+					<Mech_Lancer>3</Mech_Lancer>
+					<Mech_Centurion>1</Mech_Centurion>
+					<Mech_Tesseron>3</Mech_Tesseron>
+					<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li>
+				<!-- 5 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>6</Mech_Militor>
+					<Mech_Pikeman>10</Mech_Pikeman>
+					<Mech_Scorcher>4</Mech_Scorcher>
+					<Mech_Scyther>4</Mech_Scyther>
+					<Mech_Lancer>4</Mech_Lancer>
+					<Mech_Centurion>1</Mech_Centurion>
+					<Mech_Tesseron>3</Mech_Tesseron>
+					<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li>
+				<!-- 6 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>7</Mech_Militor>
+					<Mech_Pikeman>12</Mech_Pikeman>
+					<Mech_Scorcher>5</Mech_Scorcher>
+					<Mech_Scyther>5</Mech_Scyther>
+					<Mech_Lancer>5</Mech_Lancer>
+					<Mech_Centurion>1</Mech_Centurion>
+					<Mech_Tesseron>3</Mech_Tesseron>
+					<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+			<li>
+				<!-- 7 -->
+				<bossCount>1</bossCount>
+				<escorts>
+					<Mech_Militor>8</Mech_Militor>
+					<Mech_Pikeman>15</Mech_Pikeman>
+					<Mech_Scorcher>6</Mech_Scorcher>
+					<Mech_Scyther>6</Mech_Scyther>
+					<Mech_Lancer>6</Mech_Lancer>
+					<Mech_Centurion>1</Mech_Centurion>
+					<Mech_Tesseron>3</Mech_Tesseron>
+					<Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+				</escorts>
+				<bossApparel>
+					<li>
+						<thing>Apparel_HeavyShield</thing>
+					</li>
+				</bossApparel>
+			</li>
+		</waves>
+		<leaderDescription>Local tribes whisper tales of the {LEADERKIND_label}, a three headed
+			pre-war demon armed with lightning and flame.</leaderDescription>
+		<rewardDef>SignalChip</rewardDef>
+	</BossgroupDef>
+</Defs>

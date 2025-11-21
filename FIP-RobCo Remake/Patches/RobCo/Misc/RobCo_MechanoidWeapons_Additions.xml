@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Add RobCo weapon defs instead of Replace patches for vanilla guns. This keeps originals untouched while providing RobCo variants. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseGun">
+        <defName>RobCo_Gun_ThumpCannon</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_ThumpCannon</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseGun">
+        <defName>RobCo_Gun_ChargeBlasterHeavy</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_ChargeBlasterHeavy</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseGun">
+        <defName>RobCo_Gun_InfernoCannon</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_InfernoCannon</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="LightMechanoidGun">
+        <defName>RobCo_Gun_Needle</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_NeedleGun</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseGun">
+        <defName>RobCo_Gun_HellsphereCannon</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_HellsphereCannonGun</defName>
+      </ThingDef>
+    </value>
+  </Operation>
+</Patch>

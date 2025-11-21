@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Assaultron ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Tesseron"]</xpath>
+		<value>
+			<ThingDef ParentName="HeavyMechanoid">
+				<defName>Mech_Tesseron</defName>
+				<label>Assaultron</label>
+				<description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
+				<statBases>
+					<MoveSpeed>4.5</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Assaultron</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Assaultron_Wounded</soundWounded>
+							<soundDeath>Assaultron_Death</soundDeath>
+							<soundCall>Assaultron_Call</soundCall>
+							<soundAngry>Assaultron_Angry</soundAngry>
+						</li>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>10</minAge>
+							<soundWounded>Assaultron_Wounded</soundWounded>
+							<soundDeath>Assaultron_Death</soundDeath>
+							<soundCall>Assaultron_Call</soundCall>
+							<soundAngry>Assaultron_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+					<baseHealthScale>3</baseHealthScale>
+				</race>
+				<comps>
+					<li Class="CompProperties_TargetingBeam" />
+				</comps>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Assaultron PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Tesseron</defName>
+				<label>Assaultron</label>
+				<race>Mech_Tesseron</race>
+				<combatPower>500</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/Assaultron/Assaultron</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>HellsphereCannonGun</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Assaultron RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Tesseron"]</xpath>
+		<value>
+			<RecipeDef ParentName="HeavyMechanoidRecipe">
+				<defName>Tesseron</defName>
+				<label>craft Assaultron</label>
+				<description>Craft an Assaultron.</description>
+				<products>
+					<Mech_Tesseron>1</Mech_Tesseron>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Tesseron</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>

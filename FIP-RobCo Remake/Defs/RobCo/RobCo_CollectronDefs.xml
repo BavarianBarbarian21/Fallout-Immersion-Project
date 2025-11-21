@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- RobCo Collectron (converted from Mech_Lifter patch) -->
+  <ThingDef ParentName="LightMechanoid">
+    <defName>RobCo_Collectron</defName>
+    <label>Collectron</label>
+    <description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
+    <statBases>
+      <MoveSpeed>2</MoveSpeed>
+    </statBases>
+    <race>
+      <body>Protectron</body>
+      <mechEnabledWorkTypes>
+        <li>Hauling</li>
+        <li>PlantCutting</li>
+      </mechEnabledWorkTypes>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Protectron_Wounded</soundWounded>
+          <soundDeath>Protectron_Death</soundDeath>
+          <soundCall>Protectron_Call</soundCall>
+          <soundAngry>Protectron_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_CollectronKind</defName>
+    <label>Collectron</label>
+    <race>RobCo_Collectron</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Collectron/Collectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunSpiner</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>RobCo_Collectron_Recipe</defName>
+    <label>craft Collectron</label>
+    <description>Craft a RobCo Collectron.</description>
+    <products>
+      <RobCo_Collectron>1</RobCo_Collectron>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Collectron</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>

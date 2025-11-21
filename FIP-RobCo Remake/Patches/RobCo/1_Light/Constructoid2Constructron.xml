@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Constructron ThingDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+      <ThingDef ParentName="LightMechanoid">
+        <defName>Mech_Constructoid</defName>
+        <label>Constructron</label>
+        <description>Industrial-grade version, all welders and rivet guns. Once meant for building cities of old.</description>
+        <statBases>
+          <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+          <body>Protectron</body>
+          <mechEnabledWorkTypes>
+            <li>Construction</li>
+          </mechEnabledWorkTypes>
+          <lifeStageAges>
+            <li>
+              <def>MechanoidFullyFormed</def>
+              <minAge>0</minAge>
+              <soundWounded>Protectron_Wounded</soundWounded>
+              <soundDeath>Protectron_Death</soundDeath>
+              <soundCall>Protectron_Call</soundCall>
+              <soundAngry>Protectron_Angry</soundAngry>
+            </li>
+          </lifeStageAges>
+        </race>
+      </ThingDef>
+    </value>
+  </Operation>
+
+  <!-- Constructron PawnKindDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+      <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>Mech_Constructoid</defName>
+        <label>Constructron</label>
+        <race>Mech_Constructoid</race>
+        <combatPower>10</combatPower>
+        <lifeStages>
+          <li>
+            <bodyGraphicData>
+              <texPath>RobCo/Utilitron/Utilitron</texPath>
+              <shaderType>CutoutWithOverlay</shaderType>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawSize>1.25</drawSize>
+              <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+          </li>
+        </lifeStages>
+        <weaponTags>
+          <li>MechanoidGunSpiner</li>
+        </weaponTags>
+      </PawnKindDef>
+    </value>
+  </Operation>
+
+  <!-- Constructron RecipeDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="Constructoid"]</xpath>
+    <value>
+      <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Constructoid</defName>
+        <label>craft Constructron</label>
+        <description>Craft an Constructron.</description>
+        <products>
+          <Mech_Constructoid>1</Mech_Constructoid>
+        </products>
+        <descriptionHyperlinks>
+          <ThingDef>Mech_Constructoid</ThingDef>
+        </descriptionHyperlinks>
+      </RecipeDef>
+    </value>
+  </Operation>
+</Patch>

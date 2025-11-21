@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Mister Gutsy Flamer ThingDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Mech_Scorcher"]</xpath>
+		<value>
+			<ThingDef ParentName="Floating">
+				<defName>Mech_Scorcher</defName>
+				<label>Mister Gutsy Flamer</label>
+				<description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry and a drill-sergeant personality.</description>
+				<statBases>
+					<MoveSpeed>5</MoveSpeed>
+				</statBases>
+				<race>
+					<body>Handy</body>
+					<lifeStageAges>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>0</minAge>
+							<soundWounded>Gutsy_Wounded</soundWounded>
+							<soundDeath>Gutsy_Death</soundDeath>
+							<soundCall>Gutsy_Call</soundCall>
+							<soundAngry>Gutsy_Angry</soundAngry>
+						</li>
+						<li>
+							<def>MechanoidFullyFormed</def>
+							<minAge>10</minAge>
+							<soundWounded>Gutsy_Wounded</soundWounded>
+							<soundDeath>Gutsy_Death</soundDeath>
+							<soundCall>Gutsy_Call</soundCall>
+							<soundAngry>Gutsy_Angry</soundAngry>
+						</li>
+					</lifeStageAges>
+					<baseHealthScale>2</baseHealthScale>
+				</race>
+			</ThingDef>
+		</value>
+	</Operation>
+	<!-- Mister Gutsy Flamer PawnKindDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mech_Scorcher"]</xpath>
+		<value>
+			<PawnKindDef ParentName="LightMechanoidKind">
+				<defName>Mech_Scorcher</defName>
+				<label>Mister Gutsy Flamer</label>
+				<race>Mech_Scorcher</race>
+				<combatPower>150</combatPower>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/MisterGutsy/MisterGutsy</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>RobCo/MisterGutsyAncient/MisterGutsyAncient</texPath>
+							<shaderType>CutoutWithOverlay</shaderType>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<drawSize>1.25</drawSize>
+							<shadowData>
+								<volume>(0.3, 0.4, 0.3)</volume>
+								<offset>(0,0,-0.25)</offset>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</lifeStages>
+				<weaponTags>
+					<li>MechanoidGunMiniFlameblaster</li>
+				</weaponTags>
+			</PawnKindDef>
+		</value>
+	</Operation>
+	<!-- Mister Gutsy Flamer RecipeDef -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="Scorcher"]</xpath>
+		<value>
+			<RecipeDef ParentName="MediumMechanoidRecipe">
+				<defName>Scorcher</defName>
+				<label>craft Mister Gutsy Flamer</label>
+				<description>Craft an Mister Gutsy Flamer.</description>
+				<products>
+					<Mech_Scorcher>1</Mech_Scorcher>
+				</products>
+				<descriptionHyperlinks>
+					<ThingDef>Mech_Scorcher</ThingDef>
+				</descriptionHyperlinks>
+			</RecipeDef>
+		</value>
+	</Operation>
+</Patch>
