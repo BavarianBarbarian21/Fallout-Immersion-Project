@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/label</xpath>
-    <value>
-      <label>Escaped Slaves</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/description</xpath>
-    <value>
-      <description>Flesh freed from chains, the Escaped Slaves bear scars both seen and unseen. Bonded by suffering and driven by hope, they struggle for freedom and justice amidst the wasteland’s cruelty. Fierce and desperate, they fight for a life stolen but not forgotten.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/pawnSingular</xpath>
-    <value>
-      <pawnSingular>Runaway</pawnSingular>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/pawnsPlural</xpath>
-    <value>
-      <pawnsPlural>Runaways</pawnsPlural>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/xenotypeSet</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_Atlantic>
-          <Baseliner>0.5</Baseliner>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/label</xpath>
+        <value>
+          <label>Escaped Slaves</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/description</xpath>
+        <value>
+          <description>Flesh freed from chains, the Escaped Slaves bear scars both seen and unseen. Bonded by suffering and driven by hope, they struggle for freedom and justice amidst the wasteland’s cruelty. Fierce and desperate, they fight for a life stolen but not forgotten.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Runaway</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Runaways</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="OutlanderRefugee"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_Atlantic>
+              <Baseliner>0.5</Baseliner>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

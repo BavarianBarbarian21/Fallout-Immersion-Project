@@ -77,13 +77,13 @@
 			<description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/FactionDef[defName="Mechanoid"]/pawnSingular</xpath>
 		<value>
 			<pawnSingular>Robot</pawnSingular>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/FactionDef[defName="Mechanoid"]/pawnsPlural</xpath>
 		<value>
 			<pawnsPlural>Robots</pawnsPlural>

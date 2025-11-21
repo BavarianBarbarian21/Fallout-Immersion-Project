@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/FactionDef[defName="Insect"]/label</xpath>
-    <value>
-      <label>Antagonists</label>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/label</xpath>
+        <value>
+          <label>Antagonists</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/description</xpath>
+        <value>
+          <description>Ruthless and unyielding, the Antagonist is a force of destruction and discord. Their motives shrouded in darkness, they seek power through chaos, crushing all opposition without mercy. Cross their path, and you’ll know true enmity in the wasteland.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Insect"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Nemesis</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Insect"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Nemeses</pawnsPlural>
+        </value>
+      </li>
+    </operations>
   </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/FactionDef[defName="Insect"]/description</xpath>
-    <value>
-      <description>Ruthless and unyielding, the Antagonist is a force of destruction and discord. Their motives shrouded in darkness, they seek power through chaos, crushing all opposition without mercy. Cross their path, and you’ll know true enmity in the wasteland.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="Insect"]/pawnSingular</xpath>
-  <value><pawnSingular>Nemesis</pawnSingular></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="Insect"]/pawnsPlural</xpath>
-  <value><pawnsPlural>Nemeses</pawnsPlural></value>
-</Operation>
 </Patch>

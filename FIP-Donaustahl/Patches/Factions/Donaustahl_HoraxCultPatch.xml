@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
-    <xpath>Defs/FactionDef[defName="HoraxCult"]/label</xpath>
-    <value>
-      <label>Holy Mothman Cultsts</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
-  <value><pawnSingular>Devoted Seer</pawnSingular></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="HoraxCult"]/pawnsPlural</xpath>
-  <value><pawnsPlural>Devoted Seers</pawnsPlural></value>
-</Operation>
-<Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">1</WestTek_Xenotype_Atlantic>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
+        <xpath>Defs/FactionDef[defName="HoraxCult"]/label</xpath>
+        <value>
+          <label>Holy Mothman Cultsts</label>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Anomaly">
+        <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
+        <value>
+          <pawnSingular>Devoted Seer</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
+        <xpath>Defs/FactionDef[defName="HoraxCult"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Devoted Seers</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Anomaly">
+        <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">1</WestTek_Xenotype_Atlantic>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

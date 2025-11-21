@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
-    <xpath>Defs/FactionDef[defName="ResearchExpedition"]/label</xpath>
-    <value>
-      <label>New Cult</label>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Anomaly">
+        <xpath>Defs/FactionDef[defName="ResearchExpedition"]/label</xpath>
+        <value>
+          <label>New Cult</label>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

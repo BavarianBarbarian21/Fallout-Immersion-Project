@@ -6,17 +6,21 @@
       <label>hobbler</label>
     </value>
   </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/GeneDef[defName="VacuumResistance_Total"]/label</xpath>
-    <value>
-      <label>airtight</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/GeneDef[defName="VacuumResistance_Partial"]/label</xpath>
-    <value>
-      <label>air pockets</label>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/GeneDef[defName="VacuumResistance_Total"]/label</xpath>
+        <value>
+          <label>airtight</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/GeneDef[defName="VacuumResistance_Partial"]/label</xpath>
+        <value>
+          <label>air pockets</label>
+        </value>
+      </li>
+    </operations>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/GeneDef[defName="WoundHealing_Fast"]/label</xpath>

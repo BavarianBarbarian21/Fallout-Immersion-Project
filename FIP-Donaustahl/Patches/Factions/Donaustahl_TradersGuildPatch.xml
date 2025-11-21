@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>Defs/FactionDef[defName="TradersGuild"]/label</xpath>
-    <value>
-      <label>Enclave Remnants</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>Defs/FactionDef[defName="TradersGuild"]/description</xpath>
-    <value>
-      <description>Scattered and hunted, the Enclave Remnants cling to the last fragments of a fallen empire. Proud and unbroken, they uphold their sacred mission: to reclaim humanity through strength and technology. Their shadows stretch long, shaped by secrets and betrayal.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="TradersGuild"]/pawnSingular</xpath>
-  <value><pawnSingular>Survivor</pawnSingular></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="TradersGuild"]/pawnsPlural</xpath>
-  <value><pawnsPlural>Survivors</pawnsPlural></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="TradersGuild"]/xenotypeSet</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">1</WestTek_Xenotype_PureHumans>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="TradersGuild"]/label</xpath>
+        <value>
+          <label>Enclave Remnants</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="TradersGuild"]/description</xpath>
+        <value>
+          <description>Scattered and hunted, the Enclave Remnants cling to the last fragments of a fallen empire. Proud and unbroken, they uphold their sacred mission: to reclaim humanity through strength and technology. Their shadows stretch long, shaped by secrets and betrayal.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="TradersGuild"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Survivor</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="TradersGuild"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Survivors</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="TradersGuild"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">1</WestTek_Xenotype_PureHumans>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

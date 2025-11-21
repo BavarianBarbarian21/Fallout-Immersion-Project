@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>Defs/FactionDef[defName="Salvagers"]/label</xpath>
-    <value>
-      <label>Enclave Radicals</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
-    <xpath>Defs/FactionDef[defName="Salvagers"]/description</xpath>
-    <value>
-      <description>The Enclave Radicals burn with fanatic fire, wielding doctrine like a blade. Purity, dominance, and absolute control drive them to purge what they deem impure. Their zeal knows no bounds, turning even allies into enemies in their relentless crusade.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="Salvagers"]/pawnSingular</xpath>
-  <value><pawnSingular>Zealot</pawnSingular></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-  <xpath>Defs/FactionDef[defName="Salvagers"]/pawnsPlural</xpath>
-  <value><pawnsPlural>Zealots</pawnsPlural></value>
-</Operation>
-<Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Salvagers"]/xenotypeSet</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">1</WestTek_Xenotype_PureHumans>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/label</xpath>
+        <value>
+          <label>Enclave Radicals</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/description</xpath>
+        <value>
+          <description>The Enclave Radicals burn with fanatic fire, wielding doctrine like a blade. Purity, dominance, and absolute control drive them to purge what they deem impure. Their zeal knows no bounds, turning even allies into enemies in their relentless crusade.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Zealot</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Zealots</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">1</WestTek_Xenotype_PureHumans>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

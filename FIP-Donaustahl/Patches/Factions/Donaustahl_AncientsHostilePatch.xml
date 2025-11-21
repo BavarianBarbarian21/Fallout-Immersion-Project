@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="AncientsHostile"]/label</xpath>
-    <value>
-      <label>Crazed Vault</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
-    <value>
-      <pawnSingular>Mad Dweller</pawnSingular>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
-    <value>
-      <pawnsPlural>Mad Dwellers</pawnsPlural>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">1</WestTek_Xenotype_VaultDweller>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="AncientsHostile"]/label</xpath>
+        <value>
+          <label>Crazed Vault</label>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+        <value>
+          <pawnSingular>Mad Dweller</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+        <value>
+          <pawnsPlural>Mad Dwellers</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="AncientsHostile"]</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">1</WestTek_Xenotype_VaultDweller>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>

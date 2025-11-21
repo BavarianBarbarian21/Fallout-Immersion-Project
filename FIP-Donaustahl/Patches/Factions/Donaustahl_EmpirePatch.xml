@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Empire"]/label</xpath>
-    <value>
-      <label>Whitespring Resort</label>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Empire"]/description</xpath>
-    <value>
-      <description>Once a haven of luxury and privilege, the Whitesprings faction clings to old-world grandeur amid the wasteland’s ruin. Armed with pre-war technology and determined to preserve their estate, they guard their secrets jealously — a shining beacon of prosperity and high society’s stubborn survival.</description>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Empire"]/pawnSingular</xpath>
-    <value>
-      <pawnSingular>Resort Elite</pawnSingular>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Empire"]/pawnsPlural</xpath>
-    <value>
-      <pawnsPlural>Resort Elites</pawnsPlural>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-    <xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
-    <value>
-      <xenotypeSet>
-        <xenotypeChances>
-          <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">0.3</WestTek_Xenotype_VaultDweller>
-          <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.2</WestTek_Xenotype_Atlantic>
-          <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_PureHumans>
-        </xenotypeChances>
-      </xenotypeSet>
-    </value>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Empire"]/label</xpath>
+        <value>
+          <label>Whitespring Resort</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Empire"]/description</xpath>
+        <value>
+          <description>Once a haven of luxury and privilege, the Whitesprings faction clings to old-world grandeur amid the wasteland’s ruin. Armed with pre-war technology and determined to preserve their estate, they guard their secrets jealously — a shining beacon of prosperity and high society’s stubborn survival.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Empire"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Resort Elite</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Empire"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Resort Elites</pawnsPlural>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">0.3</WestTek_Xenotype_VaultDweller>
+              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.2</WestTek_Xenotype_Atlantic>
+              <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_PureHumans>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
   </Operation>
 </Patch>
