@@ -107,4 +107,197 @@
       </li>
     </operations>
   </Operation>
+
+  <!-- Textures -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Megascarab"]/lifeStages</xpath>
+    <value>
+      <lifeStages>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.25</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.25</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.5</drawSize>
+            <shadowData>
+              <volume>(0.2, 0.3, 0.2)</volume>
+              <offset>(0,0,0)</offset>
+            </shadowData>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.5</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+      </lifeStages>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Spelopede"]/lifeStages</xpath>
+    <value>
+      <lifeStages>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.25</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.25</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.65</drawSize>
+            <shadowData>
+              <volume>(0.4, 0.5, 0.37)</volume>
+              <offset>(0,0,-0.15)</offset>
+            </shadowData>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.65</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+      </lifeStages>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Megaspider"]/lifeStages</xpath>
+    <value>
+      <lifeStages>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.2</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.2</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>1.6</drawSize>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>1.6</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+        <li>
+          <bodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Black/Ant_Black</texPath>
+            <drawSize>2.5</drawSize>
+            <shadowData>
+              <volume>(0.5, 0.7, 0.43)</volume>
+              <offset>(0,0,-0.1)</offset>
+            </shadowData>
+          </bodyGraphicData>
+          <dessicatedBodyGraphicData>
+            <texPath>Arktos/Ants/Ant/Ant_Dessicated</texPath>
+            <drawSize>2.5</drawSize>
+          </dessicatedBodyGraphicData>
+        </li>
+      </lifeStages>
+    </value>
+  </Operation>
+
+  <!-- Odyssey-only replacements for Locust and HiveQueen -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/PawnKindDef[defName="Locust"]/lifeStages</xpath>
+        <value>
+          <lifeStages>
+            <li>
+              <bodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/Black/AntWinged_Black</texPath>
+                <drawSize>1.25</drawSize>
+              </bodyGraphicData>
+              <dessicatedBodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+                <drawSize>1.25</drawSize>
+              </dessicatedBodyGraphicData>
+            </li>
+            <li>
+              <bodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/Black/AntWinged_Black</texPath>
+                <drawSize>1.45</drawSize>
+              </bodyGraphicData>
+              <dessicatedBodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+                <drawSize>1.45</drawSize>
+              </dessicatedBodyGraphicData>
+            </li>
+            <li>
+              <bodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/Black/AntWinged_Black</texPath>
+                <drawSize>1.65</drawSize>
+                <shadowData>
+                  <volume>(0.2, 0.3, 0.2)</volume>
+                  <offset>(0,0,0)</offset>
+                </shadowData>
+              </bodyGraphicData>
+              <dessicatedBodyGraphicData>
+                <texPath>Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+                <drawSize>1.65</drawSize>
+              </dessicatedBodyGraphicData>
+            </li>
+          </lifeStages>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/PawnKindDef[defName="HiveQueen"]/lifeStages</xpath>
+        <value>
+          <lifeStages>
+            <li>
+              <bodyGraphicData>
+                <texPath>Arktos/Ants/AntQueen/Black/AntQueen_Black</texPath>
+                <drawSize>4</drawSize>
+              </bodyGraphicData>
+              <dessicatedBodyGraphicData>
+                <texPath>Arktos/Ants/AntQueen/AntQueen_Dessicated</texPath>
+                <drawSize>4</drawSize>
+              </dessicatedBodyGraphicData>
+            </li>
+          </lifeStages>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  
 </Patch>
