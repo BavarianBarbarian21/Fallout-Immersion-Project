@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Constructron ThingDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+        <label>Constructron</label>
+        <description>This is an Constructron.</description>
+        <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <lifeStageAges>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>0</minAge>
+                <soundWounded>Pawn_Mech_Constructoid_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Constructoid_Death</soundDeath>
+                <soundCall>Pawn_Mech_Constructoid_Call</soundCall>
+            </li>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>100</minAge>
+                <soundWounded>Pawn_Mech_Constructoid_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Constructoid_Death</soundDeath>
+                <soundCall>Pawn_Mech_Constructoid_Call</soundCall>
+            </li>
+            </lifeStageAges>
+        </race>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="Mech_Constructoid"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoid</value>
+  </Operation>
+  <!-- Constructron PawnKindDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
+    <value>
+        <label>Constructron</label>
+        <race>Mech_Constructoid</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/Constructoid</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/ConstructoidAncient</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunShortRange</li>
+      </weaponTags>
+    </value>
+  </Operation>
+ <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoidKind</value>
+  </Operation>
+  <!-- Constructron RecipeDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="GestateMech_Constructoid"]</xpath>
+    <value>
+        <label>gestate Constructron</label>
+        <description>Gestate an Constructron.</description>
+        <products>
+        <Mech_Constructoid>1</Mech_Constructoid>
+        </products>
+        <descriptionHyperlinks>
+        <ThingDef>Mech_Constructoid</ThingDef>
+        </descriptionHyperlinks>
+    </value>
+  </Operation>
+</Patch>

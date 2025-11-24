@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Cyberdog ThingDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Mech_Legionary"]</xpath>
+    <value>
+        <label>Cyberdog</label>
+        <description>This is an Cyberdog.</description>
+        <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <lifeStageAges>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>0</minAge>
+                <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+                <soundCall>Pawn_Mech_Legionary_Call</soundCall>
+            </li>
+            <li>
+                <def>MechanoidFullyFormed</def>
+                <minAge>100</minAge>
+                <soundWounded>Pawn_Mech_Legionary_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Legionary_Death</soundDeath>
+                <soundCall>Pawn_Mech_Legionary_Call</soundCall>
+            </li>
+            </lifeStageAges>
+        </race>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="Mech_Legionary"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoid</value>
+  </Operation>
+  <!-- Cyberdog PawnKindDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Mech_Legionary"]</xpath>
+    <value>
+        <label>Cyberdog</label>
+        <race>Mech_Legionary</race>
+        <combatPower>45</combatPower>
+        <lifeStages>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/Legionary</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+            <li>
+            <bodyGraphicData>
+                <texPath>Things/Pawn/Mechanoid/LegionaryAncient</texPath>
+                <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Slugger</maskPath>
+                <shaderType>CutoutWithOverlay</shaderType>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>1.25</drawSize>
+                <shadowData>
+                <volume>(0.3, 0.4, 0.3)</volume>
+                <offset>(0,0,-0.25)</offset>
+                </shadowData>
+            </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunShortRange</li>
+      </weaponTags>
+    </value>
+  </Operation>
+ <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/PawnKindDef[defName="Mech_Legionary"]</xpath>
+    <attribute>ParentName</attribute>
+    <value>LightMechanoidKind</value>
+  </Operation>
+  <!-- Cyberdog RecipeDef -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="GestateMech_Legionary"]</xpath>
+    <value>
+        <label>gestate Cyberdog</label>
+        <description>Gestate an Eyebot.</description>
+        <products>
+        <Mech_Legionary>1</Mech_Legionary>
+        </products>
+        <descriptionHyperlinks>
+        <ThingDef>Mech_Legionary</ThingDef>
+        </descriptionHyperlinks>
+    </value>
+  </Operation>
+</Patch>
