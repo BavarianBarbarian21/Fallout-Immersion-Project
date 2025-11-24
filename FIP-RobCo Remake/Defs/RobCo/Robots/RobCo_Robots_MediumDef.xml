@@ -31,7 +31,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterFarmhandKind</defName>
+    <defName>RobCo_MisterFarmhand</defName>
     <label>Mister Farmhand</label>
     <race>RobCo_MisterFarmhand</race>
     <combatPower>10</combatPower>
@@ -55,7 +55,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MisterFarmhand_Recipe</defName>
+    <defName>RobCo_MisterFarmhand</defName>
     <label>craft Mister Farmhand</label>
     <description>Craft a RobCo Mister Farmhand.</description>
     <products>
@@ -97,7 +97,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterHandyKind</defName>
+    <defName>RobCo_MisterHandy</defName>
     <label>Mister Handy</label>
     <race>RobCo_MisterHandy</race>
     <combatPower>10</combatPower>
@@ -121,7 +121,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MisterHandy_Recipe</defName>
+    <defName>RobCo_MisterHandy</defName>
     <label>craft Mister Handy</label>
     <description>Craft a RobCo Mister Handy.</description>
     <products>
@@ -156,7 +156,7 @@
     </race>
     <comps>
       <li Class="CompProperties_MechCarrier">
-        <spawnPawnKind>Mech_WarUrchin</spawnPawnKind>
+        <spawnPawnKind>RobCo_HeadOfHydra</spawnPawnKind>
         <fixedIngredient>Steel</fixedIngredient>
         <costPerPawn>25</costPerPawn>
         <startingIngredientCount>600</startingIngredientCount>
@@ -170,7 +170,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_HydraKind</defName>
+    <defName>RobCo_Hydra</defName>
     <label>Hydra</label>
     <race>RobCo_Hydra</race>
     <combatPower>400</combatPower>
@@ -226,7 +226,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyGunnerKind</defName>
+    <defName>RobCo_MisterGutsyGunner</defName>
     <label>Mister Gutsy Gunner</label>
     <race>RobCo_MisterGutsyGunner</race>
     <combatPower>150</combatPower>
@@ -262,7 +262,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MisterGutsyGunner_Recipe</defName>
+    <defName>RobCo_MisterGutsyGunner</defName>
     <label>craft Mister Gutsy Gunner</label>
     <description>Craft a RobCo Mister Gutsy Gunner.</description>
     <products>
@@ -304,7 +304,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MissNannyKind</defName>
+    <defName>RobCo_MissNanny</defName>
     <label>Miss Nanny</label>
     <race>RobCo_MissNanny</race>
     <combatPower>10</combatPower>
@@ -328,7 +328,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MissNanny_Recipe</defName>
+    <defName>RobCo_MissNanny</defName>
     <label>craft Miss Nanny</label>
     <description>Craft a RobCo Miss Nanny.</description>
     <products>
@@ -372,7 +372,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyFlamerKind</defName>
+    <defName>RobCo_MisterGutsyFlamer</defName>
     <label>Mister Gutsy Flamer</label>
     <race>RobCo_MisterGutsyFlamer</race>
     <combatPower>150</combatPower>
@@ -408,7 +408,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MisterGutsyFlamer_Recipe</defName>
+    <defName>RobCo_MisterGutsyFlamer</defName>
     <label>craft Mister Gutsy Flamer</label>
     <description>Craft a RobCo Mister Gutsy Flamer.</description>
     <products>
@@ -464,7 +464,7 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyChopperKind</defName>
+    <defName>RobCo_MisterGutsyChopper</defName>
     <label>Mister Gutsy Chopper</label>
     <race>RobCo_MisterGutsyChopper</race>
     <combatPower>150</combatPower>
@@ -497,7 +497,7 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="MediumMechanoidRecipe">
-    <defName>RobCo_MisterGutsyChopper_Recipe</defName>
+    <defName>RobCo_MisterGutsyChopper</defName>
     <label>craft Mister Gutsy Chopper</label>
     <description>Craft a RobCo Mister Gutsy Chopper.</description>
     <products>
@@ -508,9 +508,9 @@
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- WarUrchin (spawned by Hydra) - Thing & PawnKind only -->
+  <!-- Head of Hydra (WarUrchin) - Thing & PawnKind only -->
   <ThingDef ParentName="Floating">
-    <defName>RobCo_WarUrchin</defName>
+    <defName>RobCo_HeadOfHydra</defName>
     <label>Head Of Hydra</label>
     <description>This is one of many heads of the Hydra.</description>
     <statBases>
@@ -532,9 +532,9 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_WarUrchinKind</defName>
+    <defName>RobCo_HeadOfHydra</defName>
     <label>Head Of Hydra</label>
-    <race>RobCo_WarUrchin</race>
+    <race>RobCo_HeadOfHydra</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
