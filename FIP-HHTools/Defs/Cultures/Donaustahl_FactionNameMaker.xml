@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RulePackDef>
+		<defName>HHTools_FactionNameMaker_General</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name -> [f_pattern]</li>
+				<li>f_pattern -> The [f_adj] [f_noun]</li>
+				<li>f_pattern -> The [f_nounPlural]</li>
+				<li>f_pattern -> [f_placeOf] [f_nounPlural]</li>
+				<li>f_pattern -> [f_title] of [f_realm]</li>
+				<li>f_pattern -> [f_title] of the [f_adj] [f_realm]</li>
+				<li>f_adj -> Iron</li>
+				<li>f_adj -> Steel</li>
+				<li>f_adj -> Blooded</li>
+				<li>f_adj -> Radiant</li>
+				<li>f_adj -> Rusted</li>
+				<li>f_adj -> Atomic</li>
+				<li>f_adj -> Golden</li>
+				<li>f_adj -> Crimson</li>
+				<li>f_adj -> Burning</li>
+				<li>f_adj -> Silent</li>
+				<li>f_adj -> Shadowed</li>
+				<li>f_adj -> Blasted</li>
+				<li>f_noun -> Legion</li>
+				<li>f_noun -> Order</li>
+				<li>f_noun -> Syndicate</li>
+				<li>f_noun -> Collective</li>
+				<li>f_noun -> Pact</li>
+				<li>f_noun -> Church</li>
+				<li>f_noun -> Front</li>
+				<li>f_noun -> Brotherhood</li>
+				<li>f_noun -> Enclave</li>
+				<li>f_noun -> Dominion</li>
+				<li>f_noun -> Creed</li>
+				<li>f_nounPlural -> Iron Mongers</li>
+				<li>f_nounPlural -> Vultures</li>
+				<li>f_nounPlural -> Disciples</li>
+				<li>f_nounPlural -> Reclaimers</li>
+				<li>f_nounPlural -> Hounds</li>
+				<li>f_nounPlural -> Drifters</li>
+				<li>f_nounPlural -> Scars</li>
+				<li>f_nounPlural -> Sparks</li>
+				<li>f_nounPlural -> Scribes</li>
+				<li>f_placeOf -> Children of</li>
+				<li>f_placeOf -> Keepers of</li>
+				<li>f_placeOf -> Sons of</li>
+				<li>f_placeOf -> Daughters of</li>
+				<li>f_placeOf -> Followers of</li>
+				<li>f_title -> Heralds</li>
+				<li>f_title -> Wardens</li>
+				<li>f_title -> Prophets</li>
+				<li>f_title -> Shepherds</li>
+				<li>f_title -> Scions</li>
+				<li>f_title -> Knights</li>
+				<li>f_realm -> Flame</li>
+				<li>f_realm -> Atom</li>
+				<li>f_realm -> Dust</li>
+				<li>f_realm -> Ruin</li>
+				<li>f_realm -> Light</li>
+				<li>f_realm -> the Wastes</li>
+				<li>f_realm -> the Machine</li>
+				<li>f_realm -> the Old World</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Democratic -->
+	<RulePackDef>
+		<defName>HHTools_FactionNameMaker_Democratic</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name -> [f_pattern]</li>
+
+				<li>f_pattern -> The [f_adj] [f_suffix]</li>
+				<li>f_pattern -> The [f_adj] [f_nounPlural]</li>
+				<li>f_pattern -> [f_placeOf] the [f_adj] [f_suffix]</li>
+				<li>f_pattern -> [f_title] of [f_realm]</li>
+				<li>f_pattern -> [f_title] of the [f_adj] [f_realm]</li>
+				<li>f_pattern -> The [f_realm] [f_suffix]</li>
+
+				<li>f_adj -> Iron</li>
+				<li>f_adj -> Steel</li>
+				<li>f_adj -> Radiant</li>
+				<li>f_adj -> Silver</li>
+				<li>f_adj -> Emerald</li>
+				<li>f_adj -> Brave</li>
+				<li>f_adj -> Vigilant</li>
+				<li>f_adj -> Golden</li>
+				<li>f_adj -> Free</li>
+				<li>f_adj -> United</li>
+				<li>f_adj -> Republic</li>
+
+				<li>f_suffix -> Rangers</li>
+				<li>f_suffix -> Wardens</li>
+				<li>f_suffix -> Protectors</li>
+				<li>f_suffix -> Sentinels</li>
+				<li>f_suffix -> Custodians</li>
+				<li>f_suffix -> Defenders</li>
+				<li>f_suffix -> Watchers</li>
+				<li>f_suffix -> Guardians</li>
+
+				<li>f_nounPlural -> Sons</li>
+				<li>f_nounPlural -> Daughters</li>
+				<li>f_nounPlural -> Heirs</li>
+				<li>f_nounPlural -> Seekers</li>
+				<li>f_nounPlural -> Reclaimers</li>
+				<li>f_nounPlural -> Builders</li>
+
+				<li>f_placeOf -> Keepers of</li>
+				<li>f_placeOf -> Defenders of</li>
+				<li>f_placeOf -> People of</li>
+				<li>f_placeOf -> Federation of</li>
+
+				<li>f_title -> Order</li>
+				<li>f_title -> Union</li>
+				<li>f_title -> Coalition</li>
+				<li>f_title -> Assembly</li>
+
+				<li>f_realm -> Dawn</li>
+				<li>f_realm -> Freedom</li>
+				<li>f_realm -> Justice</li>
+				<li>f_realm -> the Republic</li>
+				<li>f_realm -> the Sun</li>
+				<li>f_realm -> the River</li>
+				<li>f_realm -> the Wastes</li>
+				<li>f_realm -> the Heartland</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Despotic -->
+	<RulePackDef>
+		<defName>HHTools_FactionNameMaker_Despotic</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name -> [f_pattern]</li>
+
+				<li>f_pattern -> The [f_adj] [f_suffix]</li>
+				<li>f_pattern -> [f_title] of [f_realm]</li>
+				<li>f_pattern -> [f_title] of the [f_adj] [f_realm]</li>
+				<li>f_pattern -> The [f_adj] [f_nounPlural]</li>
+				<li>f_pattern -> [f_placeOf] the [f_suffix]</li>
+
+				<li>f_adj -> Iron</li>
+				<li>f_adj -> Black</li>
+				<li>f_adj -> Crimson</li>
+				<li>f_adj -> Rusted</li>
+				<li>f_adj -> Ashen</li>
+				<li>f_adj -> Obsidian</li>
+				<li>f_adj -> Blasted</li>
+				<li>f_adj -> Atom-Born</li>
+				<li>f_adj -> Sovereign</li>
+				<li>f_adj -> Hell-Forged</li>
+				<li>f_adj -> Glorious</li>
+
+				<li>f_suffix -> Breakers</li>
+				<li>f_suffix -> Scorchers</li>
+				<li>f_suffix -> Cohort</li>
+				<li>f_suffix -> Dominion</li>
+				<li>f_suffix -> Inquisitors</li>
+				<li>f_suffix -> Executors</li>
+				<li>f_suffix -> Purifiers</li>
+
+				<li>f_nounPlural -> Tyrants</li>
+				<li>f_nounPlural -> Enforcers</li>
+				<li>f_nounPlural -> Overlords</li>
+				<li>f_nounPlural -> Disciples</li>
+
+				<li>f_placeOf -> Children of</li>
+				<li>f_placeOf -> Sons of</li>
+				<li>f_placeOf -> Chosen of</li>
+
+				<li>f_title -> Order</li>
+				<li>f_title -> Dominion</li>
+				<li>f_title -> Command</li>
+				<li>f_title -> Circle</li>
+
+				<li>f_realm -> Flame</li>
+				<li>f_realm -> Ruin</li>
+				<li>f_realm -> Iron</li>
+				<li>f_realm -> the Atom</li>
+				<li>f_realm -> the Black Sun</li>
+				<li>f_realm -> the Ashlands</li>
+				<li>f_realm -> the Old World</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Raider -->
+	<RulePackDef>
+		<defName>HHTools_FactionNameMaker_Raider</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name -> [f_pattern]</li>
+
+				<li>f_pattern -> The [f_adj] [f_animalPlural]</li>
+				<li>f_pattern -> [f_adj] [f_animalPlural] of [f_realm]</li>
+				<li>f_pattern -> [f_placeOf] the [f_animalPlural]</li>
+				<li>f_pattern -> [f_adj] [f_animalPlural]</li>
+				<li>f_pattern -> The [f_animalPlural] of [f_realm]</li>
+
+				<li>f_adj -> Rusted</li>
+				<li>f_adj -> Blooded</li>
+				<li>f_adj -> Fiery</li>
+				<li>f_adj -> Blasted</li>
+				<li>f_adj -> Rabid</li>
+				<li>f_adj -> Twisted</li>
+				<li>f_adj -> Savage</li>
+				<li>f_adj -> Mad</li>
+				<li>f_adj -> Crimson</li>
+				<li>f_adj -> Burning</li>
+
+				<li>f_animalPlural -> Vipers</li>
+				<li>f_animalPlural -> Jackals</li>
+				<li>f_animalPlural -> Eagles</li>
+				<li>f_animalPlural -> Scorpions</li>
+				<li>f_animalPlural -> Rats</li>
+				<li>f_animalPlural -> Wolves</li>
+				<li>f_animalPlural -> Boars</li>
+				<li>f_animalPlural -> Buzzards</li>
+				<li>f_animalPlural -> Crows</li>
+				<li>f_animalPlural -> Hyenas</li>
+
+				<li>f_placeOf -> Children of</li>
+				<li>f_placeOf -> Spawn of</li>
+				<li>f_placeOf -> Pack of</li>
+				<li>f_placeOf -> Scars of</li>
+
+				<li>f_realm -> Ruin</li>
+				<li>f_realm -> Dust</li>
+				<li>f_realm -> Ash</li>
+				<li>f_realm -> Blood</li>
+				<li>f_realm -> the Wastes</li>
+				<li>f_realm -> the Night</li>
+				<li>f_realm -> the Storm</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<!-- Tribal -->
+	<RulePackDef>
+		<defName>HHTools_FactionNameMaker_Tribal</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name -> [f_pattern]</li>
+
+				<li>f_pattern -> The [f_adj] [f_animalPlural]</li>
+				<li>f_pattern -> [f_title] of [f_realm]</li>
+				<li>f_pattern -> [f_placeOf] the [f_animalPlural]</li>
+				<li>f_pattern -> [f_animalPlural] of [f_realm]</li>
+				<li>f_pattern -> The [f_adj] Tribe of [f_realm]</li>
+
+				<li>f_adj -> Gentle</li>
+				<li>f_adj -> Proud</li>
+				<li>f_adj -> Silent</li>
+				<li>f_adj -> Swift</li>
+				<li>f_adj -> Honored</li>
+				<li>f_adj -> Wild</li>
+				<li>f_adj -> Noble</li>
+				<li>f_adj -> Painted</li>
+				<li>f_adj -> Clouded</li>
+				<li>f_adj -> Free</li>
+
+				<li>f_adj -> Blue</li>
+				<li>f_adj -> Red</li>
+				<li>f_adj -> Yellow</li>
+				<li>f_adj -> Green</li>
+				<li>f_adj -> Orange</li>
+				<li>f_adj -> Purple</li>
+				<li>f_adj -> White</li>
+				<li>f_adj -> Black</li>
+
+				<li>f_animalPlural -> Horses</li>
+				<li>f_animalPlural -> Dogs</li>
+				<li>f_animalPlural -> Owls</li>
+				<li>f_animalPlural -> Bison</li>
+				<li>f_animalPlural -> Foxes</li>
+				<li>f_animalPlural -> Hawks</li>
+				<li>f_animalPlural -> Deer</li>
+				<li>f_animalPlural -> Wolves</li>
+				<li>f_animalPlural -> Turtles</li>
+				<li>f_animalPlural -> Stags</li>
+
+				<li>f_placeOf -> Tribe of</li>
+				<li>f_placeOf -> Clan of</li>
+				<li>f_placeOf -> People of</li>
+				<li>f_placeOf -> Kin of</li>
+				<li>f_placeOf -> Circle of</li>
+
+				<li>f_title -> Children</li>
+				<li>f_title -> Voices</li>
+				<li>f_title -> Spirits</li>
+				<li>f_title -> Dreamers</li>
+				<li>f_title -> Wanderers</li>
+
+				<li>f_realm -> the Sky</li>
+				<li>f_realm -> the Valley</li>
+				<li>f_realm -> the River</li>
+				<li>f_realm -> the Plains</li>
+				<li>f_realm -> the Wastes</li>
+				<li>f_realm -> the Sun</li>
+				<li>f_realm -> the Dawn</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>
