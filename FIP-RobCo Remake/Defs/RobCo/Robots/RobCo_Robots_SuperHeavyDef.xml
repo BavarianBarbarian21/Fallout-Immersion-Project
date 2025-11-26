@@ -1,28 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Deathbot (Apocriton) -->
-  <ThingDef ParentName="SuperHeavyMechanoid">
-    <defName>RobCo_Deathbot</defName>
-    <label>Deathbot</label>
-    <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Sentrybot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <baseHealthScale>5</baseHealthScale>
-    </race>
-  </ThingDef>
 
   <PawnKindDef ParentName="HeavyMechanoidKind">
     <defName>RobCo_Deathbot</defName>
@@ -48,42 +25,17 @@
     </weaponTags>
   </PawnKindDef>
 
-  <!-- Sentry Bot Siege (CentipedeBlaster) -->
-  <ThingDef ParentName="SuperHeavyMechanoid">
-    <defName>RobCo_SentryBotSiege</defName>
-    <label>Sentry Bot Siege</label>
+  <!-- Sentrybot Siege (CentipedeBlaster) -->
+  <ThingDef ParentName="RobCo_SentrybotBase">
+    <defName>RobCo_SentrybotChopper</defName>
+    <label>Sentrybot Siege</label>
     <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Sentrybot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>10</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <baseHealthScale>4</baseHealthScale>
-    </race>
   </ThingDef>
 
   <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentryBotSiege</defName>
-    <label>Sentry Bot Siege</label>
-    <race>RobCo_SentryBotSiege</race>
+    <defName>RobCo_SentrybotChopper</defName>
+    <label>Sentrybot Siege</label>
+    <race>RobCo_SentrybotChopper</race>
     <combatPower>600</combatPower>
     <lifeStages>
       <li>
@@ -116,54 +68,29 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="SuperHeavyMechanoidRecipe">
-    <defName>RobCo_SentryBotSiege</defName>
-    <label>craft Sentry Bot Rockets</label>
-    <description>Craft a Sentry Bot Rockets.</description>
+  <RecipeDef ParentName="RobCo_SuperHeavyRecipe">
+    <defName>RobCo_SentrybotChopper</defName>
+    <label>craft Sentrybot Rockets</label>
+    <description>Craft a Sentrybot Rockets.</description>
     <products>
-      <RobCo_SentryBotSiege>1</RobCo_SentryBotSiege>
+      <RobCo_SentrybotChopper>1</RobCo_SentrybotChopper>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>RobCo_SentryBotSiege</ThingDef>
+      <ThingDef>RobCo_SentrybotChopper</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- Sentry Bot Burner (CentipedeBurner) -->
-  <ThingDef ParentName="SuperHeavyMechanoid">
-    <defName>RobCo_SentryBotBurner</defName>
-    <label>Sentry Bot Incinerator</label>
+  <!-- Sentrybot Burner -->
+  <ThingDef ParentName="RobCo_SentrybotBase">
+    <defName>RobCo_SentrybotFlamer</defName>
+    <label>Sentrybot Incinerator</label>
     <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Sentrybot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>10</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <baseHealthScale>4</baseHealthScale>
-    </race>
   </ThingDef>
 
   <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentryBotBurner</defName>
-    <label>Sentry Bot Burner</label>
-    <race>RobCo_SentryBotBurner</race>
+    <defName>RobCo_SentrybotFlamer</defName>
+    <label>Sentrybot Incinerator</label>
+    <race>RobCo_SentrybotFlamer</race>
     <combatPower>600</combatPower>
     <lifeStages>
       <li>
@@ -196,54 +123,29 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="SuperHeavyMechanoidRecipe">
-    <defName>RobCo_SentryBotBurner</defName>
-    <label>craft Sentry Bot Burner</label>
-    <description>Craft a Sentry Bot Burner.</description>
+  <RecipeDef ParentName="RobCo_SuperHeavyRecipe">
+    <defName>RobCo_SentrybotFlamer</defName>
+    <label>craft Sentrybot Incinerator</label>
+    <description>Craft a Sentrybot Incinerator.</description>
     <products>
-      <RobCo_SentryBotBurner>1</RobCo_SentryBotBurner>
+      <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>RobCo_SentryBotBurner</ThingDef>
+      <ThingDef>RobCo_SentrybotFlamer</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- Sentry Bot Gunner (CentipedeGunner) -->
-  <ThingDef ParentName="SuperHeavyMechanoid">
-    <defName>RobCo_SentryBotGunner</defName>
-    <label>Sentry Bot</label>
-    <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Sentrybot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>10</minAge>
-          <soundWounded>Sentrybot_Wounded</soundWounded>
-          <soundDeath>Sentrybot_Death</soundDeath>
-          <soundCall>Sentrybot_Call</soundCall>
-          <soundAngry>Sentrybot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <baseHealthScale>4</baseHealthScale>
-    </race>
+  <!-- Sentrybot Gunner (CentipedeGunner) -->
+  <ThingDef ParentName="RobCo_SentrybotBase">
+    <defName>RobCo_SentrybotGunner</defName>
+    <label>Sentrybot Gunner</label>
+    <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much of you will be left.</description>
   </ThingDef>
 
   <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentryBotGunner</defName>
-    <label>Sentry Bot</label>
-    <race>RobCo_SentryBotGunner</race>
+    <defName>RobCo_SentrybotGunner</defName>
+    <label>Sentrybot</label>
+    <race>RobCo_SentrybotGunner</race>
     <combatPower>600</combatPower>
     <lifeStages>
       <li>
@@ -276,15 +178,15 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="SuperHeavyMechanoidRecipe">
-    <defName>RobCo_SentryBotGunner</defName>
-    <label>craft Sentry Bot Gunner</label>
-    <description>Craft a Sentry Bot Gunner.</description>
+  <RecipeDef ParentName="RobCo_SuperHeavyRecipe">
+    <defName>RobCo_SentrybotGunner</defName>
+    <label>craft Sentrybot Gunner</label>
+    <description>Craft a Sentrybot Gunner.</description>
     <products>
-      <RobCo_SentryBotGunner>1</RobCo_SentryBotGunner>
+      <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>RobCo_SentryBotGunner</ThingDef>
+      <ThingDef>RobCo_SentrybotGunner</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 </Defs>

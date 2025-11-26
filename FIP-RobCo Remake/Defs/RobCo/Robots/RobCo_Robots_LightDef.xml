@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Constructron (from Mech_Constructoid) -->
-  <ThingDef ParentName="LightMechanoid">
+  <!-- Constructron -->
+  <ThingDef ParentName="RobCo_ProtectronBase">
     <defName>RobCo_Constructron</defName>
     <label>Constructron</label>
     <description>Industrial-grade version, all welders and rivet guns. Once meant for building cities of old.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
     <race>
-      <body>RobCo_Protectron</body>
       <mechEnabledWorkTypes>
         <li>Construction</li>
       </mechEnabledWorkTypes>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
     </race>
   </ThingDef>
 
@@ -50,7 +36,7 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="LightMechanoidRecipe">
+  <RecipeDef ParentName="RobCo_LightRecipe">
     <defName>RobCo_Constructron</defName>
     <label>craft Constructron</label>
     <description>Craft an Constructron.</description>
@@ -62,90 +48,17 @@
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- Eyebot Duraframe (Cyclops) -->
-  <ThingDef ParentName="Floating">
-    <defName>RobCo_EyebotDuraframe</defName>
-    <label>Eyebot Duraframe</label>
-    <description>A hardened military variant of the Eyebot: thicker armor, heavier gun, and advanced comms gear.</description>
-    <statBases>
-      <MoveSpeed>5</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Eyebot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Eyebot_Wounded</soundWounded>
-          <soundDeath>Eyebot_Death</soundDeath>
-          <soundCall>Eyebot_Call</soundCall>
-          <soundAngry>Eyebot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_EyebotDuraframe</defName>
-    <label>Eyebot Duraframe</label>
-    <race>RobCo_EyebotDuraframe</race>
-    <combatPower>50</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/EyebotDuraframe/EyebotDuraframe</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunLongRange</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="LightMechanoidRecipe">
-    <defName>RobCo_EyebotDuraframe</defName>
-    <label>craft Eyebot Duraframe</label>
-    <description>Craft an Eyebot Duraframe.</description>
-    <products>
-      <RobCo_EyebotDuraframe>1</RobCo_EyebotDuraframe>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_EyebotDuraframe</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
-
-  <!-- Factotron (Fabricor) -->
-  <ThingDef ParentName="LightMechanoid">
+  <!-- Factotron -->
+  <ThingDef ParentName="RobCo_ProtectronBase">
     <defName>RobCo_Factotron</defName>
     <label>Factotron</label>
     <description>Rare factory-automation unit, built to oversee entire assembly lines with chilling efficiency. A walking production floor.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
     <race>
-      <body>RobCo_Protectron</body>
       <mechEnabledWorkTypes>
         <li>Crafting</li>
         <li>Smithing</li>
         <li>Tailoring</li>
       </mechEnabledWorkTypes>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
     </race>
   </ThingDef>
 
@@ -173,7 +86,7 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="LightMechanoidRecipe">
+  <RecipeDef ParentName="RobCo_LightRecipe">
     <defName>RobCo_Factotron</defName>
     <label>craft Factotron</label>
     <description>Craft an Factotron.</description>
@@ -185,25 +98,191 @@
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- Eyebot (Militor) -->
-  <ThingDef ParentName="Floating">
-    <defName>RobCo_Eyebot</defName>
-    <label>Eyebot</label>
-    <description>A floating loudspeaker with a mind of its own, tirelessly blaring propaganda and tunes while sweeping the wastes with its mounted energy weapon.</description>
+  <!-- Utilitron -->
+  <ThingDef ParentName="RobCo_ProtectronBase">
+    <defName>RobCo_Utilitron</defName>
+    <label>Utilitron</label>
+    <description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
+    <race>
+      <mechEnabledWorkTypes>
+        <li>Mining</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_Utilitron</defName>
+    <label>Utilitron</label>
+    <race>RobCo_Utilitron</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Utilitron/Utilitron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunSpiner</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_LightRecipe">
+    <defName>RobCo_Utilitron</defName>
+    <label>craft Utilitron</label>
+    <description>Craft an Utilitron.</description>
+    <products>
+      <RobCo_Utilitron>1</RobCo_Utilitron>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Utilitron</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- RobCo Collectron -->
+  <ThingDef ParentName="LightMechanoid">
+    <defName>RobCo_Collectron</defName>
+    <label>Collectron</label>
+    <description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
     <statBases>
-      <MoveSpeed>5</MoveSpeed>
+      <MoveSpeed>2</MoveSpeed>
     </statBases>
     <race>
-      <body>RobCo_Eyebot</body>
+      <body>RobCo_Protectron</body>
+      <mechEnabledWorkTypes>
+        <li>Hauling</li>
+        <li>PlantCutting</li>
+      </mechEnabledWorkTypes>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
           <minAge>0</minAge>
-          <soundWounded>Eyebot_Wounded</soundWounded>
-          <soundDeath>Eyebot_Death</soundDeath>
-          <soundCall>Eyebot_Call</soundCall>
-          <soundAngry>Eyebot_Angry</soundAngry>
+          <soundWounded>Protectron_Wounded</soundWounded>
+          <soundDeath>Protectron_Death</soundDeath>
+          <soundCall>Protectron_Call</soundCall>
+          <soundAngry>Protectron_Angry</soundAngry>
         </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_Collectron</defName>
+    <label>Collectron</label>
+    <race>RobCo_Collectron</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Collectron/Collectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunSpiner</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_LightRecipe">
+    <defName>RobCo_Collectron</defName>
+    <label>craft Collectron</label>
+    <description>Craft an Collectron.</description>
+    <products>
+      <RobCo_Collectron>1</RobCo_Collectron>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Collectron</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Protectron -->
+  <ThingDef ParentName="RobCo_ProtectronBase">
+    <defName>RobCo_Protectron</defName>
+    <label>Protectron</label>
+    <description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
+    <race>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>10</minAge>
+          <soundWounded>Protectron_Wounded</soundWounded>
+          <soundDeath>Protectron_Death</soundDeath>
+          <soundCall>Protectron_Call</soundCall>
+          <soundAngry>Protectron_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_Protectron</defName>
+    <label>Protectron</label>
+    <race>RobCo_Protectron</race>
+    <combatPower>100</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Protectron/Protectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunShortRange</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_LightRecipe">
+    <defName>RobCo_Protectron</defName>
+    <label>craft Protectron</label>
+    <description>Craft an Protectron.</description>
+    <products>
+      <RobCo_Protectron>1</RobCo_Protectron>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Protectron</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+<!-- Eyebot -->
+  <ThingDef ParentName="RobCo_EyebotBase">
+    <defName>RobCo_Eyebot</defName>
+    <label>Eyebot</label>
+    <description>A floating loudspeaker with a mind of its own, tirelessly blaring propaganda and tunes while sweeping the wastes with its mounted energy weapon.</description>
+    <race>
+      <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
           <minAge>10</minAge>
@@ -252,7 +331,7 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="LightMechanoidRecipe">
+  <RecipeDef ParentName="RobCo_LightRecipe">
     <defName>RobCo_Eyebot</defName>
     <label>craft Eyebot</label>
     <description>Craft an Eyebot.</description>
@@ -264,118 +343,22 @@
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- Protectron (Pikeman) -->
-  <ThingDef ParentName="LightMechanoid">
-    <defName>RobCo_Protectron</defName>
-    <label>Protectron</label>
-    <description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Protectron</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>10</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <baseHealthScale>2</baseHealthScale>
-    </race>
+<!-- Eyebot Duraframe -->
+  <ThingDef ParentName="RobCo_EyebotBase">
+    <defName>RobCo_EyebotDuraframe</defName>
+    <label>Eyebot Duraframe</label>
+    <description>A hardened military variant of the Eyebot: thicker armor, heavier gun, and advanced comms gear.</description>
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_Protectron</defName>
-    <label>Protectron</label>
-    <race>RobCo_Protectron</race>
-    <combatPower>100</combatPower>
+    <defName>RobCo_EyebotDuraframe</defName>
+    <label>Eyebot Duraframe</label>
+    <race>RobCo_EyebotDuraframe</race>
+    <combatPower>50</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>RobCo/Protectron/Protectron</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunShortRange</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="LightMechanoidRecipe">
-    <defName>RobCo_Protectron</defName>
-    <label>craft Protectron</label>
-    <description>Craft an Protectron.</description>
-    <products>
-      <RobCo_Protectron>1</RobCo_Protectron>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_Protectron</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
-
-  <!-- Crashed Vertibot (Termite) - no recipe provided in patch, only Thing/PawnKind -->
-  <ThingDef ParentName="Floating">
-    <defName>RobCo_CrashedVertibot</defName>
-    <label>Crashed Vertibot Robot</label>
-    <description>This is indeed a strange Robot.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Eyebot</body>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Eyebot_Wounded</soundWounded>
-          <soundDeath>Eyebot_Death</soundDeath>
-          <soundCall>Eyebot_Call</soundCall>
-          <soundAngry>Eyebot_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_CrashedVertibot</defName>
-    <label>Crashed Vertibot Robot</label>
-    <race>RobCo_CrashedVertibot</race>
-    <combatPower>300</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/EyebotBoss/EyebotBoss</texPath>
+          <texPath>RobCo/EyebotDuraframe/EyebotDuraframe</texPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.25</drawSize>
@@ -391,128 +374,16 @@
     </weaponTags>
   </PawnKindDef>
 
-  <!-- Utilitron (Tunneler) -->
-  <ThingDef ParentName="LightMechanoid">
-    <defName>RobCo_Utilitron</defName>
-    <label>Utilitron</label>
-    <description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Protectron</body>
-      <mechEnabledWorkTypes>
-        <li>Mining</li>
-      </mechEnabledWorkTypes>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_UtilitronKind</defName>
-    <label>Utilitron</label>
-    <race>RobCo_Utilitron</race>
-    <combatPower>10</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/Utilitron/Utilitron</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunSpiner</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="LightMechanoidRecipe">
-    <defName>RobCo_Utilitron</defName>
-    <label>craft Utilitron</label>
-    <description>Craft an Utilitron.</description>
+  <RecipeDef ParentName="RobCo_LightRecipe">
+    <defName>RobCo_EyebotDuraframe</defName>
+    <label>craft Eyebot Duraframe</label>
+    <description>Craft an Eyebot Duraframe.</description>
     <products>
-      <RobCo_Utilitron>1</RobCo_Utilitron>
+      <RobCo_EyebotDuraframe>1</RobCo_EyebotDuraframe>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>RobCo_Utilitron</ThingDef>
+      <ThingDef>RobCo_EyebotDuraframe</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- RobCo Collectron (converted from Mech_Lifter patch) -->
-  <ThingDef ParentName="LightMechanoid">
-    <defName>RobCo_Collectron</defName>
-    <label>Collectron</label>
-    <description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
-    <race>
-      <body>RobCo_Protectron</body>
-      <mechEnabledWorkTypes>
-        <li>Hauling</li>
-        <li>PlantCutting</li>
-      </mechEnabledWorkTypes>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_CollectronKind</defName>
-    <label>Collectron</label>
-    <race>RobCo_Collectron</race>
-    <combatPower>10</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/Collectron/Collectron</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunSpiner</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="LightMechanoidRecipe">
-    <defName>RobCo_Collectron</defName>
-    <label>craft Collectron</label>
-    <description>Craft an Collectron.</description>
-    <products>
-      <RobCo_Collectron>1</RobCo_Collectron>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_Collectron</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
 </Defs>

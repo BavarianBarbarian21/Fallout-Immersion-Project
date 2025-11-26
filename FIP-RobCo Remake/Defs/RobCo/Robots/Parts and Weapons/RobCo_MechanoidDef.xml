@@ -1,7 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- Combined crafting recipes for mechanoid categories -->
-	<RecipeDef Name="LightMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<!-- ThingDef -->
+	<!-- Base robot -->
+	<ThingDef Name="RobCo_BaseRobot" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MoveSpeed>3.0</MoveSpeed>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+		</statBases>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.0</baseBodySize>
+			<mechWeightClass>Medium</mechWeightClass>
+		</race>
+		<butcherProducts>
+			<Steel>15</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<!-- Protectron Base -->
+	<ThingDef Name="RobCo_ProtectronBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>2</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Protectron</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Protectron_Wounded</soundWounded>
+					<soundDeath>Protectron_Death</soundDeath>
+					<soundCall>Protectron_Call</soundCall>
+					<soundAngry>Protectron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<!-- Eyebot Base -->
+	<ThingDef Name="RobCo_EyebotBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Eyebot</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Eyebot_Wounded</soundWounded>
+					<soundDeath>Eyebot_Death</soundDeath>
+					<soundCall>Eyebot_Call</soundCall>
+					<soundAngry>Eyebot_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<!-- Handy Base -->
+	<ThingDef Name="RobCo_HandyBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Handy</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Handy_Wounded</soundWounded>
+					<soundDeath>Handy_Death</soundDeath>
+					<soundCall>Handy_Call</soundCall>
+					<soundAngry>Handy_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<!-- Nanny Base -->
+	<ThingDef Name="RobCo_HandyBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Handy</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Nanny_Wounded</soundWounded>
+					<soundDeath>Nanny_Death</soundDeath>
+					<soundCall>Nanny_Call</soundCall>
+					<soundAngry>Nanny_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<!-- Gutsy Base -->
+	<ThingDef Name="RobCo_GutsyBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Handy</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Gutsy_Wounded</soundWounded>
+					<soundDeath>Gutsy_Death</soundDeath>
+					<soundCall>Gutsy_Call</soundCall>
+					<soundAngry>Gutsy_Angry</soundAngry>
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>Gutsy_Wounded</soundWounded>
+					<soundDeath>Gutsy_Death</soundDeath>
+					<soundCall>Gutsy_Call</soundCall>
+					<soundAngry>Gutsy_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>2</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Assaultron Base -->
+	<ThingDef Name="RobCo_AssaultronBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Assaultron_Wounded</soundWounded>
+					<soundDeath>Assaultron_Death</soundDeath>
+					<soundCall>Assaultron_Call</soundCall>
+					<soundAngry>Assaultron_Angry</soundAngry>
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>Assaultron_Wounded</soundWounded>
+					<soundDeath>Assaultron_Death</soundDeath>
+					<soundCall>Assaultron_Call</soundCall>
+					<soundAngry>Assaultron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>3</baseHealthScale>
+		</race>
+		<comps>
+			<li Class="CompProperties_TargetingBeam" />
+		</comps>
+	</ThingDef>
+
+	<!-- Robobrain Base -->
+	<ThingDef Name="RobCo_RobobrainBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Robobrain</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Robobrain_Wounded</soundWounded>
+					<soundDeath>Robobrain_Death</soundDeath>
+					<soundCall>Robobrain_Call</soundCall>
+					<soundAngry>Robobrain_Angry</soundAngry>
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>Robobrain_Wounded</soundWounded>
+					<soundDeath>Robobrain_Death</soundDeath>
+					<soundCall>Robobrain_Call</soundCall>
+					<soundAngry>Robobrain_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>3</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Cyberdog Base -->
+	<ThingDef Name="RobCo_CyberdogBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Cyberdog</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Cyberdog_Wounded</soundWounded>
+					<soundDeath>Cyberdog_Death</soundDeath>
+					<soundCall>Cyberdog_Call</soundCall>
+					<soundAngry>Cyberdog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>3</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Sentrybot Base -->
+	<ThingDef Name="RobCo_SentrybotBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<statBases>
+			<MoveSpeed>2</MoveSpeed>
+		</statBases>
+		<race>
+			<body>RobCo_Sentrybot</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Sentrybot_Wounded</soundWounded>
+					<soundDeath>Sentrybot_Death</soundDeath>
+					<soundCall>Sentrybot_Call</soundCall>
+					<soundAngry>Sentrybot_Angry</soundAngry>
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>Sentrybot_Wounded</soundWounded>
+					<soundDeath>Sentrybot_Death</soundDeath>
+					<soundCall>Sentrybot_Call</soundCall>
+					<soundAngry>Sentrybot_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>4</baseHealthScale>
+		</race>
+	</ThingDef>
+	
+	<!-- RecipeDef -->
+	<RecipeDef Name="RobCo_LightRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<researchPrerequisite>BasicMechtech</researchPrerequisite>
 		<gestationCycles>1</gestationCycles>
 		<ingredients>
@@ -32,7 +281,7 @@
 		</ingredients>
 		<displayPriority>100</displayPriority>
 	</RecipeDef>
-	<RecipeDef Name="MediumMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<RecipeDef Name="RobCo_MediumRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>2</gestationCycles>
 		<researchPrerequisite>StandardMechtech</researchPrerequisite>
 		<ingredients>
@@ -71,7 +320,7 @@
 		</ingredients>
 		<displayPriority>200</displayPriority>
 	</RecipeDef>
-	<RecipeDef Name="HeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<RecipeDef Name="RobCo_HeavyRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>4</gestationCycles>
 		<researchPrerequisite>HighMechtech</researchPrerequisite>
 		<ingredients>
@@ -118,7 +367,7 @@
 		</ingredients>
 		<displayPriority>300</displayPriority>
 	</RecipeDef>
-	<RecipeDef Name="SuperHeavyMechanoidRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<RecipeDef Name="RobCo_SuperHeavyRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>12</gestationCycles>
 		<researchPrerequisite>UltraMechtech</researchPrerequisite>
 		<ingredients>
@@ -165,30 +414,5 @@
 		</ingredients>
 		<displayPriority>400</displayPriority>
 	</RecipeDef>
-	<ThingDef ParentName="BaseMechanoid" Name="Floating" Abstract="True">
-		<statBases>
-			<MoveSpeed>4.7</MoveSpeed>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-		</statBases>
-		<race>
-			<intelligence>ToolUser</intelligence>
-			<thinkTreeMain>Mechanoid</thinkTreeMain>
-			<baseBodySize>1.0</baseBodySize>
-			<mechWeightClass>Medium</mechWeightClass>
-		</race>
-		<butcherProducts>
-			<Steel>15</Steel>
-		</butcherProducts>
-		<tools>
-			<li>
-				<label>ram</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>6</power>
-				<cooldownTime>2.6</cooldownTime>
-			</li>
-		</tools>
-	</ThingDef>
+
 </Defs>

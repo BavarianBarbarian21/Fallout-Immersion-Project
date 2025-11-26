@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Crashed Vertibot -->
+    <ThingDef ParentName="Floating">
+        <defName>RobCo_CrashedVertibot</defName>
+        <label>Crashed Vertibot Robot</label>
+        <description>This is indeed a strange Robot.</description>
+            <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RobCo_Eyebot</body>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Eyebot_Wounded</soundWounded>
+                    <soundDeath>Eyebot_Death</soundDeath>
+                    <soundCall>Eyebot_Call</soundCall>
+                    <soundAngry>Eyebot_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <SignalChip>1</SignalChip>
+        </killedLeavingsPlayerHostile>
+    </ThingDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_CrashedVertibot</defName>
+        <label>Crashed Vertibot Robot</label>
+        <race>RobCo_CrashedVertibot</race>
+        <combatPower>300</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/EyebotBoss/EyebotBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunLongRange</li>
+        </weaponTags>
+    </PawnKindDef>
+    <!-- Hydra -->
+    <ThingDef ParentName="RobCo_Hover">
+        <defName>RobCo_Hydra</defName>
+        <label>Hydra</label>
+        <description>This is the Hydra, a dangerous foe of many wasteland legends.</description>
+            <statBases>
+            <MoveSpeed>5</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RobCo_Handy</body>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Gutsy_Wounded</soundWounded>
+                    <soundDeath>Gutsy_Death</soundDeath>
+                    <soundCall>Gutsy_Call</soundCall>
+                    <soundAngry>Gutsy_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <baseHealthScale>3</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <RobCo_BrokenEyebotFrame>1</RobCo_BrokenEyebotFrame>
+        </killedLeavingsPlayerHostile>
+        <comps>
+            <li Class="CompProperties_MechCarrier">
+                <spawnPawnKind>RobCo_HeadOfHydra</spawnPawnKind>
+                <fixedIngredient>Steel</fixedIngredient>
+                <costPerPawn>25</costPerPawn>
+                <startingIngredientCount>600</startingIngredientCount>
+                <maxIngredientCount>600</maxIngredientCount>
+                <spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+                <spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+                <attachSpawnedEffecter>true</attachSpawnedEffecter>
+                <attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+            </li>
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Hydra</defName>
+        <label>Hydra</label>
+        <race>RobCo_Hydra</race>
+        <combatPower>400</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/MisterGutsyBoss/MisterGutsyBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.5</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunShortRange</li>
+        </weaponTags>
+    </PawnKindDef>
+
+<!-- Head of Hydra -->
+    <ThingDef ParentName="RobCo_Hover">
+    <defName>RobCo_HeadOfHydra</defName>
+    <label>Head Of Hydra</label>
+    <description>This is one of many heads of the Hydra.</description>
+        <statBases>
+      <MoveSpeed>5</MoveSpeed>
+    </statBases>
+    <race>
+      <body>RobCo_Handy</body>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Eyebot_Wounded</soundWounded>
+          <soundDeath>Eyebot_Death</soundDeath>
+          <soundCall>Eyebot_Call</soundCall>
+          <soundAngry>Eyebot_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_HeadOfHydra</defName>
+    <label>Head Of Hydra</label>
+    <race>RobCo_HeadOfHydra</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>MechanoidGunSpiner</li>
+    </weaponTags>
+  </PawnKindDef>
+
+    <!-- Sheepsquatch -->
+    <ThingDef ParentName="HeavyMechanoid">
+        <defName>RobCo_Sheepsquatch</defName>
+        <label>Sheepsquatch</label>
+        <description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
+        <statBases>
+            <MoveSpeed>4.5</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RobCo_Assaultron</body>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Assaultron_Wounded</soundWounded>
+                    <soundDeath>Assaultron_Death</soundDeath>
+                    <soundCall>Assaultron_Call</soundCall>
+                    <soundAngry>Assaultron_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <baseHealthScale>4</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <PowerfocusChip>1</PowerfocusChip>
+        </killedLeavingsPlayerHostile>
+        <comps>
+            <li Class="CompProperties_TargetingBeam" />
+        </comps>
+    </ThingDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Sheepsquatch</defName>
+        <label>Sheepsquatch</label>
+        <race>RobCo_Sheepsquatch</race>
+        <combatPower>500</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>HellsphereCannonGun</li>
+        </weaponTags>
+    </PawnKindDef>
+    <!-- Deathbot -->
+    <ThingDef ParentName="SuperHeavyMechanoid">
+        <defName>RobCo_Deathbot</defName>
+        <label>Deathbot</label>
+        <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
+        <statBases>
+            <MoveSpeed>2</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RobCo_Sentrybot</body>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Sentrybot_Wounded</soundWounded>
+                    <soundDeath>Sentrybot_Death</soundDeath>
+                    <soundCall>Sentrybot_Call</soundCall>
+                    <soundAngry>Sentrybot_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <baseHealthScale>5</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <NanostructuringChip>1</NanostructuringChip>
+        </killedLeavingsPlayerHostile>
+    </ThingDef>
+</Defs>

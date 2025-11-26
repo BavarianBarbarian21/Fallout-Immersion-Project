@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
     <Defs>
+
+        <!-- Vertibot-->
+        <BossDef>
+            <defName>Vertibot</defName>
+            <kindDef>RobCo_Vertibot</kindDef>
+            <appearAfterTicks>3600000</appearAfterTicks>
+        </BossDef>
+
+        <BossgroupDef ParentName="BaseBossgroup">
+            <defName>Vertibot</defName>
+            <boss>Vertibot</boss>
+            <waves>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>1</RobCo_Eyebot>
+                        <RobCo_Protectron>2</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
+                    </escorts>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>2</RobCo_Protectron>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+                    </escorts>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>2</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>3</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>4</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>3</RobCo_Eyebot>
+                        <RobCo_Protectron>5</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>3</RobCo_Eyebot>
+                        <RobCo_Protectron>6</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>3</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>4</RobCo_Eyebot>
+                        <RobCo_Protectron>8</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>3</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>3</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>3</RobCo_MisterGutsyGunner>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+            </waves>
+            <leaderDescription>We captured the distress signal of a nearby pre-war relic. We could answer the call.</leaderDescription>
+            <rewardDef>RobCo_BrokenEyebotFrame</rewardDef>
+        </BossgroupDef>
+
         <!-- Hydra -->
         <BossDef>
             <defName>Hydra</defName>
-            <kindDef>Mech_Diabolus</kindDef>
+            <kindDef>RobCo_Hydra</kindDef>
             <appearAfterTicks>7200000</appearAfterTicks>
         </BossDef>
 
@@ -15,31 +139,31 @@
                     <!-- 0 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>3</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>3</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
                     </escorts>
                 </li>
                 <li>
                     <!-- 1 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>3</Mech_Militor>
-                        <Mech_Pikeman>4</Mech_Pikeman>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
+                        <RobCo_Eyebot>3</RobCo_Eyebot>
+                        <RobCo_Protectron>4</RobCo_Protectron>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
                     </escorts>
                 </li>
                 <li>
                     <!-- 2 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>4</Mech_Militor>
-                        <Mech_Pikeman>5</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                        <Mech_Tesseron>1</Mech_Tesseron>
+                        <RobCo_Eyebot>4</RobCo_Eyebot>
+                        <RobCo_Protectron>5</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                        <RobCo_Assaultron>1</RobCo_Assaultron>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -51,13 +175,13 @@
                     <!-- 3 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>5</Mech_Militor>
-                        <Mech_Pikeman>6</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>2</Mech_Tesseron>
+                        <RobCo_Eyebot>5</RobCo_Eyebot>
+                        <RobCo_Protectron>6</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>2</RobCo_Assaultron>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -69,14 +193,14 @@
                     <!-- 4 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>5</Mech_Militor>
-                        <Mech_Pikeman>8</Mech_Pikeman>
-                        <Mech_Scorcher>3</Mech_Scorcher>
-                        <Mech_Scyther>3</Mech_Scyther>
-                        <Mech_Lancer>3</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>5</RobCo_Eyebot>
+                        <RobCo_Protectron>8</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>3</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>3</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>3</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -88,14 +212,14 @@
                     <!-- 5 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>6</Mech_Militor>
-                        <Mech_Pikeman>10</Mech_Pikeman>
-                        <Mech_Scorcher>4</Mech_Scorcher>
-                        <Mech_Scyther>4</Mech_Scyther>
-                        <Mech_Lancer>4</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>6</RobCo_Eyebot>
+                        <RobCo_Protectron>10</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>4</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>4</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>4</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -107,14 +231,14 @@
                     <!-- 6 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>7</Mech_Militor>
-                        <Mech_Pikeman>12</Mech_Pikeman>
-                        <Mech_Scorcher>5</Mech_Scorcher>
-                        <Mech_Scyther>5</Mech_Scyther>
-                        <Mech_Lancer>5</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>7</RobCo_Eyebot>
+                        <RobCo_Protectron>12</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>5</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>5</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>5</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -126,14 +250,14 @@
                     <!-- 7 -->
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>8</Mech_Militor>
-                        <Mech_Pikeman>15</Mech_Pikeman>
-                        <Mech_Scorcher>6</Mech_Scorcher>
-                        <Mech_Scyther>6</Mech_Scyther>
-                        <Mech_Lancer>6</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>8</RobCo_Eyebot>
+                        <RobCo_Protectron>15</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>6</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>6</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>6</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -146,133 +270,10 @@
             <rewardDef>SignalChip</rewardDef>
         </BossgroupDef>
 
-        <!-- Vertibot-->
-        <BossDef>
-            <defName>Vertibot</defName>
-            <kindDef>Mech_Termite_Breach</kindDef>
-            <appearAfterTicks>3600000</appearAfterTicks>
-        </BossDef>
-
-        <BossgroupDef ParentName="BaseBossgroup">
-            <defName>Vertibot</defName>
-            <boss>Vertibot</boss>
-            <waves>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>1</Mech_Militor>
-                        <Mech_Pikeman>2</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
-                    </escorts>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>2</Mech_Pikeman>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                    </escorts>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>2</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>3</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>4</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>3</Mech_Militor>
-                        <Mech_Pikeman>5</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>3</Mech_Militor>
-                        <Mech_Pikeman>6</Mech_Pikeman>
-                        <Mech_Scorcher>3</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>4</Mech_Militor>
-                        <Mech_Pikeman>8</Mech_Pikeman>
-                        <Mech_Scorcher>3</Mech_Scorcher>
-                        <Mech_Scyther>3</Mech_Scyther>
-                        <Mech_Lancer>3</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-            </waves>
-            <leaderDescription>We captured the distress signal of a nearby pre-war relic. We could answer the call.</leaderDescription>
-            <rewardDef>BrokenEyebotFrame</rewardDef>
-        </BossgroupDef>
-
         <!-- Sheepsquatch-->
         <BossDef>
             <defName>Sheepsquatch</defName>
-            <kindDef>Mech_Warqueen</kindDef>
+            <kindDef>RobCo_Sheepsquatch</kindDef>
             <appearAfterTicks>14400000</appearAfterTicks>
         </BossDef>
 
@@ -283,34 +284,18 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>4</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>4</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
                     </escorts>
                 </li>
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>3</Mech_Militor>
-                        <Mech_Pikeman>5</Mech_Pikeman>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                    </escorts>
-                    <bossApparel>
-                        <li>
-                            <thing>Apparel_HeavyShield</thing>
-                        </li>
-                    </bossApparel>
-                </li>
-                <li>
-                    <bossCount>1</bossCount>
-                    <escorts>
-                        <Mech_Militor>4</Mech_Militor>
-                        <Mech_Pikeman>6</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                        <Mech_Tesseron>1</Mech_Tesseron>
+                        <RobCo_Eyebot>3</RobCo_Eyebot>
+                        <RobCo_Protectron>5</RobCo_Protectron>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -321,14 +306,12 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>5</Mech_Militor>
-                        <Mech_Pikeman>8</Mech_Pikeman>
-                        <Mech_Scorcher>3</Mech_Scorcher>
-                        <Mech_Scyther>3</Mech_Scyther>
-                        <Mech_Lancer>3</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>2</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>4</RobCo_Eyebot>
+                        <RobCo_Protectron>6</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                        <RobCo_Assaultron>1</RobCo_Assaultron>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -339,14 +322,14 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>6</Mech_Militor>
-                        <Mech_Pikeman>10</Mech_Pikeman>
-                        <Mech_Scorcher>4</Mech_Scorcher>
-                        <Mech_Scyther>4</Mech_Scyther>
-                        <Mech_Lancer>4</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>5</RobCo_Eyebot>
+                        <RobCo_Protectron>8</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>3</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>3</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>3</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>2</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -357,14 +340,14 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>7</Mech_Militor>
-                        <Mech_Pikeman>12</Mech_Pikeman>
-                        <Mech_Scorcher>5</Mech_Scorcher>
-                        <Mech_Scyther>5</Mech_Scyther>
-                        <Mech_Lancer>5</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>6</RobCo_Eyebot>
+                        <RobCo_Protectron>10</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>4</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>4</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>4</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -375,14 +358,14 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>8</Mech_Militor>
-                        <Mech_Pikeman>15</Mech_Pikeman>
-                        <Mech_Scorcher>6</Mech_Scorcher>
-                        <Mech_Scyther>6</Mech_Scyther>
-                        <Mech_Lancer>6</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>7</RobCo_Eyebot>
+                        <RobCo_Protectron>12</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>5</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>5</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>5</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -393,14 +376,32 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>9</Mech_Militor>
-                        <Mech_Pikeman>16</Mech_Pikeman>
-                        <Mech_Scorcher>7</Mech_Scorcher>
-                        <Mech_Scyther>7</Mech_Scyther>
-                        <Mech_Lancer>7</Mech_Lancer>
-                        <Mech_Centurion>2</Mech_Centurion>
-                        <Mech_Tesseron>4</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>8</RobCo_Eyebot>
+                        <RobCo_Protectron>15</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>6</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>6</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>6</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
+                    </escorts>
+                    <bossApparel>
+                        <li>
+                            <thing>Apparel_HeavyShield</thing>
+                        </li>
+                    </bossApparel>
+                </li>
+                <li>
+                    <bossCount>1</bossCount>
+                    <escorts>
+                        <RobCo_Eyebot>9</RobCo_Eyebot>
+                        <RobCo_Protectron>16</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>7</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>7</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>7</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>2</RobCo_Robobrain>
+                        <RobCo_Assaultron>4</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -416,7 +417,7 @@
         <!-- Deathbot-->
         <BossDef>
             <defName>Deathbot</defName>
-            <kindDef>Mech_Apocriton</kindDef>
+            <kindDef>RobCo_Deathbot</kindDef>
             <appearAfterTicks>21600000</appearAfterTicks>
         </BossDef>
 
@@ -427,9 +428,9 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>2</Mech_Militor>
-                        <Mech_Pikeman>3</Mech_Pikeman>
-                        <Mech_Scorcher>1</Mech_Scorcher>
+                        <RobCo_Eyebot>2</RobCo_Eyebot>
+                        <RobCo_Protectron>3</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -440,11 +441,11 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>3</Mech_Militor>
-                        <Mech_Pikeman>4</Mech_Pikeman>
-                        <Mech_Scyther>1</Mech_Scyther>
-                        <Mech_Lancer>1</Mech_Lancer>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>3</RobCo_Eyebot>
+                        <RobCo_Protectron>4</RobCo_Protectron>
+                        <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -455,13 +456,13 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>4</Mech_Militor>
-                        <Mech_Pikeman>5</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                        <Mech_Tesseron>1</Mech_Tesseron>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>4</RobCo_Eyebot>
+                        <RobCo_Protectron>5</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                        <RobCo_Assaultron>1</RobCo_Assaultron>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -472,15 +473,15 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>5</Mech_Militor>
-                        <Mech_Pikeman>6</Mech_Pikeman>
-                        <Mech_Scorcher>2</Mech_Scorcher>
-                        <Mech_Scyther>2</Mech_Scyther>
-                        <Mech_Lancer>2</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>2</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>5</RobCo_Eyebot>
+                        <RobCo_Protectron>6</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>2</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>2</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>2</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>2</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -491,15 +492,15 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>6</Mech_Militor>
-                        <Mech_Pikeman>10</Mech_Pikeman>
-                        <Mech_Scorcher>4</Mech_Scorcher>
-                        <Mech_Scyther>4</Mech_Scyther>
-                        <Mech_Lancer>4</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>6</RobCo_Eyebot>
+                        <RobCo_Protectron>10</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>4</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>4</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>4</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -510,15 +511,15 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>7</Mech_Militor>
-                        <Mech_Pikeman>12</Mech_Pikeman>
-                        <Mech_Scorcher>5</Mech_Scorcher>
-                        <Mech_Scyther>5</Mech_Scyther>
-                        <Mech_Lancer>5</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>7</RobCo_Eyebot>
+                        <RobCo_Protectron>12</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>5</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>5</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>5</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotChopper>1</RobCo_SentrybotChopper>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -529,15 +530,15 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>8</Mech_Militor>
-                        <Mech_Pikeman>15</Mech_Pikeman>
-                        <Mech_Scorcher>6</Mech_Scorcher>
-                        <Mech_Scyther>6</Mech_Scyther>
-                        <Mech_Lancer>6</Mech_Lancer>
-                        <Mech_Centurion>1</Mech_Centurion>
-                        <Mech_Tesseron>3</Mech_Tesseron>
-                        <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
+                        <RobCo_Eyebot>8</RobCo_Eyebot>
+                        <RobCo_Protectron>15</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>6</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>6</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>6</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>1</RobCo_Robobrain>
+                        <RobCo_Assaultron>3</RobCo_Assaultron>
+                        <RobCo_SentrybotChopper>1</RobCo_SentrybotChopper>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
                     </escorts>
                     <bossApparel>
                         <li>
@@ -548,16 +549,16 @@
                 <li>
                     <bossCount>1</bossCount>
                     <escorts>
-                        <Mech_Militor>10</Mech_Militor>
-                        <Mech_Pikeman>18</Mech_Pikeman>
-                        <Mech_Scorcher>7</Mech_Scorcher>
-                        <Mech_Scyther>7</Mech_Scyther>
-                        <Mech_Lancer>7</Mech_Lancer>
-                        <Mech_Centurion>2</Mech_Centurion>
-                        <Mech_Tesseron>5</Mech_Tesseron>
-                        <Mech_CentipedeBlaster>1</Mech_CentipedeBlaster>
-                        <Mech_CentipedeBurner>1</Mech_CentipedeBurner>
-                        <Mech_CentipedeGunner>1</Mech_CentipedeGunner>
+                        <RobCo_Eyebot>10</RobCo_Eyebot>
+                        <RobCo_Protectron>18</RobCo_Protectron>
+                        <RobCo_MisterGutsyFlamer>7</RobCo_MisterGutsyFlamer>
+                        <RobCo_MisterGutsyChopper>7</RobCo_MisterGutsyChopper>
+                        <RobCo_MisterGutsyGunner>7</RobCo_MisterGutsyGunner>
+                        <RobCo_Robobrain>2</RobCo_Robobrain>
+                        <RobCo_Assaultron>5</RobCo_Assaultron>
+                        <RobCo_SentrybotChopper>1</RobCo_SentrybotChopper>
+                        <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
+                        <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
                     </escorts>
                     <bossApparel>
                         <li>
