@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <PawnKindDef ParentName="HeavyMechanoidKind">
+  <PawnKindDef ParentName="RobCo_SentrybotKindBase">
     <defName>RobCo_Deathbot</defName>
     <label>Deathbot</label>
     <race>RobCo_Deathbot</race>
-    <combatPower>600</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/SentrybotBoss/SentrybotBoss</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>

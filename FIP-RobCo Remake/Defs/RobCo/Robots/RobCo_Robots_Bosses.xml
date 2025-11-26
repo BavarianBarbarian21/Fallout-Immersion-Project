@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- Crashed Vertibot -->
-    <ThingDef ParentName="Floating">
+    <ThingDef ParentName="RobCo_EyebotBase">
         <defName>RobCo_CrashedVertibot</defName>
         <label>Crashed Vertibot Robot</label>
         <description>This is indeed a strange Robot.</description>
@@ -25,15 +25,11 @@
             <SignalChip>1</SignalChip>
         </killedLeavingsPlayerHostile>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_CrashedVertibot</defName>
-        <label>Crashed Vertibot Robot</label>
-        <race>RobCo_CrashedVertibot</race>
+    <PawnKindDef Name="RobCo_EyebotKindBase" ParentName="LightMechanoidKind" Abstract="True">
         <combatPower>300</combatPower>
         <lifeStages>
             <li>
                 <bodyGraphicData>
-                    <texPath>RobCo/EyebotBoss/EyebotBoss</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
                     <graphicClass>Graphic_Multi</graphicClass>
                     <drawSize>1.25</drawSize>
@@ -48,8 +44,23 @@
             <li>MechanoidGunLongRange</li>
         </weaponTags>
     </PawnKindDef>
+    <PawnKindDef ParentName="RobCo_EyebotKindBase">
+        <defName>RobCo_CrashedVertibot</defName>
+        <label>Crashed Vertibot Robot</label>
+        <race>RobCo_CrashedVertibot</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/EyebotBoss/EyebotBoss</texPath>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunLongRange</li>
+        </weaponTags>
+    </PawnKindDef>
     <!-- Hydra -->
-    <ThingDef ParentName="RobCo_Hover">
+    <ThingDef ParentName="RobCo_GutsyBase">
         <defName>RobCo_Hydra</defName>
         <label>Hydra</label>
         <description>This is the Hydra, a dangerous foe of many wasteland legends.</description>
@@ -87,15 +98,11 @@
             </li>
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_Hydra</defName>
-        <label>Hydra</label>
-        <race>RobCo_Hydra</race>
+    <PawnKindDef Name="RobCo_GutsyKindBase" ParentName="LightMechanoidKind" Abstract="True">
         <combatPower>400</combatPower>
         <lifeStages>
             <li>
                 <bodyGraphicData>
-                    <texPath>RobCo/MisterGutsyBoss/MisterGutsyBoss</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
                     <graphicClass>Graphic_Multi</graphicClass>
                     <drawSize>1.5</drawSize>
@@ -110,9 +117,24 @@
             <li>MechanoidGunShortRange</li>
         </weaponTags>
     </PawnKindDef>
+    <PawnKindDef ParentName="RobCo_GutsyKindBase">
+        <defName>RobCo_Hydra</defName>
+        <label>Hydra</label>
+        <race>RobCo_Hydra</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/MisterGutsyBoss/MisterGutsyBoss</texPath>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunShortRange</li>
+        </weaponTags>
+    </PawnKindDef>
 
 <!-- Head of Hydra -->
-    <ThingDef ParentName="RobCo_Hover">
+    <ThingDef ParentName="RobCo_HandyBase">
     <defName>RobCo_HeadOfHydra</defName>
     <label>Head Of Hydra</label>
     <description>This is one of many heads of the Hydra.</description>
@@ -134,31 +156,39 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_HeadOfHydra</defName>
-    <label>Head Of Hydra</label>
-    <race>RobCo_HeadOfHydra</race>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.1</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>MechanoidGunSpiner</li>
-    </weaponTags>
-  </PawnKindDef>
+    <PawnKindDef ParentName="RobCo_GutsyKindBase">
+        <defName>RobCo_HeadOfHydra</defName>
+        <label>Head Of Hydra</label>
+        <race>RobCo_HeadOfHydra</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>MechanoidGunSpiner</li>
+        </weaponTags>
+    </PawnKindDef>
+    <PawnKindDef ParentName="RobCo_AssaultronKindBase">
+        <defName>RobCo_Sheepsquatch</defName>
+        <label>Sheepsquatch</label>
+        <race>RobCo_Sheepsquatch</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>HellsphereCannonGun</li>
+        </weaponTags>
+    </PawnKindDef>
 
     <!-- Sheepsquatch -->
-    <ThingDef ParentName="HeavyMechanoid">
+    <ThingDef ParentName="RobCo_AssaultronBase">
         <defName>RobCo_Sheepsquatch</defName>
         <label>Sheepsquatch</label>
         <description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
@@ -186,15 +216,11 @@
             <li Class="CompProperties_TargetingBeam" />
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_Sheepsquatch</defName>
-        <label>Sheepsquatch</label>
-        <race>RobCo_Sheepsquatch</race>
+    <PawnKindDef Name="RobCo_AssaultronKindBase" ParentName="HeavyMechanoidKind" Abstract="True">
         <combatPower>500</combatPower>
         <lifeStages>
             <li>
                 <bodyGraphicData>
-                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
                     <graphicClass>Graphic_Multi</graphicClass>
                     <drawSize>1.25</drawSize>
@@ -210,7 +236,7 @@
         </weaponTags>
     </PawnKindDef>
     <!-- Deathbot -->
-    <ThingDef ParentName="SuperHeavyMechanoid">
+    <ThingDef ParentName="RobCo_SentrybotBase">
         <defName>RobCo_Deathbot</defName>
         <label>Deathbot</label>
         <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>

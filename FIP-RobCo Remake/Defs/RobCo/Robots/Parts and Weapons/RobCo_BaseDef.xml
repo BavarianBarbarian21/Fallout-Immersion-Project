@@ -249,7 +249,220 @@
 		</race>
 	</ThingDef>
 	
+	<!-- KindDef -->
+	<!-- Light robot PawnKind bases -->
+	<PawnKindDef Name="RobCo_ConstructronBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_FactotronBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_UtilitronBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_CollectronBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_ProtectronBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>100</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_EyebotBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>50</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Medium robot PawnKind bases -->
+	<PawnKindDef Name="RobCo_FarmhandBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_HandyBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_NannyBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_GutsyBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>150</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Heavy robot PawnKind bases -->
+	<PawnKindDef Name="RobCo_RobobrainBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>250</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<PawnKindDef Name="RobCo_CyberdogBase" ParentName="LightMechanoidKind" Abstract="True">
+		<combatPower>200</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Sentrybot PawnKind base (centralized combatPower + lifeStages minus texPath) -->
+	<PawnKindDef Name="RobCo_SentrybotBase" ParentName="HeavyMechanoidKind" Abstract="True">
+		<combatPower>600</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
 	<!-- RecipeDef -->
+	<!-- Light -->
 	<RecipeDef Name="RobCo_LightRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<researchPrerequisite>BasicMechtech</researchPrerequisite>
 		<gestationCycles>1</gestationCycles>
@@ -281,6 +494,8 @@
 		</ingredients>
 		<displayPriority>100</displayPriority>
 	</RecipeDef>
+
+	<!-- Medium -->
 	<RecipeDef Name="RobCo_MediumRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>2</gestationCycles>
 		<researchPrerequisite>StandardMechtech</researchPrerequisite>
@@ -320,6 +535,8 @@
 		</ingredients>
 		<displayPriority>200</displayPriority>
 	</RecipeDef>
+
+	<!-- Heavy -->
 	<RecipeDef Name="RobCo_HeavyRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>4</gestationCycles>
 		<researchPrerequisite>HighMechtech</researchPrerequisite>
@@ -367,6 +584,8 @@
 		</ingredients>
 		<displayPriority>300</displayPriority>
 	</RecipeDef>
+
+	<!-- SuperHeavy -->
 	<RecipeDef Name="RobCo_SuperHeavyRecipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>12</gestationCycles>
 		<researchPrerequisite>UltraMechtech</researchPrerequisite>
@@ -414,5 +633,6 @@
 		</ingredients>
 		<displayPriority>400</displayPriority>
 	</RecipeDef>
+</RecipeDef>
 
 </Defs>
