@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- ==================== LASER WEAPONS (Type A) ==================== -->
-  <!-- Laser bullet: low damage energy projectile -->
+  <!-- ==================== LASER WEAPONS ==================== -->
+  <!-- Laser -->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_Laser</defName>
+    <defName>RobCo_Laser</defName>
     <label>laser shot</label>
     <graphicData>
       <texPath>Things/Projectile/Charge_Small</texPath>
@@ -19,9 +19,9 @@
     </projectile>
   </ThingDef>
 
-  <!-- 1: Low Beam Laser Blaster -->
+  <!-- Low Beam Laser Blaster -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_LowBeamLaserBlaster</defName>
+    <defName>RobCo_LaserLow</defName>
     <label>low beam laser blaster</label>
     <description>A basic laser weapon with minimal range and accuracy. Suitable for short-range combat.</description>
     <techLevel>Spacer</techLevel>
@@ -42,13 +42,13 @@
       <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_LowBeamLaserBlaster</li>
+      <li>RobCo_LaserLow</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Laser</defaultProjectile>
+        <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>15</range>
         <soundCast>RobCo_Laser</soundCast>
@@ -58,9 +58,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 2: High Beam Laser Blaster -->
+  <!-- High Beam Laser Blaster -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_HighBeamLaserBlaster</defName>
+    <defName>RobCo_LaserHigh</defName>
     <label>high beam laser blaster</label>
     <description>An improved laser weapon with higher velocity but limited range and accuracy.</description>
     <techLevel>Spacer</techLevel>
@@ -81,13 +81,13 @@
       <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_HighBeamLaserBlaster</li>
+      <li>RobCo_LaserHigh</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Laser</defaultProjectile>
+        <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>0.4</warmupTime>
         <range>16</range>
         <soundCast>RobCo_Laser</soundCast>
@@ -97,9 +97,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 3: Focused Beam Laser Blaster -->
+  <!-- Focused Beam Laser Blaster -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_FocusedBeamLaserBlaster</defName>
+    <defName>RobCo_LaserFocused</defName>
     <label>focused beam laser blaster</label>
     <description>A precision laser weapon with extended range and high accuracy, but slower firing rate.</description>
     <techLevel>Spacer</techLevel>
@@ -120,13 +120,13 @@
       <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_FocusedBeamLaserBlaster</li>
+      <li>RobCo_LaserFocused</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Laser</defaultProjectile>
+        <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>1.5</warmupTime>
         <range>35</range>
         <soundCast>RobCo_Laser</soundCast>
@@ -136,9 +136,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 4: Auto Beam Laser Blaster -->
+  <!-- Auto Beam Laser Blaster -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_AutoBeamLaserBlaster</defName>
+    <defName>RobCo_LaserAuto</defName>
     <label>auto beam laser blaster</label>
     <description>An automatic laser weapon with rapid-fire capability, optimized for close-range suppression.</description>
     <techLevel>Spacer</techLevel>
@@ -159,13 +159,13 @@
       <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_AutoBeamLaserBlaster</li>
+      <li>RobCo_LaserAuto</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Laser</defaultProjectile>
+        <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>14</range>
         <soundCast>RobCo_Laser</soundCast>
@@ -177,66 +177,95 @@
     </verbs>
   </ThingDef>
 
-  <!-- ==================== CHARGE LASER WEAPONS (Type B) ==================== -->
-  <!-- Charge Laser bullet: high damage energy projectile -->
+  <!-- ==================== CHARGE LASER WEAPONS ==================== -->
+  <!-- Charge Laser  -->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_ChargeLaser</defName>
+    <defName>RobCo_ChargeHigh</defName>
     <label>charge laser shot</label>
+    <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
-      <texPath>Things/Projectile/Charge_Small</texPath>
+      <texPath>Things/Projectile/HellsphereCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(1.5, 3)</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>35</damageAmountBase>
-      <speed>50</speed>
-      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <damageDef>Vaporize</damageDef>
+      <speed>75</speed>
+      <explosionRadius>4.9</explosionRadius>
+      <screenShakeFactor>1.5</screenShakeFactor>
+      <filth>Filth_BlastMark</filth>
+      <filthCount>1</filthCount>
+      <explosionSpawnsSingleFilth>true</explosionSpawnsSingleFilth>
     </projectile>
   </ThingDef>
 
-  <!-- 5: Charge Laser Blaster -->
+  <!-- Charge Laser Low -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_ChargeLaserBlaster</defName>
+    <defName>RobCo_AssaultronLow</defName>
     <label>charge laser blaster</label>
     <description>A charged energy weapon that delivers high-impact laser bolts. Requires significant charge time between shots.</description>
-    <techLevel>Spacer</techLevel>
+    <relicChance>0</relicChance>
+    <smeltable>false</smeltable>
     <graphicData>
       <texPath>RobCo/Misc/Invisible</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <tradeability>None</tradeability>
-    <destroyOnDrop>true</destroyOnDrop>
-    <relicChance>0</relicChance>
     <statBases>
-      <MarketValue>1200</MarketValue>
-      <Mass>3</Mass>
+      <WorkToMake>47000</WorkToMake>
+      <Mass>4</Mass>
       <AccuracyTouch>0.60</AccuracyTouch>
       <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
     </statBases>
-    <weaponTags>
-      <li>RobCo_Gun_ChargeLaserBlaster</li>
-    </weaponTags>
+    <techLevel>Spacer</techLevel>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Verb_ShootBeam</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_ChargeLaser</defaultProjectile>
-        <warmupTime>2.0</warmupTime>
-        <range>20</range>
-        <soundCast>Shot_HellsphereCannonGun</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>8</muzzleFlashScale>
+        <warmupTime>1.0</warmupTime>
+        <range>24.9</range>
+        <minRange>3.9</minRange>
+        <beamFullWidthRange>6.9</beamFullWidthRange>
+        <burstShotCount>5</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>6</beamWidth>
+        <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>1.5</beamMaxDeviation>
+        <beamCurvature>0.6</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0.85</beamChanceToStartFire>
+        <beamChanceToAttachFire>0.85</beamChanceToAttachFire>
+        <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
       </li>
     </verbs>
-  </ThingDef>
+    <weaponTags>
+      <li>RobCo_AssaultronLow</li>
+    </weaponTags>
+    </ThingDef>
 
-  <!-- 6: Beam Graser (copy of vanilla Gun_BeamGraser) -->
+
+  <!-- Charge Laser High -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_BeamGraser</defName>
+    <defName>RobCo_AssaultronHigh</defName>
     <label>beam graser</label>
     <description>A gamma ray laser which fires a sweeping beam. The narrow, high-energy beam can pierce thick armor and ignite targets.</description>
     <techLevel>Spacer</techLevel>
@@ -249,34 +278,64 @@
     <relicChance>0</relicChance>
     <statBases>
       <MarketValue>1400</MarketValue>
-      <Mass>4</Mass>
-      <AccuracyTouch>0.60</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <Mass>20</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_BeamGraser</li>
+      <li>RobCo_AssaultronHigh</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_ChargeLaser</defaultProjectile>
-        <warmupTime>2.5</warmupTime>
-        <range>40</range>
+        <defaultProjectile>Bullet_HellsphereCannonGun</defaultProjectile>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
         <soundCast>Shot_HellsphereCannonGun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>10</muzzleFlashScale>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>1</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
       </li>
     </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
   </ThingDef>
 
-  <!-- ==================== NAPALM FLAME WEAPONS (Type C) ==================== -->
-  <!-- Napalm bullet: incendiary projectile -->
+  <!-- ==================== NAPALM FLAME WEAPONS ==================== -->
+  <!-- Napalm -->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_Napalm</defName>
+    <defName>RobCo_Napalm</defName>
     <label>napalm flame</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
@@ -296,9 +355,9 @@
     </projectile>
   </ThingDef>
 
-  <!-- 7: Napalm Flamer -->
+  <!-- Napalm Flamer -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_NapalmFlamer</defName>
+    <defName>RobCo_NapalmFlamer</defName>
     <label>napalm flamer</label>
     <description>A compact flame projector that sprays incendiary napalm. Effective for area denial and setting fires.</description>
     <techLevel>Spacer</techLevel>
@@ -319,13 +378,13 @@
       <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_NapalmFlamer</li>
+      <li>RobCo_NapalmFlamer</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Napalm</defaultProjectile>
+        <defaultProjectile>RobCo_Napalm</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>18</range>
         <soundCast>Gun_Flamethrower</soundCast>
@@ -335,10 +394,10 @@
     </verbs>
   </ThingDef>
 
-  <!-- ==================== SONIC WEAPONS (Type D) ==================== -->
-  <!-- Sonic bullet: low damage EMP projectile -->
+  <!-- ==================== SONIC WEAPONS ==================== -->
+  <!-- Sonic Wave-->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_Sonic</defName>
+    <defName>RobCo_Sonic</defName>
     <label>sonic pulse</label>
     <graphicData>
       <texPath>Things/Projectile/Charge_Small</texPath>
@@ -354,9 +413,9 @@
     </projectile>
   </ThingDef>
 
-  <!-- 8: Sonic Bark Emitter -->
+  <!-- Sonic Bark Emitter -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_SonicBarkEmitter</defName>
+    <defName>RobCo_SonicBark</defName>
     <label>sonic bark emitter</label>
     <description>An acoustic weapon that emits high-frequency sonic pulses. Effective at range, particularly against electronic systems.</description>
     <techLevel>Spacer</techLevel>
@@ -377,13 +436,13 @@
       <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_SonicBarkEmitter</li>
+      <li>RobCo_SonicBark</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Sonic</defaultProjectile>
+        <defaultProjectile>RobCo_Sonic</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>32</range>
         <soundCast>MeleeHitBlunt</soundCast>
@@ -393,9 +452,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 9: Sonic Stinger -->
+  <!-- Sonic Stinger -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_SonicStinger</defName>
+    <defName>RobCo_SonicStinger</defName>
     <label>sonic stinger</label>
     <description>A rapid-fire sonic weapon designed for close-range combat. Delivers rapid pulses of acoustic disruption.</description>
     <techLevel>Spacer</techLevel>
@@ -416,13 +475,13 @@
       <RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_SonicStinger</li>
+      <li>RobCo_SonicStinger</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Sonic</defaultProjectile>
+        <defaultProjectile>RobCo_Sonic</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>14</range>
         <soundCast>MeleeHitBlunt</soundCast>
@@ -434,10 +493,10 @@
     </verbs>
   </ThingDef>
 
-  <!-- ==================== SHOTGUN WEAPONS (Type E) ==================== -->
-  <!-- Shotgun bullet: kinetic projectile -->
+  <!-- ==================== SHOTGUN WEAPONS ==================== -->
+  <!-- Shotgun bullet -->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_Shotgun</defName>
+    <defName>RobCo_Shell</defName>
     <label>shotgun blast</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shell</texPath>
@@ -451,9 +510,9 @@
     </projectile>
   </ThingDef>
 
-  <!-- 10: Shotgun -->
+  <!-- Shotgun -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_Shotgun</defName>
+    <defName>RobCo_ShellShotgun</defName>
     <label>shotgun</label>
     <description>A compact automated shotgun for close-quarters combat. Fires multiple pellets per round with devastating effect at short range.</description>
     <techLevel>Spacer</techLevel>
@@ -474,13 +533,13 @@
       <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_Shotgun</li>
+      <li>RobCo_ShellShotgun</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Shotgun</defaultProjectile>
+        <defaultProjectile>RobCo_Shotgun</defaultProjectile>
         <warmupTime>1.0</warmupTime>
         <range>17</range>
         <burstShotCount>2</burstShotCount>
@@ -493,9 +552,9 @@
   </ThingDef>
 
   <!-- ==================== MELEE WEAPONS ==================== -->
-  <!-- 11: Sawblade (copy of MeleeWeapon_BreachAxe but lower damage, faster speed) -->
+  <!-- Sawblade -->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp">
-    <defName>RobCo_MeleeWeapon_Sawblade</defName>
+    <defName>RobCo_Sawblade</defName>
     <label>sawblade</label>
     <description>A rotating saw blade mounted on a mechanical arm. Lower damage than traditional melee weapons but spins at high speed for rapid strikes.</description>
     <graphicData>
@@ -510,12 +569,13 @@
       <MarketValue>800</MarketValue>
       <Mass>1.5</Mass>
     </statBases>
+    <weaponTag>RobCo_Sawblade</weaponTag>
   </ThingDef>
 
   <!-- ==================== SENTRYBOT WEAPONS ==================== -->
-  <!-- Rocket bullet for Sentry Rocket Launcher -->
+  <!-- Rocket -->
   <ThingDef ParentName="BaseBullet">
-    <defName>RobCo_Bullet_SentryRocket</defName>
+    <defName>RobCo_SentryRocket</defName>
     <label>sentry rocket</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shell</texPath>
@@ -532,9 +592,9 @@
     </projectile>
   </ThingDef>
 
-  <!-- 12: Sentry Rocket Launcher -->
+  <!-- Sentry Rocket Launcher -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_SentryRocketLauncher</defName>
+    <defName>RobCo_SentryRocketLauncher</defName>
     <label>sentry rocket launcher</label>
     <description>A heavy rocket launcher designed for sentrybot emplacements. Fires three rockets in rapid succession with modest accuracy and excellent building damage.</description>
     <techLevel>Spacer</techLevel>
@@ -555,13 +615,13 @@
       <RangedWeapon_Cooldown>8.0</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Gun_SentryRocketLauncher</li>
+      <li>RobCo_SentryRocketLauncher</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_SentryRocket</defaultProjectile>
+        <defaultProjectile>RobCo_SentryRocket</defaultProjectile>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <forcedMissRadius>2.0</forcedMissRadius>
         <warmupTime>1.5</warmupTime>
@@ -579,9 +639,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 13: Sentry Incinerator (copy of Gun_InfernoCannon) -->
+  <!-- Sentry Incinerator -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_SentryIncinerator</defName>
+    <defName>RobCo_SentryIncinerator</defName>
     <label>sentry incinerator</label>
     <description>A heavy incinerator cannon mounted on sentrybot frames. Launches incendiary warheads for area denial and structure destruction.</description>
     <techLevel>Spacer</techLevel>
@@ -602,13 +662,13 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <weaponTags>
-      <li>RobCo_Gun_SentryIncinerator</li>
+      <li>RobCo_SentryIncinerator</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Napalm</defaultProjectile>
+        <defaultProjectile>RobCo_Napalm</defaultProjectile>
         <warmupTime>1.2</warmupTime>
         <range>22</range>
         <soundCast>Gun_Flamethrower</soundCast>
@@ -618,9 +678,9 @@
     </verbs>
   </ThingDef>
 
-  <!-- 14: Sentry Minigun (copy of Gun_ChargeBlasterHeavy) -->
+  <!-- Sentry Minigun -->
   <ThingDef ParentName="BaseGun">
-    <defName>RobCo_Gun_SentryMinigun</defName>
+    <defName>RobCo_SentryMinigun</defName>
     <label>sentry minigun</label>
     <description>A heavy pulse-charged minigun mounted on sentrybot emplacements. Delivers devastating suppressive fire with extended burst capability.</description>
     <techLevel>Spacer</techLevel>
@@ -644,13 +704,13 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <weaponTags>
-      <li>RobCo_Gun_SentryMinigun</li>
+      <li>RobCo_SentryMinigun</li>
     </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Bullet_Laser</defaultProjectile>
+        <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>19</range>
         <soundCast>MachineGunA</soundCast>
