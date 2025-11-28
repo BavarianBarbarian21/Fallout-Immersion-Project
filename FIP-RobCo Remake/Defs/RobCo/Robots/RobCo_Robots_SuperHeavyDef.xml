@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  <PawnKindDef ParentName="RobCo_SentrybotKindBase">
-    <defName>RobCo_Deathbot</defName>
-    <label>Deathbot</label>
-    <race>RobCo_Deathbot</race>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/SentrybotBoss/SentrybotBoss</texPath>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_Gun_SentryRocketLauncher</li>
-      <li>RobCo_Gun_SentryIncinerator</li>
-      <li>RobCo_Gun_SentryMinigun</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <!-- Sentrybot Siege (CentipedeBlaster) -->
+  <!-- Sentrybot Siege -->
   <ThingDef ParentName="RobCo_SentrybotBase">
     <defName>RobCo_SentrybotChopper</defName>
     <label>Sentrybot Siege</label>
-    <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
+    <description>A walking tank bristling with missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
   </ThingDef>
 
   <PawnKindDef ParentName="HeavyMechanoidKind">
@@ -58,7 +39,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>RobCo_Gun_SentryRocketLauncher</li>
+      <li>RobCo_SentryRocketLauncher</li>
     </weaponTags>
   </PawnKindDef>
 
@@ -113,7 +94,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>RobCo_Gun_SentryIncinerator</li>
+      <li>RobCo_SentryIncinerator</li>
     </weaponTags>
   </PawnKindDef>
 
@@ -168,7 +149,7 @@
       </li>
     </lifeStages>
     <weaponTags>
-      <li>RobCo_Gun_SentryMinigun</li>
+      <li>RobCo_SentryMinigun</li>
     </weaponTags>
   </PawnKindDef>
 

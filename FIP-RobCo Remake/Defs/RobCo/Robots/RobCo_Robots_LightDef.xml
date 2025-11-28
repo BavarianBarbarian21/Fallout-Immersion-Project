@@ -12,22 +12,30 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_ConstructronKindBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Constructron</defName>
     <label>Constructron</label>
     <race>RobCo_Constructron</race>
+    <combatPower>10</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Utilitron/Utilitron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
     <weaponTags>
       <li>RobCo_LaserLow</li>
     </weaponTags>
-  </PawnKindDef>
-
+  </PawnKindDef>  
+  
   <RecipeDef ParentName="RobCo_LightRecipe">
     <defName>RobCo_Constructron</defName>
     <label>craft Constructron</label>
@@ -54,14 +62,22 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_FactotronKindBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Factotron</defName>
     <label>Factotron</label>
     <race>RobCo_Factotron</race>
+    <combatPower>10</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Collectron/Collectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -94,14 +110,22 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_UtilitronKindBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Utilitron</defName>
     <label>Utilitron</label>
     <race>RobCo_Utilitron</race>
+    <combatPower>10</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Utilitron/Utilitron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -123,40 +147,34 @@
   </RecipeDef>
 
   <!-- RobCo Collectron -->
-  <ThingDef ParentName="LightMechanoid">
+  <ThingDef ParentName="RobCo_ProtectronBase">
     <defName>RobCo_Collectron</defName>
     <label>Collectron</label>
     <description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
-    <statBases>
-      <MoveSpeed>2</MoveSpeed>
-    </statBases>
     <race>
-      <body>RobCo_Protectron</body>
       <mechEnabledWorkTypes>
         <li>Hauling</li>
         <li>PlantCutting</li>
       </mechEnabledWorkTypes>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Protectron_Wounded</soundWounded>
-          <soundDeath>Protectron_Death</soundDeath>
-          <soundCall>Protectron_Call</soundCall>
-          <soundAngry>Protectron_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_CollectronKindBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Collectron</defName>
     <label>Collectron</label>
     <race>RobCo_Collectron</race>
+    <combatPower>10</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Collectron/Collectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -196,19 +214,34 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_ProtectronKindBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Protectron</defName>
     <label>Protectron</label>
     <race>RobCo_Protectron</race>
+    <combatPower>100</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Protectron/Protectron</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -248,19 +281,34 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_EyebotBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_Eyebot</defName>
     <label>Eyebot</label>
     <race>RobCo_Eyebot</race>
+    <combatPower>50</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/Eyebot/Eyebot</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/EyebotAncient/EyebotAncient</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -288,14 +336,22 @@
     <description>A hardened military variant of the Eyebot: thicker armor, heavier gun, and advanced comms gear.</description>
   </ThingDef>
 
-  <PawnKindDef ParentName="RobCo_EyebotBase">
+  <PawnKindDef ParentName="LightMechanoidKind">
     <defName>RobCo_EyebotDuraframe</defName>
     <label>Eyebot Duraframe</label>
     <race>RobCo_EyebotDuraframe</race>
+    <combatPower>50</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>RobCo/EyebotDuraframe/EyebotDuraframe</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
         </bodyGraphicData>
       </li>
     </lifeStages>

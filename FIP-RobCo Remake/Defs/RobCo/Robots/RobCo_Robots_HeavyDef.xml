@@ -23,19 +23,34 @@
             </li>
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="RobCo_RobobrainKindBase">
+    <PawnKindDef ParentName="LightMechanoidKind">
         <defName>RobCo_Robobrain</defName>
         <label>Robobrain</label>
         <race>RobCo_Robobrain</race>
+        <combatPower>250</combatPower>
         <lifeStages>
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/Robobrain/Robobrain</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
                 </bodyGraphicData>
             </li>
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
                 </bodyGraphicData>
             </li>
         </lifeStages>
@@ -60,10 +75,11 @@
         <label>Cyberdog</label>
         <description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
     </ThingDef>
-    <PawnKindDef ParentName="RobCo_CyberdogKindBase">
+    <PawnKindDef ParentName="LightMechanoidKind">
         <defName>RobCo_Cyberdog</defName>
         <label>Cyberdog</label>
         <race>RobCo_Cyberdog</race>
+        <combatPower>200</combatPower>
         <alternateGraphicChance>0.25</alternateGraphicChance>
         <alternateGraphics>
             <li>
@@ -77,6 +93,13 @@
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/Cyberdog/Cyberdog</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
                 </bodyGraphicData>
             </li>
         </lifeStages>
@@ -129,7 +152,7 @@
             <li Class="CompProperties_TargetingBeam" />
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="RobCo_AssaultronKindBase">
+    <PawnKindDef ParentName="HeavyMechanoidKind">
         <defName>RobCo_Assaultron</defName>
         <label>Assaultron</label>
         <race>RobCo_Assaultron</race>
@@ -137,16 +160,30 @@
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/Assaultron/Assaultron</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
                 </bodyGraphicData>
             </li>
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
                 </bodyGraphicData>
             </li>
         </lifeStages>
         <weaponTags>
-            <li>RobCo_Gun_AssaultronLow</li>
+            <li>RobCo_AssaultronLow</li>
         </weaponTags>
     </PawnKindDef>
     <RecipeDef ParentName="RobCo_HeavyRecipe">

@@ -265,4 +265,30 @@
             <NanostructuringChip>1</NanostructuringChip>
         </killedLeavingsPlayerHostile>
     </ThingDef>
+
+      <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_Deathbot</defName>
+    <label>Deathbot</label>
+    <race>RobCo_Deathbot</race>
+    <combatPower>600</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/SentrybotBoss/SentrybotBoss</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_SentryRocketLauncher</li>
+      <li>RobCo_SentryIncinerator</li>
+      <li>RobCo_SentryMinigun</li>
+    </weaponTags>
+  </PawnKindDef>
 </Defs>

@@ -721,5 +721,123 @@
       </li>
     </verbs>
   </ThingDef>
+  
+  <!-- Gutsy Array: combined shotgun + burner + ripper tool -->
+  <ThingDef ParentName="BaseGun">
+    <defName>RobCo_GutsyArray</defName>
+    <label>gutsy array</label>
+    <description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in bioferrite burner and a reinforced ripper tool for close work.</description>
+    <techLevel>Spacer</techLevel>
+    <researchPrerequisite>StandardMechtech</researchPrerequisite>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_ShellShotgun</li>
+      <li>RobCo_NapalmFlamer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Shotgun</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>17</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Interact_Rifle</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>ripper</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <chanceFactor>1</chanceFactor>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>RobCo_GutsyBurner</abilityDef>
+        <maxCharges>2</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>burner charge</chargeNoun>
+        <ammoDef>Bioferrite</ammoDef>
+        <ammoCountPerCharge>10</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Biocodable"/>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>RobCo_GutsyBurner</defName>
+    <label>gutsy burner</label>
+    <description>Expends a bioferrite charge to spray an incendiary burst similar to specialist burner units.</description>
+    <iconPath>UI/Abilities/Burner</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>9.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <flammabilityAttachFireChanceCurve>
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>9.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>12</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="CompProperties_AbilityBurner">
+        <numStreams>12</numStreams>
+        <range>11</range>
+        <coneSizeDegrees>8</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>5</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
 
 </Defs>
