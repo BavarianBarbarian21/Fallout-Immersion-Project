@@ -159,7 +159,7 @@
 
   <!-- Mister Gutsy Gunner -->
   <ThingDef ParentName="RobCo_GutsyBase">
-    <defName>RobCo_MisterGutsyGunner</defName>
+    <defName>RobCo_MisterGutsy</defName>
     <label>Mister Gutsy Gunner</label>
     <description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry and a drill-sergeant personality.</description>
     <race>
@@ -177,9 +177,9 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyGunner</defName>
+    <defName>RobCo_MisterGutsy</defName>
     <label>Mister Gutsy Gunner</label>
-    <race>RobCo_MisterGutsyGunner</race>
+    <race>RobCo_MisterGutsy</race>
     <combatPower>150</combatPower>
     <lifeStages>
       <li>
@@ -213,160 +213,14 @@
   </PawnKindDef>
 
   <RecipeDef ParentName="RobCo_Handy">
-    <defName>RobCo_MisterGutsyGunner</defName>
+    <defName>RobCo_MisterGutsy</defName>
     <label>craft Mister Gutsy Gunner</label>
     <description>Craft a RobCo Mister Gutsy Gunner.</description>
     <products>
-      <RobCo_MisterGutsyGunner>1</RobCo_MisterGutsyGunner>
+      <RobCo_MisterGutsy>1</RobCo_MisterGutsy>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>RobCo_MisterGutsyGunner</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
-
-  <!-- Mister Gutsy Flamer -->
-  <ThingDef ParentName="RobCo_GutsyBase">
-    <defName>RobCo_MisterGutsyFlamer</defName>
-    <label>Mister Gutsy Flamer</label>
-    <description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry and a drill-sergeant personality.</description>
-    <race>
-    <lifeStageAges>
-      <li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>Gutsy_Wounded</soundWounded>
-						<soundDeath>Gutsy_Death</soundDeath>
-						<soundCall>Gutsy_Call</soundCall>
-						<soundAngry>Gutsy_Angry</soundAngry>
-					</li>
-    </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyFlamer</defName>
-    <label>Mister Gutsy Flamer</label>
-    <race>RobCo_MisterGutsyFlamer</race>
-    <combatPower>150</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/MisterGutsy/MisterGutsy</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/MisterGutsyAncient/MisterGutsyAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_NapalmFlamer</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="RobCo_Handy">
-    <defName>RobCo_MisterGutsyFlamer</defName>
-    <label>craft Mister Gutsy Flamer</label>
-    <description>Craft a RobCo Mister Gutsy Flamer.</description>
-    <products>
-      <RobCo_MisterGutsyFlamer>1</RobCo_MisterGutsyFlamer>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_MisterGutsyFlamer</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
-
-  <!-- Mister Gutsy Chopper -->
-  <ThingDef ParentName="RobCo_GutsyBase">
-    <defName>RobCo_MisterGutsyChopper</defName>
-    <label>Mister Gutsy Chopper</label>
-    <description>Military-grade Handy, loudmouthed and merciless, with plasma weaponry and a drill-sergeant personality.</description>
-    <tools>
-      <li>
-        <label>sawblade</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>10</power>
-        <cooldownTime>2</cooldownTime>
-        <chanceFactor>1</chanceFactor>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-    </tools>
-    <race>
-    <lifeStageAges>
-      <li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>Gutsy_Wounded</soundWounded>
-						<soundDeath>Gutsy_Death</soundDeath>
-						<soundCall>Gutsy_Call</soundCall>
-						<soundAngry>Gutsy_Angry</soundAngry>
-					</li>
-    </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>RobCo_MisterGutsyChopper</defName>
-    <label>Mister Gutsy Chopper</label>
-    <race>RobCo_MisterGutsyChopper</race>
-    <combatPower>150</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/MisterGutsy/MisterGutsy</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/MisterGutsyAncient/MisterGutsyAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_Sawblade</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="RobCo_Handy">
-    <defName>RobCo_MisterGutsyChopper</defName>
-    <label>craft Mister Gutsy Chopper</label>
-    <description>Craft a RobCo Mister Gutsy Chopper.</description>
-    <products>
-      <RobCo_MisterGutsyChopper>1</RobCo_MisterGutsyChopper>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_MisterGutsyChopper</ThingDef>
+      <ThingDef>RobCo_MisterGutsy</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 

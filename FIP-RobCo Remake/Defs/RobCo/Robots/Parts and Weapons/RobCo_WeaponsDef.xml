@@ -552,40 +552,6 @@
     </verbs>
   </ThingDef>
 
-  <!-- ==================== MELEE WEAPONS ==================== -->
-  <!-- Sawblade -->
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
-    <defName>RobCo_Sawblade</defName>
-    <label>sawblade</label>
-    <description>A rotating saw blade mounted on a mechanical arm. Lower damage than traditional melee weapons but spins at high speed for rapid strikes.</description>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <techLevel>Spacer</techLevel>
-    <tradeability>None</tradeability>
-    <destroyOnDrop>true</destroyOnDrop>
-    <relicChance>0</relicChance>
-    <statBases>
-      <MarketValue>800</MarketValue>
-      <Mass>1.5</Mass>
-    </statBases>
-    <weaponTags>
-      <li>RobCo_Sawblade</li>
-    </weaponTags>
-    <recipeMaker Inherit="False" IsNull="True" />
-    <tools>
-      <li>
-        <label>blade</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>12</power>
-        <cooldownTime>1.8</cooldownTime>
-      </li>
-    </tools>
-  </ThingDef>
-
   <!-- ==================== SENTRYBOT WEAPONS ==================== -->
   <!-- Rocket -->
   <ThingDef ParentName="BaseBullet">
@@ -737,11 +703,11 @@
     </verbs>
   </ThingDef>
   
-  <!-- Gutsy Array: combined shotgun + burner + ripper tool -->
+  <!-- Gutsy Array -->
   <ThingDef ParentName="BaseGun">
     <defName>RobCo_GutsyArray</defName>
     <label>gutsy array</label>
-    <description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in bioferrite burner and a reinforced ripper tool for close work.</description>
+    <description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in napalm burner and a reinforced ripper tool for close work.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>RobCo/Misc/Invisible</texPath>
@@ -760,8 +726,7 @@
       <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_ShellShotgun</li>
-      <li>RobCo_NapalmFlamer</li>
+      <li>RobCo_Gutsy</li>
     </weaponTags>
     <verbs>
       <li>
