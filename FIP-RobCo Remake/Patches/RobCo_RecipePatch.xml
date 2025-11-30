@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
+<Patch>
 
   <!-- Add Light and Medium tier robots to MechGestator -->
-  <ThingDef>
-    <defName>MechGestator</defName>
-    <recipes>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName='MechGestator']/recipes</xpath>
+    <value>
       <!-- Light tier recipes -->
       <li>RobCo_Constructron</li>
       <li>RobCo_Factotron</li>
@@ -20,13 +20,13 @@
       <li>RobCo_MisterGutsyGunner</li>
       <li>RobCo_MisterGutsyFlamer</li>
       <li>RobCo_MisterGutsyChopper</li>
-    </recipes>
-  </ThingDef>
+    </value>
+  </Operation>
 
   <!-- Add Heavy and SuperHeavy tier robots to LargeMechGestator -->
-  <ThingDef>
-    <defName>LargeMechGestator</defName>
-    <recipes>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName='LargeMechGestator']/recipes</xpath>
+    <value>
       <!-- Heavy tier recipes -->
       <li>RobCo_Robobrain</li>
       <li>RobCo_Cyberdog</li>
@@ -35,7 +35,7 @@
       <li>RobCo_SentrybotChopper</li>
       <li>RobCo_SentrybotFlamer</li>
       <li>RobCo_SentrybotGunner</li>
-    </recipes>
-  </ThingDef>
+    </value>
+  </Operation>
 
-</Defs>
+</Patch>

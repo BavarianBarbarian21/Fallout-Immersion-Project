@@ -90,11 +90,6 @@
 			<label>RobCo Antenna</label>
 		</value>
 	</Operation>
-	<!-- Remove CompProperties_UseEffectDestroySelf from MechbandAntenna -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>
-			/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps/li[@Class="CompProperties_UseEffectDestroySelf"]</xpath>
-	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
 		<value>
@@ -116,11 +111,6 @@
 		<value>
 			<label>RobCo Dish</label>
 		</value>
-	</Operation>
-	<!-- Remove CompProperties_UseEffectDestroySelf from MechbandDish -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>
-			/Defs/ThingDef[defName="MechbandDish"]/comps/li[@Class="CompProperties_UseEffectDestroySelf"]</xpath>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="MechbandDish"]/description</xpath>

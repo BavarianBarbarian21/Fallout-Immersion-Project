@@ -499,7 +499,7 @@
     <defName>RobCo_Shell</defName>
     <label>shotgun blast</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Shell</texPath>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -539,7 +539,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Shotgun</defaultProjectile>
+        <defaultProjectile>RobCo_Shell</defaultProjectile>
         <warmupTime>1.0</warmupTime>
         <range>17</range>
         <burstShotCount>2</burstShotCount>
@@ -569,7 +569,9 @@
       <MarketValue>800</MarketValue>
       <Mass>1.5</Mass>
     </statBases>
-    <weaponTag>RobCo_Sawblade</weaponTag>
+    <weaponTags>
+      <li>RobCo_Sawblade</li>
+    </weaponTags>
   </ThingDef>
 
   <!-- ==================== SENTRYBOT WEAPONS ==================== -->
@@ -578,7 +580,7 @@
     <defName>RobCo_SentryRocket</defName>
     <label>sentry rocket</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Shell</texPath>
+      <texPath>Things/Projectile/ShellHighExplosive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
@@ -623,7 +625,6 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>RobCo_SentryRocket</defaultProjectile>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <forcedMissRadius>2.0</forcedMissRadius>
         <warmupTime>1.5</warmupTime>
         <range>28</range>
         <burstShotCount>3</burstShotCount>
@@ -728,7 +729,6 @@
     <label>gutsy array</label>
     <description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in bioferrite burner and a reinforced ripper tool for close work.</description>
     <techLevel>Spacer</techLevel>
-    <researchPrerequisite>StandardMechtech</researchPrerequisite>
     <graphicData>
       <texPath>RobCo/Misc/Invisible</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -753,7 +753,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>RobCo_Shotgun</defaultProjectile>
+        <defaultProjectile>RobCo_Shell</defaultProjectile>
         <warmupTime>1.0</warmupTime>
         <range>17</range>
         <burstShotCount>2</burstShotCount>

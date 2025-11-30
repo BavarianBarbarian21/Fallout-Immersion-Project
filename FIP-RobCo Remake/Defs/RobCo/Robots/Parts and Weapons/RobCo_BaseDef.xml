@@ -89,7 +89,7 @@
 			</race>
 		</ThingDef>
 		<!-- Nanny Base -->
-		<ThingDef Name="RobCo_HandyBase" ParentName="RobCo_BaseRobot" Abstract="True">
+		<ThingDef Name="RobCo_NannyBase" ParentName="RobCo_BaseRobot" Abstract="True">
 			<statBases>
 				<MoveSpeed>5</MoveSpeed>
 			</statBases>
@@ -281,6 +281,40 @@
 			</ingredients>
 			<displayPriority>100</displayPriority>
 		</RecipeDef>
+
+		<!-- Eyebot -->
+		<RecipeDef Name="RobCo_Eyebot" ParentName="BaseMechanoidRecipe" Abstract="True">
+			<researchPrerequisite>BasicMechtech</researchPrerequisite>
+			<gestationCycles>1</gestationCycles>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>100</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentIndustrial</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>RobCo_BrokenEyebotFrame</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+			<displayPriority>100</displayPriority>
+		</RecipeDef>
+
 		<!-- Handy -->
 		<RecipeDef Name="RobCo_Handy" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<gestationCycles>2</gestationCycles>
@@ -321,6 +355,7 @@
 			</ingredients>
 			<displayPriority>200</displayPriority>
 		</RecipeDef>
+
 		<!-- Assaultron -->
 		<RecipeDef Name="RobCo_Assaultron" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<gestationCycles>4</gestationCycles>
@@ -369,6 +404,7 @@
 			</ingredients>
 			<displayPriority>300</displayPriority>
 		</RecipeDef>
+
 		<!-- Sentrybot -->
 		<RecipeDef Name="RobCo_Sentrybot" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<gestationCycles>12</gestationCycles>

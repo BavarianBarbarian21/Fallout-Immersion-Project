@@ -23,6 +23,7 @@
             </li>
         </comps>
     </ThingDef>
+
     <PawnKindDef ParentName="LightMechanoidKind">
         <defName>RobCo_Robobrain</defName>
         <label>Robobrain</label>
@@ -58,7 +59,8 @@
             <li>RobCo_LaserAuto</li>
         </weaponTags>
     </PawnKindDef>
-    <RecipeDef ParentName="RobCo_HeavyRecipe">
+    
+    <RecipeDef ParentName="RobCo_Assaultron">
         <defName>RobCo_Robobrain</defName>
         <label>craft Robobrain</label>
         <description>Craft an Robobrain.</description>
@@ -69,12 +71,14 @@
             <ThingDef>RobCo_Robobrain</ThingDef>
         </descriptionHyperlinks>
     </RecipeDef>
+
     <!-- Cyberdog -->
     <ThingDef ParentName="RobCo_CyberdogBase">
         <defName>RobCo_Cyberdog</defName>
         <label>Cyberdog</label>
         <description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
     </ThingDef>
+    
     <PawnKindDef ParentName="LightMechanoidKind">
         <defName>RobCo_Cyberdog</defName>
         <label>Cyberdog</label>
@@ -107,7 +111,8 @@
             <li>RobCo_SonicBark</li>
         </weaponTags>
     </PawnKindDef>
-    <RecipeDef ParentName="RobCo_HeavyRecipe">
+
+    <RecipeDef ParentName="RobCo_Assaultron">
         <defName>RobCo_Cyberdog</defName>
         <label>craft Cyberdog</label>
         <description>Craft an Eyebot.</description>
@@ -118,6 +123,7 @@
             <ThingDef>RobCo_Cyberdog</ThingDef>
         </descriptionHyperlinks>
     </RecipeDef>
+
     <!-- Assaultron -->
     <ThingDef ParentName="HeavyMechanoid">
         <defName>RobCo_Assaultron</defName>
@@ -152,6 +158,7 @@
             <li Class="CompProperties_TargetingBeam" />
         </comps>
     </ThingDef>
+
     <PawnKindDef ParentName="HeavyMechanoidKind">
         <defName>RobCo_Assaultron</defName>
         <label>Assaultron</label>
@@ -186,7 +193,8 @@
             <li>RobCo_AssaultronLow</li>
         </weaponTags>
     </PawnKindDef>
-    <RecipeDef ParentName="RobCo_HeavyRecipe">
+
+    <RecipeDef ParentName="RobCo_Assaultron">
         <defName>RobCo_Assaultron</defName>
         <label>craft Assaultron</label>
         <description>Craft an Assaultron.</description>
