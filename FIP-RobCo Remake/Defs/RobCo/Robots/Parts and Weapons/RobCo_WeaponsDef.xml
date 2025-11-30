@@ -387,9 +387,10 @@
         <defaultProjectile>RobCo_Napalm</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>18</range>
-        <soundCast>Gun_Flamethrower</soundCast>
+        <soundCast>FireSpew_Resolve</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
+        <forcedMissRadius>1.9</forcedMissRadius>
       </li>
     </verbs>
   </ThingDef>
@@ -445,7 +446,7 @@
         <defaultProjectile>RobCo_Sonic</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>32</range>
-        <soundCast>MeleeHitBlunt</soundCast>
+        <soundCast>SonicBark</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>4</muzzleFlashScale>
       </li>
@@ -484,7 +485,7 @@
         <defaultProjectile>RobCo_Sonic</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>14</range>
-        <soundCast>MeleeHitBlunt</soundCast>
+        <soundCast>SonicBark</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>3</muzzleFlashScale>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
@@ -572,6 +573,17 @@
     <weaponTags>
       <li>RobCo_Sawblade</li>
     </weaponTags>
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
   </ThingDef>
 
   <!-- ==================== SENTRYBOT WEAPONS ==================== -->
@@ -636,6 +648,7 @@
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
         <noiseRadius>4</noiseRadius>
+        <forcedMissRadius>1.9</forcedMissRadius>
       </li>
     </verbs>
   </ThingDef>
@@ -672,9 +685,10 @@
         <defaultProjectile>RobCo_Napalm</defaultProjectile>
         <warmupTime>1.2</warmupTime>
         <range>22</range>
-        <soundCast>Gun_Flamethrower</soundCast>
+        <soundCast>FireSpew_Resolve</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
+        <forcedMissRadius>1.9</forcedMissRadius>
       </li>
     </verbs>
   </ThingDef>
@@ -714,7 +728,7 @@
         <defaultProjectile>RobCo_Laser</defaultProjectile>
         <warmupTime>0.8</warmupTime>
         <range>19</range>
-        <soundCast>MachineGunA</soundCast>
+        <soundCast>Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
