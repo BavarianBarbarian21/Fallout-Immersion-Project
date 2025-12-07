@@ -2,9 +2,9 @@
 <Defs>
     <!-- Crashed Vertibot -->
     <ThingDef ParentName="RobCo_EyebotBase">
-        <defName>RobCo_CrashedVertibot</defName>
-        <label>Crashed Vertibot Robot</label>
-        <description>This is indeed a strange Robot.</description>
+        <defName>RobCo_EyebotCrashed</defName>
+        <label>Crashed Vertibird Robot</label>
+        <description>This is a strange Robot, it seems to collect data and send them... somewhere.</description>
         <statBases>
             <MoveSpeed>2</MoveSpeed>
         </statBases>
@@ -14,9 +14,9 @@
     </ThingDef>
 
     <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_CrashedVertibot</defName>
-        <label>Crashed Vertibot Robot</label>
-        <race>RobCo_CrashedVertibot</race>
+        <defName>RobCo_EyebotCrashed</defName>
+        <label>Crashed Vertibird Robot</label>
+        <race>RobCo_EyebotCrashed</race>
         <combatPower>300</combatPower>
         <lifeStages>
             <li>
@@ -40,9 +40,9 @@
 
     <!-- Hydra -->
     <ThingDef ParentName="RobCo_GutsyBase">
-        <defName>RobCo_Hydra</defName>
+        <defName>RobCo_GutsyHydra</defName>
         <label>Hydra</label>
-        <description>This is the Hydra, a dangerous foe of many wasteland legends.</description>
+        <description>This is the Hydra, a dangerous foe of many wasteland legends. They say when you slice off one of its eyes two more grow back.</description>
             <statBases>
             <MoveSpeed>5</MoveSpeed>
         </statBases>
@@ -51,7 +51,7 @@
         </killedLeavingsPlayerHostile>
         <comps>
             <li Class="CompProperties_MechCarrier">
-                <spawnPawnKind>RobCo_HeadOfHydra</spawnPawnKind>
+                <spawnPawnKind>RobCo_EyeOfHydra</spawnPawnKind>
                 <fixedIngredient>Steel</fixedIngredient>
                 <costPerPawn>25</costPerPawn>
                 <startingIngredientCount>600</startingIngredientCount>
@@ -65,9 +65,9 @@
     </ThingDef>
 
         <PawnKindDef ParentName="LightMechanoidKind">
-            <defName>RobCo_Hydra</defName>
+            <defName>RobCo_GutsyHydra</defName>
             <label>Hydra</label>
-            <race>RobCo_Hydra</race>
+            <race>RobCo_GutsyHydra</race>
             <combatPower>500</combatPower>
             <lifeStages>
                 <li>
@@ -92,9 +92,9 @@
 
 <!-- Head of Hydra -->
     <ThingDef ParentName="RobCo_EyebotBase">
-    <defName>RobCo_HeadOfHydra</defName>
-    <label>Head Of Hydra</label>
-    <description>This is one of many heads of the Hydra.</description>
+    <defName>RobCo_EyeOfHydra</defName>
+    <label>Eye of Hydra</label>
+    <description>This is one of many eyes of the Hydra.</description>
         <statBases>
       <MoveSpeed>5</MoveSpeed>
     </statBases>
@@ -104,9 +104,9 @@
   </ThingDef>
 
     <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_HeadOfHydra</defName>
-        <label>Head Of Hydra</label>
-        <race>RobCo_HeadOfHydra</race>
+        <defName>RobCo_EyeOfHydra</defName>
+        <label>Eye of Hydra</label>
+        <race>RobCo_EyeOfHydra</race>
         <lifeStages>
             <li>
                 <bodyGraphicData>
@@ -127,7 +127,7 @@
 
     <!-- Sheepsquatch -->
     <ThingDef ParentName="RobCo_AssaultronBase">
-        <defName>RobCo_Sheepsquatch</defName>
+        <defName>RobCo_AssaultronSheepsquatch</defName>
         <label>Sheepsquatch</label>
         <description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
         <statBases>
@@ -142,9 +142,9 @@
     </ThingDef>
 
     <PawnKindDef ParentName="HeavyMechanoidKind">
-        <defName>RobCo_Sheepsquatch</defName>
+        <defName>RobCo_AssaultronSheepsquatch</defName>
         <label>Sheepsquatch</label>
-        <race>RobCo_Sheepsquatch</race>
+        <race>RobCo_AssaultronSheepsquatch</race>
         <combatPower>450</combatPower>
         <lifeStages>
             <li>
@@ -169,7 +169,7 @@
 
     <!-- Deathbot -->
     <ThingDef ParentName="RobCo_SentrybotBase">
-        <defName>RobCo_Deathbot</defName>
+        <defName>RobCo_SentrybotDeathbot</defName>
         <label>Deathbot</label>
         <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
         <statBases>
@@ -181,9 +181,9 @@
     </ThingDef>
 
       <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_Deathbot</defName>
+    <defName>RobCo_SentrybotDeathbot</defName>
     <label>Deathbot</label>
-    <race>RobCo_Deathbot</race>
+    <race>RobCo_SentrybotDeathbot</race>
     <combatPower>600</combatPower>
     <lifeStages>
       <li>

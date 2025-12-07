@@ -1,203 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Sentrybot Siege -->
-  <ThingDef ParentName="RobCo_SentrybotBase">
-    <defName>RobCo_SentrybotChopper</defName>
-    <label>Sentrybot Siege</label>
-    <description>A walking tank bristling with missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
-    <race>
-    <lifeStageAges>
-      <li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>Sentrybot_Wounded</soundWounded>
-						<soundDeath>Sentrybot_Death</soundDeath>
-						<soundCall>Sentrybot_Call</soundCall>
-						<soundAngry>Sentrybot_Angry</soundAngry>
-					</li>
-    </lifeStageAges>
-    </race>
-  </ThingDef>
+    <!-- Robobrain -->
+    <ThingDef ParentName="RobCo_RobobrainBase">
+        <defName>RobCo_Robobrain</defName>
+        <label>Robobrain</label>
+        <description>Human intellect entombed in steel. Their eerie, monotone logic is a reminder of what happens when war and science mix too freely.</description>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>6</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <color>(0.4, 0.4, 0.4)</color>
+                <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+                <activeSound>BulletShield_Ambience</activeSound>
+                <hitPoints>300</hitPoints>
+                <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+                <chargeDurationTicks>1800</chargeDurationTicks>
+                <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+                <minIdleAlpha>0.2</minIdleAlpha>
+                <drawWithNoSelection>True</drawWithNoSelection>
+                <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+                <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+            </li>
+        </comps>
+    </ThingDef>
 
-  <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentrybotChopper</defName>
-    <label>Sentrybot Siege</label>
-    <race>RobCo_SentrybotChopper</race>
-    <combatPower>600</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/Sentrybot/Sentrybot</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_SentryRocketLauncher</li>
-    </weaponTags>
-  </PawnKindDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Robobrain</defName>
+        <label>Robobrain</label>
+        <race>RobCo_Robobrain</race>
+        <combatPower>250</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/Robobrain/Robobrain</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_LaserAuto</li>
+        </weaponTags>
+    </PawnKindDef>
+    
+    <RecipeDef ParentName="RobCo_Assaultron">
+        <defName>RobCo_Robobrain</defName>
+        <label>craft Robobrain</label>
+        <description>Craft an Robobrain.</description>
+        <products>
+            <Mech_Centurion>1</Mech_Centurion>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>RobCo_Robobrain</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
 
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotChopper</defName>
-    <label>craft Sentrybot Rockets</label>
-    <description>Craft a Sentrybot Rockets.</description>
-    <products>
-      <RobCo_SentrybotChopper>1</RobCo_SentrybotChopper>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_SentrybotChopper</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
+    <!-- Cyberdog -->
+    <ThingDef ParentName="RobCo_CyberdogBase">
+        <defName>RobCo_Cyberdog</defName>
+        <label>Cyberdog</label>
+        <description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
+    </ThingDef>
+    
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Cyberdog</defName>
+        <label>Cyberdog</label>
+        <race>RobCo_Cyberdog</race>
+        <combatPower>200</combatPower>
+        <alternateGraphicChance>0.25</alternateGraphicChance>
+        <alternateGraphics>
+            <li>
+                <texPath>RobCo/Cyberdog/Cyberdog</texPath>
+            </li>
+            <li>
+                <texPath>RobCo/Cyberdog/Cyberwolf</texPath>
+            </li>
+        </alternateGraphics>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/Cyberdog/Cyberdog</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_SonicBark</li>
+        </weaponTags>
+    </PawnKindDef>
 
-  <!-- Sentrybot Burner -->
-  <ThingDef ParentName="RobCo_SentrybotBase">
-    <defName>RobCo_SentrybotFlamer</defName>
-    <label>Sentrybot Incinerator</label>
-    <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much.</description>
-    <race>
-    <lifeStageAges>
-      <li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>Sentrybot_Wounded</soundWounded>
-						<soundDeath>Sentrybot_Death</soundDeath>
-						<soundCall>Sentrybot_Call</soundCall>
-						<soundAngry>Sentrybot_Angry</soundAngry>
-					</li>
-    </lifeStageAges>
-    </race>
-  </ThingDef>
+    <RecipeDef ParentName="RobCo_Assaultron">
+        <defName>RobCo_Cyberdog</defName>
+        <label>craft Cyberdog</label>
+        <description>Craft an Eyebot.</description>
+        <products>
+            <Mech_Legionary>1</Mech_Legionary>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>RobCo_Cyberdog</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
 
-  <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentrybotFlamer</defName>
-    <label>Sentrybot Incinerator</label>
-    <race>RobCo_SentrybotFlamer</race>
-    <combatPower>600</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/Sentrybot/Sentrybot</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_SentryIncinerator</li>
-    </weaponTags>
-  </PawnKindDef>
+    <!-- Assaultron -->
+    <ThingDef ParentName="RobCo_AssaultronBase">
+        <defName>RobCo_Assaultron</defName>
+        <label>Assaultron</label>
+        <description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
+        <statBases>
+            <MoveSpeed>4.5</MoveSpeed>
+        </statBases>
+        <race>
+            <body>RobCo_Assaultron</body>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>10</minAge>
+                    <soundWounded>Assaultron_Wounded</soundWounded>
+                    <soundDeath>Assaultron_Death</soundDeath>
+                    <soundCall>Assaultron_Call</soundCall>
+                    <soundAngry>Assaultron_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+            <baseHealthScale>3</baseHealthScale>
+        </race>
+        <comps>
+            <li Class="CompProperties_TargetingBeam" />
+        </comps>
+    </ThingDef>
 
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotFlamer</defName>
-    <label>craft Sentrybot Incinerator</label>
-    <description>Craft a Sentrybot Incinerator.</description>
-    <products>
-      <RobCo_SentrybotFlamer>1</RobCo_SentrybotFlamer>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_SentrybotFlamer</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
+    <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>RobCo_Assaultron</defName>
+        <label>Assaultron</label>
+        <race>RobCo_Assaultron</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/Assaultron/Assaultron</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_AssaultronLow</li>
+        </weaponTags>
+    </PawnKindDef>
 
-  <!-- Sentrybot Gunner -->
-  <ThingDef ParentName="RobCo_SentrybotBase">
-    <defName>RobCo_SentrybotGunner</defName>
-    <label>Sentrybot Gunner</label>
-    <description>A walking tank bristling with miniguns and missile pods. Once deployed, it is not a question of if it kills, but how much of you will be left.</description>
-    <race>
-    <lifeStageAges>
-      <li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>Sentrybot_Wounded</soundWounded>
-						<soundDeath>Sentrybot_Death</soundDeath>
-						<soundCall>Sentrybot_Call</soundCall>
-						<soundAngry>Sentrybot_Angry</soundAngry>
-					</li>
-    </lifeStageAges>
-    </race>
-  </ThingDef>
-
-  <PawnKindDef ParentName="HeavyMechanoidKind">
-    <defName>RobCo_SentrybotGunner</defName>
-    <label>Sentrybot</label>
-    <race>RobCo_SentrybotGunner</race>
-    <combatPower>600</combatPower>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/Sentrybot/Sentrybot</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
-          <shaderType>CutoutWithOverlay</shaderType>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.4, 0.3)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponTags>
-      <li>RobCo_SentryMinigun</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotGunner</defName>
-    <label>craft Sentrybot Gunner</label>
-    <description>Craft a Sentrybot Gunner.</description>
-    <products>
-      <RobCo_SentrybotGunner>1</RobCo_SentrybotGunner>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>RobCo_SentrybotGunner</ThingDef>
-    </descriptionHyperlinks>
-  </RecipeDef>
+    <RecipeDef ParentName="RobCo_Assaultron">
+        <defName>RobCo_Assaultron</defName>
+        <label>craft Assaultron</label>
+        <description>Craft an Assaultron.</description>
+        <products>
+            <Mech_Tesseron>1</Mech_Tesseron>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>Mech_Tesseron</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
 </Defs>
