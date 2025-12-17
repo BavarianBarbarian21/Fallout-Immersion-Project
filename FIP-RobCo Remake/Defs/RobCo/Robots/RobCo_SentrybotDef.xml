@@ -1,5 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+<!-- Sentrybot Base -->
+		<ThingDef Name="RobCo_SentrybotBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>3000</MarketValue>
+				<MoveSpeed>3.0</MoveSpeed>
+				<ControlTakingTime>30</ControlTakingTime>
+				<BandwidthCost>5</BandwidthCost>
+				<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+				<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+				<PsychicSensitivity>0.75</PsychicSensitivity>
+				<MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
+			</statBases>
+			<race>
+				<body>RobCo_Sentrybot</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.5</baseBodySize>
+				<baseHealthScale>4.5</baseHealthScale>
+        		<mechWeightClass>Medium</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+						<soundWounded>Sentrybot_Wounded</soundWounded>
+						<soundDeath>Sentrybot_Death</soundDeath>
+						<soundCall>Sentrybot_Call</soundCall>
+						<soundAngry>Sentrybot_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>10</Steel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15.0</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+		<RecipeDef Name="RobCo_Sentrybot" ParentName="BaseMechanoidRecipe" Abstract="True">
+			<gestationCycles>12</gestationCycles>
+			<researchPrerequisite>UltraMechtech</researchPrerequisite>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>200</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Plasteel</li>
+						</thingDefs>
+					</filter>
+					<count>200</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>NanostructuringChip</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentSpacer</li>
+						</thingDefs>
+					</filter>
+					<count>2</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>SubcoreHigh</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+			<displayPriority>400</displayPriority>
+		</RecipeDef>
+
   <!-- Sentrybot Siegebreaker -->
   <ThingDef ParentName="RobCo_SentrybotBase">
     <defName>RobCo_SentrybotSiegebreaker</defName>
@@ -200,4 +296,44 @@
       <ThingDef>RobCo_SentrybotAnnihilator</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+<!-- Deathbot -->
+    <ThingDef ParentName="RobCo_SentrybotBase">
+        <defName>RobCo_SentrybotDeathbot</defName>
+        <label>Deathbot</label>
+        <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
+        <race>
+            <baseHealthScale>6.75</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <NanostructuringChip>1</NanostructuringChip>
+        </killedLeavingsPlayerHostile>
+    </ThingDef>
+
+      <PawnKindDef ParentName="HeavyMechanoidKind">
+    <defName>RobCo_SentrybotDeathbot</defName>
+    <label>Deathbot</label>
+    <race>RobCo_SentrybotDeathbot</race>
+    <combatPower>600</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/SentrybotBoss/SentrybotBoss</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_SentryRocketLauncher</li>
+      <li>RobCo_SentryIncinerator</li>
+      <li>RobCo_SentryMinigun</li>
+    </weaponTags>
+  </PawnKindDef>
+
 </Defs>

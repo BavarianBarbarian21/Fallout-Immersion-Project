@@ -1,5 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+<!-- Assaultron Base -->
+		<ThingDef Name="RobCo_AssaultronBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>3000</MarketValue>
+				<MoveSpeed>4.6</MoveSpeed>
+				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      			<BandwidthCost>3</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Assaultron</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.0</baseBodySize>
+				<baseHealthScale>3.0</baseHealthScale>
+        		<mechWeightClass>Medium</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+						<soundWounded>Assaultron_Wounded</soundWounded>
+						<soundDeath>Assaultron_Death</soundDeath>
+						<soundCall>Assaultron_Call</soundCall>
+						<soundAngry>Assaultron_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>20</Steel>
+      			<Plasteel>10</Plasteel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.0</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+        <RecipeDef Name="RobCo_Assaultron" ParentName="BaseMechanoidRecipe" Abstract="True">
+			<gestationCycles>4</gestationCycles>
+			<researchPrerequisite>HighMechtech</researchPrerequisite>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>100</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Plasteel</li>
+						</thingDefs>
+					</filter>
+					<count>50</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentSpacer</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>PowerfocusChip</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>SubcoreHigh</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+			<displayPriority>300</displayPriority>
+		</RecipeDef>
+
+		<!-- Robobrain Base -->
+		<ThingDef Name="RobCo_RobobrainBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>2800</MarketValue>
+				<MoveSpeed>4.2</MoveSpeed>
+				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      			<BandwidthCost>3</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Robobrain</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.0</baseBodySize>
+				<baseHealthScale>2.0</baseHealthScale>
+        		<mechWeightClass>Medium</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+						<soundWounded>Robobrain_Wounded</soundWounded>
+						<soundDeath>Robobrain_Death</soundDeath>
+						<soundCall>Robobrain_Call</soundCall>
+						<soundAngry>Robobrain_Angry</soundAngry>
+					</li>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>10</minAge>
+						<soundWounded>Robobrain_Wounded</soundWounded>
+						<soundDeath>Robobrain_Death</soundDeath>
+						<soundCall>Robobrain_Call</soundCall>
+						<soundAngry>Robobrain_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>20</Steel>
+      			<Plasteel>10</Plasteel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+		<!-- Cyberdog Base -->
+		<ThingDef Name="RobCo_CyberdogBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>2100</MarketValue>
+				<MoveSpeed>5.0</MoveSpeed>
+				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      			<BandwidthCost>3</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Cyberdog</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>0.86</baseBodySize>
+				<baseHealthScale>1.5</baseHealthScale>
+        		<mechWeightClass>Civilian</mechWeightClass>
+				<!--Dog Mechanics-->
+				<animalType>Canine</animalType>
+				<nuzzleMtbHours>12</nuzzleMtbHours>
+				<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+				<!--
+				<leatherDef>Leather_Dog</leatherDef>
+				<baseHungerRate>0.5</baseHungerRate>
+				<soundEating>PredatorSmall_Eat</soundEating>
+				End Dog Mechanics-->
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+						<soundWounded>Cyberdog_Wounded</soundWounded>
+						<soundDeath>Cyberdog_Death</soundDeath>
+						<soundCall>Cyberdog_Call</soundCall>
+						<soundAngry>Cyberdog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>20</Steel>
+      			<Plasteel>10</Plasteel>
+				<Leather_Dog>2</Leather_Dog>
+				<MeatRaw>5</MeatRaw>
+      		</butcherProducts>
+			<tools>
+				<li>
+					<label>left claw</label>
+					<labelNoLocation>claw</labelNoLocation>
+					<capacities>
+					<li>Scratch</li>
+					</capacities>
+					<power>8.0</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				</li>
+				<li>
+					<label>right claw</label>
+					<labelNoLocation>claw</labelNoLocation>
+					<capacities>
+					<li>Scratch</li>
+					</capacities>
+					<power>10.0</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				</li>
+				<li>
+					<capacities>
+					<li>Bite</li>
+					</capacities>
+					<power>15.0</power>
+					<cooldownTime>2.6</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.7</chanceFactor>
+				</li>
+				<li>
+					<label>head</label>
+					<capacities>
+					<li>Blunt</li>
+					</capacities>
+					<power>7.0</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+					<chanceFactor>0.2</chanceFactor>
+				</li>
+			</tools>
+		</ThingDef>
+
     <!-- Robobrain -->
     <ThingDef ParentName="RobCo_RobobrainBase">
         <defName>RobCo_Robobrain</defName>
@@ -77,6 +315,14 @@
         <defName>RobCo_Cyberdog</defName>
         <label>Cyberdog</label>
         <description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
+        <race>
+            <mechEnabledWorkTypes>
+                <li>Nuzzle</li>
+            </mechEnabledWorkTypes>
+            <mechWorkTypePriorities>
+                <Nuzzle>2</Nuzzle>
+            </mechWorkTypePriorities>
+        </race>
     </ThingDef>
     
     <PawnKindDef ParentName="LightMechanoidKind">
@@ -129,9 +375,6 @@
         <defName>RobCo_Assaultron</defName>
         <label>Assaultron</label>
         <description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
-        <statBases>
-            <MoveSpeed>4.5</MoveSpeed>
-        </statBases>
         <race>
             <body>RobCo_Assaultron</body>
             <lifeStageAges>
@@ -197,4 +440,45 @@
             <ThingDef>Mech_Tesseron</ThingDef>
         </descriptionHyperlinks>
     </RecipeDef>
+
+ <!-- Sheepsquatch -->
+    <ThingDef ParentName="RobCo_AssaultronBase">
+        <defName>RobCo_AssaultronSheepsquatch</defName>
+        <label>Sheepsquatch</label>
+        <description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
+        <race>
+            <baseHealthScale>4.5</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <PowerfocusChip>1</PowerfocusChip>
+        </killedLeavingsPlayerHostile>
+        <comps>
+            <li Class="CompProperties_TargetingBeam" />
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>RobCo_AssaultronSheepsquatch</defName>
+        <label>Sheepsquatch</label>
+        <race>RobCo_AssaultronSheepsquatch</race>
+        <combatPower>450</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_AssaultronLow</li>
+        </weaponTags>
+    </PawnKindDef>
+
 </Defs>
