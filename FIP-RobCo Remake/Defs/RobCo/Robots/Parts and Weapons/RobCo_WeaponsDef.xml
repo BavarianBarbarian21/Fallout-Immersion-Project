@@ -861,7 +861,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_HellcatRifle</defaultProjectile>
+        <defaultProjectile>RobCo_Shell</defaultProjectile>
         <warmupTime>1.1</warmupTime>
         <range>26.9</range>
         <burstShotCount>3</burstShotCount>
@@ -896,14 +896,14 @@
     <!-- Can't inherit comps because we need to override CompEquippable with CompEquippableAbility -->
     <!-- If changes are made to the comps of BaseHumanMakeableGun or parents then they will need to be replicated here -->
     <comps Inherit="False">
-      <!--<li Class="CompProperties_EquippableAbilityReloadable">
-        <abilityDef>HellcatBurner</abilityDef>
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>RobCo_NapalmBurner</abilityDef>
         <maxCharges>2</maxCharges>
         <soundReload>Standard_Reload</soundReload>
         <chargeNoun>burner charge</chargeNoun>
-        <ammoDef>Bioferrite</ammoDef>
+        <ammoDef>Chemfuel</ammoDef>
         <ammoCountPerCharge>10</ammoCountPerCharge>
-        <baseReloadTicks>60</baseReloadTicks>-->
+        <baseReloadTicks>60</baseReloadTicks>-
       </li>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Styleable"/>
@@ -918,7 +918,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef ParentName="BaseBullet">
+  <!--<ThingDef ParentName="BaseBullet">
     <defName>Bullet_HellcatRifle</defName>
     <label>hellcat rifle bullet</label>
     <graphicData>
@@ -930,10 +930,10 @@
       <damageAmountBase>10</damageAmountBase>
       <speed>70</speed>
     </projectile>
-  </ThingDef>
+  </ThingDef>-->
   
   <AbilityDef>
-    <defName>HellcatBurner</defName>
+    <defName>RobCo_NapalmBurner</defName>
     <label>bioferrite burner</label>
     <description>Expend a pressurized bioferrite charge to create a burst of flame.</description>
     <iconPath>UI/Abilities/Burner</iconPath>
