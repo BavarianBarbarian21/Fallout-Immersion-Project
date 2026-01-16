@@ -75,12 +75,14 @@
     <destroyOnDrop>true</destroyOnDrop>
     <relicChance>0</relicChance>
     <graphicData>
-      <drawSize>0.65</drawSize>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedDistanceOffset>-0.14</equippedDistanceOffset>
     <weaponClasses>
       <li>Ranged</li>
     </weaponClasses>
+    <techLevel>Spacer</techLevel>
   </ThingDef>
 
   <!-- Civilian blaster -->
@@ -88,11 +90,6 @@
     <defName>RobCo_Blaster_Civilian</defName>
     <label>RobCo Civilian Blaster</label>
     <description>A simple civilian blaster using a low-beam laser cartridge.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <statBases>
       <MarketValue>500</MarketValue>
       <Mass>2</Mass>
@@ -103,7 +100,7 @@
       <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Civilian</li>
+      <li>RobCo_Blaster_Civilian</li>
     </weaponTags>
     <verbs>
       <li>
@@ -121,11 +118,6 @@
     <defName>RobCo_Blaster_Military</defName>
     <label>RobCo Military Blaster</label>
     <description>A field-grade blaster firing high-beam laser rounds.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <statBases>
       <MarketValue>1200</MarketValue>
       <Mass>3.5</Mass>
@@ -136,7 +128,7 @@
       <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Military</li>
+      <li>RobCo_Blaster_Military</li>
     </weaponTags>
     <verbs>
       <li>
@@ -154,11 +146,6 @@
     <defName>RobCo_Blaster_Sharpshooter</defName>
     <label>RobCo Sharpshooter Blaster</label>
     <description>A precision-tuned blaster using low-beam rounds; slower firing but excellent at range.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <statBases>
       <MarketValue>900</MarketValue>
       <Mass>3</Mass>
@@ -169,7 +156,7 @@
       <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Sharpshooter</li>
+      <li>RobCo_Blaster_Sharpshooter</li>
     </weaponTags>
     <verbs>
       <li>
@@ -187,11 +174,6 @@
     <defName>RobCo_Blaster_Sniper</defName>
     <label>RobCo Sniper Blaster</label>
     <description>A long-range sniper blaster firing high-beam rounds; very slow but extremely accurate at distance.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <statBases>
       <MarketValue>1600</MarketValue>
       <Mass>4</Mass>
@@ -202,7 +184,7 @@
       <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>RobCo_Sniper</li>
+      <li>RobCo_Blaster_Sniper</li>
     </weaponTags>
     <verbs>
       <li>
@@ -220,7 +202,6 @@
       <defName>RobCo_GutsyArray</defName>
       <label>Gutsy array</label>
       <description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in napalm burner and a reinforced ripper tool for close work.</description>
-      <techLevel>Spacer</techLevel>
       <graphicData>
         <texPath>RobCo/Misc/Invisible</texPath>
         <graphicClass>Graphic_Single</graphicClass>
@@ -283,11 +264,6 @@
     <defName>RobCo_Minigun</defName>
     <label>RobCo Minigun</label>
     <description>A rapid-fire minigun that fires low-beam laser cartridges in rapid bursts. Perfect for Supression.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>RobCo/Misc/Invisible</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <statBases>
       <MarketValue>1500</MarketValue>
       <Mass>6</Mass>
@@ -316,7 +292,6 @@
       <defName>RobCo_Exterminator</defName>
       <label>Exterminator</label>
       <description>A compact RobCo exterminator launcher firing toxic canisters. Designed for mechanoid frames; not craftable or tradable and destroyed on drop.</description>
-      <techLevel>Spacer</techLevel>
       <graphicData>
         <texPath>RobCo/Misc/Invisible</texPath>
         <graphicClass>Graphic_Single</graphicClass>
@@ -391,7 +366,7 @@
       <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>MechanoidGun</li>
+      <li>RobCo_RocketLauncher</li>
     </weaponTags>
     <verbs>
       <li>
