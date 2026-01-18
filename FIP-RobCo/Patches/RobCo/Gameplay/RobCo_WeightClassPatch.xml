@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- MechWeightClassDef label changes -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MechWeightClassDef[defName="Light"]/label</xpath>
+    <value>
+      <label>Civilian</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MechWeightClassDef[defName="Medium"]/label</xpath>
+    <value>
+      <label>Military</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MechWeightClassDef[defName="Heavy"]/label</xpath>
+    <value>
+      <label>Automatron</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MechWeightClassDef[defName="UltraHeavy"]/label</xpath>
+    <value>
+      <label>Command-bot</label>
+    </value>
+  </Operation>
+
+</Patch>
