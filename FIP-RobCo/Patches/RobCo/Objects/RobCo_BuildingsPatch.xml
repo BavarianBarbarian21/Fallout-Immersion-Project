@@ -220,40 +220,32 @@
 		</value>
 	</Operation>
 	<!-- Patch MechGestator recipes -->
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
 		<value>
-			<recipes>
-				<li>Constructoid</li>
-				<li MayRequire="Ludeon.RimWorld.Odyssey">Cyclops</li>
-				<li>Fabricor</li>
-				<li>Lifter</li>
-				<li>Militor</li>
-				<li>Pikeman</li>
-				<li>Tunneler</li>
-				<li>Agrihand</li>
-				<li>Cleansweeper</li>
-				<li>Lancer</li>
-				<li>Paramedic</li>
-				<li>Scorcher</li>
-				<li>Scyther</li>
-				<li>ResurrectMediumMech</li>
-			</recipes>
+			<li>RobCo_Eyebot_Recipe</li>
+			<li>RobCo_EyebotDuraframe_Recipe</li>
+			<li>RobCo_MisterFarmhand_Recipe</li>
+			<li>RobCo_MisterHandy_Recipe</li>
+			<li>RobCo_MissNanny_Recipe</li>
+			<li>RobCo_MisterGutsy_Recipe</li>
+			<li>RobCo_Constructron_Recipe</li>
+			<li>RobCo_Factotron_Recipe</li>
+			<li>RobCo_Utilitron_Recipe</li>
+			<li>RobCo_Collectron_Recipe</li>
+			<li>RobCo_Protectron_Recipe</li>
 		</value>
 	</Operation>
 	<!-- Patch LargeMechGestator recipes -->
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
 		<value>
-			<recipes>
-				<li>Centurion</li>
-				<li>Legionary</li>
-				<li>Tesseron</li>
-				<li>CentipedeBlaster</li>
-				<li>CentipedeGunner</li>
-				<li>CentipedeBurner</li>
-				<li>ResurrectHeavyMech</li>
-			</recipes>
+			<li>RobCo_Assaultron_Recipe</li>
+			<li>RobCo_Robobrain_Recipe</li>
+			<li>RobCo_Cyberdog_Recipe</li>
+			<li>RobCo_SentrybotSiegebreaker_Recipe</li>
+			<li>RobCo_SentrybotPestcontrol_Recipe</li>
+			<li>RobCo_SentrybotAnnihilator_Recipe</li>
 		</value>
 	</Operation>
 </Patch>

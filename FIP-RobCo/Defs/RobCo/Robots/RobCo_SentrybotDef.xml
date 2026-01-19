@@ -2,7 +2,7 @@
 <Defs>
 
 <!-- Sentrybot Base -->
-		<ThingDef Name="RobCo_SentrybotBase" ParentName="BaseMechanoid" Abstract="True">
+    <ThingDef Name="RobCo_SentrybotBase" ParentName="BaseMechanoid" Abstract="True">
 			<statBases>
 				<MarketValue>3000</MarketValue>
 				<MoveSpeed>3.0</MoveSpeed>
@@ -42,13 +42,13 @@
 				</capacities>
 				<power>15.0</power>
 				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				</li>
       		</tools>
 		</ThingDef>
 
-		<RecipeDef Name="RobCo_Sentrybot" ParentName="BaseMechanoidRecipe" Abstract="True">
+    <RecipeDef Name="RobCo_SentrybotBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<gestationCycles>12</gestationCycles>
 			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<ingredients>
@@ -151,12 +151,12 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotSiegebreaker</defName>
+  <RecipeDef ParentName="RobCo_SentrybotBase_Recipe">
+    <defName>RobCo_SentrybotSiegebreaker_Recipe</defName>
     <label>craft Siegebreaker Sentrybot</label>
     <description>Craft a Siegebreaker Sentrybot.</description>
     <products>
-      <RobCo_SentrybotSiege>1</RobCo_SentrybotSiege>
+      <RobCo_SentrybotSiegebreaker>1</RobCo_SentrybotSiegebreaker>
     </products>
     <descriptionHyperlinks>
       <ThingDef>RobCo_SentrybotSiegebreaker</ThingDef>
@@ -218,8 +218,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotPestcontrol</defName>
+  <RecipeDef ParentName="RobCo_SentrybotBase_Recipe">
+    <defName>RobCo_SentrybotPestcontrol_Recipe</defName>
     <label>craft a Pestcontrol Sentrybot</label>
     <description>Craft a Pestcontrol Sentrybot.</description>
     <products>
@@ -285,8 +285,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Sentrybot">
-    <defName>RobCo_SentrybotAnnihilator</defName>
+  <RecipeDef ParentName="RobCo_SentrybotBase_Recipe">
+    <defName>RobCo_SentrybotAnnihilator_Recipe</defName>
     <label>craft an Annihilator Sentrybot</label>
     <description>Craft a Annihilator Sentrybot.</description>
     <products>
@@ -299,7 +299,7 @@
 
 <!-- Deathbot -->
     <ThingDef ParentName="RobCo_SentrybotBase">
-        <defName>RobCo_SentrybotDeathbot</defName>
+      <defName>RobCo_SentrybotDeathbot</defName>
         <label>Deathbot</label>
         <description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
         <race>

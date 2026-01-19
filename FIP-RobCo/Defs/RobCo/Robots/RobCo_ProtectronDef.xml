@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 <!-- Protectron Base -->
-		<ThingDef Name="RobCo_ProtectronBase" ParentName="BaseMechanoid" Abstract="True">
+    <ThingDef Name="RobCo_ProtectronBase" ParentName="BaseMechanoid" Abstract="True">
 			<statBases>
         		<MarketValue>800</MarketValue>
        		 	<MoveSpeed>2.0</MoveSpeed>
@@ -38,13 +38,13 @@
 				</capacities>
 				<power>6</power>
 				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				</li>
       		</tools>
 		</ThingDef>
 
-    <RecipeDef Name="RobCo_Protectron" ParentName="BaseMechanoidRecipe" Abstract="True">
+    <RecipeDef Name="RobCo_ProtectronBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<researchPrerequisite>BasicMechtech</researchPrerequisite>
 			<gestationCycles>1</gestationCycles>
 			<ingredients>
@@ -112,8 +112,8 @@
     </weaponTags>
   </PawnKindDef>  
   
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Constructron</defName>
+  <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+    <defName>RobCo_Constructron_Recipe</defName>
     <label>craft Constructron</label>
     <description>Craft an Constructron.</description>
     <products>
@@ -162,8 +162,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Factotron</defName>
+  <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+    <defName>RobCo_Factotron_Recipe</defName>
     <label>craft Factotron</label>
     <description>Craft an Factotron.</description>
     <products>
@@ -210,8 +210,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Utilitron</defName>
+  <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+    <defName>RobCo_Utilitron_Recipe</defName>
     <label>craft Utilitron</label>
     <description>Craft an Utilitron.</description>
     <products>
@@ -222,7 +222,7 @@
     </descriptionHyperlinks>
   </RecipeDef>
 
-  <!-- RobCo Collectron -->
+  <!-- Collectron -->
   <ThingDef ParentName="RobCo_ProtectronBase">
     <defName>RobCo_Collectron</defName>
     <label>Collectron</label>
@@ -259,8 +259,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Collectron</defName>
+  <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+    <defName>RobCo_Collectron_Recipe</defName>
     <label>craft Collectron</label>
     <description>Craft an Collectron.</description>
     <products>
@@ -327,8 +327,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Protectron</defName>
+  <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+    <defName>RobCo_Protectron_Recipe</defName>
     <label>craft Protectron</label>
     <description>Craft an Protectron.</description>
     <products>

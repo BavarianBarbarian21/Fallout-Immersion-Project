@@ -401,6 +401,7 @@
     <defName>RobCo_RocketLauncher</defName>
     <label>Sentrybot rocket launcher</label>
     <description>A rocket launcher mounted on RobCo sentry frames that fires multiple small rockets dealing which can easily destroy cover.</description>
+    <tickerType>Normal</tickerType>
     <graphicData>
         <texPath>RobCo/Misc/Invisible</texPath>
         <graphicClass>Graphic_Single</graphicClass>
@@ -576,8 +577,7 @@
 					<AccuracyMedium>1.0</AccuracyMedium>
 					<AccuracyLong>1.0</AccuracyLong>
 					<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
-				</statBases>
-				<weaponTags>
+				</statBases>				<smeltable>false</smeltable>				<weaponTags>
 					<li>RobCo_SonicBark</li>
 				</weaponTags>
 				<verbs>

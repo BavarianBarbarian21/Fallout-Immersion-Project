@@ -1,484 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<!-- Assaultron Base -->
-		<ThingDef Name="RobCo_AssaultronBase" ParentName="BaseMechanoid" Abstract="True">
-			<statBases>
-				<MarketValue>3000</MarketValue>
-				<MoveSpeed>4.6</MoveSpeed>
-				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      			<BandwidthCost>3</BandwidthCost>
-				<ControlTakingTime>18</ControlTakingTime>
-			</statBases>
-			<race>
-				<body>RobCo_Assaultron</body>
-				<intelligence>ToolUser</intelligence>
-        		<thinkTreeMain>Mechanoid</thinkTreeMain>
-        		<baseBodySize>1.0</baseBodySize>
-				<baseHealthScale>3.0</baseHealthScale>
-        		<mechWeightClass>Medium</mechWeightClass>
-				<lifeStageAges>
-					<li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>0</minAge>
-						<soundWounded>RobCo_Assaultron_Wounded</soundWounded>
-						<soundDeath>RobCo_Assaultron_Death</soundDeath>
-						<soundCall>RobCo_Assaultron_Call</soundCall>
-						<soundAngry>RobCo_Assaultron_Angry</soundAngry>
-					</li>
-				</lifeStageAges>
-			</race>
-			<butcherProducts>
-        		<Steel>20</Steel>
-      			<Plasteel>10</Plasteel>
-      		</butcherProducts>
-			<tools>
+	<!-- Assaultron Base -->
+	<ThingDef Name="RobCo_AssaultronBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>3000</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<BandwidthCost>3</BandwidthCost>
+			<ControlTakingTime>18</ControlTakingTime>
+		</statBases>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHealthScale>3.0</baseHealthScale>
+			<mechWeightClass>Medium</mechWeightClass>
+			<lifeStageAges>
 				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_Assaultron_Wounded</soundWounded>
+					<soundDeath>RobCo_Assaultron_Death</soundDeath>
+					<soundCall>RobCo_Assaultron_Call</soundCall>
+					<soundAngry>RobCo_Assaultron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>10</Plasteel>
+		</butcherProducts>
+		<tools>
+			<li>
 				<label>chassis</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
 				<power>10.0</power>
 				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				</li>
-      		</tools>
-		</ThingDef>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_AssaultronBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<gestationCycles>4</gestationCycles>
+		<researchPrerequisite>HighMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PowerfocusChip</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>300</displayPriority>
+	</RecipeDef>
 
-        <RecipeDef Name="RobCo_Assaultron" ParentName="BaseMechanoidRecipe" Abstract="True">
-			<gestationCycles>4</gestationCycles>
-			<researchPrerequisite>HighMechtech</researchPrerequisite>
-			<ingredients>
+	<!-- Assaultron -->
+	<ThingDef ParentName="RobCo_AssaultronBase">
+		<defName>RobCo_Assaultron</defName>
+		<label>Assaultron</label>
+		<description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<lifeStageAges>
 				<li>
-					<filter>
-						<thingDefs>
-							<li>Steel</li>
-						</thingDefs>
-					</filter>
-					<count>100</count>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>RobCo_Assaultron_Wounded</soundWounded>
+					<soundDeath>RobCo_Assaultron_Death</soundDeath>
+					<soundCall>RobCo_Assaultron_Call</soundCall>
+					<soundAngry>RobCo_Assaultron_Angry</soundAngry>
 				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>Plasteel</li>
-						</thingDefs>
-					</filter>
-					<count>50</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>ComponentSpacer</li>
-						</thingDefs>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>PowerfocusChip</li>
-						</thingDefs>
-					</filter>
-					<count>1</count>
-				</li>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>SubcoreHigh</li>
-						</thingDefs>
-					</filter>
-					<count>1</count>
-				</li>
-			</ingredients>
-			<displayPriority>300</displayPriority>
-		</RecipeDef>
-
-		<!-- Robobrain Base -->
-		<ThingDef Name="RobCo_RobobrainBase" ParentName="BaseMechanoid" Abstract="True">
-			<statBases>
-				<MarketValue>2800</MarketValue>
-				<MoveSpeed>4.2</MoveSpeed>
-				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      			<BandwidthCost>3</BandwidthCost>
-				<ControlTakingTime>18</ControlTakingTime>
-			</statBases>
-			<race>
-				<body>RobCo_Robobrain</body>
-				<intelligence>ToolUser</intelligence>
-        		<thinkTreeMain>Mechanoid</thinkTreeMain>
-        		<baseBodySize>1.0</baseBodySize>
-				<baseHealthScale>2.0</baseHealthScale>
-        		<mechWeightClass>Medium</mechWeightClass>
-				<lifeStageAges>
-					<li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>0</minAge>
-					<soundWounded>RobCo_Robobrain_Wounded</soundWounded>
-					<soundDeath>RobCo_Robobrain_Death</soundDeath>
-					<soundCall>RobCo_Robobrain_Call</soundCall>
-					<soundAngry>RobCo_Robobrain_Angry</soundAngry>
-					</li>
-					<li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>10</minAge>
-						<soundWounded>RobCo_Robobrain_Wounded</soundWounded>
-						<soundDeath>RobCo_Robobrain_Death</soundDeath>
-						<soundCall>RobCo_Robobrain_Call</soundCall>
-						<soundAngry>RobCo_Robobrain_Angry</soundAngry>
-					</li>
-				</lifeStageAges>
-			</race>
-			<butcherProducts>
-        		<Steel>20</Steel>
-      			<Plasteel>10</Plasteel>
-      		</butcherProducts>
-			<tools>
-				<li>
-				<label>chassis</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>4</power>
-				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				</li>
-      		</tools>
-		</ThingDef>
-
-		<!-- Cyberdog Base -->
-		<ThingDef Name="RobCo_CyberdogBase" ParentName="BaseMechanoid" Abstract="True">
-			<statBases>
-				<MarketValue>2100</MarketValue>
-				<MoveSpeed>5.0</MoveSpeed>
-				<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-      			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-      			<BandwidthCost>3</BandwidthCost>
-				<ControlTakingTime>18</ControlTakingTime>
-			</statBases>
-			<race>
-				<body>RobCo_Cyberdog</body>
-				<intelligence>ToolUser</intelligence>
-        		<thinkTreeMain>Mechanoid</thinkTreeMain>
-        		<baseBodySize>0.86</baseBodySize>
-				<baseHealthScale>1.5</baseHealthScale>
-        		<mechWeightClass>Civilian</mechWeightClass>
-				<!--Dog Mechanics-->
-				<animalType>Canine</animalType>
-				<nuzzleMtbHours>12</nuzzleMtbHours>
-				<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-				<!--
-				<leatherDef>Leather_Dog</leatherDef>
-				<baseHungerRate>0.5</baseHungerRate>
-				<soundEating>PredatorSmall_Eat</soundEating>
-				End Dog Mechanics-->
-				<lifeStageAges>
-					<li>
-						<def>MechanoidFullyFormed</def>
-						<minAge>0</minAge>
-					<soundWounded>RobCo_Cyberdog_Wounded</soundWounded>
-					<soundDeath>RobCo_Cyberdog_Death</soundDeath>
-					<soundCall>RobCo_Cyberdog_Call</soundCall>
-					<soundAngry>RobCo_Cyberdog_Angry</soundAngry>
-					</li>
-				</lifeStageAges>
-			</race>
-			<butcherProducts>
-        		<Steel>20</Steel>
-      			<Plasteel>10</Plasteel>
-				<Leather_Dog>2</Leather_Dog>
-				<MeatRaw>5</MeatRaw>
-      		</butcherProducts>
-			<tools>
-				<li>
-					<label>left claw</label>
-					<labelNoLocation>claw</labelNoLocation>
-					<capacities>
-					<li>Scratch</li>
-					</capacities>
-					<power>8.0</power>
-					<cooldownTime>2</cooldownTime>
-					<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-				</li>
-				<li>
-					<label>right claw</label>
-					<labelNoLocation>claw</labelNoLocation>
-					<capacities>
-					<li>Scratch</li>
-					</capacities>
-					<power>10.0</power>
-					<cooldownTime>2</cooldownTime>
-					<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-				</li>
-				<li>
-					<capacities>
-					<li>Bite</li>
-					</capacities>
-					<power>15.0</power>
-					<cooldownTime>2.6</cooldownTime>
-					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-					<chanceFactor>0.7</chanceFactor>
-				</li>
-				<li>
-					<label>head</label>
-					<capacities>
-					<li>Blunt</li>
-					</capacities>
-					<power>7.0</power>
-					<cooldownTime>2</cooldownTime>
-					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-					<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-					<chanceFactor>0.2</chanceFactor>
-				</li>
-			</tools>
-		</ThingDef>
-
-    <!-- Robobrain -->
-    <ThingDef ParentName="RobCo_RobobrainBase">
-        <defName>RobCo_Robobrain</defName>
-        <label>Robobrain</label>
-        <description>Human intellect entombed in steel. Their eerie, monotone logic is a reminder of what happens when war and science mix too freely.</description>
-        <comps>
-            <li Class="CompProperties_ProjectileInterceptor">
-                <radius>6</radius>
-                <interceptGroundProjectiles>true</interceptGroundProjectiles>
-                <color>(0.4, 0.4, 0.4)</color>
-                <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
-                <activeSound>BulletShield_Ambience</activeSound>
-                <hitPoints>300</hitPoints>
-                <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
-                <chargeDurationTicks>1800</chargeDurationTicks>
-                <rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
-                <minIdleAlpha>0.2</minIdleAlpha>
-                <drawWithNoSelection>True</drawWithNoSelection>
-                <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
-                <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_Robobrain</defName>
-        <label>Robobrain</label>
-        <race>RobCo_Robobrain</race>
-        <combatPower>250</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Robobrain/Robobrain</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Syringer</li>
-        </weaponTags>
-    </PawnKindDef>
-    
-    <RecipeDef ParentName="RobCo_Assaultron">
-        <defName>RobCo_Robobrain</defName>
-        <label>craft Robobrain</label>
-        <description>Craft an Robobrain.</description>
-        <products>
-            <Mech_Centurion>1</Mech_Centurion>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Robobrain</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-
-    <!-- Cyberdog -->
-    <ThingDef ParentName="RobCo_CyberdogBase">
-        <defName>RobCo_Cyberdog</defName>
-        <label>Cyberdog</label>
-        <description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
-        <race>
-            <mechEnabledWorkTypes>
-                <li>Nuzzle</li>
-            </mechEnabledWorkTypes>
-            <mechWorkTypePriorities>
-                <Nuzzle>2</Nuzzle>
-            </mechWorkTypePriorities>
-        </race>
-    </ThingDef>
-    
-    <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_Cyberdog</defName>
-        <label>Cyberdog</label>
-        <race>RobCo_Cyberdog</race>
-        <combatPower>200</combatPower>
-        <alternateGraphicChance>0.25</alternateGraphicChance>
-        <alternateGraphics>
-            <li>
-                <texPath>RobCo/Cyberdog/Cyberdog</texPath>
-            </li>
-            <li>
-                <texPath>RobCo/Cyberdog/Cyberwolf</texPath>
-            </li>
-        </alternateGraphics>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Cyberdog/Cyberdog</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_SonicBark</li>
-        </weaponTags>
-    </PawnKindDef>
-
-    <RecipeDef ParentName="RobCo_Assaultron">
-        <defName>RobCo_Cyberdog</defName>
-        <label>craft Cyberdog</label>
-        <description>Craft an Eyebot.</description>
-        <products>
-            <Mech_Legionary>1</Mech_Legionary>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Cyberdog</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-
-    <!-- Assaultron -->
-    <ThingDef ParentName="RobCo_AssaultronBase">
-        <defName>RobCo_Assaultron</defName>
-        <label>Assaultron</label>
-        <description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
-        <race>
-            <body>RobCo_Assaultron</body>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>10</minAge>
-                    <soundWounded>RobCo_Assaultron_Wounded</soundWounded>
-                    <soundDeath>RobCo_Assaultron_Death</soundDeath>
-                    <soundCall>RobCo_Assaultron_Call</soundCall>
-                    <soundAngry>RobCo_Assaultron_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-            <baseHealthScale>3</baseHealthScale>
-        </race>
-        <comps>
-            <li Class="CompProperties_TargetingBeam" />
-        </comps>
-    </ThingDef>
-
-    <PawnKindDef ParentName="HeavyMechanoidKind">
-        <defName>RobCo_Assaultron</defName>
-        <label>Assaultron</label>
-        <race>RobCo_Assaultron</race>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Assaultron/Assaultron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_LaserAssaultron</li>
-        </weaponTags>
-    </PawnKindDef>
-
-    <RecipeDef ParentName="RobCo_Assaultron">
-        <defName>RobCo_Assaultron</defName>
-        <label>craft Assaultron</label>
-        <description>Craft an Assaultron.</description>
-        <products>
-            <Mech_Tesseron>1</Mech_Tesseron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>Mech_Tesseron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-
- <!-- Sheepsquatch -->
-    <ThingDef ParentName="RobCo_AssaultronBase">
-        <defName>RobCo_AssaultronSheepsquatch</defName>
-        <label>Sheepsquatch</label>
-        <description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
-        <race>
-            <baseHealthScale>4.5</baseHealthScale>
-        </race>
-        <killedLeavingsPlayerHostile>
-            <PowerfocusChip>1</PowerfocusChip>
-        </killedLeavingsPlayerHostile>
-        <comps>
-            <li Class="CompProperties_TargetingBeam" />
-        </comps>
-    </ThingDef>
-
-    <PawnKindDef ParentName="HeavyMechanoidKind">
-        <defName>RobCo_AssaultronSheepsquatch</defName>
-        <label>Sheepsquatch</label>
-        <race>RobCo_AssaultronSheepsquatch</race>
-        <combatPower>450</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_LaserSheepsquatch</li>
-        </weaponTags>
-    </PawnKindDef>
-
+			</lifeStageAges>
+			<baseHealthScale>3</baseHealthScale>
+		</race>
+		<comps>
+			<li Class="CompProperties_TargetingBeam" />
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="HeavyMechanoidKind">
+		<defName>RobCo_Assaultron</defName>
+		<label>Assaultron</label>
+		<race>RobCo_Assaultron</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Assaultron/Assaultron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_LaserAssaultron</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_AssaultronBase_Recipe">
+		<defName>RobCo_Assaultron_Recipe</defName>
+		<label>craft Assaultron</label>
+		<description>Craft an Assaultron.</description>
+		<products>
+			<RobCo_Assaultron>1</RobCo_Assaultron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Assaultron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Sheepsquatch -->
+	<ThingDef ParentName="RobCo_AssaultronBase">
+		<defName>RobCo_AssaultronSheepsquatch</defName>
+		<label>Sheepsquatch</label>
+		<description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
+		<race>
+			<baseHealthScale>4.5</baseHealthScale>
+		</race>
+		<killedLeavings>
+			<PowerfocusChip>1</PowerfocusChip>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_TargetingBeam" />
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="HeavyMechanoidKind">
+		<defName>RobCo_AssaultronSheepsquatch</defName>
+		<label>Sheepsquatch</label>
+		<race>RobCo_AssaultronSheepsquatch</race>
+		<combatPower>450</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_LaserSheepsquatch</li>
+		</weaponTags>
+	</PawnKindDef>
 </Defs>

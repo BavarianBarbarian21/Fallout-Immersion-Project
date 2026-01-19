@@ -2,7 +2,7 @@
 <Defs>
 
 <!-- Eyebot Base -->
-		<ThingDef Name="RobCo_EyebotBase" ParentName="BaseMechanoid" Abstract="True">
+    <ThingDef Name="RobCo_EyebotBase" ParentName="BaseMechanoid" Abstract="True">
 			<statBases>
         		<MarketValue>900</MarketValue>
        		 	<MoveSpeed>5.0</MoveSpeed>
@@ -27,6 +27,7 @@
 					<soundAngry>RobCo_Eyebot_Angry</soundAngry>
 					</li>
 				</lifeStageAges>
+        <nuzzleMtbHours>12</nuzzleMtbHours>
 			</race>
 			<butcherProducts>
         		<Steel>10</Steel>
@@ -39,13 +40,13 @@
 				</capacities>
 				<power>3</power>
 				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				</li>
       		</tools>
 		</ThingDef>
 
-        <RecipeDef Name="RobCo_Eyebot" ParentName="BaseMechanoidRecipe" Abstract="True">
+        <RecipeDef Name="RobCo_EyebotBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 			<researchPrerequisite>BasicMechtech</researchPrerequisite>
 			<gestationCycles>1</gestationCycles>
 			<ingredients>
@@ -132,8 +133,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_Eyebot</defName>
+  <RecipeDef ParentName="RobCo_EyebotBase_Recipe">
+    <defName>RobCo_Eyebot_Recipe</defName>
     <label>craft Eyebot</label>
     <description>Craft an Eyebot.</description>
     <products>
@@ -152,10 +153,10 @@
     <race>
         <baseHealthScale>1.0</baseHealthScale>
       <mechEnabledWorkTypes>
-        <li>Nuzzle</li>
+        <li>Firefighter</li>
       </mechEnabledWorkTypes>
       <mechWorkTypePriorities>
-        <Nuzzle>2</Nuzzle>
+        <Firefighter>2</Firefighter>
       </mechWorkTypePriorities>
     </race>
   </ThingDef>
@@ -184,8 +185,8 @@
     </weaponTags>
   </PawnKindDef>
 
-  <RecipeDef ParentName="RobCo_Protectron">
-    <defName>RobCo_EyebotDuraframe</defName>
+  <RecipeDef ParentName="RobCo_EyebotBase_Recipe">
+    <defName>RobCo_EyebotDuraframe_Recipe</defName>
     <label>craft Eyebot Duraframe</label>
     <description>Craft an Eyebot Duraframe.</description>
     <products>
@@ -198,7 +199,7 @@
 
   <!-- Crashed Vertibot -->
     <ThingDef ParentName="RobCo_EyebotBase">
-        <defName>RobCo_EyebotCrashed</defName>
+      <defName>RobCo_EyebotCrashed</defName>
         <label>Crashed Vertibird Robot</label>
         <description>This is a strange Robot, it seems to collect data and send them... somewhere.</description>
         <race>
@@ -210,7 +211,7 @@
     </ThingDef>
 
     <PawnKindDef ParentName="LightMechanoidKind">
-        <defName>RobCo_EyebotCrashed</defName>
+      <defName>RobCo_EyebotCrashed</defName>
         <label>Crashed Vertibird Robot</label>
         <race>RobCo_EyebotCrashed</race>
         <combatPower>300</combatPower>
