@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- ================= SECURITRON LASER WEAPON (House variant) ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_Laser_Combat</defName>
+        <label>securitron laser</label>
+        <description>Integrated laser cannon mounted on a Securitron. Lethal combat weapon.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_SecuritronLaser</defaultProjectile>
+                <warmupTime>1.8</warmupTime>
+                <range>28</range>
+                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>1.5</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>laser cannon</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ================= SECURITRON ELECTROSHOCK WEAPON ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_Electroshock</defName>
+        <label>securitron electroshock prod</label>
+        <description>Non-lethal electroshock system integrated into a Securitron Mark II.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_Electroshock</defaultProjectile>
+                <warmupTime>2.0</warmupTime>
+                <range>20</range>
+                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>Shot_Plasma</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>1.2</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>electroshock prod</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.0</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ================= LIBERTY PRIME MINI-NUKE WEAPON ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_MiniNukeRocket</defName>
+        <label>liberty prime mini-nuke launcher</label>
+        <description>Devastating miniature nuclear warhead launcher system integrated into Liberty Prime.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_LibertyPrimeMiniNuke</defaultProjectile>
+                <warmupTime>3.5</warmupTime>
+                <range>38</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>3.0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>mini-nuke launcher</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>4.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

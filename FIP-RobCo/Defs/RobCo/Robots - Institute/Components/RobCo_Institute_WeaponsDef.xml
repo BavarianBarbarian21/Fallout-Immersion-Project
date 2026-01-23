@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= PACIFICATOR ROCKET BULLET ================= -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_PacificatorRocket</defName>
+        <label>pacificator rocket</label>
+        <graphicData>
+            <texPath>Things/Projectile/Missile_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>22</damageAmountBase>
+            <explosionRadius>2.5</explosionRadius>
+            <speed>60</speed>
+            <stoppingPower>0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <!-- ================= PACIFICATOR ROCKET LAUNCHER ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_PacificatorRocket</defName>
+        <label>pacificator rocket launcher</label>
+        <description>Integrated rocket launcher mounted on a Pacificator combat platform.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_PacificatorRocket</defaultProjectile>
+                <warmupTime>2.5</warmupTime>
+                <range>32</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>2.0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>rocket launcher</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>3.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ================= WAR MACHINE MINI-NUKE BULLET ================= -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_WarMachineMiniNuke</defName>
+        <label>war machine mini-nuke</label>
+        <graphicData>
+            <texPath>Things/Projectile/Missile_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>32</damageAmountBase>
+            <explosionRadius>3.5</explosionRadius>
+            <speed>55</speed>
+            <stoppingPower>0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <!-- ================= WAR MACHINE MINI-NUKE LAUNCHER ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_WarMachineMiniNuke</defName>
+        <label>war machine mini-nuke launcher</label>
+        <description>Heavy miniature nuclear warhead launcher integrated into a War Machine combat unit.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_WarMachineMiniNuke</defaultProjectile>
+                <warmupTime>3.0</warmupTime>
+                <range>35</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>2.5</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>mini-nuke launcher</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>4.0</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- ================= LIBERTY PRIME MINI-NUKE BULLET ================= -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RobCo_Bullet_LibertyPrimeMiniNuke</defName>
+        <label>liberty prime mini-nuke</label>
+        <graphicData>
+            <texPath>Things/Projectile/Missile_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <explosionRadius>4.5</explosionRadius>
+            <speed>50</speed>
+            <stoppingPower>0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <!-- ================= LIBERTY PRIME MINI-NUKE LAUNCHER ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_LibertyPrimeMiniNuke</defName>
+        <label>liberty prime mini-nuke launcher</label>
+        <description>Devastating miniature nuclear warhead launcher system integrated into Liberty Prime.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_LibertyPrimeMiniNuke</defaultProjectile>
+                <warmupTime>3.5</warmupTime>
+                <range>38</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>3.0</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>mini-nuke launcher</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>4.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

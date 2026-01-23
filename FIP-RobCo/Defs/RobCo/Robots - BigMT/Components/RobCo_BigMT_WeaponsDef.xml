@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= ROBOSCORPION LASER BULLET ================= -->
+    <ThingDef ParentName="RobCo_BaseBullet">
+        <defName>RobCo_Bullet_RoboscorpionLaser</defName>
+        <label>roboscorpion laser</label>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>14</damageAmountBase>
+            <armorPenetrationBase>0.5</armorPenetrationBase>
+            <speed>90</speed>
+            <stoppingPower>1.0</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <!-- ================= ROBOSCORPION LASER WEAPON ================= -->
+    <ThingDef ParentName="RobCo_BaseGun">
+        <defName>RobCo_RoboscorpionLaser</defName>
+        <label>roboscorpion laser array</label>
+        <description>Integrated laser array weapon system mounted on a Roboscorpion's chassis.</description>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>RobCo_Bullet_RoboscorpionLaser</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>30</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <soundCast>Shot_Minigun</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>2</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>laser array</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

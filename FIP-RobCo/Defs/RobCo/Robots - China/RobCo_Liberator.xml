@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= LIBERATOR BASE ================= -->
+    <ThingDef Name="RobCo_LiberatorBase" ParentName="BaseMechanoid" Abstract="True">
+        <statBases>
+            <MarketValue>1400</MarketValue>
+            <MoveSpeed>2.8</MoveSpeed>
+            <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+            <MechEnergyLossPerHP>0.58</MechEnergyLossPerHP>
+        </statBases>
+        <race>
+            <body>RobCo_Liberator</body>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Mechanoid</thinkTreeMain>
+            <baseBodySize>1.1</baseBodySize>
+            <baseHealthScale>2.2</baseHealthScale>
+            <mechWeightClass>Light</mechWeightClass>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RobCo_Liberator_Wounded</soundWounded>
+                    <soundDeath>RobCo_Liberator_Death</soundDeath>
+                    <soundCall>RobCo_Liberator_Call</soundCall>
+                    <soundAngry>RobCo_Liberator_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+        </race>
+        <butcherProducts>
+            <Steel>14</Steel>
+        </butcherProducts>
+        <tools>
+            <li>
+                <label>fists</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.0</cooldownTime>
+                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            </li>
+        </tools>
+    </ThingDef>
+    <RecipeDef Name="RobCo_LiberatorBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+        <researchPrerequisite>BasicMechtech</researchPrerequisite>
+        <gestationCycles>2</gestationCycles>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>140</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreBasic</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <displayPriority>220</displayPriority>
+    </RecipeDef>
+
+    <!-- ================= LIBERATOR ================= -->
+    <ThingDef ParentName="RobCo_LiberatorBase">
+        <defName>RobCo_Liberator</defName>
+        <label>Liberator</label>
+        <description>A propaganda-minded combat robot from Jiang's faction. Humanoid, aggressive, and programmed to view itself as a freedom fighter. Effective in battle despite the existential contradiction of its "liberation" protocol.</description>
+    </ThingDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Liberator</defName>
+        <label>Liberator</label>
+        <race>RobCo_Liberator</race>
+        <combatPower>150</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/China/Liberator/Liberator</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.3</drawSize>
+                    <shadowData>
+                        <volume>(0.35, 0.4, 0.35)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_Laser_Combat</li>
+        </weaponTags>
+    </PawnKindDef>
+    <RecipeDef ParentName="RobCo_LiberatorBase_Recipe">
+        <defName>RobCo_Liberator_Recipe</defName>
+        <label>craft Liberator</label>
+        <description>Craft a Liberator.</description>
+        <products>
+            <RobCo_Liberator>1</RobCo_Liberator>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>RobCo_Liberator</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
+
+    <!-- ================= SCURRYBOT BASE ================= -->
+    <ThingDef Name="RobCo_ScurrybotBase" ParentName="BaseMechanoid" Abstract="True">
+        <statBases>
+            <MarketValue>600</MarketValue>
+            <MoveSpeed>4.5</MoveSpeed>
+            <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+            <MechEnergyLossPerHP>0.70</MechEnergyLossPerHP>
+        </statBases>
+        <race>
+            <body>RobCo_Scurrybot</body>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Mechanoid</thinkTreeMain>
+            <baseBodySize>0.6</baseBodySize>
+            <baseHealthScale>1.0</baseHealthScale>
+            <mechWeightClass>Light</mechWeightClass>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RobCo_Eyebot_Wounded</soundWounded>
+                    <soundDeath>RobCo_Eyebot_Death</soundDeath>
+                    <soundCall>RobCo_Eyebot_Call</soundCall>
+                    <soundAngry>RobCo_Eyebot_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+        </race>
+        <butcherProducts>
+            <Steel>5</Steel>
+        </butcherProducts>
+        <tools>
+            <li>
+                <label>chassis</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            </li>
+        </tools>
+    </ThingDef>
+    <RecipeDef Name="RobCo_ScurrybotBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+        <researchPrerequisite>BasicMechtech</researchPrerequisite>
+        <gestationCycles>1</gestationCycles>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreBasic</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <displayPriority>150</displayPriority>
+    </RecipeDef>
+
+    <!-- ================= SCURRYBOT ================= -->
+    <ThingDef ParentName="RobCo_ScurrybotBase">
+        <defName>RobCo_Scurrybot</defName>
+        <label>Scurrybot</label>
+        <description>A small surveillance/combat robot with four legs and integrated laser weapon. Swift, evasive, and useful for reconnaissance or harassment of lighter targets.</description>
+    </ThingDef>
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_Scurrybot</defName>
+        <label>Scurrybot</label>
+        <race>RobCo_Scurrybot</race>
+        <combatPower>80</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/China/Scurrybot/Scurrybot</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>0.9</drawSize>
+                    <shadowData>
+                        <volume>(0.25, 0.25, 0.25)</volume>
+                        <offset>(0,0,-0.15)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_Laser_Light</li>
+        </weaponTags>
+    </PawnKindDef>
+    <RecipeDef ParentName="RobCo_ScurrybotBase_Recipe">
+        <defName>RobCo_Scurrybot_Recipe</defName>
+        <label>craft Scurrybot</label>
+        <description>Craft a Scurrybot scout unit.</description>
+        <products>
+            <RobCo_Scurrybot>1</RobCo_Scurrybot>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>RobCo_Scurrybot</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
+</Defs>

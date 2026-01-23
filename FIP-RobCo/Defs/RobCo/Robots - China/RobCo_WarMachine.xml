@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- ================= WAR MACHINE BASE ================= -->
+    <ThingDef Name="RobCo_WarMachineBase" ParentName="BaseMechanoid" Abstract="True">
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <MoveSpeed>2.5</MoveSpeed>
+            <ControlTakingTime>45</ControlTakingTime>
+            <BandwidthCost>8</BandwidthCost>
+            <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+            <PsychicSensitivity>0.80</PsychicSensitivity>
+            <MechEnergyLossPerHP>0.20</MechEnergyLossPerHP>
+        </statBases>
+        <race>
+            <body>RobCo_WarMachine</body>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Mechanoid</thinkTreeMain>
+            <baseBodySize>2.5</baseBodySize>
+            <baseHealthScale>8.0</baseHealthScale>
+            <mechWeightClass>Heavy</mechWeightClass>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RobCo_WarMachine_Wounded</soundWounded>
+                    <soundDeath>RobCo_WarMachine_Death</soundDeath>
+                    <soundCall>RobCo_WarMachine_Call</soundCall>
+                    <soundAngry>RobCo_WarMachine_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
+        </race>
+        <butcherProducts>
+            <Steel>50</Steel>
+            <Plasteel>25</Plasteel>
+        </butcherProducts>
+        <tools>
+            <li>
+                <label>fists</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>1.6</cooldownTime>
+                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+            </li>
+        </tools>
+    </ThingDef>
+    <RecipeDef Name="RobCo_WarMachineBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+        <gestationCycles>20</gestationCycles>
+        <researchPrerequisite>UltraMechtech</researchPrerequisite>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>400</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>300</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreSuperior</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <displayPriority>500</displayPriority>
+    </RecipeDef>
+
+    <!-- ================= WAR MACHINE ================= -->
+    <!-- Huge humanoid robot that can spawn liberators -->
+    <ThingDef ParentName="RobCo_WarMachineBase">
+        <defName>RobCo_WarMachine</defName>
+        <label>War Machine</label>
+        <description>A colossal humanoid war engine. Can throw mini-nuke projectiles and spawn Liberators to aid in combat. Weighs several tons and packs enough firepower to level buildings. A walking WMD.</description>
+    </ThingDef>
+    <PawnKindDef ParentName="HeavyMechanoidKind">
+        <defName>RobCo_WarMachine</defName>
+        <label>War Machine</label>
+        <race>RobCo_WarMachine</race>
+        <combatPower>800</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/Institute/WarMachine/WarMachine</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>2.5</drawSize>
+                    <shadowData>
+                        <volume>(0.8, 0.8, 0.8)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_MiniNukeRocket</li>
+        </weaponTags>
+    </PawnKindDef>
+    <RecipeDef ParentName="RobCo_WarMachineBase_Recipe">
+        <defName>RobCo_WarMachine_Recipe</defName>
+        <label>craft War Machine</label>
+        <description>Craft a War Machine.</description>
+        <products>
+            <RobCo_WarMachine>1</RobCo_WarMachine>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>RobCo_WarMachine</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
+</Defs>

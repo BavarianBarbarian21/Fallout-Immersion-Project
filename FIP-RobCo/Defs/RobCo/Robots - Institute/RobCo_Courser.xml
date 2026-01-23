@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Courser Xenotype -->
+    <!-- A synthetic human designed for infiltration and combat -->
+    <XenotypeDef>
+        <defName>RobCo_Courser</defName>
+        <label>Courser</label>
+        <description>A synthetic human engineered for combat and infiltration. Stronger and faster than baseline humans, able to wear power armor and handle advanced combat roles. Nearly indistinguishable from natural humans at first glance.</description>
+        <iconPath>RobCo/Calculator/Courser/Courser_Icon</iconPath>
+        <genes>
+            <li>
+                <def>HighMetabolism</def>
+                <selectionWeight>1.0</selectionWeight>
+            </li>
+            <li>
+                <def>HighDrugMetabolism</def>
+                <selectionWeight>1.0</selectionWeight>
+            </li>
+            <li>
+                <def>StrongStomach</def>
+                <selectionWeight>0.8</selectionWeight>
+            </li>
+            <li>
+                <def>AlcoholMetabolism</def>
+                <selectionWeight>0.8</selectionWeight>
+            </li>
+            <li>
+                <def>Deathrest_UsesDeathrest</def>
+                <selectionWeight>0.5</selectionWeight>
+            </li>
+        </genes>
+        <raceAdjustments>
+            <li>
+                <key>Human</key>
+            </li>
+        </raceAdjustments>
+    </XenotypeDef>
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- ================= SYNTH GENERATION 1 XENOTYPE ================= -->
+    <XenotypeDef>
+        <defName>RobCo_SynthGen1</defName>
+        <label>Synth Generation 1</label>
+        <description>A first-generation synthetic human from the Institute. Simple, obedient, and lacking advanced cognitive capability, but physically capable of performing basic labor and combat tasks. Can wear armor and wield weapons effectively.</description>
+        <iconPath>RobCo/House/Synth/SynthGen1_Icon</iconPath>
+        <genes>
+            <li>Deathless</li>
+            <li>Sturdy</li>
+            <li>HighDrugMetabolism</li>
+        </genes>
+        <raceAdjustments>
+            <li>
+                <race>Human</race>
+                <statOffsets>
+                    <li>
+                        <stat>PainShockThreshold</stat>
+                        <offset>0.1</offset>
+                    </li>
+                </statOffsets>
+            </li>
+        </raceAdjustments>
+    </XenotypeDef>
+
+    <!-- ================= SYNTH GENERATION 2 XENOTYPE ================= -->
+    <XenotypeDef>
+        <defName>RobCo_SynthGen2</defName>
+        <label>Synth Generation 2</label>
+        <description>An advanced second-generation synthetic human from the Institute. More sophisticated than Gen1, capable of complex thought and social interaction, yet still fundamentally artificial. Can wear armor and wield weapons, suitable for combat, investigation, or command roles.</description>
+        <iconPath>RobCo/House/Synth/SynthGen2_Icon</iconPath>
+        <genes>
+            <li>Deathless</li>
+            <li>Sturdy</li>
+            <li>HighDrugMetabolism</li>
+            <li>AlcoholMetabolism</li>
+            <li>BeautyOffset</li>
+        </genes>
+        <raceAdjustments>
+            <li>
+                <race>Human</race>
+                <statOffsets>
+                    <li>
+                        <stat>PainShockThreshold</stat>
+                        <offset>0.15</offset>
+                    </li>
+                </statOffsets>
+            </li>
+        </raceAdjustments>
+    </XenotypeDef>
+</Defs>
