@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Patch label and description for MechanitorStartingMech -->
+	<Operation Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/questContentRules/rulesStrings</xpath>
+            <value>
+                <rulesStrings>
+                    <li>arrivalLetterLabel->[mech_label] attached: [mechanitor_nameDef]</li>
+                    <li>arrivalLetterText->A [mech_label] has dropped from orbit and is placing itself under the control of [mechanitor_nameDef].\n\nIt seems to have been attached to [mechanitor_possessive] Pipboy and is eager to serve its purpose once again.</li>
+                </rulesStrings>
+            </value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+	    <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/root[@Class="QuestNode_Root_MechanitorStartingMech"]/mechTypes</xpath>
+            <value>
+                <mechTypes>
+                    <li>RobCo_Constructron</li>
+                    <li>RobCo_Collectron</li>
+                </mechTypes>
+            </value>
+	</Operation>
+</Patch>

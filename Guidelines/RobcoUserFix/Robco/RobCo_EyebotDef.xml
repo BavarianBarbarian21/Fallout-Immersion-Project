@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Eyebot Base -->
+    <ThingDef Name="RobCo_EyebotBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+        		<MarketValue>900</MarketValue>
+       		 	<MoveSpeed>5.0</MoveSpeed>
+        		<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+        		<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+        		<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+      		</statBases>
+			<race>
+				<body>RobCo_Eyebot</body>				
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>0.7</baseBodySize>
+				<baseHealthScale>0.9</baseHealthScale>
+        		<mechWeightClass>Light</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+					<soundWounded>RobCo_Eyebot_Wounded</soundWounded>
+					<soundDeath>RobCo_Eyebot_Death</soundDeath>
+					<soundCall>RobCo_Eyebot_Call</soundCall>
+					<soundAngry>RobCo_Eyebot_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+        <nuzzleMtbHours>12</nuzzleMtbHours>
+			</race>
+			<butcherProducts>
+        		<Steel>10</Steel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+        <RecipeDef Name="RobCo_EyebotBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+			<researchPrerequisite>BasicMechtech</researchPrerequisite>
+			<gestationCycles>1</gestationCycles>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>100</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentIndustrial</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>RobCo_BrokenEyebotFrame</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+			<displayPriority>100</displayPriority>
+		</RecipeDef>
+
+<!-- Eyebot -->
+  <ThingDef ParentName="RobCo_EyebotBase">
+    <defName>RobCo_Eyebot</defName>
+    <label>Eyebot</label>
+    <description>A floating loudspeaker with a mind of its own, tirelessly blaring propaganda and tunes while sweeping the wastes with its mounted energy weapon.</description>
+    <race>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>10</minAge>
+          <soundWounded>RobCo_Eyebot_Wounded</soundWounded>
+          <soundDeath>RobCo_Eyebot_Death</soundDeath>
+          <soundCall>RobCo_Eyebot_Call</soundCall>
+          <soundAngry>RobCo_Eyebot_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_Eyebot</defName>
+    <label>Eyebot</label>
+    <race>RobCo_Eyebot</race>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/Eyebot/Eyebot</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/EyebotAncient/EyebotAncient</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_Blaster_Sharpshooter</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_EyebotBase_Recipe">
+    <defName>RobCo_Eyebot_Recipe</defName>
+    <label>craft Eyebot</label>
+    <description>Craft an Eyebot.</description>
+    <products>
+      <RobCo_Eyebot>1</RobCo_Eyebot>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_Eyebot</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+<!-- Eyebot Duraframe -->
+  <ThingDef ParentName="RobCo_EyebotBase">
+    <defName>RobCo_EyebotDuraframe</defName>
+    <label>Eyebot Duraframe</label>
+    <description>A hardened military variant of the Eyebot: thicker armor, heavier gun, and advanced comms gear.</description>
+    <race>
+        <baseHealthScale>1.0</baseHealthScale>
+      <mechEnabledWorkTypes>
+        <li>Firefighter</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities>
+        <Firefighter>2</Firefighter>
+      </mechWorkTypePriorities>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_EyebotDuraframe</defName>
+    <label>Eyebot Duraframe</label>
+    <race>RobCo_EyebotDuraframe</race>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/EyebotDuraframe/EyebotDuraframe</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_Blaster_Sniper</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_EyebotBase_Recipe">
+    <defName>RobCo_EyebotDuraframe_Recipe</defName>
+    <label>craft Eyebot Duraframe</label>
+    <description>Craft an Eyebot Duraframe.</description>
+    <products>
+      <RobCo_EyebotDuraframe>1</RobCo_EyebotDuraframe>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_EyebotDuraframe</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Crashed Vertibot -->
+    <ThingDef ParentName="RobCo_EyebotBase">
+      <defName>RobCo_EyebotCrashed</defName>
+        <label>Crashed Vertibird Robot</label>
+        <description>This is a strange Robot, it seems to collect data and send them... somewhere.</description>
+        <race>
+            <baseHealthScale>1.5</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <RobCo_BrokenEyebotFrame>1</RobCo_BrokenEyebotFrame>
+        </killedLeavingsPlayerHostile>
+    </ThingDef>
+
+    <PawnKindDef ParentName="LightMechanoidKind">
+      <defName>RobCo_EyebotCrashed</defName>
+        <label>Crashed Vertibird Robot</label>
+        <race>RobCo_EyebotCrashed</race>
+        <combatPower>300</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/EyebotBoss/EyebotBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_Blaster_Sniper</li>
+        </weaponTags>
+    </PawnKindDef>
+
+</Defs>

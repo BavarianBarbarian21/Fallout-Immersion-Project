@@ -1,0 +1,44 @@
+Robco_bodiesdef :
+For the shield to be possible to add on mechs they need to have a "torso" 
+Just added the torso tag to the groups of all the RobCo_Chassis 
+Lines : 
+13
+316
+470
+606
+852
+
+Robco_HandyDef :
+Switched "RobCo_BrokenEyebotFrame" by "signal_chip"
+line 419
+
+Robco_EyebotDef
+Switched "signal_chip" by "RobCo_BrokenEyebotFrame"
+Line 209
+
+Robco_FactionsPatch : 
+This one is a personnal preference suggestion you do you : 
+- Fixed the text (mentionned mechlink, replaced by pipboy) 
+- Made the text one line 
+Line 93
+
+- Changed the vertibird landing boss group. From termite or pickman to a mix of 
+Protectron + eyebot
+Gutsty + eyebot
+Cyberdog + eyebot
+Seemed alrightish in my testing, didn't try in a real game but the fight sounded fair.
+Line 104-135
+
+Robco_RaidPatch: 
+Another personnal preference to a bug fix (also I got lazy) 
+Switched the patch operation to replace the summon action from biotech mech with the robco version rather than add on top of it. 
+The less lazy solution would be to create a set of 4 items for the 4 summoning event (like you did for one of them) as once you summon it triggers both event regardless of which one you used to trigger but ... I don't care about biotech if I have robco so I opted to just disable them for now.
+
+Lines 13-14
+Lines 24-28
+Line 40+43+59
+Line 64+67+83
+
+Robco StartingPatch
+Entirely new file. 
+Edit the messages and switch the mechtype you acquire when installing a pip boy with Constructron and Collectron

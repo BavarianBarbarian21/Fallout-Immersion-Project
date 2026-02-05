@@ -28,25 +28,42 @@
             </li>
         </value>
     </Operation>
-    <!-- Give the BurnoutMechlinkBooster a bossgroup caller for Sheepsquatch -->
-    <Operation Class="PatchOperationAdd">
+    <!-- Give the BurnoutMechlinkBooster independent bossgroup callers for both Sheepsquatch and War Queen -->
+    <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps</xpath>
         <value>
-            <li Class="CompProperties_Usable">
-                <useJob>TriggerObject</useJob>
-                <useLabel>Call Sheepsquatch threat</useLabel>
-                <useDuration>900</useDuration>
-                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
-                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
-                <ignoreOtherReservations>true</ignoreOtherReservations>
-            </li>
-            <li Class="CompProperties_Useable_CallBossgroup">
-                <bossgroupDef>RobCo_AssaultronSheepsquatch</bossgroupDef>
-                <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
-                <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
-                <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
-                <delayTicks>120</delayTicks>
-            </li>
+            <comps>
+                <li Class="CompProperties_Usable">
+                    <useJob>TriggerObject</useJob>
+                    <useLabel>Call Sheepsquatch threat</useLabel>
+                    <useDuration>900</useDuration>
+                    <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                    <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                    <ignoreOtherReservations>true</ignoreOtherReservations>
+                </li>
+                <li Class="CompProperties_Useable_CallBossgroup">
+                    <bossgroupDef>RobCo_AssaultronSheepsquatch</bossgroupDef>
+                    <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+                    <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+                    <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                    <delayTicks>120</delayTicks>
+                </li>
+                <li Class="CompProperties_Usable">
+                    <useJob>TriggerObject</useJob>
+                    <useLabel>Call War Queen threat</useLabel>
+                    <useDuration>900</useDuration>
+                    <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                    <floatMenuFactionIcon>Insectoid</floatMenuFactionIcon>
+                    <ignoreOtherReservations>true</ignoreOtherReservations>
+                </li>
+                <li Class="CompProperties_Useable_CallBossgroup">
+                    <bossgroupDef>InfestationVengeance</bossgroupDef>
+                    <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+                    <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+                    <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                    <delayTicks>120</delayTicks>
+                </li>
+            </comps>
         </value>
     </Operation>
     <!-- Give the MechbandDish a bossgroup caller for Deathbot -->

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Handy Base -->
+    <ThingDef Name="RobCo_HandyBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>1800</MarketValue>
+				<MoveSpeed>4.6</MoveSpeed>
+				<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        		<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+        		<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+				<BandwidthCost>2</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Handy</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.0</baseBodySize>
+				<baseHealthScale>1.5</baseHealthScale>
+        		<mechWeightClass>Light</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+					<soundWounded>RobCo_Handy_Wounded</soundWounded>
+					<soundDeath>RobCo_Handy_Death</soundDeath>
+					<soundCall>RobCo_Handy_Call</soundCall>
+					<soundAngry>RobCo_Handy_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>10</Steel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+    <RecipeDef Name="RobCo_HandyBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+			<gestationCycles>2</gestationCycles>
+			<researchPrerequisite>StandardMechtech</researchPrerequisite>
+			<ingredients>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Steel</li>
+						</thingDefs>
+					</filter>
+					<count>75</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentIndustrial</li>
+						</thingDefs>
+					</filter>
+					<count>2</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>SignalChip</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>SubcoreRegular</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+			<displayPriority>200</displayPriority>
+		</RecipeDef>
+
+		<!-- Nanny Base -->
+    <ThingDef Name="RobCo_NannyBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>2000</MarketValue>
+				<MoveSpeed>4.6</MoveSpeed>
+				<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+        <MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+				<BandwidthCost>2</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Handy</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.0</baseBodySize>
+				<baseHealthScale>1.5</baseHealthScale>
+        		<mechWeightClass>Light</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+					<soundWounded>RobCo_Nanny_Wounded</soundWounded>
+					<soundDeath>RobCo_Nanny_Death</soundDeath>
+					<soundCall>RobCo_Nanny_Call</soundCall>
+						<soundAngry>RobCo_Nanny_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>10</Steel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+		<!-- Gutsy Base -->
+    <ThingDef Name="RobCo_GutsyBase" ParentName="BaseMechanoid" Abstract="True">
+			<statBases>
+				<MarketValue>1900</MarketValue>
+				<MoveSpeed>4.6</MoveSpeed>
+				<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        		<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+        		<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+				<BandwidthCost>2</BandwidthCost>
+				<ControlTakingTime>18</ControlTakingTime>
+			</statBases>
+			<race>
+				<body>RobCo_Handy</body>
+				<intelligence>ToolUser</intelligence>
+        		<thinkTreeMain>Mechanoid</thinkTreeMain>
+        		<baseBodySize>1.0</baseBodySize>
+				<baseHealthScale>1.8</baseHealthScale>
+        		<mechWeightClass>Medium</mechWeightClass>
+				<lifeStageAges>
+					<li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>0</minAge>
+					<soundWounded>RobCo_Gutsy_Wounded</soundWounded>
+					<soundDeath>RobCo_Gutsy_Death</soundDeath>
+					<soundCall>RobCo_Gutsy_Call</soundCall>
+					<soundAngry>RobCo_Gutsy_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</race>
+			<butcherProducts>
+        		<Steel>10</Steel>
+      		</butcherProducts>
+			<tools>
+				<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				</li>
+      		</tools>
+		</ThingDef>
+
+  <!-- Mister Farmhand -->
+  <ThingDef ParentName="RobCo_HandyBase">
+    <defName>RobCo_MisterFarmhand</defName>
+    <label>Mister Farmhand</label>
+    <description>Agricultural Handy variant with crop sensors, pesticide sprayers, and tireless cheer for "the simple country life."</description>
+    <race>
+      <mechEnabledWorkTypes>
+        <li>Growing</li>
+        <li>Handling</li>
+        <li>PlantCutting</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities>
+        <Growing>2</Growing>
+      </mechWorkTypePriorities>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_MisterFarmhand</defName>
+    <label>Mister Farmhand</label>
+    <race>RobCo_MisterFarmhand</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/MisterHandy/MisterHandy</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_Blaster_Civilian</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_HandyBase_Recipe">
+    <defName>RobCo_MisterFarmhand_Recipe</defName>
+    <label>craft Mister Farmhand</label>
+    <description>Craft a RobCo Mister Farmhand.</description>
+    <products>
+      <RobCo_MisterFarmhand>1</RobCo_MisterFarmhand>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_MisterFarmhand</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Mister Handy -->
+  <ThingDef ParentName="RobCo_HandyBase">
+    <defName>RobCo_MisterHandy</defName>
+    <label>Mister Handy</label>
+    <description>Floating domestic butler, cheerfully armed with buzz saw, flamethrower, and endless commentary. RobCo's most iconic host.</description>
+    <statBases>
+      <FoodPoisonChance>0.001</FoodPoisonChance>
+    </statBases>
+    <race>
+      <mechEnabledWorkTypes>
+        <li>Cooking</li>
+        <li>Cleaning</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities>
+        <Cleaning>2</Cleaning>
+      </mechWorkTypePriorities>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_MisterHandy</defName>
+    <label>Mister Handy</label>
+    <race>RobCo_MisterHandy</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/MisterHandy/MisterHandy</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_Blaster_Civilian</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_HandyBase_Recipe">
+    <defName>RobCo_MisterHandy_Recipe</defName>
+    <label>craft Mister Handy</label>
+    <description>Craft a RobCo Mister Handy.</description>
+    <products>
+      <RobCo_MisterHandy>1</RobCo_MisterHandy>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_MisterHandy</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+    <!-- Miss Nanny -->
+  <ThingDef ParentName="RobCo_NannyBase">
+    <defName>RobCo_MissNanny</defName>
+    <label>Miss Nanny</label>
+    <description>The Handy's daintier sister, fitted with programming in etiquette, childcare, and needlework. Less combat, more compassion.</description>
+    <race>
+      <mechEnabledWorkTypes>
+        <li>Doctor</li>
+        <li>Warden</li>
+      </mechEnabledWorkTypes>
+      <mechWorkTypePriorities>
+        <Warden>2</Warden>
+      </mechWorkTypePriorities>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_MissNanny</defName>
+    <label>Miss Nanny</label>
+    <race>RobCo_MissNanny</race>
+    <combatPower>10</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/MissNanny/MissNanny</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_Blaster_Civilian</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_HandyBase_Recipe">
+    <defName>RobCo_MissNanny_Recipe</defName>
+    <label>craft Miss Nanny</label>
+    <description>Craft a RobCo Miss Nanny.</description>
+    <products>
+      <RobCo_MissNanny>1</RobCo_MissNanny>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_MissNanny</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- Mister Gutsy -->
+  <ThingDef ParentName="RobCo_GutsyBase">
+    <defName>RobCo_MisterGutsy</defName>
+    <label>Mister Gutsy</label>
+    <description>Military-grade Handy,  and merciless, with  and a drill-sergeant personality.</description>
+    <race>
+    <lifeStageAges>
+      <li>
+						<def>MechanoidFullyFormed</def>
+						<minAge>10</minAge>
+						<soundWounded>RobCo_Gutsy_Wounded</soundWounded>
+						<soundDeath>RobCo_Gutsy_Death</soundDeath>
+						<soundCall>RobCo_Gutsy_Call</soundCall>
+						<soundAngry>RobCo_Gutsy_Angry</soundAngry>
+					</li>
+    </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>RobCo_MisterGutsy</defName>
+    <label>Mister Gutsy Gunner</label>
+    <race>RobCo_MisterGutsy</race>
+    <combatPower>150</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/MisterGutsy/MisterGutsy</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>RobCo/MisterGutsyAncient/MisterGutsyAncient</texPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>RobCo_GutsyArray</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <RecipeDef ParentName="RobCo_HandyBase_Recipe">
+    <defName>RobCo_MisterGutsy_Recipe</defName>
+    <label>craft Mister Gutsy Gunner</label>
+    <description>Craft a RobCo Mister Gutsy Gunner.</description>
+    <products>
+      <RobCo_MisterGutsy>1</RobCo_MisterGutsy>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>RobCo_MisterGutsy</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+
+  <!-- Hydra -->
+    <ThingDef ParentName="RobCo_GutsyBase">
+      <defName>RobCo_GutsyHydra</defName>
+        <label>Hydra</label>
+        <description>This is the Hydra, a dangerous foe of many wasteland legends. They say when you slice off one of its eyes two more grow back.</description>
+        <race>
+            <baseHealthScale>2.7</baseHealthScale>
+        </race>
+        <killedLeavingsPlayerHostile>
+            <SignalChip>1</SignalChip>
+        </killedLeavingsPlayerHostile>
+        <comps>
+            <li Class="CompProperties_MechCarrier">
+                <spawnPawnKind>RobCo_EyeOfHydra</spawnPawnKind>
+                <fixedIngredient>Steel</fixedIngredient>
+                <costPerPawn>25</costPerPawn>
+                <startingIngredientCount>600</startingIngredientCount>
+                <maxIngredientCount>600</maxIngredientCount>
+                <spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+                <spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+                <attachSpawnedEffecter>true</attachSpawnedEffecter>
+                <attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+            </li>
+        </comps>
+    </ThingDef>
+
+        <PawnKindDef ParentName="LightMechanoidKind">
+          <defName>RobCo_GutsyHydra</defName>
+            <label>Hydra</label>
+            <race>RobCo_GutsyHydra</race>
+            <combatPower>500</combatPower>
+            <lifeStages>
+                <li>
+                    <bodyGraphicData>
+                        <texPath>RobCo/MisterGutsyBoss/MisterGutsyBoss</texPath>
+                        <shaderType>CutoutWithOverlay</shaderType>
+                        <graphicClass>Graphic_Multi</graphicClass>
+                        <drawSize>1.5</drawSize>
+                        <shadowData>
+                            <volume>(0.3, 0.4, 0.3)</volume>
+                            <offset>(0,0,-0.25)</offset>
+                        </shadowData>
+                    </bodyGraphicData>
+                </li>
+            </lifeStages>
+            <weaponTags>
+                <li>RobCo_GutsyArray</li>
+            </weaponTags>
+        </PawnKindDef>
+
+<!-- Head of Hydra -->
+    <ThingDef ParentName="RobCo_HandyBase">
+    <defName>RobCo_EyeOfHydra</defName>
+    <label>Eye of Hydra</label>
+    <description>This is one of many eyes of the Hydra.</description>
+    <race>
+      <body>RobCo_Handy</body>
+    </race>
+  </ThingDef>
+
+    <PawnKindDef ParentName="LightMechanoidKind">
+        <defName>RobCo_EyeOfHydra</defName>
+        <label>Eye of Hydra</label>
+        <race>RobCo_EyeOfHydra</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <weaponTags>
+            <li>RobCo_Blaster_Sniper</li>
+        </weaponTags>
+    </PawnKindDef>
+
+
+</Defs>

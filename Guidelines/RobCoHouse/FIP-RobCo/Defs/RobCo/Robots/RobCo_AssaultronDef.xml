@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Assaultron Base -->
+	<ThingDef Name="RobCo_AssaultronBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>3000</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<BandwidthCost>3</BandwidthCost>
+			<ControlTakingTime>18</ControlTakingTime>
+		</statBases>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHealthScale>3.0</baseHealthScale>
+			<mechWeightClass>Medium</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_Assaultron_Wounded</soundWounded>
+					<soundDeath>RobCo_Assaultron_Death</soundDeath>
+					<soundCall>RobCo_Assaultron_Call</soundCall>
+					<soundAngry>RobCo_Assaultron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>10</Plasteel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.0</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_AssaultronBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<gestationCycles>4</gestationCycles>
+		<researchPrerequisite>HighMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PowerfocusChip</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreHigh</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>300</displayPriority>
+	</RecipeDef>
+
+	<!-- Assaultron -->
+	<ThingDef ParentName="RobCo_AssaultronBase">
+		<defName>RobCo_Assaultron</defName>
+		<label>Assaultron</label>
+		<description>Sleek, predatory killer: fast as a shadow, eyes burning with focused death beams. The wasteland’s mechanical reaper.</description>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>RobCo_Assaultron_Wounded</soundWounded>
+					<soundDeath>RobCo_Assaultron_Death</soundDeath>
+					<soundCall>RobCo_Assaultron_Call</soundCall>
+					<soundAngry>RobCo_Assaultron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>3</baseHealthScale>
+		</race>
+		<comps>
+			<li Class="CompProperties_TargetingBeam" />
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="HeavyMechanoidKind">
+		<defName>RobCo_Assaultron</defName>
+		<label>Assaultron</label>
+		<race>RobCo_Assaultron</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Assaultron/Assaultron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/AssaultronAncient/AssaultronAncient</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_LaserAssaultron</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_AssaultronBase_Recipe">
+		<defName>RobCo_Assaultron_Recipe</defName>
+		<label>craft Assaultron</label>
+		<description>Craft an Assaultron.</description>
+		<products>
+			<RobCo_Assaultron>1</RobCo_Assaultron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Assaultron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Sheepsquatch -->
+	<ThingDef ParentName="RobCo_AssaultronBase">
+		<defName>RobCo_AssaultronSheepsquatch</defName>
+		<label>Sheepsquatch</label>
+		<description>This is a Sheepsquatch. Well, not really, but if you squint your eyes it may look like the real one.</description>
+		<race>
+			<baseHealthScale>4.5</baseHealthScale>
+		</race>
+		<killedLeavings>
+			<PowerfocusChip>1</PowerfocusChip>
+		</killedLeavings>
+		<comps>
+			<li Class="CompProperties_TargetingBeam" />
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="HeavyMechanoidKind">
+		<defName>RobCo_AssaultronSheepsquatch</defName>
+		<label>Sheepsquatch</label>
+		<race>RobCo_AssaultronSheepsquatch</race>
+		<combatPower>450</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_LaserSheepsquatch</li>
+		</weaponTags>
+	</PawnKindDef>
+</Defs>
