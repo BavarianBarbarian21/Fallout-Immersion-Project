@@ -395,7 +395,22 @@
         <label>Hydra</label>
         <description>This is the Hydra, a dangerous foe of many wasteland legends. They say when you slice off one of its eyes two more grow back.</description>
         <race>
+            <body>RobCo_Handy</body>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Mechanoid</thinkTreeMain>
+            <baseBodySize>1.0</baseBodySize>
             <baseHealthScale>2.7</baseHealthScale>
+            <mechWeightClass>Medium</mechWeightClass>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RobCo_Gutsy_Wounded</soundWounded>
+                    <soundDeath>RobCo_Gutsy_Death</soundDeath>
+                    <soundCall>RobCo_Gutsy_Call</soundCall>
+                    <soundAngry>RobCo_Gutsy_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
         </race>
         <killedLeavingsPlayerHostile>
             <SignalChip>1</SignalChip>
@@ -444,6 +459,21 @@
         <description>This is one of many eyes of the Hydra.</description>
         <race>
             <body>RobCo_Handy</body>
+            <intelligence>ToolUser</intelligence>
+            <thinkTreeMain>Mechanoid</thinkTreeMain>
+            <baseBodySize>1.0</baseBodySize>
+            <baseHealthScale>1.5</baseHealthScale>
+            <mechWeightClass>Light</mechWeightClass>
+            <lifeStageAges>
+                <li>
+                    <def>MechanoidFullyFormed</def>
+                    <minAge>0</minAge>
+                    <soundWounded>RobCo_Handy_Wounded</soundWounded>
+                    <soundDeath>RobCo_Handy_Death</soundDeath>
+                    <soundCall>RobCo_Handy_Call</soundCall>
+                    <soundAngry>RobCo_Handy_Angry</soundAngry>
+                </li>
+            </lifeStageAges>
         </race>
     </ThingDef>
     <PawnKindDef ParentName="LightMechanoidKind">

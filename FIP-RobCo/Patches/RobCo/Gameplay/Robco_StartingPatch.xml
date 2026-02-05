@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<!-- Patch label and description for MechanitorStartingMech -->
+	<!-- Mechanitor Scenario Patch -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
+        <value>
+            <label>RobCo Mechanist</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
+        <value>
+            <description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive in the wasteland? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
+        </value>
+    </Operation>
+    
+    <!-- Patch label and description for MechanitorStartingMech -->
 	<Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/questContentRules/rulesStrings</xpath>
             <value>
@@ -10,14 +24,58 @@
                 </rulesStrings>
             </value>
 	</Operation>
-
 	<Operation Class="PatchOperationReplace">
 	    <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/root[@Class="QuestNode_Root_MechanitorStartingMech"]/mechTypes</xpath>
             <value>
                 <mechTypes>
                     <li>RobCo_Constructron</li>
                     <li>RobCo_Collectron</li>
+                    <li>RobCo_Factotron</li>
+                    <li>RobCo_Utilitron</li>
                 </mechTypes>
             </value>
 	</Operation>
+
+	<!-- Remove vanilla starting mechs and add RobCo mechs -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Lifter"]</xpath>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Constructoid"]</xpath>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
+		<value>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>RobCo_Constructron</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>RobCo_Factotron</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>RobCo_Utilitron</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingMech">
+				<def>StartingMech</def>
+				<mechKind>RobCo_Collectron</mechKind>
+				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+			</li>
+		</value>
+	</Operation>
+
+    <!-- Patch GameStartDialog text for Mechanitor scenario -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
+        <value>
+            <text>You are a RobCo Mechanic, a robotics engineer who left humanity behind. With your loyal RobCo mechs, you seek greatness in the wasteland. Will you unlock the secrets of RobCo and build a new future?</text>
+        </value>
+    </Operation>
+
+
 </Patch>

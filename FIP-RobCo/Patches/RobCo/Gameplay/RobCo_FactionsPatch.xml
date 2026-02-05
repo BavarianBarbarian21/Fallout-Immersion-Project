@@ -59,19 +59,6 @@
             <description>Crafted from the remnants of a lost age, the Mechanist commands legions of cold steel and gears. With an unyielding devotion to technology, they seek to build a new order where machines reign supreme, and flesh is secondary. Their creations march endlessly — silent, relentless, perfect.</description>
         </value>
     </Operation>
-    <!-- Mechanitor Scenario Patch -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
-        <value>
-            <label>RobCo Mechanist</label>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
-        <value>
-            <description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive on the rimworld? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
-        </value>
-    </Operation>
     <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
         <xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnSingular</xpath>
         <value>
@@ -89,20 +76,14 @@
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),
 			'questDescription->')]</xpath>
         <value>
-            <li>questDescription->You have decrypted an ancient RobCo transponder, revealing the
-				location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal
-				it to land nearby.
+            <li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
 
-				The ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can
-				create and control robots for work and combat. By extracting the deceased
-				mechanitor's mechlink, you can turn one of your own colonists into a mechanitor.
-				Beware - the ship also contains hostile RobCo robots. The robot group is composed
-				of:
+The ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can create and control robots for work and combat. By extracting the deceased mechanitor's mechlink, you can turn one of your own colonists into a mechanitor. Beware - the ship also contains hostile RobCo robots. The robot group is composed of:
 
-				[mechList]</li>
+[mechList]</li>
         </value>
     </Operation>
-    <!-- Patch MechanitorShip mechGroups to spawn 1 Mech_Termite and 2 Mech_Pikeman only -->
+    <!-- Patch MechanitorShip mechGroups to spawn 1 Eyebot and 2 Protectrons -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/root/mechGroups</xpath>
         <value>
@@ -110,12 +91,12 @@
                 <li>
                     <options>
                         <li>
-                            <pawnKind>Mech_Termite_Breach</pawnKind>
+                            <pawnKind>RobCo_Eyebot</pawnKind>
                             <weight>1</weight>
                             <requireOneOf>true</requireOneOf>
                         </li>
                         <li>
-                            <pawnKind>Mech_Pikeman</pawnKind>
+                            <pawnKind>RobCo_Protectron</pawnKind>
                             <weight>2</weight>
                         </li>
                     </options>
@@ -135,8 +116,7 @@
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
 			'mechanitorShuttleCrashedLetterText->')]</xpath>
         <value>
-            <li>mechanitorShuttleCrashedLetterText->A Vertibot ship containing rogue RobCo robots
-				has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
+            <li>mechanitorShuttleCrashedLetterText->A Vertibot containing rogue RobCo robots has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
@@ -164,39 +144,7 @@
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
 			"mechlinkAvailableLetterText->")]</xpath>
         <value>
-            <li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient
-				RobCo mechanitor.
-
-				Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking
-				the corpse.</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
-        <value>
-            <text>You are a mechanic, a robotics engineer who left humanity behind. With your loyal
-				mechs, you seek greatness on the rimworld. Will you unlock the secrets of RobCo and
-				build a new future?</text>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
-        <value>
-            <li Class="ScenPart_StartingMech">
-                <def>StartingMech</def>
-                <mechKind>Mech_Centurion</mechKind>
-                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-            </li>
-            <li Class="ScenPart_StartingMech">
-                <def>StartingMech</def>
-                <mechKind>Mech_Militor</mechKind>
-                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-            </li>
-            <li Class="ScenPart_StartingMech">
-                <def>StartingMech</def>
-                <mechKind>Mech_Pikeman</mechKind>
-                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-            </li>
+            <li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient RobCo mechanitor. Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
         </value>
     </Operation>
 </Patch>
