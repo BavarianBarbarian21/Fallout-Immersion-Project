@@ -74,13 +74,9 @@
     <!-- Patch MechanitorShip questDescription -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),
-			'questDescription->')]</xpath>
+            'questDescription->')]</xpath>
         <value>
-            <li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
-
-The Vertibird contains the remains of a long-dead RobCo mechanic. Mechanics can create and control robots for work and combat. By extracting the deceased mechanic's Pipboy, you can turn one of your own colonists into a mechanic. Beware - the ship also contains hostile RobCo robots. The robot group is composed of:
-
-[mechList]</li>
+            <li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.\n\nThe ship contains the remains of a long-dead RobCo mechanitor. Mechanitors can create and control robots for work and combat. By extracting the deceased mechanitor's Pipboy, you can turn one of your own colonists into a mechanitor.\n\nBeware - the ship also contains hostile RobCo robots. The robot group is composed of:\n\n[mechList]</li>
         </value>
     </Operation>
     <!-- Patch MechanitorShip mechGroups to spawn 1 Eyebot and 2 Protectrons -->
@@ -107,44 +103,44 @@ The Vertibird contains the remains of a long-dead RobCo mechanic. Mechanics can 
     <!-- Patch MechanitorShip questContentRules -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			'mechanitorShuttleCrashedLetterLabel->')]</xpath>
+            'mechanitorShuttleCrashedLetterLabel->')]</xpath>
         <value>
             <li>mechanitorShuttleCrashedLetterLabel->Vertibot crash site</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			'mechanitorShuttleCrashedLetterText->')]</xpath>
+            'mechanitorShuttleCrashedLetterText->')]</xpath>
         <value>
-            <li>mechanitorShuttleCrashedLetterText->A Vertibot containing rogue RobCo robots has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
+            <li>mechanitorShuttleCrashedLetterText->A Vertibot containing rogue RobCo robots has crashed nearby.\n\nThe robots will exit the wreck and prepare to fight.</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			'assaultBeginLetterLabel->')]</xpath>
+            'assaultBeginLetterLabel->')]</xpath>
         <value>
             <li>assaultBeginLetterLabel->RobCo robot attack</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			'assaultBeginLetterText->')]</xpath>
+            'assaultBeginLetterText->')]</xpath>
         <value>
             <li>assaultBeginLetterText->The rogue RobCo robots are coming to assault the colony!</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			"mechlinkAvailableLetterLabel->")]</xpath>
+            "mechlinkAvailableLetterLabel->")]</xpath>
         <value>
             <li>mechlinkAvailableLetterLabel->[mechanitor_nameDef]'s Pipboy available</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),
-			"mechlinkAvailableLetterText->")]</xpath>
+            "mechlinkAvailableLetterText->")]</xpath>
         <value>
-            <li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient RobCo mechanitor. Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
+            <li>mechlinkAvailableLetterText->The crashed Vertibot contained the corpse of an ancient  RobCo mechanitor.\n\nExtract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
         </value>
     </Operation>
 </Patch>
