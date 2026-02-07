@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+    <PawnKindDef Name="LightRobotKind" ParentName="BaseMechanoidKind" Abstract="True">
+        <weaponMoney>9999~9999</weaponMoney>
+        <combatPower>10</combatPower>
+        <weaponTags></weaponTags>
+        <techHediffsChance>1</techHediffsChance>
+        <techHediffsMoney>9999~9999</techHediffsMoney>
+        <controlGroupPortraitZoom>1.8</controlGroupPortraitZoom>
+        <allowInMechClusters>true</allowInMechClusters>
+    </PawnKindDef>
+
+    <PawnKindDef Name="NonCombatLightRobotKind" ParentName="LightRobotKind" Abstract="True">
+        <isFighter>false</isFighter>
+        <allowInMechClusters>false</allowInMechClusters>
+    </PawnKindDef>
+
+    <PawnKindDef Name="HeavyRobotKind" ParentName="BaseMechanoidKind" Abstract="True">
+        <weaponMoney>9999~9999</weaponMoney>
+        <combatPower>400</combatPower>
+        <weaponTags></weaponTags>
+        <techHediffsChance>1</techHediffsChance>
+        <techHediffsMoney>9999~9999</techHediffsMoney>
+        <controlGroupPortraitZoom>0.8</controlGroupPortraitZoom>
+        <allowInMechClusters>true</allowInMechClusters>
+    </PawnKindDef>
+
+</Defs> 
