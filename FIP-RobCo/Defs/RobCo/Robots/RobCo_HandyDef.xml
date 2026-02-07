@@ -190,7 +190,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="NonCombatLightRobotKind">
         <defName>RobCo_MisterFarmhand</defName>
         <label>Mister Farmhand</label>
         <race>RobCo_MisterFarmhand</race>
@@ -242,7 +242,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="NonCombatLightRobotKind">
         <defName>RobCo_MisterHandy</defName>
         <label>Mister Handy</label>
         <race>RobCo_MisterHandy</race>
@@ -291,7 +291,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="NonCombatLightRobotKind">
         <defName>RobCo_MissNanny</defName>
         <label>Miss Nanny</label>
         <race>RobCo_MissNanny</race>
@@ -429,7 +429,7 @@
             </li>
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="LightRobotKind">
         <defName>RobCo_GutsyHydra</defName>
         <label>Hydra</label>
         <race>RobCo_GutsyHydra</race>
@@ -476,10 +476,11 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="LightRobotKind">
         <defName>RobCo_EyeOfHydra</defName>
         <label>Eye of Hydra</label>
         <race>RobCo_EyeOfHydra</race>
+        <allowInMechClusters>false</allowInMechClusters>
         <lifeStages>
             <li>
                 <bodyGraphicData>
