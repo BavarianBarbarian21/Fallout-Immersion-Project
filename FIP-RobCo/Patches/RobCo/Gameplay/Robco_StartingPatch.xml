@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<!-- Mechanitor Scenario Patch -->
+    <!-- Mechanitor Scenario Patch -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
         <value>
@@ -15,7 +15,7 @@
     </Operation>
     
     <!-- Patch label and description for MechanitorStartingMech -->
-	<Operation Class="PatchOperationReplace">
+    <Operation Class="PatchOperationReplace">
         <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/questContentRules/rulesStrings</xpath>
             <value>
                 <rulesStrings>
@@ -23,9 +23,9 @@
                     <li>arrivalLetterText->A [mech_label] has dropped from orbit and is placing itself under the control of [mechanitor_nameDef].\n\nIt seems to have been attached to [mechanitor_possessive] Pipboy and is eager to serve its purpose once again.</li>
                 </rulesStrings>
             </value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-	    <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/root[@Class="QuestNode_Root_MechanitorStartingMech"]/mechTypes</xpath>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/root[@Class="QuestNode_Root_MechanitorStartingMech"]/mechTypes</xpath>
             <value>
                 <mechTypes>
                     <li>RobCo_Constructron</li>
@@ -34,40 +34,40 @@
                     <li>RobCo_Utilitron</li>
                 </mechTypes>
             </value>
-	</Operation>
+    </Operation>
 
-	<!-- Remove vanilla starting mechs and add RobCo mechs -->
-	<Operation Class="PatchOperationRemove">
-		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Lifter"]</xpath>
-	</Operation>
-	<Operation Class="PatchOperationRemove">
-		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Constructoid"]</xpath>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
-		<value>
-			<li Class="ScenPart_StartingMech">
-				<def>StartingMech</def>
-				<mechKind>RobCo_Constructron</mechKind>
-				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-			</li>
-			<li Class="ScenPart_StartingMech">
-				<def>StartingMech</def>
-				<mechKind>RobCo_Factotron</mechKind>
-				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-			</li>
-			<li Class="ScenPart_StartingMech">
-				<def>StartingMech</def>
-				<mechKind>RobCo_Utilitron</mechKind>
-				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-			</li>
-			<li Class="ScenPart_StartingMech">
-				<def>StartingMech</def>
-				<mechKind>RobCo_Collectron</mechKind>
-				<overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
-			</li>
-		</value>
-	</Operation>
+    <!-- Remove vanilla starting mechs and add RobCo mechs -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Lifter"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Constructoid"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
+        <value>
+            <li Class="ScenPart_StartingMech">
+                <def>StartingMech</def>
+                <mechKind>RobCo_Constructron</mechKind>
+                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+            </li>
+            <li Class="ScenPart_StartingMech">
+                <def>StartingMech</def>
+                <mechKind>RobCo_Factotron</mechKind>
+                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+            </li>
+            <li Class="ScenPart_StartingMech">
+                <def>StartingMech</def>
+                <mechKind>RobCo_Utilitron</mechKind>
+                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+            </li>
+            <li Class="ScenPart_StartingMech">
+                <def>StartingMech</def>
+                <mechKind>RobCo_Collectron</mechKind>
+                <overseenByPlayerPawnChance>1</overseenByPlayerPawnChance>
+            </li>
+        </value>
+    </Operation>
 
     <!-- Patch GameStartDialog text for Mechanitor scenario -->
     <Operation Class="PatchOperationReplace">
