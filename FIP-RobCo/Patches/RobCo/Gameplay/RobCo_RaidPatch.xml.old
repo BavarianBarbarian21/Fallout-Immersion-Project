@@ -19,7 +19,7 @@
                 <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
                 <ignoreOtherReservations>true</ignoreOtherReservations>
             </li>
-            <li Class="CompProperties_Useable_CallBossgroup">
+            <li Class="CompProperties_Useable_CallBossgroup" MayRequire="Ludeon.RimWorld.Biotech">
                 <bossgroupDef>RobCo_EyebotCrashed</bossgroupDef>
                 <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
                 <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
@@ -29,26 +29,25 @@
         </value>
     </Operation>
     <!-- Give the BurnoutMechlinkBooster independent bossgroup callers for Sheepsquatch -->
-    <Operation Class="PatchOperationReplace">
+    <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps</xpath>
         <value>
-            <comps>
-                <li Class="CompProperties_Usable">
-                    <useJob>TriggerObject</useJob>
-                    <useLabel>Call Sheepsquatch threat</useLabel>
-                    <useDuration>900</useDuration>
-                    <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
-                    <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
-                    <ignoreOtherReservations>true</ignoreOtherReservations>
-                </li>
-                <li Class="CompProperties_Useable_CallBossgroup">
-                    <bossgroupDef>RobCo_AssaultronSheepsquatch</bossgroupDef>
-                    <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
-                    <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
-                    <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
-                    <delayTicks>120</delayTicks>
-                </li>
-            </comps>
+            <li Class="CompProperties_Usable">
+                <useJob>TriggerObject</useJob>
+                <useLabel>Call Sheepsquatch threat</useLabel>
+                <useDuration>900</useDuration>
+                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                <ignoreOtherReservations>true</ignoreOtherReservations>
+            </li>
+            <li Class="CompProperties_Useable_CallBossgroup">
+                <bossgroupDef>RobCo_AssaultronSheepsquatch</bossgroupDef>
+                <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+                <prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
+                <unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+                <unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+                <delayTicks>120</delayTicks>
+            </li>
         </value>
     </Operation>
     <!-- Give the MechbandDish a bossgroup caller for Deathbot -->
@@ -65,9 +64,10 @@
             </li>
             <li Class="CompProperties_Useable_CallBossgroup">
                 <bossgroupDef>RobCo_SentrybotDeathbot</bossgroupDef>
-                <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
-                <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
-                <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                <effecterDef>MechbandDishUsed</effecterDef>
+                <prepareEffecterDef>MechBandDishPrepared</prepareEffecterDef>
+                <unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+                <unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
                 <delayTicks>120</delayTicks>
             </li>
         </value>

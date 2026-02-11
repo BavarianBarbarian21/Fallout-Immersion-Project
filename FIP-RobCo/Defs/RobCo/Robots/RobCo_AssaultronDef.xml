@@ -38,7 +38,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>10.0</power>
+                <power>15.0</power>
                 <cooldownTime>2.6</cooldownTime>
                 <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -172,16 +172,6 @@
             <baseBodySize>1.0</baseBodySize>
             <baseHealthScale>4.5</baseHealthScale>
             <mechWeightClass>Medium</mechWeightClass>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>0</minAge>
-                    <soundWounded>RobCo_Assaultron_Wounded</soundWounded>
-                    <soundDeath>RobCo_Assaultron_Death</soundDeath>
-                    <soundCall>RobCo_Assaultron_Call</soundCall>
-                    <soundAngry>RobCo_Assaultron_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
         </race>
         <killedLeavings>
             <PowerfocusChip>1</PowerfocusChip>
@@ -196,6 +186,18 @@
         <race>RobCo_AssaultronSheepsquatch</race>
         <combatPower>450</combatPower>
         <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <drawSize>1.25</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.4, 0.3)</volume>
+                        <offset>(0,0,-0.25)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+            </li>
             <li>
                 <bodyGraphicData>
                     <texPath>RobCo/AssaultronBoss/AssaultronBoss</texPath>
