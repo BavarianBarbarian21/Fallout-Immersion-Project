@@ -81,51 +81,6 @@
             <description>Node for managing RobCo robot control bands.</description>
         </value>
     </Operation>
-    <!-- MechbandAntenna -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/label</xpath>
-        <value>
-            <label>RobCo Antenna</label>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
-        <value>
-            <description>Further boosts the performance of the comms console.</description>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/costList</xpath>
-        <value>
-            <costList>
-                <Steel>200</Steel>
-                <ComponentIndustrial>8</ComponentIndustrial>
-            </costList>
-        </value>
-    </Operation>
-    <!-- MechbandDish -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/label</xpath>
-        <value>
-            <label>RobCo Dish</label>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/description</xpath>
-        <value>
-            <description>Greatly boosts the performance of the comms console.</description>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/costList</xpath>
-        <value>
-            <costList>
-                <Steel>300</Steel>
-                <Plasteel>100</Plasteel>
-                <ComponentSpacer>4</ComponentSpacer>
-            </costList>
-        </value>
-    </Operation>
     <!-- MechGestator -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="MechGestator"]/label</xpath>
