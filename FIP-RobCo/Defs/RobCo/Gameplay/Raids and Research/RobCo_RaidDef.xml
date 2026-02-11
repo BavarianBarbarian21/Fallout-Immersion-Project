@@ -130,9 +130,9 @@
         <label>RobCo Receiver</label>
         <description>Boosts the performance of the comms console.</description>
         <graphicData>
-            <texPath>RobCo/Misc/AntennaCivilian</texPath>
+            <texPath>RobCo/Misc/Receiver</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(2,1)</drawSize>
+            <drawSize>(1,1)</drawSize>
             <shadowData>
                 <volume>(1.7, 0.75, 0.8)</volume>
                 <offset>(0.15, 0, 0)</offset>
@@ -155,7 +155,7 @@
             <Mass>25</Mass>
             <Flammability>0.5</Flammability>
         </statBases>
-        <size>(2,1)</size>
+        <size>(1,1)</size>
         <costList>
             <Steel>100</Steel>
             <ComponentIndustrial>4</ComponentIndustrial>
@@ -193,8 +193,13 @@
         <label>RobCo Antenna</label>
         <description>Further boosts the performance of the comms console.</description>
         <graphicData>
-            <texPath>RobCo/Misc/AntennaMilitary</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Misc/MechbandAntenna</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,1)</drawSize>
+            <shadowData>
+                <volume>(1.7, 0.75, 0.8)</volume>
+                <offset>(0.15, 0, 0)</offset>
+            </shadowData>
         </graphicData>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -252,8 +257,12 @@
         <label>RobCo Dish</label>
         <description>Greatly boosts the performance of the comms console.</description>
         <graphicData>
-            <texPath>Things/Building/Misc/MechbandAntenna</texPath>
+            <texPath>Things/Building/Misc/MechbandDish</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(1.1, 0.75, 1.1)</volume>
+            </shadowData>
         </graphicData>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
