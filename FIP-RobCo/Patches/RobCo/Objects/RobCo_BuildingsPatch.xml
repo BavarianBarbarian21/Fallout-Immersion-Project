@@ -18,8 +18,7 @@
         <xpath>
 			/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_ProximityLetter"]/letterText</xpath>
         <value>
-            <letterText>A crashed Vertibot lies here, its hull twisted and scorched. Pre-war
-				technology and secrets may be hidden within the wreckage.</letterText>
+            <letterText>A crashed Vertibot lies here, its hull twisted and scorched. Pre-war technology and secrets may be hidden within the wreckage.</letterText>
         </value>
     </Operation>
     <!-- Patch letterText for CompProperties_LeavingsLetter -->
@@ -27,8 +26,7 @@
         <xpath>
 			/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_LeavingsLetter"]/letterText</xpath>
         <value>
-            <letterText>The Vertibot wreckage has been disturbed, scattering remnants of pre-war
-				tech and memories of its final flight.</letterText>
+            <letterText>The Vertibot wreckage has been disturbed, scattering remnants of pre-war tech and memories of its final flight.</letterText>
         </value>
     </Operation>
     <!-- AncientExostriderHead -->
@@ -81,51 +79,6 @@
         <xpath>/Defs/ThingDef[defName="BandNode"]/description</xpath>
         <value>
             <description>Node for managing RobCo robot control bands.</description>
-        </value>
-    </Operation>
-    <!-- MechbandAntenna -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/label</xpath>
-        <value>
-            <label>RobCo Antenna</label>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/description</xpath>
-        <value>
-            <description>Further boosts the performance of the comms console.</description>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/costList</xpath>
-        <value>
-            <costList>
-                <Steel>200</Steel>
-                <ComponentIndustrial>8</ComponentIndustrial>
-            </costList>
-        </value>
-    </Operation>
-    <!-- MechbandDish -->
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/label</xpath>
-        <value>
-            <label>RobCo Dish</label>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/description</xpath>
-        <value>
-            <description>Greatly boosts the performance of the comms console.</description>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/costList</xpath>
-        <value>
-            <costList>
-                <Steel>300</Steel>
-                <Plasteel>100</Plasteel>
-                <ComponentSpacer>4</ComponentSpacer>
-            </costList>
         </value>
     </Operation>
     <!-- MechGestator -->
