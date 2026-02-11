@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- RobCo Broken Eyebot Frame -->
     <ThingDef ParentName="MechResourceBase">
         <defName>RobCo_BrokenEyebotFrame</defName>
         <label>Broken Eyebot Frame</label>
@@ -42,13 +43,95 @@
             </li>
         </comps>
     </ThingDef>
+
+<!-- RobCo Comms Console -->
     <ThingDef ParentName="BuildingBase">
-        <defName>MechbandReceiver</defName>
+        <defName>RobCo_CommsConsole</defName>
+        <label>RobCo Comms Console</label>
+        <description>Comms console with RobCo bossgroup functionality.</description>
+        <thingClass>Building_CommsConsole</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Misc/CommsConsole</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(5,4)</drawSize>
+            <damageData>
+                <rect>(0,0,3,1.8)</rect>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+            <shadowData>
+                <volume>(3,0.5,2)</volume>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>2200</WorkToBuild>
+            <Flammability>0.6</Flammability>
+        </statBases>
+        <size>(3,2)</size>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+        </building>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <interactionCellOffset>(0,0,2)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>Misc</designationCategory>
+        <uiOrder>2100</uiOrder>
+        <comps Inherit="False">
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <basePowerConsumption>200</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Usable">
+                <useJob>TriggerObject</useJob>
+                <useLabel>Call Vertibot threat</useLabel>
+                <useDuration>900</useDuration>
+                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                <ignoreOtherReservations>true</ignoreOtherReservations>
+            </li>
+            <li Class="CompProperties_Useable_CallBossgroup" MayRequire="Ludeon.RimWorld.Biotech">
+                <bossgroupDef>RobCo_EyebotCrashed</bossgroupDef>
+                <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+                <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+                <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                <delayTicks>120</delayTicks>
+            </li>
+        </comps>
+        <designationHotKey>Misc3</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>MicroelectronicsBasics</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <tickerType MayRequire="Ludeon.RimWorld.Biotech">Normal</tickerType>
+    </ThingDef>
+
+    <!-- RobCo Receiver -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>RobCo_Receiver</defName>
         <label>RobCo Receiver</label>
         <description>Boosts the performance of the comms console.</description>
         <graphicData>
-            <texPath>Things/Building/Misc/MechbandAntenna</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
+            <texPath>RobCo/Misc/AntennaCivilian</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(2,1)</drawSize>
             <shadowData>
                 <volume>(1.7, 0.75, 0.8)</volume>
@@ -75,7 +158,7 @@
         <size>(2,1)</size>
         <costList>
             <Steel>100</Steel>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
         <killedLeavings>
             <ChunkSlagSteel>3</ChunkSlagSteel>
@@ -83,7 +166,7 @@
         <researchPrerequisites>
             <li>BasicMechtech</li>
         </researchPrerequisites>
-        <comps>
+        <comps Inherit="False">
             <li Class="CompProperties_Usable">
                 <useJob>TriggerObject</useJob>
                 <useLabel>Summon Hydra threat</useLabel>
@@ -103,4 +186,124 @@
         <tickerType>Normal</tickerType>
         <filthLeaving>Filth_MachineBits</filthLeaving>
     </ThingDef>
+
+    <!-- RobCo Antenna -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>RobCo_BurnoutMechlinkBooster</defName>
+        <label>RobCo Antenna</label>
+        <description>Further boosts the performance of the comms console.</description>
+        <graphicData>
+            <texPath>RobCo/Misc/AntennaMilitary</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Biotech</li>
+            </buildingTags>
+        </building>
+        <designationCategory>Biotech</designationCategory>
+        <uiOrder>2450</uiOrder>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>8500</WorkToBuild>
+            <Mass>28</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <Steel>200</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <killedLeavings>
+            <ChunkSlagSteel>3</ChunkSlagSteel>
+        </killedLeavings>
+        <researchPrerequisites>
+            <li>BasicMechtech</li>
+        </researchPrerequisites>
+        <comps Inherit="False">
+            <li Class="CompProperties_Usable">
+                <useJob>TriggerObject</useJob>
+                <useLabel>Call Sheepsquatch threat</useLabel>
+                <useDuration>900</useDuration>
+                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                <ignoreOtherReservations>true</ignoreOtherReservations>
+            </li>
+            <li Class="CompProperties_Useable_CallBossgroup">
+                <bossgroupDef>RobCo_AssaultronSheepsquatch</bossgroupDef>
+                <effecterDef>BurnoutMechlinkBoosterUsed</effecterDef>
+                <prepareEffecterDef>MechBandAntennaPrepared</prepareEffecterDef>
+                <unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+                <unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+                <delayTicks>120</delayTicks>
+            </li>
+        </comps>
+        <tickerType>Normal</tickerType>
+        <filthLeaving>Filth_MachineBits</filthLeaving>
+    </ThingDef>
+
+    <!-- RobCo Dish -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>RobCo_MechbandDish</defName>
+        <label>RobCo Dish</label>
+        <description>Greatly boosts the performance of the comms console.</description>
+        <graphicData>
+            <texPath>Things/Building/Misc/MechbandAntenna</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Biotech</li>
+            </buildingTags>
+        </building>
+        <designationCategory>Biotech</designationCategory>
+        <uiOrder>2460</uiOrder>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>10000</WorkToBuild>
+            <Mass>40</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <size>(2,2)</size>
+        <costList>
+            <Steel>300</Steel>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <killedLeavings>
+            <ChunkSlagSteel>4</ChunkSlagSteel>
+        </killedLeavings>
+        <researchPrerequisites>
+            <li>BasicMechtech</li>
+        </researchPrerequisites>
+        <comps Inherit="False">
+            <li Class="CompProperties_Usable">
+                <useJob>TriggerObject</useJob>
+                <useLabel>Call Deathbot threat</useLabel>
+                <useDuration>900</useDuration>
+                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                <ignoreOtherReservations>true</ignoreOtherReservations>
+            </li>
+            <li Class="CompProperties_Useable_CallBossgroup">
+                <bossgroupDef>RobCo_SentrybotDeathbot</bossgroupDef>
+                <effecterDef>MechbandDishUsed</effecterDef>
+                <prepareEffecterDef>MechBandDishPrepared</prepareEffecterDef>
+                <unlockedLetterLabelKey>LetterLabelBossgroupCallerUnlocked</unlockedLetterLabelKey>
+                <unlockedLetterTextKey>LetterBossgroupCallerUnlocked</unlockedLetterTextKey>
+                <delayTicks>120</delayTicks>
+            </li>
+        </comps>
+        <tickerType>Normal</tickerType>
+        <filthLeaving>Filth_MachineBits</filthLeaving>
+    </ThingDef>
+
 </Defs>
