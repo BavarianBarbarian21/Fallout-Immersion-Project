@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Prevent all standard mech (non robco) from spawning in clusters/raids/events -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]</xpath>
+        <value>
+            <allowInMechClusters>false</allowInMechClusters>
+        </value>
+    </Operation>
+</Patch>
