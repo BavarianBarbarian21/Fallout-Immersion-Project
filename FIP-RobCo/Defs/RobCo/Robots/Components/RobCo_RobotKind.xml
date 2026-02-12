@@ -4,19 +4,22 @@
   <PawnKindDef ParentName="LightMechanoidKind" Name="RobCo_SmallRobotKind" Abstract="true">
     <defName>RobCo_SmallRobotKind</defName>
     <isFighter>true</isFighter>
+    <allowInMechClusters>true</allowInMechClusters>
   </PawnKindDef>
 
   <!--Oversized Robots-->
   <PawnKindDef ParentName="HeavyMechanoidKind" Name="RobCo_LargeRobotKind" Abstract="true">
     <defName>RobCo_LargeRobotKind</defName>
     <isFighter>true</isFighter>
+    <allowInMechClusters>true</allowInMechClusters>
   </PawnKindDef>
 
   <!-- Commander Robots and unique Raid bosses which do no spawn in clusters-->
   <PawnKindDef ParentName="HeavyMechanoidKind" Name="RobCo_HugeRobotKind" Abstract="true">
     <defName>RobCo_HugeRobotKind</defName>
     <controlGroupPortraitZoom>0.50</controlGroupPortraitZoom>
-    <isFighter>false</isFighter>
+    <isFighter>true</isFighter>
+    <allowInMechClusters>false</allowInMechClusters>
   </PawnKindDef>
 
 </Defs>

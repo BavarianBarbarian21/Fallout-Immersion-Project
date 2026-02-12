@@ -27,20 +27,8 @@
         <xpath>/Defs/PawnKindDef[defName="BaseMechanoidKind"]/isFighter</xpath>
         <value>
           <isFighter>false</isFighter>
+          <allowInMechClusters>false</allowInMechClusters>
         </value>
       </li>
-  
-  <!-- Odyssey Mechanoids - requires RobCo and Odyssey -->
-  <Operation Class="PatchOperationSequence" MayRequire="FIP.RobCo,Ludeon.RimWorld.Odyssey">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Cyclops"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-    </operations>
-  </Operation>
   
 </Patch>
