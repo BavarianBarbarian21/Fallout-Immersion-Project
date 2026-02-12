@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Small Robots -->
+  <PawnKindDef ParentName="LightMechanoidKind" Name="RobCo_SmallRobotKind" Abstract="true">
+    <defName>RobCo_SmallRobotKind</defName>
+    <isFighter>true</isFighter>
+  </PawnKindDef>
+
+  <!--Oversized Robots-->
+  <PawnKindDef ParentName="HeavyMechanoidKind" Name="RobCo_LargeRobotKind" Abstract="true">
+    <defName>RobCo_LargeRobotKind</defName>
+    <isFighter>true</isFighter>
+  </PawnKindDef>
+
+  <!-- Commander Robots and unique Raid bosses which do no spawn in clusters-->
+  <PawnKindDef ParentName="HeavyMechanoidKind" Name="RobCo_HugeRobotKind" Abstract="true">
+    <defName>RobCo_HugeRobotKind</defName>
+    <controlGroupPortraitZoom>0.50</controlGroupPortraitZoom>
+    <isFighter>false</isFighter>
+  </PawnKindDef>
+
+</Defs>
