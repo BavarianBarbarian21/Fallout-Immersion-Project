@@ -22,133 +22,13 @@
         </value>
       </li>
       
-      <!-- Remove bossgroup caller comps -->
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps/li[1]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="BurnoutMechlinkBooster"]/comps/li[2]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/comps/li[1]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="MechbandDish"]/comps/li[2]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="CommsConsole"]/comps/li[4]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="CommsConsole"]/comps/li[5]</xpath>
-      </li>
-      
-      <!-- Make all vanilla mechanoids non-fighters -->
-      <!-- Biotech Light Mechanoids -->
+      <!-- Make all vanilla mechanoids non-fighters by disabling base kinds -->
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Militor"]</xpath>
+        <xpath>/Defs/PawnKindDef[defName="BaseMechanoidKind"]/isFighter</xpath>
         <value>
           <isFighter>false</isFighter>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Lifter"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Constructoid"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Fabricor"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Agrihand"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Cleansweeper"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_WarUrchin"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Paramedic"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      
-      <!-- Biotech Medium Mechanoids -->
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Legionary"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Tesseron"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Scorcher"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      
-      <!-- Biotech Heavy Mechanoids -->
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Tunneler"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      
-      <!-- Biotech SuperHeavy Mechanoids -->
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Apocriton"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Centurion"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Warqueen"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/PawnKindDef[defName="Mech_Diabolus"]</xpath>
-        <value>
-          <isFighter>false</isFighter>
-        </value>
-      </li>
-      
-    </operations>
-  </Operation>
   
   <!-- Odyssey Mechanoids - requires RobCo and Odyssey -->
   <Operation Class="PatchOperationSequence" MayRequire="FIP.RobCo,Ludeon.RimWorld.Odyssey">

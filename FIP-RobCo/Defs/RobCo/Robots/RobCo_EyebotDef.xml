@@ -39,7 +39,7 @@
                 </capacities>
                 <power>3</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -93,7 +93,7 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_Eyebot</defName>
         <label>Eyebot</label>
         <race>RobCo_Eyebot</race>
@@ -112,6 +112,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Eyebot</label>
                 <bodyGraphicData>
                     <texPath>RobCo/EyebotAncient/EyebotAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
@@ -154,7 +155,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_EyebotDuraframe</defName>
         <label>Eyebot Duraframe</label>
         <race>RobCo_EyebotDuraframe</race>
@@ -206,7 +207,7 @@
             <RobCo_BrokenEyebotFrame>1</RobCo_BrokenEyebotFrame>
         </killedLeavingsPlayerHostile>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_HugeRobotKind">
         <defName>RobCo_EyebotCrashed</defName>
         <label>Crashed Vertibird Robot</label>
         <race>RobCo_EyebotCrashed</race>

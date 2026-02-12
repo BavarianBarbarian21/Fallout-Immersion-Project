@@ -38,7 +38,7 @@
                 </capacities>
                 <power>12</power>
                 <cooldownTime>1.8</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -81,7 +81,7 @@
         <label>Roboscorpion</label>
         <description>A dangerous arachnid war machine. Eight legs for rapid desert traversal, venomous stinger, and pincers that can tear through armor. Do not approach.</description>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_Roboscorpion</defName>
         <label>Roboscorpion</label>
         <race>RobCo_Roboscorpion</race>
@@ -131,7 +131,7 @@
             <mechWeightClass>Medium</mechWeightClass>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
+    <PawnKindDef ParentName="RobCo_HugeRobotKind">
         <defName>RobCo_RoboscorpionQueen</defName>
         <label>Roboscorpion Queen</label>
         <race>RobCo_RoboscorpionQueen</race>

@@ -48,7 +48,7 @@
                 </capacities>
                 <power>4</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -123,7 +123,7 @@
             </li>
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_Robobrain</defName>
         <label>Robobrain</label>
         <race>RobCo_Robobrain</race>
@@ -142,6 +142,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Robobrain</label>
                 <bodyGraphicData>
                     <texPath>RobCo/RobobrainAncient/RobobrainAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>

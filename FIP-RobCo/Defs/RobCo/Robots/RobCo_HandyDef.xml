@@ -40,7 +40,7 @@
                 </capacities>
                 <power>6</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -124,7 +124,7 @@
                 </capacities>
                 <power>4</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -169,7 +169,7 @@
                 </capacities>
                 <power>6</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -190,7 +190,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_MisterFarmhand</defName>
         <label>Mister Farmhand</label>
         <race>RobCo_MisterFarmhand</race>
@@ -242,7 +242,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_MisterHandy</defName>
         <label>Mister Handy</label>
         <race>RobCo_MisterHandy</race>
@@ -291,7 +291,7 @@
             </mechWorkTypePriorities>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_MissNanny</defName>
         <label>Miss Nanny</label>
         <race>RobCo_MissNanny</race>
@@ -343,7 +343,7 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_SmallRobotKind">
         <defName>RobCo_MisterGutsy</defName>
         <label>Mister Gutsy Gunner</label>
         <race>RobCo_MisterGutsy</race>
@@ -362,6 +362,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Mister Gutsy</label>
                 <bodyGraphicData>
                     <texPath>RobCo/MisterGutsyAncient/MisterGutsyAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
@@ -419,7 +420,7 @@
             </li>
         </comps>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_HugeRobotKind">
         <defName>RobCo_GutsyHydra</defName>
         <label>Hydra</label>
         <race>RobCo_GutsyHydra</race>
@@ -456,7 +457,7 @@
             <mechWeightClass>Light</mechWeightClass>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="LightMechanoidKind">
+    <PawnKindDef ParentName="RobCo_HugeRobotKind">
         <defName>RobCo_EyeOfHydra</defName>
         <label>Eye of Hydra</label>
         <race>RobCo_EyeOfHydra</race>
@@ -477,5 +478,6 @@
         <weaponTags>
             <li>RobCo_Blaster_Sniper</li>
         </weaponTags>
+        <isFighter>false</isFighter>
     </PawnKindDef>
 </Defs>

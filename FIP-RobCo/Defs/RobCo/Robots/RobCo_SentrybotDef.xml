@@ -41,7 +41,7 @@
                 </capacities>
                 <power>20.0</power>
                 <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>RobCo_Tool</linkedBodyPartsGroup>
+                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
             </li>
         </tools>
@@ -111,7 +111,7 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
+    <PawnKindDef ParentName="RobCo_LargeRobotKind">
         <defName>RobCo_SentrybotSiegebreaker</defName>
         <label>Siegebreaker Sentrybot</label>
         <race>RobCo_SentrybotSiegebreaker</race>
@@ -130,6 +130,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Siegebreaker Sentrybot</label>
                 <bodyGraphicData>
                     <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
@@ -175,7 +176,7 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
+    <PawnKindDef ParentName="RobCo_LargeRobotKind">
         <defName>RobCo_SentrybotPestcontrol</defName>
         <label>Pestcontrol Sentrybot</label>
         <race>RobCo_SentrybotPestcontrol</race>
@@ -194,6 +195,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Pestcontrol Sentrybot</label>
                 <bodyGraphicData>
                     <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
@@ -239,7 +241,7 @@
             </lifeStageAges>
         </race>
     </ThingDef>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
+    <PawnKindDef ParentName="RobCo_LargeRobotKind">
         <defName>RobCo_SentrybotAnnihilator</defName>
         <label>Annihilator Sentrybot</label>
         <race>RobCo_SentrybotAnnihilator</race>
@@ -258,6 +260,7 @@
                 </bodyGraphicData>
             </li>
             <li>
+                <label>pre-war Annihilator Sentrybot</label>
                 <bodyGraphicData>
                     <texPath>RobCo/SentrybotAncient/SentrybotAncient</texPath>
                     <shaderType>CutoutWithOverlay</shaderType>
@@ -302,7 +305,7 @@
             <NanostructuringChip>1</NanostructuringChip>
         </killedLeavingsPlayerHostile>
     </ThingDef>
-    <PawnKindDef ParentName="HeavyMechanoidKind">
+    <PawnKindDef ParentName="RobCo_HugeRobotKind">
         <defName>RobCo_SentrybotDeathbot</defName>
         <label>Deathbot</label>
         <race>RobCo_SentrybotDeathbot</race>
