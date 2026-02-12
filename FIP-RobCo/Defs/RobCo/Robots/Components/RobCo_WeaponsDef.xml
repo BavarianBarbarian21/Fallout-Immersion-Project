@@ -324,7 +324,7 @@
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
         </verbs>
-        <comps Inherit="False" MayRequire="Ludeon.RimWorld.Anomaly">
+        <comps Inherit="False">
             <li Class="CompProperties_EquippableAbilityReloadable">
                 <abilityDef>RobCo_NapalmFlamer</abilityDef>
                 <maxCharges>3</maxCharges>
@@ -379,6 +379,9 @@
             <Mass>3.4</Mass>
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
         </statBases>
+        <weaponTags>
+            <li>RobCo_Exterminator</li>
+        </weaponTags>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -653,7 +656,7 @@
         <defName>RobCo_ExterminatorFlamer</defName>
         <label>exterminator flamer</label>
         <description>Expends a charge to spray an extended-range incendiary burst.</description>
-        <iconPath>UI/Abilities/Burner</iconPath>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
         <aiCanUse>true</aiCanUse>
         <ai_IsIncendiary>true</ai_IsIncendiary>
         <warmupStartSound>FireSpew_Warmup</warmupStartSound>
@@ -681,7 +684,7 @@
                 <damAmount>12</damAmount>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
-            <li Class="CompProperties_AbilityBurner">
+            <li Class="CompProperties_AbilityBurner" MayRequire="Ludeon.RimWorld.Anomaly">
                 <numStreams>15</numStreams>
                 <range>20</range>
                 <coneSizeDegrees>7.2</coneSizeDegrees>
@@ -695,11 +698,11 @@
         </comps>
     </AbilityDef>
     <!-- Gutsy Array Ability -->
-    <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <AbilityDef>
         <defName>RobCo_NapalmFlamer</defName>
         <label>napalm flamer</label>
         <description>Expends a napalm charge to spray an incendiary burst.</description>
-        <iconPath>UI/Abilities/Burner</iconPath>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
         <aiCanUse>true</aiCanUse>
         <ai_IsIncendiary>true</ai_IsIncendiary>
         <warmupStartSound>FireSpew_Warmup</warmupStartSound>
@@ -727,7 +730,7 @@
                 <damAmount>12</damAmount>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
-            <li Class="CompProperties_AbilityBurner">
+            <li Class="CompProperties_AbilityBurner" MayRequire="Ludeon.RimWorld.Anomaly">
                 <numStreams>15</numStreams>
                 <range>11</range>
                 <coneSizeDegrees>7.2</coneSizeDegrees>
