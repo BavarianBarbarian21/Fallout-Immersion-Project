@@ -1,168 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- ================= ROBOSCORPION BASE ================= -->
-    <ThingDef Name="RobCo_RoboscorpionBase" ParentName="BaseMechanoid" Abstract="True">
-        <statBases>
-            <MarketValue>2000</MarketValue>
-            <MoveSpeed>3.5</MoveSpeed>
-            <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-            <MechEnergyLossPerHP>0.50</MechEnergyLossPerHP>
-        </statBases>
-        <race>
-            <body>RobCo_Roboscorpion</body>
-            <intelligence>ToolUser</intelligence>
-            <thinkTreeMain>Mechanoid</thinkTreeMain>
-            <baseBodySize>1.2</baseBodySize>
-            <baseHealthScale>2.5</baseHealthScale>
-            <mechWeightClass>Light</mechWeightClass>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>0</minAge>
-                    <soundWounded>RobCo_Roboscorpion_Wounded</soundWounded>
-                    <soundDeath>RobCo_Roboscorpion_Death</soundDeath>
-                    <soundCall>RobCo_Roboscorpion_Call</soundCall>
-                    <soundAngry>RobCo_Roboscorpion_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-        </race>
-        <butcherProducts>
-            <Steel>15</Steel>
-        </butcherProducts>
-        <tools>
-            <li>
-                <label>pincers</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>12</power>
-                <cooldownTime>1.8</cooldownTime>
-                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
-                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-            </li>
-        </tools>
-    </ThingDef>
-    <RecipeDef Name="RobCo_RoboscorpionBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
-        <researchPrerequisite>BasicMechtech</researchPrerequisite>
-        <gestationCycles>3</gestationCycles>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Steel</li>
-                    </thingDefs>
-                </filter>
-                <count>150</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentIndustrial</li>
-                    </thingDefs>
-                </filter>
-                <count>2</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>SubcoreBasic</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <displayPriority>250</displayPriority>
-    </RecipeDef>
-
-    <!-- ================= ROBOSCORPION (Normal) ================= -->
-    <ThingDef ParentName="RobCo_RoboscorpionBase">
-        <defName>RobCo_Roboscorpion</defName>
-        <label>Roboscorpion</label>
-        <description>A dangerous arachnid war machine. Eight legs for rapid desert traversal, venomous stinger, and pincers that can tear through armor. Do not approach.</description>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Roboscorpion</defName>
-        <label>Roboscorpion</label>
-        <race>RobCo_Roboscorpion</race>
-        <combatPower>200</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/BigMT/Roboscorpion/Roboscorpion</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.4</drawSize>
-                    <shadowData>
-                        <volume>(0.4, 0.4, 0.4)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Laser_Combat</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_RoboscorpionBase_Recipe">
-        <defName>RobCo_Roboscorpion_Recipe</defName>
-        <label>craft Roboscorpion</label>
-        <description>Craft a Roboscorpion.</description>
-        <products>
-            <RobCo_Roboscorpion>1</RobCo_Roboscorpion>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Roboscorpion</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-
-    <!-- ================= ROBOSCORPION QUEEN ================= -->
-    <ThingDef ParentName="RobCo_RoboscorpionBase">
-        <defName>RobCo_RoboscorpionQueen</defName>
-        <label>Roboscorpion Queen</label>
-        <description>The apex of roboscorpion design. Larger, faster, and equipped with a spawning matrix that can produce new roboscorpions like a Warqueen. A nightmare given mechanical form.</description>
-        <statBases>
-            <MarketValue>5000</MarketValue>
-            <MoveSpeed>4.0</MoveSpeed>
-        </statBases>
-        <race>
-            <baseBodySize>1.5</baseBodySize>
-            <baseHealthScale>3.5</baseHealthScale>
-            <mechWeightClass>Medium</mechWeightClass>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_HugeRobotKind">
-        <defName>RobCo_RoboscorpionQueen</defName>
-        <label>Roboscorpion Queen</label>
-        <race>RobCo_RoboscorpionQueen</race>
-        <combatPower>500</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/BigMT/Roboscorpion/Roboscorpion</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.6</drawSize>
-                    <shadowData>
-                        <volume>(0.5, 0.5, 0.5)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Laser_Combat</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_RoboscorpionBase_Recipe">
-        <defName>RobCo_RoboscorpionQueen_Recipe</defName>
-        <label>craft Roboscorpion Queen</label>
-        <description>Craft a Roboscorpion Queen.</description>
-        <products>
-            <RobCo_RoboscorpionQueen>1</RobCo_RoboscorpionQueen>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_RoboscorpionQueen</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
+	<!-- ================= ROBOSCORPION BASE ================= -->
+	<ThingDef Name="RobCo_RoboscorpionBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MoveSpeed>3.5</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<MechEnergyLossPerHP>0.50</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>RobCo_Roboscorpion</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<mechWeightClass>Light</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_Roboscorpion_Wounded</soundWounded>
+					<soundDeath>RobCo_Roboscorpion_Death</soundDeath>
+					<soundCall>RobCo_Roboscorpion_Call</soundCall>
+					<soundAngry>RobCo_Roboscorpion_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>15</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>pincers</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.8</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_RoboscorpionBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<gestationCycles>3</gestationCycles>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>250</displayPriority>
+	</RecipeDef>
+	<!-- ================= ROBOSCORPION (Normal) ================= -->
+	<ThingDef ParentName="RobCo_RoboscorpionBase">
+		<defName>RobCo_Roboscorpion</defName>
+		<label>Roboscorpion</label>
+		<description>A dangerous arachnid war machine. Eight legs for rapid desert traversal, venomous stinger, and pincers that can tear through armor. Do not approach.</description>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Roboscorpion</defName>
+		<label>Roboscorpion</label>
+		<race>RobCo_Roboscorpion</race>
+		<combatPower>200</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/BigMT/Roboscorpion/Roboscorpion</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Laser_Combat</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_RoboscorpionBase_Recipe">
+		<defName>RobCo_Roboscorpion_Recipe</defName>
+		<label>craft Roboscorpion</label>
+		<description>Craft a Roboscorpion.</description>
+		<products>
+			<RobCo_Roboscorpion>1</RobCo_Roboscorpion>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Roboscorpion</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- ================= ROBOSCORPION QUEEN ================= -->
+	<ThingDef ParentName="RobCo_RoboscorpionBase">
+		<defName>RobCo_RoboscorpionQueen</defName>
+		<label>Roboscorpion Queen</label>
+		<description>The apex of roboscorpion design. Larger, faster, and equipped with a spawning matrix that can produce new roboscorpions like a Warqueen. A nightmare given mechanical form.</description>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+			<MoveSpeed>4.0</MoveSpeed>
+		</statBases>
+		<race>
+			<baseBodySize>1.5</baseBodySize>
+			<baseHealthScale>3.5</baseHealthScale>
+			<mechWeightClass>Medium</mechWeightClass>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_HugeRobotKind">
+		<defName>RobCo_RoboscorpionQueen</defName>
+		<label>Roboscorpion Queen</label>
+		<race>RobCo_RoboscorpionQueen</race>
+		<combatPower>500</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/BigMT/Roboscorpion/Roboscorpion</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.6</drawSize>
+					<shadowData>
+						<volume>(0.5, 0.5, 0.5)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Laser_Combat</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_RoboscorpionBase_Recipe">
+		<defName>RobCo_RoboscorpionQueen_Recipe</defName>
+		<label>craft Roboscorpion Queen</label>
+		<description>Craft a Roboscorpion Queen.</description>
+		<products>
+			<RobCo_RoboscorpionQueen>1</RobCo_RoboscorpionQueen>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_RoboscorpionQueen</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 </Defs>

@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- ================= SCURRYBOT ================= -->
-    <!-- Can turn invisible with cloaking device -->
-    <ThingDef ParentName="RobCo_ScurrybotBase">
-        <defName>RobCo_Scurrybot</defName>
-        <label>Scurrybot</label>
-        <description>A small, insectoid reconnaissance drone with integrated cloaking systems. Fast, sneaky, and useful for scouting. Pacificators can spawn these in combat.</description>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Scurrybot</defName>
-        <label>Scurrybot</label>
-        <race>RobCo_Scurrybot</race>
-        <combatPower>30</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/China/Scurrybot/Scurrybot</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>0.9</drawSize>
-                    <shadowData>
-                        <volume>(0.25, 0.25, 0.25)</volume>
-                        <offset>(0,0,-0.2)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Laser_Light</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ScurrybotBase_Recipe">
-        <defName>RobCo_Scurrybot_Recipe</defName>
-        <label>craft Scurrybot</label>
-        <description>Craft a Scurrybot.</description>
-        <products>
-            <RobCo_Scurrybot>1</RobCo_Scurrybot>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Scurrybot</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
+	<!-- ================= SCURRYBOT ================= -->
+	<!-- Can turn invisible with cloaking device -->
+	<ThingDef ParentName="RobCo_ScurrybotBase">
+		<defName>RobCo_Scurrybot</defName>
+		<label>Scurrybot</label>
+		<description>A small, insectoid reconnaissance drone with integrated cloaking systems. Fast, sneaky, and useful for scouting. Pacificators can spawn these in combat.</description>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Scurrybot</defName>
+		<label>Scurrybot</label>
+		<race>RobCo_Scurrybot</race>
+		<combatPower>30</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/China/Scurrybot/Scurrybot</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>0.9</drawSize>
+					<shadowData>
+						<volume>(0.25, 0.25, 0.25)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Laser_Light</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ScurrybotBase_Recipe">
+		<defName>RobCo_Scurrybot_Recipe</defName>
+		<label>craft Scurrybot</label>
+		<description>Craft a Scurrybot.</description>
+		<products>
+			<RobCo_Scurrybot>1</RobCo_Scurrybot>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Scurrybot</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 </Defs>

@@ -1,148 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- ================= LIBERTY PRIME BASE ================= -->
-    <ThingDef Name="RobCo_LibertyPrimeBase" ParentName="BaseMechanoid" Abstract="True">
-        <statBases>
-            <MarketValue>8000</MarketValue>
-            <MoveSpeed>2.0</MoveSpeed>
-            <ControlTakingTime>60</ControlTakingTime>
-            <BandwidthCost>10</BandwidthCost>
-            <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-            <PsychicSensitivity>0.90</PsychicSensitivity>
-            <MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
-        </statBases>
-        <race>
-            <body>RobCo_LibertyPrime</body>
-            <intelligence>ToolUser</intelligence>
-            <thinkTreeMain>Mechanoid</thinkTreeMain>
-            <baseBodySize>3.0</baseBodySize>
-            <baseHealthScale>10.0</baseHealthScale>
-            <mechWeightClass>Heavy</mechWeightClass>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>0</minAge>
-                    <soundWounded>RobCo_LibertyPrime_Wounded</soundWounded>
-                    <soundDeath>RobCo_LibertyPrime_Death</soundDeath>
-                    <soundCall>RobCo_LibertyPrime_Call</soundCall>
-                    <soundAngry>RobCo_LibertyPrime_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-        </race>
-        <butcherProducts>
-            <Steel>75</Steel>
-            <Plasteel>40</Plasteel>
-            <Uranium>15</Uranium>
-        </butcherProducts>
-        <tools>
-            <li>
-                <label>fists</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>40</power>
-                <cooldownTime>1.4</cooldownTime>
-                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
-                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-            </li>
-        </tools>
-    </ThingDef>
-    <RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
-        <gestationCycles>25</gestationCycles>
-        <researchPrerequisite>UltraMechtech</researchPrerequisite>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Steel</li>
-                    </thingDefs>
-                </filter>
-                <count>600</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Plasteel</li>
-                    </thingDefs>
-                </filter>
-                <count>450</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Uranium</li>
-                    </thingDefs>
-                </filter>
-                <count>100</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>NanostructuringChip</li>
-                    </thingDefs>
-                </filter>
-                <count>2</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentSpacer</li>
-                    </thingDefs>
-                </filter>
-                <count>6</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>SubcoreSuperior</li>
-                    </thingDefs>
-                </filter>
-                <count>3</count>
-            </li>
-        </ingredients>
-        <displayPriority>600</displayPriority>
-    </RecipeDef>
-
-    <!-- ================= LIBERTY PRIME ================= -->
-    <!-- Most powerful robot - massive humanoid that throws mini-nukes -->
-    <ThingDef ParentName="RobCo_LibertyPrimeBase">
-        <defName>RobCo_LibertyPrime</defName>
-        <label>Liberty Prime</label>
-        <description>The ultimate expression of pre-war military technology. A gargantuan humanoid war machine equipped with mini-nuke launchers and plasma cannons. Treats everything it encounters as a potential threat. Extremely rare and almost certainly one-of-a-kind.</description>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_HugeRobotKind">
-        <defName>RobCo_LibertyPrime</defName>
-        <label>Liberty Prime</label>
-        <race>RobCo_LibertyPrime</race>
-        <combatPower>1200</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Institute/LibertyPrime/LibertyPrime</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>3.0</drawSize>
-                    <shadowData>
-                        <volume>(1.0, 1.0, 1.0)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_MiniNukeRocket</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_LibertyPrimeBase_Recipe">
-        <defName>RobCo_LibertyPrime_Recipe</defName>
-        <label>craft Liberty Prime</label>
-        <description>Craft a Liberty Prime. This is an incredibly rare and expensive unit.</description>
-        <products>
-            <RobCo_LibertyPrime>1</RobCo_LibertyPrime>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_LibertyPrime</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
+	<!-- ================= LIBERTY PRIME BASE ================= -->
+	<ThingDef Name="RobCo_LibertyPrimeBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>8000</MarketValue>
+			<MoveSpeed>2.0</MoveSpeed>
+			<ControlTakingTime>60</ControlTakingTime>
+			<BandwidthCost>10</BandwidthCost>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<PsychicSensitivity>0.90</PsychicSensitivity>
+			<MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>RobCo_LibertyPrime</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>3.0</baseBodySize>
+			<baseHealthScale>10.0</baseHealthScale>
+			<mechWeightClass>Heavy</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_LibertyPrime_Wounded</soundWounded>
+					<soundDeath>RobCo_LibertyPrime_Death</soundDeath>
+					<soundCall>RobCo_LibertyPrime_Call</soundCall>
+					<soundAngry>RobCo_LibertyPrime_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>75</Steel>
+			<Plasteel>40</Plasteel>
+			<Uranium>15</Uranium>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>fists</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>1.4</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<gestationCycles>25</gestationCycles>
+		<researchPrerequisite>UltraMechtech</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>600</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>450</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>NanostructuringChip</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreSuperior</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<displayPriority>600</displayPriority>
+	</RecipeDef>
+	<!-- ================= LIBERTY PRIME ================= -->
+	<!-- Most powerful robot - massive humanoid that throws mini-nukes -->
+	<ThingDef ParentName="RobCo_LibertyPrimeBase">
+		<defName>RobCo_LibertyPrime</defName>
+		<label>Liberty Prime</label>
+		<description>The ultimate expression of pre-war military technology. A gargantuan humanoid war machine equipped with mini-nuke launchers and plasma cannons. Treats everything it encounters as a potential threat. Extremely rare and almost certainly one-of-a-kind.</description>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_HugeRobotKind">
+		<defName>RobCo_LibertyPrime</defName>
+		<label>Liberty Prime</label>
+		<race>RobCo_LibertyPrime</race>
+		<combatPower>1200</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Institute/LibertyPrime/LibertyPrime</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.0</drawSize>
+					<shadowData>
+						<volume>(1.0, 1.0, 1.0)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_MiniNukeRocket</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_LibertyPrimeBase_Recipe">
+		<defName>RobCo_LibertyPrime_Recipe</defName>
+		<label>craft Liberty Prime</label>
+		<description>Craft a Liberty Prime. This is an incredibly rare and expensive unit.</description>
+		<products>
+			<RobCo_LibertyPrime>1</RobCo_LibertyPrime>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_LibertyPrime</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 </Defs>
