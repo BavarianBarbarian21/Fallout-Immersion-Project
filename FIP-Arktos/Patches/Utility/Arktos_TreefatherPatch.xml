@@ -85,11 +85,38 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/graphicData/texPath</xpath>
+    <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/graphicData</xpath>
     <value>
+      <graphicData>
       <texPath>Arktos/Tree/Treefather/TreefatherB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
     </value>
   </Operation>
+
+    <!-- Replace immatureGraphicPath, snowOverlayGraphicPath, immatureSnowOverlayGraphicPath -->
+    
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/plant/immatureGraphicPath</xpath>
+      <value>
+        <immatureGraphicPath>Arktos/Tree/Treefather/TreefatherB</immatureGraphicPath>
+      </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/plant/snowOverlayGraphicPath</xpath>
+      <value>
+        <snowOverlayGraphicPath>Arktos/Tree/Treefather/TreefatherB</snowOverlayGraphicPath>
+      </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/plant/immatureSnowOverlayGraphicPath</xpath>
+      <value>
+        <immatureSnowOverlayGraphicPath>Arktos/Tree/Treefather/TreefatherB</immatureSnowOverlayGraphicPath>
+      </value>
+    </Operation>
 
   
 

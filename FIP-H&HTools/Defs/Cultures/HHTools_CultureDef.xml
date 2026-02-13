@@ -2,8 +2,8 @@
 <Defs>
     <!--American, Bear, Bull, Cascadia, Nuevo Texico-->
     <!--American-->
-    <CultureDef Name="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_American</defName>
+    <CultureDef Name="HHTools_Culture_American">
+        <defName>HHTools_Culture_American</defName>
         <label>American</label>
         <description>Culture originating from the pre-war United States.</description>
         <ideoNameMaker MayRequire="FIP.Arktos">NamerIdeoGlobal</ideoNameMaker>
@@ -11,12 +11,12 @@
         <deityTypeMaker MayRequire="FIP.Arktos">DeityTypeMakerAstropolitan</deityTypeMaker>
         <leaderTitleMaker MayRequire="FIP.Arktos">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
         <festivalNameMaker MayRequire="FIP.Arktos">NamerFestivalGlobal</festivalNameMaker>
-        <pawnNameMaker>Donaustahl_PawnNameMaker_American_Male</pawnNameMaker>
-        <pawnNameMakerFemale>Donaustahl_PawnNameMaker_American_Female</pawnNameMakerFemale>
+        <pawnNameMaker>HHTools_PawnNameMaker_American_Male</pawnNameMaker>
+        <pawnNameMakerFemale>HHTools_PawnNameMaker_American_Female</pawnNameMakerFemale>
         <allowedPlaceTags>
             <li>OriginAmerican</li>
         </allowedPlaceTags>
-        <iconPath>Donaustahl/Donaustahl_American</iconPath>
+        <iconPath>HHTools/HHTools_American</iconPath>
         <styleItemTags>
             <li>
                 <tag>Urban</tag>
@@ -57,16 +57,16 @@
     </CultureDef>
 
     <!--American - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_American_Tribal</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_American_Tribal</defName>
         <label>American-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
     <!--Bear-->
-    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Bear">
-        <defName>Donaustahl_Culture_Bear</defName>
+    <CultureDef ParentName="HHTools_Culture_American" Name="HHTools_Culture_Bear">
+        <defName>HHTools_Culture_Bear</defName>
         <label>Bear</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -75,16 +75,16 @@
     </CultureDef>
 
     <!--Bear - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_Bear">
-        <defName>Donaustahl_Culture_Bear_Tribal</defName>
+    <CultureDef ParentName="HHTools_Culture_Bear">
+        <defName>HHTools_Culture_Bear_Tribal</defName>
         <label>Bear-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
     <!--Bull-->
-    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Bull">
-        <defName>Donaustahl_Culture_Bull</defName>
+    <CultureDef ParentName="HHTools_Culture_American" Name="HHTools_Culture_Bull">
+        <defName>HHTools_Culture_Bull</defName>
         <label>Bull</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -93,16 +93,16 @@
     </CultureDef>
 
     <!--Bull - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_Bull">
-        <defName>Donaustahl_Culture_Bull_Tribal</defName>
+    <CultureDef ParentName="HHTools_Culture_Bull">
+        <defName>HHTools_Culture_Bull_Tribal</defName>
         <label>Bull-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
     <!--Cascadia-->
-    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_Cascadia">
-        <defName>Donaustahl_Culture_Cascadia</defName>
+    <CultureDef ParentName="HHTools_Culture_American" Name="HHTools_Culture_Cascadia">
+        <defName>HHTools_Culture_Cascadia</defName>
         <label>Cascadia</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -111,16 +111,16 @@
     </CultureDef>
 
     <!--Cascadia - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_Cascadia">
-        <defName>Donaustahl_Culture_Cascadia_Tribal</defName>
+    <CultureDef ParentName="HHTools_Culture_Cascadia">
+        <defName>HHTools_Culture_Cascadia_Tribal</defName>
         <label>Cascadia-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
     <!--Nuevo Texico-->
-    <CultureDef ParentName="Donaustahl_Culture_American" Name="Donaustahl_Culture_NuevoTexico">
-        <defName>Donaustahl_Culture_NuevoTexico</defName>
+    <CultureDef ParentName="HHTools_Culture_American" Name="HHTools_Culture_NuevoTexico">
+        <defName>HHTools_Culture_NuevoTexico</defName>
         <label>Nuevo Texico</label>
         <description>Culture originating from the pre-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -129,25 +129,25 @@
     </CultureDef>
 
     <!--Nuevo Texico - Tribal-->
-    <CultureDef ParentName="Donaustahl_Culture_NuevoTexico">
-        <defName>Donaustahl_Culture_NuevoTexico_Tribal</defName>
+    <CultureDef ParentName="HHTools_Culture_NuevoTexico">
+        <defName>HHTools_Culture_NuevoTexico_Tribal</defName>
         <label>Nuevo Texico-Tribal</label>
         <description>Culture originating from the post-war United States.</description>
         <pawnNameMaker>NamerPersonCorunan</pawnNameMaker>
     </CultureDef>
 
     <!--Raider-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_Raider</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_Raider</defName>
         <label>Raider</label>
         <description>Culture originating from the post-war United States.</description>
-        <pawnNameMaker>Donaustahl_PawnNameMaker_Raider_Male</pawnNameMaker>
-        <pawnNameMakerFemale>Donaustahl_PawnNameMaker_Raider_Female</pawnNameMakerFemale>
+        <pawnNameMaker>HHTools_PawnNameMaker_Raider_Male</pawnNameMaker>
+        <pawnNameMakerFemale>HHTools_PawnNameMaker_Raider_Female</pawnNameMakerFemale>
     </CultureDef>
 
     <!--Mutant-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_SuperMutant</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_SuperMutant</defName>
         <label>Mutant</label>
         <description>Culture originating from the post-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -156,8 +156,8 @@
     </CultureDef>
 
     <!--Ghoul-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_Ghoul</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_Ghoul</defName>
         <label>Ghoul</label>
         <description>Culture originating from the post-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -166,8 +166,8 @@
     </CultureDef>
 
     <!--Numen-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_Numen</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_Numen</defName>
         <label>Numen</label>
         <description>Culture originating from the post-war United States.</description>
         <allowedPlaceTags Inherit="False">
@@ -176,8 +176,8 @@
     </CultureDef>
 
     <!--Slanter-->
-    <CultureDef ParentName="Donaustahl_Culture_American">
-        <defName>Donaustahl_Culture_Slanter</defName>
+    <CultureDef ParentName="HHTools_Culture_American">
+        <defName>HHTools_Culture_Slanter</defName>
         <label>Slanter</label>
         <description>Culture originating from the post-war United States.</description>
         <allowedPlaceTags Inherit="False">
