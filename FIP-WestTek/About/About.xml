@@ -9,12 +9,17 @@
   </supportedVersions>
   <modDependencies>
     <li>
+		  <packageId>Ludeon.RimWorld.Biotech</packageId>
+		  <displayName>Biotech</displayName>
+	  </li>
+    <li>
       <packageId>FIP.HHTools</packageId>
       <displayName>FIP - H&amp;H Tools</displayName>
       <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3592202124</downloadUrl>
     </li>
   </modDependencies>
   <loadAfter>
+    <li>Ludeon.RimWorld.Biotech</li>
     <li>FIP.HHTools</li>
     <li>FIP.Donaustahl</li>
   </loadAfter>
