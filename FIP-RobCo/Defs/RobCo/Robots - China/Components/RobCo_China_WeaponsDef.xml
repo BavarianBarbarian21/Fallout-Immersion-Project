@@ -1,88 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- ================= LIBERATOR LASER BULLET ================= -->
-    <ThingDef ParentName="RobCo_BaseBullet">
-        <defName>RobCo_Bullet_LiberatorLaser</defName>
-        <label>liberator laser</label>
-        <projectile>
-            <damageDef>Bullet</damageDef>
-            <damageAmountBase>16</damageAmountBase>
-            <armorPenetrationBase>0.45</armorPenetrationBase>
-            <speed>88</speed>
-            <stoppingPower>0.9</stoppingPower>
-        </projectile>
-    </ThingDef>
-
-    <!-- ================= LIBERATOR LASER WEAPON ================= -->
-    <ThingDef ParentName="RobCo_BaseGun">
-        <defName>RobCo_LiberatorLaser</defName>
-        <label>liberator laser rifle</label>
-        <description>Military-grade laser rifle integrated into a Chinese Liberator combat robot.</description>
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <defaultProjectile>RobCo_Bullet_LiberatorLaser</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
-                <range>30</range>
-                <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <soundCast>Shot_ChargeRifle</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>1.6</muzzleFlashScale>
-            </li>
-        </verbs>
-        <tools>
-            <li>
-                <label>laser rifle</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>7</power>
-                <cooldownTime>2.3</cooldownTime>
-            </li>
-        </tools>
-    </ThingDef>
-
-    <!-- ================= SCURRYBOT LASER BULLET ================= -->
-    <ThingDef ParentName="RobCo_BaseBullet">
-        <defName>RobCo_Bullet_ScurrybotLaser</defName>
-        <label>scurrybot laser</label>
-        <projectile>
-            <damageDef>Bullet</damageDef>
-            <damageAmountBase>8</damageAmountBase>
-            <armorPenetrationBase>0.35</armorPenetrationBase>
-            <speed>80</speed>
-            <stoppingPower>0.5</stoppingPower>
-        </projectile>
-    </ThingDef>
-
-    <!-- ================= SCURRYBOT LASER WEAPON ================= -->
-    <ThingDef ParentName="RobCo_BaseGun">
-        <defName>RobCo_ScurrybotLaser</defName>
-        <label>scurrybot laser cannon</label>
-        <description>Compact integrated laser mounted on a Scurrybot surveillance unit.</description>
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <defaultProjectile>RobCo_Bullet_ScurrybotLaser</defaultProjectile>
-                <warmupTime>1.2</warmupTime>
-                <range>22</range>
-                <burstShotCount>2</burstShotCount>
-                <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
-                <soundCast>Shot_ChargeRifle</soundCast>
-                <soundCastTail>GunTail_Light</soundCastTail>
-                <muzzleFlashScale>0.9</muzzleFlashScale>
-            </li>
-        </verbs>
-        <tools>
-            <li>
-                <label>laser cannon</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>4</power>
-                <cooldownTime>1.8</cooldownTime>
-            </li>
-        </tools>
-    </ThingDef>
+	<!-- ================= LIBERATOR LASER BULLET ================= -->
+	<ThingDef ParentName="RobCo_BaseBullet">
+		<defName>RobCo_Bullet_LiberatorLaser</defName>
+		<label>liberator laser</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetrationBase>0.45</armorPenetrationBase>
+			<speed>88</speed>
+			<stoppingPower>0.9</stoppingPower>
+		</projectile>
+	</ThingDef>
+	<!-- ================= LIBERATOR LASER WEAPON ================= -->
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_LiberatorLaser</defName>
+		<label>liberator laser rifle</label>
+		<description>Military-grade laser rifle integrated into a Chinese Liberator combat robot.</description>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RobCo_Bullet_LiberatorLaser</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>30</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>1.6</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>laser rifle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2.3</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<!-- ================= SCURRYBOT LASER BULLET ================= -->
+	<ThingDef ParentName="RobCo_BaseBullet">
+		<defName>RobCo_Bullet_ScurrybotLaser</defName>
+		<label>scurrybot laser</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<speed>80</speed>
+			<stoppingPower>0.5</stoppingPower>
+		</projectile>
+	</ThingDef>
+	<!-- ================= SCURRYBOT LASER WEAPON ================= -->
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_ScurrybotLaser</defName>
+		<label>scurrybot laser cannon</label>
+		<description>Compact integrated laser mounted on a Scurrybot surveillance unit.</description>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RobCo_Bullet_ScurrybotLaser</defaultProjectile>
+				<warmupTime>1.2</warmupTime>
+				<range>22</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>0.9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>laser cannon</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
 </Defs>

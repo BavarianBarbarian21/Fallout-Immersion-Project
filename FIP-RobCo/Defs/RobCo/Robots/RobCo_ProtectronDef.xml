@@ -1,326 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- Protectron Base -->
-    <ThingDef Name="RobCo_ProtectronBase" ParentName="BaseMechanoid" Abstract="True">
-        <statBases>
-            <MarketValue>800</MarketValue>
-            <MoveSpeed>2.0</MoveSpeed>
-            <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-            <MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
-        </statBases>
-        <race>
-            <body>RobCo_Protectron</body>
-            <intelligence>ToolUser</intelligence>
-            <thinkTreeMain>Mechanoid</thinkTreeMain>
-            <baseBodySize>1.0</baseBodySize>
-            <baseHealthScale>1.8</baseHealthScale>
-            <mechWeightClass>Light</mechWeightClass>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>0</minAge>
-                    <soundWounded>RobCo_Protectron_Wounded</soundWounded>
-                    <soundDeath>RobCo_Protectron_Death</soundDeath>
-                    <soundCall>RobCo_Protectron_Call</soundCall>
-                    <soundAngry>RobCo_Protectron_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-        </race>
-        <butcherProducts>
-            <Steel>10</Steel>
-        </butcherProducts>
-        <tools>
-            <li>
-                <label>chassis</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>6</power>
-                <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
-                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-            </li>
-        </tools>
-    </ThingDef>
-    <RecipeDef Name="RobCo_ProtectronBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
-        <researchPrerequisite>BasicMechtech</researchPrerequisite>
-        <gestationCycles>1</gestationCycles>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Steel</li>
-                    </thingDefs>
-                </filter>
-                <count>100</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>ComponentIndustrial</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>SubcoreBasic</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-        </ingredients>
-        <displayPriority>100</displayPriority>
-    </RecipeDef>
-    <!-- Constructron -->
-    <ThingDef ParentName="RobCo_ProtectronBase">
-        <defName>RobCo_Constructron</defName>
-        <label>Constructron</label>
-        <description>Industrial-grade version, all welders and rivet guns. Once meant for building cities of old.</description>
-        <race>
-            <mechEnabledWorkTypes>
-                <li>Construction</li>
-            </mechEnabledWorkTypes>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Constructron</defName>
-        <label>Constructron</label>
-        <race>RobCo_Constructron</race>
-        <combatPower>10</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Utilitron/Utilitron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Blaster_Civilian</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
-        <defName>RobCo_Constructron_Recipe</defName>
-        <label>craft Constructron</label>
-        <description>Craft an Constructron.</description>
-        <products>
-            <RobCo_Constructron>1</RobCo_Constructron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Constructron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-    <!-- Factotron -->
-    <ThingDef ParentName="RobCo_ProtectronBase">
-        <defName>RobCo_Factotron</defName>
-        <label>Factotron</label>
-        <description>Rare factory-automation unit, built to oversee entire assembly lines with chilling efficiency. A walking production floor.</description>
-        <race>
-            <mechEnabledWorkTypes>
-                <li>Crafting</li>
-                <li>Smithing</li>
-                <li>Tailoring</li>
-            </mechEnabledWorkTypes>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Factotron</defName>
-        <label>Factotron</label>
-        <race>RobCo_Factotron</race>
-        <combatPower>10</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Collectron/Collectron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Blaster_Civilian</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
-        <defName>RobCo_Factotron_Recipe</defName>
-        <label>craft Factotron</label>
-        <description>Craft an Factotron.</description>
-        <products>
-            <RobCo_Factotron>1</RobCo_Factotron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Factotron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-    <!-- Utilitron -->
-    <ThingDef ParentName="RobCo_ProtectronBase">
-        <defName>RobCo_Utilitron</defName>
-        <label>Utilitron</label>
-        <description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
-        <race>
-            <mechEnabledWorkTypes>
-                <li>Mining</li>
-            </mechEnabledWorkTypes>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Utilitron</defName>
-        <label>Utilitron</label>
-        <race>RobCo_Utilitron</race>
-        <combatPower>10</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Utilitron/Utilitron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Blaster_Civilian</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
-        <defName>RobCo_Utilitron_Recipe</defName>
-        <label>craft Utilitron</label>
-        <description>Craft an Utilitron.</description>
-        <products>
-            <RobCo_Utilitron>1</RobCo_Utilitron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Utilitron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-    <!-- Collectron -->
-    <ThingDef ParentName="RobCo_ProtectronBase">
-        <defName>RobCo_Collectron</defName>
-        <label>Collectron</label>
-        <description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
-        <race>
-            <mechEnabledWorkTypes>
-                <li>Hauling</li>
-                <li>PlantCutting</li>
-            </mechEnabledWorkTypes>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Collectron</defName>
-        <label>Collectron</label>
-        <race>RobCo_Collectron</race>
-        <combatPower>10</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Collectron/Collectron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Blaster_Civilian</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
-        <defName>RobCo_Collectron_Recipe</defName>
-        <label>craft Collectron</label>
-        <description>Craft an Collectron.</description>
-        <products>
-            <RobCo_Collectron>1</RobCo_Collectron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Collectron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
-    <!-- Protectron -->
-    <ThingDef ParentName="RobCo_ProtectronBase">
-        <defName>RobCo_Protectron</defName>
-        <label>Protectron</label>
-        <description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
-        <race>
-            <baseHealthScale>2.0</baseHealthScale>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>10</minAge>
-                    <soundWounded>RobCo_Protectron_Wounded</soundWounded>
-                    <soundDeath>RobCo_Protectron_Death</soundDeath>
-                    <soundCall>RobCo_Protectron_Call</soundCall>
-                    <soundAngry>RobCo_Protectron_Angry</soundAngry>
-                </li>
-            </lifeStageAges>
-        </race>
-    </ThingDef>
-    <PawnKindDef ParentName="RobCo_SmallRobotKind">
-        <defName>RobCo_Protectron</defName>
-        <label>Protectron</label>
-        <race>RobCo_Protectron</race>
-        <combatPower>100</combatPower>
-        <lifeStages>
-            <li>
-                <bodyGraphicData>
-                    <texPath>RobCo/Protectron/Protectron</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-            <li>
-                <label>pre-war Protectron</label>
-                <bodyGraphicData>
-                    <texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
-                    <shaderType>CutoutWithOverlay</shaderType>
-                    <graphicClass>Graphic_Multi</graphicClass>
-                    <drawSize>1.25</drawSize>
-                    <shadowData>
-                        <volume>(0.3, 0.4, 0.3)</volume>
-                        <offset>(0,0,-0.25)</offset>
-                    </shadowData>
-                </bodyGraphicData>
-            </li>
-        </lifeStages>
-        <weaponTags>
-            <li>RobCo_Blaster_Military</li>
-        </weaponTags>
-    </PawnKindDef>
-    <RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
-        <defName>RobCo_Protectron_Recipe</defName>
-        <label>craft Protectron</label>
-        <description>Craft an Protectron.</description>
-        <products>
-            <RobCo_Protectron>1</RobCo_Protectron>
-        </products>
-        <descriptionHyperlinks>
-            <ThingDef>RobCo_Protectron</ThingDef>
-        </descriptionHyperlinks>
-    </RecipeDef>
+	<!-- Protectron Base -->
+	<ThingDef Name="RobCo_ProtectronBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<MoveSpeed>2.0</MoveSpeed>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<MechEnergyLossPerHP>0.66</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>RobCo_Protectron</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>1.0</baseBodySize>
+			<baseHealthScale>1.8</baseHealthScale>
+			<mechWeightClass>Light</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_Protectron_Wounded</soundWounded>
+					<soundDeath>RobCo_Protectron_Death</soundDeath>
+					<soundCall>RobCo_Protectron_Call</soundCall>
+					<soundAngry>RobCo_Protectron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>10</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_ProtectronBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<researchPrerequisite>BasicMechtech</researchPrerequisite>
+		<gestationCycles>1</gestationCycles>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SubcoreBasic</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>100</displayPriority>
+	</RecipeDef>
+	<!-- Constructron -->
+	<ThingDef ParentName="RobCo_ProtectronBase">
+		<defName>RobCo_Constructron</defName>
+		<label>Constructron</label>
+		<description>Industrial-grade version, all welders and rivet guns. Once meant for building cities of old.</description>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Construction</li>
+			</mechEnabledWorkTypes>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Constructron</defName>
+		<label>Constructron</label>
+		<race>RobCo_Constructron</race>
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Utilitron/Utilitron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Blaster_Civilian</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+		<defName>RobCo_Constructron_Recipe</defName>
+		<label>craft Constructron</label>
+		<description>Craft an Constructron.</description>
+		<products>
+			<RobCo_Constructron>1</RobCo_Constructron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Constructron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Factotron -->
+	<ThingDef ParentName="RobCo_ProtectronBase">
+		<defName>RobCo_Factotron</defName>
+		<label>Factotron</label>
+		<description>Rare factory-automation unit, built to oversee entire assembly lines with chilling efficiency. A walking production floor.</description>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Crafting</li>
+				<li>Smithing</li>
+				<li>Tailoring</li>
+			</mechEnabledWorkTypes>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Factotron</defName>
+		<label>Factotron</label>
+		<race>RobCo_Factotron</race>
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Collectron/Collectron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Blaster_Civilian</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+		<defName>RobCo_Factotron_Recipe</defName>
+		<label>craft Factotron</label>
+		<description>Craft an Factotron.</description>
+		<products>
+			<RobCo_Factotron>1</RobCo_Factotron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Factotron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Utilitron -->
+	<ThingDef ParentName="RobCo_ProtectronBase">
+		<defName>RobCo_Utilitron</defName>
+		<label>Utilitron</label>
+		<description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Mining</li>
+			</mechEnabledWorkTypes>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Utilitron</defName>
+		<label>Utilitron</label>
+		<race>RobCo_Utilitron</race>
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Utilitron/Utilitron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Blaster_Civilian</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+		<defName>RobCo_Utilitron_Recipe</defName>
+		<label>craft Utilitron</label>
+		<description>Craft an Utilitron.</description>
+		<products>
+			<RobCo_Utilitron>1</RobCo_Utilitron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Utilitron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Collectron -->
+	<ThingDef ParentName="RobCo_ProtectronBase">
+		<defName>RobCo_Collectron</defName>
+		<label>Collectron</label>
+		<description>A scavenger drone, endlessly trundling after cans, junk, or “valuable resources.” Programmed to hoard like a metallic raccoon.</description>
+		<race>
+			<mechEnabledWorkTypes>
+				<li>Hauling</li>
+				<li>PlantCutting</li>
+			</mechEnabledWorkTypes>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Collectron</defName>
+		<label>Collectron</label>
+		<race>RobCo_Collectron</race>
+		<combatPower>10</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Collectron/Collectron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Blaster_Civilian</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+		<defName>RobCo_Collectron_Recipe</defName>
+		<label>craft Collectron</label>
+		<description>Craft an Collectron.</description>
+		<products>
+			<RobCo_Collectron>1</RobCo_Collectron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Collectron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+	<!-- Protectron -->
+	<ThingDef ParentName="RobCo_ProtectronBase">
+		<defName>RobCo_Protectron</defName>
+		<label>Protectron</label>
+		<description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
+		<race>
+			<baseHealthScale>2.0</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>10</minAge>
+					<soundWounded>RobCo_Protectron_Wounded</soundWounded>
+					<soundDeath>RobCo_Protectron_Death</soundDeath>
+					<soundCall>RobCo_Protectron_Call</soundCall>
+					<soundAngry>RobCo_Protectron_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_Protectron</defName>
+		<label>Protectron</label>
+		<race>RobCo_Protectron</race>
+		<combatPower>100</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>RobCo/Protectron/Protectron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<label>pre-war Protectron</label>
+				<bodyGraphicData>
+					<texPath>RobCo/ProtectronAncient/ProtectronAncient</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_Blaster_Military</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
+		<defName>RobCo_Protectron_Recipe</defName>
+		<label>craft Protectron</label>
+		<description>Craft an Protectron.</description>
+		<products>
+			<RobCo_Protectron>1</RobCo_Protectron>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Protectron</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 </Defs>

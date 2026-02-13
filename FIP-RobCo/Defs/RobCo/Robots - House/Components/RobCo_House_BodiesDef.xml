@@ -1,527 +1,525 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <!-- ================= SYNTH GEN1 BODY ================= -->
-    <BodyDef>
-        <defName>RobCo_SynthGen1</defName>
-        <label>synth generation 1</label>
-        <corePart>
-            <def>RobCo_Chassis</def>
-            <height>Middle</height>
-            <depth>Outside</depth>
-            <groups>
-                <li>Torso</li>
-            </groups>
-            <parts>
-                <li>
-                    <def>Spine</def>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Heart</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Lung</def>
-                    <coverage>0.05</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Kidney</def>
-                    <coverage>0.05</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Liver</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Stomach</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Neck</def>
-                    <coverage>0.05</coverage>
-                    <height>Top</height>
-                    <parts>
-                        <li>
-                            <def>Head</def>
-                            <coverage>0.93</coverage>
-                            <parts>
-                                <li>
-                                    <def>Brain</def>
-                                    <coverage>0.32</coverage>
-                                    <depth>Inside</depth>
-                                </li>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>left eye</customLabel>
-                                    <coverage>0.16</coverage>
-                                </li>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>right eye</customLabel>
-                                    <coverage>0.16</coverage>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>left ear</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>right ear</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Nose</def>
-                                    <coverage>0.09</coverage>
-                                </li>
-                                <li>
-                                    <def>Jaw</def>
-                                    <coverage>0.10</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Shoulder</def>
-                    <customLabel>left shoulder</customLabel>
-                    <coverage>0.10</coverage>
-                    <parts>
-                        <li>
-                            <def>Arm</def>
-                            <customLabel>left arm</customLabel>
-                            <coverage>0.15</coverage>
-                            <parts>
-                                <li>
-                                    <def>Hand</def>
-                                    <customLabel>left hand</customLabel>
-                                    <coverage>0.4</coverage>
-                                    <parts>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left thumb</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left index</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left middle</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left ring</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left pinky</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                    </parts>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Shoulder</def>
-                    <customLabel>right shoulder</customLabel>
-                    <coverage>0.10</coverage>
-                    <parts>
-                        <li>
-                            <def>Arm</def>
-                            <customLabel>right arm</customLabel>
-                            <coverage>0.15</coverage>
-                            <parts>
-                                <li>
-                                    <def>Hand</def>
-                                    <customLabel>right hand</customLabel>
-                                    <coverage>0.4</coverage>
-                                    <parts>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right thumb</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right index</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right middle</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right ring</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right pinky</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                    </parts>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>left leg</customLabel>
-                    <coverage>0.16</coverage>
-                    <parts>
-                        <li>
-                            <def>Foot</def>
-                            <customLabel>left foot</customLabel>
-                            <coverage>0.4</coverage>
-                            <parts>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left big toe</customLabel>
-                                    <coverage>0.1</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left second toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left third toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left fourth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left fifth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>right leg</customLabel>
-                    <coverage>0.16</coverage>
-                    <parts>
-                        <li>
-                            <def>Foot</def>
-                            <customLabel>right foot</customLabel>
-                            <coverage>0.4</coverage>
-                            <parts>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right big toe</customLabel>
-                                    <coverage>0.1</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right second toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right third toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right fourth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right fifth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-            </parts>
-        </corePart>
-    </BodyDef>
-
-    <!-- ================= SYNTH GEN2 BODY ================= -->
-    <BodyDef>
-        <defName>RobCo_SynthGen2</defName>
-        <label>synth generation 2</label>
-        <corePart>
-            <def>RobCo_Chassis</def>
-            <height>Middle</height>
-            <depth>Outside</depth>
-            <groups>
-                <li>Torso</li>
-            </groups>
-            <parts>
-                <li>
-                    <def>Spine</def>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Heart</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Lung</def>
-                    <coverage>0.05</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Kidney</def>
-                    <coverage>0.05</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Liver</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Stomach</def>
-                    <coverage>0.06</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Neck</def>
-                    <coverage>0.06</coverage>
-                    <height>Top</height>
-                    <parts>
-                        <li>
-                            <def>Head</def>
-                            <coverage>0.94</coverage>
-                            <parts>
-                                <li>
-                                    <def>Brain</def>
-                                    <coverage>0.30</coverage>
-                                    <depth>Inside</depth>
-                                </li>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>left eye</customLabel>
-                                    <coverage>0.16</coverage>
-                                </li>
-                                <li>
-                                    <def>Eye</def>
-                                    <customLabel>right eye</customLabel>
-                                    <coverage>0.16</coverage>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>left ear</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Ear</def>
-                                    <customLabel>right ear</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Nose</def>
-                                    <coverage>0.10</coverage>
-                                </li>
-                                <li>
-                                    <def>Jaw</def>
-                                    <coverage>0.10</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Shoulder</def>
-                    <customLabel>left shoulder</customLabel>
-                    <coverage>0.10</coverage>
-                    <parts>
-                        <li>
-                            <def>Arm</def>
-                            <customLabel>left arm</customLabel>
-                            <coverage>0.15</coverage>
-                            <parts>
-                                <li>
-                                    <def>Hand</def>
-                                    <customLabel>left hand</customLabel>
-                                    <coverage>0.4</coverage>
-                                    <parts>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left thumb</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left index</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left middle</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left ring</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>left pinky</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                    </parts>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Shoulder</def>
-                    <customLabel>right shoulder</customLabel>
-                    <coverage>0.10</coverage>
-                    <parts>
-                        <li>
-                            <def>Arm</def>
-                            <customLabel>right arm</customLabel>
-                            <coverage>0.15</coverage>
-                            <parts>
-                                <li>
-                                    <def>Hand</def>
-                                    <customLabel>right hand</customLabel>
-                                    <coverage>0.4</coverage>
-                                    <parts>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right thumb</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right index</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right middle</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right ring</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                        <li>
-                                            <def>Finger</def>
-                                            <customLabel>right pinky</customLabel>
-                                            <coverage>0.08</coverage>
-                                        </li>
-                                    </parts>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>left leg</customLabel>
-                    <coverage>0.16</coverage>
-                    <parts>
-                        <li>
-                            <def>Foot</def>
-                            <customLabel>left foot</customLabel>
-                            <coverage>0.4</coverage>
-                            <parts>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left big toe</customLabel>
-                                    <coverage>0.1</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left second toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left third toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left fourth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>left fifth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>Leg</def>
-                    <customLabel>right leg</customLabel>
-                    <coverage>0.16</coverage>
-                    <parts>
-                        <li>
-                            <def>Foot</def>
-                            <customLabel>right foot</customLabel>
-                            <coverage>0.4</coverage>
-                            <parts>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right big toe</customLabel>
-                                    <coverage>0.1</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right second toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right third toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right fourth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                                <li>
-                                    <def>Toe</def>
-                                    <customLabel>right fifth toe</customLabel>
-                                    <coverage>0.08</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-            </parts>
-        </corePart>
-    </BodyDef>
+	<!-- ================= SYNTH GEN1 BODY ================= -->
+	<BodyDef>
+		<defName>RobCo_SynthGen1</defName>
+		<label>synth generation 1</label>
+		<corePart>
+			<def>RobCo_Chassis</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>Spine</def>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Heart</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Lung</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Kidney</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Liver</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Stomach</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Neck</def>
+					<coverage>0.05</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>Head</def>
+							<coverage>0.93</coverage>
+							<parts>
+								<li>
+									<def>Brain</def>
+									<coverage>0.32</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>left eye</customLabel>
+									<coverage>0.16</coverage>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>right eye</customLabel>
+									<coverage>0.16</coverage>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>left ear</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>right ear</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Nose</def>
+									<coverage>0.09</coverage>
+								</li>
+								<li>
+									<def>Jaw</def>
+									<coverage>0.10</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Shoulder</def>
+					<customLabel>left shoulder</customLabel>
+					<coverage>0.10</coverage>
+					<parts>
+						<li>
+							<def>Arm</def>
+							<customLabel>left arm</customLabel>
+							<coverage>0.15</coverage>
+							<parts>
+								<li>
+									<def>Hand</def>
+									<customLabel>left hand</customLabel>
+									<coverage>0.4</coverage>
+									<parts>
+										<li>
+											<def>Finger</def>
+											<customLabel>left thumb</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left index</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left middle</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left ring</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left pinky</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Shoulder</def>
+					<customLabel>right shoulder</customLabel>
+					<coverage>0.10</coverage>
+					<parts>
+						<li>
+							<def>Arm</def>
+							<customLabel>right arm</customLabel>
+							<coverage>0.15</coverage>
+							<parts>
+								<li>
+									<def>Hand</def>
+									<customLabel>right hand</customLabel>
+									<coverage>0.4</coverage>
+									<parts>
+										<li>
+											<def>Finger</def>
+											<customLabel>right thumb</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right index</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right middle</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right ring</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right pinky</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>left leg</customLabel>
+					<coverage>0.16</coverage>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>left foot</customLabel>
+							<coverage>0.4</coverage>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>left big toe</customLabel>
+									<coverage>0.1</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left second toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left third toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left fourth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left fifth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>right leg</customLabel>
+					<coverage>0.16</coverage>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>right foot</customLabel>
+							<coverage>0.4</coverage>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>right big toe</customLabel>
+									<coverage>0.1</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right second toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right third toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right fourth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right fifth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+	<!-- ================= SYNTH GEN2 BODY ================= -->
+	<BodyDef>
+		<defName>RobCo_SynthGen2</defName>
+		<label>synth generation 2</label>
+		<corePart>
+			<def>RobCo_Chassis</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>Spine</def>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Heart</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Lung</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Kidney</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Liver</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Stomach</def>
+					<coverage>0.06</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Neck</def>
+					<coverage>0.06</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>Head</def>
+							<coverage>0.94</coverage>
+							<parts>
+								<li>
+									<def>Brain</def>
+									<coverage>0.30</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>left eye</customLabel>
+									<coverage>0.16</coverage>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>right eye</customLabel>
+									<coverage>0.16</coverage>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>left ear</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>right ear</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Nose</def>
+									<coverage>0.10</coverage>
+								</li>
+								<li>
+									<def>Jaw</def>
+									<coverage>0.10</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Shoulder</def>
+					<customLabel>left shoulder</customLabel>
+					<coverage>0.10</coverage>
+					<parts>
+						<li>
+							<def>Arm</def>
+							<customLabel>left arm</customLabel>
+							<coverage>0.15</coverage>
+							<parts>
+								<li>
+									<def>Hand</def>
+									<customLabel>left hand</customLabel>
+									<coverage>0.4</coverage>
+									<parts>
+										<li>
+											<def>Finger</def>
+											<customLabel>left thumb</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left index</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left middle</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left ring</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>left pinky</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Shoulder</def>
+					<customLabel>right shoulder</customLabel>
+					<coverage>0.10</coverage>
+					<parts>
+						<li>
+							<def>Arm</def>
+							<customLabel>right arm</customLabel>
+							<coverage>0.15</coverage>
+							<parts>
+								<li>
+									<def>Hand</def>
+									<customLabel>right hand</customLabel>
+									<coverage>0.4</coverage>
+									<parts>
+										<li>
+											<def>Finger</def>
+											<customLabel>right thumb</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right index</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right middle</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right ring</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+										<li>
+											<def>Finger</def>
+											<customLabel>right pinky</customLabel>
+											<coverage>0.08</coverage>
+										</li>
+									</parts>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>left leg</customLabel>
+					<coverage>0.16</coverage>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>left foot</customLabel>
+							<coverage>0.4</coverage>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>left big toe</customLabel>
+									<coverage>0.1</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left second toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left third toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left fourth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>left fifth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>right leg</customLabel>
+					<coverage>0.16</coverage>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>right foot</customLabel>
+							<coverage>0.4</coverage>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>right big toe</customLabel>
+									<coverage>0.1</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right second toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right third toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right fourth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right fifth toe</customLabel>
+									<coverage>0.08</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
 </Defs>

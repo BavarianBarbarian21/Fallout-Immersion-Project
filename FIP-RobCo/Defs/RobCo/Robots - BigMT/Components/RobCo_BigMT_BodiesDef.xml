@@ -1,166 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- ================= ROBOSCORPION ================= -->
-    <!-- Roboscorpion Body -->
-    <BodyDef>
-        <defName>RobCo_Roboscorpion</defName>
-        <label>roboscorpion</label>
-        <corePart>
-            <def>RobCo_Chassis</def>
-            <height>Middle</height>
-            <depth>Outside</depth>
-            <groups>
-                <li>Torso</li>
-            </groups>
-            <parts>
-                <li>
-                    <def>RobCo_Processor</def>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Reactor</def>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>FluidReprocessor</def>
-                    <coverage>0.05</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>MechanicalNeck</def>
-                    <coverage>0.12</coverage>
-                    <height>Top</height>
-                    <parts>
-                        <li>
-                            <def>MechanicalHead</def>
-                            <coverage>0.85</coverage>
-                            <parts>
-                                <li>
-                                    <def>RobCo_Scanner</def>
-                                    <coverage>0.15</coverage>
-                                </li>
-                                <li>
-                                    <def>RobCo_Microphone</def>
-                                    <coverage>0.12</coverage>
-                                </li>
-                                <li>
-                                    <def>SmellSensor</def>
-                                    <coverage>0.12</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>front left leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>front right leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>middle left leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>middle right leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>rear left leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalLeg</def>
-                    <customLabel>rear right leg</customLabel>
-                    <coverage>0.06</coverage>
-                </li>
-                <li>
-                    <def>MechanicalArm</def>
-                    <customLabel>left pincer</customLabel>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>MechanicalArm</def>
-                    <customLabel>right pincer</customLabel>
-                    <coverage>0.08</coverage>
-                    <depth>Inside</depth>
-                </li>
-            </parts>
-        </corePart>
-    </BodyDef>
-
-    <!-- ================= THINK TANK ================= -->
-    <!-- Think Tank Body - large brain tank -->
-    <BodyDef>
-        <defName>RobCo_ThinkTank</defName>
-        <label>think tank</label>
-        <corePart>
-            <def>RobCo_CyberneticBraintank</def>
-            <height>Middle</height>
-            <depth>Outside</depth>
-            <groups>
-                <li>Torso</li>
-            </groups>
-            <parts>
-                <li>
-                    <def>RobCo_Processor</def>
-                    <coverage>0.15</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>Reactor</def>
-                    <coverage>0.15</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>FluidReprocessor</def>
-                    <coverage>0.10</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>MechanicalNeck</def>
-                    <coverage>0.08</coverage>
-                    <height>Top</height>
-                    <parts>
-                        <li>
-                            <def>MechanicalHead</def>
-                            <coverage>0.70</coverage>
-                            <parts>
-                                <li>
-                                    <def>RobCo_Scanner</def>
-                                    <coverage>0.15</coverage>
-                                </li>
-                                <li>
-                                    <def>RobCo_Microphone</def>
-                                    <coverage>0.12</coverage>
-                                </li>
-                            </parts>
-                        </li>
-                    </parts>
-                </li>
-                <li>
-                    <def>MechanicalArm</def>
-                    <customLabel>left manipulator</customLabel>
-                    <coverage>0.12</coverage>
-                    <depth>Inside</depth>
-                </li>
-                <li>
-                    <def>MechanicalArm</def>
-                    <customLabel>right manipulator</customLabel>
-                    <coverage>0.12</coverage>
-                    <depth>Inside</depth>
-                </li>
-            </parts>
-        </corePart>
-    </BodyDef>
+	<!-- ================= ROBOSCORPION ================= -->
+	<!-- Roboscorpion Body -->
+	<BodyDef>
+		<defName>RobCo_Roboscorpion</defName>
+		<label>roboscorpion</label>
+		<corePart>
+			<def>RobCo_Chassis</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>RobCo_Processor</def>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Reactor</def>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.05</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>MechanicalNeck</def>
+					<coverage>0.12</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>MechanicalHead</def>
+							<coverage>0.85</coverage>
+							<parts>
+								<li>
+									<def>RobCo_Scanner</def>
+									<coverage>0.15</coverage>
+								</li>
+								<li>
+									<def>RobCo_Microphone</def>
+									<coverage>0.12</coverage>
+								</li>
+								<li>
+									<def>SmellSensor</def>
+									<coverage>0.12</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>front left leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>front right leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>middle left leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>middle right leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>rear left leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalLeg</def>
+					<customLabel>rear right leg</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>MechanicalArm</def>
+					<customLabel>left pincer</customLabel>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>MechanicalArm</def>
+					<customLabel>right pincer</customLabel>
+					<coverage>0.08</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+	<!-- ================= THINK TANK ================= -->
+	<!-- Think Tank Body - large brain tank -->
+	<BodyDef>
+		<defName>RobCo_ThinkTank</defName>
+		<label>think tank</label>
+		<corePart>
+			<def>RobCo_CyberneticBraintank</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<def>RobCo_Processor</def>
+					<coverage>0.15</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>Reactor</def>
+					<coverage>0.15</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>MechanicalNeck</def>
+					<coverage>0.08</coverage>
+					<height>Top</height>
+					<parts>
+						<li>
+							<def>MechanicalHead</def>
+							<coverage>0.70</coverage>
+							<parts>
+								<li>
+									<def>RobCo_Scanner</def>
+									<coverage>0.15</coverage>
+								</li>
+								<li>
+									<def>RobCo_Microphone</def>
+									<coverage>0.12</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>MechanicalArm</def>
+					<customLabel>left manipulator</customLabel>
+					<coverage>0.12</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>MechanicalArm</def>
+					<customLabel>right manipulator</customLabel>
+					<coverage>0.12</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
 </Defs>

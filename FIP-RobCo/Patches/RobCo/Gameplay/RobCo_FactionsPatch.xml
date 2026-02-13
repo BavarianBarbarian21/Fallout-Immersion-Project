@@ -73,8 +73,7 @@
     </Operation>
     <!-- Patch MechanitorShip questDescription -->
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),
-			'questDescription->')]</xpath>
+        <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),'questDescription->')]</xpath>
         <value>
             <li>questDescription->You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
 
