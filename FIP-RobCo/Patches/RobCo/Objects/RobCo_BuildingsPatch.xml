@@ -83,11 +83,24 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="MechGestator"]/label</xpath>
         <value>
-            <label>RobCo Workbench</label>
+            <label>Civilian RobCo Workbench</label>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="MechGestator"]/description</xpath>
+        <value>
+            <description>Device for assembling RobCo robots from components.</description>
+        </value>
+    </Operation>
+    <!-- Large MechGestator -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/label</xpath>
+        <value>
+            <label>Military RobCo Workbench</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/description</xpath>
         <value>
             <description>Device for assembling RobCo robots from components.</description>
         </value>

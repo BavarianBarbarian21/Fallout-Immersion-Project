@@ -21,6 +21,14 @@
             </requiredAnalyzed>
         </value>
     </Operation>
+    <!-- Researching Basic Mechtech without Comms Console is possible, so adding this is just railroading players.
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]/prerequisites</xpath>
+        <value>
+            <li>MicroelectronicsBasics</li>
+        </value>
+    </Operation>
+    -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ResearchProjectDef[defName="StandardMechtech"]/label</xpath>
         <value>

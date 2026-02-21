@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Resurrection Patches -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="ResurrectLightMech"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>Corpse_RobCo_Eyebot</li>
+            <li>Corpse_RobCo_EyebotDuraframe</li>
+            <li>Corpse_RobCo_Constructron</li>
+            <li>Corpse_RobCo_Factotron</li>
+            <li>Corpse_RobCo_Utilitron</li>
+            <li>Corpse_RobCo_Collectron</li>
+            <li>Corpse_RobCo_Protectron</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>Corpse_RobCo_MisterFarmhand</li>
+            <li>Corpse_RobCo_MisterHandy</li>
+            <li>Corpse_RobCo_MisterGutsy</li>
+            <li>Corpse_RobCo_MissNanny</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>Corpse_RobCo_Assaultron</li>
+            <li>Corpse_RobCo_Cyberdog</li>
+            <li>Corpse_RobCo_Robobrain</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="ResurrectUltraheavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>Corpse_RobCo_SentrybotSiegebreaker</li>
+            <li>Corpse_RobCo_SentrybotPestcontrol</li>
+            <li>Corpse_RobCo_SentrybotAnnihilator</li>
+        </value>
+    </Operation>
+</Patch>
