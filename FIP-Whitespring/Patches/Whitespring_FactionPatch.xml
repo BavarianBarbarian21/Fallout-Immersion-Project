@@ -12,9 +12,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/FactionDef[defName="Empire"]/description</xpath>
     <value>
-      <description>A militant enclave of survivors claiming to represent the Appalachia scientific order. They pursue research into cryptids and hoard intelligence and technology for the Whitespring Enclave.
-
-The Enclave enforces its authority with ranks and privileges rather than traditional royal titles, and will often barter their intel and resources for loyalty.</description>
+      <description>A militant enclave of survivors claiming to represent the Appalachia scientific division. They pursue research into cryptids and hoard intelligence and technology for the Whitespring Enclave.</description>
     </value>
   </Operation>
 
@@ -98,6 +96,42 @@ The Enclave enforces its authority with ranks and privileges rather than traditi
     <xpath>Defs/ThingDef[defName="AnimusStone"]/description</xpath>
     <value>
       <description>A resonant cryptic stone studied by Whitespring researchers. It increases cryptid meditation focus and is often used in enclave research facilities.</description>
+    </value>
+  </Operation>
+
+  <!-- Pawn kind visible label renames: imperial -> Whitespring -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Empire_Common_Lodger"]/label</xpath>
+    <value>
+      <label>Whitespring citizen</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Empire_Common_Trader"]/label</xpath>
+    <value>
+      <label>Whitespring trader</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Empire_Common_Laborer"]/label</xpath>
+    <value>
+      <label>Whitespring laborer</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/label</xpath>
+    <value>
+      <label>trooper</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/label</xpath>
+    <value>
+      <label>arctic marine</label>
     </value>
   </Operation>
 
