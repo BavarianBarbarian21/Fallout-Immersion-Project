@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Replace selected royal/imperial backstory titles and descriptions with Whitespring equivalents -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalMasseuse43"]/title</xpath>
+    <value>
+      <title>Whitespring masseuse</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalMasseuse43"]/titleShort</xpath>
+    <value>
+      <titleShort>masseuse</titleShort>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalMasseuse43"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] served wealthy Whitespring patrons as a massage artist. [PAWN_pronoun] serviced many members of the enclave and their guests.
+\n[PAWN_nameDef] occasionally offered something extra, if the patron was in the mood. Advancing in this line of work meant having refined social skills.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalCook18"]/title</xpath>
+    <value>
+      <title>Whitespring cook</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalCook18"]/titleShort</xpath>
+    <value>
+      <titleShort>cook</titleShort>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="RoyalCook18"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] made meals for Whitespring patrons.
+\nOnly the finest food was acceptable, so [PAWN_nameDef] tended a small garden on the compound grounds to get the freshest herbs and vegetables. [PAWN_pronoun] fell in love with the food [PAWN_objective]self.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialPriest24"]/title</xpath>
+    <value>
+      <title>Whitespring lawyer</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialPriest24"]/titleShort</xpath>
+    <value>
+      <titleShort>lawyer</titleShort>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialPriest24"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] was a lawyer in the Whitespring division.
+\n[PAWN_pronoun] spent half [PAWN_possessive] time studying laws and the role of the order within enclave doctrine. The other half was spent preaching discipline and loyalty.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialInquisitor53"]/title</xpath>
+    <value>
+      <title>Whitespring military police</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialInquisitor53"]/titleShort</xpath>
+    <value>
+      <titleShort>officer</titleShort>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="ImperialInquisitor53"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] worked as an military police officer within the Whitespring, hunting unorthodox thought and dissent.
+\n[PAWN_nameDef] exposed and punished deviance to maintain order and the enclave's research priorities.</description>
+    </value>
+  </Operation>
+
+  <!-- Imperial Royal Child Backstories -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="CountryLordling92"]/title</xpath>
+    <value><title>Enclave country scion</title></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="CountryLordling92"]/titleShort</xpath>
+    <value><titleShort>country scion</titleShort></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/BackstoryDef[defName="CountryLordling92"]/description</xpath>
+    <value><description>[PAWN_nameDef] grew up in a privileged Enclave family estate in Appalachia. [PAWN_possessive] early years were filled with lessons in etiquette, politics, and Whitespring traditions.
+[PAWN_nameDef] and [PAWN_possessive] friends found ways to sneak out and explore the forests beyond the compound.</description></value>
+  </Operation>
+
+  </Patch>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Prestige Marine -> Patriot Marine -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarinePrestige"]/label</xpath>
+    <value>
+      <label>patriot marine armor</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarinePrestige"]/description</xpath>
+    <value>
+      <description>A suit of armor used by Whitespring patriots. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a human to wear the armor and still move easily.
+
+Expensive and ceremonial, patriot marine armor marks membership and rank. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarineHelmetPrestige"]/label</xpath>
+    <value>
+      <label>patriot marine helmet</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarineHelmetPrestige"]/description</xpath>
+    <value>
+      <description>A marine armor helmet used by Whitespring patriots, with a built-in status computer and layered plasteel-weave plates. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <!-- Cataphract -> Secret Service Armor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphract"]/label</xpath>
+    <value>
+      <label>secret service armor</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphract"]/description</xpath>
+    <value>
+      <description>A suit of heavy armor used by Whitespring secret service units to break fortified positions in frontal assaults when no other option is available.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/label</xpath>
+    <value>
+      <label>patriot secret service armor</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/description</xpath>
+    <value>
+      <description>An ornate heavy armor awarded to high-ranking Whitespring secret service operatives. Embedded cryptex threads enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorHelmetCataphractPrestige"]/label</xpath>
+    <value>
+      <label>patriot secret service helmet</label>
+    </value>
+  </Operation>
+
+  <!-- Grenadier -> Arctic Marine Armor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarineGrenadier"]/label</xpath>
+    <value>
+      <label>arctic marine armor</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorMarineGrenadier"]/description</xpath>
+    <value>
+      <description>A variant of marine armor specialized for cold and arctic operations, fitted with a shoulder-mounted launcher. Arctic marines specialize in breaching cold-climate fortifications.</description>
+    </value>
+  </Operation>
+
+  <!-- Locust -> Urban Scout Armor -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorLocust"]/label</xpath>
+    <value>
+      <label>urban scout armor</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorLocust"]/description</xpath>
+    <value>
+      <description>A variant of recon armor with short-range thrust capabilities for quick movement in urban environments. Urban scouts prefer close-quarters engagements and quick strikes rather than static defense.</description>
+    </value>
+  </Operation>
+
+  <!-- Replace imperial references and eltex -> cryptex in several common defs -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphract"]/description</xpath>
+    <value>
+      <description>A suit of heavy armor used by Whitespring secret service units to break fortified positions in frontal assaults when no other option is available.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/description</xpath>
+    <value>
+      <description>An ornate heavy armor awarded to high-ranking Whitespring secret service operatives. Embedded cryptex threads enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorReconPrestige"]/description</xpath>
+    <value>
+      <description>A suit of light armor, designed to permit quick movement. Plasteel-weave plates block attacks without compromising mobility, and neuro-memetic assistors in the lower body allow a human to wear the armor and still move easily.
+
+Expensive and beautiful, prestige armor like this is usually made for those of high status. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorHelmetReconPrestige"]/description</xpath>
+    <value>
+      <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.
+
+Expensive and beautiful, prestige armor like this is usually made for those of high status. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/description</xpath>
+    <value>
+      <description>A suit of heavy armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic assistors prevent the suit's massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.
+
+Expensive and beautiful, prestige armor like this is usually made for those of high status. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_ArmorHelmetCataphractPrestige"]/description</xpath>
+    <value>
+      <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.
+
+Expensive and beautiful, prestige armor like this is usually made for those of high status. Embedded cryptex threads also enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+<!-- Apparel: Eltex -> Cryptex and robe/coat renames -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusHelmet"]/label</xpath>
+    <value>
+      <label>cryptex helmet</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusHelmet"]/description</xpath>
+    <value>
+      <description>A lightweight helmet designed for cryptid research focus. While it provides little physical protection, its special materials enhance the wearer's cryptid sensitivity and dissipate neural heat.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_EltexSkullcap"]/label</xpath>
+    <value>
+      <label>cryptex skullcap</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_EltexSkullcap"]/description</xpath>
+    <value>
+      <description>A tight skullcap designed for cryptid research focus. It provides no physical protection, but its special materials enhance the wearer's cryptid sensitivity.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusShirt"]/label</xpath>
+    <value>
+      <label>cryptex shirt</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusShirt"]/description</xpath>
+    <value>
+      <description>A shirt embedded with special cryptid-focusing materials. These enhance cryptid sensitivity and help dissipate neural heat.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusVest"]/label</xpath>
+    <value>
+      <label>cryptex vest</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_PsyfocusRobe"]/label</xpath>
+    <value>
+      <label>cryptex robe</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_RobeRoyal"]/label</xpath>
+    <value>
+      <label>patriot longcoat</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_RobeRoyal"]/description</xpath>
+    <value>
+      <description>A long, formal longcoat used by Whitespring patriots and officers. Embroidered with the enclave sigils, it marks membership and rank.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_Coronet"]/label</xpath>
+    <value>
+      <label>Whitespring Beret</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_Coronet"]/description</xpath>
+    <value>
+      <description>A beret styled with the Whitespring insignia, worn by enclave personnel of certain ranks.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_Crown"]/label</xpath>
+    <value>
+      <label>Whitespring Scientist Cap</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_Crown"]/description</xpath>
+    <value>
+      <description>A cap worn by senior Whitespring researchers, denoting a leadership role in cryptid studies.</description>
+    </value>
+  </Operation>
+
+</Patch>
