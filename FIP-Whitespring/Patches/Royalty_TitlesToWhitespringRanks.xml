@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Patch Royalty Empire titles to Whitespring ranks -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Freeholder"]/label</xpath>
+    <value>member</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Freeholder"]/description</xpath>
+    <value>Member is the entry-level rank for recognized personnel in the Enclave's Appalachia Division. Most earn this status through basic service, training, or acts that demonstrate loyalty to the Enclave's mission and values.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Yeoman"]/label</xpath>
+    <value>private</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Yeoman"]/description</xpath>
+    <value>Private is the first operational rank in the Enclave's military structure, granted to those who have completed initial training and are entrusted with basic duties and responsibilities within the Appalachia Division.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Acolyte"]/label</xpath>
+    <value>sergeant</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Acolyte"]/description</xpath>
+    <value>Sergeant is a non-commissioned officer rank, responsible for leading squads, maintaining discipline, and ensuring the effectiveness of Enclave operations. Sergeants are often promoted from the ranks for their leadership and technical skills.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Knight"]/label</xpath>
+    <value>lieutenant</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Knight"]/description</xpath>
+    <value>Lieutenant is a junior officer rank in the Enclave, typically commanding platoons or serving as executive officers. Lieutenants are entrusted with tactical leadership and the execution of critical missions in the field.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Praetor"]/label</xpath>
+    <value>captain</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Praetor"]/description</xpath>
+    <value>Captain is a commissioned officer rank, responsible for leading companies and overseeing major operations. Captains are experienced leaders who coordinate missions and ensure the Enclave's objectives are met efficiently.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Baron"]/label</xpath>
+    <value>colonel</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Baron"]/description</xpath>
+    <value>Colonel is a senior officer rank, commanding regiments and managing large-scale strategic operations. Colonels are responsible for the training, discipline, and combat readiness of their units within the Appalachia Division.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Count"]/label</xpath>
+    <value>general</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Count"]/description</xpath>
+    <value>General is a high command rank in the Enclave, overseeing multiple regiments and directing major campaigns. Generals are responsible for strategic planning and the overall success of Enclave operations in Appalachia.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Duke"]/label</xpath>
+    <value>secretary</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Duke"]/description</xpath>
+    <value>Secretary is a senior administrative rank, coordinating logistics, intelligence, and support services for the Enclave's military branches. Secretaries ensure the smooth operation of all divisions and facilitate communication with high command.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Consul"]/label</xpath>
+    <value>attorney general</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Consul"]/description</xpath>
+    <value>Attorney General is a top-level legal and strategic advisor, responsible for interpreting Enclave law, overseeing military justice, and advising on matters of policy and command. This rank is reserved for the most trusted officers.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Stellarch"]/label</xpath>
+    <value>vice-president</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Stellarch"]/description</xpath>
+    <value>Vice-President is a national-level executive rank, acting as deputy to the President and overseeing the coordination of all Enclave operations across multiple regions. The Vice-President ensures the Enclave's mission is carried out with unity and precision.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/label</xpath>
+    <value>president</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/description</xpath>
+    <value>President is the supreme commander of the Enclave, holding ultimate authority over all divisions, personnel, and operations. The President embodies the ideals of the prewar United States and leads the Enclave in its mission to restore order and civilization.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/labelFemale</xpath>
+    <value>president</value>
+  </Operation>
+</Patch>
