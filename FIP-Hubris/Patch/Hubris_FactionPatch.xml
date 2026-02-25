@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Nature shrines / animus stone -> cryptid equivalents -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NatureShrine_Small"]/label</xpath>
+    <value>
+      <label>small cryptic shrine</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NatureShrine_Small"]/description</xpath>
+    <value>
+      <description>A small shrine used by cryptid researchers to focus meditation and study. These shrines strengthen cryptid-focused meditation for Whitespring operatives.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NatureShrine_Large"]/label</xpath>
+    <value>
+      <label>large cryptic shrine</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="NatureShrine_Large"]/description</xpath>
+    <value>
+      <description>A large shrine for honoring cryptid forces. Whitespring operatives use these to amplify cryptid focus during ritualized study.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AnimusStone"]/label</xpath>
+    <value>
+      <label>cryptic stone</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AnimusStone"]/description</xpath>
+    <value>
+      <description>A resonant cryptic stone studied by Whitespring researchers. It increases cryptid meditation focus and is often used in enclave research facilities.</description>
+    </value>
+  </Operation>
+
+  <!--Mothman Totem-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_TreeAnima"]/label</xpath>
+    <value>
+      <label>Mothman totem</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_TreeAnima"]/description</xpath>
+    <value>
+      <description>A Mothman totem used by Appalachia cultists to focus their meditation and worship.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/graphicData/texPath</xpath>
+        <value>
+            <texPath>Hubris/Totem</texPath>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ChoppedStump_Anima"]/label</xpath>
+    <value>
+      <label>chopped Mothman stump</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ChoppedStump_Anima"]/description</xpath>
+    <value>
+      <description>A stump left behind after an Mothman totem has been felled. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    </value>
+  </Operation>
+
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SmashedStump_Anima"]/label</xpath>
+    <value>
+      <label>smashed Mothman stump</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="SmashedStump_Anima"]/description</xpath>
+    <value>
+      <description>The remnants of an Mothman totem destroyed by damage. It's ugly. The stump can be extracted but yields very little usable wood. Left outdoors, the stump will deteriorate in time.</description>
+    </value>
+  </Operation>
+  
+    <!--Mothman Eggs-->
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_GrassAnima"]/label</xpath>
+    <value>
+      <label>Mothman eggs</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Plant_GrassAnima"]/description</xpath>
+    <value>
+      <description>Mysterious black eggs with a red glow. Tribal peoples find that these eggs grow around the base of a Mothman totem as they meditate. It seems to reflect some kind of strengthening of the totem's cryptic power.\n\nWasteland scientists have tried to study the phenomenon, but the eggs fail to hatch when observed too closely.\n\nAnimals refuse eat Mothman eggs. Tribal stories say this is done out of respect and fear.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_GrassAnima"]/graphicData/texPath</xpath>
+        <value>
+            <texPath>Hubris/Egg</texPath>
+        </value>
+    </Operation>
+
+</Patch>
