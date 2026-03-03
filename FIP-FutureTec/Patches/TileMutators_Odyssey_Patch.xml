@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Patch: Odyssey TileMutators - add FIP_ equivalents to biome whitelist/blacklist entries -->
+
+  <!-- Natural mutators (subset shown) -->
+  <TileMutatorDef Name="BaseLakeMut" Abstract="True">
+    <biomeWhitelist>
+      <li>BorealForest</li>
+      <li>FIP_BorealForest</li>
+      <li>GlacialPlain</li>
+      <li>FIP_GlacialPlain</li>
+      <li>Glowforest</li>
+      <li>FIP_Glowforest</li>
+      <li>TemperateForest</li>
+      <li>FIP_TemperateForest</li>
+      <li>TropicalRainforest</li>
+      <li>FIP_TropicalRainforest</li>
+      <li>Grasslands</li>
+      <li>FIP_Grasslands</li>
+      <li>Tundra</li>
+      <li>FIP_Tundra</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Oasis</defName>
+    <biomeWhitelist>
+      <li>Desert</li>
+      <li>FIP_Desert</li>
+      <li>ExtremeDesert</li>
+      <li>FIP_ExtremeDesert</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>DryLake</defName>
+    <biomeWhitelist>
+      <li>Desert</li>
+      <li>FIP_Desert</li>
+      <li>ExtremeDesert</li>
+      <li>FIP_ExtremeDesert</li>
+      <li>Tundra</li>
+      <li>FIP_Tundra</li>
+      <li>AridShrubland</li>
+      <li>FIP_AridShrubland</li>
+      <li>Grasslands</li>
+      <li>FIP_Grasslands</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>ToxicLake</defName>
+    <biomeWhitelist>
+      <li>Glowforest</li>
+      <li>FIP_Glowforest</li>
+      <li>Scarlands</li>
+      <li>FIP_Scarlands</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Wetland</defName>
+    <biomeWhitelist>
+      <li>BorealForest</li>
+      <li>FIP_BorealForest</li>
+      <li>ColdBog</li>
+      <li>FIP_ColdBog</li>
+      <li>Glowforest</li>
+      <li>FIP_Glowforest</li>
+      <li>TemperateForest</li>
+      <li>FIP_TemperateForest</li>
+      <li>TemperateSwamp</li>
+      <li>FIP_TemperateSwamp</li>
+      <li>TropicalRainforest</li>
+      <li>FIP_TropicalRainforest</li>
+      <li>TropicalSwamp</li>
+      <li>FIP_TropicalSwamp</li>
+      <li>Tundra</li>
+      <li>FIP_Tundra</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <!-- Modifiers and man-made mutators, selected entries -->
+  <TileMutatorDef>
+    <defName>WildPlants</defName>
+    <biomeWhitelist>
+      <li>AridShrubland</li>
+      <li>FIP_AridShrubland</li>
+      <li>BorealForest</li>
+      <li>FIP_BorealForest</li>
+      <li>ColdBog</li>
+      <li>FIP_ColdBog</li>
+      <li>GlacialPlain</li>
+      <li>FIP_GlacialPlain</li>
+      <li>Grasslands</li>
+      <li>FIP_Grasslands</li>
+      <li>LavaField</li>
+      <li>FIP_LavaField</li>
+      <li>TemperateForest</li>
+      <li>FIP_TemperateForest</li>
+      <li>TemperateSwamp</li>
+      <li>FIP_TemperateSwamp</li>
+      <li>TropicalRainforest</li>
+      <li>FIP_TropicalRainforest</li>
+      <li>TropicalSwamp</li>
+      <li>FIP_TropicalSwamp</li>
+      <li>Tundra</li>
+      <li>FIP_Tundra</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>ObsidianDeposits</defName>
+    <biomeWhitelist>
+      <li>LavaField</li>
+      <li>FIP_LavaField</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+</Defs>

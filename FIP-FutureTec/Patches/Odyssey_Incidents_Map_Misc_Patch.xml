@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Patch: Odyssey Incidents_Map_Misc - add FIP_ equivalents -->
+
+  <IncidentDef>
+    <defName>VolcanicAsh</defName>
+    <label>volcanic ash</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <gameCondition>VolcanicAsh</gameCondition>
+    <letterLabel>Volcanic ash</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>1</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <earliestDay>15</earliestDay>
+    <allowedBiomes>
+      <li>LavaField</li>
+      <li>FIP_LavaField</li>
+    </allowedBiomes>
+    <disabledWhen>
+      <extremeWeatherIncidentsDisabled>true</extremeWeatherIncidentsDisabled>
+    </disabledWhen>
+    <durationDays>2~4</durationDays>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>LavaEmergence</defName>
+    <label>lava emergence</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_LavaEmergence</workerClass>
+    <baseChance>0.5</baseChance>
+    <allowedBiomes>
+      <li>LavaField</li>
+      <li>FIP_LavaField</li>
+    </allowedBiomes>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>VolcanicDebris</defName>
+    <label>volcanic debris</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <gameCondition>VolcanicDebris</gameCondition>
+    <letterLabel>Volcanic debris</letterLabel>
+    <letterText>A nearby volcanic eruption is showering the region with molten lava!</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>2.0</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <earliestDay>15</earliestDay>
+    <allowedBiomes>
+      <li>LavaField</li>
+      <li>FIP_LavaField</li>
+    </allowedBiomes>
+    <disabledWhen>
+      <extremeWeatherIncidentsDisabled>true</extremeWeatherIncidentsDisabled>
+    </disabledWhen>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>BoomshroomSprout</defName>
+    <label>boomshroom sprout</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_BoomshroomSprout</workerClass>
+    <baseChance>1.0</baseChance>
+    <letterLabel>Boomshroom sprout</letterLabel>
+    <letterText>A cluster of explosive boomshrooms has sprouted nearby!\n\nThese mushrooms only grow in darkness. Once they mature, they can be harvested for chemfuel.\n\nBe careful - mature boomshrooms explode if damaged.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <allowedBiomes>
+      <li>Glowforest</li>
+      <li>FIP_Glowforest</li>
+    </allowedBiomes>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>BioluminescentSpores</defName>
+    <label>bioluminescent spores</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+    <gameCondition>BioluminescentSpores</gameCondition>
+    <baseChance>1.0</baseChance>
+    <letterLabel>Bioluminescent spores</letterLabel>
+    <letterText>Some variety of fungus is blossoming, releasing bioluminescent spores! The spores are strangely beautiful and pose no danger.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <allowedBiomes>
+      <li>Glowforest</li>
+      <li>FIP_Glowforest</li>
+    </allowedBiomes>
+    <minRefireDays>15</minRefireDays>
+    <durationDays>0.33~0.75</durationDays>
+  </IncidentDef>
+
+  <!-- Additional Odyssey incidents mirrored with FIP_ equivalents exist; include as needed by expanding this file. -->
+
+</Defs>
