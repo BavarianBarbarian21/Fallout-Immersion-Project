@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Patch: Odyssey TileMutators - add FIP_ equivalents to biome whitelist/blacklist entries -->
+  <!-- Patch: Odyssey TileMutators - add FutureTec_ equivalents to biome whitelist/blacklist entries -->
 
   <!-- Natural mutators (subset shown) -->
   <TileMutatorDef Name="BaseLakeMut" Abstract="True">
     <biomeWhitelist>
       <li>BorealForest</li>
-      <li>FIP_BorealForest</li>
+      <li>FutureTec_Redwood</li>
+      <li>FutureTec_Sequoia</li>
+      <li>FutureTec_RedwoodLake</li>
+      <li>FutureTec_SequoiaLakes</li>
       <li>GlacialPlain</li>
-      <li>FIP_GlacialPlain</li>
+      <li>FutureTec_Glacier</li>
       <li>Glowforest</li>
-      <li>FIP_Glowforest</li>
+      <li>FutureTec_ScorchedForest</li>
       <li>TemperateForest</li>
-      <li>FIP_TemperateForest</li>
+      <li>FutureTec_Sanctuary</li>
+      <li>FutureTec_Oasis</li>
       <li>TropicalRainforest</li>
-      <li>FIP_TropicalRainforest</li>
-      <li>Grasslands</li>
-      <li>FIP_Grasslands</li>
+      <li>FutureTec_Monte</li>
+      <li>FutureTec_Arroyo</li>
+      <li>FutureTec_Sagebrush</li>
       <li>Tundra</li>
-      <li>FIP_Tundra</li>
+      <li>FutureTec_Tundra</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -26,9 +30,9 @@
     <defName>Oasis</defName>
     <biomeWhitelist>
       <li>Desert</li>
-      <li>FIP_Desert</li>
+      <li>FutureTec_Malpais</li>
       <li>ExtremeDesert</li>
-      <li>FIP_ExtremeDesert</li>
+      <li>FutureTec_Crater</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -36,15 +40,14 @@
     <defName>DryLake</defName>
     <biomeWhitelist>
       <li>Desert</li>
-      <li>FIP_Desert</li>
+      <li>FutureTec_Malpais</li>
       <li>ExtremeDesert</li>
-      <li>FIP_ExtremeDesert</li>
+      <li>FutureTec_Crater</li>
       <li>Tundra</li>
-      <li>FIP_Tundra</li>
+      <li>FutureTec_Tundra</li>
       <li>AridShrubland</li>
-      <li>FIP_AridShrubland</li>
-      <li>Grasslands</li>
-      <li>FIP_Grasslands</li>
+      <li>FutureTec_Divide</li>
+      <li>FutureTec_Wasteland</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -52,9 +55,9 @@
     <defName>ToxicLake</defName>
     <biomeWhitelist>
       <li>Glowforest</li>
-      <li>FIP_Glowforest</li>
+      <li>FutureTec_ScorchedForest</li>
       <li>Scarlands</li>
-      <li>FIP_Scarlands</li>
+      <li>FutureTec_Crater</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -62,21 +65,23 @@
     <defName>Wetland</defName>
     <biomeWhitelist>
       <li>BorealForest</li>
-      <li>FIP_BorealForest</li>
-      <li>ColdBog</li>
-      <li>FIP_ColdBog</li>
+      <li>FutureTec_Redwood</li>
+      <li>FutureTec_Sequoia</li>
+      <li>FutureTec_RedwoodLake</li>
+      <li>FutureTec_SequoiaLakes</li>
+      <li>GlacialPlain</li>
+      <li>FutureTec_Glacier</li>
       <li>Glowforest</li>
-      <li>FIP_Glowforest</li>
+      <li>FutureTec_ScorchedForest</li>
       <li>TemperateForest</li>
-      <li>FIP_TemperateForest</li>
-      <li>TemperateSwamp</li>
-      <li>FIP_TemperateSwamp</li>
+      <li>FutureTec_Sanctuary</li>
+      <li>FutureTec_Oasis</li>
       <li>TropicalRainforest</li>
-      <li>FIP_TropicalRainforest</li>
-      <li>TropicalSwamp</li>
-      <li>FIP_TropicalSwamp</li>
+      <li>FutureTec_Monte</li>
+      <li>FutureTec_Arroyo</li>
+      <li>FutureTec_Sagebrush</li>
       <li>Tundra</li>
-      <li>FIP_Tundra</li>
+      <li>FutureTec_Tundra</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -85,27 +90,27 @@
     <defName>WildPlants</defName>
     <biomeWhitelist>
       <li>AridShrubland</li>
-      <li>FIP_AridShrubland</li>
+      <li>FutureTec_Sagebrush</li>
       <li>BorealForest</li>
-      <li>FIP_BorealForest</li>
+      <li>FutureTec_Redwood</li>
       <li>ColdBog</li>
-      <li>FIP_ColdBog</li>
+      <li>FutureTec_Slough</li>
       <li>GlacialPlain</li>
-      <li>FIP_GlacialPlain</li>
+      <li>FutureTec_Glacier</li>
       <li>Grasslands</li>
-      <li>FIP_Grasslands</li>
+      <li>FutureTec_CentralValley</li>
       <li>LavaField</li>
-      <li>FIP_LavaField</li>
+      <li>FutureTec_Malpais</li>
       <li>TemperateForest</li>
-      <li>FIP_TemperateForest</li>
+      <li>FutureTec_Sanctuary</li>
       <li>TemperateSwamp</li>
-      <li>FIP_TemperateSwamp</li>
+      <li>FutureTec_Oasis</li>
       <li>TropicalRainforest</li>
-      <li>FIP_TropicalRainforest</li>
+      <li>FutureTec_Monte</li>
       <li>TropicalSwamp</li>
-      <li>FIP_TropicalSwamp</li>
+      <li>FutureTec_Arroyo</li>
       <li>Tundra</li>
-      <li>FIP_Tundra</li>
+      <li>FutureTec_Tundra</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
@@ -113,7 +118,7 @@
     <defName>ObsidianDeposits</defName>
     <biomeWhitelist>
       <li>LavaField</li>
-      <li>FIP_LavaField</li>
+      <li>FutureTec_Malpais</li>
     </biomeWhitelist>
   </TileMutatorDef>
 
