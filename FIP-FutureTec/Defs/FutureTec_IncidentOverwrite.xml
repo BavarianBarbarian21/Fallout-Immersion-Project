@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Patch: Odyssey Incidents_Map_Misc - add FutureTec_ equivalents -->
+  <!-- Patch: Core Storyteller Incidents_Map_Misc - add FutureTec_ equivalents to allowedBiomes -->
+
+  <IncidentDef>
+    <defName>AmbrosiaSprout</defName>
+    <label>ambrosia sprout</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_AmbrosiaSprout</workerClass>
+    <baseChance>1.0</baseChance>
+    <letterLabel>Ambrosia sprout</letterLabel>
+    <letterText>A grove of the mysterious ambrosia bush has sprouted nearby! If you wait for the plants to grow, you'll be able to harvest the delicious, pleasurable, and slightly addictive fruit.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <allowedBiomes>
+      <li>TropicalRainforest</li>
+      <li>FutureTec_Monte</li>
+      <li>TropicalSwamp</li>
+      <li>FutureTec_Arroyo</li>
+      <li>TemperateForest</li>
+      <li>TemperateSwamp</li>
+      <li>BorealForest</li>
+      <li>AridShrubland</li>
+    </allowedBiomes>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>HerdMigration</defName>
+    <label>herd migration</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <allowedBiomes>
+      <li>SeaIce</li>
+      <li>IceSheet</li>
+      <li>Tundra</li>
+      <li>FutureTec_Tundra</li>
+      <li>Desert</li>
+      <li>FutureTec_ScorchingWasteland</li>
+      <li>ExtremeDesert</li>
+      <li>FutureTec_Divide</li>
+    </allowedBiomes>
+    <workerClass>IncidentWorker_HerdMigration</workerClass>
+    <baseChance>1.0</baseChance>
+    <letterLabel>Animal migration: {0}</letterLabel>
+    <letterText>A group of {0} is passing through the area.\n\nThey won't attack unless provoked.</letterText>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>Alphabeavers</defName>
+    <label>alphabeavers</label>
+    <category>Misc</category>
+    <allowedBiomes>
+      <li>Tundra</li>
+      <li>FutureTec_Tundra</li>
+      <li>AridShrubland</li>
+    </allowedBiomes>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_Alphabeavers</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>30</minRefireDays>
+  </IncidentDef>
+
+    <IncidentDef>
+    <defName>GauranlenPodSpawn</defName>
+    <label>Gauranlen pod sprout</label>
+    <category>Special</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_GauranlenPodSpawn</workerClass>
+    <letterLabel>Gauranlen pod sprout</letterLabel>
+    <letterText>A Gauranlen pod has sprouted nearby!\n\nHarvest it to collect a Gauranlen seed. This special seed can be used to plant the majestic Gauranlen tree.\n\nYour colonists can connect with Gauranlen trees and make them spawn resources and helpful dryads to work or fight for you.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <disallowedBiomes>
+      <li>SeaIce</li>
+      <li>IceSheet</li>
+      <li>FutureTec_Glacier</li>
+      <li>FutureTec_FreezingWasteland</li>
+    </disallowedBiomes>
+  </IncidentDef>
 
   <IncidentDef>
     <defName>VolcanicAsh</defName>
@@ -103,7 +187,5 @@
     <minRefireDays>15</minRefireDays>
     <durationDays>0.33~0.75</durationDays>
   </IncidentDef>
-
-  <!-- Additional Odyssey incidents mirrored with FutureTec_ equivalents exist; include as needed by expanding this file. -->
 
 </Defs>
