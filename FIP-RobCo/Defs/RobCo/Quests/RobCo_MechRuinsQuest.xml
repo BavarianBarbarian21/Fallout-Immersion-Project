@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    RobCo: Mechanoid Ruins Quest
+    - Auto-accepts when triggered.
+    - Generates a site anywhere (mechanoid cluster + ruined outpost).
+    - Exactly one special corpse ThingDef is placed on the map (spawned as a single item).
+    - Quest completes when all enemies on the generated map are defeated.
+    NOTES: This is a data-driven draft that uses existing QuestGen nodes (Util_GenerateSite, QuestNode_GetMap, QuestNode_AllSignals, etc.).
+    You may need to tweak the wait signal name depending on how the generated site's lord signals in your version (common pattern: "<mapSignalPrefix>/lord.AllEnemiesDefeated").
+  -->
+
+  <QuestScriptDef>
+    <defName>RobCo_MechRuins_OneOff</defName>
+    <label>Ruined mechanoid stronghold</label>
+    <autoAccept>true</autoAccept>
+    <defaultHidden>false</defaultHidden>
+    <isRootSpecial>true</isRootSpecial>
+    <!-- make this only-ever-trigger once by keeping it off normal selection; trigger it by sending the signal below -->
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Ruined mechanoid stronghold</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->You detected an ancient ruin guarded by mechanoids. Recover the unique corpse found within and clear the site.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+
+    <!-- root: generate a site, get its map, spawn the single corpse thing, then wait for all enemies defeated -->
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <!-- Generate a site with mechanoid cluster + ruined outpost; store it as $site -->
+        <li Class="QuestNode_SubScript">
+          <def>Util_GenerateSite</def>
+          <parms>
+            <sitePartsParams>
+              <li>
+                <sitePart>MechCluster</sitePart>
+                <count>1</count>
+              </li>
+              <li>
+                <sitePart>Outpost</sitePart>
+                <count>1</count>
+              </li>
+            </sitePartsParams>
+            <siteFaction>Mechanoid</siteFaction>
+            <storeAs>site</storeAs>
+          </parms>
+        </li>
+
+        <!-- Ensure we have a map for the generated site and store it -->
+        <li Class="QuestNode_GetMap">
+          <site>$site</site>
+          <storeAs>map</storeAs>
+        </li>
+
+        <!-- Spawn exactly one special corpse Thing (replace RobCo_SpecialCorpse with your actual ThingDef name) -->
+        <li Class="QuestNode_GenerateThings">
+          <things>
+            <li>
+              <def>RobCo_SpecialCorpse</def>
+              <count>1</count>
+              <spawnMode>ScatterNearMapEdge</spawnMode>
+              <map>$map</map>
+            </li>
+          </things>
+        </li>
+
+        <!-- Optional: send player a letter when the map is generated -->
+        <li Class="QuestNode_Letter">
+          <label>Mechanoid ruin detected</label>
+          <text>Scanners have found a ruined complex guarded by mechanoids on a nearby tile. The objective includes a unique corpse; clear the site to claim your reward.</text>
+        </li>
+
+        <!-- Wait until all enemies on the map are defeated. Many vanilla quests listen for '<mapSignalPrefix>/lord.AllEnemiesDefeated'.
+             We use the map's signal prefix if available; fallback to generic 'lord.AllEnemiesDefeated'.
+        -->
+        <li Class="QuestNode_AllSignals">
+          <inSignals>
+            <li>map$($map)/lord.AllEnemiesDefeated</li>
+            <li>map.MapRemoved</li>
+          </inSignals>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <!-- Give reward or unlock research -->
+              <li Class="QuestNode_GiveRewards">
+                <parms>
+                  <thingRewards>
+                    <li>
+                      <def>Silver</def>
+                      <count>250</count>
+                    </li>
+                  </thingRewards>
+                  <!-- Example: unlock research on completion (replace RobCo_SpecialTech with real research defName) -->
+                  <researchUnlocks>
+                    <li>RobCo_SpecialTech</li>
+                  </researchUnlocks>
+                </parms>
+              </li>
+              <li Class="QuestNode_End" />
+            </nodes>
+          </node>
+        </li>
+
+        <!-- If map removed before completion, fail the quest -->
+        <li Class="QuestNode_Signal">
+          <inSignal>map.MapRemoved</inSignal>
+          <node Class="QuestNode_End">
+            <outcome>Fail</outcome>
+            <sendStandardLetter>true</sendStandardLetter>
+          </node>
+        </li>
+
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>
