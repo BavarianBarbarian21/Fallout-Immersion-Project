@@ -33,22 +33,13 @@
     <root Class="QuestNode_Sequence">
       <nodes>
         <!-- Generate a site with mechanoid cluster + ruined outpost; store it as $site -->
-        <li Class="QuestNode_SubScript">
-          <def>Util_GenerateSite</def>
-          <parms>
-            <sitePartsParams>
-              <li>
-                <sitePart>MechCluster</sitePart>
-                <count>1</count>
-              </li>
-              <li>
-                <sitePart>Outpost</sitePart>
-                <count>1</count>
-              </li>
-            </sitePartsParams>
-            <siteFaction>Mechanoid</siteFaction>
-            <storeAs>site</storeAs>
-          </parms>
+        <li Class="QuestNode_GenerateSite">
+          <storeAs>site</storeAs>
+          <siteParts>
+            <li>MechCluster</li>
+            <li>Outpost</li>
+          </siteParts>
+          <faction>Mechanoid</faction>
         </li>
 
         <!-- Ensure we have a map for the generated site and store it -->
@@ -58,15 +49,11 @@
         </li>
 
         <!-- Spawn exactly one special corpse Thing (replace RobCo_SpecialCorpse with your actual ThingDef name) -->
-        <li Class="QuestNode_GenerateThings">
-          <things>
-            <li>
-              <def>RobCo_SpecialCorpse</def>
-              <count>1</count>
-              <spawnMode>ScatterNearMapEdge</spawnMode>
-              <map>$map</map>
-            </li>
-          </things>
+        <li Class="QuestNode_SpawnItem">
+          <thingDef>RobCo_SpecialCorpse</thingDef>
+          <count>1</count>
+          <map>$map</map>
+          <spawnNearMapEdge>true</spawnNearMapEdge>
         </li>
 
         <!-- Optional: send player a letter when the map is generated -->
@@ -75,12 +62,10 @@
           <text>Scanners have found a ruined complex guarded by mechanoids on a nearby tile. The objective includes a unique corpse; clear the site to claim your reward.</text>
         </li>
 
-        <!-- Wait until all enemies on the map are defeated. Many vanilla quests listen for '<mapSignalPrefix>/lord.AllEnemiesDefeated'.
-             We use the map's signal prefix if available; fallback to generic 'lord.AllEnemiesDefeated'.
-        -->
+        <!-- Wait until all enemies on the map are defeated. Listen for the correct signal using $map as the prefix. -->
         <li Class="QuestNode_AllSignals">
           <inSignals>
-            <li>map$($map)/lord.AllEnemiesDefeated</li>
+            <li>$map/lord.AllEnemiesDefeated</li>
             <li>map.MapRemoved</li>
           </inSignals>
           <node Class="QuestNode_Sequence">
