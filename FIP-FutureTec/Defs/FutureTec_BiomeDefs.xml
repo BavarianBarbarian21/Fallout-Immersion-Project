@@ -5,7 +5,7 @@
 		<defName>FutureTec_FreezingWasteland</defName>
 		<label>Freezing Wasteland</label>
 		<description>A barren, frozen wasteland. Bitter cold, with little life. Soil is mostly sand, with sparse patches of soil and very little fertile soil. Vegetation and animals are as scarce as in the desert, but what survives is similar to the scarlands.</description>
-		<workerClass>BiomeWorker_Desert</workerClass>
+		<workerClass>BiomeWorker_Tundra</workerClass>
 		<animalDensity>0.2</animalDensity>
 		<plantDensity>0.05</plantDensity>
 		<settlementSelectionWeight>0.65</settlementSelectionWeight>
@@ -193,7 +193,7 @@
 		<defName>FutureTec_Wasteland</defName>
 		<label>Wasteland</label>
 		<description>A temperate wasteland. Harsh, dry, and mostly barren. Soil and life as in the desert, but temperature is moderate.</description>
-		<workerClass>BiomeWorker_Desert</workerClass>
+		<workerClass>BiomeWorker_TemperateTropicalRainforest</workerClass>
 		<animalDensity>0.2</animalDensity>
 		<plantDensity>0.05</plantDensity>
 		<settlementSelectionWeight>0.65</settlementSelectionWeight>
@@ -563,7 +563,7 @@
 		<defName>FutureTec_CentralValley</defName>
 		<label>Central Valley</label>
 		<description>A vast, open grassland with almost no trees. Temperate to hot, with droughts like grassland.</description>
-		<workerClass>BiomeWorker_Grasslands</workerClass>
+		<workerClass>BiomeWorker_TemperateForest</workerClass>
 		<animalDensity>0.5</animalDensity>
 		<plantDensity>0.2</plantDensity>
 		<settlementSelectionWeight>0.8</settlementSelectionWeight>
@@ -571,7 +571,7 @@
 		<lakeBeachTerrain>Sand</lakeBeachTerrain>
 		<riverbankTerrain>Riverbank</riverbankTerrain>
 		<riverbankSizeRange>6~8</riverbankSizeRange>
-		<texture>World/Biomes/Grassland</texture>
+		<texture>World/Biomes/Grasslands</texture>
 		<forageability>0.8</forageability>
 		<foragedFood>RawBerries</foragedFood>
 		<wildPlantRegrowDays>22</wildPlantRegrowDays>
@@ -770,7 +770,7 @@
 		<defName>FutureTec_BrahminWoods</defName>
 		<label>Brahmin Woods</label>
 		<description>Grassland with more trees. Temperate to hot, drought-prone like grassland.</description>
-		<workerClass>BiomeWorker_Grasslands</workerClass>
+		<workerClass>BiomeWorker_TemperateSwamp</workerClass>
 		<animalDensity>0.6</animalDensity>
 		<plantDensity>0.3</plantDensity>
 		<settlementSelectionWeight>0.8</settlementSelectionWeight>
@@ -778,7 +778,7 @@
 		<lakeBeachTerrain>Sand</lakeBeachTerrain>
 		<riverbankTerrain>Riverbank</riverbankTerrain>
 		<riverbankSizeRange>6~8</riverbankSizeRange>
-		<texture>World/Biomes/Grassland</texture>
+		<texture>World/Biomes/Grasslands</texture>
 		<forageability>0.8</forageability>
 		<foragedFood>RawBerries</foragedFood>
 		<wildPlantRegrowDays>22</wildPlantRegrowDays>
@@ -1268,6 +1268,10 @@
 		<label>Tundra</label>
 		<description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspersed with large herds of migratory grazers and their predators.</description>
 		<workerClass>BiomeWorker_Tundra</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<allowFarmingCamps>false</allowFarmingCamps>
 		<animalDensity>1.1</animalDensity>
 		<plantDensity>0.19</plantDensity>
@@ -1622,7 +1626,7 @@
 		<defName>FutureTec_Sequoia</defName>
 		<label>Sequoia</label>
 		<description>Massive sequoia trees in a temperate climate.</description>
-		<workerClass>BiomeWorker_BorealForest</workerClass>
+		<workerClass>BiomeWorker_Grasslands</workerClass>
 		<allowFarmingCamps>false</allowFarmingCamps>
 		<animalDensity>2.8</animalDensity>
 		<plantDensity>0.40</plantDensity>
@@ -1807,8 +1811,8 @@
 	<BiomeDef>
 		<defName>FutureTec_Divide</defName>
 		<label>Divide</label>
-		<description>Mountainous temperate forest, high elevation.</description>
-		<workerClass>BiomeWorker_TemperateForest</workerClass>
+		<description>Scorched earth void of life.</description>
+		<workerClass>BiomeWorker_ExtremeDesert</workerClass>
 		<animalDensity>3.7</animalDensity>
 		<plantDensity>0.65</plantDensity>
 		<settlementSelectionWeight>1</settlementSelectionWeight>
@@ -1816,7 +1820,7 @@
 		<lakeBeachTerrain>Sand</lakeBeachTerrain>
 		<riverbankTerrain>Riverbank</riverbankTerrain>
 		<riverbankSizeRange>6~8</riverbankSizeRange>
-		<texture>World/Biomes/TemperateForest</texture>
+		<texture>World/Biomes/ExtremeDesert</texture>
 		<forageability>1</forageability>
 		<foragedFood>RawBerries</foragedFood>
 		<wildPlantRegrowDays>20</wildPlantRegrowDays>
@@ -1914,35 +1918,18 @@
 		</baseWeatherCommonalities>
 		<wildPlants></wildPlants>
 		<wildAnimals>
-			<FCP_Animal_Brahmin>1.0</FCP_Animal_Brahmin>
 			<FCP_Animal_Molerat>1.0</FCP_Animal_Molerat>
-			<FCP_Animal_Rad_Rabbit>1.0</FCP_Animal_Rad_Rabbit>
 			<FCP_Animal_Radroach>1.0</FCP_Animal_Radroach>
 			<FCP_Animal_Glowing_Radroach>1.0</FCP_Animal_Glowing_Radroach>
-			<FCP_Animal_Vicious_Dog>1.0</FCP_Animal_Vicious_Dog>
 			<FCP_Animal_Deathclaw>1.0</FCP_Animal_Deathclaw>
 			<FCP_Animal_Alpha_Deathclaw>1.0</FCP_Animal_Alpha_Deathclaw>
 			<FCP_Animal_Chameleon_Deathclaw>1.0</FCP_Animal_Chameleon_Deathclaw>
-			<FCP_Animal_Bighorner>1.0</FCP_Animal_Bighorner>
-			<FCP_Animal_Radstag>1.0</FCP_Animal_Radstag>
-			<FCP_Animal_Pale_Radstag>1.0</FCP_Animal_Pale_Radstag>
-			<FCP_Animal_Glowing_Radstag>1.0</FCP_Animal_Glowing_Radstag>
-			<FCP_Animal_Rad_Chicken>1.0</FCP_Animal_Rad_Chicken>
 			<FCP_Animal_Rad_Raven>1.0</FCP_Animal_Rad_Raven>
-			<FCP_Animal_Thrasher>1.0</FCP_Animal_Thrasher>
-			<FCP_Animal_Yao_Guai>1.0</FCP_Animal_Yao_Guai>
-			<FCP_Animal_Giant_Mantis>1.0</FCP_Animal_Giant_Mantis>
 			<FCP_Animal_Gecko>1.0</FCP_Animal_Gecko>
 			<FCP_Animal_Golden_Gecko>1.0</FCP_Animal_Golden_Gecko>
 			<FCP_Animal_Green_Gecko>1.0</FCP_Animal_Green_Gecko>
 			<FCP_Animal_Fire_Gecko>1.0</FCP_Animal_Fire_Gecko>
-			<FCP_Animal_Nightstalker>1.0</FCP_Animal_Nightstalker>
-			<Goose>0.2</Goose>
 			<Vulture>0.1</Vulture>
-			<Horse>0.15</Horse>
-			<Sheep>0.12</Sheep>
-			<PrairieDog>0.12</PrairieDog>
-			<Cat>0.08</Cat>
 		</wildAnimals>
 		<pollutionWildAnimals>
 			<FCP_Animal_Radroach>1.0</FCP_Animal_Radroach>
@@ -1972,6 +1959,10 @@
 		<label>Monte</label>
 		<description>Lush, dense rainforest.</description>
 		<workerClass>BiomeWorker_TropicalRainforest</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>5.4</animalDensity>
 		<plantDensity>0.90</plantDensity>
 		<settlementSelectionWeight>0.7</settlementSelectionWeight>
@@ -2107,7 +2098,6 @@
 			<FCP_Animal_Nightstalker>1.0</FCP_Animal_Nightstalker>
 			<Capybara>0.6</Capybara>
 			<Iguana>0.5</Iguana>
-			<Boa>0.4</Boa>
 			<Monkey>0.6</Monkey>
 			<Alligator>0.5</Alligator>
 			<Macaw>0.4</Macaw>
@@ -2202,7 +2192,6 @@
 			<FCP_Animal_Nightstalker>1.0</FCP_Animal_Nightstalker>
 			<Capybara>0.6</Capybara>
 			<Iguana>0.5</Iguana>
-			<Boa>0.4</Boa>
 			<Monkey>0.6</Monkey>
 			<Alligator>0.5</Alligator>
 			<Macaw>0.4</Macaw>
@@ -2966,6 +2955,10 @@
 		<label>Canyon</label>
 		<description>Hot canyon, mostly soil and stone, rare, small biome.</description>
 		<workerClass>BiomeWorker_AridShrubland</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>1.8</animalDensity>
 		<plantDensity>0.24</plantDensity>
 		<settlementSelectionWeight>0.95</settlementSelectionWeight>
@@ -3129,6 +3122,10 @@
 		<label>Spring</label>
 		<description>Hot canyon with lakes, rare, small biome.</description>
 		<workerClass>BiomeWorker_AridShrubland</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>1.8</animalDensity>
 		<plantDensity>0.24</plantDensity>
 		<settlementSelectionWeight>0.95</settlementSelectionWeight>
@@ -3292,6 +3289,10 @@
 		<label>Redwood Lake</label>
 		<description>Redwood forest with lakes, rare, small biome.</description>
 		<workerClass>BiomeWorker_BorealForest</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>2.8</animalDensity>
 		<plantDensity>0.40</plantDensity>
 		<settlementSelectionWeight>0.9</settlementSelectionWeight>
@@ -3392,6 +3393,10 @@
 		<label>Sequoia Lakes</label>
 		<description>Sequoia forest with lakes, rare, small biome.</description>
 		<workerClass>BiomeWorker_BorealForest</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>2.8</animalDensity>
 		<plantDensity>0.40</plantDensity>
 		<settlementSelectionWeight>0.9</settlementSelectionWeight>
@@ -3454,6 +3459,10 @@
 		<label>Sanctuary</label>
 		<description>Temperate forest sanctuary, rare, small biome.</description>
 		<workerClass>BiomeWorker_TemperateForest</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+
 		<animalDensity>3.7</animalDensity>
 		<plantDensity>0.65</plantDensity>
 		<settlementSelectionWeight>1</settlementSelectionWeight>
@@ -3515,6 +3524,10 @@
 		<label>Oasis</label>
 		<description>Temperate forest oasis with lakes, rare, small biome.</description>
 		<workerClass>BiomeWorker_TemperateForest</workerClass>
+		<!-- disabled -->
+		<canAutoChoose>false</canAutoChoose>
+      	<generatesNaturally>false</generatesNaturally>
+		
 		<animalDensity>3.7</animalDensity>
 		<plantDensity>0.65</plantDensity>
 		<settlementSelectionWeight>1</settlementSelectionWeight>
