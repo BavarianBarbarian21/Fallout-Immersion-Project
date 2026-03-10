@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- ================= WAR MACHINE BASE ================= -->
+	<!--  War Machine Base  -->
 	<ThingDef Name="RobCo_WarMachineBase" ParentName="BaseMechanoid" Abstract="True">
 		<statBases>
 			<MarketValue>5000</MarketValue>
@@ -13,7 +13,7 @@
 			<MechEnergyLossPerHP>0.20</MechEnergyLossPerHP>
 		</statBases>
 		<race>
-			<body>RobCo_WarMachine</body>
+			<body>RobCo_Assaultron</body>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>Mechanoid</thinkTreeMain>
 			<baseBodySize>2.5</baseBodySize>
@@ -94,8 +94,7 @@
 		</ingredients>
 		<displayPriority>500</displayPriority>
 	</RecipeDef>
-	<!-- ================= WAR MACHINE ================= -->
-	<!-- Huge humanoid robot that can spawn liberators -->
+	<!--  War Machine  -->
 	<ThingDef ParentName="RobCo_WarMachineBase">
 		<defName>RobCo_WarMachine</defName>
 		<label>War Machine</label>
@@ -104,7 +103,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_WarMachine</defName>
 		<label>War Machine</label>
-		<race>RobCo_WarMachine</race>
+		<race>RobCo_Assaultron</race>
 		<combatPower>800</combatPower>
 		<lifeStages>
 			<li>

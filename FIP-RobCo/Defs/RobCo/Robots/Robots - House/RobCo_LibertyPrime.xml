@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- ================= LIBERTY PRIME BASE ================= -->
+	<!--  Liberty Prime Base  -->
 	<ThingDef Name="RobCo_LibertyPrimeBase" ParentName="BaseMechanoid" Abstract="True">
 		<statBases>
 			<MarketValue>8000</MarketValue>
@@ -13,7 +13,7 @@
 			<MechEnergyLossPerHP>0.15</MechEnergyLossPerHP>
 		</statBases>
 		<race>
-			<body>RobCo_LibertyPrime</body>
+			<body>RobCo_Assaultron</body>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>Mechanoid</thinkTreeMain>
 			<baseBodySize>3.0</baseBodySize>
@@ -103,8 +103,7 @@
 		</ingredients>
 		<displayPriority>600</displayPriority>
 	</RecipeDef>
-	<!-- ================= LIBERTY PRIME ================= -->
-	<!-- Most powerful robot - massive humanoid that throws mini-nukes -->
+	<!--  Liberty Prime   -->
 	<ThingDef ParentName="RobCo_LibertyPrimeBase">
 		<defName>RobCo_LibertyPrime</defName>
 		<label>Liberty Prime</label>
@@ -113,7 +112,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_LibertyPrime</defName>
 		<label>Liberty Prime</label>
-		<race>RobCo_LibertyPrime</race>
+		<race>RobCo_Assaultron</race>
 		<combatPower>1200</combatPower>
 		<lifeStages>
 			<li>
