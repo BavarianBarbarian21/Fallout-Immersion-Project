@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- BIOTECH -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/label</xpath>
+        <value>
+            <label>Vertibot crash site</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ShuttleCrashed_Exitable_Mechanitor"]/description</xpath>
+        <value>
+            <description>The crash site of a Vertibot, possibly containing valuable robotics salvage and pre-war technology.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="AncientComplex_Mechanitor"]/description</xpath>
+        <value>
+            <description>An ancient RobCo facility filled with pre-war robotics technology and secrets. Might contain a useable Pipboy.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/label</xpath>
+        <value>
+            <label>Vertibot crash site</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ShuttleCrashing_Mechanitor"]/description</xpath>
+        <value>
+            <description>The crash site of a Vertibot, possibly containing valuable robotics salvage.</description>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TransportShipDef[defName="Ship_ShuttleCrashing_Mechanitor"]/label</xpath>
+        <value>
+            <label>Vertibot crash site</label>
+        </value>
+    </Operation>
+
+</Patch>
