@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- CORE -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/label</xpath>
+    <value>vertibird</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing"]/label</xpath>
+    <value>vertibird (crashing)</value>
+  </Operation>
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="TransportPod"]/label</xpath>
+    <value>cargo bot</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="TransportPod"]/description</xpath>
+    <value>Automated cargo bots used to deliver people and supplies across the planet.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[label="transport pods"]/label</xpath>
+    <value>cargo bots</value>
+  </Operation>
+
+  <!-- ODYSSEY -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PassengerShuttle"]/label</xpath>
+    <value>passenger vertibird</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PassengerShuttle"]/description</xpath>
+    <value>A chemfuel-powered vertibird designed for long-distance travel. It is capable of reaching orbital locations.</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PassengerShuttleIncoming"]/label</xpath>
+    <value>passenger vertibird (incoming)</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PassengerShuttleLeaving"]/label</xpath>
+    <value>passenger vertibird (leaving)</value>
+  </Operation>
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ShuttleEngine"]/label</xpath>
+    <value>vertibird engine</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ShuttleEngine"]/description</xpath>
+    <value>An engine capable of powering a vertibird.</value>
+  </Operation>
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AncientTransportPod"]/label</xpath>
+    <value>ancient cargo bot</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MalfunctioningTransportPod"]/label</xpath>
+    <value>malfunctioning cargo bot</value>
+  </Operation>
+
+  <!-- ROYALTY -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ShuttleIncoming"]/label</xpath>
+    <value>vertibird (incoming)</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ShuttleLeaving"]/label</xpath>
+    <value>vertibird (leaving)</value>
+  </Operation>
+
+  <!-- ANOMALY -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/IncidentDef[defName="RefugeePodCrash_Ghoul"]/label</xpath>
+    <value>ghoul cargo bot crash</value>
+  </Operation>
+
+
+</Patch>
