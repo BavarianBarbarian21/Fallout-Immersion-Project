@@ -2,12 +2,19 @@
 <ModMetaData>
   <packageId>FIP.Whitespring</packageId>
   <name>FIP - Whitespring</name>
-  <author>BavarianBarbarian21</author>
+  <author>Feil</author>
   <description>Whitespring mod for Fallout Community Project. Adds new content and features.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+  <modDependencies>
+	<li>
+		<packageId>Ludeon.RimWorld.Royalty</packageId>
+		<displayName>Royalty</displayName>
+	</li>
+  </modDependencies>
   <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
     <li>FIP.Donaustahl</li>
   </loadAfter>
 </ModMetaData>

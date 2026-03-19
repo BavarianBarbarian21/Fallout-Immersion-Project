@@ -7,4 +7,20 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+  <modDependencies>
+        <li>
+            <packageId>Rick.FCP.Plants</packageId>
+            <displayName>FCP - Plants</displayName>
+            <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Plants</downloadUrl>
+        </li>
+        <li>
+              <packageId>Rick.FCP.Animals</packageId>
+              <displayName>FCP - Animals</displayName>
+              <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Animals</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Rick.FCP.Plants</li>
+        <li>Rick.FCP.Animals</li>
+    </loadAfter>
 </ModMetaData>
