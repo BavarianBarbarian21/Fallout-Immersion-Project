@@ -3,23 +3,23 @@
   <!-- CORE -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/label</xpath>
-    <value>vertibird</value>
+    <value><label>vertibird</label></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/WorldObjectDef[defName="ShuttleCrashing"]/label</xpath>
-    <value>vertibird (crashing)</value>
+    <xpath>Defs/ThingDef[defName="ShuttleCrashing"]/label</xpath>
+    <value><label>vertibird (crashing)</label></value>
   </Operation>
     <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="TransportPod"]/label</xpath>
-    <value>cargo bot</value>
+    <value><label>cargo bot</label></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="TransportPod"]/description</xpath>
-    <value>Automated cargo bots used to deliver people and supplies across the planet.</value>
+    <value><description>Automated cargo bots used to deliver people and supplies across the planet.</description></value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/WorldObjectDef[label="transport pods"]/label</xpath>
-    <value>cargo bots</value>
+    <value><label>cargo bots</label></value>
   </Operation>
 
 
