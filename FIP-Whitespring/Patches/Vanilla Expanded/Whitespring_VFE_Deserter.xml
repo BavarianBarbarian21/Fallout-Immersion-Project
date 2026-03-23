@@ -17,7 +17,7 @@
   <li Class="PatchOperationReplace">
     <xpath>/Defs/FactionDef[defName="VFED_NewSafehaven"]/label</xpath>
     <value>
-      <label>Brotherhood of Steel bunker</label>
+      <label>Brotherhood of Steel Expedition</label>
     </value>
   </li>
   <li Class="PatchOperationReplace">
@@ -621,13 +621,19 @@
   <li Class="PatchOperationReplace">
     <xpath>/Defs/ScenarioDef[defName="VFED_NewSafehaven"]/label</xpath>
     <value>
-      <label>Brotherhood of Steel bunker</label>
+      <label>Brotherhood of Steel Expedition</label>
     </value>
   </li>
   <li Class="PatchOperationReplace">
     <xpath>/Defs/ScenarioDef[defName="VFED_NewSafehaven"]/description</xpath>
     <value>
       <description>Your Brotherhood expeditionary group has stumbled upon an old bunker, a potential haven. But with the valuable intel you carry, the Whitespring Enclave's visibility on you is alarmingly high. Vertibots patrol the skies, and Whitespring raiding parties are closing in. Use the intel to unlock powerful tech and Brotherhood expeditionary services, aiding your ultimate mission: to assassinate key Whitespring officials. Survive the initial onslaught and lay low; over time, the Whitespring Enclave's relentless search will wane. The choice is yours: fortify, adapt, or perish.\n\nNote: Since you start with high visibility, this is a difficult scenario.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenarioDef[defName="VFED_NewSafehaven"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
+    <value>
+      <text>Your Brotherhood expeditionary group has stumbled upon an old bunker, a potential haven. But with the valuable intelligence and votes you carry, the Whitespring Enclave's visibility on you is alarmingly high. Vertibots patrol the skies, and Whitespring raiding parties are closing in. Use your resources to unlock powerful tech and Brotherhood network services, aiding your ultimate mission: to eliminate key Whitespring officials. Survive the initial onslaught and lay low; over time, the Enclave's relentless search may wane. The choice is yours: fortify, adapt, or perish.</text>
     </value>
   </li>
   <!-- Scenarios/ScenPartDefs.xml -->
