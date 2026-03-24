@@ -180,7 +180,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Blaster_Civilian</defName>
 		<label>RobCo Civilian Blaster</label>
-		<description>A simple civilian blaster using a low-beam laser cartridge.</description>
+		<description>A pre-War RobCo sidearm intended for civilian security and general self-defense. It uses a low-beam laser cartridge and is less powerful than RobCo's military models.</description>
 		<statBases>
 			<MarketValue>500</MarketValue>
 			<Mass>2</Mass>
@@ -207,7 +207,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Blaster_Military</defName>
 		<label>RobCo Military Blaster</label>
-		<description>A field-grade blaster firing high-beam laser rounds.</description>
+		<description>A RobCo service blaster designed for military and security use. It fires high-beam laser cartridges that provide more stopping power than the civilian pattern.</description>
 		<statBases>
 			<MarketValue>1200</MarketValue>
 			<Mass>3.5</Mass>
@@ -234,7 +234,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Blaster_Sharpshooter</defName>
 		<label>RobCo Sharpshooter Blaster</label>
-		<description>A precision-tuned blaster using low-beam rounds; slower firing but excellent at range.</description>
+		<description>A precision variant of the standard RobCo blaster. Its focusing hardware is tuned for accurate fire at longer ranges, at the cost of a slower firing cycle.</description>
 		<statBases>
 			<MarketValue>900</MarketValue>
 			<Mass>3</Mass>
@@ -261,7 +261,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Blaster_Sniper</defName>
 		<label>RobCo Sniper Blaster</label>
-		<description>A long-range sniper blaster firing high-beam rounds; very slow but extremely accurate at distance.</description>
+		<description>A long-range precision blaster configured for deliberate, accurate fire. It uses high-beam laser cartridges and is intended for robotic marksman and patrol roles.</description>
 		<statBases>
 			<MarketValue>1600</MarketValue>
 			<Mass>4</Mass>
@@ -288,7 +288,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_GutsyArray</defName>
 		<label>Gutsy array</label>
-		<description>A multi-purpose armament for Mister Gutsy-class frames: a compact automatic shell launcher with a built-in napalm burner and a reinforced ripper tool for close work.</description>
+		<description>A combined weapon system fitted to Mister Gutsy-class robots. It includes an automatic gun for ranged fire, a napalm projector, and a reinforced close-quarters cutting tool.</description>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -338,7 +338,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Minigun</defName>
 		<label>RobCo Minigun</label>
-		<description>A rapid-fire minigun that fires low-beam laser cartridges in rapid bursts. Perfect for Suppression.</description>
+		<description>A rapid-fire laser minigun used for sustained suppressive fire. It consumes low-beam cartridges quickly in exchange for a high volume of shots.</description>
 		<statBases>
 			<MarketValue>1500</MarketValue>
 			<Mass>6</Mass>
@@ -366,7 +366,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_Exterminator</defName>
 		<label>Exterminator</label>
-		<description>A compact RobCo exterminator launcher firing toxic canisters. Designed for mechanoid frames; not craftable or tradable and destroyed on drop.</description>
+		<description>A specialized launcher intended for pest control and area denial. It fires toxic payloads and is paired with an integrated incendiary system for close-range follow-up.</description>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -413,7 +413,7 @@
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_RocketLauncher</defName>
 		<label>Sentrybot rocket launcher</label>
-		<description>A rocket launcher mounted on RobCo sentry frames that fires multiple small rockets dealing which can easily destroy cover.</description>
+		<description>A salvo rocket launcher integrated into Sentrybot frames. It is intended to break cover, damage structures, and engage grouped targets at range.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
@@ -461,7 +461,7 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>RobCo_LaserSheepsquatch</defName>
 		<label>RobCo Assaultron head laser</label>
-		<description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+		<description>A high-output head-mounted beam projector built around a long charge cycle and a large blast radius. The discharge produces significant heat and is most effective when fired from standoff range.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
@@ -518,7 +518,7 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>RobCo_LaserAssaultron</defName>
 		<label>RobCo Assaultron head laser</label>
-		<description>A faster-firing variant of the hellsphere cannon. Sacrifices raw damage output for increased rate of fire and reduced explosion radius, making it better suited for rapid suppression rather than single-target destruction.</description>
+		<description>A compact Assaultron-pattern head laser with a faster firing cycle than heavier beam projectors. This makes it more suitable for rapid engagements and close-quarters combat.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
@@ -575,7 +575,7 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>RobCo_SonicBark</defName>
 		<label>sonic bark emitter</label>
-		<description>RobCo robot sonic bark emitter. Emits a powerful sonic wave that stuns all targets in a small area, including humans and robots, without causing physical harm.</description>
+		<description>A short-range acoustic projector used by RobCo security units. It emits a concussive sonic pulse that disrupts mechanical targets without relying on direct physical damage.</description>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -610,7 +610,7 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>RobCo_Syringer</defName>
 		<label>RobCo syringer</label>
-		<description>A RobCo-built syringe gun that fires toxin-infused metal needles. It can fire long distances and will poison the target in addition to doing physical damage.</description>
+		<description>A precision syringe gun that fires metal needles loaded with toxic compounds. It is designed to injure the target on impact and deliver poison at longer range than most sidearms.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>RobCo/Misc/Invisible</texPath>
