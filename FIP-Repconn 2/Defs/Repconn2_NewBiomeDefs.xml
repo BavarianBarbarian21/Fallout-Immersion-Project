@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Base -->
+
+    <BiomeDef Name="FIP_RepconnBiomeBase" Abstract="True">
+        <animalDensity>1.5</animalDensity>
+        <plantDensity>0.35</plantDensity>
+        <settlementSelectionWeight>0.65</settlementSelectionWeight>
+        <campSelectionWeight>0.1</campSelectionWeight>
+        <movementDifficulty>1</movementDifficulty>
+        <lakeBeachTerrain>Sand</lakeBeachTerrain>
+        <riverbankTerrain>Riverbank</riverbankTerrain>
+        <riverbankSizeRange>6~8</riverbankSizeRange>
+        <forageability>0.4</forageability>
+        <foragedFood>RawAgave</foragedFood>
+        <wildPlantRegrowDays>25</wildPlantRegrowDays>
+        <baseWeatherCommonalities>
+        <Clear>18</Clear>
+        <Fog>1</Fog>
+        <Rain>2</Rain>
+        <DryThunderstorm>1</DryThunderstorm>
+        <RainyThunderstorm>1</RainyThunderstorm>
+        <SnowGentle>2</SnowGentle>
+        <SnowHard>2</SnowHard>
+        <GrayPall MayRequire="Ludeon.RimWorld.Anomaly">1</GrayPall>
+        </baseWeatherCommonalities>
+    </BiomeDef>
+
+    <!-- Urban -->
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Ruins</defName>
+    <label>ruins</label>
+    <description>The shattered outskirts surrounding an impact zone. Rubble, contaminated water, and broken streets dominate these dead belts. Ruins do not generate naturally; they are placed around crater tiles during world generation.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_ManualOnly</workerClass>
+    <canAutoChoose>false</canAutoChoose>
+    <texture>World/Biomes/Scarlands</texture>
+    <pollutionOffset>0.03</pollutionOffset>
+    <terrainsByFertility>
+      <li>
+        <terrain>AncientMegastructure</terrain>
+        <min>-999</min>
+        <max>0.65</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.65</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Wasteland</defName>
+    <label>wasteland</label>
+    <description>A harsh, dry, mostly barren biome ringing the old ruins. Wasteland does not generate naturally; it is placed around ruin belts during world generation.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_ManualOnly</workerClass>
+    <canAutoChoose>false</canAutoChoose>
+    <texture>World/Biomes/Desert</texture>
+    <pollutionOffset>0.02</pollutionOffset>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.80</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.80</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+<!-- Mountain Ranges -->
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Redwood</defName>
+    <label>redwood</label>
+    <description>Towering old-growth woodland in cool uplands. Redwood biomes favor high elevations in boreal to temperate climates.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Redwood</workerClass>
+    <animalDensity>2.1</animalDensity>
+    <plantDensity>0.7</plantDensity>
+    <texture>World/Biomes/TemperateForest</texture>
+    <forageability>0.8</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <terrainsByFertility>
+      <li>
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.87</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.87</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Sequoia</defName>
+    <label>sequoia</label>
+    <description>Warm mountain forest built around giant sequoias. Sequoia biomes favor high elevations in temperate to arid climates.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Sequoia</workerClass>
+    <animalDensity>1.9</animalDensity>
+    <plantDensity>0.6</plantDensity>
+    <texture>World/Biomes/BorealForest</texture>
+    <forageability>0.7</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <terrainsByFertility>
+      <li>
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.85</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.85</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <!-- Temperate -->
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_CentralValley</defName>
+    <label>central valley</label>
+    <description>Broad fertile lowlands with deep soil, steady winds, and only scattered tree cover.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_CentralValley</workerClass>
+    <animalDensity>2.4</animalDensity>
+    <plantDensity>0.55</plantDensity>
+    <texture>World/Biomes/Grasslands</texture>
+    <forageability>1</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <terrainsByFertility>
+      <li>
+        <terrain>GrasslandSoil</terrain>
+        <min>-999</min>
+        <max>0.7</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.7</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_BrahminWoods</defName>
+    <label>brahmin woods</label>
+    <description>Rolling woodland at mid elevation. The soil is less fertile than the valley below, but tree cover and forage are more reliable.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_BrahminWoods</workerClass>
+    <animalDensity>2.0</animalDensity>
+    <plantDensity>0.65</plantDensity>
+    <texture>World/Biomes/BorealForest</texture>
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <terrainsByFertility>
+      <li>
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.88</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.88</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+    <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Aqueduct</defName>
+    <label>aqueduct</label>
+    <description>River-fed agricultural corridors threading through the valley and woods. Aqueduct only competes on river tiles that already qualify for the central valley or brahmin woods envelopes.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Aqueduct</workerClass>
+    <animalDensity>2.4</animalDensity>
+    <plantDensity>0.65</plantDensity>
+    <texture>World/Biomes/Grasslands</texture>
+    <forageability>1</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <terrainsByFertility>
+      <li>
+        <terrain>GrasslandSoil</terrain>
+        <min>-999</min>
+        <max>0.72</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.72</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <!-- Arid -->
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Mojave</defName>
+    <label>mojave</label>
+    <description>Dry scrub plains and sandy washes spread across the lowlands. Mojave replaces most arid low to medium elevation terrain.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Mojave</workerClass>
+    <animalDensity>1.6</animalDensity>
+    <plantDensity>0.22</plantDensity>
+    <texture>World/Biomes/AridShrubland</texture>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.45</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.45</min>
+        <max>0.9</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.9</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Canyon</defName>
+    <label>canyon</label>
+    <description>River-cut arid canyons that interrupt the mojave lowlands. Canyon tiles only compete on river-bearing mojave terrain and remain weighted rather than guaranteed.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Canyon</workerClass>
+    <animalDensity>1.2</animalDensity>
+    <plantDensity>0.18</plantDensity>
+    <movementDifficulty>1.2</movementDifficulty>
+    <texture>World/Biomes/Scarlands</texture>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.55</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.55</min>
+        <max>0.9</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.9</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <!-- Hot -->
+
+  <BiomeDef ParentName="FIP_RepconnBiomeBase">
+    <defName>FIP_Divide</defName>
+    <label>divide</label>
+    <description>Blasted hot country where heat, wind, and fractured stone dominate regardless of elevation.</description>
+    <workerClass>FIP.Repconn2.BiomeWorker_Divide</workerClass>
+    <animalDensity>0.9</animalDensity>
+    <plantDensity>0.12</plantDensity>
+    <movementDifficulty>1.3</movementDifficulty>
+    <texture>World/Biomes/Desert</texture>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.60</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.60</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+</Defs>
