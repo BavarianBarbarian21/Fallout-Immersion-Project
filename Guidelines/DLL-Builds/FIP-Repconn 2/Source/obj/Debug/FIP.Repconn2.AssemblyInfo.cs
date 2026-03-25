@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIP.Repconn2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ed7ecea8081fa2948edda5d5e6037e81d6c02f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bddfc7b279a9c643b1d67d5a0ca0135c7d3ab375")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIP.Repconn2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIP.Repconn2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
