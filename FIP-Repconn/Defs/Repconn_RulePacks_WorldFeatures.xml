@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>RepconnWorldFeatureNamerCommon</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[regional_root] [terrain_word]</li>
+        <li>r_name(p=0.18)->[terrain_word] of [regional_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnValley</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Sacramento</li>
+        <li>regional_root->Kern</li>
+        <li>regional_root->Kings</li>
+        <li>regional_root->Tulare</li>
+        <li>regional_root->Modesto</li>
+        <li>regional_root->Shasta</li>
+        <li>terrain_word(p=3)->basin</li>
+        <li>terrain_word(p=3)->flats</li>
+        <li>terrain_word(p=2)->plain</li>
+        <li>terrain_word(p=2)->valley</li>
+        <li>terrain_word->floodplain</li>
+        <li>terrain_word->wash</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnPreserve</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Yosemite</li>
+        <li>regional_root->Tahoe</li>
+        <li>regional_root->Muir</li>
+        <li>regional_root->Sierra</li>
+        <li>regional_root->Lassen</li>
+        <li>terrain_word(p=3)->preserve</li>
+        <li>terrain_word(p=3)->grove</li>
+        <li>terrain_word(p=2)->sanctuary</li>
+        <li>terrain_word(p=2)->woods</li>
+        <li>terrain_word->reserve</li>
+        <li>terrain_word->wilds</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnMountainForest</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Redwood</li>
+        <li>regional_root->Sequoia</li>
+        <li>regional_root->Douglas</li>
+        <li>regional_root->Pine Ridge</li>
+        <li>regional_root->Old Growth</li>
+        <li>terrain_word(p=3)->forest</li>
+        <li>terrain_word(p=3)->grove</li>
+        <li>terrain_word(p=2)->wilderness</li>
+        <li>terrain_word(p=2)->sanctuary</li>
+        <li>terrain_word->woodland</li>
+        <li>terrain_word->canopy</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnDesert</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Mojave</li>
+        <li>regional_root->Death Valley</li>
+        <li>regional_root->Panamint</li>
+        <li>regional_root->Amargosa</li>
+        <li>regional_root->Mono</li>
+        <li>regional_root->Colorado</li>
+        <li>terrain_word(p=3)->desert</li>
+        <li>terrain_word(p=2)->wash</li>
+        <li>terrain_word(p=2)->gorge</li>
+        <li>terrain_word(p=2)->barrens</li>
+        <li>terrain_word->arroyo</li>
+        <li>terrain_word->wastes</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnDivide</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Hellfire</li>
+        <li>regional_root->Scorch</li>
+        <li>regional_root->Caldera</li>
+        <li>regional_root->Ashfall</li>
+        <li>regional_root->Divide</li>
+        <li>terrain_word(p=3)->badlands</li>
+        <li>terrain_word(p=3)->wasteland</li>
+        <li>terrain_word(p=2)->barrens</li>
+        <li>terrain_word(p=2)->basin</li>
+        <li>terrain_word->flats</li>
+        <li>terrain_word->reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnMalpais</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Malpais</li>
+        <li>regional_root->Black Furnace</li>
+        <li>regional_root->Cinder</li>
+        <li>regional_root->Magma</li>
+        <li>regional_root->Inferno</li>
+        <li>terrain_word(p=3)->lava fields</li>
+        <li>terrain_word(p=2)->rift</li>
+        <li>terrain_word(p=2)->vent</li>
+        <li>terrain_word->burn</li>
+        <li>terrain_word->highland</li>
+        <li>terrain_word->furnace</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnArctic</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Shasta</li>
+        <li>regional_root->Lassen</li>
+        <li>regional_root->Cascades</li>
+        <li>regional_root->Solitude</li>
+        <li>regional_root->Nuclear Winter</li>
+        <li>terrain_word(p=3)->glacier</li>
+        <li>terrain_word(p=3)->icefield</li>
+        <li>terrain_word(p=2)->reach</li>
+        <li>terrain_word(p=2)->expanse</li>
+        <li>terrain_word->field</li>
+        <li>terrain_word->barrens</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnCoast</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Marina</li>
+        <li>regional_root->Harbor</li>
+        <li>regional_root->Strand</li>
+        <li>regional_root->Breaker</li>
+        <li>regional_root->Inlet</li>
+        <li>terrain_word(p=3)->cove</li>
+        <li>terrain_word(p=3)->harbor</li>
+        <li>terrain_word(p=2)->shore</li>
+        <li>terrain_word(p=2)->strand</li>
+        <li>terrain_word->inlet</li>
+        <li>terrain_word->reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnUrban</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Los Caliente</li>
+        <li>regional_root->San Arroyo</li>
+        <li>regional_root->New Barstow</li>
+        <li>regional_root->Dayglow</li>
+        <li>regional_root->Boneyard</li>
+        <li>regional_root->Repconn Test Site</li>
+        <li>terrain_word(p=3)->ground zero</li>
+        <li>terrain_word(p=3)->ruins</li>
+        <li>terrain_word(p=2)->wasteland</li>
+        <li>terrain_word(p=2)->works</li>
+        <li>terrain_word->epicenter</li>
+        <li>terrain_word->blast zone</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

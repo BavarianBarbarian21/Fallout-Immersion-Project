@@ -5,6 +5,8 @@
     <Nullable>disable</Nullable>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RimWorldInstallDir Condition="'$(RimWorldInstallDir)' == '' and Exists('d:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll')">d:\Steam\steamapps\common\RimWorld</RimWorldInstallDir>
+    <RimWorldInstallDir Condition="'$(RimWorldInstallDir)' == '' and Exists('c:\Modding\Rimworld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll')">c:\Modding\Rimworld</RimWorldInstallDir>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,15 +15,15 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>d:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(RimWorldInstallDir)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>d:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(RimWorldInstallDir)\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>d:\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(RimWorldInstallDir)\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

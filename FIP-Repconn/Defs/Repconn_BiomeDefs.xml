@@ -33,7 +33,6 @@
   </BiomeDef>
 
   <BiomeDef Name="Repconn_Urban" ParentName="Repconn_Nature" Abstract="True">
-    <workerClass>FIP.Repconn.BiomeWorker_Urban</workerClass>
     <canAutoChoose>false</canAutoChoose>
     <generatesNaturally>false</generatesNaturally>
   </BiomeDef>
@@ -132,14 +131,6 @@
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
-    <defName>Repconn_Lake</defName>
-    <label>lake</label>
-    <description>Rare single-tile boreal lake biome placed on non-river preserve terrain.</description>
-    <workerClass>FIP.Repconn.BiomeWorker_Lake</workerClass>
-    <texture>World/Biomes/BorealForest</texture>
-  </BiomeDef>
-
-  <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_CentralValley</defName>
     <label>central valley</label>
     <description>Temperate low-elevation central valley terrain.</description>
@@ -158,7 +149,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Aqueduct</defName>
     <label>aqueduct</label>
-    <description>All river-bearing central valley and brahmin woods tiles become aqueduct unless floodplains overrides them.</description>
+    <description>Temperate river-bearing central valley and brahmin woods tiles increasingly become aqueducts as river size grows, unless floodplains overrides them.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Aqueduct</workerClass>
     <texture>World/Biomes/Grasslands</texture>
   </BiomeDef>
@@ -166,17 +157,9 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Floodplains</defName>
     <label>floodplains</label>
-    <description>Rare higher-priority river variant layered on top of aqueduct terrain.</description>
+    <description>Large-river floodplain variant layered on top of aqueduct terrain.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Floodplains</workerClass>
     <texture>World/Biomes/Grasslands</texture>
-  </BiomeDef>
-
-  <BiomeDef ParentName="Repconn_Nature">
-    <defName>Repconn_Reserves</defName>
-    <label>reserves</label>
-    <description>Rare single-tile temperate preserve analogue on non-river low and medium temperate tiles.</description>
-    <workerClass>FIP.Repconn.BiomeWorker_Reserves</workerClass>
-    <texture>World/Biomes/TemperateForest</texture>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -196,10 +179,10 @@
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
-    <defName>Repconn_Bay</defName>
-    <label>bay</label>
+    <defName>Repconn_Marina</defName>
+    <label>marina</label>
     <description>Coastal low-elevation tiles from boreal through arid, appearing at about half of eligible coastal tiles.</description>
-    <workerClass>FIP.Repconn.BiomeWorker_Bay</workerClass>
+    <workerClass>FIP.Repconn.BiomeWorker_Marina</workerClass>
     <texture>World/Biomes/TemperateForest</texture>
   </BiomeDef>
 
@@ -217,14 +200,6 @@
     <description>High-elevation warm mountain forest from the upper half of temperate climates into arid climates.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Sequoia</workerClass>
     <texture>World/Biomes/BorealForest</texture>
-  </BiomeDef>
-
-  <BiomeDef ParentName="Repconn_Nature">
-    <defName>Repconn_Oasis</defName>
-    <label>oasis</label>
-    <description>Rare single-tile arid oasis on non-river mojave terrain.</description>
-    <workerClass>FIP.Repconn.BiomeWorker_Oasis</workerClass>
-    <texture>World/Biomes/AridShrubland</texture>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
