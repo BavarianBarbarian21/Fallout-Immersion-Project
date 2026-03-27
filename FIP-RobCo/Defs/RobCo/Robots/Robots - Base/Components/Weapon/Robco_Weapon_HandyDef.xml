@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_MrHandy_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_BaseGun">
+    <defName>RobCo_Gun_MrHandy_Laser</defName>
+    <label>civilian mini blaster</label>
+    <description>A simple civilian blaster using a low-beam laser cartridge.\n\nSpecially designed for RobCo Mr. Handy model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_MrHandyLaserUI</uiIconPath>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_MrHandy_Laser</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>0.4</warmupTime>
+        <soundCast>RobCo_Shot_LaserLight</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_BaseGun">
+    <defName>RobCo_Gun_MrGutsy_Shotgun</defName>
+    <label>military mini shotgun</label>
+    <description>A simple military shotgun using a standard 20-gauge shell.\n\nSpecially designed for RobCo Mr. Gutsy model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_MrHandyGunUI</uiIconPath>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.57</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_MrHandy_Shotgun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_20_shotgun</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>12.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_BaseGun">
+    <defName>RobCo_Gun_MrHandy_Plasma</defName>
+    <label>plasma mini blaster</label>
+    <description>A simple military blaster using a plasma cartridge.\n\nSpecially designed for RobCo Mr. Handy model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_MrHandyPlasmaUI</uiIconPath>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_MrHandy_Plasma</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_PlasmaLight</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>0.8</warmupTime>
+        <soundCast>RobCo_Shot_PlasmaLight</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

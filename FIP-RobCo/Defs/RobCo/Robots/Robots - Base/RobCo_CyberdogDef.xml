@@ -84,6 +84,7 @@
 			</li>
 		</tools>
 	</ThingDef>
+
 	<RecipeDef Name="RobCo_CyberdogBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>4</gestationCycles>
 		<researchPrerequisite>HighMechtech</researchPrerequisite>
@@ -131,10 +132,12 @@
 		</ingredients>
 		<displayPriority>300</displayPriority>
 	</RecipeDef>
+
 	<!-- Cyberdog -->
+
 	<ThingDef ParentName="RobCo_CyberdogBase">
 		<defName>RobCo_Cyberdog</defName>
-		<label>Cyberdog</label>
+		<label>cyberdog</label>
 		<description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
 		<race>
 			<body>RobCo_Cyberdog</body>
@@ -157,7 +160,16 @@
 				<texPath>RobCo/Cyberdog/Cyberdog</texPath>
 			</li>
 			<li>
-				<texPath>RobCo/Cyberdog/Cyberwolf</texPath>
+				<texPath>RobCo/Cyberdog/CyberdogA</texPath>
+			</li>
+			<li>
+				<texPath>RobCo/Cyberdog/CyberdogB</texPath>
+			</li>
+			<li>
+				<texPath>RobCo/Cyberdog/CyberdogC</texPath>
+			</li>
+			<li>
+				<texPath>RobCo/Cyberdog/CyberdogD</texPath>
 			</li>
 		</alternateGraphics>
 		<lifeStages>
@@ -175,12 +187,13 @@
 			</li>
 		</lifeStages>
 		<weaponTags>
-			<li>RobCo_SonicBark</li>
+			<li>RobCo_Gun_SonicBark</li>
 		</weaponTags>
 	</PawnKindDef>
+
 	<RecipeDef ParentName="RobCo_CyberdogBase_Recipe">
 		<defName>RobCo_Cyberdog_Recipe</defName>
-		<label>craft Cyberdog</label>
+		<label>craft cyberdog</label>
 		<description>Craft a Cyberdog.</description>
 		<products>
 			<RobCo_Cyberdog>1</RobCo_Cyberdog>

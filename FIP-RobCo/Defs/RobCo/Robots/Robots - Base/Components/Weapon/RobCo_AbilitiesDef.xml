@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- For Sentry Bot -->
+  <AbilityDef>
+    <defName>RobCo_HeavyFlamer</defName>
+    <label>heavy flamer</label>
+    <description>Expends a charge to spray an extended-range incendiary burst.</description>
+    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <charges>3</charges>
+    <cooldownTicksRange>20000</cooldownTicksRange>    <!-- 8h -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <flammabilityAttachFireChanceCurve>
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>18</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>12</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="CompProperties_AbilityBurner" MayRequire="Ludeon.RimWorld.Anomaly">
+        <numStreams>15</numStreams>
+        <range>20</range>
+        <coneSizeDegrees>7.2</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>6</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- For Mr. Gutsy -->
+  <AbilityDef>
+    <defName>RobCo_LightFlamer</defName>
+    <label>light flamer</label>
+    <description>Expends a napalm charge to spray an incendiary burst.</description>
+    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <charges>3</charges>
+    <cooldownTicksRange>20000</cooldownTicksRange>    <!-- 8h -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>18</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <flammabilityAttachFireChanceCurve>
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>9.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>12</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="CompProperties_AbilityBurner" MayRequire="Ludeon.RimWorld.Anomaly">
+        <numStreams>15</numStreams>
+        <range>11</range>
+        <coneSizeDegrees>7.2</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>6</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- For Sentry Bot Siegebreaker -->
+  <AbilityDef>
+    <defName>RobCo_BackMissileLauncher</defName>
+    <label>back missile launcher</label>
+    <description>Launches a barrage of missiles.</description>
+    <iconPath>UI/Abilities/RocketsMissileLauncher</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <cooldownTicksRange>1500~1500</cooldownTicksRange>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <showPsycastEffects>false</showPsycastEffects>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>40</range>
+      <minRange>10</minRange>
+      <warmupTime>2</warmupTime>
+      <soundCast>RobCo_Shot_Launcher</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FIP_RobCo.CompProperties_AbilityLaunchProjectileMultiple">
+        <projectileDef>RobCo_Rocket_Heavy</projectileDef>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <maxCharges>2</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>missile</chargeNoun>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- For Deathbot -->
+  <AbilityDef>
+    <defName>RobCo_BackNukeLauncher</defName>
+    <label>back nuke launcher</label>
+    <description>Launches mini nukes.</description>
+    <iconPath>UI/Abilities/NukeMissileLauncher</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <cooldownTicksRange>1500~1500</cooldownTicksRange>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <showPsycastEffects>false</showPsycastEffects>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>40</range>
+      <minRange>10</minRange>
+      <warmupTime>2</warmupTime>
+      <soundCast>RobCo_Shot_Launcher_FatMan</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FIP_RobCo.CompProperties_AbilityLaunchProjectileMultiple">
+        <projectileDef>RobCo_Bomb_Mininuke</projectileDef>
+        <forcedMissRadius>3.9</forcedMissRadius>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <maxCharges>2</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>nuke</chargeNoun>
+        <ammoDef>Uranium</ammoDef>
+        <ammoCountPerCharge>50</ammoCountPerCharge>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+
+</Defs>

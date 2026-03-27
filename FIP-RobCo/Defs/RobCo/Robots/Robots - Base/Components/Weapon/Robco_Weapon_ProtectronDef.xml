@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Protectron_BaseGun" ParentName="BaseGun" Abstract="True">
+    <label>protectron hand blaster</label>
+    <description>A simple civilian blaster using a low-beam laser cartridge built in protectron hand.\n\nSpecially designed for RobCo protectron model and could be only mounted to its chassis.</description>
+    <uiIconPath>Things/Weapons/RobCo_ProtectronLaserUI</uiIconPath>
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <tools>
+      <li>
+        <label>hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- Custom colored hands for different models -->
+
+  <ThingDef ParentName="RobCo_Protectron_BaseGun">
+    <defName>RobCo_Gun_Protectron_Hand</defName>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_ProtectronLaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <weaponTags>
+      <li>RobCo_Gun_Protectron_Hand</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>0.4</warmupTime>
+        <soundCast>RobCo_Shot_LaserHeavy</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Protectron_BaseGun">
+    <defName>RobCo_Gun_Factotron_Hand</defName>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_FactotronLaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <weaponTags>
+      <li>RobCo_Gun_Factotron_Hand</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>0.4</warmupTime>
+        <soundCast>RobCo_Shot_LaserHeavy</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Protectron_BaseGun">
+    <defName>RobCo_Gun_Collectron_Hand</defName>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_CollectronLaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <weaponTags>
+      <li>RobCo_Gun_Collectron_Hand</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>0.4</warmupTime>
+        <soundCast>RobCo_Shot_LaserHeavy</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- Nail Gun for Constructron -->
+
+  <ThingDef ParentName="RobCo_Protectron_BaseGun">
+    <defName>RobCo_Gun_Protectron_Nail</defName>
+    <label>protectron nail gun</label>
+    <description>A simple nail gun built in protectron hand. Useful for building and construction tasks, terrible for combat.\n\nSpecially designed for RobCo protectron model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_ProtectronNailGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_ProtectronNailGunUI</uiIconPath>
+    <weaponTags>
+      <li>RobCo_Gun_Protectron_Nail</li>
+    </weaponTags>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.35</AccuracyShort>
+      <AccuracyMedium>0.20</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <ConstructionSpeed>0.3</ConstructionSpeed>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_Nail</defaultProjectile>
+        <range>11.9</range>
+        <warmupTime>0.4</warmupTime>
+        <soundCast>RobCo_Shot_RailRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- Drill for Utilitron -->
+
+  <ThingDef ParentName="BaseWeapon">
+    <defName>RobCo_Protectron_Drill</defName>
+    <label>protectron drill</label>
+    <description>A simple drill built in protectron hand. Useful for construction and mining tasks, terrible for combat.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_ProtectronDrill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_ProtectronDrillUI</uiIconPath>
+    <weaponTags>
+      <li>RobCo_Protectron_Drill</li>
+    </weaponTags>
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>5.5</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MiningSpeed>0.80</MiningSpeed>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>auger</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>0.3</cooldownTime>
+        <armorPenetration>0.5</armorPenetration>
+        <soundMeleeHit>RobCo_Hit_AutoAxe</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

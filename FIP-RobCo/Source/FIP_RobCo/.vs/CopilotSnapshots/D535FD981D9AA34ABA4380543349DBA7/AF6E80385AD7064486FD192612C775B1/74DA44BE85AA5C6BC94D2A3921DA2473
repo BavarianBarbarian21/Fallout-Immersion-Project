@@ -1,0 +1,354 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+using Verse.AI;
+using Verse.Sound;
+
+namespace FIP_RobCo
+
+{
+
+    public class CompProperties_AbilityLaunchProjectileMultiple : CompProperties_AbilityLaunchProjectile
+    {
+        public ThingDef projectileDef;
+        public int burstShotCount = 1;
+        public float forcedMissRadius = 2.9f;
+        public int ticksBetweenBurstShots = 20;
+
+        public int maxCharges = 1;
+        public ThingDef ammoDef;
+        public int ammoCountPerCharge = 1;
+        public SoundDef soundReload;
+        public string chargeNoun = "charge";
+        public bool displayGizmoWhileUndrafted = true;
+
+        public CompProperties_AbilityLaunchProjectileMultiple()
+        {
+            compClass = typeof(CompAbilityEffect_LaunchProjectileMultiple);
+        }
+    }
+
+    public class CompAbilityEffect_LaunchProjectileMultiple : CompAbilityEffect
+    {
+        private CompEquippable compEquippable;
+        private int currentCharges;
+
+        public new CompProperties_AbilityLaunchProjectileMultiple Props => (CompProperties_AbilityLaunchProjectileMultiple)props;
+
+        public override void Initialize(AbilityCompProperties props)
+        {
+            base.Initialize(props);
+            currentCharges = Props.maxCharges;
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref currentCharges, "currentCharges", Props.maxCharges);
+        }
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            if (currentCharges > 0)
+            {
+                currentCharges--;
+                LaunchProjectile(target);
+            }
+        }
+
+        private void LaunchProjectile(LocalTargetInfo target)
+        {
+            if (Props.projectileDef != null)
+            {
+                Pawn pawn = parent.pawn;
+
+                if (Props.ticksBetweenBurstShots > 0 && Props.burstShotCount > 1)
+                {
+                    BurstFireManager burstManager = pawn.Map.GetComponent<BurstFireManager>();
+                    if (burstManager == null)
+                    {
+                        burstManager = new BurstFireManager(pawn.Map);
+                        pawn.Map.components.Add(burstManager);
+                    }
+                    burstManager.QueueBurst(pawn, target, Props.projectileDef, Props.burstShotCount, Props.forcedMissRadius, Props.ticksBetweenBurstShots, parent.verb.preventFriendlyFire);
+                }
+                else
+                {
+                    for (int i = 0; i < Props.burstShotCount; i++)
+                    {
+                        FireSingleProjectile(pawn, target, Props.projectileDef, Props.forcedMissRadius, parent.verb.preventFriendlyFire);
+                    }
+                }
+            }
+        }
+
+        private void FireSingleProjectile(Pawn pawn, LocalTargetInfo target, ThingDef projectileDef, float forcedMissRadius, bool preventFriendlyFire)
+        {
+            LocalTargetInfo missTarget = target;
+            if (forcedMissRadius > 0.5f)
+            {
+                IntVec3 targetCell = target.Cell + GenRadial.RadialPattern[Rand.Range(0, GenRadial.NumCellsInRadius(forcedMissRadius))];
+                missTarget = new LocalTargetInfo(targetCell);
+            }
+            ((Projectile)GenSpawn.Spawn(projectileDef, pawn.Position, pawn.Map)).Launch(pawn, pawn.DrawPos, missTarget, target, ProjectileHitFlags.IntendedTarget, preventFriendlyFire);
+        }
+
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+            return target.Pawn != null;
+        }
+
+        public override bool GizmoDisabled(out string reason)
+        {
+            if (currentCharges <= 0)
+            {
+                if (Props.ammoDef != null)
+                {
+                    reason = "CommandReload_NoAmmo".Translate(Props.ammoDef.label);
+                }
+                else
+                {
+                    reason = "NoCharges".Translate();
+                }
+                return true;
+            }
+            reason = null;
+            return false;
+        }
+
+        public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
+        {
+            if (Props.maxCharges > 1)
+            {
+                return string.Format("{0}: {1} / {2}", Props.chargeNoun.CapitalizeFirst(), currentCharges, Props.maxCharges);
+            }
+            return null;
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            if (Props.maxCharges > 1)
+            {
+                return string.Format("{0}: {1} / {2}", Props.chargeNoun.CapitalizeFirst(), currentCharges, Props.maxCharges);
+            }
+            return null;
+        }
+
+        public override string GetGizmoLabel()
+        {
+            return string.Format("{0}/{1}", currentCharges, Props.maxCharges);
+        }
+
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            if (Props.ammoDef != null && (parent.pawn.Drafted || Props.displayGizmoWhileUndrafted))
+            {
+                Command_Action reloadCommand = new Command_Action();
+                reloadCommand.defaultLabel = "CommandReload".Translate();
+                reloadCommand.defaultDesc = "CommandReloadDesc".Translate(Props.ammoDef.label, Props.ammoCountPerCharge);
+                reloadCommand.icon = Props.ammoDef.uiIcon;
+                reloadCommand.action = delegate
+                {
+                    TryReload();
+                };
+                if (currentCharges >= Props.maxCharges)
+                {
+                    reloadCommand.Disable("CommandReload_Full".Translate());
+                }
+                else if (!CanReload(out string reason))
+                {
+                    reloadCommand.Disable(reason);
+                }
+                yield return reloadCommand;
+            }
+        }
+
+        private bool CanReload(out string reason)
+        {
+            if (Props.ammoDef == null)
+            {
+                reason = null;
+                return true;
+            }
+
+            Pawn pawn = parent.pawn;
+            if (pawn == null)
+            {
+                reason = "NoPawn".Translate();
+                return false;
+            }
+
+            int ammoInInventory = pawn.inventory?.innerContainer.TotalStackCountOfDef(Props.ammoDef) ?? 0;
+            if (ammoInInventory < Props.ammoCountPerCharge)
+            {
+                Thing ammoOnMap = GenClosest.ClosestThingReachable(
+                    pawn.Position,
+                    pawn.Map,
+                    ThingRequest.ForDef(Props.ammoDef),
+                    PathEndMode.ClosestTouch,
+                    TraverseParms.For(pawn),
+                    9999f,
+                    (Thing t) => !t.IsForbidden(pawn) && pawn.CanReserve(t)
+                );
+
+                if (ammoOnMap == null)
+                {
+                    reason = "CommandReload_NoAmmo".Translate(Props.ammoDef.label);
+                    return false;
+                }
+            }
+
+            reason = null;
+            return true;
+        }
+
+        private void TryReload()
+        {
+            Pawn pawn = parent.pawn;
+
+            if (Props.ammoDef != null)
+            {
+                Job job = JobMaker.MakeJob(JobDefOf_FIPRobCo.ReloadAbilityFromMap);
+                job.ability = parent;
+                job.count = (Props.maxCharges - currentCharges) * Props.ammoCountPerCharge;
+                pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+            }
+            else
+            {
+                currentCharges = Props.maxCharges;
+                if (Props.soundReload != null)
+                {
+                    Props.soundReload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                }
+            }
+        }
+
+        public void ReloadFromInventory()
+        {
+            Pawn pawn = parent.pawn;
+            int chargesToReload = Props.maxCharges - currentCharges;
+
+            if (Props.ammoDef != null && chargesToReload > 0)
+            {
+                int ammoNeeded = chargesToReload * Props.ammoCountPerCharge;
+                int ammoAvailable = pawn.inventory.innerContainer.TotalStackCountOfDef(Props.ammoDef);
+                int ammoToConsume = System.Math.Min(ammoNeeded, ammoAvailable);
+
+                if (ammoToConsume >= Props.ammoCountPerCharge)
+                {
+                    pawn.inventory.innerContainer.Take(Props.ammoDef, ammoToConsume).Destroy();
+                    currentCharges += ammoToConsume / Props.ammoCountPerCharge;
+
+                    if (Props.soundReload != null)
+                    {
+                        Props.soundReload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                    }
+                }
+            }
+            else if (Props.ammoDef == null)
+            {
+                currentCharges = Props.maxCharges;
+
+                if (Props.soundReload != null)
+                {
+                    Props.soundReload.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
+                }
+            }
+        }
+
+        private CompEquippable GetCompEquippable()
+        {
+            if (compEquippable == null && parent.pawn?.equipment?.Primary != null)
+            {
+                compEquippable = parent.pawn.equipment.Primary.TryGetComp<CompEquippable>();
+            }
+            return compEquippable;
+        }
+    }
+
+    public class BurstFireManager : MapComponent
+    {
+        private class BurstData
+        {
+            public Pawn caster;
+            public LocalTargetInfo target;
+            public ThingDef projectileDef;
+            public int shotsRemaining;
+            public float forcedMissRadius;
+            public int ticksBetweenShots;
+            public bool preventFriendlyFire;
+            public int ticksUntilNextShot;
+        }
+
+        private List<BurstData> activeBursts = new List<BurstData>();
+
+        public BurstFireManager(Map map) : base(map)
+        {
+        }
+
+        public void QueueBurst(Pawn caster, LocalTargetInfo target, ThingDef projectileDef, int burstShotCount, float forcedMissRadius, int ticksBetweenBurstShots, bool preventFriendlyFire)
+        {
+            activeBursts.Add(new BurstData
+            {
+                caster = caster,
+                target = target,
+                projectileDef = projectileDef,
+                shotsRemaining = burstShotCount,
+                forcedMissRadius = forcedMissRadius,
+                ticksBetweenShots = ticksBetweenBurstShots,
+                preventFriendlyFire = preventFriendlyFire,
+                ticksUntilNextShot = 0
+            });
+        }
+
+        public override void MapComponentTick()
+        {
+            base.MapComponentTick();
+
+            for (int i = activeBursts.Count - 1; i >= 0; i--)
+            {
+                BurstData burst = activeBursts[i];
+
+                if (burst.caster == null || burst.caster.Dead || burst.caster.Map != map)
+                {
+                    activeBursts.RemoveAt(i);
+                    continue;
+                }
+
+                burst.ticksUntilNextShot--;
+                if (burst.ticksUntilNextShot <= 0)
+                {
+                    FireProjectile(burst);
+                    burst.shotsRemaining--;
+
+                    if (burst.shotsRemaining <= 0)
+                    {
+                        activeBursts.RemoveAt(i);
+                    }
+                    else
+                    {
+                        burst.ticksUntilNextShot = burst.ticksBetweenShots;
+                    }
+                }
+            }
+        }
+
+        private void FireProjectile(BurstData burst)
+        {
+            LocalTargetInfo missTarget = burst.target;
+            if (burst.forcedMissRadius > 0.5f)
+            {
+                IntVec3 targetCell = burst.target.Cell + GenRadial.RadialPattern[Rand.Range(0, GenRadial.NumCellsInRadius(burst.forcedMissRadius))];
+                missTarget = new LocalTargetInfo(targetCell);
+            }
+            ((Projectile)GenSpawn.Spawn(burst.projectileDef, burst.caster.Position, burst.caster.Map)).Launch(burst.caster, burst.caster.DrawPos, missTarget, burst.target, ProjectileHitFlags.IntendedTarget, burst.preventFriendlyFire);
+        }
+    }
+
+   
+}

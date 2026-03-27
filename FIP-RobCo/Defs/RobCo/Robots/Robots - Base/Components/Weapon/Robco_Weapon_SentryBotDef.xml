@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Sentry_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Sentry_BaseGun">
+    <defName>RobCo_Gun_SentryMissileLauncher</defName>
+    <label>sentry missile launcher</label>
+    <description>A sentry bot rocket launcher that fires three large-bore explosive rockets. Good against small groups of tough targets.\n\nSpecially designed for RobCo sentry bot model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_SentryRocketLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>7</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_SentryMissileLauncher</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Rocket_Light</defaultProjectile>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <warmupTime>4.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <range>24.9</range>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>RobCo_Shot_Launcher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Sentry_BaseGun">
+    <defName>RobCo_Gun_SentryMinigun</defName>
+    <label>sentry minigun</label>
+    <description>A rapid-fire sentry bot minigun that fires a high volume of bullets in quick succession, effective against groups of enemies.\n\nSpecially designed for RobCo sentry bot model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_SentryMinigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.2</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.18</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_SentryMinigun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_5mm</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>24.9</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundAiming>RobCo_SpinUp_Minigun</soundAiming>
+        <soundCast>RobCo_Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Sentry_BaseGun">
+    <defName>RobCo_Gun_SentryGatlingLaser</defName>
+    <label>sentry gatling laser</label>
+    <description>A rapid-fire gatling laser that fires low-beam laser cartridges in rapid bursts, perfect for suppression.\n\nSpecially designed for RobCo sentry bot model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_SentryGatlingLaser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>12</Mass>
+      <AccuracyTouch>0.30</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.20</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_SentryGatlingLaser</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>24.9</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundAiming>RobCo_SpinUp_Minigun</soundAiming>
+        <soundCast>RobCo_Shot_LaserSemi</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="RobCo_Sentry_BaseGun">
+    <defName>RobCo_Gun_SentryExterminator</defName>
+    <label>sentry exterminator</label>
+    <description>A compact sentry bot exterminator launcher firing toxic canisters.\n\nSpecially designed for RobCo sentry bot model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_SentryExterminator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+      <Mass>8</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_SentryExterminator</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ToxbombLauncher</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>39.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

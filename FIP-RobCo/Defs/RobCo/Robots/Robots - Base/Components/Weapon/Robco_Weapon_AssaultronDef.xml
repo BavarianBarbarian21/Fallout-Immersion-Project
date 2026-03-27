@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Assaultron_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <uiIconPath>Things/Weapons/RobCo_AssaultronHeadUI</uiIconPath>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!-- Assaultron Head Laser -->
+
+  <ThingDef ParentName="RobCo_Assaultron_BaseGun">
+    <defName>RobCo_Gun_LaserAssaultron</defName>
+    <label>assaultron head laser</label>
+    <description>A faster-firing variant of the hellsphere cannon. Sacrifices raw damage output for increased rate of fire and reduced explosion radius, making it better suited for rapid suppression rather than single-target destruction.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_AssaultronHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1250</MarketValue>
+      <Mass>18</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_LaserAssaultron</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserAssaultron</defaultProjectile>
+        <warmupTime>4.0</warmupTime>
+        <range>18.9</range>
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>40</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>1</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- RobCo Sheepsquatch head laser -->
+
+  <ThingDef ParentName="RobCo_Assaultron_BaseGun">
+    <defName>RobCo_Gun_LaserSheepsquatch</defName>
+    <label>sheepsquatch head laser</label>
+    <description>A ultra-high-power energy pulse projector designed for siegebreaking. The hellsphere cannon must hold a bead on its target for several seconds while charging, before it releases a devastating tsunami of power. The explosion is capable of melting concrete in its blast radius. The heat of the explosion will ignite anything nearby. It cannot fire at close-up targets.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_AssaultronBlade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>20</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>6.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_LaserSheepsquatch</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserSheepsquatch</defaultProjectile>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>1</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

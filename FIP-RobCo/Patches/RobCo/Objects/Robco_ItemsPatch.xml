@@ -26,6 +26,15 @@
             <description>Civilian RobCo hardware.</description>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SubcoreBasic"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Item/Resource/RobCo_BasicCircuity</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+            </graphicData>
+        </value>
+    </Operation>
     <!-- Patch label and description for SubcoreRegular -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="SubcoreRegular"]/label</xpath>
@@ -39,6 +48,15 @@
             <description>Military-grade RobCo hardware.</description>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SubcoreRegular"]/graphicData</xpath>
+        <value>
+            <graphicData>
+                <texPath>Things/Item/Resource/RobCo_MilitaryCircuity</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+            </graphicData>
+        </value>
+    </Operation>
     <!-- Patch SubcoreHigh -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="SubcoreHigh"]</xpath>
@@ -48,7 +66,7 @@
                 <label>Human Brain</label>
                 <description>This is a human brain... in a jar.</description>
                 <graphicData>
-                    <texPath>RobCo/Misc/CyberneticBrain</texPath>
+                    <texPath>Things/Item/Resource/RobCo_CyberneticBrain</texPath>
                     <graphicClass>Graphic_Single</graphicClass>
                 </graphicData>
                 <statBases>
@@ -81,7 +99,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="SignalChip"]/graphicData/texPath</xpath>
         <value>
-            <texPath>RobCo/Misc/GoodAsNewThrusters</texPath>
+            <texPath>Things/Item/Resource/RobCo_GoodAsNewThrusters</texPath>
         </value>
     </Operation>
     <!-- Patch label and description for PowerfocusChip -->
@@ -100,26 +118,26 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="PowerfocusChip"]/graphicData/texPath</xpath>
         <value>
-            <texPath>RobCo/Misc/ScrapAssaultronHead</texPath>
+            <texPath>Things/Item/Resource/RobCo_ScrapAssaultronHead</texPath>
         </value>
     </Operation>
     <!-- Patch label and description for NanostructuringChip -->
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="NanostructuringChip"]/label</xpath>
         <value>
-            <label>Depletet Sentry Bot Fusion Core</label>
+            <label>Depleted Sentry Bot Fusion Core</label>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="NanostructuringChip"]/description</xpath>
         <value>
-            <description>The depletet remains of a Sentry Bot fusion cell.</description>
+            <description>The depleted remains of a Sentry Bot fusion cell.</description>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="NanostructuringChip"]/graphicData/texPath</xpath>
         <value>
-            <texPath>RobCo/Misc/DepletedFusionCore</texPath>
+            <texPath>Things/Item/Resource/RobCo_DepletedFusionCore</texPath>
         </value>
     </Operation>
     <!-- Patch label and description for UnfinishedSubcore -->

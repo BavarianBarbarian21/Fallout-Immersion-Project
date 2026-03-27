@@ -1,0 +1,51 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+
+namespace FIP_RobCo
+
+{
+
+    public class CompProperties_AbilityLaunchProjectileMultiple : CompProperties_AbilityLaunchProjectile
+    {
+        public ThingDef projectileDef;
+        public int burstShotCount = 1;
+        public float forcedMissRadius = 2.9f;
+
+        public CompProperties_AbilityLaunchProjectileMultiple()
+        {
+            compClass = typeof(CompAbilityEffect_LaunchProjectileMultiple);
+        }
+    }
+
+    public class CompAbilityEffect_LaunchProjectileMultiple : CompAbilityEffect
+    {
+        public new CompProperties_AbilityLaunchProjectile Props => (CompProperties_AbilityLaunchProjectile)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            LaunchProjectile(target);
+        }
+
+        private void LaunchProjectile(LocalTargetInfo target)
+        {
+            if (Props.projectileDef != null)
+            {
+                Pawn pawn = parent.pawn;
+                ((Projectile)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map)).Launch(pawn, pawn.DrawPos, target, target, ProjectileHitFlags.IntendedTarget, parent.verb.preventFriendlyFire);
+            }
+        }
+
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+            return target.Pawn != null;
+        }
+    }
+
+   
+}
