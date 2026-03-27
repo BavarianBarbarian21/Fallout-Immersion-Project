@@ -40,7 +40,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_SeaIce</defName>
     <label>sea ice</label>
-    <description>Repconn 3 arctic sea ice using the vanilla sea ice worker.</description>
+    <description>Broken white sheets drift over the northern sea, creaking under the wind and cold. Nothing grows here, little hunts here, and anyone caught out on the ice is far from help.</description>
     <workerClass>BiomeWorker_SeaIce</workerClass>
     <isWaterBiome>true</isWaterBiome>
     <canBuildBase>false</canBuildBase>
@@ -71,7 +71,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_IceSheet</defName>
     <label>ice sheet</label>
-    <description>Repconn 3 ice sheet using the vanilla ice sheet worker.</description>
+    <description>Ancient ice lies over the land in hard blue-white plates. There is no soil, almost no life, and only the desperate or the doomed try to make a home here.</description>
     <workerClass>BiomeWorker_IceSheet</workerClass>
     <texture>World/Biomes/IceSheet</texture>
     <lakeBeachTerrain>Ice</lakeBeachTerrain>
@@ -88,7 +88,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_GlacialPlain</defName>
     <label>glacial plain</label>
-    <description>Repconn 3 glacial plain using the vanilla glacial plain worker.</description>
+    <description>These frozen flats thaw only a little before winter takes them again. Sparse brush and wandering herds can survive here, but the cold rules everything.</description>
     <workerClass>BiomeWorker_GlacialPlain</workerClass>
     <texture>World/Biomes/GlacialPlains</texture>
     <lakeBeachTerrain>Ice</lakeBeachTerrain>
@@ -106,7 +106,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Tundra</defName>
     <label>tundra</label>
-    <description>Repconn 3 tundra using the vanilla tundra worker.</description>
+    <description>Open plains of frost-hardened soil stretch beneath long gray skies. There are a few shrubs, a few animals, and just enough life to tempt settlers into staying.</description>
     <workerClass>BiomeWorker_Tundra</workerClass>
     <texture>World/Biomes/Tundra</texture>
     <lakeBeachTerrain>Gravel</lakeBeachTerrain>
@@ -117,7 +117,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Preserve</defName>
     <label>preserve</label>
-    <description>Boreal lowland and upland preserve.</description>
+    <description>Cold evergreen forest and marshy lowland meet in these protected backwoods. The air is clean, the game is wary, and old-world quiet still survives between the trees.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Preserve</workerClass>
     <texture>World/Biomes/BorealForest</texture>
   </BiomeDef>
@@ -125,7 +125,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Ceek</defName>
     <label>ceek</label>
-    <description>River-fed boreal ceekland that replaces about half of eligible preserve river tiles.</description>
+    <description>These cold creek bottoms cut through the preserve with soft ground, brush, and black water. They are rich compared to the uplands, but travel is slow and the wet gets everywhere.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Ceek</workerClass>
     <texture>World/Biomes/BorealForest</texture>
   </BiomeDef>
@@ -133,7 +133,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_CentralValley</defName>
     <label>central valley</label>
-    <description>Temperate low-elevation central valley terrain.</description>
+    <description>Wide interior flats once fed cities from Sacramento to Bakersfield. Now the valley is still fertile by wasteland standards, but dust, heat, and ruin press in from every side.</description>
     <workerClass>FIP.Repconn.BiomeWorker_CentralValley</workerClass>
     <texture>World/Biomes/Grasslands</texture>
   </BiomeDef>
@@ -141,7 +141,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_BrahminWoods</defName>
     <label>brahmin woods</label>
-    <description>Temperate medium-elevation woodland.</description>
+    <description>Oak and pine woodland covers the rolling middle country between valley and mountain. It is gentler than the wastes below, though raiders, predators, and hungry brahmin still leave their mark.</description>
     <workerClass>FIP.Repconn.BiomeWorker_BrahminWoods</workerClass>
     <texture>World/Biomes/TemperateForest</texture>
   </BiomeDef>
@@ -149,7 +149,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Aqueduct</defName>
     <label>aqueduct</label>
-    <description>Temperate river-bearing central valley and brahmin woods tiles increasingly become aqueducts as river size grows, unless floodplains overrides them.</description>
+    <description>Concrete channels and cracked embankments still drag water across the heartland. Where the old system holds, the land is greener, richer, and fought over all the harder.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Aqueduct</workerClass>
     <texture>World/Biomes/Grasslands</texture>
   </BiomeDef>
@@ -157,7 +157,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Floodplains</defName>
     <label>floodplains</label>
-    <description>Large-river floodplain variant layered on top of aqueduct terrain.</description>
+    <description>Broad rivers spill out over flat country, leaving behind mud, reeds, and good soil. These bottoms can be abundant in the right season and miserable in the wrong one.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Floodplains</workerClass>
     <texture>World/Biomes/Grasslands</texture>
   </BiomeDef>
@@ -165,7 +165,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Mojave</defName>
     <label>mojave</label>
-    <description>Arid low to medium elevation mojave terrain.</description>
+    <description>The open desert bakes under a white sun and cools fast after dark. Scrub, stone, and long empty distances define this country, along with the bones of highways that once crossed it.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Mojave</workerClass>
     <texture>World/Biomes/AridShrubland</texture>
   </BiomeDef>
@@ -173,7 +173,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Canyon</defName>
     <label>canyon</label>
-    <description>River-bearing mojave terrain, replacing about half of eligible mojave river tiles.</description>
+    <description>Where water cuts into the desert, steep walls, dry shelves, and stubborn life gather around the channel. These canyons offer shade and ambush in equal measure.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Canyon</workerClass>
     <texture>World/Biomes/Scarlands</texture>
   </BiomeDef>
@@ -181,7 +181,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Marina</defName>
     <label>marina</label>
-    <description>Coastal low-elevation tiles from boreal through arid, appearing at about half of eligible coastal tiles.</description>
+    <description>Along the coast, salt wind blows through rotting piers, stranded hulls, and drowned suburbs. The sea softens the temperature here, but not the dangers that washed in with the old world.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Marina</workerClass>
     <texture>World/Biomes/TemperateForest</texture>
   </BiomeDef>
@@ -189,7 +189,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Redwood</defName>
     <label>redwood</label>
-    <description>High-elevation cool mountain forest from boreal through the lower half of temperate climates.</description>
+    <description>Great red trunks rise over cool mountain fog and dim forest ground. These woods feel older than the war, and deep enough to hide both safe camps and things better left alone.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Redwood</workerClass>
     <texture>World/Biomes/TemperateForest</texture>
   </BiomeDef>
@@ -197,7 +197,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Sequoia</defName>
     <label>sequoia</label>
-    <description>High-elevation warm mountain forest from the upper half of temperate climates into arid climates.</description>
+    <description>Warm mountain slopes carry giant trees, dry needles, and long views over the wastes below. The forest is beautiful from a distance and unforgiving once you are inside it.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Sequoia</workerClass>
     <texture>World/Biomes/BorealForest</texture>
   </BiomeDef>
@@ -205,7 +205,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Divide</defName>
     <label>divide</label>
-    <description>Low to medium elevation hot-country biome.</description>
+    <description>The land here is dry, broken, and bitter, split by ridges, gullies, and old fire scars. Water is scarce, cover is thin, and every mile feels farther than it should.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Divide</workerClass>
     <texture>World/Biomes/Desert</texture>
   </BiomeDef>
@@ -213,7 +213,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Mesa</defName>
     <label>mesa</label>
-    <description>High-elevation hot-country biome.</description>
+    <description>High desert plateaus sit above the low country in wind and heat. The ground is harsh, the horizons are wide, and survival depends on seeing trouble long before it reaches you.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Mesa</workerClass>
     <texture>World/Biomes/Desert</texture>
   </BiomeDef>
@@ -221,7 +221,7 @@
   <BiomeDef ParentName="Repconn_Urban">
     <defName>Repconn_Crater</defName>
     <label>crater</label>
-    <description>Central seed biome for the crater, ruin, and wasteland ring structure.</description>
+    <description>The bomb fell hardest here. Glassed earth, shattered concrete, and poisoned dust fill the impact zones where cities and test sites were erased in an instant.</description>
     <texture>World/Biomes/Scarlands</texture>
     <pollutionOffset>0.04</pollutionOffset>
   </BiomeDef>
@@ -229,7 +229,7 @@
   <BiomeDef ParentName="Repconn_Urban">
     <defName>Repconn_Ruin</defName>
     <label>ruin</label>
-    <description>Guaranteed first ring surrounding craters, with a small chance to expand outward.</description>
+    <description>Beyond the ground zeroes lie collapsed districts, dead roads, and the shells of neighborhoods that never recovered. There is scrap here, shelter too, and plenty willing to kill for both.</description>
     <texture>World/Biomes/Desert</texture>
     <pollutionOffset>0.02</pollutionOffset>
   </BiomeDef>
@@ -237,7 +237,7 @@
   <BiomeDef ParentName="Repconn_Urban">
     <defName>Repconn_Wasteland</defName>
     <label>wasteland</label>
-    <description>Guaranteed outer ring surrounding ruins, with a moderate chance to expand outward.</description>
+    <description>These outer blasted belts were spared the worst of the fire and caught the long death after. Ash, rubble, and tainted soil stretch between civilization's corpse and the living frontier.</description>
     <texture>World/Biomes/Scarlands</texture>
     <pollutionOffset>0.01</pollutionOffset>
   </BiomeDef>
@@ -245,7 +245,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_Malpais</defName>
     <label>malpais</label>
-    <description>Repconn 3 malpais using the vanilla lava field worker.</description>
+    <description>Black volcanic stone and raw earth make this country look half-finished by the world. Heat lingers in the rock, plant life is thin, and the ground feels hostile even when it stands still.</description>
     <workerClass>BiomeWorker_LavaField</workerClass>
     <texture>World/Biomes/LavaFields</texture>
   </BiomeDef>
@@ -253,7 +253,7 @@
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_CranberryBog</defName>
     <label>cranberry bog</label>
-    <description>Repconn 3 cranberry bog using the vanilla glowforest worker.</description>
+    <description>Tangled wet ground, red growth, and strange light make these bogs feel wrong even before night falls. They are rich, eerie places where beauty and decay have learned to share the same water.</description>
     <workerClass>BiomeWorker_Glowforest</workerClass>
     <texture>World/Biomes/Glowforest</texture>
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
