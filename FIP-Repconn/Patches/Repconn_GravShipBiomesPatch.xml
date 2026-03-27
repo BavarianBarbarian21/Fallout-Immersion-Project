@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_MechanoidRelay"]/root/allowedBiomes</xpath>
+        <value>
+          <allowedBiomes>
+            <li>Repconn_Malpais</li>
+            <li>Repconn_CranberryBog</li>
+            <li>Repconn_GlacialPlain</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Mesa</li>
+            <li>Repconn_IceSheet</li>
+          </allowedBiomes>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientReactor"]/root/allowedBiomes</xpath>
+        <value>
+          <allowedBiomes>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+          </allowedBiomes>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientStockpile"]/root/allowedBiomes</xpath>
+        <value>
+          <allowedBiomes>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Malpais</li>
+            <li>Repconn_CranberryBog</li>
+            <li>Repconn_GlacialPlain</li>
+            <li>Repconn_CentralValley</li>
+            <li>Repconn_BrahminWoods</li>
+            <li>Repconn_Aqueduct</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_Mojave</li>
+            <li>Repconn_Canyon</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Mesa</li>
+          </allowedBiomes>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_CrashedMechanoidPlatform"]/root/allowedBiomes</xpath>
+        <value>
+          <allowedBiomes>
+            <li>Repconn_CentralValley</li>
+            <li>Repconn_BrahminWoods</li>
+            <li>Repconn_Aqueduct</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_CranberryBog</li>
+            <li>Repconn_Preserve</li>
+            <li>Repconn_Ceek</li>
+            <li>Repconn_Malpais</li>
+            <li>Repconn_GlacialPlain</li>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Mojave</li>
+            <li>Repconn_Canyon</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Mesa</li>
+          </allowedBiomes>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_FrozenTerraformer"]/root/allowedBiomes</xpath>
+        <value>
+          <allowedBiomes>
+            <li>Repconn_GlacialPlain</li>
+            <li>Repconn_IceSheet</li>
+            <li>Repconn_Tundra</li>
+          </allowedBiomes>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
