@@ -8,14 +8,42 @@
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
 				<value>
-					<recipes />
+					<recipes>
+						<li>ResurrectLightMech</li>
+						<li>RobCo_Eyebot_Recipe</li>
+						<li>RobCo_EyebotDuraframe_Recipe</li>
+						<li>RobCo_Constructron_Recipe</li>
+						<li>RobCo_Factotron_Recipe</li>
+						<li>RobCo_Utilitron_Recipe</li>
+						<li>RobCo_Collectron_Recipe</li>
+						<li>RobCo_Protectron_Recipe</li>
+						<li>RobCo_Liberator_Recipe</li>
+						<li>RobCo_SecuritronMkI_Recipe</li>
+						<li>RobCo_SecuritronMkII_Recipe</li>
+					</recipes>
 				</value>
 			</li>
 			<!-- Remove all vanilla recipes from LargeMechGestator -->
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
 				<value>
-					<recipes />
+					<recipes>
+						<li>ResurrectMediumMech</li>
+						<li>ResurrectHeavyMech</li>
+						<li>ResurrectUltraheavyMech</li>
+						<li>RobCo_MisterFarmhand_Recipe</li>
+						<li>RobCo_MisterHandy_Recipe</li>
+						<li>RobCo_MisterGutsy_Recipe</li>
+						<li>RobCo_MissNanny_Recipe</li>
+						<li>RobCo_Assaultron_Recipe</li>
+						<li>RobCo_Cyberdog_Recipe</li>
+						<li>RobCo_Robobrain_Recipe</li>
+						<li>RobCo_SentrybotSiegebreaker_Recipe</li>
+						<li>RobCo_SentrybotPestcontrol_Recipe</li>
+						<li>RobCo_SentrybotAnnihilator_Recipe</li>
+						<li>RobCo_WarMachine_Recipe</li>
+						<li>RobCo_LibertyPrime_Recipe</li>
+					</recipes>
 				</value>
 			</li>
 			<!-- Make all vanilla mechanoids non-fighters by disabling base kinds -->

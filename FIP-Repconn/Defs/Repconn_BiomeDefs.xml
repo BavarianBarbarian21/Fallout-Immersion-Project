@@ -35,6 +35,8 @@
   <BiomeDef Name="Repconn_Urban" ParentName="Repconn_Nature" Abstract="True">
     <canAutoChoose>false</canAutoChoose>
     <generatesNaturally>false</generatesNaturally>
+    <allowRoads>true</allowRoads>
+    <allowPollution>true</allowPollution>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -91,6 +93,14 @@
     <description>These frozen flats thaw only a little before winter takes them again. Sparse brush and wandering herds can survive here, but the cold rules everything.</description>
     <workerClass>BiomeWorker_GlacialPlain</workerClass>
     <texture>World/Biomes/GlacialPlains</texture>
+    <wildPlants>
+      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_ShrubLow>0.20</Plant_ShrubLow>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_GrayGrass>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Fireweed>
+    </wildPlants>
     <lakeBeachTerrain>Ice</lakeBeachTerrain>
     <mudTerrain>Ice</mudTerrain>
     <coastalBeachTerrain>Ice</coastalBeachTerrain>
@@ -109,6 +119,18 @@
     <description>Open plains of frost-hardened soil stretch beneath long gray skies. There are a few shrubs, a few animals, and just enough life to tempt settlers into staying.</description>
     <workerClass>BiomeWorker_Tundra</workerClass>
     <texture>World/Biomes/Tundra</texture>
+    <wildPlants>
+      <Plant_Dandelion>0.14</Plant_Dandelion>
+      <Plant_Astragalus>0.16</Plant_Astragalus>
+      <Plant_Moss>0.24</Plant_Moss>
+      <Plant_ShrubLow>0.18</Plant_ShrubLow>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_TreeWillow>0.01</Plant_TreeWillow>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.15</Plant_GrayGrass>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Fireweed>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Xander_Root>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Carrot_Flower>
+    </wildPlants>
     <lakeBeachTerrain>Gravel</lakeBeachTerrain>
     <mudTerrain>Gravel</mudTerrain>
     <riverbankTerrain>Gravel</riverbankTerrain>
@@ -119,7 +141,49 @@
     <label>preserve</label>
     <description>Cold evergreen forest and marshy lowland meet in these protected backwoods. The air is clean, the game is wary, and old-world quiet still survives between the trees.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Preserve</workerClass>
-    <texture>World/Biomes/BorealForest</texture>
+    <texture>Repconn_Preserve</texture>
+    <wildPlants>
+      <Plant_Grass>1.00</Plant_Grass>
+      <Plant_TallGrass>0.75</Plant_TallGrass>
+      <Plant_Bush>0.32</Plant_Bush>
+      <Plant_Brambles>0.25</Plant_Brambles>
+      <Plant_Berry>0.16</Plant_Berry>
+      <Plant_Dandelion>0.12</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.22</Plant_Moss>
+      <Plant_HealrootWild>0.03</Plant_HealrootWild>
+      <Plant_TreePine>0.22</Plant_TreePine>
+      <Plant_TreeBirch>0.14</Plant_TreeBirch>
+      <Plant_TreeWillow>0.03</Plant_TreeWillow>
+      <Plant_TreeCypress>0.04</Plant_TreeCypress>
+      <Plant_TreeMaple>0.09</Plant_TreeMaple>
+      <Plant_TreeBamboo>0.02</Plant_TreeBamboo>
+      <Plant_TreeDrago>0.01</Plant_TreeDrago>
+      <Plant_Rose>0.015</Plant_Rose>
+      <Plant_Daylily>0.015</Plant_Daylily>
+      <Glowstool>0.01</Glowstool>
+      <Agarilux>0.01</Agarilux>
+      <Bryolux>0.01</Bryolux>
+      <Plant_Timbershroom>0.01</Plant_Timbershroom>
+      <Plant_GrassAnima MayRequire="Ludeon.RimWorld.Royalty">0.03</Plant_GrassAnima>
+      <Plant_TreeAnima MayRequire="Ludeon.RimWorld.Royalty">0.004</Plant_TreeAnima>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.01</Plant_TreeBonsai>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.004</Plant_TreeGauranlen>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.02</Plant_MossGauranlen>
+      <Plant_PodGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_PodGauranlen>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.015</FCP_Plant_Tarberry>
+      <VCE_Onion MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Onion>
+      <VCE_Peas MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Peas>
+      <VCE_Cabbage MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Cabbage>
+      <VCE_Beet MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Beet>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_BearBerryBush>
+      <VPE_Plant_Healtruffle MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_Healtruffle>
+      <VPE_Plant_Glowcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_Glowcap>
+      <VPE_Plant_MycothreadMushroom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_MycothreadMushroom>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -127,7 +191,32 @@
     <label>ceek</label>
     <description>These cold creek bottoms cut through the preserve with soft ground, brush, and black water. They are rich compared to the uplands, but travel is slow and the wet gets everywhere.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Ceek</workerClass>
-    <texture>World/Biomes/BorealForest</texture>
+    <texture>Repconn_Ceek</texture>
+    <wildPlants>
+      <Plant_Berry>0.18</Plant_Berry>
+      <Plant_Bush>0.30</Plant_Bush>
+      <Plant_Brambles>0.24</Plant_Brambles>
+      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_TreeWillow>0.10</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreeMaple>0.06</Plant_TreeMaple>
+      <Plant_TreeBamboo>0.04</Plant_TreeBamboo>
+      <Plant_Rice>0.06</Plant_Rice>
+      <Plant_Strawberry>0.04</Plant_Strawberry>
+      <Plant_Healroot>0.02</Plant_Healroot>
+      <Plant_Tinctoria>0.01</Plant_Tinctoria>
+      <Glowstool>0.02</Glowstool>
+      <Agarilux>0.02</Agarilux>
+      <Bryolux>0.02</Bryolux>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.05</Plant_Lotus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot_Flower>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -135,7 +224,93 @@
     <label>central valley</label>
     <description>Wide interior flats once fed cities from Sacramento to Bakersfield. Now the valley is still fertile by wasteland standards, but dust, heat, and ruin press in from every side.</description>
     <workerClass>FIP.Repconn.BiomeWorker_CentralValley</workerClass>
-    <texture>World/Biomes/Grasslands</texture>
+    <texture>Repconn_CentralValley</texture>
+    <wildPlants>
+      <Plant_Grass>1.10</Plant_Grass>
+      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Bush>0.20</Plant_Bush>
+      <Plant_Brambles>0.15</Plant_Brambles>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Astragalus>0.08</Plant_Astragalus>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_TreeOak>0.12</Plant_TreeOak>
+      <Plant_TreePoplar>0.08</Plant_TreePoplar>
+      <Plant_Corn>0.08</Plant_Corn>
+      <Plant_Cotton>0.05</Plant_Cotton>
+      <Plant_Devilstrand>0.015</Plant_Devilstrand>
+      <Plant_Haygrass>0.08</Plant_Haygrass>
+      <Plant_Healroot>0.03</Plant_Healroot>
+      <Plant_Hops>0.03</Plant_Hops>
+      <Plant_Potato>0.08</Plant_Potato>
+      <Plant_Psychoid>0.03</Plant_Psychoid>
+      <Plant_Rice>0.05</Plant_Rice>
+      <Plant_Smokeleaf>0.03</Plant_Smokeleaf>
+      <Plant_Strawberry>0.04</Plant_Strawberry>
+      <Plant_Tinctoria>0.02</Plant_Tinctoria>
+      <Plant_Fibercorn MayRequire="Ludeon.RimWorld.Ideology">0.04</Plant_Fibercorn>
+      <Plant_Toxipotato MayRequire="Ludeon.RimWorld.Biotech">0.03</Plant_Toxipotato>
+      <FCP_Plant_Carrot MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Carrot>
+      <FCP_Plant_Cranberry MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Cranberry>
+      <FCP_Plant_Gourd MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Gourd>
+      <FCP_Plant_Jalapeno MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Jalapeno>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Maize>
+      <FCP_Plant_Melon MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Melon>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <VCE_Onion MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Onion>
+      <VCE_Pumpkin MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Pumpkin>
+      <VCE_Pepper MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Pepper>
+      <VCE_Peas MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Peas>
+      <VCE_Eggplant MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Eggplant>
+      <VCE_Cabbage MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Cabbage>
+      <VCE_Beet MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Beet>
+      <VCE_Tomato MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Tomato>
+      <VCE_AppleTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_AppleTree>
+      <VCE_PeachTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_PeachTree>
+      <VCE_CherryTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_CherryTree>
+      <VCE_PlumTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_PlumTree>
+      <VCE_PearTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_PearTree>
+      <VCE_BananaTree MayRequire="VanillaExpanded.VPlantsE">0.015</VCE_BananaTree>
+      <VCE_OrangeTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_OrangeTree>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_AloeVera>
+      <VCE_BellPepper MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_BellPepper>
+      <VCE_YellowBellPepper MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_YellowBellPepper>
+      <VCE_BrusselsSprout MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_BrusselsSprout>
+      <VCE_Buckwheat MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Buckwheat>
+      <VCE_ButternutSquash MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_ButternutSquash>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Carrot>
+      <VCE_Celery MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Celery>
+      <VCE_Chickpea MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Chickpea>
+      <VCE_Cucumber MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Cucumber>
+      <VCE_Garlic MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Garlic>
+      <VCE_Beans MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Beans>
+      <VCE_Lettuce MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Lettuce>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Melon>
+      <VCE_Okra MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Okra>
+      <VCE_Peanut MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Peanut>
+      <VCE_PeanutSecondary MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_PeanutSecondary>
+      <VCE_Radish MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Radish>
+      <VCE_Sunflower MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Sunflower>
+      <VCE_SweetPotato MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_SweetPotato>
+      <VCE_Taro MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Taro>
+      <VCE_TreeAvocado MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAvocado>
+      <VCE_TreeOlive MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeOlive>
+      <VCE_TreeAlmond MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAlmond>
+      <VCE_TreeMango MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_TreeMango>
+      <VCE_Canola MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Canola>
+      <VCE_FragrantbloomRose MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_FragrantbloomRose>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Hyacinth>
+      <VCE_Jasmine MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Jasmine>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lavender>
+      <VCE_Lily MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lily>
+      <VCE_Orchid MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Orchid>
+      <VCE_Plumeria MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Plumeria>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Tulip>
+      <VCE_Violet MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Violet>
+      <VCE_YlangYlang MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_YlangYlang>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -143,7 +318,50 @@
     <label>brahmin woods</label>
     <description>Oak and pine woodland covers the rolling middle country between valley and mountain. It is gentler than the wastes below, though raiders, predators, and hungry brahmin still leave their mark.</description>
     <workerClass>FIP.Repconn.BiomeWorker_BrahminWoods</workerClass>
-    <texture>World/Biomes/TemperateForest</texture>
+    <texture>Repconn_BrahminWoods</texture>
+    <wildPlants>
+      <Plant_Grass>0.90</Plant_Grass>
+      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Bush>0.25</Plant_Bush>
+      <Plant_Brambles>0.20</Plant_Brambles>
+      <Plant_Berry>0.12</Plant_Berry>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.15</Plant_Moss>
+      <Plant_TreeOak>0.14</Plant_TreeOak>
+      <Plant_TreePine>0.16</Plant_TreePine>
+      <Plant_TreeBirch>0.10</Plant_TreeBirch>
+      <Plant_TreeMaple>0.08</Plant_TreeMaple>
+      <Plant_TreePoplar>0.04</Plant_TreePoplar>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Plant_Healroot>0.015</Plant_Healroot>
+      <Plant_Smokeleaf>0.015</Plant_Smokeleaf>
+      <Plant_Psychoid>0.015</Plant_Psychoid>
+      <Plant_Strawberry>0.02</Plant_Strawberry>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tato>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Maize>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Mutated_Fern>
+      <VCE_Onion MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Onion>
+      <VCE_Pumpkin MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_Pumpkin>
+      <VCE_AppleTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_AppleTree>
+      <VCE_PeachTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_PeachTree>
+      <VCE_CherryTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_CherryTree>
+      <VCE_PlumTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_PlumTree>
+      <VCE_PearTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_PearTree>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_BearBerryBush>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Carrot>
+      <VCE_Garlic MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Garlic>
+      <VCE_Sunflower MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Sunflower>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Tulip>
+      <VCE_FragrantbloomRose MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_FragrantbloomRose>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -151,7 +369,79 @@
     <label>aqueduct</label>
     <description>Concrete channels and cracked embankments still drag water across the heartland. Where the old system holds, the land is greener, richer, and fought over all the harder.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Aqueduct</workerClass>
-    <texture>World/Biomes/Grasslands</texture>
+    <texture>Repconn_Aqueduct</texture>
+    <wildPlants>
+      <Plant_Corn>0.08</Plant_Corn>
+      <Plant_Cotton>0.05</Plant_Cotton>
+      <Plant_Devilstrand>0.015</Plant_Devilstrand>
+      <Plant_Haygrass>0.08</Plant_Haygrass>
+      <Plant_Healroot>0.03</Plant_Healroot>
+      <Plant_Hops>0.03</Plant_Hops>
+      <Plant_Potato>0.08</Plant_Potato>
+      <Plant_Psychoid>0.03</Plant_Psychoid>
+      <Plant_Rice>0.05</Plant_Rice>
+      <Plant_Smokeleaf>0.03</Plant_Smokeleaf>
+      <Plant_Strawberry>0.04</Plant_Strawberry>
+      <Plant_Tinctoria>0.02</Plant_Tinctoria>
+      <Plant_TreeWillow>0.05</Plant_TreeWillow>
+      <Plant_TreePoplar>0.05</Plant_TreePoplar>
+      <Plant_Fibercorn MayRequire="Ludeon.RimWorld.Ideology">0.04</Plant_Fibercorn>
+      <Plant_Toxipotato MayRequire="Ludeon.RimWorld.Biotech">0.03</Plant_Toxipotato>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Lotus>
+      <FCP_Plant_Carrot MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Carrot>
+      <FCP_Plant_Cranberry MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Cranberry>
+      <FCP_Plant_Gourd MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Gourd>
+      <FCP_Plant_Jalapeno MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Jalapeno>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Maize>
+      <FCP_Plant_Melon MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Melon>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <VCE_Onion MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Onion>
+      <VCE_Pumpkin MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Pumpkin>
+      <VCE_Pepper MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Pepper>
+      <VCE_Peas MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Peas>
+      <VCE_Eggplant MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Eggplant>
+      <VCE_Cabbage MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Cabbage>
+      <VCE_Beet MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Beet>
+      <VCE_Tomato MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_Tomato>
+      <VCE_AppleTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_AppleTree>
+      <VCE_PeachTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_PeachTree>
+      <VCE_CherryTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_CherryTree>
+      <VCE_PlumTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_PlumTree>
+      <VCE_PearTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_PearTree>
+      <VCE_BananaTree MayRequire="VanillaExpanded.VPlantsE">0.015</VCE_BananaTree>
+      <VCE_OrangeTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_OrangeTree>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_AloeVera>
+      <VCE_BellPepper MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_BellPepper>
+      <VCE_YellowBellPepper MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_YellowBellPepper>
+      <VCE_BrusselsSprout MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_BrusselsSprout>
+      <VCE_Buckwheat MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Buckwheat>
+      <VCE_ButternutSquash MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_ButternutSquash>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Carrot>
+      <VCE_Celery MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Celery>
+      <VCE_Chickpea MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Chickpea>
+      <VCE_Cucumber MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Cucumber>
+      <VCE_Garlic MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Garlic>
+      <VCE_Beans MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Beans>
+      <VCE_Lettuce MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Lettuce>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Melon>
+      <VCE_Okra MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Okra>
+      <VCE_Peanut MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Peanut>
+      <VCE_PeanutSecondary MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_PeanutSecondary>
+      <VCE_Radish MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Radish>
+      <VCE_Sunflower MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Sunflower>
+      <VCE_SweetPotato MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_SweetPotato>
+      <VCE_Taro MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_Taro>
+      <VCE_TreeAvocado MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAvocado>
+      <VCE_TreeOlive MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeOlive>
+      <VCE_TreeAlmond MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAlmond>
+      <VCE_TreeMango MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_TreeMango>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -159,7 +449,47 @@
     <label>floodplains</label>
     <description>Broad rivers spill out over flat country, leaving behind mud, reeds, and good soil. These bottoms can be abundant in the right season and miserable in the wrong one.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Floodplains</workerClass>
-    <texture>World/Biomes/Grasslands</texture>
+    <texture>Repconn_Floodplains</texture>
+    <wildPlants>
+      <Plant_Grass>0.85</Plant_Grass>
+      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Bush>0.22</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.10</Plant_Berry>
+      <Plant_Moss>0.22</Plant_Moss>
+      <Plant_TreeWillow>0.10</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreePoplar>0.08</Plant_TreePoplar>
+      <Plant_Rice>0.07</Plant_Rice>
+      <Plant_Strawberry>0.04</Plant_Strawberry>
+      <Plant_Healroot>0.03</Plant_Healroot>
+      <Plant_Potato>0.05</Plant_Potato>
+      <Plant_Smokeleaf>0.03</Plant_Smokeleaf>
+      <Plant_Psychoid>0.03</Plant_Psychoid>
+      <Plant_Tinctoria>0.02</Plant_Tinctoria>
+      <Plant_Corn>0.05</Plant_Corn>
+      <Plant_Fibercorn MayRequire="Ludeon.RimWorld.Ideology">0.05</Plant_Fibercorn>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.22</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.14</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Lotus>
+      <FCP_Plant_Cranberry MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Cranberry>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tato>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <VCE_Onion MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Onion>
+      <VCE_Pumpkin MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Pumpkin>
+      <VCE_Cabbage MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Cabbage>
+      <VCE_Tomato MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_Tomato>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Carrot>
+      <VCE_Celery MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Celery>
+      <VCE_Cucumber MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Cucumber>
+      <VCE_Garlic MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Garlic>
+      <VCE_Lettuce MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lettuce>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Melon>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -167,7 +497,40 @@
     <label>mojave</label>
     <description>The open desert bakes under a white sun and cools fast after dark. Scrub, stone, and long empty distances define this country, along with the bones of highways that once crossed it.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Mojave</workerClass>
-    <texture>World/Biomes/AridShrubland</texture>
+    <texture>Repconn_Mojave</texture>
+    <wildPlants>
+      <Plant_Agave>0.35</Plant_Agave>
+      <Plant_PincushionCactus>0.25</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.10</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.06</Plant_TreeDrago>
+      <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_PebbleCactus>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.22</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowTallGrass>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.40</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.30</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.26</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Xander_Root>
+      <FCP_Plant_Jalapeno MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Jalapeno>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <FCP_Plant_Gourd MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Gourd>
+      <FCP_Plant_Melon MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Melon>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Maize>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.16</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.10</VCE_Opuntia>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.06</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.08</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_PincushionPlant>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -175,7 +538,38 @@
     <label>canyon</label>
     <description>Where water cuts into the desert, steep walls, dry shelves, and stubborn life gather around the channel. These canyons offer shade and ambush in equal measure.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Canyon</workerClass>
-    <texture>World/Biomes/Scarlands</texture>
+    <texture>Repconn_Canyon</texture>
+    <wildPlants>
+      <Plant_Agave>0.22</Plant_Agave>
+      <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.04</Plant_TreeDrago>
+      <Plant_TreeWillow>0.03</Plant_TreeWillow>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_Lotus>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.15</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_YellowTallGrass>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.28</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tato>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_Opuntia>
+      <VCE_SweetPotato MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_SweetPotato>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Carrot>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Melon>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -183,7 +577,64 @@
     <label>marina</label>
     <description>Along the coast, salt wind blows through rotting piers, stranded hulls, and drowned suburbs. The sea softens the temperature here, but not the dangers that washed in with the old world.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Marina</workerClass>
-    <texture>World/Biomes/TemperateForest</texture>
+    <texture>Repconn_Marina</texture>
+    <wildPlants>
+      <Plant_Grass>0.70</Plant_Grass>
+      <Plant_TallGrass>0.55</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.12</Plant_Brambles>
+      <Plant_Berry>0.08</Plant_Berry>
+      <Plant_Moss>0.18</Plant_Moss>
+      <Plant_TreeWillow>0.06</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreePoplar>0.06</Plant_TreePoplar>
+      <Plant_TreePalm>0.07</Plant_TreePalm>
+      <Plant_TreeBamboo>0.05</Plant_TreeBamboo>
+      <Plant_Clivia>0.02</Plant_Clivia>
+      <Plant_Rose>0.015</Plant_Rose>
+      <Plant_Daylily>0.015</Plant_Daylily>
+      <Plant_Rice>0.03</Plant_Rice>
+      <Plant_Strawberry>0.03</Plant_Strawberry>
+      <Plant_Smokeleaf>0.02</Plant_Smokeleaf>
+      <Plant_Psychoid>0.02</Plant_Psychoid>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.008</Plant_TreeBonsai>
+      <Plant_RatPalm MayRequire="Ludeon.RimWorld.Biotech">0.03</Plant_RatPalm>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.05</Plant_Lotus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tato>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <VCE_BananaTree MayRequire="VanillaExpanded.VPlantsE">0.02</VCE_BananaTree>
+      <VCE_OrangeTree MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_OrangeTree>
+      <VCE_Jasmine MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Jasmine>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lavender>
+      <VCE_Lily MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lily>
+      <VCE_Orchid MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Orchid>
+      <VCE_Plumeria MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Plumeria>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Tulip>
+      <VCE_Violet MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Violet>
+      <VCE_YlangYlang MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_YlangYlang>
+      <VCE_TreeAvocado MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAvocado>
+      <VCE_TreeOlive MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeOlive>
+      <VCE_CoconutPalm MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_CoconutPalm>
+      <VCE_TreeMango MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_TreeMango>
+      <VCE_BellPepper MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_BellPepper>
+      <VCE_Tomato MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Tomato>
+      <VCE_Cucumber MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Cucumber>
+      <VCE_Lettuce MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lettuce>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Melon>
+      <VCE_Plant_Echeveria MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_Echeveria>
+      <VCE_Plant_FairyWashboard MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_FairyWashboard>
+      <VCE_Plant_JadePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_JadePlant>
+      <VCE_Plant_Schlumbergera MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_Schlumbergera>
+      <VCE_Plant_SnakePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_SnakePlant>
+      <VCE_Plant_SweetheartPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_SweetheartPlant>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_AloeVera>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -191,7 +642,41 @@
     <label>redwood</label>
     <description>Great red trunks rise over cool mountain fog and dim forest ground. These woods feel older than the war, and deep enough to hide both safe camps and things better left alone.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Redwood</workerClass>
-    <texture>World/Biomes/TemperateForest</texture>
+    <texture>Repconn_Redwood</texture>
+    <wildPlants>
+      <Plant_Moss>0.28</Plant_Moss>
+      <Plant_Berry>0.10</Plant_Berry>
+      <Plant_Brambles>0.10</Plant_Brambles>
+      <Plant_Bush>0.10</Plant_Bush>
+      <Plant_ShrubLow>0.14</Plant_ShrubLow>
+      <Plant_Dandelion>0.06</Plant_Dandelion>
+      <Plant_HealrootWild>0.03</Plant_HealrootWild>
+      <Plant_TreePine>0.10</Plant_TreePine>
+      <Plant_TreeBirch>0.06</Plant_TreeBirch>
+      <Plant_TreeMaple>0.04</Plant_TreeMaple>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Glowstool>0.015</Glowstool>
+      <Agarilux>0.015</Agarilux>
+      <Bryolux>0.015</Bryolux>
+      <Plant_Timbershroom>0.01</Plant_Timbershroom>
+      <Plant_TreeAnima MayRequire="Ludeon.RimWorld.Royalty">0.003</Plant_TreeAnima>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.003</Plant_TreeGauranlen>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.015</Plant_MossGauranlen>
+      <Plant_PodGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.004</Plant_PodGauranlen>
+      <Plant_Willowgill MayRequire="Ludeon.RimWorld.Odyssey">0.01</Plant_Willowgill>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.015</FCP_Plant_Mutated_Fern>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_BearBerryBush>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_FragrantbloomRose MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_FragrantbloomRose>
+      <VPE_Plant_Healtruffle MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_Healtruffle>
+      <VPE_Plant_Glowcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_Glowcap>
+      <VPE_Plant_MycothreadMushroom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.01</VPE_Plant_MycothreadMushroom>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -199,7 +684,35 @@
     <label>sequoia</label>
     <description>Warm mountain slopes carry giant trees, dry needles, and long views over the wastes below. The forest is beautiful from a distance and unforgiving once you are inside it.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Sequoia</workerClass>
-    <texture>World/Biomes/BorealForest</texture>
+    <texture>Repconn_Sequoia</texture>
+    <wildPlants>
+      <Plant_Grass>0.70</Plant_Grass>
+      <Plant_TallGrass>0.55</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.12</Plant_Brambles>
+      <Plant_Berry>0.08</Plant_Berry>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.12</Plant_Moss>
+      <Plant_TreePine>0.12</Plant_TreePine>
+      <Plant_TreeOak>0.10</Plant_TreeOak>
+      <Plant_TreeBirch>0.06</Plant_TreeBirch>
+      <Plant_TreeMaple>0.04</Plant_TreeMaple>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <Plant_TreeGrayPine MayRequire="Ludeon.RimWorld.Biotech">0.03</Plant_TreeGrayPine>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Fireweed>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Mutfruit>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Tato>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Carrot_Flower>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Tulip>
+      <VCE_TreeAlmond MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeAlmond>
+      <VCE_TreeOlive MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_TreeOlive>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -207,7 +720,33 @@
     <label>divide</label>
     <description>The land here is dry, broken, and bitter, split by ridges, gullies, and old fire scars. Water is scarce, cover is thin, and every mile feels farther than it should.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Divide</workerClass>
-    <texture>World/Biomes/Desert</texture>
+    <texture>Repconn_Divide</texture>
+    <wildPlants>
+      <Plant_Agave>0.20</Plant_Agave>
+      <Plant_TreeDrago>0.05</Plant_TreeDrago>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.18</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.20</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowTallGrass>
+      <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bush_Leafless>
+      <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Brambles_Leafless>
+      <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Berry_Leafless>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.24</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <VCE_SweetPotato MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_SweetPotato>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
@@ -215,14 +754,77 @@
     <label>mesa</label>
     <description>High desert plateaus sit above the low country in wind and heat. The ground is harsh, the horizons are wide, and survival depends on seeing trouble long before it reaches you.</description>
     <workerClass>FIP.Repconn.BiomeWorker_Mesa</workerClass>
-    <texture>World/Biomes/Desert</texture>
+    <texture>Repconn_Mesa</texture>
+    <wildPlants>
+      <Plant_Agave>0.24</Plant_Agave>
+      <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.04</Plant_TreeDrago>
+      <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_PebbleCactus>
+      <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_MagmaCactus>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.26</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.14</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_Opuntia>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.05</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PincushionPlant>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Urban">
     <defName>Repconn_Crater</defName>
     <label>crater</label>
     <description>The bomb fell hardest here. Glassed earth, shattered concrete, and poisoned dust fill the impact zones where cities and test sites were erased in an instant.</description>
-    <texture>World/Biomes/Scarlands</texture>
+    <texture>Repconn_Crater</texture>
+    <wildPlants>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.15</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.16</Plant_Ripthorn>
+      <Plant_Witchwood MayRequire="Ludeon.RimWorld.Biotech">0.01</Plant_Witchwood>
+      <Plant_TreePolux MayRequire="Ludeon.RimWorld.Biotech">0.002</Plant_TreePolux>
+      <Plant_TreeHarbinger MayRequire="Ludeon.RimWorld.Anomaly">0.001</Plant_TreeHarbinger>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_YellowGrass>
+      <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bush_Leafless>
+      <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Brambles_Leafless>
+      <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Berry_Leafless>
+      <Plant_TreeArchean MayRequire="Ludeon.RimWorld.Odyssey">0.001</Plant_TreeArchean>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tato>
+    </wildPlants>
+    <extraGenSteps>
+      <li>AncientRuins_Scarlands</li>
+      <li>CratersLarge</li>
+      <li>CratersMedium</li>
+      <li>CratersSmall</li>
+      <li>ScarlandsJunkClusters</li>
+      <li>ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
     <pollutionOffset>0.04</pollutionOffset>
   </BiomeDef>
 
@@ -230,7 +832,58 @@
     <defName>Repconn_Ruin</defName>
     <label>ruin</label>
     <description>Beyond the ground zeroes lie collapsed districts, dead roads, and the shells of neighborhoods that never recovered. There is scrap here, shelter too, and plenty willing to kill for both.</description>
-    <texture>World/Biomes/Desert</texture>
+    <texture>Repconn_Ruin</texture>
+    <wildPlants>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Grass>0.35</Plant_Grass>
+      <Plant_TallGrass>0.25</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.04</Plant_Berry>
+      <Plant_Moss>0.10</Plant_Moss>
+      <Plant_Agave>0.06</Plant_Agave>
+      <Plant_Rose>0.008</Plant_Rose>
+      <Plant_Daylily>0.008</Plant_Daylily>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.004</Plant_TreeBonsai>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
+      <Plant_Witchwood MayRequire="Ludeon.RimWorld.Biotech">0.008</Plant_Witchwood>
+      <Plant_TreePolux MayRequire="Ludeon.RimWorld.Biotech">0.002</Plant_TreePolux>
+      <Plant_TreeHarbinger MayRequire="Ludeon.RimWorld.Anomaly">0.001</Plant_TreeHarbinger>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_Bush_Leafless>
+      <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.05</Plant_Brambles_Leafless>
+      <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_Berry_Leafless>
+      <Plant_TreeArchean MayRequire="Ludeon.RimWorld.Odyssey">0.001</Plant_TreeArchean>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Xander_Root>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Tato>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Maize>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_AloeVera>
+      <VCE_Plant_JadePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_JadePlant>
+    </wildPlants>
+    <extraGenSteps>
+      <li>AncientRuins_Scarlands</li>
+      <li>CratersLarge</li>
+      <li>CratersMedium</li>
+      <li>CratersSmall</li>
+      <li>ScarlandsJunkClusters</li>
+      <li>ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
     <pollutionOffset>0.02</pollutionOffset>
   </BiomeDef>
 
@@ -238,7 +891,66 @@
     <defName>Repconn_Wasteland</defName>
     <label>wasteland</label>
     <description>These outer blasted belts were spared the worst of the fire and caught the long death after. Ash, rubble, and tainted soil stretch between civilization's corpse and the living frontier.</description>
-    <texture>World/Biomes/Scarlands</texture>
+    <texture>Repconn_Wasteland</texture>
+    <wildPlants>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Grass>0.45</Plant_Grass>
+      <Plant_TallGrass>0.30</Plant_TallGrass>
+      <Plant_Bush>0.20</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.04</Plant_Berry>
+      <Plant_Moss>0.08</Plant_Moss>
+      <Plant_Agave>0.12</Plant_Agave>
+      <Plant_Corn>0.03</Plant_Corn>
+      <Plant_Potato>0.04</Plant_Potato>
+      <Plant_Smokeleaf>0.02</Plant_Smokeleaf>
+      <Plant_Psychoid>0.02</Plant_Psychoid>
+      <Plant_Strawberry>0.02</Plant_Strawberry>
+      <Plant_Healroot>0.02</Plant_Healroot>
+      <Plant_Fibercorn MayRequire="Ludeon.RimWorld.Ideology">0.03</Plant_Fibercorn>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_Ripthorn>
+      <Plant_Toxipotato MayRequire="Ludeon.RimWorld.Biotech">0.02</Plant_Toxipotato>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.15</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tarberry>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Xander_Root>
+      <FCP_Plant_Carrot MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot>
+      <FCP_Plant_Cranberry MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Cranberry>
+      <FCP_Plant_Gourd MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Gourd>
+      <FCP_Plant_Jalapeno MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Jalapeno>
+      <FCP_Plant_Maize MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Maize>
+      <FCP_Plant_Melon MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Melon>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Tato>
+      <VCE_Carrot MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Carrot>
+      <VCE_Garlic MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Garlic>
+      <VCE_Lettuce MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Lettuce>
+      <VCE_Melon MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Melon>
+      <VCE_Sunflower MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_Sunflower>
+      <VCE_SweetPotato MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_SweetPotato>
+    </wildPlants>
+    <extraGenSteps>
+      <li>CratersLarge</li>
+      <li>CratersMedium</li>
+      <li>CratersSmall</li>
+      <li>ScarlandsJunkClusters</li>
+      <li>ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
     <pollutionOffset>0.01</pollutionOffset>
   </BiomeDef>
 
@@ -246,16 +958,85 @@
     <defName>Repconn_Malpais</defName>
     <label>malpais</label>
     <description>Black volcanic stone and raw earth make this country look half-finished by the world. Heat lingers in the rock, plant life is thin, and the ground feels hostile even when it stands still.</description>
-    <workerClass>BiomeWorker_LavaField</workerClass>
+    <workerClass>FIP.Repconn.BiomeWorker_Malpais</workerClass>
     <texture>World/Biomes/LavaFields</texture>
+    <wildPlants>
+      <Plant_Agave>0.12</Plant_Agave>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_Ripthorn>
+      <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_MagmaCactus>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Xander_Root>
+      <FCP_Plant_Mutfruit MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutfruit>
+      <FCP_Plant_Razorgrain MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Razorgrain>
+      <FCP_Plant_Siltbean MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Siltbean>
+      <FCP_Plant_Tato MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tato>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.05</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PincushionPlant>
+    </wildPlants>
   </BiomeDef>
 
   <BiomeDef ParentName="Repconn_Nature">
     <defName>Repconn_CranberryBog</defName>
     <label>cranberry bog</label>
     <description>Tangled wet ground, red growth, and strange light make these bogs feel wrong even before night falls. They are rich, eerie places where beauty and decay have learned to share the same water.</description>
-    <workerClass>BiomeWorker_Glowforest</workerClass>
+    <workerClass>FIP.Repconn.BiomeWorker_CranberryBog</workerClass>
     <texture>World/Biomes/Glowforest</texture>
+    <wildPlants>
+      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.14</Plant_Brambles>
+      <Plant_Berry>0.12</Plant_Berry>
+      <Plant_TreeWillow>0.06</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreePoplar>0.05</Plant_TreePoplar>
+      <Glowstool>0.04</Glowstool>
+      <Agarilux>0.04</Agarilux>
+      <Bryolux>0.04</Bryolux>
+      <Plant_Timbershroom>0.02</Plant_Timbershroom>
+      <Plant_Nutrifungus MayRequire="Ludeon.RimWorld.Ideology">0.08</Plant_Nutrifungus>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.015</Plant_MossGauranlen>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.003</Plant_TreeGauranlen>
+      <Plant_TreePolux MayRequire="Ludeon.RimWorld.Biotech">0.002</Plant_TreePolux>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Lotus>
+      <Plant_Nightgrass MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_Nightgrass>
+      <Boomshroom MayRequire="Ludeon.RimWorld.Odyssey">0.08</Boomshroom>
+      <Plant_Psilocap MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Psilocap>
+      <Plant_Willowgill MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Willowgill>
+      <Plant_NightRafflesia MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_NightRafflesia>
+      <Plant_TreeArchean MayRequire="Ludeon.RimWorld.Odyssey">0.001</Plant_TreeArchean>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Cranberry MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Cranberry>
+      <VPE_Plant_Bileceps MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Bileceps>
+      <VPE_Plant_Blisscap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Blisscap>
+      <VPE_Plant_Foampuffer MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Foampuffer>
+      <VPE_Plant_Glowcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Glowcap>
+      <VPE_Plant_Healtruffle MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Healtruffle>
+      <VPE_Plant_Lullabloom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Lullabloom>
+      <VPE_Plant_MycothreadMushroom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_MycothreadMushroom>
+      <VPE_Plant_Redcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Redcap>
+      <VPE_Plant_Stinker MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Stinker>
+      <VPE_Plant_Thermoregulus MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Thermoregulus>
+      <VPE_Plant_Timbercap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Timbercap>
+      <VPE_Plant_Zapcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Zapcap>
+    </wildPlants>
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
     <mudTerrain>Marsh</mudTerrain>
   </BiomeDef>

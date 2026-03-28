@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Update Landmark NameMakers-->
+  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[@Name="BaseLake"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkLake</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="Pond"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkPond</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="Oasis"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkOasis</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="DryLake"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkDryLake</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="ToxicLake"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkToxicLake</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[@Name="BaseBay"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkBay</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="Valley"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkValley</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[@Name="BaseRuins"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkRuins</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="FrozenRuins"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkFrozenRuins</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientSmokeVent"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAncientSmokeVent</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientToxVent"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAncientToxVent</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientHeatVent"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAncientHeatVent</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientQuarry"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAncientQuarry</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[@Name="AbandonedColonyLandmarkBase"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAbandonedColony</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AbandonedColonyTribal"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAbandonedColonyTribal</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AbandonedColonyOutlander"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAbandonedColonyOutlander</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="Harbor"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkHarbor</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientLaunchSite"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkLaunchSite</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientGarrison"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkGarrison</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientWarehouse"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkWarehouse</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientChemfuelRefinery"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkChemfuelRefinery</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="AncientInfestedSettlement"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkInfestedSettlement</nameMaker>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

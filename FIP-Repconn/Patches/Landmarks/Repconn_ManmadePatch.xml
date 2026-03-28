@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Update Manmade Landmarks-->
+  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="AncientRuins"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="AncientRuins_Frozen"]/biomeWhitelist</xpath>
+        <value>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="AncientQuarry"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TileMutatorDef[@Name="BaseAncientVentMut"]/biomeWhitelist</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TileMutatorDef[defName="AncientHeatVent"]/biomeWhitelist</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[@Name="AbandonedColonyMutatorBase"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_Crater</li>
+          <li>Repconn_Ruin</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="Harbor"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="Stockpile"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="AncientUplink"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[@Name="AncientStructureMutBase"]/biomeWhitelist</xpath>
+        <value>
+          <li>Repconn_GlacialPlain</li>
+          <li>Repconn_Tundra</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

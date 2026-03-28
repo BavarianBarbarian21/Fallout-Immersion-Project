@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Route Vanilla Landmarks content into curated Repconn biome pools.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VanillaExpanded.VExplorationE</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MeteorCrater"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MeteorCrater"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Mesa</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ResurgentCaldera"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ResurgentCaldera"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Malpais</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Mesa</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicCrater"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicCrater"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Malpais</li>
+            <li>Repconn_Divide</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_BombardedSurface"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Divide</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MechanoidShipChunks"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_RotstinkVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_RotstinkVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SmokeVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Repconn_SeaIce</li>
+          <li>Repconn_IceSheet</li>
+          <li>Repconn_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SmokeVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Wasteland</li>
+            <li>Repconn_Crater</li>
+            <li>Repconn_Ruin</li>
+            <li>Repconn_Divide</li>
+            <li>Repconn_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SulfuricLake"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Marina</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_CranberryBog</li>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SulfuricRiver"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Aqueduct</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_CranberryBog</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedReservoir"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Aqueduct</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_CranberryBog</li>
+            <li>Repconn_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedRiver"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Aqueduct</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_CranberryBog</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedCoast"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_Marina</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_AbandonedFarmland"]/biomeWhitelist</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Repconn_CentralValley</li>
+            <li>Repconn_Floodplains</li>
+            <li>Repconn_Aqueduct</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_MeteorCrater"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkImpactCrater</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ResurgentCaldera"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkResurgentCaldera</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ToxicCrater"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkToxicCrater</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_SulfuricLake"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkSulfuricLake</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_SulfuricRiver"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkSulfuricRiver</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedReservoir"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkContaminatedReservoir</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedRiver"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkContaminatedRiver</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedCoast"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkContaminatedCoast</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_AbandonedFarmland"]/nameMaker</xpath>
+        <value>
+          <nameMaker>NamerRepconnLandmarkAbandonedFarmlands</nameMaker>
+        </value>
+      </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
