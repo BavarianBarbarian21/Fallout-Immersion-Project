@@ -3,26 +3,25 @@
   <packageId>FIP.Repconn</packageId>
   <name>FIP - Repconn</name>
   <author>Feil</author>
-  <description>Repconn, Better Living In Space! Adds a wide variety of new biomes from the surface to the orbit.</description>
+  <description>Repconn, Better Living In Space! Adds a wide range of western biomes from the wasteland below to the old world above.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
   <modDependencies>
-        <li>
-            <packageId>Rick.FCP.Plants</packageId>
-            <displayName>FCP - Plants</displayName>
-            <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Plants</downloadUrl>
-        </li>
-        <li>
-              <packageId>Rick.FCP.Animals</packageId>
-              <displayName>FCP - Animals</displayName>
-              <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Animals</downloadUrl>
-        </li>
-    </modDependencies>
-    <loadAfter>
-        <li>Rick.FCP.Plants</li>
-        <li>Rick.FCP.Animals</li>
-      <li>XMB.AncientUrbanrUins.MO</li>
-        <li>VanillaExpanded.VExplorationE</li>
-    </loadAfter>
+    <li>
+      <packageId>Ludeon.RimWorld.Odyssey</packageId>
+      <displayName>Odyssey</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>Rick.FCP.Plants</li>
+    <li>Rick.FCP.Animals</li>
+    <li>VanillaExpanded.VanillaAnimalsExpanded</li>
+    <li>VanillaExpanded.VAERoy</li>
+    <li>VanillaExpanded.VAEWaste</li>
+    <li>VanillaExpanded.VCEF</li>
+    <li>XMB.AncientUrbanrUins.MO</li>
+    <li>VanillaExpanded.VExplorationE</li>
+  </loadAfter>
 </ModMetaData>

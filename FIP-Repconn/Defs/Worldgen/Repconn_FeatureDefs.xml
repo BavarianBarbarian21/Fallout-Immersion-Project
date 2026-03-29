@@ -4,13 +4,17 @@
   <FeatureDef>
     <defName>Repconn_Crater</defName>
     <workerClass>FeatureWorker_Biome</workerClass>
-    <order>404</order>
-    <minRootGroupSize>1</minRootGroupSize>
+    <order>9</order>
     <rootBiomes>
       <li>Repconn_Crater</li>
       <li>Repconn_Ruin</li>
       <li>Repconn_Wasteland</li>
     </rootBiomes>
+    <acceptableBiomes>
+      <li>Repconn_Crater</li>
+      <li>Repconn_Ruin</li>
+      <li>Repconn_Wasteland</li>
+    </acceptableBiomes>
     <nameMaker>NamerRepconnUrban</nameMaker>
   </FeatureDef>
 
@@ -114,7 +118,6 @@
       <li>Repconn_Mesa</li>
       <li>Repconn_Mojave</li>
       <li>Repconn_Malpais</li>
-      <li>Repconn_Wasteland</li>
     </acceptableBiomes>
     <nameMaker>NamerRepconnDivide</nameMaker>
   </FeatureDef>

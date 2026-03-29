@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <!--Update Manmade Landmarks-->
-  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+  <Operation Class="PatchOperationSequence">
     <operations>
       <li Class="PatchOperationAdd">
         <xpath>/Defs/TileMutatorDef[defName="AncientRuins"]/biomeBlacklist</xpath>
@@ -16,30 +16,6 @@
         <value>
           <li>Repconn_IceSheet</li>
           <li>Repconn_GlacialPlain</li>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs/TileMutatorDef[defName="AncientQuarry"]</xpath>
-        <value>
-          <biomeWhitelist>
-            <li>Repconn_Wasteland</li>
-          </biomeWhitelist>
-        </value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/TileMutatorDef[@Name="BaseAncientVentMut"]/biomeWhitelist</xpath>
-        <value>
-          <biomeWhitelist>
-            <li>Repconn_Wasteland</li>
-          </biomeWhitelist>
-        </value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/TileMutatorDef[defName="AncientHeatVent"]/biomeWhitelist</xpath>
-        <value>
-          <biomeWhitelist>
-            <li>Repconn_Wasteland</li>
-          </biomeWhitelist>
         </value>
       </li>
       <li Class="PatchOperationAdd">
@@ -65,18 +41,28 @@
         </value>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/TileMutatorDef[defName="AncientUplink"]</xpath>
-        <value>
-          <biomeWhitelist>
-            <li>Repconn_Wasteland</li>
-          </biomeWhitelist>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd">
         <xpath>/Defs/TileMutatorDef[@Name="AncientStructureMutBase"]/biomeWhitelist</xpath>
         <value>
           <li>Repconn_GlacialPlain</li>
           <li>Repconn_Tundra</li>
+          <li>Repconn_Preserve</li>
+          <li>Repconn_Ceek</li>
+          <li>Repconn_CentralValley</li>
+          <li>Repconn_BrahminWoods</li>
+          <li>Repconn_Aqueduct</li>
+          <li>Repconn_Floodplains</li>
+          <li>Repconn_Mojave</li>
+          <li>Repconn_Canyon</li>
+          <li>Repconn_Marina</li>
+          <li>Repconn_Redwood</li>
+          <li>Repconn_Sequoia</li>
+          <li>Repconn_Divide</li>
+          <li>Repconn_Mesa</li>
+          <li>Repconn_Crater</li>
+          <li>Repconn_Ruin</li>
+          <li>Repconn_Wasteland</li>
+          <li>Repconn_Malpais</li>
+          <li>Repconn_CranberryBog</li>
         </value>
       </li>
     </operations>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Suburb</defName>
     <label>suburb</label>
     <description>The scattered shell of a pre-war suburb.</description>
@@ -11,7 +11,7 @@
     </biomeWhitelist>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Store</defName>
     <label>store</label>
     <description>An abandoned pre-war store, still fenced and stocked with junk.</description>
@@ -68,7 +68,7 @@
     </structureGenParms>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Gasstation</defName>
     <label>gas station</label>
     <description>An abandoned fuel stop with rusting pumps and buried tanks.</description>
@@ -159,7 +159,75 @@
     </structureGenParms>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
+    <defName>Repconn_Mutator_AncientQuarry</defName>
+    <label>ancient quarry</label>
+    <description>This area was once mined for its natural resources, and the remains of the ancient quarry are still here.</description>
+    <minHilliness>Mountainous</minHilliness>
+    <genOrder>-100</genOrder>
+    <workerClass>TileMutatorWorker_AncientQuarry</workerClass>
+    <biomeWhitelist>
+      <li>Repconn_Wasteland</li>
+    </biomeWhitelist>
+    <extraGenSteps>
+      <li>AncientMiningCharge</li>
+      <li>AncientExplosivesCrate</li>
+      <li>AncientExcavator</li>
+      <li>AncientDrillPlatform</li>
+      <li>AncientTuneller</li>
+    </extraGenSteps>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Repconn_Mutator_AncientSmokeVent</defName>
+    <label>ancient smoke vent</label>
+    <description>This area has a number of massive exhaust vents. An ancient mechanism buried deep beneath the earth will occasionally vent large amounts of smoke, blocking out the sun for days at a time.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientSmokeVent</workerClass>
+    <biomeWhitelist>
+      <li>Repconn_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Repconn_Mutator_AncientToxVent</defName>
+    <label>ancient toxic vent</label>
+    <description>Massive toxic vents will regularly spew toxic fallout into the air. The vents connect to an ancient substructure buried deep beneath the earth.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientToxVent</workerClass>
+    <biomeWhitelist>
+      <li>Repconn_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Repconn_Mutator_AncientHeatVent</defName>
+    <label>ancient heat vent</label>
+    <description>Ancient ducts will regularly vent heat from an underground megastructure, dramatically raising the temperature of the surrounding area.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientHeatVent</workerClass>
+    <biomeWhitelist>
+      <li>Repconn_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>Repconn_Mutator_Harbor</defName>
+    <label>harbor</label>
+    <description>An abandoned coastal settlement.</description>
+    <workerClass>TileMutatorWorker_Harbor</workerClass>
+    <biomeWhitelist>
+      <li>Repconn_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
     <defName>Repconn_Mutator_LaunchSite</defName>
     <label>launch site</label>
     <description>An abandoned launch complex from the old world.</description>
@@ -218,7 +286,7 @@
     </structureGenParms>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_InfestedSettlement</defName>
     <label>infested settlement</label>
     <description>A ruined suburb overrun by insects.</description>
@@ -290,7 +358,7 @@
     </structureGenParms>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Garrison</defName>
     <label>garrison</label>
     <description>A military fortification left behind after the war.</description>
@@ -384,7 +452,7 @@
     </structureGenParms>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Uplink</defName>
     <label>uplink</label>
     <description>An ancient comms uplink tied to old radio systems.</description>
@@ -394,7 +462,7 @@
     </biomeWhitelist>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Stockpile</defName>
     <label>stockpile</label>
     <description>An underground bunker full of old supplies.</description>
@@ -404,7 +472,7 @@
     </biomeWhitelist>
   </TileMutatorDef>
 
-  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+  <TileMutatorDef>
     <defName>Repconn_Mutator_Junkyard</defName>
     <label>junkyard</label>
     <description>An old dumping ground for various kinds of junk.</description>
