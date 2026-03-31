@@ -1,0 +1,17 @@
+using RimWorld;
+using RimWorld.Planet;
+
+namespace FIP.Arktos;
+
+public sealed class BiomeWorker_Mesa : BiomeWorker
+{
+    public override float GetScore(BiomeDef biome, Tile tile, PlanetTile planetTile)
+    {
+        return tile != null
+            && !tile.WaterCovered
+            && tile.hilliness is Hilliness.Mountainous or Hilliness.Impassable
+            && tile.temperature > 32f
+            ? 24f
+            : -100f;
+    }
+}
