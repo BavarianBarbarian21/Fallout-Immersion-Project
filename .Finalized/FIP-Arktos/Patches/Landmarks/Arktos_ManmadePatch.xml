@@ -3,7 +3,7 @@
   <!--Update Manmade Landmarks-->
   <Operation Class="PatchOperationSequence">
     <operations>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[defName="AncientRuins"]/biomeBlacklist</xpath>
         <value>
           <li>Arktos_SeaIce</li>
@@ -11,14 +11,14 @@
           <li>Arktos_GlacialPlain</li>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[defName="AncientRuins_Frozen"]/biomeWhitelist</xpath>
         <value>
           <li>Arktos_IceSheet</li>
           <li>Arktos_GlacialPlain</li>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[@Name="AbandonedColonyMutatorBase"]/biomeBlacklist</xpath>
         <value>
           <li>Arktos_SeaIce</li>
@@ -27,20 +27,20 @@
           <li>Arktos_Ruin</li>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[defName="Harbor"]/biomeBlacklist</xpath>
         <value>
           <li>Arktos_SeaIce</li>
           <li>Arktos_IceSheet</li>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[defName="Stockpile"]/biomeBlacklist</xpath>
         <value>
           <li>Arktos_SeaIce</li>
         </value>
       </li>
-      <li Class="PatchOperationAdd">
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
         <xpath>/Defs/TileMutatorDef[@Name="AncientStructureMutBase"]/biomeWhitelist</xpath>
         <value>
           <li>Arktos_GlacialPlain</li>

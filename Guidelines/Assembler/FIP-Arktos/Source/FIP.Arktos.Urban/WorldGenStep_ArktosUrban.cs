@@ -110,7 +110,7 @@ public sealed class WorldGenStep_ArktosUrban : WorldGenStep
 
         ApplyGroundZeroBiomeSprawl(seed, layer, craterLayout, craterBiome, ruinBiome, wastelandBiome);
 
-        if (craterLayout.AllGroundZeroIds.Count > 0)
+        if (craterLayout.AllGroundZeroIds.Count > 0 && SupportsWorldPollution())
         {
             ApplyCraterCenteredPollution(layer, allSurfaceTiles, craterLayout.ClusterGroundZeroIds, craterLayout.LoneGroundZeroIds);
         }
@@ -450,6 +450,11 @@ public sealed class WorldGenStep_ArktosUrban : WorldGenStep
     private static bool IsCraterCandidate(SurfaceTile tile)
     {
         return tile != null && !tile.WaterCovered;
+    }
+
+    private static bool SupportsWorldPollution()
+    {
+        return DefDatabase<WorldGenStepDef>.GetNamedSilentFail("Pollution") != null;
     }
 
     private static void ApplyCraterCenteredPollution(PlanetLayer layer, List<SurfaceTile> surfaceTiles, List<int> clusterGroundZeroIds, List<int> loneGroundZeroIds)
