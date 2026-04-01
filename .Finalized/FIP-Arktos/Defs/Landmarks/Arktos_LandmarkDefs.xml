@@ -117,7 +117,7 @@
 
   <LandmarkDef MayRequire="Ludeon.RimWorld.Odyssey">
     <defName>Arktos_Landmark_InfestedSettlement</defName>
-    <label>infested settlement</label>
+    <label>ant infested settlement</label>
     <iconTexturePath>World/Landmarks/Ruins</iconTexturePath>
     <atlasSize>(2, 2)</atlasSize>
     <commonality>3.0</commonality>
@@ -126,6 +126,20 @@
     <drawAboveRoads>true</drawAboveRoads>
     <mutatorChances>
       <Arktos_Mutator_InfestedSettlement Required="True"/>
+    </mutatorChances>
+  </LandmarkDef>
+
+  <LandmarkDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Landmark_FireInfestedSettlement</defName>
+    <label>fire ant infested settlement</label>
+    <iconTexturePath>World/Landmarks/Ruins</iconTexturePath>
+    <atlasSize>(2, 2)</atlasSize>
+    <commonality>1.5</commonality>
+    <nameMaker>HHTools_Arktos_NamerLandmarkSuburb</nameMaker>
+    <category>structure</category>
+    <drawAboveRoads>true</drawAboveRoads>
+    <mutatorChances>
+      <Arktos_Mutator_FireInfestedSettlement Required="True"/>
     </mutatorChances>
   </LandmarkDef>
 
