@@ -68,8 +68,10 @@
     <statBases>
       <MoveSpeed>3.75</MoveSpeed>
       <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.36</ArmorRating_Heat>
       <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
       <MarketValue>100</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <Wildness>0.2</Wildness>
@@ -188,7 +190,9 @@
     <description>A fire ant adapted for underground life. Its digging claws and hive coordination make it a formidable tunnel dweller.</description>
     <statBases>
       <MoveSpeed>3.65</MoveSpeed>
+      <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
       <MarketValue>200</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
@@ -312,7 +316,9 @@
     <description>The most aggressive of the fire ants. These creatures defend their hive with relentless ferocity, thick chitin, and powerful jaws.</description>
     <statBases>
       <MoveSpeed>3.60</MoveSpeed>
+      <ArmorRating_Heat>0.7</ArmorRating_Heat>
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <Flammability>0.08</Flammability>
       <MarketValue>500</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
@@ -375,6 +381,17 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
+    <verbs>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <verbClass>Verb_SpewFire</verbClass>
+        <warmupTime>0</warmupTime>
+        <range>4.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>Shot_MiniFlameblaster</soundCast>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
     <tradeTags>
       <li>AnimalInsect</li>
     </tradeTags>
@@ -431,6 +448,8 @@
     <statBases>
       <MoveSpeed>2.0</MoveSpeed>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ArmorRating_Heat>0.24</ArmorRating_Heat>
+      <Flammability>0.12</Flammability>
       <MarketValue>35</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <Wildness>0.2</Wildness>
@@ -523,7 +542,9 @@
     <description>The queen of a fire ant megahive. She anchors the colony, lays the next generation, and turns any nest she survives in into a larger threat.</description>
     <statBases>
       <MoveSpeed>3.4</MoveSpeed>
+      <ArmorRating_Heat>1.0</ArmorRating_Heat>
       <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <Flammability>0.05</Flammability>
       <MarketValue>2000</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <ArmorRating_Blunt>0.27</ArmorRating_Blunt>
@@ -591,6 +612,17 @@
         <letterDef>ThreatBig</letterDef>
       </li>
     </comps>
+    <verbs>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <verbClass>Verb_SpewFire</verbClass>
+        <warmupTime>0</warmupTime>
+        <range>5.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>Shot_MiniFlameblaster</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
     <tradeTags>
       <li>AnimalInsect</li>
     </tradeTags>
@@ -631,7 +663,9 @@
     <description>A winged fire ant bred for mating flights and scouting. On its own it is fragile, but swarms of drones are still dangerous.</description>
     <statBases>
       <MoveSpeed>3.0</MoveSpeed>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
       <MarketValue>120</MarketValue>
       <LeatherAmount>0</LeatherAmount>
       <MaxFlightTime>10</MaxFlightTime>
@@ -774,7 +808,8 @@
     <fillPercent>0.5</fillPercent>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
-      <Flammability>1.0</Flammability>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
     </statBases>
     <pathCost>42</pathCost>
     <receivesSignals>true</receivesSignals>
@@ -849,6 +884,10 @@
       <texPath>Things/Building/Natural/CocoonMegaspider</texPath>
       <drawSize>2</drawSize>
     </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.5</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
     <building>
       <combatPower>150</combatPower>
     </building>
@@ -874,6 +913,10 @@
     <graphicData>
       <texPath>Things/Building/Natural/CocoonMegascarab</texPath>
     </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
     <building>
       <combatPower>40</combatPower>
     </building>
@@ -899,6 +942,10 @@
     <graphicData>
       <texPath>Things/Building/Natural/CocoonSpelopede</texPath>
     </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
     <building>
       <combatPower>75</combatPower>
     </building>
