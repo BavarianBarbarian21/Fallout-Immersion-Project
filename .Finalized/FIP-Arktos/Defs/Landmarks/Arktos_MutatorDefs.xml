@@ -262,6 +262,78 @@
   </TileMutatorDef>
 
   <TileMutatorDef>
+    <defName>Arktos_Mutator_FireInfestedSettlement</defName>
+    <label>fire ant-infested settlement</label>
+    <description>A ruined suburb overrun by fire ants.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories Inherit="False" />
+    <requiresFactionOfDef>Arktos_FireAnts</requiresFactionOfDef>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientInfestedSettlement</structureLayoutDef>
+      <structureSizeRange>36~44</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>0.2~0.4</countPer10kCellsRange>
+          <minSpacing>0</minSpacing>
+          <maxDistFromStructure>24</maxDistFromStructure>
+          <prefabs>
+            <Exterior_BurrowWallCluster_Medium>
+              <weight>2.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Medium>
+            <Exterior_BurrowWallCluster_Large>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Large>
+            <Exterior_BurrowWallGenerator>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallGenerator>
+            <Exterior_BurrowWallFarm>
+              <weight>0.5</weight>
+              <indoorRuin>true</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>1</max>
+            </Exterior_BurrowWallFarm>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterExpandBy>2</perimeterExpandBy>
+      <perimeterTerrainDef>AncientConcrete</perimeterTerrainDef>
+      <perimeterScatteredThings>
+        <GlowPod>1</GlowPod>
+        <AncientGenerator>3</AncientGenerator>
+        <AncientSecurityTurret>3</AncientSecurityTurret>
+        <Filth_BloodInsect>10</Filth_BloodInsect>
+      </perimeterScatteredThings>
+      <perimeterScatterTerrain>
+        <InsectSludge>
+          <groupsPerHundredCells>1~2</groupsPerHundredCells>
+          <itemsPerGroup>10~15</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </InsectSludge>
+      </perimeterScatterTerrain>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
     <defName>Arktos_Mutator_Uplink</defName>
     <label>uplink</label>
     <description>An ancient comms uplink tied to old radio systems.</description>
