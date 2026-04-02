@@ -237,18 +237,19 @@
     <label>glacial plain</label>
     <description>These frozen flats thaw only a little before winter takes them again. Sparse brush and wandering herds can survive here, but the cold rules everything.</description>
     <workerClass>BiomeWorker_GlacialPlain</workerClass>
-    <texture>Arktos_GlacialPlains</texture>
+    <texture>Arktos/Biomes/Arktos_GlacialPlains</texture>
     <animalDensity>1.2</animalDensity>
     <plantDensity>0.4</plantDensity>
     <forageability>0.4</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>32</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_Grass>3.6</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">3.0</Plant_GrayGrass>
+      <Plant_Moss>0.50</Plant_Moss>
       <Plant_ShrubLow>0.20</Plant_ShrubLow>
       <Plant_Dandelion>0.08</Plant_Dandelion>
       <Plant_Astragalus>0.10</Plant_Astragalus>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_GrayGrass>
       <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Fireweed>
     </wildPlants>
     <maxFishPopulation>480</maxFishPopulation>
@@ -370,13 +371,14 @@
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>30</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_Grass>3.6</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">3.0</Plant_GrayGrass>
       <Plant_Dandelion>0.14</Plant_Dandelion>
       <Plant_Astragalus>0.16</Plant_Astragalus>
-      <Plant_Moss>0.24</Plant_Moss>
+      <Plant_Moss>0.50</Plant_Moss>
       <Plant_ShrubLow>0.18</Plant_ShrubLow>
       <Plant_Berry>0.05</Plant_Berry>
       <Plant_TreeWillow>0.01</Plant_TreeWillow>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.15</Plant_GrayGrass>
       <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Fireweed>
       <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Xander_Root>
       <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Carrot_Flower>
@@ -498,7 +500,7 @@
     <label>preserve</label>
     <description>Cold evergreen forest and marshy lowland meet in these protected backwoods. The air is clean, the game is wary, and old-world quiet still survives between the trees.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Preserve</workerClass>
-    <texture>Arktos_Preserve</texture>
+    <texture>Arktos/Biomes/Arktos_Preserve</texture>
     <animalDensity>2.2</animalDensity>
     <plantDensity>0.4</plantDensity>
     <forageability>0.7</forageability>
@@ -507,8 +509,9 @@
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
     <mudTerrain>Marsh</mudTerrain>
     <wildPlants>
-      <Plant_Grass>1.00</Plant_Grass>
-      <Plant_TallGrass>0.75</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Bush>0.32</Plant_Bush>
       <Plant_Brambles>0.25</Plant_Brambles>
       <Plant_Berry>0.16</Plant_Berry>
@@ -632,7 +635,7 @@
     <label>creek</label>
     <description>These cold creek bottoms cut through the preserve with soft ground, brush, and black water. They are rich compared to the uplands, but travel is slow and the wet gets everywhere.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Ceek</workerClass>
-    <texture>Arktos_Ceek</texture>
+    <texture>Arktos/Biomes/Arktos_Ceek</texture>
     <animalDensity>2.4</animalDensity>
     <plantDensity>0.6</plantDensity>
     <forageability>0.75</forageability>
@@ -641,6 +644,8 @@
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
     <mudTerrain>Marsh</mudTerrain>
     <wildPlants>
+      <Plant_TallGrass>3.2</Plant_TallGrass>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
       <Plant_Berry>0.18</Plant_Berry>
       <Plant_Bush>0.30</Plant_Bush>
       <Plant_Brambles>0.24</Plant_Brambles>
@@ -745,15 +750,15 @@
     <label>central valley</label>
     <description>Wide interior flats once fed cities from Sacramento to Bakersfield. Now the valley is still fertile by wasteland standards, but dust, heat, and ruin press in from every side.</description>
     <workerClass>FIP.Arktos.BiomeWorker_CentralValley</workerClass>
-    <texture>Arktos_CentralValley</texture>
+    <texture>Arktos/Biomes/Arktos_CentralValley</texture>
     <animalDensity>1.4</animalDensity>
     <plantDensity>1.0</plantDensity>
     <forageability>0.9</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>15</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Grass>1.10</Plant_Grass>
-      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Grass>7.0</Plant_Grass>
+      <Plant_TallGrass>5.0</Plant_TallGrass>
       <Plant_Bush>0.20</Plant_Bush>
       <Plant_Brambles>0.15</Plant_Brambles>
       <Plant_Dandelion>0.10</Plant_Dandelion>
@@ -852,15 +857,16 @@
     <label>brahmin woods</label>
     <description>Oak and pine woodland covers the rolling middle country between valley and mountain. It is gentler than the wastes below, though raiders, predators, and hungry brahmin still leave their mark.</description>
     <workerClass>FIP.Arktos.BiomeWorker_BrahminWoods</workerClass>
-    <texture>Arktos_BrahminWoods</texture>
+    <texture>Arktos/Biomes/Arktos_BrahminWoods</texture>
     <animalDensity>1.7</animalDensity>
     <plantDensity>0.65</plantDensity>
     <forageability>0.8</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>18</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Grass>0.90</Plant_Grass>
-      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Bush>0.25</Plant_Bush>
       <Plant_Brambles>0.20</Plant_Brambles>
       <Plant_Berry>0.12</Plant_Berry>
@@ -960,15 +966,16 @@
     <label>aqueduct</label>
     <description>Concrete channels and cracked embankments still drag water across the heartland. Where the old system holds, the land is greener, richer, and fought over all the harder.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Aqueduct</workerClass>
-    <texture>Arktos_Aqueduct</texture>
+    <texture>Arktos/Biomes/Arktos_Aqueduct</texture>
     <animalDensity>1.8</animalDensity>
     <plantDensity>0.8</plantDensity>
     <forageability>0.85</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>17</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Grass>0.75</Plant_Grass>
-      <Plant_TallGrass>0.55</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>3.0</Plant_TallGrass>
       <Plant_Bush>0.18</Plant_Bush>
       <Plant_Brambles>0.12</Plant_Brambles>
       <Plant_Berry>0.08</Plant_Berry>
@@ -1074,7 +1081,7 @@
     <label>floodplains</label>
     <description>Broad rivers spill out over flat country, leaving behind mud, reeds, and good soil. These bottoms can be abundant in the right season and miserable in the wrong one.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Floodplains</workerClass>
-    <texture>Arktos_Floodplains</texture>
+    <texture>Arktos/Biomes/Arktos_Floodplains</texture>
     <animalDensity>2.0</animalDensity>
     <plantDensity>0.8</plantDensity>
     <forageability>0.8</forageability>
@@ -1083,8 +1090,9 @@
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
     <mudTerrain>Marsh</mudTerrain>
     <wildPlants>
-      <Plant_Grass>0.85</Plant_Grass>
-      <Plant_TallGrass>0.70</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>3.2</Plant_TallGrass>
       <Plant_Bush>0.22</Plant_Bush>
       <Plant_Brambles>0.16</Plant_Brambles>
       <Plant_Berry>0.10</Plant_Berry>
@@ -1195,20 +1203,22 @@
     <label>mojave</label>
     <description>The open desert bakes under a white sun and cools fast after dark. Scrub, stone, and long empty distances define this country, along with the bones of highways that once crossed it.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Mojave</workerClass>
-    <texture>Arktos_Mojave</texture>
+    <texture>Arktos/Biomes/Arktos_Mojave</texture>
     <animalDensity>0.8</animalDensity>
     <plantDensity>0.24</plantDensity>
     <forageability>0.45</forageability>
     <foragedFood>RawAgave</foragedFood>
     <wildPlantRegrowDays>29</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_Grass>3.5</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.5</Plant_GrayGrass>
       <Plant_Agave>0.35</Plant_Agave>
       <Plant_PincushionCactus>0.25</Plant_PincushionCactus>
       <Plant_SaguaroCactus>0.10</Plant_SaguaroCactus>
       <Plant_TreeDrago>0.06</Plant_TreeDrago>
       <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_PebbleCactus>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.22</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">4.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">2.5</Plant_YellowTallGrass>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
       <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.40</FCP_Plant_Banana_Yucca>
       <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.30</FCP_Plant_Barrel_Cactus>
@@ -1314,7 +1324,7 @@
     <label>canyon</label>
     <description>Where water cuts into the desert, steep walls, dry shelves, and stubborn life gather around the channel. These canyons offer shade and ambush in equal measure.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Canyon</workerClass>
-    <texture>Arktos_Canyon</texture>
+    <texture>Arktos/Biomes/Arktos_Canyon</texture>
     <animalDensity>1.1</animalDensity>
     <plantDensity>0.24</plantDensity>
     <forageability>0.4</forageability>
@@ -1324,6 +1334,8 @@
     <mudTerrain>Gravel</mudTerrain>
     <riverbankTerrain>Gravel</riverbankTerrain>
     <wildPlants>
+      <Plant_Grass>3.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
       <Plant_Agave>0.22</Plant_Agave>
       <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
       <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
@@ -1333,8 +1345,8 @@
       <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Bulrush>
       <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_LilyPad>
       <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_Lotus>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.15</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.8</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">2.2</Plant_YellowTallGrass>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
       <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.28</FCP_Plant_Banana_Yucca>
       <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
@@ -1442,15 +1454,16 @@
     <label>marina</label>
     <description>Along the coast, salt wind blows through rotting piers, stranded hulls, and drowned suburbs. The sea softens the temperature here, but not the dangers that washed in with the old world.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Marina</workerClass>
-    <texture>Arktos_Marina</texture>
+    <texture>Arktos/Biomes/Arktos_Marina</texture>
     <animalDensity>2.2</animalDensity>
     <plantDensity>0.65</plantDensity>
     <forageability>0.9</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>22</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Grass>0.70</Plant_Grass>
-      <Plant_TallGrass>0.55</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.5</Plant_TallGrass>
       <Plant_Bush>0.18</Plant_Bush>
       <Plant_Brambles>0.12</Plant_Brambles>
       <Plant_Berry>0.08</Plant_Berry>
@@ -1546,7 +1559,7 @@
     <label>redwood</label>
     <description>Great red trunks rise over cool mountain fog and dim forest ground. These woods feel older than the war, and deep enough to hide both safe camps and things better left alone.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Redwood</workerClass>
-    <texture>Arktos_Redwood</texture>
+    <texture>Arktos/Biomes/Arktos_Redwood</texture>
     <animalDensity>2.3</animalDensity>
     <plantDensity>0.4</plantDensity>
     <forageability>0.7</forageability>
@@ -1555,6 +1568,9 @@
     <lakeBeachTerrain>Marsh</lakeBeachTerrain>
     <mudTerrain>Marsh</mudTerrain>
     <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Moss>0.28</Plant_Moss>
       <Plant_Berry>0.10</Plant_Berry>
       <Plant_Brambles>0.10</Plant_Brambles>
@@ -1672,15 +1688,16 @@
     <label>sequoia</label>
     <description>Warm mountain slopes carry giant trees, dry needles, and long views over the wastes below. The forest is beautiful from a distance and unforgiving once you are inside it.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Sequoia</workerClass>
-    <texture>Arktos_Sequoia</texture>
+    <texture>Arktos/Biomes/Arktos_Sequoia</texture>
     <animalDensity>2.1</animalDensity>
     <plantDensity>0.65</plantDensity>
     <forageability>0.65</forageability>
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>26</wildPlantRegrowDays>
     <wildPlants>
-      <Plant_Grass>0.70</Plant_Grass>
-      <Plant_TallGrass>0.55</Plant_TallGrass>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.5</Plant_TallGrass>
       <Plant_Bush>0.18</Plant_Bush>
       <Plant_Brambles>0.12</Plant_Brambles>
       <Plant_Berry>0.08</Plant_Berry>
@@ -1789,21 +1806,22 @@
     <label>divide</label>
     <description>The land here is dry, broken, and bitter, split by ridges, gullies, and old fire scars. Water is scarce, cover is thin, and every mile feels farther than it should.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Divide</workerClass>
-    <texture>Arktos_Divide</texture>
+    <texture>Arktos/Biomes/Arktos_Divide</texture>
     <animalDensity>0.6</animalDensity>
     <plantDensity>0.05</plantDensity>
     <forageability>0</forageability>
     <foragedFood>RawAgave</foragedFood>
     <wildPlantRegrowDays>38</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_Grass>2.5</Plant_Grass>
       <Plant_Agave>0.20</Plant_Agave>
       <Plant_TreeDrago>0.05</Plant_TreeDrago>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.18</Plant_GrayGrass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
       <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Thornvine>
       <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_TreeSnagroot>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.20</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.0</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.8</Plant_YellowTallGrass>
       <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bush_Leafless>
       <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Brambles_Leafless>
       <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Berry_Leafless>
@@ -1901,23 +1919,25 @@
     <label>mesa</label>
     <description>High desert plateaus sit above the low country in wind and heat. The ground is harsh, the horizons are wide, and survival depends on seeing trouble long before it reaches you.</description>
     <workerClass>FIP.Arktos.BiomeWorker_Mesa</workerClass>
-    <texture>Arktos_Mesa</texture>
+    <texture>Arktos/Biomes/Arktos_Mesa</texture>
     <animalDensity>0.25</animalDensity>
     <plantDensity>0.05</plantDensity>
     <forageability>0.2</forageability>
     <foragedFood>RawAgave</foragedFood>
     <wildPlantRegrowDays>36</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_Grass>2.5</Plant_Grass>
       <Plant_Agave>0.24</Plant_Agave>
       <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
       <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
       <Plant_TreeDrago>0.04</Plant_TreeDrago>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
       <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_PebbleCactus>
       <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_MagmaCactus>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
       <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.0</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.8</Plant_YellowTallGrass>
       <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.26</FCP_Plant_Banana_Yucca>
       <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
       <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
@@ -2016,7 +2036,7 @@
     <defName>Arktos_Crater</defName>
     <label>crater</label>
     <description>The bomb fell hardest here. Glassed earth, shattered concrete, and poisoned dust fill the impact zones where cities and test sites were erased in an instant.</description>
-    <texture>Arktos_Crater</texture>
+    <texture>Arktos/Biomes/Arktos_Crater</texture>
     <animalDensity>0.8</animalDensity>
     <plantDensity>0.05</plantDensity>
     <forageability>0</forageability>
@@ -2067,7 +2087,7 @@
     <defName>Arktos_Ruin</defName>
     <label>ruin</label>
     <description>Beyond the ground zeroes lie collapsed districts, dead roads, and the shells of neighborhoods that never recovered. There is scrap here, shelter too, and plenty willing to kill for both.</description>
-    <texture>Arktos_Ruin</texture>
+    <texture>Arktos/Biomes/Arktos_Ruin</texture>
     <animalDensity>1.1</animalDensity>
     <plantDensity>0.4</plantDensity>
     <forageability>0.2</forageability>
@@ -2075,8 +2095,8 @@
     <wildPlantRegrowDays>34</wildPlantRegrowDays>
     <wildPlants>
       <Plant_Dandelion>0.08</Plant_Dandelion>
-      <Plant_Grass>0.35</Plant_Grass>
-      <Plant_TallGrass>0.25</Plant_TallGrass>
+      <Plant_Grass>4.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Bush>0.18</Plant_Bush>
       <Plant_Brambles>0.16</Plant_Brambles>
       <Plant_Berry>0.04</Plant_Berry>
@@ -2084,7 +2104,7 @@
       <Plant_Agave>0.06</Plant_Agave>
       <Plant_Rose>0.008</Plant_Rose>
       <Plant_Daylily>0.008</Plant_Daylily>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_GrayGrass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
       <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
       <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_Bush_Leafless>
@@ -2191,7 +2211,7 @@
     <defName>Arktos_Wasteland</defName>
     <label>wasteland</label>
     <description>These outer blasted belts were spared the worst of the fire and caught the long death after. Ash, rubble, and tainted soil stretch between civilization's corpse and the living frontier.</description>
-    <texture>Arktos_Wasteland</texture>
+    <texture>Arktos/Biomes/Arktos_Wasteland</texture>
     <animalDensity>1.3</animalDensity>
     <plantDensity>0.4</plantDensity>
     <forageability>0.35</forageability>
@@ -2199,19 +2219,19 @@
     <wildPlantRegrowDays>32</wildPlantRegrowDays>
     <wildPlants>
       <Plant_Dandelion>0.10</Plant_Dandelion>
-      <Plant_Grass>0.45</Plant_Grass>
-      <Plant_TallGrass>0.30</Plant_TallGrass>
+      <Plant_Grass>4.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Bush>0.20</Plant_Bush>
       <Plant_Brambles>0.16</Plant_Brambles>
       <Plant_Berry>0.04</Plant_Berry>
       <Plant_Moss>0.08</Plant_Moss>
       <Plant_Agave>0.12</Plant_Agave>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_GrayGrass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
       <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_Ripthorn>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
       <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_TreeSnagroot>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.15</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">1.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.0</Plant_YellowTallGrass>
       <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Banana_Yucca>
       <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Barrel_Cactus>
       <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
@@ -2322,14 +2342,15 @@
     <foragedFood>RawAgave</foragedFood>
     <wildPlantRegrowDays>38</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_Grass>7.0</Plant_Grass>
       <Plant_Agave>0.12</Plant_Agave>
-      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_GrayGrass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">5.0</Plant_GrayGrass>
       <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_Ripthorn>
       <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_MagmaCactus>
       <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
       <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
-      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_YellowGrass>
-      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_YellowTallGrass>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">1.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.0</Plant_YellowTallGrass>
       <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Banana_Yucca>
       <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Barrel_Cactus>
       <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Broc_Flower>
@@ -2416,6 +2437,7 @@
     <foragedFood>RawBerries</foragedFood>
     <wildPlantRegrowDays>22</wildPlantRegrowDays>
     <wildPlants>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
       <Plant_Moss>0.30</Plant_Moss>
       <Plant_Bush>0.18</Plant_Bush>
       <Plant_Brambles>0.14</Plant_Brambles>
@@ -2435,7 +2457,7 @@
       <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
       <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_LilyPad>
       <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Lotus>
-      <Plant_Nightgrass MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_Nightgrass>
+      <Plant_Nightgrass MayRequire="Ludeon.RimWorld.Odyssey">8.0</Plant_Nightgrass>
       <Boomshroom MayRequire="Ludeon.RimWorld.Odyssey">0.08</Boomshroom>
       <Plant_Psilocap MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Psilocap>
       <Plant_Willowgill MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Willowgill>
