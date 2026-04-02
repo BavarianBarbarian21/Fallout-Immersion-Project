@@ -20,16 +20,28 @@
           <pawnsPlural>Devoted Seers</pawnsPlural>
         </value>
       </li>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Anomaly">
-        <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
-        <value>
-          <xenotypeSet>
-            <xenotypeChances>
-              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">1</WestTek_Xenotype_Atlantic>
-            </xenotypeChances>
-          </xenotypeSet>
-        </value>
-      </li>
     </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Anomaly</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd" MayRequire="FIP.WestTek">
+          <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
+          <value>
+            <xenotypeSet>
+              <xenotypeChances>
+                <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_Atlantic>
+                <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.3</WestTek_Xenotype_NatL>
+                <WestTek_Xenotype_Cascadia MayRequire="FIP.WestTek">0.2</WestTek_Xenotype_Cascadia>
+              </xenotypeChances>
+            </xenotypeSet>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 </Patch>
