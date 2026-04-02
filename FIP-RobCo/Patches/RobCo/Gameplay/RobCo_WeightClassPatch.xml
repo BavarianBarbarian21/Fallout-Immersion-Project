@@ -25,4 +25,11 @@
             <label>Command-bot</label>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/minGenerationAge</xpath>
+        <value>
+            <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+            <maxGenerationAge MayRequire="Ludeon.RimWorld.Biotech">270</maxGenerationAge>
+        </value>
+    </Operation>
 </Patch>

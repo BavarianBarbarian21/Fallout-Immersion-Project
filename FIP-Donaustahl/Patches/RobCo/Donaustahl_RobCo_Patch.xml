@@ -20,7 +20,7 @@
 			</li>
 			<!-- Make all vanilla mechanoids non-fighters by disabling base kinds -->
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/PawnKindDef[defName="BaseMechanoidKind"]/isFighter</xpath>
+				<xpath>/Defs/PawnKindDef[defName="BaseMechanoidKind"]</xpath>
 				<value>
 					<isFighter>false</isFighter>
 					<allowInMechClusters>false</allowInMechClusters>

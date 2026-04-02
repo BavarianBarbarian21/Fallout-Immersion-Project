@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Odyssey">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName="Repconn_Crater"]</xpath>
+        <value>
+          <extraGenSteps>
+            <li>AncientRuins_Scarlands</li>
+            <li>CratersLarge</li>
+            <li>CratersMedium</li>
+            <li>CratersSmall</li>
+            <li>ScarlandsJunkClusters</li>
+            <li>ScarlandsJunkPrefabs</li>
+          </extraGenSteps>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName="Repconn_Ruin"]</xpath>
+        <value>
+          <extraGenSteps>
+            <li>AncientRuins_Scarlands</li>
+            <li>CratersLarge</li>
+            <li>CratersMedium</li>
+            <li>CratersSmall</li>
+            <li>ScarlandsJunkClusters</li>
+            <li>ScarlandsJunkPrefabs</li>
+          </extraGenSteps>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef[defName="Repconn_Wasteland"]</xpath>
+        <value>
+          <extraGenSteps>
+            <li>CratersLarge</li>
+            <li>CratersMedium</li>
+            <li>CratersSmall</li>
+            <li>ScarlandsJunkClusters</li>
+            <li>ScarlandsJunkPrefabs</li>
+          </extraGenSteps>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
