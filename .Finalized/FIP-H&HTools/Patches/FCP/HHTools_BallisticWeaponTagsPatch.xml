@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rick.FCP.BallisticWeapons</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Power_Armor_Assault_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_R91_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Chinese_Assault_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Marksman_Carbine"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Assault_Carbine"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_AK_112_AR"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_G11_AR"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Californian</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Minigun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+            <li>HHTools_SuperMutant</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Light_Machine_Gun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_SuperMutant</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_ChunkyBoi"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Raider</li>
+              <li>HHTools_Wasteland</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_MkI_Avenger"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Raider</li>
+              <li>HHTools_Wasteland</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Vindicator"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Raider</li>
+              <li>HHTools_Wasteland</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_Revolver"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_BoltAction"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Pipe_Sniper"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_10mm_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Silenced_10mm_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Chinese_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_9mm_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Natl</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_556_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_127mm_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Silenced_22_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_10mm_Pistol_MkII"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_14mm_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_223_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Colt_6520_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Deagle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_32_Pistol"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_357_Revolver"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_44Magnum_Revolver"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Hunting_Revolver"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Natl</li>
+            <li>HHTools_WarringTribe</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Rifle_Short"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Californian</li>
+              <li>HHTools_Settlement</li>
+              <li>HHTools_Militia</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Rifle_Standard"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Rifle_Scoped"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Californian</li>
+              <li>HHTools_Settlement</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Prewar</li>
+              <li>HHTools_Atlantic</li>
+              <li>HHTools_Sniper</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Rifle_Marksman"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Californian</li>
+              <li>HHTools_Settlement</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Prewar</li>
+              <li>HHTools_Atlantic</li>
+              <li>HHTools_Sniper</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_BB_Gun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_WarringTribe</li>
+            <li>HHTools_Natl</li>
+            <li>HHTools_PeacefulTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Brush_Gun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Cowboy_Repeater"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Trail_Carbine"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_32_Hunting_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_WarringTribe</li>
+            <li>HHTools_Natl</li>
+            <li>HHTools_PeacefulTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Varmint_Rifle"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Wasteland</li>
+              <li>HHTools_WarringTribe</li>
+              <li>HHTools_Natl</li>
+              <li>HHTools_PeacefulTribe</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_9mm_Hunting_Rifle"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_WarringTribe</li>
+              <li>HHTools_Natl</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_223_Rangemaster"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Prewar</li>
+              <li>HHTools_Atlantic</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_223_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Caravan_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Hunting_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Riot_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_SawnOff_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_LeverAction_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Texican</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Single_Shotgun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Citykiller"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Combat_Shotgun_MkII"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Jackhammer"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Prewar</li>
+            <li>HHTools_Atlantic</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_10mm_SMG"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Californian</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_HK_10_SMG"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_9mm_SMG"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+            <li>HHTools_Natl</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_127mm_SMG"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Submachine_Gun"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Natl</li>
+            <li>HHTools_WarringTribe</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Silenced_22_SMG"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Wasteland</li>
+            <li>HHTools_Settlement</li>
+            <li>HHTools_Raider</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_DKS_501_Sniper_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Sniper</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Scoped_Hunting_Rifle"]/weaponTags</xpath>
+          <value>
+            <li>HHTools_Militia</li>
+            <li>HHTools_Sniper</li>
+            <li>HHTools_Atlantic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Lucky"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+              <li>HHTools_Wasteland</li>
+              <li>HHTools_Settlement</li>
+              <li>HHTools_Texican</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Maria"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Wasteland</li>
+              <li>HHTools_Settlement</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_AbileneKidLEBBGun"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_AllAmerican"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_BigBoomer"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Texican</li>
+              <li>HHTools_Arcadian</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Deliverer"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Wasteland</li>
+              <li>HHTools_Settlement</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_HHToolsNailgun"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_LilDevil"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_LincolnsRepeater"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Texican</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_MkIIAvenger"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_SuperMutant</li>
+              <li>HHTools_Prewar</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Vances9mmSMG"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Wasteland</li>
+              <li>HHTools_Settlement</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_GobiCampaignScoutRifle"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Sniper</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_MedicineStick"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Texican</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Bozar"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_SuperMutant</li>
+              <li>HHTools_Prewar</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_DinnerBell"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Militia</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Ratslayer"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+              <li>HHTools_Sniper</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_Wanda"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_OlPainless"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Militia</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_VictoryRifle"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Arcadian</li>
+              <li>HHTools_Militia</li>
+              <li>HHTools_Texican</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FCP_Gun_ReservistsRifle"]</xpath>
+          <value>
+            <weaponTags>
+              <li>HHTools_Unique</li>
+              <li>HHTools_Militia</li>
+            </weaponTags>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

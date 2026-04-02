@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Syncretic, Native, Dharma -->
+	<MemeDef Name="Greenway_Religion_Spiritual_Base" ParentName="Greenway_Religion_Base" Abstract="true">
+		<worshipRoomLabel>grove</worshipRoomLabel>
+		<groupDef>Greenway_Spiritual</groupDef>
+		<iconPath>Greenway/Memes/Spiritual</iconPath>
+		<thingStyleCategories>
+			<li>
+				<category>Totemic</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+		<symbolPackOverride>true</symbolPackOverride>
+		<symbolPacks>
+			<li>
+				<ideoName>People</ideoName>
+				<adjective>People</adjective>
+				<member>People</member>
+				<prefix>true</prefix>
+			</li>
+			<li>
+				<ideoName>Nation</ideoName>
+				<adjective>Nation</adjective>
+				<member>Nation</member>
+				<prefix>true</prefix>
+			</li>
+		</symbolPacks>
+
+	</MemeDef>
+
+	<!--Syncretic-->
+	<MemeDef ParentName="Greenway_Religion_Spiritual_Base">
+		<defName>Greenway_Religion_Syncretic</defName>
+		<label>Gentiles</label>
+		<description>A believe mixing elements of Christianity with tribal spirit worship.</description>
+		<deityNameMakerOverride>HHTools_Greenway_Religion_NameMaker_Syncretic</deityNameMakerOverride>
+		<deityTypeMakerOverride>HHTools_Greenway_Religion_TypeMaker_Syncretic</deityTypeMakerOverride>
+	</MemeDef>
+	<!--Karma-->
+	<MemeDef ParentName="Greenway_Religion_Spiritual_Base">
+		<defName>Greenway_Religion_Karma</defName>
+		<label>Karma</label>
+		<description>An order devoted to the law of Karma — the eternal cycle of cause and consequence. Through mindful action and reflection, followers seek to purify their deeds and restore harmony to the world’s moral balance after the collapse of civilisation.</description>
+		<deityNameMakerOverride>HHTools_Greenway_Religion_NameMaker_Karma</deityNameMakerOverride>
+		<deityTypeMakerOverride>HHTools_Greenway_Religion_TypeMaker_Karma</deityTypeMakerOverride>
+		<thingStyleCategories>
+			<li>
+				<category>Hindu</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+
+	<!--Native-->
+	<MemeDef ParentName="Greenway_Religion_Spiritual_Base">
+		<defName>Greenway_Religion_Native</defName>
+		<label>Native</label>
+		<description>Indigenous faith rooted in ancestral spirits and the land; rituals, totems and seasonal ceremonies hold communities together.</description>
+		<deityNameMakerOverride>HHTools_Greenway_Religion_NameMaker_Native</deityNameMakerOverride>
+		<deityTypeMakerOverride>HHTools_Greenway_Religion_TypeMaker_Native</deityTypeMakerOverride>
+	</MemeDef>
+
+	<!--Shi-->
+	<MemeDef ParentName="Greenway_Religion_Spiritual_Base">
+		<defName>Greenway_Religion_Shi</defName>
+		<label>Shi</label>
+		<description>The Shi follow the Way of the Emperor — a philosophical order born from the fusion of ancient wisdom and new science. Knowledge, discipline, and harmony are sacred principles. They seek balance between machine, mind, and nature, guided by the teachings of the Old World.</description>
+		<deityNameMakerOverride>HHTools_Greenway_Religion_NameMaker_Shi</deityNameMakerOverride>
+		<deityTypeMakerOverride>HHTools_Greenway_Religion_TypeMaker_Shi</deityTypeMakerOverride>
+		<thingStyleCategories>
+			<li>
+				<category>Buddhist</category>
+				<priority>4</priority>
+			</li>
+		</thingStyleCategories>
+	</MemeDef>
+
+</Defs>

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerRepconnValley</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnValleyRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->basin</li>
+        <li>terrain_word(p=3)->flats</li>
+        <li>terrain_word(p=2)->plain</li>
+        <li>terrain_word(p=2)->valley</li>
+        <li>terrain_word->floodplain</li>
+        <li>terrain_word->wash</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnPreserve</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnPreserveRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->preserve</li>
+        <li>terrain_word(p=3)->grove</li>
+        <li>terrain_word(p=2)->sanctuary</li>
+        <li>terrain_word(p=2)->chaparral</li>
+        <li>terrain_word->reserve</li>
+        <li>terrain_word->uplands</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnMountainForest</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->forest</li>
+        <li>terrain_word(p=3)->grove</li>
+        <li>terrain_word(p=2)->high country</li>
+        <li>terrain_word(p=2)->sanctuary</li>
+        <li>terrain_word->woodland</li>
+        <li>terrain_word->timberline</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnDesert</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnDesertRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->desert</li>
+        <li>terrain_word(p=2)->wash</li>
+        <li>terrain_word(p=2)->gorge</li>
+        <li>terrain_word(p=2)->badlands</li>
+        <li>terrain_word->arroyo</li>
+        <li>terrain_word->scrublands</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnDivide</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->badlands</li>
+        <li>terrain_word(p=3)->wasteland</li>
+        <li>terrain_word(p=2)->barrens</li>
+        <li>terrain_word(p=2)->scar</li>
+        <li>terrain_word->flats</li>
+        <li>terrain_word->broken country</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnMalpais</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->lava fields</li>
+        <li>terrain_word(p=2)->rift</li>
+        <li>terrain_word(p=2)->vent</li>
+        <li>terrain_word->burn</li>
+        <li>terrain_word->basalt fields</li>
+        <li>terrain_word->firebreak</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnArctic</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnArcticRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->glacier</li>
+        <li>terrain_word(p=3)->icefield</li>
+        <li>terrain_word(p=2)->reach</li>
+        <li>terrain_word(p=2)->expanse</li>
+        <li>terrain_word->field</li>
+        <li>terrain_word->barrens</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnCoast</defName>
+    <include>
+      <li>RepconnWorldFeatureNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->coast</li>
+        <li>terrain_word(p=3)->harbor</li>
+        <li>terrain_word(p=2)->shore</li>
+        <li>terrain_word(p=2)->strand</li>
+        <li>terrain_word->inlet</li>
+        <li>terrain_word->reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnUrban</defName>
+    <include>
+      <li>RepconnUrbanCityHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[city_name]</li>
+        <li>r_name(p=0.12)->[city_name] [urban_region_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkOasis</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnDesertRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->oasis</li>
+        <li>terrain_word(p=2)->spring</li>
+        <li>terrain_word->refuge</li>
+        <li>terrain_word->seep</li>
+        <li>terrain_word->shade</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkLake</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnWaterRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->lake</li>
+        <li>terrain_word(p=2)->reservoir</li>
+        <li>terrain_word->basin</li>
+        <li>terrain_word->mirror</li>
+        <li>terrain_word->water</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkPond</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnWaterRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->pond</li>
+        <li>terrain_word(p=2)->pool</li>
+        <li>terrain_word->puddle</li>
+        <li>terrain_word->waterhole</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkDryLake</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnDesertRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->dry lake</li>
+        <li>terrain_word(p=2)->salt flat</li>
+        <li>terrain_word->barren lake</li>
+        <li>terrain_word->sink</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkToxicLake</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->toxic lake</li>
+        <li>terrain_word(p=2)->poison lake</li>
+        <li>terrain_word->spill basin</li>
+        <li>terrain_word->waste pool</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkWetland</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnWaterRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->wetland</li>
+        <li>terrain_word(p=2)->marsh</li>
+        <li>terrain_word(p=2)->slough</li>
+        <li>terrain_word->backwater</li>
+        <li>terrain_word->tule basin</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkHotSprings</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->hot springs</li>
+        <li>terrain_word(p=2)->thermal basin</li>
+        <li>terrain_word->mineral spring</li>
+        <li>terrain_word->steam pool</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkBay</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->bay</li>
+        <li>terrain_word(p=2)->cove</li>
+        <li>terrain_word->bight</li>
+        <li>terrain_word->anchorage</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkArchipelago</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->archipelago</li>
+        <li>terrain_word(p=2)->island chain</li>
+        <li>terrain_word->shoals</li>
+        <li>terrain_word->outer isles</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkCoastalIsland</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->island</li>
+        <li>terrain_word(p=2)->key</li>
+        <li>terrain_word->offshore isle</li>
+        <li>terrain_word->rock island</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkPeninsula</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->peninsula</li>
+        <li>terrain_word(p=2)->point</li>
+        <li>terrain_word->cape</li>
+        <li>terrain_word->headland</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkFjord</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->fjord</li>
+        <li>terrain_word(p=2)->sound</li>
+        <li>terrain_word->inlet</li>
+        <li>terrain_word->reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAtoll</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->atoll</li>
+        <li>terrain_word(p=2)->ring reef</li>
+        <li>terrain_word->shoal ring</li>
+        <li>terrain_word->reef crown</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkIceberg</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnArcticRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->iceberg</li>
+        <li>terrain_word(p=2)->ice floe</li>
+        <li>terrain_word->berg</li>
+        <li>terrain_word->ice mass</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkValley</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnValleyRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->valley</li>
+        <li>terrain_word(p=2)->gulch</li>
+        <li>terrain_word(p=2)->canyon</li>
+        <li>terrain_word->ravine</li>
+        <li>terrain_word->divide</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkCavern</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->cavern</li>
+        <li>terrain_word(p=2)->caves</li>
+        <li>terrain_word->hollow</li>
+        <li>terrain_word->undercut</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkChasm</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->chasm</li>
+        <li>terrain_word(p=2)->rift</li>
+        <li>terrain_word->cut</li>
+        <li>terrain_word->split</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkCrevasse</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnArcticRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->crevasse</li>
+        <li>terrain_word(p=2)->ice crack</li>
+        <li>terrain_word->rift</li>
+        <li>terrain_word->split ice</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkPlateau</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnDesertRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->plateau</li>
+        <li>terrain_word(p=2)->table</li>
+        <li>terrain_word->mesa</li>
+        <li>terrain_word->upland</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkIceDunes</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnArcticRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->ice dunes</li>
+        <li>terrain_word(p=2)->drift field</li>
+        <li>terrain_word->snow dunes</li>
+        <li>terrain_word->ice drifts</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkCliffs</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->cliffs</li>
+        <li>terrain_word(p=2)->bluffs</li>
+        <li>terrain_word->scarps</li>
+        <li>terrain_word->walls</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkHollow</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnMountainRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->hollow</li>
+        <li>terrain_word(p=2)->sink</li>
+        <li>terrain_word->bowl</li>
+        <li>terrain_word->basin</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkBasin</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnValleyRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->basin</li>
+        <li>terrain_word(p=2)->lowland</li>
+        <li>terrain_word->wash</li>
+        <li>terrain_word->drainage</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkDunes</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnDesertRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->dunes</li>
+        <li>terrain_word(p=2)->sand sea</li>
+        <li>terrain_word->drift</li>
+        <li>terrain_word->sand flats</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkLavaLake</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->lava lake</li>
+        <li>terrain_word(p=2)->fire basin</li>
+        <li>terrain_word->magma pool</li>
+        <li>terrain_word->burn lake</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkLavaFlow</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->lava flow</li>
+        <li>terrain_word(p=2)->ash flow</li>
+        <li>terrain_word->burn run</li>
+        <li>terrain_word->magma wash</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkTerraformingScar</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->terraforming scar</li>
+        <li>terrain_word(p=2)->breach</li>
+        <li>terrain_word->cut</li>
+        <li>terrain_word->machine scar</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkRuins</defName>
+    <include>
+      <li>RepconnUrbanNeighborhoodHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[street_name]</li>
+        <li>r_name(p=0.45)->[suburb_name]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkFrozenRuins</defName>
+    <include>
+      <li>RepconnUrbanNeighborhoodHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[street_name]</li>
+        <li>r_name(p=0.45)->[suburb_name]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAncientSmokeVent</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->exhaust duct</li>
+        <li>terrain_word(p=2)->smokestacks</li>
+        <li>terrain_word->vents</li>
+        <li>terrain_word->chimneys</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAncientToxVent</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->tox vents</li>
+        <li>terrain_word(p=2)->noxious vents</li>
+        <li>terrain_word->toxic ducts</li>
+        <li>terrain_word->fume vents</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAncientHeatVent</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->heat vents</li>
+        <li>terrain_word(p=2)->thermal vents</li>
+        <li>terrain_word->heat ducts</li>
+        <li>terrain_word->burn shafts</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAncientQuarry</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->quarry</li>
+        <li>terrain_word(p=3)->mine</li>
+        <li>terrain_word(p=2)->mine works</li>
+        <li>terrain_word(p=2)->dig site</li>
+        <li>terrain_word(p=2)->pit mine</li>
+        <li>terrain_word(p=2)->cut</li>
+        <li>terrain_word->mine pit</li>
+        <li>terrain_word->strip mine</li>
+        <li>terrain_word->ore works</li>
+        <li>terrain_word->rock pits</li>
+        <li>terrain_word->excavation</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkConstructionSite</defName>
+    <include>
+      <li>RepconnCompanyHelper</li>
+      <li>RepconnConstructionSiteWordHelper</li>
+      <li>RepconnConstructionCampWordHelper</li>
+      <li>RepconnConstructionProjectWordHelper</li>
+      <li>RepconnConstructionSiteNumberHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=0.42)->[company_name] [construction_site_word]</li>
+        <li>r_name(p=0.28)->[company_name] [construction_camp_word]</li>
+        <li>r_name(p=0.18)->[company_name] [construction_site_word] No. [construction_site_number]</li>
+        <li>r_name(p=0.12)->[company_name] [construction_project_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAbandonedColony</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnSettlementRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->colony</li>
+        <li>terrain_word(p=2)->settlement</li>
+        <li>terrain_word->hold</li>
+        <li>terrain_word->outpost</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAbandonedColonyTribal</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnSettlementRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->village</li>
+        <li>terrain_word(p=2)->camp</li>
+        <li>terrain_word->hold</li>
+        <li>terrain_word->cluster</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAbandonedColonyOutlander</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnSettlementRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->town</li>
+        <li>terrain_word(p=2)->outpost</li>
+        <li>terrain_word->ghost town</li>
+        <li>terrain_word->station</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkHarbor</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnCoastalRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->harbor</li>
+        <li>terrain_word(p=2)->dock</li>
+        <li>terrain_word->anchorage</li>
+        <li>terrain_word->port</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkLaunchSite</defName>
+    <include>
+      <li>RepconnFortRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Fort [fort_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkGarrison</defName>
+    <include>
+      <li>RepconnFortRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Fort [fort_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkWarehouse</defName>
+    <include>
+      <li>RepconnCompanyHelper</li>
+      <li>RepconnWarehouseWordHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[company_name] [warehouse_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkChemfuelRefinery</defName>
+    <include>
+      <li>RepconnFuelCompanyHelper</li>
+      <li>RepconnRefineryWordHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[fuel_company] [refinery_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkInfestedSettlement</defName>
+    <include>
+      <li>RepconnUrbanNeighborhoodHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[street_name]</li>
+        <li>r_name(p=0.45)->[suburb_name]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkImpactCrater</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->impact crater</li>
+        <li>terrain_word(p=2)->blast basin</li>
+        <li>terrain_word->impact scar</li>
+        <li>terrain_word->strike pit</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkResurgentCaldera</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->caldera</li>
+        <li>terrain_word(p=2)->fire basin</li>
+        <li>terrain_word->collapse ring</li>
+        <li>terrain_word->ash crown</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkToxicCrater</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->toxic crater</li>
+        <li>terrain_word(p=2)->poison basin</li>
+        <li>terrain_word->waste crater</li>
+        <li>terrain_word->spill pit</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkSulfuricLake</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->sulfur lake</li>
+        <li>terrain_word(p=2)->brim basin</li>
+        <li>terrain_word->sour water</li>
+        <li>terrain_word->stink pool</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkSulfuricRiver</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->sulfur river</li>
+        <li>terrain_word(p=2)->acid wash</li>
+        <li>terrain_word->fume channel</li>
+        <li>terrain_word->sour run</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkContaminatedReservoir</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->contaminated reservoir</li>
+        <li>terrain_word(p=2)->rad reservoir</li>
+        <li>terrain_word->waste water</li>
+        <li>terrain_word->poison basin</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkContaminatedRiver</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->contaminated river</li>
+        <li>terrain_word(p=2)->rad river</li>
+        <li>terrain_word->waste run</li>
+        <li>terrain_word->poison channel</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkContaminatedCoast</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnHazardRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->contaminated coast</li>
+        <li>terrain_word(p=2)->rad shore</li>
+        <li>terrain_word->waste strand</li>
+        <li>terrain_word->poison coast</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkAbandonedFarmlands</defName>
+    <include>
+      <li>RepconnLandmarkNamerCommon</li>
+      <li>RepconnSettlementRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=3)->abandoned farmlands</li>
+        <li>terrain_word(p=2)->dead fields</li>
+        <li>terrain_word->dry farms</li>
+        <li>terrain_word->fallow tract</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkSuburb</defName>
+    <include>
+      <li>RepconnUrbanNeighborhoodHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[suburb_name]</li>
+        <li>r_name(p=0.35)->[street_name]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkStore</defName>
+    <include>
+      <li>RepconnRetailBrandHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[store_brand]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkGasstation</defName>
+    <include>
+      <li>RepconnFuelCompanyHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[fuel_company] gas station</li>
+        <li>r_name(p=0.2)->[fuel_company] fuel stop</li>
+        <li>r_name(p=0.1)->[fuel_company] service plaza</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkRadioStation</defName>
+    <include>
+      <li>RepconnUrbanCityHelper</li>
+      <li>RepconnRadioBrandHelper</li>
+      <li>RepconnRadioNetworkHelper</li>
+      <li>RepconnRadioFormatHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=0.55)->[station_brand]</li>
+        <li>r_name(p=0.22)->[station_brand] [city_name]</li>
+        <li>r_name(p=0.15)->[station_network]</li>
+        <li>r_name(p=0.08)->[city_name] [station_format]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkFort</defName>
+    <include>
+      <li>RepconnFortRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Fort [fort_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkBunker</defName>
+    <include>
+      <li>RepconnGreekLetterHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Bunker [greek_letter]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerRepconnLandmarkJunkyard</defName>
+    <include>
+      <li>RepconnFortRootHelper</li>
+      <li>RepconnUrbanNeighborhoodHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=0.45)->[street_name] Scrapyard</li>
+        <li>r_name(p=0.25)->[suburb_name] Salvage Yard</li>
+        <li>r_name(p=0.2)->[fort_root] Recycling</li>
+        <li>r_name(p=0.15)->[street_name] Wrecking Yard</li>
+        <li>r_name(p=0.1)->[suburb_name] Metal Works</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

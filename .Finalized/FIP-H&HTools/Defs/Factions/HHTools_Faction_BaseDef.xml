@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase" Name="HHTools_Factionbase" Abstract="True">
+    <defName>HHTools_Factionbase</defName>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <techLevel>Industrial</techLevel>
+    <settlementNameMaker>HHTools_SettlementNameMaker_General</settlementNameMaker>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+
+  </FactionDef>
+
+
+  <!-- Democratic/Despotic -->
+  <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Settler_Democratic" Abstract="True">
+    <defName>HHTools_Settler_Democratic</defName>
+    <pawnSingular>settler</pawnSingular>
+    <pawnsPlural>settlers</pawnsPlural>
+    <categoryTag>Outlander</categoryTag>
+    <leaderTitle>overseer</leaderTitle>
+    <factionIconPath>HHTools/HHTools_Democracy</factionIconPath>
+    <structureMemeWeights>
+      <Greenway_Religion_ChildrenOfAtom MayRequire="FIP.Greenway">1</Greenway_Religion_ChildrenOfAtom>
+      <Greenway_Religion_ChildrenOfTheCathedral MayRequire="FIP.Greenway">1</Greenway_Religion_ChildrenOfTheCathedral>
+      <Greenway_Religion_Hubology MayRequire="FIP.Greenway">2</Greenway_Religion_Hubology>
+      <Greenway_Religion_CanaaniteChurch MayRequire="FIP.Greenway">2</Greenway_Religion_CanaaniteChurch>
+      <Greenway_Religion_AbbeyOfTheRoad MayRequire="FIP.Greenway">4</Greenway_Religion_AbbeyOfTheRoad>
+      <Greenway_Religion_OrderOfOurLadyOfTheWaters MayRequire="FIP.Greenway">4</Greenway_Religion_OrderOfOurLadyOfTheWaters>
+      <Greenway_Religion_FollowerOfTheApocalypse MayRequire="FIP.Greenway">4</Greenway_Religion_FollowerOfTheApocalypse>
+      <Greenway_Religion_Karma MayRequire="FIP.Greenway">1</Greenway_Religion_Karma>
+      <Greenway_Religion_Shi MayRequire="FIP.Greenway">1</Greenway_Religion_Shi>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <HHTools_Villager>5</HHTools_Villager>
+          <HHTools_Town_Guard>10</HHTools_Town_Guard>
+          <HHTools_Grenadier_Destructive>1.5</HHTools_Grenadier_Destructive>
+          <HHTools_Mercenary_Slasher>7</HHTools_Mercenary_Slasher>
+          <HHTools_Mercenary_Gunner>10</HHTools_Mercenary_Gunner>
+          <HHTools_Mercenary_Elite>10</HHTools_Mercenary_Elite>
+          <HHTools_Town_Councilman>10</HHTools_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_Villager>20</HHTools_Villager>
+          <Villager_Child MayRequire="FIP.WestTek">10</Villager_Child>
+          <HHTools_Town_Guard>10</HHTools_Town_Guard>
+          <HHTools_Town_Councilman>10</HHTools_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_Town_Trader>1</HHTools_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_Villager>3</HHTools_Villager>
+          <HHTools_Town_Guard>10</HHTools_Town_Guard>
+          <HHTools_Grenadier_Destructive>1.5</HHTools_Grenadier_Destructive>
+          <HHTools_Mercenary_Slasher>7</HHTools_Mercenary_Slasher>
+          <HHTools_Mercenary_Gunner>10</HHTools_Mercenary_Gunner>
+          <HHTools_Mercenary_Elite>10</HHTools_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Villager>10</HHTools_Villager>
+          <HHTools_Town_Guard>10</HHTools_Town_Guard>
+          <HHTools_Grenadier_Destructive>1.5</HHTools_Grenadier_Destructive>
+          <HHTools_Mercenary_Slasher>7</HHTools_Mercenary_Slasher>
+          <HHTools_Mercenary_Gunner>10</HHTools_Mercenary_Gunner>
+          <HHTools_Mercenary_Elite>10</HHTools_Mercenary_Elite>
+          <HHTools_Town_Councilman>10</HHTools_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <!--Gentile/Democratic-->
+    <factionNameMaker>HHTools_FactionNameMaker_Democratic</factionNameMaker>
+    <classicIdeo>true</classicIdeo>
+    <colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <configurationListOrderPriority>6</configurationListOrderPriority>
+    <listOrderPriority>6</listOrderPriority>
+  </FactionDef>
+  <!--Rough/Despotic-->
+  <FactionDef ParentName="HHTools_Settler_Democratic" Name="HHTools_Settler_Despotic" Abstract="True">
+    <defName>HHTools_Settler_Despotic</defName>
+    <factionNameMaker>HHTools_FactionNameMaker_Despotic</factionNameMaker>
+    <classicIdeo>true</classicIdeo>
+    <naturalEnemy>true</naturalEnemy>
+    <colorSpectrum Inherit="False">
+      <li>(0.8, 0.6, 0.05)</li>
+      <li>(1, 0.85, 0.1)</li>
+    </colorSpectrum>
+    <configurationListOrderPriority>7</configurationListOrderPriority>
+    <listOrderPriority>7</listOrderPriority>
+    <factionIconPath>HHTools/HHTools_Despotic</factionIconPath>
+    <structureMemeWeights>
+      <Greenway_Religion_ChildrenOfAtom MayRequire="FIP.Greenway">4</Greenway_Religion_ChildrenOfAtom>
+      <Greenway_Religion_ChildrenOfTheCathedral MayRequire="FIP.Greenway">3</Greenway_Religion_ChildrenOfTheCathedral>
+      <Greenway_Religion_Hubology MayRequire="FIP.Greenway">3</Greenway_Religion_Hubology>
+      <Greenway_Religion_CanaaniteChurch MayRequire="FIP.Greenway">1</Greenway_Religion_CanaaniteChurch>
+      <Greenway_Religion_AbbeyOfTheRoad MayRequire="FIP.Greenway">1</Greenway_Religion_AbbeyOfTheRoad>
+      <Greenway_Religion_OrderOfOurLadyOfTheWaters MayRequire="FIP.Greenway">1</Greenway_Religion_OrderOfOurLadyOfTheWaters>
+      <Greenway_Religion_Karma MayRequire="FIP.Greenway">1</Greenway_Religion_Karma>
+      <Greenway_Religion_Shi MayRequire="FIP.Greenway">3</Greenway_Religion_Shi>
+    </structureMemeWeights>
+  </FactionDef>
+
+  <!-- Raider -->
+  <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Raider" Abstract="True">
+    <defName>HHTools_Raider</defName>
+    <pawnSingular>raider</pawnSingular>
+    <pawnsPlural>raiders</pawnsPlural>
+    <configurationListOrderPriority>8</configurationListOrderPriority>
+    <listOrderPriority>8</listOrderPriority>
+    <leaderTitle>warlord</leaderTitle>
+    <factionIconPath>HHTools/HHTools_Raider</factionIconPath>
+    <factionNameMaker>HHTools_FactionNameMaker_Raider</factionNameMaker>
+    <permanentEnemy>true</permanentEnemy>
+    <requiredMemes>
+      <li MayRequire="FIP.Greenway">Raider</li>
+    </requiredMemes>
+    <structureMemeWeights>
+      <Greenway_Religion_ChildrenOfAtom MayRequire="FIP.Greenway">4</Greenway_Religion_ChildrenOfAtom>
+      <Greenway_Religion_ChildrenOfTheCathedral MayRequire="FIP.Greenway">1</Greenway_Religion_ChildrenOfTheCathedral>
+      <Greenway_Religion_ChildrenOfKrvibi MayRequire="FIP.Greenway">1</Greenway_Religion_ChildrenOfKrvibi>
+      <Greenway_Religion_Hubology MayRequire="FIP.Greenway">2</Greenway_Religion_Hubology>
+      <Greenway_Religion_Syncretic MayRequire="FIP.Greenway">2</Greenway_Religion_Syncretic>
+      <Greenway_Religion_Shi MayRequire="FIP.Greenway">2</Greenway_Religion_Shi>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <colorSpectrum>
+      <li>(0.7, 0.1, 0.1)</li>
+      <li>(0.9, 0.3, 0.3)</li>
+    </colorSpectrum>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_Drifter>10</HHTools_Drifter>
+          <HHTools_Thrasher>3</HHTools_Thrasher>
+          <HHTools_Scavenger>10</HHTools_Scavenger>
+          <HHTools_Pirate>10</HHTools_Pirate>
+          <HHTools_Raider_Grenadier_EMP>0.25</HHTools_Raider_Grenadier_EMP>
+          <HHTools_Raider_Grenadier_Smoke>0.25</HHTools_Raider_Grenadier_Smoke>
+          <HHTools_Raider_Grenadier_Destructive>2</HHTools_Raider_Grenadier_Destructive>
+          <HHTools_Raider_Mercenary_Gunner>10</HHTools_Raider_Mercenary_Gunner>
+          <HHTools_Raider_Mercenary_Heavy>6</HHTools_Raider_Mercenary_Heavy>
+          <HHTools_Raider_Mercenary_Slasher>3</HHTools_Raider_Mercenary_Slasher>
+          <HHTools_Raider_Mercenary_Sniper>7</HHTools_Raider_Mercenary_Sniper>
+          <HHTools_Raider_Mercenary_Elite>10</HHTools_Raider_Mercenary_Elite>
+          <HHTools_PirateBoss>5</HHTools_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_Thrasher>10</HHTools_Thrasher>
+          <HHTools_Raider_Mercenary_Slasher>10</HHTools_Raider_Mercenary_Slasher>
+          <HHTools_PirateBoss>5</HHTools_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <HHTools_Scavenger>10</HHTools_Scavenger>
+          <HHTools_Pirate>10</HHTools_Pirate>
+          <HHTools_Raider_Grenadier_EMP>0.25</HHTools_Raider_Grenadier_EMP>
+          <HHTools_Raider_Grenadier_Smoke>0.25</HHTools_Raider_Grenadier_Smoke>
+          <HHTools_Raider_Grenadier_Destructive>2</HHTools_Raider_Grenadier_Destructive>
+          <HHTools_Raider_Mercenary_Gunner>10</HHTools_Raider_Mercenary_Gunner>
+          <HHTools_Raider_Mercenary_Heavy>6</HHTools_Raider_Mercenary_Heavy>
+          <HHTools_Raider_Mercenary_Sniper>7</HHTools_Raider_Mercenary_Sniper>
+          <HHTools_Raider_Mercenary_Elite>10</HHTools_Raider_Mercenary_Elite>
+          <HHTools_PirateBoss>5</HHTools_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_Raider_Grenadier_EMP>0.5</HHTools_Raider_Grenadier_EMP>
+          <HHTools_Raider_Grenadier_Smoke>0.5</HHTools_Raider_Grenadier_Smoke>
+          <HHTools_Raider_Grenadier_Destructive>10</HHTools_Raider_Grenadier_Destructive>
+          <HHTools_Raider_Mercenary_Gunner>1</HHTools_Raider_Mercenary_Gunner>
+          <HHTools_Raider_Mercenary_Heavy>10</HHTools_Raider_Mercenary_Heavy>
+          <HHTools_Raider_Mercenary_Elite>1</HHTools_Raider_Mercenary_Elite>
+          <HHTools_PirateBoss>1</HHTools_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snipers only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <HHTools_Raider_Mercenary_Sniper>10</HHTools_Raider_Mercenary_Sniper>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <HHTools_Drifter>10</HHTools_Drifter>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense, mainly ranged with melee mix-ins -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Thrasher>3</HHTools_Thrasher>
+          <HHTools_Pirate>10</HHTools_Pirate>
+          <HHTools_Raider_Grenadier_Destructive>2</HHTools_Raider_Grenadier_Destructive>
+          <HHTools_Raider_Mercenary_Slasher>3</HHTools_Raider_Mercenary_Slasher>
+          <HHTools_Raider_Mercenary_Sniper>10</HHTools_Raider_Mercenary_Sniper>
+          <HHTools_Raider_Mercenary_Gunner>10</HHTools_Raider_Mercenary_Gunner>
+          <HHTools_Raider_Mercenary_Elite>10</HHTools_Raider_Mercenary_Elite>
+          <HHTools_PirateBoss>10</HHTools_PirateBoss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <!--Global-->
+    <label>wasteland raider gang</label>
+    <description>Ruthless scavengers and murderers who live for the thrill of domination. They often mark their armor with blood and chems, worshiping violence as the only truth.</description>
+  </FactionDef>
+
+  <!-- Tribal -->
+  <FactionDef ParentName="HHTools_Factionbase" Name="FalloutTribalClan" Abstract="True">
+    <defName>FalloutTribalClan</defName>
+    <pawnSingular>tribal</pawnSingular>
+    <pawnsPlural>tribals</pawnsPlural>
+    <categoryTag>Tribal</categoryTag>
+    <leaderTitle>chief</leaderTitle>
+    <factionIconPath>HHTools/HHTools_Tribal</factionIconPath>
+    <techLevel>Neolithic</techLevel>
+    <configurationListOrderPriority>9</configurationListOrderPriority>
+    <listOrderPriority>9</listOrderPriority>
+    <factionNameMaker>HHTools_FactionNameMaker_Tribal</factionNameMaker>
+    <structureMemeWeights>
+      <Greenway_Religion_ChildrenOfAtom MayRequire="FIP.Greenway">1</Greenway_Religion_ChildrenOfAtom>
+      <Greenway_Religion_ChildrenOfKrvibi MayRequire="FIP.Greenway">2</Greenway_Religion_ChildrenOfKrvibi>
+      <Greenway_Religion_Syncretic MayRequire="FIP.Greenway">5</Greenway_Religion_Syncretic>
+      <Greenway_Religion_Karma MayRequire="FIP.Greenway">2</Greenway_Religion_Karma>
+      <Greenway_Religion_Native MayRequire="FIP.Greenway">5</Greenway_Religion_Native>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+    <colorSpectrum>
+      <li>(0.3, 0.6, 0.2)</li>
+      <li>(0.6, 0.9, 0.4)</li>
+    </colorSpectrum>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+      <li>Caravan_Neolithic_Slaver</li>
+      <li>Caravan_Neolithic_ShamanMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>        <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_Tribal_Penitent>5</HHTools_Tribal_Penitent>
+          <HHTools_Tribal_Warrior>5</HHTools_Tribal_Warrior>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+          <HHTools_Tribal_Berserker>5</HHTools_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_Tribal_Penitent>10</HHTools_Tribal_Penitent>
+          <HHTools_Tribal_Warrior>10</HHTools_Tribal_Warrior>
+          <HHTools_Tribal_Berserker>10</HHTools_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <HHTools_Tribal_Breacher>5</HHTools_Tribal_Breacher>
+          <HHTools_Tribal_Penitent>5</HHTools_Tribal_Penitent>
+          <HHTools_Tribal_Warrior>5</HHTools_Tribal_Warrior>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+          <HHTools_Tribal_Berserker>5</HHTools_Tribal_Berserker>
+          <HHTools_TribalChiefRanged_Wastelander>3</HHTools_TribalChiefRanged_Wastelander>
+          <HHTools_TribalChiefRanged_Wastelander>1.5</HHTools_TribalChiefRanged_Wastelander>
+        </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_Tribal_Warrior>20</HHTools_Tribal_Warrior>
+          <Tribal_Child MayRequire="FIP.WestTek">10</Tribal_Child>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+          <HHTools_Tribal_Berserker>5</HHTools_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_Tribal_Trader>1</HHTools_Tribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_Tribal_Warrior>7</HHTools_Tribal_Warrior>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+          <HHTools_Tribal_Berserker>7</HHTools_Tribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Tribal_Warrior>7</HHTools_Tribal_Warrior>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+          <HHTools_Tribal_Berserker>7</HHTools_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <HHTools_Tribal_Archer>10</HHTools_Tribal_Archer>
+          <HHTools_Tribal_Hunter>10</HHTools_Tribal_Hunter>
+          <HHTools_Tribal_HeavyArcher>10</HHTools_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Farmer>1</Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <!--Global-->
+    <label>wasteland tribe</label>
+    <description>Descendants of vault dwellers or surface survivors who abandoned technology generations ago. They worship spirits of the old world and wield makeshift weapons crafted from scrap and bone.</description>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Settler_Democratic" Name="HHTools_California_Settler_Democratic" Abstract="True">
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HHTools_California_Villager>5</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_California_Villager>20</HHTools_California_Villager>
+          <Villager_Child MayRequire="FIP.WestTek">10</Villager_Child>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_California_Town_Trader>1</HHTools_California_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_California_Villager>3</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_California_Villager>10</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Settler_Despotic" Name="HHTools_California_Settler_Despotic" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HHTools_California_Villager>5</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_California_Villager>20</HHTools_California_Villager>
+          <Villager_Child MayRequire="FIP.WestTek">10</Villager_Child>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_California_Town_Trader>1</HHTools_California_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_California_Villager>3</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_California_Villager>10</HHTools_California_Villager>
+          <HHTools_California_Town_Guard>10</HHTools_California_Town_Guard>
+          <HHTools_California_Grenadier_Destructive>1.5</HHTools_California_Grenadier_Destructive>
+          <HHTools_California_Mercenary_Slasher>7</HHTools_California_Mercenary_Slasher>
+          <HHTools_California_Mercenary_Gunner>10</HHTools_California_Mercenary_Gunner>
+          <HHTools_California_Mercenary_Elite>10</HHTools_California_Mercenary_Elite>
+          <HHTools_California_Town_Councilman>10</HHTools_California_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Settler_Democratic" Name="HHTools_Arizona_Settler_Democratic" Abstract="True">
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>5</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>20</HHTools_Arizona_Villager>
+          <Villager_Child MayRequire="FIP.WestTek">10</Villager_Child>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_Arizona_Town_Trader>1</HHTools_Arizona_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_Arizona_Villager>3</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>10</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Settler_Despotic" Name="HHTools_Arizona_Settler_Despotic" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>5</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>20</HHTools_Arizona_Villager>
+          <Villager_Child MayRequire="FIP.WestTek">10</Villager_Child>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_Arizona_Town_Trader>1</HHTools_Arizona_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_Arizona_Villager>3</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Arizona_Villager>10</HHTools_Arizona_Villager>
+          <HHTools_Arizona_Town_Guard>10</HHTools_Arizona_Town_Guard>
+          <HHTools_Arizona_Grenadier_Destructive>1.5</HHTools_Arizona_Grenadier_Destructive>
+          <HHTools_Arizona_Mercenary_Slasher>7</HHTools_Arizona_Mercenary_Slasher>
+          <HHTools_Arizona_Mercenary_Gunner>10</HHTools_Arizona_Mercenary_Gunner>
+          <HHTools_Arizona_Mercenary_Elite>10</HHTools_Arizona_Mercenary_Elite>
+          <HHTools_Arizona_Town_Councilman>10</HHTools_Arizona_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Raider" Name="HHTools_California_RaiderBase" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_California_Drifter>10</HHTools_California_Drifter>
+          <HHTools_California_Thrasher>3</HHTools_California_Thrasher>
+          <HHTools_California_Scavenger>10</HHTools_California_Scavenger>
+          <HHTools_California_Pirate>10</HHTools_California_Pirate>
+          <HHTools_California_Raider_Grenadier_EMP>0.25</HHTools_California_Raider_Grenadier_EMP>
+          <HHTools_California_Raider_Grenadier_Smoke>0.25</HHTools_California_Raider_Grenadier_Smoke>
+          <HHTools_California_Raider_Grenadier_Destructive>2</HHTools_California_Raider_Grenadier_Destructive>
+          <HHTools_California_Raider_Mercenary_Gunner>10</HHTools_California_Raider_Mercenary_Gunner>
+          <HHTools_California_Raider_Mercenary_Heavy>6</HHTools_California_Raider_Mercenary_Heavy>
+          <HHTools_California_Raider_Mercenary_Slasher>3</HHTools_California_Raider_Mercenary_Slasher>
+          <HHTools_California_Raider_Mercenary_Sniper>7</HHTools_California_Raider_Mercenary_Sniper>
+          <HHTools_California_Raider_Mercenary_Elite>10</HHTools_California_Raider_Mercenary_Elite>
+          <HHTools_California_PirateBoss>5</HHTools_California_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_California_Thrasher>10</HHTools_California_Thrasher>
+          <HHTools_California_Raider_Mercenary_Slasher>10</HHTools_California_Raider_Mercenary_Slasher>
+          <HHTools_California_PirateBoss>5</HHTools_California_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <HHTools_California_Scavenger>10</HHTools_California_Scavenger>
+          <HHTools_California_Pirate>10</HHTools_California_Pirate>
+          <HHTools_California_Raider_Grenadier_EMP>0.25</HHTools_California_Raider_Grenadier_EMP>
+          <HHTools_California_Raider_Grenadier_Smoke>0.25</HHTools_California_Raider_Grenadier_Smoke>
+          <HHTools_California_Raider_Grenadier_Destructive>2</HHTools_California_Raider_Grenadier_Destructive>
+          <HHTools_California_Raider_Mercenary_Gunner>10</HHTools_California_Raider_Mercenary_Gunner>
+          <HHTools_California_Raider_Mercenary_Heavy>6</HHTools_California_Raider_Mercenary_Heavy>
+          <HHTools_California_Raider_Mercenary_Sniper>7</HHTools_California_Raider_Mercenary_Sniper>
+          <HHTools_California_Raider_Mercenary_Elite>10</HHTools_California_Raider_Mercenary_Elite>
+          <HHTools_California_PirateBoss>5</HHTools_California_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_California_Raider_Grenadier_EMP>0.5</HHTools_California_Raider_Grenadier_EMP>
+          <HHTools_California_Raider_Grenadier_Smoke>0.5</HHTools_California_Raider_Grenadier_Smoke>
+          <HHTools_California_Raider_Grenadier_Destructive>10</HHTools_California_Raider_Grenadier_Destructive>
+          <HHTools_California_Raider_Mercenary_Gunner>1</HHTools_California_Raider_Mercenary_Gunner>
+          <HHTools_California_Raider_Mercenary_Heavy>10</HHTools_California_Raider_Mercenary_Heavy>
+          <HHTools_California_Raider_Mercenary_Elite>1</HHTools_California_Raider_Mercenary_Elite>
+          <HHTools_California_PirateBoss>1</HHTools_California_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <HHTools_California_Raider_Mercenary_Sniper>10</HHTools_California_Raider_Mercenary_Sniper>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <HHTools_California_Drifter>10</HHTools_California_Drifter>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_California_Thrasher>3</HHTools_California_Thrasher>
+          <HHTools_California_Pirate>10</HHTools_California_Pirate>
+          <HHTools_California_Raider_Grenadier_Destructive>2</HHTools_California_Raider_Grenadier_Destructive>
+          <HHTools_California_Raider_Mercenary_Slasher>3</HHTools_California_Raider_Mercenary_Slasher>
+          <HHTools_California_Raider_Mercenary_Sniper>10</HHTools_California_Raider_Mercenary_Sniper>
+          <HHTools_California_Raider_Mercenary_Gunner>10</HHTools_California_Raider_Mercenary_Gunner>
+          <HHTools_California_Raider_Mercenary_Elite>10</HHTools_California_Raider_Mercenary_Elite>
+          <HHTools_California_PirateBoss>10</HHTools_California_PirateBoss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HHTools_Raider" Name="HHTools_Arizona_RaiderBase" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_Arizona_Drifter>10</HHTools_Arizona_Drifter>
+          <HHTools_Arizona_Thrasher>3</HHTools_Arizona_Thrasher>
+          <HHTools_Arizona_Scavenger>10</HHTools_Arizona_Scavenger>
+          <HHTools_Arizona_Pirate>10</HHTools_Arizona_Pirate>
+          <HHTools_Arizona_Raider_Grenadier_EMP>0.25</HHTools_Arizona_Raider_Grenadier_EMP>
+          <HHTools_Arizona_Raider_Grenadier_Smoke>0.25</HHTools_Arizona_Raider_Grenadier_Smoke>
+          <HHTools_Arizona_Raider_Grenadier_Destructive>2</HHTools_Arizona_Raider_Grenadier_Destructive>
+          <HHTools_Arizona_Raider_Mercenary_Gunner>10</HHTools_Arizona_Raider_Mercenary_Gunner>
+          <HHTools_Arizona_Raider_Mercenary_Heavy>6</HHTools_Arizona_Raider_Mercenary_Heavy>
+          <HHTools_Arizona_Raider_Mercenary_Slasher>3</HHTools_Arizona_Raider_Mercenary_Slasher>
+          <HHTools_Arizona_Raider_Mercenary_Sniper>7</HHTools_Arizona_Raider_Mercenary_Sniper>
+          <HHTools_Arizona_Raider_Mercenary_Elite>10</HHTools_Arizona_Raider_Mercenary_Elite>
+          <HHTools_Arizona_PirateBoss>5</HHTools_Arizona_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_Arizona_Thrasher>10</HHTools_Arizona_Thrasher>
+          <HHTools_Arizona_Raider_Mercenary_Slasher>10</HHTools_Arizona_Raider_Mercenary_Slasher>
+          <HHTools_Arizona_PirateBoss>5</HHTools_Arizona_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <HHTools_Arizona_Scavenger>10</HHTools_Arizona_Scavenger>
+          <HHTools_Arizona_Pirate>10</HHTools_Arizona_Pirate>
+          <HHTools_Arizona_Raider_Grenadier_EMP>0.25</HHTools_Arizona_Raider_Grenadier_EMP>
+          <HHTools_Arizona_Raider_Grenadier_Smoke>0.25</HHTools_Arizona_Raider_Grenadier_Smoke>
+          <HHTools_Arizona_Raider_Grenadier_Destructive>2</HHTools_Arizona_Raider_Grenadier_Destructive>
+          <HHTools_Arizona_Raider_Mercenary_Gunner>10</HHTools_Arizona_Raider_Mercenary_Gunner>
+          <HHTools_Arizona_Raider_Mercenary_Heavy>6</HHTools_Arizona_Raider_Mercenary_Heavy>
+          <HHTools_Arizona_Raider_Mercenary_Sniper>7</HHTools_Arizona_Raider_Mercenary_Sniper>
+          <HHTools_Arizona_Raider_Mercenary_Elite>10</HHTools_Arizona_Raider_Mercenary_Elite>
+          <HHTools_Arizona_PirateBoss>5</HHTools_Arizona_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <HHTools_Arizona_Raider_Grenadier_EMP>0.5</HHTools_Arizona_Raider_Grenadier_EMP>
+          <HHTools_Arizona_Raider_Grenadier_Smoke>0.5</HHTools_Arizona_Raider_Grenadier_Smoke>
+          <HHTools_Arizona_Raider_Grenadier_Destructive>10</HHTools_Arizona_Raider_Grenadier_Destructive>
+          <HHTools_Arizona_Raider_Mercenary_Gunner>1</HHTools_Arizona_Raider_Mercenary_Gunner>
+          <HHTools_Arizona_Raider_Mercenary_Heavy>10</HHTools_Arizona_Raider_Mercenary_Heavy>
+          <HHTools_Arizona_Raider_Mercenary_Elite>1</HHTools_Arizona_Raider_Mercenary_Elite>
+          <HHTools_Arizona_PirateBoss>1</HHTools_Arizona_PirateBoss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <HHTools_Arizona_Raider_Mercenary_Sniper>10</HHTools_Arizona_Raider_Mercenary_Sniper>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <HHTools_Arizona_Drifter>10</HHTools_Arizona_Drifter>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Arizona_Thrasher>3</HHTools_Arizona_Thrasher>
+          <HHTools_Arizona_Pirate>10</HHTools_Arizona_Pirate>
+          <HHTools_Arizona_Raider_Grenadier_Destructive>2</HHTools_Arizona_Raider_Grenadier_Destructive>
+          <HHTools_Arizona_Raider_Mercenary_Slasher>3</HHTools_Arizona_Raider_Mercenary_Slasher>
+          <HHTools_Arizona_Raider_Mercenary_Sniper>10</HHTools_Arizona_Raider_Mercenary_Sniper>
+          <HHTools_Arizona_Raider_Mercenary_Gunner>10</HHTools_Arizona_Raider_Mercenary_Gunner>
+          <HHTools_Arizona_Raider_Mercenary_Elite>10</HHTools_Arizona_Raider_Mercenary_Elite>
+          <HHTools_Arizona_PirateBoss>10</HHTools_Arizona_PirateBoss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="FalloutTribalClan" Name="HHTools_California_TribalBase" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_California_Tribal_Penitent>5</HHTools_California_Tribal_Penitent>
+          <HHTools_California_Tribal_Warrior>5</HHTools_California_Tribal_Warrior>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+          <HHTools_California_Tribal_Berserker>5</HHTools_California_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_California_Tribal_Penitent>10</HHTools_California_Tribal_Penitent>
+          <HHTools_California_Tribal_Warrior>10</HHTools_California_Tribal_Warrior>
+          <HHTools_California_Tribal_Berserker>10</HHTools_California_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <HHTools_California_Tribal_Breacher>5</HHTools_California_Tribal_Breacher>
+          <HHTools_California_Tribal_Penitent>5</HHTools_California_Tribal_Penitent>
+          <HHTools_California_Tribal_Warrior>5</HHTools_California_Tribal_Warrior>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+          <HHTools_California_Tribal_Berserker>5</HHTools_California_Tribal_Berserker>
+          <HHTools_California_TribalChiefRanged>3</HHTools_California_TribalChiefRanged>
+          <HHTools_California_TribalChiefRanged>1.5</HHTools_California_TribalChiefRanged>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_California_Tribal_Warrior>20</HHTools_California_Tribal_Warrior>
+          <Tribal_Child MayRequire="FIP.WestTek">10</Tribal_Child>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+          <HHTools_California_Tribal_Berserker>5</HHTools_California_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_California_Tribal_Trader>1</HHTools_California_Tribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_California_Tribal_Warrior>7</HHTools_California_Tribal_Warrior>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+          <HHTools_California_Tribal_Berserker>7</HHTools_California_Tribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_California_Tribal_Warrior>7</HHTools_California_Tribal_Warrior>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+          <HHTools_California_Tribal_Berserker>7</HHTools_California_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <HHTools_California_Tribal_Archer>10</HHTools_California_Tribal_Archer>
+          <HHTools_California_Tribal_Hunter>10</HHTools_California_Tribal_Hunter>
+          <HHTools_California_Tribal_HeavyArcher>10</HHTools_California_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Farmer>1</Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="FalloutTribalClan" Name="HHTools_Arizona_TribalBase" Abstract="True">
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HHTools_Arizona_Tribal_Penitent>5</HHTools_Arizona_Tribal_Penitent>
+          <HHTools_Arizona_Tribal_Warrior>5</HHTools_Arizona_Tribal_Warrior>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+          <HHTools_Arizona_Tribal_Berserker>5</HHTools_Arizona_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <HHTools_Arizona_Tribal_Penitent>10</HHTools_Arizona_Tribal_Penitent>
+          <HHTools_Arizona_Tribal_Warrior>10</HHTools_Arizona_Tribal_Warrior>
+          <HHTools_Arizona_Tribal_Berserker>10</HHTools_Arizona_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <HHTools_Arizona_Tribal_Breacher>5</HHTools_Arizona_Tribal_Breacher>
+          <HHTools_Arizona_Tribal_Penitent>5</HHTools_Arizona_Tribal_Penitent>
+          <HHTools_Arizona_Tribal_Warrior>5</HHTools_Arizona_Tribal_Warrior>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+          <HHTools_Arizona_Tribal_Berserker>5</HHTools_Arizona_Tribal_Berserker>
+          <HHTools_Arizona_TribalChiefRanged>3</HHTools_Arizona_TribalChiefRanged>
+          <HHTools_Arizona_TribalChiefRanged>1.5</HHTools_Arizona_TribalChiefRanged>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HHTools_Arizona_Tribal_Warrior>20</HHTools_Arizona_Tribal_Warrior>
+          <Tribal_Child MayRequire="FIP.WestTek">10</Tribal_Child>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+          <HHTools_Arizona_Tribal_Berserker>5</HHTools_Arizona_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <HHTools_Arizona_Tribal_Trader>1</HHTools_Arizona_Tribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <HHTools_Arizona_Tribal_Warrior>7</HHTools_Arizona_Tribal_Warrior>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+          <HHTools_Arizona_Tribal_Berserker>7</HHTools_Arizona_Tribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HHTools_Arizona_Tribal_Warrior>7</HHTools_Arizona_Tribal_Warrior>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+          <HHTools_Arizona_Tribal_Berserker>7</HHTools_Arizona_Tribal_Berserker>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <HHTools_Arizona_Tribal_Archer>10</HHTools_Arizona_Tribal_Archer>
+          <HHTools_Arizona_Tribal_Hunter>10</HHTools_Arizona_Tribal_Hunter>
+          <HHTools_Arizona_Tribal_HeavyArcher>10</HHTools_Arizona_Tribal_HeavyArcher>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="FIP.Greenway">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Tribal_Farmer>1</Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+</Defs>
