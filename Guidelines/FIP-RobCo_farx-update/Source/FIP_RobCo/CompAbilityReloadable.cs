@@ -1,0 +1,127 @@
+using RimWorld;
+using System.Collections.Generic;
+using Verse;
+using Verse.AI;
+
+namespace FIP_RobCo
+{
+    public class CompAbilityReloadable : ThingComp
+    {
+        public CompProperties_AbilityReloadable Props => (CompProperties_AbilityReloadable)props;
+
+        public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn selPawn)
+        {
+            if (!(parent is Pawn mech))
+            {
+                yield break;
+            }
+
+            if (!mech.Faction.IsPlayerSafe())
+            {
+                yield break;
+            }
+
+            CompAbilityEffect_LaunchProjectileMultiple reloadableAbility = GetReloadableAbility(mech);
+            if (reloadableAbility == null || reloadableAbility.Props.ammoDef == null)
+            {
+                yield break;
+            }
+
+            if (reloadableAbility.CurrentCharges >= reloadableAbility.Props.maxCharges)
+            {
+                yield break;
+            }
+
+            if (!selPawn.CanReach(mech, PathEndMode.Touch, Danger.Deadly))
+            {
+                yield return new FloatMenuOption("CannotReload".Translate() + ": " + "NoPath".Translate(), null);
+                yield break;
+            }
+
+            if (mech.inventory == null)
+            {
+                yield break;
+            }
+
+            int ammoInColonistInventory = selPawn.inventory?.innerContainer.TotalStackCountOfDef(reloadableAbility.Props.ammoDef) ?? 0;
+            int ammoNeeded = (reloadableAbility.Props.maxCharges - reloadableAbility.CurrentCharges) * reloadableAbility.Props.ammoCountPerCharge;
+
+            if (ammoInColonistInventory < reloadableAbility.Props.ammoCountPerCharge)
+            {
+                Thing ammoOnMap = GenClosest.ClosestThingReachable(
+                    selPawn.Position,
+                    selPawn.Map,
+                    ThingRequest.ForDef(reloadableAbility.Props.ammoDef),
+                    PathEndMode.ClosestTouch,
+                    TraverseParms.For(selPawn),
+                    9999f,
+                    (Thing t) => !t.IsForbidden(selPawn) && selPawn.CanReserve(t)
+                );
+
+                if (ammoOnMap == null)
+                {
+                    yield return new FloatMenuOption("CannotReload".Translate() + ": " + "CommandReload_NoAmmo".Translate(reloadableAbility.Props.ammoDef.label), null);
+                    yield break;
+                }
+            }
+
+            string label = string.Format("ReloadMechAbility".Translate(mech.LabelShort, reloadableAbility.Props.ammoDef.label));
+            
+            yield return FloatMenuUtility.DecoratePrioritizedTask(
+                new FloatMenuOption(label, delegate
+                {
+                    Job job = JobMaker.MakeJob(JobDefOf_FIPRobCo.ReloadMechAbility, mech);
+                    job.count = ammoNeeded;
+                    selPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                }),
+                selPawn,
+                mech
+            );
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            if (!(parent is Pawn mech))
+            {
+                return null;
+            }
+
+            CompAbilityEffect_LaunchProjectileMultiple reloadableAbility = GetReloadableAbility(mech);
+            if (reloadableAbility == null)
+            {
+                return null;
+            }
+
+            return string.Format("{0}: {1} / {2}", 
+                reloadableAbility.Props.chargeNoun.CapitalizeFirst(), 
+                reloadableAbility.CurrentCharges, 
+                reloadableAbility.Props.maxCharges);
+        }
+
+        private CompAbilityEffect_LaunchProjectileMultiple GetReloadableAbility(Pawn mech)
+        {
+            if (mech.abilities?.abilities == null)
+            {
+                return null;
+            }
+
+            foreach (Ability ability in mech.abilities.abilities)
+            {
+                CompAbilityEffect_LaunchProjectileMultiple comp = ability.CompOfType<CompAbilityEffect_LaunchProjectileMultiple>();
+                if (comp != null && comp.Props.ammoDef != null)
+                {
+                    return comp;
+                }
+            }
+            return null;
+        }
+    }
+
+    public class CompProperties_AbilityReloadable : CompProperties
+    {
+        public CompProperties_AbilityReloadable()
+        {
+            compClass = typeof(CompAbilityReloadable);
+        }
+    }
+}

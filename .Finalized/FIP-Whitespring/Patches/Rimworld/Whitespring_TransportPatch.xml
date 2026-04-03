@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- ROYALTY -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ShuttleIncoming"]/label</xpath>
+        <value>
+            <label>vertibird (incoming)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ShuttleLeaving"]/label</xpath>
+        <value>
+            <label>vertibird (leaving)</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+    <xpath>Defs/WorldObjectDef[defName="TravelingShuttle"]/label</xpath>
+    <value><label>vertibird</label></value>
+  </Operation>
+</Patch>

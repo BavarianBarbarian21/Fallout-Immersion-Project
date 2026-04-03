@@ -3,11 +3,18 @@
   <packageId>FIP.Hubris</packageId>
   <name>FIP - Hubris</name>
   <author>BavarianBarbarian21</author>
-  <description>Hubris mod for Fallout Collaboration Project. Adds new content and features.</description>
+  <description>Hubris reimagines Royalty's anima and psycast systems as cryptid occultism for a Fallout playthrough. It renames psylinks into cryptid insight, recasts meditation and linking text into occult study, and replaces anima tree visuals with Mothman-themed shrine content.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+  <modDependencies>
+	<li>
+		<packageId>Ludeon.RimWorld.Royalty</packageId>
+		<displayName>Royalty</displayName>
+	</li>
+  </modDependencies>
   <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
     <li>FIP.Donaustahl</li>
   </loadAfter>
 </ModMetaData>

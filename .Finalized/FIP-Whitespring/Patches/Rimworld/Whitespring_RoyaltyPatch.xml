@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Replace Royalty-specific throne/throneroom references with presidential equivalents -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Throne"]/label</xpath>
+        <value><label>presidential chair</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Throne"]/description</xpath>
+        <value><description>An ornate chair used by the President for official addresses and meditation. Sitting in the presidential chair may be used as a focus for certain duties and ceremonies.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RoomRoleDef[defName="ThroneRoom"]/label</xpath>
+        <value><label>presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RitualBehaviorDef[defName="ThroneSpeech"]/letterTitle</xpath>
+        <value><letterTitle>Presidential address</letterTitle></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RitualBehaviorDef[defName="ThroneSpeech"]/letterText</xpath>
+        <value><letterText>{ORGANIZER_labelShort} is giving a presidential address from the presidential chair.
+\nIf all goes well, listeners will feel inspired, and gain respect for {ORGANIZER_labelShort}. If it goes poorly, the address will do social damage. The outcome depends on {ORGANIZER_labelShort}'s social abilities.</letterText></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PreceptDef[defName="ThroneSpeech"]/label</xpath>
+        <value><label>presidential address</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PreceptDef[defName="ThroneSpeech"]/description</xpath>
+        <value><description>Initiate a presidential address from the presidential chair. {ORGANIZER_labelShort} will go to {ORGANIZER_possessive} presidential chair and call all colonists to listen. If all goes well, listeners will feel inspired, and gain respect for {ORGANIZER_labelShort}. If it goes poorly, the address will do social damage. The outcome depends on {ORGANIZER_labelShort}'s social abilities.</description></value>
+    </Operation>
+    <!-- Thought stages for reigned in throneroom -> presided in presidential suite -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[1]/label</xpath>
+        <value><label>awful presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[1]/description</xpath>
+        <value><description>I had to preside in an awful presidential suite. It's like a deliberate insult from my inferiors.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[2]/label</xpath>
+        <value><label>dull presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[2]/description</xpath>
+        <value><description>I had to preside in a dull presidential suite. It clearly diminished my stature.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[3]/label</xpath>
+        <value><label>mediocre presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[3]/description</xpath>
+        <value><description>I had to preside in a mediocre presidential suite. It didn't express my stature.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[7]/label</xpath>
+        <value><label>very impressive presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[7]/description</xpath>
+        <value><description>I presided in a very impressive presidential suite. It expressed noticeable stature.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[8]/label</xpath>
+        <value><label>extremely impressive presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[8]/description</xpath>
+        <value><description>I presided in an extremely impressive presidential suite. It effectively demonstrated my stature.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[9]/label</xpath>
+        <value><label>unbelievably impressive presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[9]/description</xpath>
+        <value><description>I presided in an unbelievably impressive presidential suite. The commoners will be amazed at my highness.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[10]/label</xpath>
+        <value><label>wondrously impressive presidential suite</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="ReignedInThroneroom"]/stages/li[10]/description</xpath>
+        <value><description>I presided in a heavenly presidential suite. It matched my grace and nobility.</description></value>
+    </Operation>
+    <!-- Replace assignable description and throne-specific text, does not work because it's abstract 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Throne"]/comps/li[Class="CompProperties_AssignableToPawn"]/noAssignablePawnsDesc</xpath>
+        <value><noAssignablePawnsDesc>Presidential chair ownership requires a person with a presidential title.</noAssignablePawnsDesc></value>
+    </Operation>-->
+    <!-- Replace Precept labels/descriptions referencing grand throne -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GrandThrone"]/label</xpath>
+        <value><label>presidential grand chair</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GrandThrone"]/description</xpath>
+        <value><description>An ornate grand chair used by the President for official addresses and meditation. Sitting in the presidential grand chair grants the occupant a sense of authority and dignity.</description></value>
+    </Operation>
+    <!-- Replace Precept labels/descriptions referencing throne speech -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PreceptDef[defName="ThroneSpeech"]/label</xpath>
+        <value><label>presidential address</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/PreceptDef[defName="ThroneSpeech"]/description</xpath>
+        <value><description>Initiate a presidential address from the presidential chair. All colonists will come and listen. If it goes well, listeners will feel inspired, and gain respect for the speaker. If it goes poorly, the address will do social damage. The outcome depends on the speaker's social abilities.</description></value>
+    </Operation>
+    <!-- Thought labels/descriptions for bestowing ceremony -> inauguration -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="TerribleBestowingCeremony"]/stages/li/label</xpath>
+        <value><label>terrible inauguration</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="TerribleBestowingCeremony"]/stages/li/description</xpath>
+        <value><description>The inauguration somehow felt petty and self-indulgent at the same time.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="UnimpressiveBestowingCeremony"]/stages/li/label</xpath>
+        <value><label>unimpressive inauguration</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="UnimpressiveBestowingCeremony"]/stages/li/description</xpath>
+        <value><description>The inauguration felt mechanical and lifeless.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="HonorableBestowingCeremony"]/stages/li/label</xpath>
+        <value><label>honorable inauguration</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="HonorableBestowingCeremony"]/stages/li/description</xpath>
+        <value><description>The inauguration brought a sense of dignity and honor to the participants.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="GrandioseBestowingCeremony"]/stages/li/label</xpath>
+        <value><label>grandiose inauguration</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThoughtDef[defName="GrandioseBestowingCeremony"]/stages/li/description</xpath>
+        <value><description>The inauguration was like a taste of true grandeur, and a moment of participation in something greater.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/AbilityDef[defName="Speech"]/label</xpath>
+        <value><label>presidential address</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/AbilityDef[defName="Speech"]/description</xpath>
+        <value><description>Initiate a presidential address from the presidential chair. All colonists will come and listen. If it goes well, listeners will feel inspired, and gain respect for the speaker. If it goes poorly, the address will do social damage. The outcome depends on the speaker's social abilities.</description></value>
+    </Operation>
+</Patch>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- RobCo base laser -->
+	<ThingDef Name="RobCo_BaseBullet" ParentName="BaseBullet" Abstract="True">
+		<graphicData>
+			<texPath>RobCo/Misc/Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+	</ThingDef>
+
+	<!-- RobCo base gun  -->
+	<ThingDef Name="RobCo_BaseGun" ParentName="BaseGun" Abstract="True">
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<graphicData>
+			<texPath>RobCo/Misc/Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+</Defs>
