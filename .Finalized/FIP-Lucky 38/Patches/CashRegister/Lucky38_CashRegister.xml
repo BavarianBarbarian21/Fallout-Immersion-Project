@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Cash Register terminology -->
+	<Operation Class="PatchOperationSequence" MayRequire="Orion.CashRegister">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="CashRegister_CashRegister"]/label</xpath>
+				<value>
+					<label>register desk</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="CashRegister_CashRegister"]/description</xpath>
+				<value>
+					<description>A register desk for lounge service, dining tabs, and house accounts. It does nothing on its own, but it anchors the front-of-house operation.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="CashRegister_EmptyRegister"]/reportString</xpath>
+				<value>
+					<reportString>clearing the register desk.</reportString>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

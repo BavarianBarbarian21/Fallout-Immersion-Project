@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VFEProduction">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_Manufacturing"]/label</xpath>
+				<value>
+					<label>Corvega manufacturing</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_Manufacturing"]/description</xpath>
+				<value>
+					<description>Establish larger Corvega production benches and powered industrial work centers for high-throughput fabrication, assembly, and finishing.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableMachiningLarge"]/label</xpath>
+				<value>
+					<label>Corvega machining platform</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableMachiningLarge"]/description</xpath>
+				<value>
+					<description>A large Corvega machining platform with advanced tooling and floor space for rapid fabrication of technical equipment. It consumes power.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableSmithyLarge"]/label</xpath>
+				<value>
+					<label>Corvega forge station</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableSmithyLarge"]/description</xpath>
+				<value>
+					<description>A powered Corvega forge station for weapons, tools, and heavy benchwork. It draws a substantial load from the grid.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge"]/label</xpath>
+				<value>
+					<label>industrial galley range</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge"]/description</xpath>
+				<value>
+					<description>A large industrial cooking line with multiple ovens and burners for rapid meal production under heavy settlement demand.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableTailorLarge"]/label</xpath>
+				<value>
+					<label>industrial tailoring bench</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableTailorLarge"]/description</xpath>
+				<value>
+					<description>A large industrial tailoring bench with powered sewing equipment for rapid clothing output. It can still limp along without power at reduced speed.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/label</xpath>
+				<value>
+					<label>Corvega assembly bench</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/description</xpath>
+				<value>
+					<description>A powered Corvega assembly bench fitted for turning raw stock into industrial and spacer-grade components.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]/label</xpath>
+				<value>
+					<label>industrial butcher line</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]/description</xpath>
+				<value>
+					<description>A motorized butcher line with a rotary saw for fast, precise carcass breakdown. It consumes a heavy amount of power.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableDrugLabElectric"]/label</xpath>
+				<value>
+					<label>industrial chem lab</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableDrugLabElectric"]/description</xpath>
+				<value>
+					<description>A powered Corvega chem lab with heaters, vessels, and gauges for efficient batch processing of compounds and drugs.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_FueledSmelter"]/label</xpath>
+				<value>
+					<label>fueled foundry</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_FueledSmelter"]/description</xpath>
+				<value>
+					<description>A fuel-fed foundry station for recovering usable metal from slag and scrap items.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableStonecutterElectric"]/label</xpath>
+				<value>
+					<label>industrial masonry saw</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_TableStonecutterElectric"]/description</xpath>
+				<value>
+					<description>An industrial masonry saw with powered cutters for turning chunks into building blocks at assembly-line speed.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.Recycling">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/label</xpath>
+				<value>
+					<label>Poseidon waste recovery</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/description</xpath>
+				<value>
+					<description>Develop basic waste recovery systems for turning toxic refuse into usable industrial feedstock.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]/label</xpath>
+				<value>
+					<label>Poseidon advanced reclamation</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]/description</xpath>
+				<value>
+					<description>Expand waste recovery into sealed reclamation lines for alloy, isotope, and compacted refuse products.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_LargePollutionPump"]/label</xpath>
+				<value>
+					<label>Poseidon reclamation pump</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_LargePollutionPump"]/description</xpath>
+				<value>
+					<description>A large Poseidon groundwater reclamation pump that gradually strips pollution from broad terrain and condenses the recovered waste into haulable toxic packs.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_PollutionFastPump"]/label</xpath>
+				<value>
+					<label>high-draw reclamation pump</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_PollutionFastPump"]/description</xpath>
+				<value>
+					<description>A compact high-draw reclamation pump that clears polluted terrain quickly by burning a heavy amount of grid power and packing the recovered contaminants into toxic wastepacks.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_WasteCrate"]/label</xpath>
+				<value>
+					<label>sealed waste locker</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VRecyclingE_WasteCrate"]/description</xpath>
+				<value>
+					<description>A sealed industrial locker for holding toxic waste products and reclaimed hazardous packs without letting them leak into the local environment.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

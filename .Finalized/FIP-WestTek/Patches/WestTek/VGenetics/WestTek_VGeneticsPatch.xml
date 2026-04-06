@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VGeneticsE">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchTabDef[defName="GR_GeneticReseach"]/label</xpath>
+				<value>
+					<label>West Tek research</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/label</xpath>
+				<value>
+					<label>West Tek tissue alteration</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/description</xpath>
+				<value>
+					<description>Recover West Tek tissue processing methods and build the extraction hardware needed to break subjects down into usable strain templates.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/label</xpath>
+				<value>
+					<label>FEV prototyping</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/description</xpath>
+				<value>
+					<description>Use West Tek vats, incubation tanks, and booster benches to assemble new test organisms and forced-evolution prototypes.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/label</xpath>
+				<value>
+					<label>strain duplication</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/description</xpath>
+				<value>
+					<description>Duplicate proven strain templates and preserve valuable West Tek genomes for repeated use.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_HybridImplantology"]/label</xpath>
+				<value>
+					<label>bio-augment grafting</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticCompatibility"]/label</xpath>
+				<value>
+					<label>human strain compatibility</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="GR_GeneticMechahybridization"]/label</xpath>
+				<value>
+					<label>cybernetic hybridization</label>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenePod"]/label</xpath>
+				<value>
+					<label>FEV vat</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenePod"]/description</xpath>
+				<value>
+					<description>A West Tek growth vat where unstable strain templates are drowned in Forced Evolutionary Virus and coaxed into viable test organisms.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_ElectroWomb"]/label</xpath>
+				<value>
+					<label>incubation tank</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_ElectroWomb"]/description</xpath>
+				<value>
+					<description>A compact incubation tank built to mature unstable West Tek specimens from growth cell to full release.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_LargeElectroWomb"]/label</xpath>
+				<value>
+					<label>large incubation tank</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_LargeElectroWomb"]/description</xpath>
+				<value>
+					<description>A heavy growth tank for larger prototypes and mature mutant stock that would never fit inside a compact incubation chamber.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_TissueGrinder"]/label</xpath>
+				<value>
+					<label>tissue macerator</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_TissueGrinder"]/description</xpath>
+				<value>
+					<description>A brutal West Tek processing bench that tears specimen tissue down into usable strain templates and recovers viable experimental material from corpses.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GeneticsTinkeringTable"]/label</xpath>
+				<value>
+					<label>augmentation bench</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GeneticsTinkeringTable"]/description</xpath>
+				<value>
+					<description>An advanced West Tek workbench for compounding boosters, stabilizers, and implant-grade augment parts for mutant research.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GeneticExtractionTable"]/label</xpath>
+				<value>
+					<label>strain extraction table</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GeneticExtractionTable"]/description</xpath>
+				<value>
+					<description>A West Tek extraction rig that renders subject tissue into condensed strain samples for later recombination and vat work.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GrowthCell"]/label</xpath>
+				<value>
+					<label>FEV growth sac</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GrowthCell"]/description</xpath>
+				<value>
+					<description>A portable containment sac holding an unstable FEV embryo until it can be transferred into a West Tek incubation tank.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_ArchoGrowthcell"]/label</xpath>
+				<value>
+					<label>archotech growth sac</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeUnfinished"]/label</xpath>
+				<value>
+					<label>unfinished strain frame</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeAwful"]/label</xpath>
+				<value><label>strain frame (awful)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframePoor"]/label</xpath>
+				<value><label>strain frame (poor)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeNormal"]/label</xpath>
+				<value><label>strain frame (normal)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeGood"]/label</xpath>
+				<value><label>strain frame (good)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeExcellent"]/label</xpath>
+				<value><label>strain frame (excellent)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeMasterwork"]/label</xpath>
+				<value><label>strain frame (masterwork)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeLegendary"]/label</xpath>
+				<value><label>strain frame (legendary)</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_GenoframeNormal"]/description</xpath>
+				<value>
+					<description>A stabilized West Tek strain frame used by the FEV vat as the baseline lattice for new experimental growth stock.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_HumanoidGenetic"]/label</xpath>
+				<value><label>humanoid strain</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_InsectoidGenetic"]/label</xpath>
+				<value><label>insectoid strain</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_ThrumboGenetic"]/label</xpath>
+				<value><label>colossus strain</label></value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="GR_TemplateGenetic"]/label</xpath>
+				<value><label>blank strain template</label></value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

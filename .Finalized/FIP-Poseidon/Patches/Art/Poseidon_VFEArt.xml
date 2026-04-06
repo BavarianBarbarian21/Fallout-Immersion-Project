@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VFEArt">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="RB_FloorLamp"]/description</xpath>
+				<value>
+					<description>A floor-mounted Wattz lamp that lights an area using electricity. It is less powerful than a standing lamp, but it looks right at home in a retro-futurist sitting room.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

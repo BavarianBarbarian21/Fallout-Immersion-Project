@@ -10,10 +10,12 @@ Target finalized mapping:
 - `FIP-Arktos` = biome and worldgen content
 - `FIP-Greenway` = Ideology, dryads, and gauranlen content
 - `FIP-H&HTools` = shared defs and centralized naming ruledefs
+- `FIP-Poseidon` = Vanilla Expanded energy and technology compatches
+- `FIP-Lucky 38` = Vanilla Expanded hospitality compatibility
 
 Current implementation status:
 
-- Finalized target mod folders have been seeded from the current source mods.
+- Finalized target mod folders have been seeded from the current source mods or scaffolded as new staging placeholders.
 - Finalized `About.xml` files have been updated for the new staging identities.
 - Copied `PublishedFileId.txt` files were removed from the finalized tree.
 - Repconn standalone naming files were moved from finalized `FIP-Arktos` into finalized `FIP-H&HTools`.

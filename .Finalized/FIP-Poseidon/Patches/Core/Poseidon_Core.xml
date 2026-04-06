@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="Batteries"]/description</xpath>
+		<value>
+			<description>Develop Poseidon battery banks for storing reserve grid power with the sort of reassuring pre-War safety language that usually meant the opposite.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="BiofuelRefining"]/description</xpath>
+		<value>
+			<description>Build refinery equipment that converts biological feedstock into oil for generators, burners, and industrial systems.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="WatermillGenerator"]/description</xpath>
+		<value>
+			<description>Build Poseidon hydro generators on rivers to generate a steady supply of power.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="SolarPanels"]/label</xpath>
+		<value>
+			<label>Civilian Helios Two</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="SolarPanels"]/description</xpath>
+		<value>
+			<description>Build Poseidon Civilian Helios Two solar panels for domestic and settlement-scale electricity generation.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="AirConditioning"]/description</xpath>
+		<value>
+			<description>Build Wattz heaters and Appalachia Freeze coolers to keep rooms livable in any season, or to maintain proper freezer temperatures.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/description</xpath>
+		<value>
+			<description>Build industrial food dispensers that turn organic feedstocks into edible paste with efficient, relentlessly impersonal pre-War engineering.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="MicroelectronicsBasics"]/description</xpath>
+		<value>
+			<description>Work with advanced microelectronics, unlocking Wattz utility electronics, Radiation King entertainment systems, and more sophisticated industrial control equipment.</description>
+		</value>
+		</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="TubeTelevision"]/description</xpath>
+		<value>
+			<description>Produce Radiation King tube televisions for recreational watching and proper retro-futurist living room culture.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="FlatscreenTelevision"]/description</xpath>
+		<value>
+			<description>Produce Radiation King flatscreen televisions for greater comfort and entertainment.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="HospitalBed"]/description</xpath>
+		<value>
+			<description>Construct Med-Tek hospital beds that improve medical outcomes and turn a rough frontier ward into something closer to a pre-War clinic.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="DeepDrilling"]/description</xpath>
+		<value>
+			<description>Build Corvega deep drills for extracting resources from underground. You will still need a ground-penetrating scanner to find the best seams.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="VitalsMonitor"]/description</xpath>
+		<value>
+			<description>Develop Med-Tek patient telemetry rigs that improve surgery outcomes and long-term recovery when mounted beside a hospital bed.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Chemfuel"]/label</xpath>
+		<value>
+			<label>oil</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Chemfuel"]/description</xpath>
+		<value>
+			<description>A refined liquid fuel suitable for generators, burners, and industrial feed systems. In a saner age Poseidon would have sold it through a smiling subsidiary with a patriotic slogan.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="PowerConduit"]/description</xpath>
+		<value>
+			<description>A bundle of utility cables for moving power around a settlement. It can be placed under walls and other structures as part of a proper pre-War grid.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/label</xpath>
+		<value>
+			<label>oil generator</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/description</xpath>
+		<value>
+			<description>Produces power by consuming oil. It must be periodically refueled by hand unless your settlement has the industrial habits of an actual Poseidon facility.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="WindTurbine"]/label</xpath>
+		<value>
+			<label>civilian wind turbine</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="WindTurbine"]/description</xpath>
+		<value>
+			<description>A utility-grade wind turbine for civilian settlements. It needs a broad, clear approach to keep airflow stable.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Battery"]/description</xpath>
+		<value>
+			<description>A Poseidon reserve battery for holding excess electricity. Charged units remain dangerous when exposed to rain or fire, regardless of what the brochure claims.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="SolarGenerator"]/label</xpath>
+		<value>
+			<label>Civilian Helios Two</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="SolarGenerator"]/description</xpath>
+		<value>
+			<description>A Poseidon Civilian Helios Two solar panel array for settlement-scale power generation. It delivers its best output under full daylight and clear skies.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="GeothermalGenerator"]/label</xpath>
+		<value>
+			<label>geothermal plant</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="GeothermalGenerator"]/description</xpath>
+		<value>
+			<description>A Poseidon geothermal plant that taps deep heat for steady, high-output power. It is exactly the kind of hulking civic infrastructure Poseidon loved to dominate a skyline with.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="WatermillGenerator"]/label</xpath>
+		<value>
+			<label>hydro turbine</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="WatermillGenerator"]/description</xpath>
+		<value>
+			<description>A Poseidon hydro unit designed to draw steady power from moving water. Crowded placements create turbulence and reduce output.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VanometricPowerCell"]/description</xpath>
+		<value>
+			<description>A compact power cell that generates free energy forever without conventional fuel. Even by pre-War standards it feels less like engineering and more like a secret Poseidon program nobody was meant to understand.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="OrbitalTradeBeacon"]/description</xpath>
+		<value>
+			<description>A Wattz orbital trade beacon used to mark goods for exchange with orbital merchants. Dependable, compact, and built for practical frontier commerce.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="CommsConsole"]/description</xpath>
+		<value>
+			<description>A Wattz communications console for contacting other factions and orbital traders. Big, expensive, and full of humming pre-War electronics.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FirefoamPopper"]/description</xpath>
+		<value>
+			<description>A Wattz safety device that sprays fire-retardant foam when it detects a blaze. Exactly the kind of sensible utility hardware that survives long after the corporation that sold it is gone.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Heater"]/description</xpath>
+		<value>
+			<description>A Wattz Electronics heating unit that converts electricity into controlled room heat. It automatically cycles to reach a target temperature.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Cooler"]/description</xpath>
+		<value>
+			<description>An Appalachia Freeze cooling unit that pushes cold air to one side and hot exhaust to the other. It can preserve food or simply make summer tolerable if the rest of the grid holds.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="TubeTelevision"]/description</xpath>
+		<value>
+			<description>A Radiation King tube television built around bulky old display hardware and a distinctly pre-War sense of domestic prestige.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FlatscreenTelevision"]/description</xpath>
+		<value>
+			<description>A Radiation King flatscreen television with crystal-clear image and rich color. Trust the king for all your TV and radio needs.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="MegascreenTelevision"]/description</xpath>
+		<value>
+			<description>A huge Radiation King television for settlements that want their entertainment loud, bright, and impossible to ignore.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="HospitalBed"]/description</xpath>
+		<value>
+			<description>A Med-Tek hospital bed specially designed for clinical care. Adjustable support geometry and integrated instruments improve patient outcomes over ordinary beds.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VitalsMonitor"]/description</xpath>
+		<value>
+			<description>A Med-Tek patient telemetry unit that improves tend quality, surgery success, and recovery when mounted directly beside a hospital bed.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="DrugLab"]/description</xpath>
+		<value>
+			<description>A powered industrial chem lab with containers, heaters, and measurement devices for efficient batch processing of drugs and compounds.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ElectricSmelter"]/label</xpath>
+		<value>
+			<label>Corvega reclamation smelter</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ElectricSmelter"]/description</xpath>
+		<value>
+			<description>A Corvega reclamation smelter that extracts usable metal from slag and mixed scrap. It consumes a lot of power and throws off serious industrial heat.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/label</xpath>
+		<value>
+			<label>oil refinery</label>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/description</xpath>
+		<value>
+			<description>A Poseidon refinery that converts biological matter into oil for generators, burners, and industrial storage systems.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FabricationBench"]/description</xpath>
+		<value>
+			<description>A Corvega fabrication bench equipped with advanced tools for producing sophisticated machines and components from simpler materials.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="HiTechResearchBench"]/description</xpath>
+		<value>
+			<description>A Wattz high-tech research bench with computers and electronic measurement equipment. It enables rapid research and more advanced technical projects.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="ElectricCrematorium"]/description</xpath>
+		<value>
+			<description>A heavy industrial crematorium that vaporizes corpses at extreme temperatures. It is efficient, impersonal, and unmistakably pre-War in temperament.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="DeepDrill"]/description</xpath>
+		<value>
+			<description>A Corvega deep-crust drilling rig for extracting minerals from far below the surface. Use a ground-penetrating scanner to detect the best seams.</description>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="NutrientPasteDispenser"]/description</xpath>
+		<value>
+			<description>An industrial dispenser that synthesizes edible nutrient paste from feedstocks placed in adjacent hoppers. Efficient, joyless, and exactly the sort of machine a large contractor would call progress.</description>
+		</value>
+	</li>
+</Patch>

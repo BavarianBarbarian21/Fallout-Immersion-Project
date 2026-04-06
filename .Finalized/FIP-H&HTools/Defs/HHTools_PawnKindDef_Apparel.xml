@@ -1,755 +1,890 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Settlers -->
-  <PawnKindDef ParentName="VillagerBase" Name="HHTools_VillagerBase">
-    <defName>HHTools_Villager</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GuardBase" Name="HHTools_TownGuardBase">
-    <defName>HHTools_Town_Guard</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TraderBase" Name="HHTools_TownTraderBase">
-    <defName>HHTools_Town_Trader</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="CouncilmanBase" Name="HHTools_TownCouncilmanBase">
-    <defName>HHTools_Town_Councilman</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase" Name="HHTools_SettlerGrenadierDestructiveBase">
-    <defName>HHTools_Grenadier_Destructive</defName>
-    <label>grenadier</label>
-    <combatPower>70</combatPower>
-    <canBeSapper>true</canBeSapper>
-    <isGoodBreacher>true</isGoodBreacher>
-    <weaponTags>
-      <li>GrenadeDestructive</li>
-    </weaponTags>
-    <initialResistanceRange>10~16</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenarySlasherBase" Name="HHTools_SettlerMercenarySlasherBase">
-    <defName>HHTools_Mercenary_Slasher</defName>
-    <initialResistanceRange>10~16</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryGunnerBase" Name="HHTools_SettlerMercenaryGunnerBase">
-    <defName>HHTools_Mercenary_Gunner</defName>
-    <initialResistanceRange>6~10</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryEliteBase" Name="HHTools_SettlerMercenaryEliteBase">
-    <defName>HHTools_Mercenary_Elite</defName>
-    <initialResistanceRange>15~23</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <!-- Raiders -->
-  <PawnKindDef ParentName="DrifterBase" Name="HHTools_DrifterBase">
-    <defName>HHTools_Drifter</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="ScavengerBase" Name="HHTools_ScavengerBase">
-    <defName>HHTools_Scavenger</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="ThrasherBase" Name="HHTools_ThrasherBase">
-    <defName>HHTools_Thrasher</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="PirateKindBase" Name="HHTools_PirateKindBase">
-    <defName>HHTools_Pirate</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase" Name="HHTools_RaiderGrenadierDestructiveBase">
-    <defName>HHTools_Raider_Grenadier_Destructive</defName>
-    <label>grenadier</label>
-    <combatPower>70</combatPower>
-    <canBeSapper>true</canBeSapper>
-    <isGoodBreacher>true</isGoodBreacher>
-    <weaponTags>
-      <li>GrenadeDestructive</li>
-    </weaponTags>
-    <initialResistanceRange>10~16</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase" Name="HHTools_RaiderGrenadierEMPBase">
-    <defName>HHTools_Raider_Grenadier_EMP</defName>
-    <label>EMP grenadier</label>
-    <combatPower>55</combatPower>
-    <weaponTags>
-      <li>GrenadeEMP</li>
-    </weaponTags>
-    <initialResistanceRange>15~24</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase" Name="HHTools_RaiderGrenadierSmokeBase">
-    <defName>HHTools_Raider_Grenadier_Smoke</defName>
-    <label>smoke grenadier</label>
-    <combatPower>55</combatPower>
-    <weaponTags>
-      <li>GrenadeSmoke</li>
-    </weaponTags>
-    <weaponMoney>400~400</weaponMoney>
-    <initialResistanceRange>18~28</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryGunnerBase" Name="HHTools_RaiderMercenaryGunnerBase">
-    <defName>HHTools_Raider_Mercenary_Gunner</defName>
-    <initialResistanceRange>6~10</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryHeavyBase" Name="HHTools_RaiderMercenaryHeavyBase">
-    <defName>HHTools_Raider_Mercenary_Heavy</defName>
-    <initialResistanceRange>14~23</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenarySlasherBase" Name="HHTools_RaiderMercenarySlasherBase">
-    <defName>HHTools_Raider_Mercenary_Slasher</defName>
-    <initialResistanceRange>10~16</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenarySniperBase" Name="HHTools_RaiderMercenarySniperBase">
-    <defName>HHTools_Raider_Mercenary_Sniper</defName>
-    <initialResistanceRange>13~20</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryEliteBase" Name="HHTools_RaiderMercenaryEliteBase">
-    <defName>HHTools_Raider_Mercenary_Elite</defName>
-    <initialResistanceRange>15~23</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="MercenaryEliteTierBase" Name="HHTools_PirateBossBase">
-    <defName>HHTools_PirateBoss</defName>
-    <label>boss</label>
-    <labelPlural>bosses</labelPlural>
-    <factionLeader>true</factionLeader>
-    <canBeSapper>true</canBeSapper>
-    <initialResistanceRange>17~27</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-      <li>FCP_Raider_Armor</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <!-- Tribals -->
-  <PawnKindDef ParentName="TribalPenitentBase" Name="HHTools_TribalPenitentBase">
-    <defName>HHTools_Tribal_Penitent</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TribalArcherBase" Name="HHTools_TribalArcherBase">
-    <defName>HHTools_Tribal_Archer</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TribalWarriorBase" Name="HHTools_TribalWarriorBase">
-    <defName>HHTools_Tribal_Warrior</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="Tribal_Hunter" Name="HHTools_TribalHunterBase">
-    <defName>HHTools_Tribal_Hunter</defName>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalHunterBase" Name="HHTools_TribalTraderBase">
-    <defName>HHTools_Tribal_Trader</defName>
-    <label>trader</label>
-    <trader>true</trader>
-    <apparelRequired Inherit="False">
-      <li>Apparel_TribalHeaddress</li>
-    </apparelRequired>
-    <initialResistanceRange>9~15</initialResistanceRange>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TribalBase" Name="HHTools_TribalBerserkerBase">
-    <defName>HHTools_Tribal_Berserker</defName>
-    <label>berserker</label>
-    <combatPower>65</combatPower>
-    <canBeSapper>true</canBeSapper>
-    <apparelMoney>200~550</apparelMoney>
-    <apparelRequired>
-      <li>Apparel_WarMask</li>
-    </apparelRequired>
-    <weaponMoney>300~300</weaponMoney>
-    <weaponTags>
-      <li>NeolithicMeleeAdvanced</li>
-    </weaponTags>
-    <requiredWorkTags>
-      <li>Violent</li>
-    </requiredWorkTags>
-    <initialWillRange>2~4</initialWillRange>
-    <initialResistanceRange>13~20</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TribalBase" Name="HHTools_TribalHeavyArcherBase">
-    <defName>HHTools_Tribal_HeavyArcher</defName>
-    <label>heavy archer</label>
-    <combatPower>75</combatPower>
-    <apparelMoney>200~550</apparelMoney>
-    <apparelRequired>
-      <li>Apparel_WarMask</li>
-    </apparelRequired>
-    <weaponMoney>250~250</weaponMoney>
-    <weaponTags>
-      <li>NeolithicRangedHeavy</li>
-    </weaponTags>
-    <disallowedTraits>
-      <li>Brawler</li>
-    </disallowedTraits>
-    <requiredWorkTags>
-      <li>Violent</li>
-    </requiredWorkTags>
-    <initialWillRange>2~4</initialWillRange>
-    <initialResistanceRange>14~22</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="TribalBase" Name="HHTools_TribalBreacherBase">
-    <defName>HHTools_Tribal_Breacher</defName>
-    <label>breacher</label>
-    <combatPower>55</combatPower>
-    <itemQuality>Poor</itemQuality>
-    <canBeSapper>true</canBeSapper>
-    <isGoodBreacher>true</isGoodBreacher>
-    <gearHealthRange>0.5~1.8</gearHealthRange>
-    <apparelMoney>200~300</apparelMoney>
-    <apparelRequired>
-      <li>Apparel_WarVeil</li>
-    </apparelRequired>
-    <weaponMoney>150~150</weaponMoney>
-    <weaponTags>
-      <li>NeolithicMeleeDestructive</li>
-    </weaponTags>
-    <initialWillRange>1~3</initialWillRange>
-    <initialResistanceRange>12~19</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalChiefBase" Name="HHTools_TribalChiefRangedWastelanderBase">
-    <defName>HHTools_TribalChiefRanged_Wastelander</defName>
-    <label>archer chief</label>
-    <weaponTags>
-      <li>NeolithicRangedChief</li>
-    </weaponTags>
-    <disallowedTraits>
-      <li>Brawler</li>
-    </disallowedTraits>
-    <initialResistanceRange>16~26</initialResistanceRange>
-    <apparelTags>
-      <li>FCP_Wastelander_Apparel</li>
-    </apparelTags>
-  </PawnKindDef>
-
   <!-- California -->
-  <PawnKindDef ParentName="HHTools_VillagerBase">
-    <defName>HHTools_California_Villager</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Civilian">
+    <defName>HHTools_California_Settlement_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownGuardBase">
-    <defName>HHTools_California_Town_Guard</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Fighter">
+    <defName>HHTools_California_Settlement_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownTraderBase">
-    <defName>HHTools_California_Town_Trader</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Trader">
+    <defName>HHTools_California_Settlement_Trader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownCouncilmanBase">
-    <defName>HHTools_California_Town_Councilman</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Leader">
+    <defName>HHTools_California_Settlement_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerGrenadierDestructiveBase">
-    <defName>HHTools_California_Grenadier_Destructive</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_California_Settlement_Child</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenarySlasherBase">
-    <defName>HHTools_California_Mercenary_Slasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Settlement_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenaryGunnerBase">
-    <defName>HHTools_California_Mercenary_Gunner</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Settlement_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenaryEliteBase">
-    <defName>HHTools_California_Mercenary_Elite</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Settlement_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_DrifterBase">
-    <defName>HHTools_California_Drifter</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Settlement_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_ScavengerBase">
-    <defName>HHTools_California_Scavenger</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Civilian">
+    <defName>HHTools_California_Raider_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_ThrasherBase">
-    <defName>HHTools_California_Thrasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Fighter">
+    <defName>HHTools_California_Raider_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_PirateKindBase">
-    <defName>HHTools_California_Pirate</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Trader">
+    <defName>HHTools_California_Raider_Trader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierDestructiveBase">
-    <defName>HHTools_California_Raider_Grenadier_Destructive</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Leader">
+    <defName>HHTools_California_Raider_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>IndustrialGunAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierEMPBase">
-    <defName>HHTools_California_Raider_Grenadier_EMP</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_California_Raider_Child</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierSmokeBase">
-    <defName>HHTools_California_Raider_Grenadier_Smoke</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Raider_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryGunnerBase">
-    <defName>HHTools_California_Raider_Mercenary_Gunner</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Raider_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryHeavyBase">
-    <defName>HHTools_California_Raider_Mercenary_Heavy</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Raider_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenarySlasherBase">
-    <defName>HHTools_California_Raider_Mercenary_Slasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Raider_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenarySniperBase">
-    <defName>HHTools_California_Raider_Mercenary_Sniper</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Civilian">
+    <defName>HHTools_California_Tribal_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryEliteBase">
-    <defName>HHTools_California_Raider_Mercenary_Elite</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Fighter">
+    <defName>HHTools_California_Tribal_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_PirateBossBase">
-    <defName>HHTools_California_PirateBoss</defName>
-    <apparelTags>
-      <li>FCP_NCR</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalPenitentBase">
-    <defName>HHTools_California_Tribal_Penitent</defName>
-    <apparelTags>
-      <li>FCP_NCR</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalArcherBase">
-    <defName>HHTools_California_Tribal_Archer</defName>
-    <apparelTags>
-      <li>FCP_NCR</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalWarriorBase">
-    <defName>HHTools_California_Tribal_Warrior</defName>
-    <apparelTags>
-      <li>FCP_NCR</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalHunterBase">
-    <defName>HHTools_California_Tribal_Hunter</defName>
-    <apparelTags>
-      <li>FCP_NCR</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalTraderBase">
+  <PawnKindDef ParentName="HHTools_Tribal_Trader">
     <defName>HHTools_California_Tribal_Trader</defName>
-    <apparelTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalBerserkerBase">
-    <defName>HHTools_California_Tribal_Berserker</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Leader">
+    <defName>HHTools_California_Tribal_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedChief</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalHeavyArcherBase">
-    <defName>HHTools_California_Tribal_HeavyArcher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_California_Tribal_Child</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalBreacherBase">
-    <defName>HHTools_California_Tribal_Breacher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Tribal_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalChiefRangedWastelanderBase">
-    <defName>HHTools_California_TribalChiefRanged</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Tribal_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_NCR</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="HHTools_Tribal_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Tribal_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_NCR</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="HHTools_Tribal_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_California_Tribal_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_NCR</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Californian</li>
+    </weaponTags>
   </PawnKindDef>
 
   <!-- Arizona -->
-  <PawnKindDef ParentName="HHTools_VillagerBase">
-    <defName>HHTools_Arizona_Villager</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Civilian">
+    <defName>HHTools_Arizona_Settlement_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownGuardBase">
-    <defName>HHTools_Arizona_Town_Guard</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Fighter">
+    <defName>HHTools_Arizona_Settlement_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownTraderBase">
-    <defName>HHTools_Arizona_Town_Trader</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Trader">
+    <defName>HHTools_Arizona_Settlement_Trader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TownCouncilmanBase">
-    <defName>HHTools_Arizona_Town_Councilman</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Leader">
+    <defName>HHTools_Arizona_Settlement_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerGrenadierDestructiveBase">
-    <defName>HHTools_Arizona_Grenadier_Destructive</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Arizona_Settlement_Child</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenarySlasherBase">
-    <defName>HHTools_Arizona_Mercenary_Slasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Settlement_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenaryGunnerBase">
-    <defName>HHTools_Arizona_Mercenary_Gunner</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Settlement_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_SettlerMercenaryEliteBase">
-    <defName>HHTools_Arizona_Mercenary_Elite</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Settlement_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_DrifterBase">
-    <defName>HHTools_Arizona_Drifter</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Settlement_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Settlement_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_ScavengerBase">
-    <defName>HHTools_Arizona_Scavenger</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Civilian">
+    <defName>HHTools_Arizona_Raider_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_ThrasherBase">
-    <defName>HHTools_Arizona_Thrasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Fighter">
+    <defName>HHTools_Arizona_Raider_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_PirateKindBase">
-    <defName>HHTools_Arizona_Pirate</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Trader">
+    <defName>HHTools_Arizona_Raider_Trader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierDestructiveBase">
-    <defName>HHTools_Arizona_Raider_Grenadier_Destructive</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Leader">
+    <defName>HHTools_Arizona_Raider_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>IndustrialGunAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierEMPBase">
-    <defName>HHTools_Arizona_Raider_Grenadier_EMP</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Arizona_Raider_Child</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderGrenadierSmokeBase">
-    <defName>HHTools_Arizona_Raider_Grenadier_Smoke</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Raider_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryGunnerBase">
-    <defName>HHTools_Arizona_Raider_Mercenary_Gunner</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Raider_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryHeavyBase">
-    <defName>HHTools_Arizona_Raider_Mercenary_Heavy</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Raider_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenarySlasherBase">
-    <defName>HHTools_Arizona_Raider_Mercenary_Slasher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Raider_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Raider_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenarySniperBase">
-    <defName>HHTools_Arizona_Raider_Mercenary_Sniper</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Civilian">
+    <defName>HHTools_Arizona_Tribal_Civilian</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_RaiderMercenaryEliteBase">
-    <defName>HHTools_Arizona_Raider_Mercenary_Elite</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Fighter">
+    <defName>HHTools_Arizona_Tribal_Fighter</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_PirateBossBase">
-    <defName>HHTools_Arizona_PirateBoss</defName>
-    <apparelTags>
-      <li>FCP_Legion</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalPenitentBase">
-    <defName>HHTools_Arizona_Tribal_Penitent</defName>
-    <apparelTags>
-      <li>FCP_Legion</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalArcherBase">
-    <defName>HHTools_Arizona_Tribal_Archer</defName>
-    <apparelTags>
-      <li>FCP_Legion</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalWarriorBase">
-    <defName>HHTools_Arizona_Tribal_Warrior</defName>
-    <apparelTags>
-      <li>FCP_Legion</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalHunterBase">
-    <defName>HHTools_Arizona_Tribal_Hunter</defName>
-    <apparelTags>
-      <li>FCP_Legion</li>
-    </apparelTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="HHTools_TribalTraderBase">
+  <PawnKindDef ParentName="HHTools_Tribal_Trader">
     <defName>HHTools_Arizona_Tribal_Trader</defName>
-    <apparelTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalBerserkerBase">
-    <defName>HHTools_Arizona_Tribal_Berserker</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Leader">
+    <defName>HHTools_Arizona_Tribal_Leader</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedChief</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalHeavyArcherBase">
-    <defName>HHTools_Arizona_Tribal_HeavyArcher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Arizona_Tribal_Child</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags />
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalBreacherBase">
-    <defName>HHTools_Arizona_Tribal_Breacher</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Tribal_Miner</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="HHTools_TribalChiefRangedWastelanderBase">
-    <defName>HHTools_Arizona_TribalChiefRanged</defName>
-    <apparelTags>
+  <PawnKindDef ParentName="HHTools_Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Tribal_Hunter</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
       <li>FCP_Legion</li>
     </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="HHTools_Tribal_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Tribal_Logger</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Legion</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="HHTools_Tribal_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Arizona_Tribal_Farmer</defName>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Legion</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+      <li>HHTools_Natl</li>
+    </weaponTags>
   </PawnKindDef>
 
 </Defs>

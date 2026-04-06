@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.HelixienGas">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.PipeNetDef[defName="VHGE_HelixienNet"]/resource/name</xpath>
+				<value>
+					<name>Propane</name>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VHGE_GasExtraction"]/label</xpath>
+				<value>
+					<label>propane extraction</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VHGE_GasExtraction"]/description</xpath>
+				<value>
+					<description>Research propane deposits and the pipe-fed burner systems that let it function as a compact industrial fuel.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_Helixien"]/label</xpath>
+				<value>
+					<label>propane</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_Helixien"]/description</xpath>
+				<value>
+					<description>Propane gas.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasSunLamp"]/label</xpath>
+				<value>
+					<label>propane sun lamp</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasSunLamp"]/description</xpath>
+				<value>
+					<description>An industrial lamp bright enough for crop growth, but it burns a steady supply of propane. It shuts itself off at night.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasLamp"]/label</xpath>
+				<value>
+					<label>propane lamp</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasLamp"]/description</xpath>
+				<value>
+					<description>A propane-fed standing lamp for utility lighting. It must be connected to the propane network and can be placed safely outdoors.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasWallLamp"]/label</xpath>
+				<value>
+					<label>propane wall lamp</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasWallLamp"]/description</xpath>
+				<value>
+					<description>A propane-fed wall light for utility corridors and work rooms. It must be connected to the propane network and can be placed safely outdoors.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasFloodlight"]/label</xpath>
+				<value>
+					<label>propane floodlight</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VHGE_GasFloodlight"]/description</xpath>
+				<value>
+					<description>A tall propane floodlight that illuminates a massive area. It is not bright enough for crop growth, but it provides dependable yard lighting when connected to the propane network.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_CommandToggleGas_Label</xpath>
+				<value>
+					<VHGE_CommandToggleGas_Label>Toggle propane flow</VHGE_CommandToggleGas_Label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_CommandToggleGas_Desc</xpath>
+				<value>
+					<VHGE_CommandToggleGas_Desc>Designate propane flow to be toggled on or off. A colonist will come soon to flick the switch.</VHGE_CommandToggleGas_Desc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_InfiniteDeposit</xpath>
+				<value>
+					<VHGE_InfiniteDeposit>A small infinite propane deposit has been found!</VHGE_InfiniteDeposit>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_InfiniteDepositLabel</xpath>
+				<value>
+					<VHGE_InfiniteDepositLabel>Propane deposit</VHGE_InfiniteDepositLabel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_GasOverlayTooltip</xpath>
+				<value>
+					<VHGE_GasOverlayTooltip>Toggle the infinite propane pocket overlay</VHGE_GasOverlayTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VHGE_NeedDeepOrGeyser</xpath>
+				<value>
+					<VHGE_NeedDeepOrGeyser>Propane pumps must be placed on a propane pocket or gas geyser.</VHGE_NeedDeepOrGeyser>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

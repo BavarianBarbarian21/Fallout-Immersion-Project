@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewE">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/label</xpath>
+						<value>
+							<label>honey mesquite shrub</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/description</xpath>
+						<value>
+							<description>A thorny desert shrub carrying honey mesquite pods. The pods roast down into the bitter, stimulating brews that stand in for coffee across the wasteland.</description>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/plant/harvestedThingDef</xpath>
+						<value>
+							<harvestedThingDef>FCP_Raw_Honey_Mesquite</harvestedThingDef>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/plant/sowTags</xpath>
+						<value>
+							<sowTags />
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/label</xpath>
+						<value>
+							<label>honey mesquite pods</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/description</xpath>
+						<value>
+							<description>Dry honey mesquite pods ready to roast into a dark, caffeine-like brew.</description>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/label</xpath>
+						<value>
+							<label>mutated fern patch</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/description</xpath>
+						<value>
+							<description>A dense stand of mutated fern. Its fronds steep into a strong herbal drink that fills the niche of tea in the wasteland.</description>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/plant/harvestedThingDef</xpath>
+						<value>
+							<harvestedThingDef>FCP_Raw_Mutated_Fern</harvestedThingDef>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/plant/sowTags</xpath>
+						<value>
+							<sowTags />
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawTea"]/label</xpath>
+						<value>
+							<label>mutated fern fronds</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawTea"]/description</xpath>
+						<value>
+							<description>Cut mutated fern fronds prepared for steeping into herbal wasteland teas.</description>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/label</xpath>
+						<value>
+							<label>coyote tobacco plant</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/description</xpath>
+						<value>
+							<description>A broad-leafed wasteland tobacco strain commonly dried for chew, cigarettes, and cigars.</description>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/label</xpath>
+						<value>
+							<label>coyote tobacco chew</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/description</xpath>
+						<value>
+							<description>Dried coyote tobacco prepared for chewing, rolling, and smoking.</description>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeCoffee"]/ingredients/li/filter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
+						<value>
+							<li>FCP_Raw_Honey_Mesquite</li>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeCoffee"]/fixedIngredientFilter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
+						<value>
+							<li>FCP_Raw_Honey_Mesquite</li>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeCoffee"]/defaultIngredientFilter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
+						<value>
+							<li>FCP_Raw_Honey_Mesquite</li>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeTea"]/ingredients/li/filter/thingDefs/li[text()="VBE_RawTea"]</xpath>
+						<value>
+							<li>FCP_Raw_Mutated_Fern</li>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeTea"]/fixedIngredientFilter/thingDefs/li[text()="VBE_RawTea"]</xpath>
+						<value>
+							<li>FCP_Raw_Mutated_Fern</li>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeTea"]/defaultIngredientFilter/thingDefs/li[text()="VBE_RawTea"]</xpath>
+						<value>
+							<li>FCP_Raw_Mutated_Fern</li>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Soda"]/label</xpath>
+						<value>
+							<label>homebrew sarsparilla</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_Soda"]/description</xpath>
+						<value>
+							<description>A sweet, fizzy bottle of homebrew sarsparilla. It is more refreshing than nutritious, but the sugar kick is hard to beat.</description>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/HediffDef[defName="VBE_DrankSoda"]/label</xpath>
+						<value>
+							<label>drank homebrew sarsparilla</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_SodaSyrup"]/label</xpath>
+						<value>
+							<label>sarsparilla syrup</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrup"]/label</xpath>
+						<value>
+							<label>make sarsparilla syrup</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_SodaFountain"]/label</xpath>
+						<value>
+							<label>sarsparilla fountain</label>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyAwful"]/label</xpath>
+						<value>
+							<label>punga brandy (awful)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyPoor"]/label</xpath>
+						<value>
+							<label>punga brandy (poor)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyNormal"]/label</xpath>
+						<value>
+							<label>punga brandy (normal)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyGood"]/label</xpath>
+						<value>
+							<label>punga brandy (good)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyExcellent"]/label</xpath>
+						<value>
+							<label>punga brandy (excellent)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMasterwork"]/label</xpath>
+						<value>
+							<label>punga brandy (masterwork)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyLegendary"]/label</xpath>
+						<value>
+							<label>punga brandy (legendary)</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[@Name="VBE_AmbrandyBase"]/description</xpath>
+						<value>
+							<description>Also known as liquid sunshine, punga brandy is a refined liquor distilled from ripe punga fruit. It is rare, expensive, and prized anywhere a properly stocked bar still exists.</description>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMush"]/label</xpath>
+						<value>
+							<label>punga mash</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMust"]/label</xpath>
+						<value>
+							<label>punga must</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="VBE_AmbrandyDistillery"]/label</xpath>
+						<value>
+							<label>punga brandy still</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/HediffDef[defName="VBE_AmbrandyInspiration"]/label</xpath>
+						<value>
+							<label>punga brandy inspiration</label>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/HediffDef[defName="VBE_AmbrandyInspiration"]/labelNoun</xpath>
+						<value>
+							<labelNoun>a punga brandy inspiration</labelNoun>
+						</value>
+					</li>
+				</operations>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

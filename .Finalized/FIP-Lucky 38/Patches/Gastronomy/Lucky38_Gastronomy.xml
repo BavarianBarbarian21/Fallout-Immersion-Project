@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Gastronomy base terminology -->
+	<Operation Class="PatchOperationSequence" MayRequire="Orion.Gastronomy">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Gastronomy_DiningSpot"]/label</xpath>
+				<value>
+					<label>lounge dining spot</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Gastronomy_Waiting"]/labelShort</xpath>
+				<value>
+					<labelShort>Attend</labelShort>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Gastronomy_Waiting"]/pawnLabel</xpath>
+				<value>
+					<pawnLabel>lounge attendant</pawnLabel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Gastronomy_Waiting"]/gerundLabel</xpath>
+				<value>
+					<gerundLabel>attending</gerundLabel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Gastronomy_Waiting"]/description</xpath>
+				<value>
+					<description>Takes orders and serves meals to patrons in your lounges and dining rooms.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Gastronomy_Waiting"]/verb</xpath>
+				<value>
+					<verb>Attend</verb>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="Gastronomy_StandBy"]/reportString</xpath>
+				<value>
+					<reportString>waiting for lounge service.</reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="Gastronomy_TakeOrder"]/reportString</xpath>
+				<value>
+					<reportString>taking an order from TargetB.</reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="Gastronomy_Serve"]/reportString</xpath>
+				<value>
+					<reportString>serving TargetB to TargetA.</reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="Gastronomy_MakeTable"]/reportString</xpath>
+				<value>
+					<reportString>setting a lounge table.</reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_Serviced"]/stages/li[1]/label</xpath>
+				<value>
+					<label>shoddy lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_Serviced"]/stages/li[3]/label</xpath>
+				<value>
+					<label>fair lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_Serviced"]/stages/li[5]/label</xpath>
+				<value>
+					<label>first-class lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_HadToWait"]/stages/li/label</xpath>
+				<value>
+					<label>waited too long for service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_HadToWait"]/stages/li/description</xpath>
+				<value>
+					<description>I had to wait too long before the house served my meal.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[1]/label</xpath>
+				<value>
+					<label>had shoddy lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[1]/description</xpath>
+				<value>
+					<description>The lounge staff handled me poorly.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[5]/label</xpath>
+				<value>
+					<label>had first-class lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[5]/description</xpath>
+				<value>
+					<description>The lounge staff treated me like a proper high roller.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[1]/label</xpath>
+				<value>
+					<label>complimentary meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[1]/description</xpath>
+				<value>
+					<description>The house covered the meal.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[4]/label</xpath>
+				<value>
+					<label>fairly priced meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[6]/label</xpath>
+				<value>
+					<label>very expensive meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_Serviced"]/stages/li[2]/label</xpath>
+				<value>
+					<label>poor lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_Serviced"]/stages/li[4]/label</xpath>
+				<value>
+					<label>good lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[2]/label</xpath>
+				<value>
+					<label>had poor lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[2]/description</xpath>
+				<value>
+					<description>The lounge staff handled me poorly.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[3]/label</xpath>
+				<value>
+					<label>had fair lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[3]/description</xpath>
+				<value>
+					<description>The lounge staff handled me well enough.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[4]/label</xpath>
+				<value>
+					<label>had good lounge service</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_ServicedMood"]/stages/li[4]/description</xpath>
+				<value>
+					<description>The lounge staff treated me well.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[2]/label</xpath>
+				<value>
+					<label>very cheap meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[2]/description</xpath>
+				<value>
+					<description>The meal was an excellent bargain.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[3]/label</xpath>
+				<value>
+					<label>cheap meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[3]/description</xpath>
+				<value>
+					<description>The meal was a good value.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[4]/description</xpath>
+				<value>
+					<description>The meal was fairly priced.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[5]/label</xpath>
+				<value>
+					<label>expensive meal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[5]/description</xpath>
+				<value>
+					<description>The meal cost more than it should have.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="Gastronomy_BoughtFood"]/stages/li[6]/description</xpath>
+				<value>
+					<description>The house charged an outrageous price for that meal.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
