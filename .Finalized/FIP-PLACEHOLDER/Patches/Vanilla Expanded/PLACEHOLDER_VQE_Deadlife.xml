@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/VEF.Storyteller.QuestChainDef[defName="VQE_DeadlifeQuestChain"]/description</xpath>
+    <value>
+      <description>This quest chain will lead you through sealed military silos and continuity bunkers left behind by a dead pre-war command structure. As you loot their dark corridors and piece together old war plans, you will uncover what happened to the garrison that never stood down and to the officer who still rules the ruins below.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/CreepJoinerFormKindDef[defName="VQE_General"]/label</xpath>
+    <value>
+      <label>overseer</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/BackstoryDef[defName="VQE_TheGeneral"]/title</xpath>
+    <value>
+      <title>the overseer</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/BackstoryDef[defName="VQE_TheGeneral"]/titleShort</xpath>
+    <value>
+      <titleShort>overseer</titleShort>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/BackstoryDef[defName="VQE_TheGeneral"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] coordinated Operation: Deadlife from a buried continuity bunker, convinced that a ruined world could still be ruled if the right people endured below. When the bombs fell, [PAWN_pronoun] sealed the command complex, rationed the survivors, and kept issuing orders long after the chain of command had died. Radiation, age, and emergency preservation treatments left [PAWN_objective] a thinking ghoul in dress uniform, half sustained by medicine and half by obsession. [PAWN_pronoun] still waits in the control room, ready to finish the final launch order.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[contains(text(),"Operation: Deadlife") and contains(text(),"shadows")]</xpath>
+    <value>
+      <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of the location of a sealed entrance to one of the continuity bunkers left behind by an old U.S. military emergency command network.
+
+These bunkers were designed to remain sealed for generations, storing the resources needed to rebuild after total collapse. Inside, there should be preserved supplies, old war stockpiles, and command records from the final days before the bombs.
+
+But the bunkers are not empty. The halls below are lightless, and reports speak of feral ghouls stalking the corridors. Restoring power and lights will be essential if we intend to survive the descent.
+
+Somewhere inside should also be command desks and strategic maps that can reveal the location of other bunkers, and perhaps even the central command site where the officers who ran this network made their last stand.
+
+Secure a meaningful share of the bunker&apos;s stored resources to complete the operation.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[contains(text(),"battle maps have revealed")]</xpath>
+    <value>
+      <li>questDescription(askerIsNull==True)-&gt;Recovered military maps have revealed the location of a sealed continuity bunker built by an old U.S. military emergency command network.
+
+These bunkers were designed to remain closed until after total societal collapse, preserving supplies, weapons, and command infrastructure for whatever remained above.
+
+The corridors below are reported to be completely dark, and feral ghouls are said to roam the interior. Restoring power and lights quickly will be critical.
+
+Command tables inside may point us toward other bunkers and, eventually, the central command site that coordinated the network.
+
+Secure a meaningful share of the bunker&apos;s stored resources to complete the operation.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientICBMLaunchSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"intercepted a broadcast") and contains(text(),"shambler apocalypse")]</xpath>
+    <value>
+      <li>questDescription-&gt;We have intercepted a broadcast at a recently raided underground silo: Operation: Deadlife is now underway. Enough resource bunkers have been breached, and the final launch sequence has begun. The transmission confirms that [General_nameFull] has started final preparations at an ancient ICBM launch site.
+
+Refueling of the missiles is already in progress. These warheads are loaded with deadlife dust payloads and, if fired, they will burst high over the planet and spread a near-permanent pall that raises the dead as feral ghouls. Endless ghoul hordes would then overrun the surface and finish what the war started.
+
+We have traced the signal to the launch facility. We must travel there and stop [General_nameFull] before the countdown is completed. The site is expected to be heavily defended, not only by feral ghouls, but also by restored automated defenses.
+
+From the control room, [General_nameFull] will trigger sealed death pits, release feral ghoul packs from containment kennels, flood the complex with rotstink gas, and wake preserved officers from cryogenic caskets.
+
+Only by reaching and destroying the launch terminal can we stop the missiles from firing. Failure to stop the launch in time, or ignoring the threat entirely, will condemn the planet to a global ghoul apocalypse.
+
+This is our only chance to end Operation: Deadlife once and for all.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/GameConditionDef[defName="VQED_ShamblerApocalypse"]/label</xpath>
+    <value>
+      <label>ghoul apocalypse</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/GameConditionDef[defName="VQED_ShamblerApocalypse"]/description</xpath>
+    <value>
+      <description>Detonation of Deadlife dust warheads in the upper atmosphere has permanently altered planetary conditions. A dense death pall now blankets the world. This pall reanimates unburied corpses exposed to the open air as feral ghouls.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/GameConditionDef[defName="VQED_ShamblerApocalypse"]/letterText</xpath>
+    <value>
+      <letterText>Detonation of Deadlife dust warheads in the upper atmosphere has permanently altered planetary conditions. A dense death pall now blankets the world.
+
+This pall reanimates all unburied corpses exposed to the open air. Any non-mechanoid corpse not under a roof will rise again as a feral ghoul. Burned or fully destroyed corpses are unaffected.
+
+While the death pall is active, no normal weather transitions can occur. Rain will not fall, and fires may spread unchecked.
+
+On a global scale, the death pall will linger for anywhere from three seasons to several years. In its wake, roaming feral ghoul hordes will now traverse the world, overrunning settlements and hunting down caravans.</letterText>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/VEF.Planet.MovingBaseDef[defName="VQED_ShamblerHorde"]/label</xpath>
+    <value>
+      <label>feral ghoul horde</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/VEF.Planet.MovingBaseDef[defName="VQED_ShamblerHorde"]/description</xpath>
+    <value>
+      <description>A roaming horde of feral ghouls crossing the world map.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/VEF.Planet.MovingBaseDef[defName="VQED_ShamblerHorde"]/attackConfirmationMessage</xpath>
+    <value>
+      <attackConfirmationMessage>You are about to attack a feral ghoul horde. Are you sure you want to do that?</attackConfirmationMessage>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/PawnKindDef[defName="VQE_MilitaryShambler"]/label</xpath>
+    <value>
+      <label>feral ghoul soldier</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
+    <xpath>/Defs/ThingDef[defName="VQED_MilitaryCrateOfDeadlifeShells"]/description</xpath>
+    <value>
+      <description>A rusted military crate filled with deadlife shells. These artillery rounds are packed with a dust-like compound that settles on nearby human and animal corpses after detonation and raises them as feral ghouls and ghoul-beasts. Many of the shells have lost their potency, but some may still work.</description>
+    </value>
+  </Operation>
+</Patch>
