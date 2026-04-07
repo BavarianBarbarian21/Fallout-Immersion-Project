@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VPersonaWeaponsE">
+    <xpath>/Defs/ThingDef[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]/label</xpath>
+    <value>
+      <label>cryptex command staff</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VPersonaWeaponsE">
+    <xpath>/Defs/ThingDef[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]/description</xpath>
+    <value>
+      <description>A command staff issued to Whitespring executive officers during inspections, briefings, and emergency command duty. Its cryptex head sharpens cryptid insight and helps regulate neural strain, while the embedded attunement core rejects any wielder outside the assigned chain of command.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VPersonaWeaponsE">
+    <xpath>/Defs/ThingDef[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]/comps/li[Class="VEF.Graphics.CompProperties_GraphicCustomization"]/customizationTitle</xpath>
+    <value>
+      <customizationTitle>Cryptex Staff Configuration</customizationTitle>
+    </value>
+  </Operation>
+</Patch>

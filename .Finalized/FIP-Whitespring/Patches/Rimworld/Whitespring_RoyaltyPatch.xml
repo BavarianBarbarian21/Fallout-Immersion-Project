@@ -151,4 +151,34 @@
         <xpath>Defs/AbilityDef[defName="Speech"]/description</xpath>
         <value><description>Initiate a presidential address from the presidential chair. All colonists will come and listen. If it goes well, listeners will feel inspired, and gain respect for the speaker. If it goes poorly, the address will do social damage. The outcome depends on the speaker's social abilities.</description></value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]/label</xpath>
+        <value><label>cryptex molecular blade</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]/description</xpath>
+        <value><description>A crystal-metallic longsword refined for Whitespring security officers. Its mono-molecular edge cuts through armor with ease, while an embedded cryptex core sharpens the wielder&apos;s cryptid insight and stabilizes the weapon&apos;s high-speed response.
+
+The cryptex core can attune to only one bearer at a time. Once that bond is established, the blade responds with extreme speed and precision and rejects any wielder outside its assigned handler.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_ZeusHammerBladelink"]/label</xpath>
+        <value><label>pulse hammer</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_ZeusHammerBladelink"]/description</xpath>
+        <value><description>A Whitespring warhammer with an embedded EMP capacitor. On impact it discharges a powerful pulse in addition to the physical blow, making it especially effective against power armor, robots, and other advanced hardware.
+
+Its cryptex guidance core can attune to only one bearer at a time. Once linked, the hammer tracks the wielder&apos;s timing and strike rhythm with unusual accuracy and rejects any hand outside its assigned operator.</description></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]/label</xpath>
+        <value><label>plasma officer sword</label></value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]/description</xpath>
+        <value><description>A metal-cored officer&apos;s sword wrapped in a sheath of captive plasma. Targets are sliced by the inner edge and burned by the surrounding field, giving Whitespring officers a close-range weapon that can cut and cauterize in the same strike.
+
+Its cryptex guidance core can attune to only one bearer at a time. Once linked, the sword responds with unusual speed and control and rejects any wielder outside its assigned handler.</description></value>
+    </Operation>
 </Patch>

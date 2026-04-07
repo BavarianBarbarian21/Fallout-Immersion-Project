@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_ExtremeHemogenDrain"]/label</xpath>
+        <value>
+          <label>wasting hunger</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_ExtremeHemogenDrain"]/description</xpath>
+        <value>
+          <description>Carriers burn through hemogen at a grotesque rate. Their starving, mutation-wracked metabolism strips nutrients faster than ordinary feeding can replace them.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_CorpseFeeder"]/label</xpath>
+        <value>
+          <label>carrion feeder</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_CorpseFeeder"]/description</xpath>
+        <value>
+          <description>Carriers can still draw nourishment from cold, spoiled blood. Wendigo survivors learn to bleed ruined corpses and irradiated remains when nothing living can sate the hunger.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_AnimalFeeder"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_SanguoFeeder"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_LowHemogenDrain"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="HemogenDrain"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
+        <value>
+          <li>VRE_ExtremeHemogenDrain</li>
+          <li>VRE_CorpseFeeder</li>
+        </value>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Strigoi</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Ekkimian</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Bruxa</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Strigoi"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Ekkimian"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Bruxa"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
