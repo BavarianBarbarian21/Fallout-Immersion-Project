@@ -85,6 +85,9 @@
 		<impact>3</impact>
 		<requireOne>
 			<li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_MutantSlaves</li>
+			</li>
+			<li>
 				<li>IdeoDiversity_Abhorrent</li>
 				<li>IdeoDiversity_Horrible</li>
 				<li>IdeoDiversity_Disapproved</li>
@@ -94,12 +97,25 @@
 				<li>Slavery_Acceptable</li>
 				<li>Slavery_Honorable</li>
 			</li>
+		</requireOne>
+	</MemeDef>
+	<MemeDef ParentName="Greenway_MemesBase">
+		<defName>Greenway_SecondClassMutants</defName>
+		<label>Second Class Mutants</label>
+		<description>Mutants are tolerated so long as they remain beneath the human social order. They can work, serve, and endure, but they are never treated as true equals.</description>
+		<iconPath>Greenway/Memes/Origin</iconPath>
+		<impact>2</impact>
+		<requireOne>
 			<li>
-				<li>BodyMod_Abhorrent</li>
-				<li>BodyMod_Disapproved</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_SecondClassMutants</li>
 			</li>
 			<li>
-				<li>BioSculpter_Despised</li>
+				<li>Slavery_Acceptable</li>
+				<li>Slavery_Honorable</li>
+			</li>
+			<li>
+				<li>IdeoDiversity_Disapproved</li>
+				<li>IdeoDiversity_Standard</li>
 			</li>
 		</requireOne>
 	</MemeDef>
@@ -178,7 +194,7 @@
 		<impact>1</impact>
 		<requireOne>
 			<li>
-				<li>Corpses_DontCare</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_MutantCitizenship</li>
 			</li>
 			<li>
 				<li>IdeoDiversity_Standard</li>
@@ -186,8 +202,24 @@
 				<li>IdeoDiversity_Respected</li>
 				<li>IdeoDiversity_Exalted</li>
 			</li>
+		</requireOne>
+	</MemeDef>
+	<MemeDef ParentName="Greenway_MemesBase">
+		<defName>Greenway_MutantMasters</defName>
+		<label>Mutant Masters</label>
+		<description>Mutants are seen as rightful rulers of the wastes, stronger than baseline humanity and entitled to command lesser laborers beneath them.</description>
+		<iconPath>Greenway/Memes/Origin</iconPath>
+		<impact>2</impact>
+		<requireOne>
 			<li>
-				<li>FungusEating_Preferred</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_MutantMasters</li>
+			</li>
+			<li>
+				<li>Slavery_Acceptable</li>
+				<li>Slavery_Honorable</li>
+			</li>
+			<li>
+				<li>BodyMod_Approved</li>
 			</li>
 		</requireOne>
 	</MemeDef>
@@ -199,19 +231,35 @@
 		<impact>1</impact>
 		<requireOne>
 			<li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_MutantPurge</li>
+			</li>
+			<li>
 				<li>IdeoDiversity_Abhorrent</li>
 				<li>IdeoDiversity_Horrible</li>
 				<li>IdeoDiversity_Disapproved</li>
 			</li>
 			<li>
-				<li>Corpses_Ugly</li>
-			</li>
-			<li>
 				<li>BodyMod_Abhorrent</li>
 				<li>BodyMod_Disapproved</li>
 			</li>
+		</requireOne>
+	</MemeDef>
+	<MemeDef ParentName="Greenway_MemesBase">
+		<defName>Greenway_Utobitha</defName>
+		<label>Utobitha</label>
+		<description>A mutant homeland should belong to mutants alone. Their strength, endurance, and altered bodies are treated as proof that the future belongs to them, not to unaltered wastelanders.</description>
+		<iconPath>Greenway/Memes/Origin</iconPath>
+		<impact>2</impact>
+		<requireOne>
 			<li>
-				<li>BioSculpter_Despised</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Greenway_Precept_Utobitha</li>
+			</li>
+			<li>
+				<li>IdeoDiversity_Abhorrent</li>
+				<li>IdeoDiversity_Horrible</li>
+			</li>
+			<li>
+				<li>BodyMod_Approved</li>
 			</li>
 		</requireOne>
 	</MemeDef>
@@ -373,7 +421,7 @@
 	</MemeDef>
 	<MemeDef ParentName="Greenway_MemesBase">
 		<defName>Greenway_PurityLaw</defName>
-		<label>Purity Law</label>
+		<label>Bavarian Purity Law</label>
 		<description>Why waste crops on feeding animals when you could be making booze? Nukashiners often operate in secret, using makeshift stills and brewing equipment to create their products. Their creations are highly sought after, providing both a source of income and a means of escape from the harsh realities of life in the wasteland.</description>
 		<iconPath>Greenway/Memes/Origin</iconPath>
 		<impact>2</impact>
