@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Başkanlık süitine ihtiyaç var</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>Halkınızdan birinin, başkanlık dairesi gerektiren bir başkanlık unvanı var, ancak herhangi bir başkanlık dairesi atanmamış.
+\nUnvan sahibine uygun bir başkanlık süitinde bir başkanlık koltuğunun atandığından emin olun.
+\nBaşkanlık süiti, unvanın özel gereksinimlerini karşılayacak şekilde uygun boyutlara sahip olmalı ve dekore edilmelidir.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Onursuz başkanlık süiti</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>Halkınızdan birinin başkanlık unvanı ve başkanlık koltuğu var, ancak başkanlık dairesi bu unvanın gerekliliklerini karşılamıyor.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Cumhurbaşkanlığı koltuğu kullanılamıyor</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>Bir başkanlık koltuğu, kurulum şekli nedeniyle kullanılamaz:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Cumhurbaşkanlığı koltuğu iç mekana yerleştirilmelidir.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} etkileyiciliği)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Başlığı karşılıyor</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>başkanlık koltuğu atanmadı.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>Cumhurbaşkanlığı koltuğuna erişilemiyor.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>Başkanlık koltuğu onursuz olduğu için kullanılamıyor.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Onurlu başkanlık koltuğu</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_labelShort} artık başkanlık koltuğundan başkanlık adresleri verebilir. Eğer işler yolunda giderse dinleyiciler ilham alacaklardır. Kötü giderse adres toplumsal zarara yol açacaktır. Sonuç, {PAWN_labelShort}'in sosyal yeteneklerine bağlıdır.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Onursuz yatak odası</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>Halkınızdan birinin belirli özelliklere sahip bir yatak odası gerektiren bir başkanlık unvanı var. Ya hiçbir yatak odası tahsis edilmemiş ya da tahsis edilen yatak odası gereksinimleri karşılamıyor.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>Başlık yatak odasını gerektirir</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>Halkınızdan birinin kişisel yatak odası gerektiren bir başkanlık unvanı var, ancak kendisine tahsis edilmiş bir yatak odası yok.
+\nOnlara kişisel bir yatak odası atayın. Yatak odası, başlığın özel gereksinimlerini karşılayacak şekilde uygun şekilde boyutlandırılmalı ve dekore edilmelidir.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Kabul edilebilir yiyecek yok</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>Halkınızdan birinin belirli gıda gereksinimleri olan bir başkanlık unvanı var. Ancak bu gereksinimleri karşılayan hiçbir yiyecek mevcut değildir.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>Bu anlaşma sonucunda müzakerecinizin kişisel olarak alacağı {FACTION_royalFavorLabel} (Whitespring iyiliği) miktarı.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Bu görev {PAWN_labelShort}'i ve dolayısıyla {PAWN_labelShort} için Whitespring rütbelerini ödüllendirecek.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>Görevi kabul eden kişi {0_name}'ten {0_name} {0_name} alacak</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>{0_name}'ten {0_name} {0_name} almak için katılımcı {0_name}'ten birini seçebilirsiniz.</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_pronoun} sosyal görevleri yerine getiremez. Whitespring rütbesine sahip olanların sosyal becerilere büyük ihtiyacı vardır, bu nedenle {PAWN_pronoun} bir rütbe kazanırsa {PAWN_pronoun} zor zamanlar geçirebilir. Başka bir sömürgeci sosyal açıdan daha becerikli olabilir.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>{PAWN_labelShort}, {PAWN_labelShort} olduğundan {PAWN_labelShort}, rütbenin ayrıcalıklarına tam olarak saygı gösterilmesini talep edecektir. {PAWN_labelShort} belirli iş türlerini yapmayı veya düşük sınıf yiyecekler yemeyi reddedebilir ve kararnameler yayınlayabilir. Başka bir sömürgeci muhtemelen daha esnek olacaktır.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>{FACTION_name} yasalarına göre, {FACTION_name}'i yasal olarak kullanabilmek için kişinin gerekli {FACTION_name} derecesine sahip olması gerekir.
+\n{FACTION_name}, {FACTION_name}'in onun psişik imzasını tespit etme şansı var. Bu diplomatik sonuçlara yol açacaktır.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Bu implant yine de kurulsun mu?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Yine de bu implant yükseltilsin mi?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Bu öğeyi donatmak istediğinizden emin misiniz?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} şu izinlere sahiptir:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} şu izinleri kaybetti:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{1} şu iş türlerini yapmaya istekli değil:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_labelShort} artık başkanlık koltuğundan başkanlık adresleri verebilir. Eğer işler yolunda giderse dinleyiciler ilham alacaklardır. Kötü giderse adres toplumsal zarara yol açacaktır. Sonuç, {PAWN_labelShort}'in sosyal yeteneklerine bağlıdır.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Bu rütbe şu gereksinimleri karşılayan bir başkanlık paketi gerektirir:{1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Bu derece, şu gereksinimleri karşılayan bir yatak odası gerektirir:{1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>{HEIR_nameFull} ölürse bu rütbe halefi olarak {HEIR_nameFull}'e aktarılacaktır.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>{PAWN_pronoun} ölürse bu rütbe için bir halef belirlenmez.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{FACTION_name}, {FACTION_name}'in bir üyesidir.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>{FACTION_name} ile iletişim konsolu aracılığıyla iletişime geçilerek yeni bir halef seçilebilir.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Halefi kaybetti</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{FACTION_name} öldü ve {FACTION_name}'e, {FACTION_name}'ten alınan rütbe için belirlenmiş bir halef kalmadı. Yeni bir halef belirlemek için iletişim konsolu aracılığıyla {FACTION_name} ile iletişime geçebilirsiniz.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>{TITLE}'in rütbesi devralınamaz.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_possessive}, {0_possessive} stresini ortadan kaldırmak amacıyla çılgın bir başkanlık kararnamesi yayınladı ve şimdi bunun uygulanmasını talep ediyor.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_bestRoyalTitleIndef}, {0_bestRoyalTitleIndef}'in {0_bestRoyalTitleIndef} derecesini onaylamak için bir kararname yayınladı ve şimdi bunun uygulanmasını talep ediyor.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Whitespring elçisi bekliyor</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Bir Whitespring elçisi göreve başlama törenini başlatmak için bekliyor.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Resmen işe başlama</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>Elçinin yakınında uygun bir yer yok</BestowingSpotUnavailable>
+  <BeginCeremony>{0_labelShort}'in açılışına başlayın</BeginCeremony>
+  <BestowingCeremonyLabel>resmen işe başlama</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>Açılışın toplam kalitesi şu faktörlere göre belirlenen {0} idi</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Töreni başlatmak için {BESTOWER_definite}'i seçin ve 'Açılışı başlat'ı tıklayın.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Akbahar elçisine ulaşılamıyor!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} meşgul.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>Whitespring elçisi müdahaleden rahatsız oldu ve ayrılmaya karar verdi.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>Whitespring elçisi hayati tehlike nedeniyle ayrılıyor.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>Whitespring elçisi yaşamı tehdit eden sıcaklık nedeniyle ayrılıyor.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>Whitespring elçisi bölgedeki tehlikeli gazlar nedeniyle ayrılıyor.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Açılış yarıda kesildi.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>{PAWN_definite}'in açılışı başladı.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Açılış süresi doldu</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite} açılış törenine katılmadı. Tören iptal edildi.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>{TITLE}'in başkanlık süiti, {TITLE} rütbesinin gereksinimlerini karşılamıyor.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>Elçi, {TITLE}'in başkanlık süitinin {TITLE} rütbesinin gereksinimlerini karşılamamasından rahatsız oldu. Açılış iptal edildi.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Açılıştan ayrıl</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Açılış törenine katılmayı bırakın.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>Açılışı iptal et</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Açılışı derhal sonlandırın. Elçi gidecek ama yakında açılışı gerçekleştirmek için başka bir fırsat doğacak.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Açılışı iptal etmek istediğinizden emin misiniz?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort}, {USER_labelShort}'in ilk psylink seviyesini kazandı! {USER_labelShort} artık bir psikolog.
+
+{USER_labelShort}'in psişik güçleri kullanabilmesi için meditasyon yoluyla psikolojik odaklanmayı geliştirmesi gerekir. Kişi meditasyon yaparken belirli bir nesneye odaklanabilirse bu meditasyonun etkinliği artar.
+
+Farklı insanlar farklı nesnelere odaklanabilirler. Bu, kişinin geçmişine, özelliklerine ve rütbelerine bağlıdır. Örneğin:
+
+- Başkanlık unvanına sahip Psycasters, başkanlık sandalyesi üzerinde meditasyon yapar.
+- Kabile çocukluğuna sahip psikologlar, anima ağaçları ve doğa tapınakları üzerinde meditasyon yapar.
+- Çileci psikologlar boş duvarlara meditasyon yapar.
+- Psikopat psikologlar, tercihen içinde sevdikleri biri varken mezarlara kadar meditasyon yaparlar.
+
+Bir kişinin meditasyon odak türlerini 'i' butonu ile bilgi kartına bakarak görebilirsiniz.</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Enclave yardımını arayın...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Özel bir izin kullanarak yardım isteyin.
+
+Her yardım türü bir kez ücretsiz olarak kullanılabilir, sonrasında tekrar ücretsiz kullanmak için beklemeniz gerekir. Yardımı daha sık kullanabilirsiniz, ancak bunu yapmak bir iyilik gerektirir.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>{FACTION_royalFavorLabel} gün kaldı, maliyeti {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>İzni seçin</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>İzin seçim ekranını açın ve yeni bir izin seçin.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>{0}'ten {0} {0} almak için {0}'inizden birini seçebilirsiniz.
+
+{0} alarak rütbe kazanırsınız. Rütbeler psylink ödülleri ve askeri yardım gibi özel izinler getirir. Ancak daha yüksek sıradaki {0}'in ayrıca özel giyim ve yatak odası mobilyalarına da ihtiyacı olacak.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>{0} sıralamasına göre devre dışı bırakıldı</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>{FACTION_name} şu anda {FACTION_name} tarafından verilen {FACTION_name} rütbesine sahiptir.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} bu rütbenin ayrıcalıklarına tamamen saygı gösterilmesini talep edecektir.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} bu rütbenin ayrıcalıkları konusunda esnektir.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Sonraki sıralama</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>maliyetler {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>{HEIR_labelShort}'in {HEIR_labelShort} sıralamasının halefini {HEIR_labelShort}'ten değiştirin</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>{TITLE}'in {TITLE} sıralamasının halefini belirleyin</RequestSetRoyalHeir>
+
+</LanguageData>

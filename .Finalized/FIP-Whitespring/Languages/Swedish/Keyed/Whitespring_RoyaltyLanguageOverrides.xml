@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Behöver presidentsvit</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>En av dina personer har en presidenttitel som kräver en presidentsvit, men ingen presidentsvit tilldelas.
+\nSe till att titelinnehavaren tilldelas en presidentstol i en lämplig presidentsvit.
+\nPresidentsviten bör vara av lämplig storlek och inredd för att uppfylla titelns specifika krav.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Ovärdig presidentsvit</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>En av dina personer har en presidenttitel och en presidentstol, men presidentsviten uppfyller inte titelns krav.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Presidentstolen är inte användbar</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>En presidentstol är inte användbar på grund av hur den är inställd:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Presidentstolen måste placeras inomhus.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} imponerande)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Tillfredsställer titeln</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>ingen presidentstol tilldelad.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>presidentstolen är inte tillgänglig.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>presidentstol inte användbar eftersom den är ovärdig.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Värdig presidentstol</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_labelShort} kan nu hålla presidenttal från presidentstolen. Om det går bra kommer lyssnarna att känna sig inspirerade. Går det dåligt gör adressen social skada. Resultatet beror på {PAWN_labelShort} sociala förmågor.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Ovärdigt sovrum</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>En av dina personer har en presidenttitel som kräver ett sovrum med specifika egenskaper. Antingen är inget sovrum tilldelat eller så uppfyller det tilldelade sovrummet inte kraven.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>Titel kräver sovrum</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>En av dina personer har en presidenttitel som kräver ett personligt sovrum, men inget sovrum är tilldelat.
+\nTilldela dem ett personligt sovrum. Sovrummet bör vara av lämplig storlek och inrett för att uppfylla titelns specifika krav.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Ingen acceptabel mat</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>En av dina personer har en presidenttitel med specifika livsmedelskrav. Men det finns ingen mat tillgänglig som uppfyller dessa krav.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>Mängden {FACTION_royalFavorLabel} (Whitespring favor) som din förhandlare personligen kommer att få som ett resultat av denna affär.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Detta uppdrag kommer att belöna {PAWN_labelShort} och därmed rankas Whitespring för {PAWN_labelShort}.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>den som accepterade uppdraget kommer att få {0_name} {0_name} från {0_name}</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>du kan välja en av de deltagande {0_name} för att ta emot {0_name} {0_name} från {0_name}</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_pronoun} är oförmögen att utföra sociala uppgifter. De med Whitespring-rang har stort behov av sociala färdigheter, så om {PAWN_pronoun} vinner en rang kan {PAWN_pronoun} ha en svår tid. En annan kolonist kanske är mer socialt skicklig.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>Eftersom {PAWN_labelShort} är {PAWN_labelShort} kommer {PAWN_labelShort} att kräva att rangens privilegier respekteras fullt ut. {PAWN_labelShort} kan vägra att utföra vissa typer av arbete eller äta lågklassig mat, och kommer att utfärda dekret. En annan kolonist skulle förmodligen vara mer flexibel.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>Enligt lagarna i {FACTION_name} måste man ha den erforderliga rangen {FACTION_name} för att lagligt använda en {FACTION_name}.
+\n{FACTION_name}, det finns en chans att {FACTION_name} kommer att upptäcka sin psykiska signatur. Detta kommer att leda till diplomatiska konsekvenser.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Installera detta implantat ändå?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Uppgradera detta implantat ändå?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Är du säker på att du vill utrusta detta föremål?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} har dessa behörigheter:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} förlorade dessa behörigheter:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{1} är inte villig att utföra dessa arbetstyper:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_labelShort} kan nu hålla presidenttal från presidentstolen. Om det går bra kommer lyssnarna att känna sig inspirerade. Går det dåligt gör adressen social skada. Resultatet beror på {PAWN_labelShort} sociala förmågor.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Denna rangering kräver en presidentsvit som uppfyller dessa krav:{1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Denna ranking kräver ett sovrum som uppfyller dessa krav:{1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>Om {HEIR_nameFull} dör, kommer denna rang att överföras till {HEIR_nameFull} som efterträdare.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>Om {PAWN_pronoun} dör, utses ingen efterträdare för denna rang.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{FACTION_name} är medlem i {FACTION_name}.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>En ny efterträdare kan väljas genom att kontakta {FACTION_name} via en kommunikationskonsol.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Efterträdare förlorade</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{FACTION_name} har dött, vilket lämnar {FACTION_name} utan någon utsedd efterträdare för rangen som erhölls från {FACTION_name}. Du kan kontakta {FACTION_name} via en kommunikationskonsol för att utse en ny efterträdare.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>Rangen för {TITLE} kan inte ärvas.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_possessive} har, i ett försök att släppa {0_possessive}-stress, utfärdat ett vilt presidentdekret och kräver nu att det ska genomföras.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_bestRoyalTitleIndef}, för att bekräfta {0_bestRoyalTitleIndef} rang av {0_bestRoyalTitleIndef}, har utfärdat ett dekret och kräver nu att det ska genomföras.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Whitespring sändebud väntar</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Ett sändebud från Whitespring väntar på att påbörja invigningen.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Invigning</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>Ingen lämplig plats nära sändebudet</BestowingSpotUnavailable>
+  <BeginCeremony>Starta invigning för {0_labelShort}</BeginCeremony>
+  <BestowingCeremonyLabel>invigning</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>Invigningens totala kvalitet var {0}, bestämd av dessa faktorer</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Välj {BESTOWER_definite} och klicka på 'Börja invigning' för att påbörja ceremonin.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Kan inte nå Whitesprings sändebud!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} är upptagen.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>Whitesprings sändebud är irriterad över störningarna och har bestämt sig för att lämna.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>Whitesprings sändebud lämnar på grund av livsfara.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>Whitesprings sändebud lämnar på grund av livshotande temperatur.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>Whitesprings sändebud lämnar på grund av farliga gaser i området.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Invigningen har avbrutits.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>{PAWN_definite}:s invigning har börjat.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Invigningen gick ut</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite} dök inte upp till invigningen. Ceremonin har ställts in.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>{TITLE}:s presidentsvit uppfyller inte kraven för rangen {TITLE}.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>Sändebudet är kränkt över att {TITLE}:s presidentsvit inte uppfyller kraven för rangen {TITLE}. Invigningen är inställd.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Lämna invigningen</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Sluta delta i invigningen.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>Avbryt invigningen</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Avsluta invigningen omedelbart. Sändebudet kommer att gå, men snart kommer ytterligare ett tillfälle att genomföra invigningen.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Är du säker på att du vill avbryta invigningen?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort} har fått {USER_labelShort} första nivån av psylink! {USER_labelShort} är nu en psycaster.
+
+För att använda psykiska krafter måste {USER_labelShort} bygga upp psyfokus genom meditation. Effektiviteten av denna meditation ökar om personen kan fokusera på ett specifikt objekt medan han mediterar.
+
+Olika människor kan fokusera på olika föremål. Detta beror på personens bakgrund, egenskaper och rang. Till exempel:
+
+– Psycasters med presidenttitlar mediterar på sin presidentstol.
+- Psycasters med stambarndom mediterar till animaträd och naturhelgedomar.
+- Asketiska psycasters mediterar till tomma väggar.
+– Psykopatiska psycasters mediterar till gravar, helst med en älskad inuti.
+
+Du kan se någons meditationsfokustyper genom att titta på deras informationskort med 'i'-knappen.</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Ring Enklavhjälpen...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Tillkalla hjälp med ett särskilt tillstånd.
+
+Varje typ av hjälpmedel får användas gratis en gång, varefter du måste vänta med att använda det gratis igen. Du kan använda hjälpmedlet oftare, men det kostar pengar att göra det.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>{FACTION_royalFavorLabel} dagar kvar, kostar {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>Välj tillstånd</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>Öppna skärmen för val av tillstånd och välj ett nytt tillstånd.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>Du kan välja en av dina {0} för att ta emot {0} {0} från {0}.
+
+Genom att ta emot {0} får du rang. Ranger ger psylink-belöningar och speciella tillstånd som militär hjälp. Men {0} med högre rang kommer också att behöva specifika kläder och sovrumsmöbler.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>Inaktiverad av rang {0}</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>{FACTION_name} har för närvarande rangen {FACTION_name}, tilldelad av {FACTION_name}.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} kommer att kräva att denna rangs privilegier respekteras fullt ut.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} är flexibel när det gäller denna rangs privilegier.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Nästa rang</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>kostar {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>Ändra efterträdare till {HEIR_labelShort}:s {HEIR_labelShort} rang från {HEIR_labelShort}</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>Utse efterträdare till {TITLE}:s {TITLE} rang</RequestSetRoyalHeir>
+
+</LanguageData>

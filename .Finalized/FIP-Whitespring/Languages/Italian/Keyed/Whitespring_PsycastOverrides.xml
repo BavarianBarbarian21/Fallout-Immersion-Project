@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>Acquisizione di informazioni criptiche</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} ha ottenuto il primo livello di intuizione criptica {USER_labelShort}! {USER_labelShort} ora è un occultista.
+{USER_labelShort} deve sviluppare una concentrazione criptica attraverso la meditazione. L'efficacia di questa meditazione aumenta se la persona riesce a concentrarsi su un oggetto specifico mentre medita.
+
+Persone diverse sono in grado di concentrarsi su oggetti diversi. Questo dipende dai retroscena, dai tratti e dal rango della persona. Ad esempio:
+
+- Gli occultisti con gradi di enclave meditano sui posti loro assegnati.
+- Gli occultisti con infanzia tribale meditano su santuari e totem criptici.
+- Gli occultisti asceti meditano su muri ciechi.
+- Gli occultisti psicopatici meditano sulle tombe, idealmente con una persona cara all'interno.
+
+Puoi vedere i tipi di focus meditativo di qualcuno guardando la sua scheda informativa con il pulsante "i".</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_pronoun} ha acquisito un nuovo livello di intuizione criptica! {USER_pronoun} ora può utilizzare rivelazioni criptiche di quel livello superiore, ma {USER_pronoun} deve prima apprenderle.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>Dopo aver ottenuto il nuovo livello di intuizione criptide, {2} ha appreso automaticamente queste rivelazioni: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>essenza criptida ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Usa l'essenza criptide per apprendere la rivelazione {0}</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Un'inoculazione neurale monouso che addestra una specifica rivelazione criptica.
+
+La dose viene somministrata attraverso un punto di impianto specializzato. Una volta rilasciato nel cervello, il meccanismo forma la conoscenza di una rivelazione specifica, trasmutandosi in tessuto neurale secondo necessità.
+
+{PSYCASTDESCRIPTION}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>richiede una visione criptica</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>Focus criptico</Psyfocus>
+  <PsyfocusLabelGizmo>Focus criptico</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Il focus criptico è un tipo speciale di strutturazione mentale richiesta per utilizzare rivelazioni criptiche. La concentrazione criptica si dissipa nel tempo e deve essere rafforzata con la meditazione regolare. Perdere tutta la concentrazione criptica rende qualcuno incapace di utilizzare le rivelazioni.
+
+Un focus criptide più elevato consente rivelazioni di livello superiore, ma aumenta anche il tasso di dissipazione del focus.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{1}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Fino al livello {0} rivelazioni.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Il focus dei criptidi scende a {0} al giorno.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Tasso di guadagno del focus criptico: {0}/d</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualNeedPsylink>È necessario il tipo di focus insight cryptid {0}</BeginLinkingRitualNeedPsylink>
+  <BeginLinkingRitualMaxPsylinkLevel>Livello massimo di insight criptidi</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_pronoun} ha completato il rituale di collegamento con {PAWN_pronoun}.
+
+{PAWN_pronoun} ora dispone di un approfondimento criptide aggiornato, che consente l'uso di nuove rivelazioni.</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>un totem dell'Uomo Falena</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>Nessun colono che possa collegarsi al Totem dell'Uomo Falena in questo momento.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>Nessun colono con il tipo di focus meditativo naturale.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Hai bisogno di almeno {0} uova di falena.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Deve essere un colono con il tipo di focus meditativo naturale che è al di sotto del livello massimo di intuizione criptide.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Non deve essere insensibile ai criptidi.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>La cerimonia di collegamento è più potente con più partecipanti. Più persone partecipano, meno tempo richiederà la cerimonia e più uova di Falena verranno ripristinate.
+
+Con {1} partecipanti aggiuntivi, le uova dell'Uomo Falena {1} verranno ripristinate alla fine della cerimonia.</AnimaLinkingExplanationBase>
+
+  <!-- ROYALTY / ANIMA (Anima tree -> Mothman Totem) -->
+  <AnimaTree_AboutLetterLabel>Totem dell'Uomo Falena</AnimaTree_AboutLetterLabel>
+  <AnimaTree_AboutLetterText>Il totem dell'Uomo Falena ora ha delle uova {0} attorno ad esso. Questo è sufficiente affinché una persona illuminata inizi il suo primo rituale di collegamento!\n\nIl rituale di collegamento fornisce un livello di intuizione criptide e l'abilità di usare poteri criptidi.</AnimaTree_AboutLetterText>
+
+
+</LanguageData>

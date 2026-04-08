@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>プレジデントスイートが必要</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>国民の 1 人が大統領スイートを必要とする大統領の称号を持っていますが、大統領スイートが割り当てられていません。
+\nタイトル保持者には、適切なプレジデンシャル スイート内のプレジデント チェアが割り当てられていることを確認します。
+\nプレジデント スイートは、タイトルの特定の要件を満たすために適切なサイズと装飾が必要です。</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>威厳のない大統領スイート</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>あなたの国民の 1 人が大統領の称号と大統領の椅子を持っていますが、大統領スイートはその称号の要件を満たしていません。</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>大統領椅子は使用不可</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>大統領椅子は、その設置方法が原因で使用できません。</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>大統領椅子は屋内に設置しなければなりません。</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} 感動)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>タイトルを満たす</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>大統領椅子は割り当てられていない。</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>大統領椅子にはアクセスできません。</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>大統領椅子は品位がないので使えない。</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>威厳のある大統領椅子</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_labelShort} は大統領椅子から大統領演説を行うことができるようになりました。それがうまくいけば、リスナーはインスピレーションを感じるでしょう。下手をすると社会的ダメージを与えるアドレスです。結果は{PAWN_labelShort}の社会的能力に依存します。</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>品格のない寝室</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>あなたの部下の 1 人は、特定の機能を備えた寝室を必要とする大統領の称号を持っています。寝室が割り当てられていないか、割り当てられた寝室が要件を満たしていません。</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>タイトルには寝室が必要です</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>あなたの国民の 1 人は個人の寝室を必要とする大統領の称号を持っていますが、寝室は割り当てられていません。
+\n彼らに個人用の寝室を割り当てます。寝室は、タイトルの特定の要件を満たすために適切なサイズと装飾が必要です。</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>許容できる食べ物はありません</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>あなたの国民の一人は、特定の食品要件を備えた大統領の称号を持っています。しかし、これらの条件を満たす食品は存在しません。</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>この取引の結果として交渉者が個人的に受け取ることになる {FACTION_royalFavorLabel} (ホワイトスプリングの恩恵) の額。</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>このクエストは {PAWN_labelShort} に報酬を与えるため、ホワイトスプリングは {PAWN_labelShort} にランクされます。</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>クエストを受け入れた人は、{0_name} から {0_name} {0_name} を受け取ります。</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>参加している {0_name} の 1 つを選択して、{0_name} から {0_name} {0_name} を受け取ることができます。</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_pronoun} は社会的な仕事ができません。 Whitespring ランクを持つ人は社交スキルを非常に必要とするため、{PAWN_pronoun} がランクを獲得すると、{PAWN_pronoun} は苦労する可能性があります。別の入植者はより社会的に熟達しているかもしれません。</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>{PAWN_labelShort} は {PAWN_labelShort} であるため、{PAWN_labelShort} はランクの特権が完全に尊重されることを要求します。 {PAWN_labelShort} は、特定の種類の仕事をしたり、低級の食べ物を食べることを拒否したり、法令を発行したりする場合があります。別の入植者の方がおそらくより柔軟だろう。</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>{FACTION_name} の法律によれば、{FACTION_name} を合法的に使用するには、{FACTION_name} の必要なランクが必要です。
+\n{FACTION_name}、{FACTION_name} がその精神的特徴を検出する可能性があります。これは外交上の影響につながるだろう。</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>とにかくこのインプラントを取り付けますか？</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>とにかくこのインプラントをアップグレードしますか?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>このアイテムを装備してもよろしいですか?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} には次の権限があります。</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} は次の権限を失いました:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{1} はこれらの作業タイプを実行するつもりはありません:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_labelShort} は大統領椅子から大統領演説を行うことができるようになりました。それがうまくいけば、リスナーはインスピレーションを感じるでしょう。下手をすると社会的ダメージを与えるアドレスです。結果は{PAWN_labelShort}の社会的能力に依存します。</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>このランクには、次の要件を満たすプレジデンシャル スイートが必要です:{1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>このランクには、次の要件を満たす寝室が必要です:{1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>{HEIR_nameFull} が死亡した場合、このランクは後継者として {HEIR_nameFull} に引き継がれます。</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>{PAWN_pronoun} が死亡した場合、このランクの後継者は指定されません。</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{FACTION_name}は{FACTION_name}のメンバーです。</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>新しい後継者は、通信コンソールを通じて {FACTION_name} に連絡することで選択できます。</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>後継者を失った</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{FACTION_name} が死亡したため、{FACTION_name} には、{FACTION_name} から受け取ったランクの後継者が指定されていません。通信コンソールを通じて {FACTION_name} に連絡して、新しい後継者を指定できます。</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>{TITLE}のランクは継承できません。</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_possessive} は、{0_possessive} のストレスを解放しようとして、乱暴な大統領令を発令し、現在その実行を要求しています。</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_bestRoyalTitleIndef}は、{0_bestRoyalTitleIndef}の{0_bestRoyalTitleIndef}ランクを確認するために法令を発行し、現在その履行を要求しています。</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>ホワイトスプリングの特使が待っています</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>ホワイトスプリングの特使が就任式の開始を待っている。</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>就任式</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>特使の近くに適切な場所はありません</BestowingSpotUnavailable>
+  <BeginCeremony>{0_labelShort} の発足を開始</BeginCeremony>
+  <BestowingCeremonyLabel>就任式</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>就任式の総合品質は {0} であり、これらの要因によって決定されました</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>{BESTOWER_definite} を選択し、「就任式を開始」をクリックして式典を開始します。</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>ホワイトスプリングの特使に連絡が取れません!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} は忙しいです。</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>ホワイトスプリングの特使は妨害に腹を立て、立ち去ることにした。</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>ホワイトスプリングの特使は生命の危機を感じたため出発する。</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>ホワイトスプリングの特使は生命を脅かすほどの気温のため出発する。</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>ホワイトスプリングの特使は、地域内に危険なガスが発生しているため出発します。</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>就任式は中断された。</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>{PAWN_definite}の就任式が始まりました。</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>就任式の期限が切れました</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite}は就任式に姿を現さなかった。式典は中止となった。</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>{TITLE} のプレジデント スイートは、{TITLE} のランクの要件を満たしていません。</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>特使は、{TITLE}の大統領スイートが{TITLE}のランクの要件を満たしていないことに腹を立てています。就任式は中止となった。</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>就任式を離れる</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>就任式への参加はやめましょう。</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>就任式の中止</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>直ちに就任式を中止せよ。特使は出発するが、就任式を行う別の機会がすぐに訪れるだろう。</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>就任式をキャンセルしてもよろしいですか?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort} は {USER_labelShort} 第 1 レベルの psylink を取得しました。 {USER_labelShort} はサイキャスターになりました。
+
+超能力を使用するには、{USER_labelShort} は瞑想を通じてサイフォーカスを構築する必要があります。瞑想中に特定の対象に集中できれば、この瞑想の効果は高まります。
+
+人によって集中できる対象が異なります。これは、その人のバックストーリー、特性、ランクによって異なります。たとえば:
+
+- 大統領の称号を持つサイキャスターは、大統領の椅子に座って瞑想します。
+- 部族の子供時代を持つサイキャスターは、アニマの木や自然の神社に瞑想します。
+- 禁欲的なサイキャスターは何もない壁に向かって瞑想します。
+- サイコパスのサイキャスターは、理想的には愛する人と一緒にお墓に向かって瞑想します。
+
+「i」ボタンを押して情報カードを見ると、その人の瞑想の集中タイプを確認できます。</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>エンクレイブの援助に電話してください...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>特別な許可を使用して援助を求めてください。
+
+各タイプの援助は 1 回のみ無料で使用できますが、その後、再度無料で使用できるまで待つ必要があります。援助をより頻繁に使用することもできますが、そうするには好意がかかります。</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>残り {FACTION_royalFavorLabel} 日、料金 {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>許可を選択してください</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>許可の選択画面を開き、新しい許可を選択します。</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>{0} の 1 つを選択して、{0} から {0} {0} を受け取ることができます。
+
+{0}を受け取るとランクが上がります。ランクによってサイリンクの報酬と軍事援助などの特別な許可がもたらされます。ただし、より高いランクの {0} には、特定の衣服や寝室の家具も必要になります。</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>ランク {0} により無効化</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>{FACTION_name} は現在、{FACTION_name} によって授与されたランク {FACTION_name} を持っています。</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} は、このランクの特権が完全に尊重されることを要求します。</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} は、このランクの権限については柔軟です。</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>次のランク</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>コスト {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>{HEIR_labelShort} の {HEIR_labelShort} ランクの後継を {HEIR_labelShort} から変更</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>{TITLE} の {TITLE} ランクの後継者を指定</RequestSetRoyalHeir>
+
+</LanguageData>

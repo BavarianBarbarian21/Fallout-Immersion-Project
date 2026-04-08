@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Elnöki lakosztály kell</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>Az egyik emberednek van elnöki címe, amelyhez elnöki lakosztállyal kell rendelkezni, de nincs kiosztva elnöki lakosztály.
+\nGondoskodjon arról, hogy a cím birtokosa egy elnöki széket kapjon a megfelelő elnöki lakosztályban.
+\nAz elnöki lakosztálynak megfelelő méretűnek és díszítettnek kell lennie, hogy megfeleljen a cím speciális követelményeinek.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Méltatlan elnöki lakosztály</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>Az egyik emberének van elnöki címe és elnöki széke, de az elnöki lakosztály nem felel meg a cím követelményeinek.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Az elnöki szék nem használható</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>Az elnöki szék a felépítése miatt nem használható:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Az elnöki széket zárt térben kell elhelyezni.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} lenyűgöző)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Megfelel a címnek</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>nincs kijelölve elnöki szék.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>az elnöki szék nem hozzáférhető.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>elnöki szék nem használható, mert méltatlan.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Méltóságteljes elnöki szék</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>A {PAWN_labelShort} mostantól az elnöki székből mondhat elnöki beszédet. Ha jól megy, a hallgatók inspirációt fognak érezni. Ha rosszul megy, a cím társadalmi károkat okoz. Az eredmény {PAWN_labelShort} szociális képességeitől függ.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Méltatlan hálószoba</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>Az egyik embered elnöki címmel rendelkezik, amelyhez sajátos jellemzőkkel rendelkező hálószoba szükséges. Vagy nincs kijelölve hálószoba, vagy a hozzárendelt hálószoba nem felel meg a követelményeknek.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>A címhez hálószoba szükséges</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>Az egyik emberednek van elnöki címe, amelyhez személyes hálószoba szükséges, de nincs hozzárendelve hálószoba.
+\nRendeljen nekik egy személyes hálószobát. A hálószobának megfelelő méretűnek és díszítettnek kell lennie, hogy megfeleljen a cím speciális követelményeinek.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Nincs elfogadható étel</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>Az egyik emberednek elnöki címe van, meghatározott élelmezési követelményekkel. De nincs olyan élelmiszer, amely megfelelne ezeknek a követelményeknek.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>A {FACTION_royalFavorLabel} (Whitespring szívesség) összege, amelyet az Ön tárgyalója személyesen kap az üzlet eredményeként.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Ez a küldetés megjutalmazza a {PAWN_labelShort}-et, és így Whitespring a {PAWN_labelShort} rangot kapja.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>aki elfogadta a küldetést, az {0_name} {0_name}-et kap a {0_name}-től</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>választhat egyet a résztvevő {0_name} közül, hogy megkapja a {0_name} {0_name} terméket a {0_name}-től</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>A {PAWN_pronoun} nem képes szociális feladatokra. A Whitespring rangúaknak nagy szükségük van a szociális készségekre, így ha a {PAWN_pronoun} rangot szerez, a {PAWN_pronoun} nehéz dolga lehet. Egy másik gyarmatosító lehet szociálisan ügyesebb.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>Mivel a {PAWN_labelShort} a {PAWN_labelShort}, a {PAWN_labelShort} megköveteli, hogy a rang kiváltságait teljes mértékben tiszteletben tartsák. A {PAWN_labelShort} megtagadhatja bizonyos munkatípusok elvégzését vagy alacsony minőségű ételek fogyasztását, és rendeleteket ad ki. Egy másik telepes valószínűleg rugalmasabb lenne.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>A {FACTION_name} törvényei szerint a {FACTION_name} legális használatához rendelkeznie kell a szükséges {FACTION_name} ranggal.
+\n{FACTION_name}, van esély arra, hogy a {FACTION_name} észleli a pszichés aláírását. Ez diplomáciai következményekhez vezet.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Mégis telepítse ezt az implantátumot?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Mégis frissíti ezt az implantátumot?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Biztosan felszereli ezt az elemet?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>A {PAWN_pronoun} a következő jogosultságokkal rendelkezik:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>A {PAWN_pronoun} elvesztette ezeket az engedélyeket:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>A {1} nem hajlandó elvégezni a következő típusú munkákat:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>A {PAWN_labelShort} mostantól az elnöki székből mondhat elnöki beszédet. Ha jól megy, a hallgatók inspirációt fognak érezni. Ha rosszul megy, a cím társadalmi károkat okoz. Az eredmény {PAWN_labelShort} szociális képességeitől függ.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Ehhez a ranghoz olyan elnöki lakosztály szükséges, amely megfelel a következő követelményeknek:{1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Ehhez a besoroláshoz olyan hálószobára van szükség, amely megfelel a következő követelményeknek:{1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>Ha a {HEIR_nameFull} meghal, ez a rang átkerül a {HEIR_nameFull} utódjára.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>Ha {PAWN_pronoun} meghal, nem jelölnek ki utódot erre a rangra.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>A {FACTION_name} a {FACTION_name} tagja.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>A {FACTION_name} kommunikációs konzolon keresztüli kapcsolatfelvételével új utód választható.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Az utód elveszett</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>A {FACTION_name} meghalt, így a {FACTION_name}-nek nincs kijelölt utódja a {FACTION_name}-től kapott rangra. Kommunikációs konzolon keresztül kapcsolatba léphet a {FACTION_name}-szel új utód kijelöléséhez.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>A {TITLE} rangja nem örökölhető.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>A {0_possessive}, a {0_possessive} stressz oldására, vad elnöki rendeletet adott ki, és most követeli annak végrehajtását.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>A {0_bestRoyalTitleIndef} a {0_bestRoyalTitleIndef} {0_bestRoyalTitleIndef} rangjának megerősítése érdekében rendeletet adott ki, és most követeli annak végrehajtását.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Whitespring követ vár</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Whitespring küldötte várja a beiktatás megkezdését.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Beiktatás</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>Nincs megfelelő hely a küldött közelében</BestowingSpotUnavailable>
+  <BeginCeremony>Indítsa el a {0_labelShort} felavatását</BeginCeremony>
+  <BestowingCeremonyLabel>beiktatás</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>A megnyitó teljes minősége {0} volt, amelyet ezek a tényezők határoztak meg</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Válassza ki a {BESTOWER_definite} elemet, és kattintson a „Begin inauguration” (Beavatás megkezdése) gombra a ceremónia megkezdéséhez.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Nem lehet elérni a Whitespring követet!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>A {0} elfoglalt.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>A Whitespring követ bosszús a beavatkozás miatt, és úgy döntött, hogy távozik.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>A fehér tavaszi követ életveszély miatt távozik.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>A Whitespring küldötte életveszélyes hőmérséklet miatt távozik.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>A Whitespring küldötte a környéken lévő veszélyes gázok miatt távozik.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Az avatást félbeszakították.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>A {PAWN_definite} felavatása megkezdődött.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Az avatás lejárt</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>A {TARGET_definite} nem jelent meg az avatáson. A szertartást törölték.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>A {TITLE} elnöki lakosztálya nem felel meg a {TITLE} rang követelményeinek.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>A küldöttet sérti, hogy a {TITLE} elnöki lakosztálya nem felel meg a {TITLE} rang követelményeinek. Az avatást törölték.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Hagyja az avatást</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Ne vegyen részt az avatáson.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>A beiktatás lemondása</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Azonnal fejezze be az avatást. A küldött elmegy, de hamarosan újabb alkalom nyílik a beiktatás elvégzésére.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Biztos benne, hogy lemondja a beiktatást?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>A {USER_labelShort} megszerezte a {USER_labelShort} első psylink szintjét! A {USER_labelShort} most pszichoszter.
+
+A pszichikai erők használatához a {USER_labelShort}-nek meditációval kell felépítenie a pszichés fókuszt. Ennek a meditációnak a hatékonysága megnő, ha a személy meditáció közben egy adott tárgyra tud összpontosítani.
+
+A különböző emberek különböző tárgyakra képesek összpontosítani. Ez a személy háttértörténetétől, tulajdonságaitól és rangjától függ. Például:
+
+- Az elnöki címmel rendelkező pszichológusok az elnöki székükön elmélkednek.
+- A törzsi gyermekkorú pszichiáterek animafákon és természeti szentélyeken meditálnak.
+- Az aszkéta pszichiáterek üres falakig meditálnak.
+- A pszichopata pszichiáterek a sírokig meditálnak, ideális esetben egy szeretett emberrel.
+
+Megtekintheti valakinek a meditációs fókusztípusait, ha megnézi az információs kártyáját az „i” gombbal.</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Hívja az Enclave segélyt...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Hívjon segítséget külön engedéllyel.
+
+Minden típusú segédeszköz egyszer ingyenesen használható fel, ezután várnia kell, hogy újra ingyenesen felhasználhassa. Használhatja gyakrabban is a segélyt, de ennek szíves költsége van.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>{FACTION_royalFavorLabel} nap van hátra, költségek {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>Válasszon engedélyt</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>Nyissa meg az engedélykiválasztó képernyőt, és válasszon új engedélyt.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>Kiválaszthatja a {0} egyikét, hogy megkapja a {0} {0} {0} készüléket.
+
+A {0} fogadásával rangokat szerez. A rangok psylink-jutalmat és különleges engedélyeket, például katonai segélyt hoznak. A magasabb besorolású {0}-nek azonban speciális ruházatra és hálószobabútorokra is szüksége lesz.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>{0} rang miatt letiltva</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>A {FACTION_name} jelenleg a {FACTION_name} ranggal rendelkezik, amelyet a {FACTION_name} ítél oda.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>A {PAWN_labelShort} követelni fogja ennek a rangnak a kiváltságai teljes tiszteletben tartását.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>A {PAWN_labelShort} rugalmas ennek a rangnak a kiváltságait illetően.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Következő rang</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>költségek {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>A {HEIR_labelShort} {HEIR_labelShort} rangjának utódjának módosítása a {HEIR_labelShort} értékről</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>Jelölje ki a {TITLE} {TITLE} rangjának utódját</RequestSetRoyalHeir>
+
+</LanguageData>

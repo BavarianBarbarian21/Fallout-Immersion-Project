@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>Coneixement críptic obtingut</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} ha guanyat {USER_labelShort} el primer nivell de coneixement críptic! {USER_labelShort} és ara un ocultista.
+{USER_labelShort} ha d'aconseguir un focus críptic mitjançant la meditació. L'efectivitat d'aquesta meditació augmenta si la persona pot centrar-se en un objecte específic mentre medita.
+
+Diferents persones poden centrar-se en diferents objectes. Això depèn de les històries de fons, trets i rangs de la persona. Per exemple:
+
+- Els ocultistes amb rangs d'enclavament mediten en els seus llocs assignats.
+- Els ocultistes amb infància tribal mediten en santuaris i tòtems críptics.
+- Els ocultistes ascètes mediten a les parets en blanc.
+- Els ocultistes psicopàtics mediten a les tombes, idealment amb un ésser estimat dins.
+
+Pots veure els tipus d'enfocament de meditació d'algú mirant la seva targeta d'informació amb el botó "i".</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_pronoun} ha guanyat un nou nivell de coneixement críptic! {USER_pronoun} ara pot utilitzar revelacions críptices d'aquest nivell superior, però {USER_pronoun} ha d'aprendre-les primer.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>En aconseguir el nou nivell de coneixement críptic, {2} va aprendre automàticament aquestes revelacions: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>essència críptica ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Utilitzeu l'essència críptica per aprendre la revelació {0}</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Una inoculació neuronal d'un sol ús que entrena una revelació críptica específica.
+
+La dosi s'administra a través d'un punt d'implantació especialitzat. Un cop alliberat al cervell, el mecanisme forma el coneixement d'una revelació específica, transmutant-se en teixit neuronal segons sigui necessari.
+
+{PSYCASTDESCRIPTION}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>requereix una visió críptica</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>Enfocament críptic</Psyfocus>
+  <PsyfocusLabelGizmo>Enfocament críptic</PsyfocusLabelGizmo>
+  <PsyfocusDesc>El focus críptic és un tipus especial d'estructuració mental necessària per utilitzar revelacions críptiques. El focus críptic es dissipa amb el temps i s'ha de construir mitjançant la meditació regular. Perdre tot el focus críptic fa que algú no pugui utilitzar les revelacions.
+
+Un enfocament críptic més alt permet revelacions de nivell superior, però també augmenta la taxa de dissipació del focus.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{1}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Revelacions fins al nivell {0}.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>El focus críptic cau a {0} per dia.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Taxa de guany del focus críptic: {0}/d</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualNeedPsylink>Necessiteu el tipus d'enfocament d'informació críptica {0}</BeginLinkingRitualNeedPsylink>
+  <BeginLinkingRitualMaxPsylinkLevel>Nivell màxim d'informació críptica</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_pronoun} ha completat el ritual d'enllaç amb {PAWN_pronoun}.
+
+{PAWN_pronoun} ara té una visió críptica millorada, que permet l'ús de noves revelacions.</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>un tòtem Mothman</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>No hi ha colons que puguin enllaçar amb el Totem Mothman ara mateix.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>No hi ha colons amb el tipus d'enfocament de meditació natural.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Necessites almenys {0} ous de Mothman.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Ha de ser un colon amb el tipus d'enfocament de meditació natural que estigui per sota del nivell màxim de coneixement críptic.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>No ha de ser insensible al criptid.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>La cerimònia d'enllaç és més potent amb més participants. Com més gent participi, menys temps trigarà la cerimònia i més ous de Mothman es restauraran.
+
+Amb {1} participants addicionals, els ous de {1} Mothman es restauraran al final de la cerimònia.</AnimaLinkingExplanationBase>
+
+  <!-- ROYALTY / ANIMA (Anima tree -> Mothman Totem) -->
+  <AnimaTree_AboutLetterLabel>Totem Mothman</AnimaTree_AboutLetterLabel>
+  <AnimaTree_AboutLetterText>El tòtem Mothman ara té ous {0} al seu voltant. Això és suficient perquè una persona il·luminada comenci el seu primer ritual d'enllaç!\n\nEl ritual d'enllaç ofereix un nivell de coneixement críptic i la capacitat d'utilitzar poders críptics.</AnimaTree_AboutLetterText>
+
+
+</LanguageData>

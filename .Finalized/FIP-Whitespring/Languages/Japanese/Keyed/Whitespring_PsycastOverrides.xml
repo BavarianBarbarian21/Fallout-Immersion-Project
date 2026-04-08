@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>得られなかった洞察力</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} は、{USER_labelShort} 第 1 レベルの未確認の洞察を取得しました。 {USER_labelShort} は現在オカルティストです。
+{USER_labelShort} は瞑想を通じて不可解な集中力を構築する必要があります。瞑想中に特定の対象に集中できれば、この瞑想の効果は高まります。
+
+人によって集中できる対象が異なります。これはその人のバックストーリー、特性、ランクによって異なります。たとえば:
+
+- 飛び地ランクを持つオカルティストは、割り当てられた役職について瞑想します。
+- 部族で子供時代を過ごしたオカルティストは、不可解な神社やトーテムについて瞑想します。
+- 禁欲的なオカルティストは何もない壁に向かって瞑想します。
+- サイコパスのオカルティストは、理想的には愛する人が中にいる墓に向かって瞑想します。
+
+「i」ボタンを押して情報カードを見ると、その人の瞑想の集中タイプを確認できます。</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_pronoun} は、新たなレベルの未確認生物の洞察を獲得しました。 {USER_pronoun} はより高いレベルの不可解な啓示を使用できるようになりましたが、{USER_pronoun} は最初にそれらを学習する必要があります。</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>新しい未確認生物洞察レベルを取得すると、{2} は次の新事実を自動的に学習しました: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>クリプティドエッセンス ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>cryptid エッセンスを使用して {0} の啓示を学ぶ</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>特定の不可解な啓示を訓練する使い捨ての神経接種。
+
+投与量は、専用のインプラントポイントを通じて投与されます。脳内に放出されると、このメカニズムは特定の啓示に関する知識を形成し、必要に応じて神経組織に変換されます。
+
+{PSYCASTDESCRIPTION}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>不可解な洞察力が必要</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>未確認生物の焦点</Psyfocus>
+  <PsyfocusLabelGizmo>未確認生物の焦点</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Cryptid focus は、不可解な啓示を使用するために必要な特別な種類の精神構造です。不可解な集中力は時間の経過とともに消失するため、定期的な瞑想によって構築する必要があります。すべての未確認の焦点を失うと、誰かは啓示を使用できなくなります。
+
+暗号の焦点が高くなると、より高いレベルの啓示が可能になりますが、焦点の散逸率も増加します。</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{1}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>{0} の啓示レベルまで。</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Cryptid のフォーカスは 1 日あたり {0} になります。</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Cryptid フォーカスゲインレート: {0}/d</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualNeedPsylink>{0} cryptid Insight フォーカス タイプが必要</BeginLinkingRitualNeedPsylink>
+  <BeginLinkingRitualMaxPsylinkLevel>最大未確認物洞察レベル</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_pronoun} は {PAWN_pronoun} とのリンクの儀式を完了しました。
+
+{PAWN_pronoun} にはアップグレードされた未確認生物の洞察があり、新たな啓示の使用が可能になりました。</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>モスマンのトーテム</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>現在、モスマン トーテムとリンクできる入植者はいません。</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>自然な瞑想集中タイプの入植者はいません。</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>少なくとも{0}のモスマンの卵が必要です。</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>潜在的な洞察力の最大レベルを下回る自然な瞑想集中タイプの入植者である必要があります。</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>cryptid に敏感であってはなりません。</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>連結式は参加者が増えるほど迫力が増します。参加者が多ければ多いほど儀式にかかる時間が短縮され、より多くのモスマンの卵が復元されます。
+
+{1} 追加参加者により、式典終了時に {1} モスマンの卵が復元されます。</AnimaLinkingExplanationBase>
+
+  <!-- ROYALTY / ANIMA (Anima tree -> Mothman Totem) -->
+  <AnimaTree_AboutLetterLabel>モスマントーテム</AnimaTree_AboutLetterLabel>
+  <AnimaTree_AboutLetterText>モスマン トーテムの周りには {0} の卵が付いています。啓発された人が最初のリンクの儀式を開始するには、これで十分です!\n\nリンクの儀式により、あるレベルの未確認の洞察と未確認の力を使用する能力が得られます。</AnimaTree_AboutLetterText>
+
+
+</LanguageData>

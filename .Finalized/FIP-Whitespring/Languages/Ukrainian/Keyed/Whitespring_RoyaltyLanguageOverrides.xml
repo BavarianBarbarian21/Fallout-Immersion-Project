@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Потрібен президентський номер</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>Один із ваших співробітників має президентський титул, для якого потрібен президентський номер, але президентський номер не призначено.
+\nПереконайтеся, що власнику титулу призначено президентське крісло у відповідному президентському номері.
+\nПрезидентський номер має бути відповідного розміру та оформленням, щоб задовольнити вимоги титулу.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Недостойний президентський номер</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>Один із ваших людей має президентський титул і президентське крісло, але президентський номер не відповідає вимогам титулу.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Президентське крісло непридатне до використання</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>Президентське крісло не можна використовувати через те, як воно влаштовано:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Президентське крісло необхідно розмістити в приміщенні.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} ефектність)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Задовольняє назву</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>немає президентського крісла.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>президентське крісло недоступне.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>президентське крісло непридатне для використання, тому що воно недостойне.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Гідне президентське крісло</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_labelShort} тепер може виступати з президентськими зверненнями з президентського крісла. Якщо все піде добре, слухачі відчують натхнення. Якщо це буде погано, адреса завдасть соціальної шкоди. Результат залежить від соціальних здібностей {PAWN_labelShort}.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Недостойна спальня</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>Один із ваших людей має титул президента, який вимагає спальні з особливими функціями. Або не призначено жодної спальні, або призначена спальня не відповідає вимогам.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>Назва вимагає спальні</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>Один із ваших людей має титул президента, який вимагає особистої спальні, але жодної спальні не призначено.
+\nПризначте їм особисту спальню. Спальня повинна бути відповідного розміру та оформлена, щоб задовольнити конкретні вимоги назви.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Немає прийнятної їжі</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>Один із ваших людей має титул президента з особливими вимогами до харчування. Але їжі, яка б відповідала цим вимогам, немає.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>Сума {FACTION_royalFavorLabel} (прихильність Whitespring), яку ваш учасник переговорів особисто отримає в результаті цієї угоди.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Цей квест винагородить {PAWN_labelShort} і, таким чином, Whitespring отримає ранг за {PAWN_labelShort}.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>той, хто прийняв квест, отримає {0_name} {0_name} від {0_name}</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>ви можете вибрати один із учасників {0_name}, щоб отримати {0_name} {0_name} від {0_name}</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_pronoun} нездатний до соціальних завдань. Ті, хто має ранги Whitespring, мають велику потребу в соціальних навичках, тому, якщо {PAWN_pronoun} отримає ранг, {PAWN_pronoun} можуть мати важкі часи. Інший колоніст може бути більш соціально адаптованим.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>Оскільки {PAWN_labelShort} є {PAWN_labelShort}, {PAWN_labelShort} вимагатиме повного дотримання привілеїв рангу. {PAWN_labelShort} може відмовитися виконувати певні види роботи або їсти неякісну їжу, а також видаватиме укази. Інший колоніст, ймовірно, був би більш гнучким.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>Відповідно до законів {FACTION_name}, щоб легально використовувати {FACTION_name}, потрібно мати необхідний ранг {FACTION_name}.
+\n{FACTION_name}, є шанс, що {FACTION_name} виявить свій психічний підпис. Це призведе до дипломатичних наслідків.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Усе одно встановити цей імплантат?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Усе одно оновити цей імплант?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Ви впевнені, що хочете спорядити цей предмет?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} має такі дозволи:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} втратив ці дозволи:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{1} не ​​бажає виконувати такі види роботи:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_labelShort} тепер може виступати з президентськими зверненнями з президентського крісла. Якщо все піде добре, слухачі відчують натхнення. Якщо це буде погано, адреса завдасть соціальної шкоди. Результат залежить від соціальних здібностей {PAWN_labelShort}.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Для цього рангу потрібен президентський номер, який відповідає цим вимогам: {1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Цей ранг вимагає спальні, яка відповідає цим вимогам: {1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>Якщо {HEIR_nameFull} помре, цей ранг буде передано {HEIR_nameFull} як наступнику.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>Якщо {PAWN_pronoun} помирає, наступник не призначається для цього рангу.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{FACTION_name} є членом {FACTION_name}.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>Нового наступника можна вибрати, зв’язавшись із {FACTION_name} через консоль зв’язку.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Наступник втрачений</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{FACTION_name} помер, залишивши {FACTION_name} без призначеного наступника на ранг, отриманий від {FACTION_name}. Ви можете зв’язатися з {FACTION_name} через консоль зв’язку, щоб призначити нового наступника.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>Ранг {TITLE} не ​​можна успадкувати.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_possessive}, намагаючись зняти стрес {0_possessive}, видав дикий президентський указ і тепер вимагає його виконання.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_bestRoyalTitleIndef}, щоб підтвердити {0_bestRoyalTitleIndef} ранг {0_bestRoyalTitleIndef}, видав указ і тепер вимагає його виконання.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Посланник Білої Весни чекає</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Посланник Whitespring чекає на початок інавгурації.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Інавгурація</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>Немає відповідного місця поблизу посланника</BestowingSpotUnavailable>
+  <BeginCeremony>Почати інавгурацію {0_labelShort}</BeginCeremony>
+  <BestowingCeremonyLabel>інавгурація</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>Загальна якість інавгурації була {0}, що визначається цими факторами</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Виберіть {BESTOWER_definite} і натисніть «Почати інавгурацію», щоб розпочати церемонію.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Неможливо зв’язатися з посланником Whitespring!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} зайнятий.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>Посланник Білого джерела роздратований втручанням і вирішив піти.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>Посланник Whitespring залишає через небезпеку для життя.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>Посланець Whitespring залишає через небезпечну для життя температуру.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>Посланник Whitespring залишає через небезпечні гази в цьому районі.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Інавгурація зірвана.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>Інавгурація {PAWN_definite} почалася.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Термін інавгурації закінчився</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite} не ​​з'явився на інавгурацію. Церемонію скасовано.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>Президентський номер {TITLE} не ​​відповідає вимогам рангу {TITLE}.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>Посланник ображений, що президентський номер {TITLE} не ​​відповідає вимогам рангу {TITLE}. Інавгурацію скасовано.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Залишити інавгурацію</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Припинити участь в інавгурації.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>Скасувати інавгурацію</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Негайно завершити інавгурацію. Посланник піде, але незабаром випаде ще одна нагода провести інавгурацію.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Ви впевнені, що хочете скасувати інавгурацію?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort} отримав {USER_labelShort} перший рівень психлінку! {USER_labelShort} тепер психіатр.
+
+Щоб використовувати психічні здібності, {USER_labelShort} має розвинути психічний фокус за допомогою медитації. Ефективність цієї медитації підвищується, якщо людина може зосередитися на певному об’єкті під час медитації.
+
+Різні люди здатні фокусувати увагу на різних об'єктах. Це залежить від передісторії, рис і рангів людини. Наприклад:
+
+- Псікастери з президентськими титулами медитують на своєму президентському кріслі.
+- Псікастери з племінного дитинства медитують на дерева тварин і природні святині.
+- Аскети-псикастери медитують біля порожніх стін.
+- Психопатичні психісти медитують до могил, в ідеалі з коханою людиною всередині.
+
+Ви можете побачити чиїсь типи медитації, переглянувши їхню інформаційну картку за допомогою кнопки «i».</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Викличте допомогу Enclave...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Викликати допомогу за спеціальним дозволом.
+
+Кожен вид допомоги можна використати безкоштовно один раз, після чого вам доведеться почекати, щоб знову скористатися ним безкоштовно. Ви можете використовувати допомогу частіше, але це коштує користі.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>Залишилося {FACTION_royalFavorLabel} днів, коштує {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>Виберіть дозвіл</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>Відкрийте екран вибору дозволу та виберіть новий дозвіл.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>Ви можете вибрати один зі своїх {0}, щоб отримати {0} {0} від {0}.
+
+Отримавши {0}, ви отримуєте звання. Ранги приносять нагороди за psylink і спеціальні дозволи, наприклад військову допомогу. Однак {0} з вищими рангами також потребуватиме спеціального одягу та меблів для спальні.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>Вимкнено за рангом {0}</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>Зараз {FACTION_name} має ранг {FACTION_name}, присвоєний {FACTION_name}.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} вимагатиме повної поваги до привілеїв цього рангу.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} гнучко ставиться до привілеїв цього рангу.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Наступний ранг</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>коштує {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>Змінити наступника рангу {HEIR_labelShort} {HEIR_labelShort} з {HEIR_labelShort}</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>Призначити наступника рангу {TITLE} {TITLE}</RequestSetRoyalHeir>
+
+</LanguageData>

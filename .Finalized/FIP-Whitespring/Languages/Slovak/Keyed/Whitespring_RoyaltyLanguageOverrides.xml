@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Potrebujete prezidentský apartmán</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>Jeden z vašich ľudí má prezidentský titul, ktorý vyžaduje prezidentský apartmán, ale nie je pridelený žiadny prezidentský apartmán.
+\nUistite sa, že držiteľovi titulu je pridelené prezidentské kreslo v príslušnom prezidentskom apartmáne.
+\nPrezidentský apartmán by mal mať primeranú veľkosť a výzdobu, aby vyhovoval špecifickým požiadavkám titulu.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Nedôstojný prezidentský apartmán</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>Jeden z vašich ľudí má prezidentský titul a prezidentské kreslo, ale prezidentský apartmán nespĺňa požiadavky na titul.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Prezidentské kreslo je nepoužiteľné</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>Prezidentské kreslo nie je použiteľné, pretože je nastavené:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Prezidentská stolička musí byť umiestnená v interiéri.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>(pôsobivosť {0})</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Spĺňa titul</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>nebolo pridelené žiadne prezidentské kreslo.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>prezidentské kreslo nie je prístupné.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>prezidentské kreslo nepoužiteľné, pretože je nedôstojné.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Dôstojné prezidentské kreslo</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_labelShort} teraz môže dávať prezidentské prejavy z prezidentského kresla. Ak to pôjde dobre, poslucháči sa budú cítiť inšpirovaní. Ak to pôjde zle, adresa spôsobí spoločenské škody. Výsledok závisí od sociálnych schopností {PAWN_labelShort}.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Nedôstojná spálňa</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>Jeden z vašich ľudí má prezidentský titul, ktorý si vyžaduje spálňu so špecifickými vlastnosťami. Buď nie je pridelená žiadna spálňa, alebo priradená spálňa nespĺňa požiadavky.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>Titul vyžaduje spálňu</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>Jeden z vašich ľudí má prezidentský titul, ktorý vyžaduje osobnú spálňu, ale nie je pridelená žiadna spálňa.
+\nPriraďte im osobnú spálňu. Spálňa by mala byť primerane veľká a zariadená, aby vyhovovala špecifickým požiadavkám titulu.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Žiadne prijateľné jedlo</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>Jeden z vašich ľudí má prezidentský titul so špecifickými požiadavkami na jedlo. Nie je však dostupné žiadne jedlo, ktoré by spĺňalo tieto požiadavky.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>Suma {FACTION_royalFavorLabel} (priazeň Whitespring), ktorú váš vyjednávač osobne dostane ako výsledok tohto obchodu.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Táto úloha odmení {PAWN_labelShort} a tým aj hodnosti Whitespring za {PAWN_labelShort}.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>kto prijme úlohu, dostane {0_name} {0_name} od {0_name}</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>môžete si vybrať jedného zo zúčastnených {0_name} a získať {0_name} {0_name} od {0_name}</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_pronoun} nie je schopný vykonávať sociálne úlohy. Tí, ktorí majú hodnosti Whitespring, veľmi potrebujú sociálne zručnosti, takže ak {PAWN_pronoun} získa hodnosť, {PAWN_pronoun} to môže mať ťažké. Iný kolonista by mohol byť sociálne zdatnejší.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>Keďže {PAWN_labelShort} je {PAWN_labelShort}, {PAWN_labelShort} bude vyžadovať úplné rešpektovanie privilégií hodnosti. {PAWN_labelShort} môže odmietnuť vykonávať určité typy práce alebo jesť jedlo nízkej kvality a bude vydávať dekréty. Iný kolonista by bol zrejme flexibilnejší.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>Podľa zákonov {FACTION_name} musíte mať požadovanú hodnosť {FACTION_name}, aby ste mohli legálne používať {FACTION_name}.
+\n{FACTION_name}, existuje šanca, že {FACTION_name} zistí svoj psychický podpis. To povedie k diplomatickým dôsledkom.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Napriek tomu nainštalovať tento implantát?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Napriek tomu upgradovať tento implantát?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Naozaj chcete vybaviť túto položku?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} má tieto povolenia:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} stratil tieto povolenia:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{1} nie je ochotný vykonávať tieto typy práce:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_labelShort} teraz môže dávať prezidentské prejavy z prezidentského kresla. Ak to pôjde dobre, poslucháči sa budú cítiť inšpirovaní. Ak to pôjde zle, adresa spôsobí spoločenské škody. Výsledok závisí od sociálnych schopností {PAWN_labelShort}.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Táto hodnosť vyžaduje prezidentský balík, ktorý spĺňa tieto požiadavky: {1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Táto kategória vyžaduje spálňu, ktorá spĺňa tieto požiadavky: {1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>Ak {HEIR_nameFull} zomrie, táto hodnosť sa prenesie na {HEIR_nameFull} ako nástupcu.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>Ak {PAWN_pronoun} zomrie, pre túto hodnosť nie je určený žiadny nástupca.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{FACTION_name} je členom {FACTION_name}.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>Nového nástupcu je možné zvoliť kontaktovaním {FACTION_name} prostredníctvom komunikačnej konzoly.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Následník prehral</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{FACTION_name} zomrel, takže {FACTION_name} nemá určeného nástupcu pre hodnosť získanú od {FACTION_name}. Môžete kontaktovať {FACTION_name} prostredníctvom komunikačnej konzoly a určiť nového nástupcu.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>Hodnosť {TITLE} sa nedá zdediť.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_possessive} v snahe uvoľniť stres {0_possessive} vydal divoký prezidentský dekrét a teraz požaduje jeho vykonanie.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_bestRoyalTitleIndef}, aby potvrdil {0_bestRoyalTitleIndef} hodnosť {0_bestRoyalTitleIndef}, vydal dekrét a teraz požaduje jeho vykonanie.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Vyslanec Whitespring čaká</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Vyslanec Whitespring čaká na začatie inaugurácie.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Inaugurácia</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>V blízkosti vyslanca nie je vhodné miesto</BestowingSpotUnavailable>
+  <BeginCeremony>Začnite inauguráciu pre {0_labelShort}</BeginCeremony>
+  <BestowingCeremonyLabel>inaugurácia</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>Celková kvalita inaugurácie bola {0} určená týmito faktormi</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Vyberte {BESTOWER_definite} a kliknite na „Začať inauguráciu“, čím spustíte obrad.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Nemôžem sa dostať k vyslancovi Whitespring!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} je zaneprázdnený.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>Vyslanec Whitespring je naštvaný zasahovaním a rozhodol sa odísť.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>Vyslanec Whitespring odchádza pre život ohrozujúce nebezpečenstvo.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>Vyslanec Whitespring odchádza pre život ohrozujúcu teplotu.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>Vyslanec Whitespring odchádza kvôli nebezpečným plynom v oblasti.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Inaugurácia bola prerušená.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>Inaugurácia {PAWN_definite} sa začala.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Inaugurácia vypršala</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite} sa na inaugurácii nedostavil. Obrad bol zrušený.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>Prezidentský balík {TITLE} nespĺňa požiadavky na úroveň {TITLE}.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>Vyslanec je urazený, že prezidentský apartmán {TITLE} nespĺňa požiadavky na hodnosť {TITLE}. Inaugurácia bola zrušená.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Odísť z inaugurácie</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Prestaňte sa zúčastňovať na inaugurácii.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>Zrušiť inauguráciu</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Okamžite ukončite inauguráciu. Vyslanec odíde, no čoskoro sa naskytne ďalšia príležitosť vykonať inauguráciu.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Naozaj chcete zrušiť inauguráciu?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort} získal {USER_labelShort} prvú úroveň psylinku! {USER_labelShort} je teraz psycaster.
+
+Ak chcete použiť psychické sily, {USER_labelShort} musí vybudovať psyfocus prostredníctvom meditácie. Účinnosť tejto meditácie sa zvyšuje, ak sa človek môže počas meditácie sústrediť na konkrétny predmet.
+
+Rôzni ľudia sa dokážu sústrediť na rôzne predmety. Závisí to od minulosti osoby, jej vlastností a hodností. Napríklad:
+
+- Psycasteri s prezidentskými titulmi meditujú na svojej prezidentskej stoličke.
+- Psycasters s kmeňovým detstvom meditujú k stromom anima a prírodným svätyniam.
+- Asketickí psycateri meditujú do prázdnych stien.
+- Psychopatickí psycasters meditujú až do hrobov, ideálne s milovanou osobou vo vnútri.
+
+Typy meditačného zamerania niekoho môžete vidieť tak, že sa pozriete na jeho informačnú kartu s tlačidlom „i“.</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Zavolajte pomoc Enkláve...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Privolajte pomoc pomocou špeciálneho povolenia.
+
+Každý typ pomôcky je možné použiť bezplatne raz, potom musíte počkať, kým ju budete môcť znova bezplatne použiť. Pomôcku môžete používať častejšie, ale stojí to za to.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>Zostáva {FACTION_royalFavorLabel} dní, stojí {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>Vyberte povolenie</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>Otvorte obrazovku výberu povolenia a vyberte nové povolenie.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>Môžete si vybrať jeden zo svojich {0} a prijať {0} {0} od {0}.
+
+Prijatím {0} získate hodnosti. Hodnosti prinášajú psylinkové odmeny a špeciálne povolenia, ako je vojenská pomoc. {0} s vyššími úrovňami však bude potrebovať aj špecifické oblečenie a vybavenie spálne.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>Zakázané podľa hodnosti {0}</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>{FACTION_name} má v súčasnosti hodnosť {FACTION_name}, ktorú udeľuje {FACTION_name}.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} bude požadovať, aby boli výsady tejto hodnosti plne rešpektované.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} je flexibilný, pokiaľ ide o privilégiá tejto hodnosti.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Ďalšie poradie</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>náklady {FACTION_royalFavorLabel} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>Zmeniť nástupcu {HEIR_labelShort} hodnosti {HEIR_labelShort} z {HEIR_labelShort}</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>Označte nástupcu hodnosti {TITLE} {TITLE}</RequestSetRoyalHeir>
+
+</LanguageData>
