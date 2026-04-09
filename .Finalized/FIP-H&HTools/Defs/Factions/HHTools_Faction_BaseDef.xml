@@ -28,6 +28,11 @@
   <!-- Democratic/Despotic -->
   <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Settler_Democratic" Abstract="True">
     <defName>HHTools_Settler_Democratic</defName>
+    <modExtensions>
+      <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
+        <system>Civilized</system>
+      </li>
+    </modExtensions>
     <pawnSingular>settler</pawnSingular>
     <pawnsPlural>settlers</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
@@ -152,6 +157,11 @@
   <!--Rough/Despotic-->
   <FactionDef ParentName="HHTools_Settler_Democratic" Name="HHTools_Settler_Despotic" Abstract="True">
     <defName>HHTools_Settler_Despotic</defName>
+    <modExtensions>
+      <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
+        <system>Authoritarian</system>
+      </li>
+    </modExtensions>
     <factionNameMaker>HHTools_FactionNameMaker_Despotic</factionNameMaker>
     <classicIdeo>true</classicIdeo>
     <naturalEnemy>true</naturalEnemy>
@@ -177,6 +187,11 @@
   <!-- Raider -->
   <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Raider" Abstract="True">
     <defName>HHTools_Raider</defName>
+    <modExtensions>
+      <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
+        <system>Raider</system>
+      </li>
+    </modExtensions>
     <pawnSingular>raider</pawnSingular>
     <pawnsPlural>raiders</pawnsPlural>
     <configurationListOrderPriority>8</configurationListOrderPriority>
@@ -280,6 +295,11 @@
   <!-- Tribal -->
   <FactionDef ParentName="HHTools_Factionbase" Name="FalloutTribalClan" Abstract="True">
     <defName>FalloutTribalClan</defName>
+    <modExtensions>
+      <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
+        <system>Tribal</system>
+      </li>
+    </modExtensions>
     <pawnSingular>tribal</pawnSingular>
     <pawnsPlural>tribals</pawnsPlural>
     <categoryTag>Tribal</categoryTag>
