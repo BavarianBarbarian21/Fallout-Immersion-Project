@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/settlementTexturePath</xpath>
+            <value>
+              <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/settlementTexturePath</xpath>
+            <value>
+              <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals,FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals,FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>GrenadeDestructive</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+              <li>NeolithicRangedBasic</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_") and not(contains(defName,"_Child"))]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+              <li>IndustrialGunAdvanced</li>
+              <li>GrenadeDestructive</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_")]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+              <li>IndustrialMilitaryBasic</li>
+              <li>IndustrialMilitaryAdvanced</li>
+              <li>BeltDefensePop</li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>10</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>10</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFES_Wanted"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFES_CaravanRaid"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="VFES_Bandits"]</xpath>
+            <value>
+              <showInUI>false</showInUI>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThinkTreeDef[defName="Muffalo_PreMain" and thinkRoot/@Class="VFE_Settlers.ThinkNodes.ThinkNode_ConditionalChemshinedMuffalo"]</xpath>
+          </li>
+        </operations>
+      </li>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Tribals">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/label</xpath>
+            <value>
+              <label>Tribal tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/description</xpath>
+            <value>
+              <description>You have successfully completed all survivalist research projects and have advanced to tribal tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/label</xpath>
+            <value>
+              <label>Prospector tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/description</xpath>
+            <value>
+              <description>You have successfully completed all tribal research projects and have advanced to prospector tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/label</xpath>
+            <value>
+              <label>Settler tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/description</xpath>
+            <value>
+              <description>You have successfully completed all prospector research projects and have advanced to settler tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/label</xpath>
+            <value>
+              <label>Vault-Tec tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/description</xpath>
+            <value>
+              <description>You have successfully completed all settler research projects and have advanced to Vault-Tec tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/label</xpath>
+            <value>
+              <label>Pre-War tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/description</xpath>
+            <value>
+              <description>You have successfully completed all Vault-Tec research projects and have advanced to Pre-War tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+        </operations>
+      </li>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Medieval2">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="VFEM2_NewKingdom"]</xpath>
+            <value>
+              <showInUI>false</showInUI>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[designationCategory="Structure" and defName!="VFEM2_Palisade"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[category="Building" and starts-with(defName,"VFEM2_") and defName!="VFEM2_Palisade" and defName!="VFEM2_ArcheryTarget" and defName!="VFEM2_TrainingDummy"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/VFEMedieval.CobblestoneWallTemplateDef/designatorDropdown</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[comps/li/@Class="VFEMedieval.CompProperties_EditHeraldic"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_ArcheryTarget"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Placeholder/ArcheryTarget/ArcheryTarget</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_TrainingDummy"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Placeholder/TrainingDummy/TrainingDummy</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_TrainingDummy"]/uiIconPath</xpath>
+            <value>
+              <uiIconPath>Placeholder/TrainingDummy/TrainingDummy_MenuIcon</uiIconPath>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/thingCategories/li[text()="Textiles"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/stuffProps/categories/li[text()="Fabric"]</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]</xpath>
+            <value>
+              <generateCommonality>0</generateCommonality>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath>
+            <value>
+              <generateAllowChance>0</generateAllowChance>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_Skirmish"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_SiegeCamp"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath>
+            <value>
+              <factionNameMaker>HHTools_FactionNameMaker_CaravanCompany</factionNameMaker>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/leaderTitle</xpath>
+            <value>
+              <leaderTitle>caravan master</leaderTitle>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/label</xpath>
+            <value>
+              <label>caravan company</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/description</xpath>
+            <value>
+              <description>A mobile caravan company camp moving goods, guards, and traders through the wasteland.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/attackConfirmationMessage</xpath>
+            <value>
+              <attackConfirmationMessage>You are about to attack a caravan company, which will make that faction hostile. Are you sure you want to do that?</attackConfirmationMessage>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/caravanTraderKinds</xpath>
+            <value>
+              <caravanTraderKinds>
+                <li>Caravan_Outlander_BulkGoods</li>
+                <li>Caravan_Outlander_Exotic</li>
+                <li>Caravan_Outlander_CombatSupplier</li>
+              </caravanTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/visitorTraderKinds</xpath>
+            <value>
+              <visitorTraderKinds>
+                <li>Visitor_Outlander_Standard</li>
+              </visitorTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/baseTraderKinds</xpath>
+            <value>
+              <baseTraderKinds>
+                <li>Base_Outlander_Standard</li>
+              </baseTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers</xpath>
+            <value>
+              <pawnGroupMakers>
+                <li>
+                  <kindDef>Combat</kindDef>
+                  <commonality>100</commonality>
+                  <options>
+                    <HHTools_Settlement_Fighter>14</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>2</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+                <li>
+                  <kindDef>Peaceful</kindDef>
+                  <options>
+                    <HHTools_Settlement_Civilian>18</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>6</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>4</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+                <li>
+                  <kindDef>Trader</kindDef>
+                  <traders>
+                    <HHTools_Settlement_Trader>1</HHTools_Settlement_Trader>
+                  </traders>
+                  <carriers>
+                    <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">6</FCP_Animal_Bighorner>
+                    <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">3</FCP_Animal_Radstag>
+                    <Dromedary>2</Dromedary>
+                  </carriers>
+                  <guards>
+                    <HHTools_Settlement_Civilian>2</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>10</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </guards>
+                </li>
+                <li>
+                  <kindDef>Settlement</kindDef>
+                  <options>
+                    <HHTools_Settlement_Civilian>10</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>10</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>5</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>2</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+              </pawnGroupMakers>
+            </value>
+          </li>
+        </operations>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

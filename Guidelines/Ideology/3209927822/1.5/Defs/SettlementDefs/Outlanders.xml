@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <KCSG.SettlementLayoutDef Abstract="True" Name="VBGE_BaseOutlander">
+    <settlementSize>65,65</settlementSize>
+    <centerBuildings>
+      <centerSize>65,65</centerSize>
+      <allowedStructures>
+        <li>
+          <count>1~3</count>
+          <tag>GenericPower</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericBattery</tag>
+        </li>
+        <li>
+          <count>1~3</count>
+          <tag>GenericSecurity</tag>
+        </li>
+        <li>
+          <count>0~1</count>
+          <tag>GenericPodLauncher</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>GenericKitchen</tag>
+        </li>
+        <li>
+          <count>1~4</count>
+          <tag>GenericStockpile</tag>
+        </li>
+        <li>
+          <count>2~10</count>
+          <tag>GenericBedroom</tag>
+        </li>
+        <li>
+          <count>0~1</count>
+          <tag>GenericGrave</tag>
+        </li>
+        <li>
+          <count>0~1</count>
+          <tag>GenericRecroom</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <propsOptions>
+      <addMainRoadProps>true</addMainRoadProps>
+      <mainRoadPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarForklift</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarDeliveryBlack</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarFamilyBlack</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarPickupBlack</li>
+      
+      </mainRoadPropsDefs>
+      <mainRoadPropsChance>0.03</mainRoadPropsChance>
+      <mainRoadMinDistance>9</mainRoadMinDistance>
+
+      <addLinkRoadProps>true</addLinkRoadProps>
+      <linkRoadPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Cone</li>
+        <li MayRequire="VanillaExpanded.VFECore">Light_Streetlamp</li>
+      </linkRoadPropsDefs>
+      <linkRoadMinDistance>12</linkRoadMinDistance>
+
+      <scatterProps>true</scatterProps>
+      <scatterMinDistance>8</scatterMinDistance>
+      <scatterMaxAmount>150</scatterMaxAmount>
+      <scatterPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BinBag</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BoxLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BoxSmall</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CardboardBoxLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CardboardBoxSmall</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BrickPile</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BarrelGreen</li>
+   
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletCardboard</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletBoxes</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Pallet</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletBarrelGreen</li>
+
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_ContainerGreen</li>
+
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Pipes</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Planks</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_ConcreteBags</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenLogs</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenLogsLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenWagon</li>
+      </scatterPropsDefs>
+    </propsOptions>
+    <roadOptions>
+      <addLinkRoad>true</addLinkRoad>
+      <linkRoadDef>Concrete</linkRoadDef>
+    </roadOptions>
+    <defenseOptions>
+      <addEdgeDefense>true</addEdgeDefense>
+      <addSandbags>false</addSandbags>
+      <addTurrets>true</addTurrets>
+      <cellsPerTurret>20</cellsPerTurret>
+      <allowedTurretsDefs>
+        <li>Turret_MiniTurret</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_MilitaryTurret</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_Searchlight</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_Flame</li>
+      </allowedTurretsDefs>
+      <addMortars>true</addMortars>
+      <cellsPerMortar>60</cellsPerMortar>
+      <allowedMortarsDefs>
+        <li>Turret_Mortar</li>
+      </allowedMortarsDefs>
+      <pawnGroupMultiplier>1.7</pawnGroupMultiplier>
+    </defenseOptions>
+    <stockpileOptions>
+      <stockpileValueMultiplier>2.0</stockpileValueMultiplier>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderProduction</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Production</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Production</tag>
+          <count>2~3</count>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>GenericProduction</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>MedicineIndustrial</li>
+        <li>ComponentIndustrial</li>
+        <li>Neutroamine</li>
+        <li>Chemfuel</li>
+        <li>Hyperweave</li>
+        <li>Penoxycyline</li>
+        <li>Beer</li>
+        <li>PsychiteTea</li>
+        <li>WakeUp</li>
+        <li>ReinforcedBarrel</li>
+        <li>Steel</li>
+        <li>MechSerumHealer</li>
+        <li>Silver</li>
+        <li>Apparel_PowerArmor</li>
+        <li>MechSerumResurrector</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderMining</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Mining</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Mining</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Steel</li>
+        <li>Gold</li>
+        <li>Plasteel</li>
+        <li>Silver</li>
+        <li>Jade</li>
+        <li>ComponentIndustrial</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderSlavery</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Slavery</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Slavery</tag>
+          <count>2~3</count>
+        </li>
+        <li>
+          <count>1~3</count>
+          <tag>GenericPrison</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Apparel_Parka</li>
+        <li>Apparel_Pants</li>
+        <li>Apparel_BasicShirt</li>
+        <li>Apparel_CollarShirt</li>
+        <li>Apparel_Jacket</li>
+        <li>Apparel_Duster</li>
+        <li>Cloth</li>
+        <li>PsychicAnimalPulser</li>
+        <li>PsychicSoothePulser</li>
+        <li>Chocolate</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderLogging</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Logging</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Logging</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>WoodLog</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderFields</defName>
+    <centerBuildings>
+      <centerSize>45,45</centerSize>
+    </centerBuildings>
+    <peripheralBuildings>
+      <allowedStructures>
+        <li>
+          <count>2~5</count>
+          <tag>GenericField</tag>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>GenericAnimal</tag>
+        </li>
+      </allowedStructures>
+    </peripheralBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Milk</li>
+        <li>EggChickenUnfertilized</li>
+        <li>EggGooseUnfertilized</li>
+        <li>RawPotatoes</li>
+        <li>RawRice</li>
+        <li>RawBerries</li>
+        <li>RawHops</li>
+        <li>SmokeleafLeaves</li>
+        <li>Leather_Plain</li>
+        <li>Leather_Bluefur</li>
+        <li>Kibble</li>
+        <li>WoolAlpaca</li>
+        <li>Cloth</li>
+        <li>PsychicAnimalPulser</li>
+        <li>PsychicSoothePulser</li>
+        <li>Chocolate</li>
+        <li>ThrumboHorn</li>
+        <li>ElephantTusk</li>
+        <li>MechSerumHealer</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseOutlander">
+    <defName>VBGE_OutlanderDefence</defName>
+    <centerBuildings>
+      <spaceAround>1</spaceAround>
+      <allowedStructures>
+        <li>
+          <count>1~3</count>
+          <tag>GenericPower</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericBattery</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericSecurity</tag>
+        </li>
+        <li>
+          <count>2~2</count>
+          <tag>GenericPodLauncher</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>GenericKitchen</tag>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>GenericStockpile</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericBedroom</tag>
+        </li>
+        <li>
+          <tag>VGBE_Defence</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+      <centralBuildingTags>
+        <li>VGBE_Defence</li>
+      </centralBuildingTags>
+    </centerBuildings>
+    <defenseOptions>
+      <pawnGroupMultiplier>1.8</pawnGroupMultiplier>
+    </defenseOptions>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Gun_Revolver</li>
+        <li>Gun_Autopistol</li>
+        <li>Gun_MachinePistol</li>
+        <li>Gun_SmokeLauncher</li>
+        <li>Gun_EmpLauncher</li>
+        <li>Gun_BoltActionRifle</li>
+        <li>Gun_PumpShotgun</li>
+        <li>Gun_ChainShotgun</li>
+        <li>Gun_HeavySMG</li>
+        <li>Gun_LMG</li>
+        <li>Gun_AssaultRifle</li>
+        <li>Gun_SniperRifle</li>
+        <li>Gun_Minigun</li>
+        <li>PsychicSoothePulser</li>
+        <li>MechSerumHealer</li>
+        <li>Silver</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+</Defs>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Dryads</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/GauranlenTreeModeDef[defName = "VDE_Gaubricmaker"]/label</xpath>
+					<value>
+                        <label>animabricmaker</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/GauranlenTreeModeDef[defName = "VDE_Gaubricmaker"]/description</xpath>
+					<value>
+                        <description>A caste of dryad which specializes in producing a unique shaggy, leather-like material. Together with its Anima Nexus tree, this dryad can be sheared for a soft, beautiful, insulative material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/GauranlenTreeModeDef[defName = "VDE_Nectarmaker"]/description</xpath>
+					<value>
+                        <description>A curious dryad caste specialized in ambrosia production. Together with its Anima Nexus tree, this dryad can generate invigorating ambrosia on an ongoing basis. However, it is completely defenseless and requires careful attention against threats.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName = "VDE_SeparationSickness"]/description</xpath>
+					<value>
+                        <description>When an awakened dryad reaches 2 years of age, they start getting affected by separation sickness. This sickness is progressive and always lethal. It is caused by the dryad losing its connection to the Anima Nexus tree, and not being able to restore it due to being unshackled.\n\nSeparation sickness can be slowed down by medicine, but eventually every Awakened dryad dies.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Dryad_Stonedigger"]/description</xpath>
+					<value>
+                        <description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Absorbs minerals from the ground that help harden its carapace while leaving excessively large pieces aside.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Dryad_Spitter"]/description</xpath>
+					<value>
+                        <description>A dryad caste specialized in territorialism and can launch ranged acid projectiles. Though it can dish out tremendous damage, it is vulnerable in melee due to its oversized mouth.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Dryad_Gaubricmaker"]/label</xpath>
+					<value>
+                        <label>animabricmaker</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Dryad_Gaubricmaker"]/description</xpath>
+					<value>
+                        <description>A caste of dryad which specializes in producing a unique shaggy, leather-like material. Together with its Anima Nexus tree, this dryad can be sheared for a soft, beautiful, insulative material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Dryad_Nectarmaker"]/description</xpath>
+					<value>
+                        <description>A curious dryad caste specialized in ambrosia production. Together with its Anima Nexus tree, this dryad can generate invigorating ambrosia on an ongoing basis. However, it is completely defenseless and requires careful attention against threats.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Gaubric"]/label</xpath>
+					<value>
+                        <label>animabric</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Gaubric"]/graphicData/color</xpath>
+					<value>
+                        <color>(110, 142, 129)</color>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VDE_Gaubric"]/stuffProps/color</xpath>
+					<value>
+                        <color>(110, 142, 129)</color>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationAdd"> 
+	<success>Always</success>
+		<xpath>/Defs/ThingDef[@Name="ApparelMakeableBase"]</xpath>
+		<value>
+			
+			<relicChance>1</relicChance>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd"> 
+	<success>Always</success>
+		<xpath>/Defs/ThingDef[@Name="ArmorSmithableBase"]</xpath>
+		<value>
+			
+			<relicChance>1</relicChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd"> 
+	<success>Always</success>
+		<xpath>/Defs/ThingDef[@Name="ArmorMachineableBase"]</xpath>
+		<value>
+			
+			<relicChance>1</relicChance>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<success>Always</success>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+				<success>Always</success>
+					<xpath>/Defs/ThingDef[@Name="PsychicApparelBase"]</xpath>
+					<value>
+						<relicChance>1</relicChance>		
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+
+
+
+</Patch>

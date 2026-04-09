@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <KCSG.SettlementLayoutDef Abstract="True" Name="VBGE_BaseEmpire">
+    <settlementSize>72,72</settlementSize>
+    <avoidBridgeable>true</avoidBridgeable>
+    <avoidMountains>false</avoidMountains>
+    <centerBuildings>
+      <centerSize>72,72</centerSize>
+      <spaceAround>1</spaceAround>
+      <allowedStructures>
+        <li>
+          <count>2~5</count>
+          <tag>GenericPower</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericBattery</tag>
+        </li>
+        <li>
+          <count>0~2</count>
+          <tag>GenericSecurity</tag>
+        </li>
+        <li>
+          <count>0~1</count>
+          <tag>GenericPodLauncher</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>GenericKitchen</tag>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>GenericStockpile</tag>
+        </li>
+        <li>
+          <count>2~6</count>
+          <tag>GenericBedroom</tag>
+        </li>
+        <li>
+          <count>0~1</count>
+          <tag>GenericGrave</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>GenericRecroom</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>EmpireBedrooms</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>EmpireShuttle</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>EmpireThrone</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <roadOptions>
+      <addMainRoad>true</addMainRoad>
+      <mainRoadCount>3</mainRoadCount>
+      <mainRoadDef>PavedTile</mainRoadDef>
+      <mainRoadWidth>3</mainRoadWidth>
+
+      <addLinkRoad>true</addLinkRoad>
+      <linkRoadDef>Concrete</linkRoadDef>
+      <linkRoadWidth>1</linkRoadWidth>
+    </roadOptions>
+    <stuffableOptions>
+      <randomizeWall>true</randomizeWall>
+      <randomizeFurniture>true</randomizeFurniture>
+      <excludedFunitureDefs>
+        <li>Barricade</li>
+        <li>Sandbags</li>
+        <li>Fence</li>
+      </excludedFunitureDefs>
+    </stuffableOptions>
+    <propsOptions>
+      <addMainRoadProps>true</addMainRoadProps>
+      <mainRoadPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarDeliveryBlack</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarFamilyBlack</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarPickupBlack</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CarVintageBlack</li>
+      
+      </mainRoadPropsDefs>
+      <mainRoadPropsChance>0.03</mainRoadPropsChance>
+      <mainRoadMinDistance>9</mainRoadMinDistance>
+
+      <addLinkRoadProps>true</addLinkRoadProps>
+      <linkRoadPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Cone</li>
+        <li MayRequire="VanillaExpanded.VFECore">Light_Streetlamp</li>
+      </linkRoadPropsDefs>
+      <linkRoadMinDistance>12</linkRoadMinDistance>
+
+      <scatterProps>true</scatterProps>
+      <scatterMinDistance>8</scatterMinDistance>
+      <scatterMaxAmount>150</scatterMaxAmount>
+      <scatterPropsDefs>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BinBag</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BoxLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BoxSmall</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CardboardBoxLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_CardboardBoxSmall</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BrickPile</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_BarrelGreen</li>
+    
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletCardboard</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletBoxes</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Pallet</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_PalletBarrelGreen</li>
+     
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_ContainerGreen</li>
+    
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Pipes</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_Planks</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_ConcreteBags</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenLogs</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenLogsLarge</li>
+        <li MayRequire="VanillaExpanded.VFEPropsandDecor">VFEPD_WoodenWagon</li>
+      </scatterPropsDefs>
+    </propsOptions>
+    <defenseOptions>
+      <addEdgeDefense>true</addEdgeDefense>
+      <addSandbags>false</addSandbags>
+      <addTurrets>true</addTurrets>
+      <allowedTurretsDefs>
+        <li>Turret_MiniTurret</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_MilitaryTurret</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_Searchlight</li>
+        <li MayRequire="VanillaExpanded.VFESecurity">VFES_Turret_Flame</li>
+      </allowedTurretsDefs>
+      <addMortars>true</addMortars>
+      <allowedMortarsDefs>
+        <li>Turret_Mortar</li>
+      </allowedMortarsDefs>
+      <pawnGroupMultiplier>1.45</pawnGroupMultiplier>
+    </defenseOptions>
+    <stockpileOptions>
+      <stockpileValueMultiplier>2.0</stockpileValueMultiplier>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseEmpire">
+    <defName>VBGE_EmpireProduction</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Production</li>
+        <li>EmpireProduction</li>
+        <li>VGBE_CentralEmpire</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Production</tag>
+          <count>2~3</count>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>EmpireProduction</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>MedicineIndustrial</li>
+        <li>ComponentIndustrial</li>
+        <li>Neutroamine</li>
+        <li>Chemfuel</li>
+        <li>Hyperweave</li>
+        <li>Penoxycyline</li>
+        <li>Beer</li>
+        <li>PsychiteTea</li>
+        <li>WakeUp</li>
+        <li>ReinforcedBarrel</li>
+        <li MayRequire="ludeon.rimworld.royalty">BroadshieldCore</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusHelmet</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_EltexSkullcap</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusShirt</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusVest</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusRobe</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_RobeRoyal</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_HatLadies</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_Coronet</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_HatTop</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_Crown</li>
+        <li MayRequire="ludeon.rimworld.royalty">PsychicAmplifier</li>
+        <li>PsychicAnimalPulser</li>
+        <li>PsychicSoothePulser</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseEmpire">
+    <defName>VBGE_EmpireMining</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Mining</li>
+        <li>VGBE_CentralEmpire</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Mining</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Steel</li>
+        <li>Gold</li>
+        <li>Plasteel</li>
+        <li>Silver</li>
+        <li>Jade</li>
+        <li>ComponentIndustrial</li>
+        <li>MechSerumHealer</li>
+        <li MayRequire="ludeon.rimworld.royalty">PsychicAmplifier</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseEmpire">
+    <defName>VBGE_EmpireSlavery</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Slavery</li>
+        <li>VGBE_CentralEmpire</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Slavery</tag>
+          <count>2~3</count>
+        </li>
+        <li>
+          <count>1~3</count>
+          <tag>GenericPrison</tag>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>Apparel_Parka</li>
+        <li>Apparel_Pants</li>
+        <li>Apparel_BasicShirt</li>
+        <li>Apparel_CollarShirt</li>
+        <li>Apparel_Jacket</li>
+        <li>Apparel_Duster</li>
+        <li>Apparel_FlakVest</li>
+        <li>MechSerumHealer</li>
+        <li MayRequire="ludeon.rimworld.royalty">BroadshieldCore</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusHelmet</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_EltexSkullcap</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusShirt</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusVest</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_PsyfocusRobe</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_RobeRoyal</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_HatLadies</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_Coronet</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_HatTop</li>
+        <li MayRequire="ludeon.rimworld.royalty">Apparel_Crown</li>
+        <li MayRequire="ludeon.rimworld.royalty">PsychicAmplifier</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseEmpire">
+    <defName>VBGE_EmpireLogging</defName>
+    <centerBuildings>
+      <centralBuildingTags>
+        <li>VGBE_Logging</li>
+        <li>VGBE_CentralEmpire</li>
+      </centralBuildingTags>
+      <allowedStructures>
+        <li>
+          <tag>VGBE_Logging</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+    </centerBuildings>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li>WoodLog</li>
+        <li>Silver</li>
+        <li MayRequire="ludeon.rimworld.royalty">PsychicAmplifier</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+  <KCSG.SettlementLayoutDef ParentName="VBGE_BaseEmpire">
+    <defName>VBGE_EmpireDefence</defName>
+    <settlementSize>60,60</settlementSize>
+    <centerBuildings Inherit="False">
+      <centerSize>60,60</centerSize>
+      <spaceAround>1</spaceAround>
+      <allowedStructures>
+        <li>
+          <count>1~3</count>
+          <tag>GenericPower</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericBattery</tag>
+        </li>
+        <li>
+          <count>1~2</count>
+          <tag>GenericSecurity</tag>
+        </li>
+        <li>
+          <count>2~2</count>
+          <tag>GenericPodLauncher</tag>
+        </li>
+        <li>
+          <count>1~1</count>
+          <tag>GenericKitchen</tag>
+        </li>
+        <li>
+          <count>2~5</count>
+          <tag>GenericStockpile</tag>
+        </li>
+        <li>
+          <count>2~2</count>
+          <tag>GenericBedroom</tag>
+        </li>
+        <li>
+          <tag>VGBE_Defence</tag>
+          <count>2~3</count>
+        </li>
+      </allowedStructures>
+      <centralBuildingTags>
+        <li>VGBE_Defence</li>
+        <li>VGBE_CentralEmpire</li>
+      </centralBuildingTags>
+    </centerBuildings>
+    <defenseOptions>
+      <pawnGroupMultiplier>1.8</pawnGroupMultiplier>
+    </defenseOptions>
+    <stockpileOptions>
+      <fillStorageBuildings>true</fillStorageBuildings>
+      <fillWithDefs>
+        <li MayRequire="ludeon.rimworld.royalty">MeleeWeapon_PsyfocusStaff</li>
+        <li MayRequire="ludeon.rimworld.royalty">MeleeWeapon_Zeushammer</li>
+        <li MayRequire="ludeon.rimworld.royalty">MeleeWeapon_MonoSword</li>
+        <li MayRequire="ludeon.rimworld.royalty">BroadshieldCore</li>
+        <li MayRequire="ludeon.rimworld.royalty">PsychicAmplifier</li>
+        <li>Gun_Revolver</li>
+        <li>Gun_Autopistol</li>
+        <li>Gun_MachinePistol</li>
+        <li>Gun_SmokeLauncher</li>
+        <li>Gun_EmpLauncher</li>
+        <li>Gun_BoltActionRifle</li>
+        <li>Gun_PumpShotgun</li>
+        <li>Gun_ChainShotgun</li>
+        <li>Gun_HeavySMG</li>
+        <li>Gun_LMG</li>
+        <li>Gun_AssaultRifle</li>
+        <li>Gun_SniperRifle</li>
+        <li>Apparel_PowerArmor</li>
+        <li>MechSerumResurrector</li>
+        <li>Gun_ChargeRifle</li>
+        <li>Silver</li>
+      </fillWithDefs>
+    </stockpileOptions>
+  </KCSG.SettlementLayoutDef>
+</Defs>

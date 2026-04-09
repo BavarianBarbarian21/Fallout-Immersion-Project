@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FleckDef[defName="GauranlenLeaf"]/graphicData/color</xpath>
+      <value>
+         <color>(173, 208, 195, 255)</color>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/FleckDef[defName="GauranlenLeaf"]/graphicData/texPath</xpath>
+      <value>
+         <texPath>Things/Mote/RitualEffects/AnimaLeaves/AnimaLeaf1</texPath>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/label</xpath>
+      <value>
+         <label>Anima Nexus tree</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/description</xpath>
+      <value>
+         <description>A large, distinctive-looking tree with a unique life-cycle, warm, skin-smooth bark and long iridescent leaves. Infused with bioluminescent micro-organisms, anima trees develop a unique form of psychic symbiosis with surrounding lifeforms. Each Anima Nexus tree contains a small non-conscious dryad queen. The queen births creatures called dryads which guard and tend the tree. In exchange, the tree nurtures its protectors by feeding them directly. From the outside, it appears the dryads are created by the tree directly and act as part of it.\n\nIt is possible for a person to form a connection with a tree and partially control the dryads it produces.\n\nSome say Anima Nexus trees are the homes of nature spirits that follow humanity across worlds. Tribal psycasters are also able to draw psyfocus from anima trees while meditating to them.\n\nAnima trees' psychic properties are weakened if artificial structures are placed nearby. They refuse to be caged or studied, and must remain part of nature.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_MossGauranlen"]/label</xpath>
+      <value>
+         <label>Anima bush</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_MossGauranlen"]/description</xpath>
+      <value>
+         <description>Symbiotic bush infused with luminous microorganisms, often found growing around Anima Nexus trees.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_PodGauranlen"]/label</xpath>
+      <value>
+         <label>Anima pod</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_PodGauranlen"]/description</xpath>
+      <value>
+         <description>A small pod that protects a single Anima seed. This seed can be harvested and used to plant an Anima Nexus tree.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="GauranlenSeed"]/label</xpath>
+      <value>
+         <label>Anima seed</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="GauranlenSeed"]/description</xpath>
+      <value>
+         <description>The seed of an Anima Nexus tree. It can be planted to create a new Anima Nexus tree.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Basic"]/description</xpath>
+      <value>
+         <description>Dryads are small mammalian creatures that have a symbiotic relationship with the Anima Nexus trees. This immature dryad can support and protect its tree, but its main purpose is to morph into more specialized and powerful dryad forms.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Woodmaker"]/description</xpath>
+      <value>
+         <description>A slow, bumbling caste of dryad which specializes in wood production. Together with its Anima Nexus tree, this dryad can generate a wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Berrymaker"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in food production. Together with its Anima Nexus tree, this dryad can generate nourishing berries on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Medicinemaker"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in medicine production. Together with its Anima Nexus tree, this dryad can generate medicinal herbs on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Gaumaker"]/description</xpath>
+      <value>
+         <description>A dryad caste with the unique ability to produce new Anima seed pods and reproduce the Anima Nexus tree along with its symbiote, the dryad queen. To do this, three seedmaker dryads must slowly merge.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Dryad_Gaumaker"]/label</xpath>
+      <value>
+         <label>seedmaker dryad</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Gaumaker"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in carrying items. Under human influence, it can help haul things where they need to go.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Clawer"]/description</xpath>
+      <value>
+         <description>A dryad caste with huge claws that is specialized in aggression and damage-dealing attacks. Though it can do tremendous damage, it is vulnerable to attacks itself.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Dryad_Barkskin"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in absorbing hits during combat. Barkskin dryads are covered by a thick bark-like hide which is partly formed by the Anima tree itself. Under human influence, it can act as a damage-absorbing fighter.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Anima Nexus trees. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Carrier"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in carrying items. Under human influence, it can help haul things where they need to go.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Clawer"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in aggression and damage-dealing attacks. The clawer dryad is named for its massive claws. Though it can do tremendous damage, it is vulnerable to attacks itself.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Barkskin"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in absorbing hits during combat. Barkskin dryads are covered by a thick bark-like hide which is partly formed by the Anima tree itself. Under human influence, it can act as a damage-absorbing fighter.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Woodmaker"]/description</xpath>
+      <value>
+         <description>A slow, bumbling caste of dryad which specializes in wood production. Together with its Anima Nexus tree, this dryad can generate a wood-like material on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Medicinemaker"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in medicine production. Together with its Anima Nexus tree, this dryad can generate medicinal herbs on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Berrymaker"]/description</xpath>
+      <value>
+         <description>A dryad caste specialized in food production. Together with its Anima Nexus tree, this dryad can generate nourishing berries on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Gaumaker"]/description</xpath>
+      <value>
+         <description>A dryad caste with the unique ability to produce new Anima Nexus pods and reproduce the Anima Nexus tree along with its symbiote, the dryad queen. To do this, three seedmaker dryads must slowly merge.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/GauranlenTreeModeDef[defName="Gaumaker"]/label</xpath>
+      <value>
+         <label>Seedmaker</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="DryadCocoon"]/description</xpath>
+      <value>
+         <description>A sphere of fibrous plant matter. A dryad inside is slowly morphing into a new form. Anima Nexus trees grow these spheres to help protect the dryads as they morph.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/description</xpath>
+      <value>
+         <description>The result of the merging of several Seedmaker dryads, this symbiotic plant/animal pod is an essential part of the Anima Nexus life cycle. After some time, it will flower into a mature Anima Nexus pod which can be harvested to plant a new Anima Nexus tree.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="GaumakerCocoon"]/label</xpath>
+      <value>
+         <label>Seedmaker pod</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/graphicData</xpath>
+      <value>
+         <drawSize>1.5</drawSize>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/label</xpath>
+      <value>
+         <label>Anima Nexus pod sprout</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/effectDesc</xpath>
+      <value>
+         <effectDesc>an Anima Nexus pod will sprout at a random location on the map, if it can.</effectDesc>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/RitualAttachableOutcomeEffectDef[defName="GauranlenTreePod"]/letterInfoText</xpath>
+      <value>
+         <letterInfoText>An Anima Nexus pod sprouted nearby.</letterInfoText>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/description</xpath>
+      <value>
+         <description>We have a special connection with the Anima Nexus trees. The trees refocus production easily under our influence, and we are not satisfied unless we have that connection.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li[@Class="PreceptComp_SituationalThought"]/thoughtStageDescriptions</xpath>
+      <value>
+         <thoughtStageDescriptions>
+            <li>Anima Nexus connection</li>
+            <li>Want Anima Nexus connection (min expectation: Very low)</li>
+            <li>Want Anima Nexus connection (min expectation: Low)</li>
+            <li>Want Anima Nexus connection (min expectation: Moderate)</li>
+            <li>Want Anima Nexus connection (min expectation: High)</li>
+            <li>Want Anima Nexus connection (min expectation: Sky high)</li>
+         </thoughtStageDescriptions>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/statBases</xpath>
+      <value>
+      <MeditationFocusStrength>0.28</MeditationFocusStrength>
+      <MeditationPlantGrowthOffset>0</MeditationPlantGrowthOffset>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/comps</xpath>
+      <value>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Natural</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_ArtificialBuildings">
+            <radius>9.9</radius>
+            <curve>
+              <points>
+                <li>(0,   0.0)</li>
+                <li>(5,  -0.08)</li>
+                <li>(10, -0.15)</li>
+                <li>(50, -0.3)</li>
+              </points>
+            </curve>
+          </li>
+          <li Class="FocusStrengthOffset_BuildingDefs">
+            <defs>
+              <AnimusStone>0.02</AnimusStone>
+              <NatureShrine_Small>0.01</NatureShrine_Small>
+              <NatureShrine_Large>0.01</NatureShrine_Large>
+            </defs>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+         <li Class="CompProperties_Glower">
+            <glowRadius>5.75</glowRadius>
+            <glowColor>(110,116,125,0)</glowColor>
+         </li>
+         <li Class="CompProperties_SelfhealHitpoints">
+            <ticksPerHeal>2000</ticksPerHeal>
+            <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+         </li>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Plant_MossGauranlen"]/plant</xpath>
+      <value>
+         <plant>
+            <fertilityMin>0.05</fertilityMin>
+            <fertilitySensitivity>0</fertilitySensitivity>
+            <sowMinSkill>0</sowMinSkill>
+            <growDays>5</growDays>
+            <visualSizeRange>0.5~1</visualSizeRange>
+            <topWindExposure>0.4</topWindExposure>
+            <allowAutoCut>false</allowAutoCut>
+            <wildClusterWeight>0</wildClusterWeight>
+            <maxMeshCount>9</maxMeshCount>
+            <dieFromToxicFallout>False</dieFromToxicFallout>
+         </plant>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[@Class="CompProperties_SpawnSubplant"]</xpath>
+      <value>
+         <plantsToNotOverwrite>
+            <li>Plant_PodGauranlen</li>
+            <li>Plant_TreeGauranlen</li>
+            <li>Plant_MossGauranlen</li>
+         </plantsToNotOverwrite>
+      </value>
+   </Operation>
+   
+   <!-- xrushha -->
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/label</xpath>
+      <value>
+         <label>Anima pod sprout</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterLabel</xpath>
+      <value>
+         <letterLabel>Anima pod sprout</letterLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IncidentDef[defName="GauranlenPodSpawn"]/letterText</xpath>
+      <value>
+         <letterText>An Anima pod has sprouted nearby!\n\nHarvest it to collect an Anima seed. This special seed can be used to plant the majestic Anima Nexus tree.\n\nYour colonists can connect with Anima Nexus trees and make them spawn resources and helpful dryads to work or fight for you.</letterText>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/InteractionDef[defName="Speech_TreeConnection"]/logRulesInitiator</xpath>
+      <value>
+         <logRulesInitiator>
+            <include>
+               <li>SpeechUtility</li>
+            </include>
+            <rulesStrings>
+               <li>r_logentry-&gt;[INITIATOR_nameDef] [spokeof] [speechtopic].</li>
+               <li>speechtopic-&gt;the trees and the people</li>
+               <li>speechtopic-&gt;the trees and psychic powers</li>
+               <li>speechtopic-&gt;dryads</li>
+               <li>speechtopic-&gt;the Anima Nexus life cycle</li>
+               <li>speechtopic-&gt;the spiritual presence of Anima Nexus trees</li>
+               <li>speechtopic-&gt;psychic dendro-pathy</li>
+               <li>speechtopic-&gt;how cute dryads are</li>
+               <li>speechtopic-&gt;the nobility of the dryads</li>
+               <li>speechtopic-&gt;the age of the trees</li>
+               <li>speechtopic-&gt;humanity's role below the trees</li>
+               <li>speechtopic-&gt;plant life and eternity</li>
+               <li>speechtopic-&gt;connecting with nature</li>
+            </rulesStrings>
+         </logRulesInitiator>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/PreceptDef[defName="TreeConnection"]/description</xpath>
+      <value>
+         <description>A connector will connect with an Anima Nexus tree. The connector will touch the Anima Nexus tree and speak to it, forming a permanent link. Others gather in a circle to watch and add force to the ritual.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IssueDef[defName="GauranlenConnection"]/label</xpath>
+      <value>
+         <label>Anima Nexus connection</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/HistoryEventDef[defName="PlantedGauranlenTree"]/label</xpath>
+      <value>
+         <label>planted Anima Nexus tree</label>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/PreceptDef[defName="GauranlenConnection_Strong"]/comps/li[@Class="PreceptComp_DevelopmentPoints"]/eventLabel</xpath>
+      <value>
+         <eventLabel>planted Anima Nexus tree</eventLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThoughtDef[defName="GauranlenConnectionDesired"]/stages</xpath>
+      <value>
+         <stages>
+            <li>
+               <label>Anima Nexus connection</label>
+               <description>I am happily connected to an Anima Nexus tree.</description>
+               <baseMoodEffect>3</baseMoodEffect>
+            </li>
+            <li>
+               <label>want Anima Nexus connection</label>
+               <description>Without a connection to an Anima Nexus tree, I feel disconnected from nature.</description>
+               <baseMoodEffect>0</baseMoodEffect>
+            </li>
+            <li>
+               <label>want Anima Nexus connection</label>
+               <description>Without a connection to an Anima Nexus tree, I feel disconnected from nature.</description>
+               <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+            <li>
+               <label>want Anima Nexus connection</label>
+               <description>Without a connection to an Anima Nexus tree, I feel disconnected from nature.</description>
+               <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+            <li>
+               <label>want Anima Nexus connection</label>
+               <description>Without a connection to an Anima Nexus tree, I feel disconnected from nature.</description>
+               <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+               <label>want Anima Nexus connection</label>
+               <description>Without a connection to an Anima Nexus tree, I feel disconnected from nature.</description>
+               <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+         </stages>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IdeoPresetDef[defName="Tree_Worshippers"]/description</xpath>
+      <value>
+         <description>We live in harmony with the Anima Nexus trees. Trees should never be cut, and animals should not be harmed.\n\n Unlocks the plants specialist role. These people live in rough conditions without complains, and can connect more deeply with the Anima Nexus trees.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/IdeoPresetDef[defName="Feral_People"]/description</xpath>
+      <value>
+         <description>We are animals and animals are us. We are trees and we live by them and love them as us.\n\nUnlocks animal and plants specialist roles. Increases taming abilities of every member. Cutting trees and slaughtering animals are unacceptable. These people can connect more deeply with the Anima Nexus trees.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/RitualOutcomeEffectDef[defName="ConnectToTree"]/extraPredictedOutcomeDescriptions/li[text()="Every 2% increase in quality will grow a patch of Gauranlen moss around the tree, beautifying the area."]</xpath>
+      <value>
+         <li>Every 2% increase in quality will grow an Anima bush around the tree, beautifying the area.</li>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/StatDef[defName="PruningSpeed"]/description</xpath>
+      <value>
+         <description>A multiplier on how fast this person can prune an Anima Nexus tree to maintain their connection with it.\n\nPruning is more of a contemplative psychic task than a physical one, so health factors like vision are unimportant here.</description>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/ThoughtDef[defName="ConnectedTreeDied"]/stages</xpath>
+      <value>
+         <stages>
+            <li>
+               <label>Anima Nexus death</label>
+               <description>My tree... its calming presence became pure pain, then went silent. Its suffering echoes in my mind...</description>
+               <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+         </stages>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationReplace">
+      <xpath>Defs/WorkGiverDef[defName="PruneGauranlenTree"]/label</xpath>
+      <value>
+         <label>prune Anima Nexus trees</label>
+      </value>
+   </Operation>
+   
+</Patch>

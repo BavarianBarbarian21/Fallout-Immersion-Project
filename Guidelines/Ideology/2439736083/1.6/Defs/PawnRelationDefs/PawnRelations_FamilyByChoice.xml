@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnRelationDef>
+		<workerClass>VanillaSocialInteractionsExpanded.PawnRelationWorker_BestFriend</workerClass>
+		<defName>VSIE_BestFriend</defName>
+		<label>best friend</label>
+		<labelFemale>best friend</labelFemale>
+		<importance>205</importance>
+		<diedThought>VSIE_MyBestFriendDied</diedThought>
+		<diedThoughtFemale>VSIE_MyBestFriendDied_Female</diedThoughtFemale>
+		<killedThought>VSIE_KilledMyBestFriend</killedThought>
+		<lostThought>VSIE_MyBestFriendLost</lostThought>
+		<lostThoughtFemale>VSIE_MyBestFriendLost_Female</lostThoughtFemale>
+		<soldThoughts>
+			<li>VSIE_SoldMyBestFriend</li>
+		</soldThoughts>
+		<opinionOffset>10</opinionOffset>
+		<implied>false</implied>
+		<reflexive>true</reflexive>
+		<generationChanceFactor>1.0</generationChanceFactor>
+	</PawnRelationDef>
+
+	<ThoughtDef>
+		<defName>VSIE_SoldMyBestFriend</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>120</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>best friend sold</label>
+				<labelSocial>sold my best friend</labelSocial>
+				<description>A friend of mine was sold to a trader like a piece of meat!</description>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VSIE_KilledMyBestFriend</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>120</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>killed my best friend</label>
+				<baseOpinionOffset>-65</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="LostMemoryFamily">
+		<defName>VSIE_MyBestFriendLost</defName>
+		<stages>
+			<li>
+				<label>my best friend {0} lost</label>
+				<description>My best friend has gone lost. I hope he will get back to us someday.</description>
+				<baseMoodEffect>-18</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="LostMemoryFamily">
+		<defName>VSIE_MyBestFriendLost_Female</defName>
+		<stages>
+			<li>
+				<label>my best friend {0} lost</label>
+				<description>My best friend has gone lost. I hope she will get back to us someday.</description>
+				<baseMoodEffect>-18</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemoryFamily">
+		<defName>VSIE_MyBestFriendDied</defName>
+		<stages>
+			<li>
+				<label>my best friend {0} died</label>
+				<description>My best friend died. How could this happen!</description>
+				<baseMoodEffect>-18</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemoryFamily">
+		<defName>VSIE_MyBestFriendDied_Female</defName>
+		<stages>
+			<li>
+				<label>my best friend {0} died</label>
+				<description>My best friend died. How could this happen!</description>
+				<baseMoodEffect>-18</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>VSIE_OpinionOfMyBestFriend</defName>
+		<thoughtClass>VanillaSocialInteractionsExpanded.Thought_OpinionOfMyBestFriend</thoughtClass>
+		<workerClass>VanillaSocialInteractionsExpanded.ThoughtWorker_OpinionOfMyBestFriend</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>opinion of my {0} {1}</label>
+				<description>Being with my best friend makes me feel this way.</description>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>
