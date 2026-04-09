@@ -3,12 +3,14 @@ param(
     [string]$ModName,
     [string]$FinalizedRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path,
     [string]$TranslateRoot = (Join-Path (Split-Path (Resolve-Path (Join-Path $PSScriptRoot '..')).Path -Parent) '.Translate'),
-    [string[]]$LocalesFilter
+    [string[]]$LocalesFilter,
+    [switch]$SkipValidation
 )
 
 $ErrorActionPreference = 'Stop'
 
 . (Join-Path $PSScriptRoot 'Generate-RequestedLocalizations.ps1') -LibraryMode
+$repairScriptPath = Join-Path $PSScriptRoot 'Repair-FinalizedTranslations.ps1'
 
 $mod = Get-Item (Join-Path $FinalizedRoot $ModName)
 $englishRoot = Join-Path (Join-Path $mod.FullName 'Languages') 'English'
@@ -43,6 +45,11 @@ foreach ($locale in $selectedLocales) {
 
         $translatedFiles += 1
     }
+}
+
+if (-not $SkipValidation) {
+    & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter @($ModName) -LocalesFilter $LocalesFilter -Apply
+    & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter @($ModName) -LocalesFilter $LocalesFilter -FailOnIssues
 }
 
 Write-Output "$ModName translated files: $translatedFiles"

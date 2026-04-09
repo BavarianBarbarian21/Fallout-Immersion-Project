@@ -2,7 +2,8 @@ param(
     [string]$FinalizedRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path,
     [string]$TranslateRoot = (Join-Path (Split-Path (Resolve-Path (Join-Path $PSScriptRoot '..')).Path -Parent) '.Translate'),
     [string[]]$ModsFilter,
-    [string[]]$LocalesFilter
+    [string[]]$LocalesFilter,
+    [switch]$SkipValidation
 )
 
 $ErrorActionPreference = 'Stop'
@@ -12,6 +13,7 @@ $logPath = Join-Path $PSScriptRoot ("Translate-FinalizedMods.$logSuffix.log")
 Set-Content -LiteralPath $logPath -Value @('Runner start') -Encoding utf8
 
 . (Join-Path $PSScriptRoot 'Generate-RequestedLocalizations.ps1') -FinalizedRoot $FinalizedRoot -TranslateRoot $TranslateRoot -LibraryMode
+$repairScriptPath = Join-Path $PSScriptRoot 'Repair-FinalizedTranslations.ps1'
 
 try {
     $mods = Get-ChildItem -Path $FinalizedRoot -Directory | Where-Object {
@@ -62,6 +64,13 @@ try {
 
         Add-Content -LiteralPath $logPath -Value "$($mod.Name): translated $translatedFileCount files"
         Write-Host "$($mod.Name): translated $translatedFileCount files"
+    }
+
+    if (-not $SkipValidation) {
+        Add-Content -LiteralPath $logPath -Value 'REPAIR finalized translations'
+        & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter $ModsFilter -LocalesFilter $LocalesFilter -Apply
+        Add-Content -LiteralPath $logPath -Value 'VALIDATE finalized translations'
+        & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter $ModsFilter -LocalesFilter $LocalesFilter -FailOnIssues
     }
 
     Add-Content -LiteralPath $logPath -Value 'Runner complete'

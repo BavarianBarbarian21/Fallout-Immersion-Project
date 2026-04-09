@@ -4,12 +4,14 @@ param(
     [string[]]$ModsFilter,
     [string[]]$LocalesFilter,
     [int]$MaxPasses = 1,
-    [string]$FailureLogPath = (Join-Path $PSScriptRoot 'Translate-PendingFinalizedMods.failures.log')
+    [string]$FailureLogPath = (Join-Path $PSScriptRoot 'Translate-PendingFinalizedMods.failures.log'),
+    [switch]$SkipValidation
 )
 
 $ErrorActionPreference = 'Stop'
 
 . (Join-Path $PSScriptRoot 'Generate-RequestedLocalizations.ps1') -LibraryMode
+$repairScriptPath = Join-Path $PSScriptRoot 'Repair-FinalizedTranslations.ps1'
 
 function Test-NeedsTranslation {
     param(
@@ -145,4 +147,9 @@ if ($failures.Count -gt 0) {
     Write-Host 'Failures:'
     $failures | Format-Table -AutoSize
     Write-Host "Failure log: $FailureLogPath"
+}
+
+if (-not $SkipValidation) {
+    & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter $ModsFilter -LocalesFilter $LocalesFilter -Apply
+    & $repairScriptPath -FinalizedRoot $FinalizedRoot -ModsFilter $ModsFilter -LocalesFilter $LocalesFilter -FailOnIssues
 }
