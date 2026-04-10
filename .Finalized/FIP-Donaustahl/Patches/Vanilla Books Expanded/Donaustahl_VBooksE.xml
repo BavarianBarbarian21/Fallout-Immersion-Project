@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/ThingDef[defName="VBE_Newspaper"]/label</xpath>
+        <value>
+          <label>wasteland gazette</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/ThingDef[defName="VBE_Newspaper"]/description</xpath>
+        <value>
+          <description>A perishable wasteland gazette. Reading it gives colonists a little joy and keeps them current on caravan gossip, local scandals, and the latest rumors from the ruins.
+
+Once the issue goes stale it cannot be read and needs to be cleaned up.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/ThingDef[defName="VBE_UnfinishedNewspaper"]/label</xpath>
+        <value>
+          <label>unfinished gazette</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/ThingDef[defName="VBE_UnfinishedNewspaper"]/description</xpath>
+        <value>
+          <description>An unfinished wasteland gazette still waiting on its headlines and final edits.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/ThingDef[defName="VBE_Filth_Newspaper"]/label</xpath>
+        <value>
+          <label>old gazette</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/RulePackDef[defName="ArtDescription_Newspaper"]/rulePack/rulesStrings</xpath>
+        <value>
+          <rulesStrings>
+            <li>desc->[nearnameinitial] courier</li>
+            <li>desc->[nearnameinitial] bulletin</li>
+            <li>desc->[PlaceOutlander] gazette</li>
+            <li>desc->[Direction] [PlaceOutlander] dispatch</li>
+            <li>desc->[PeopleBadass]'s bulletin</li>
+            <li>desc->[ANYPAWN_nameIndef]'s gazette</li>
+            <li>desc>bulletin [Digit]</li>
+            <li>desc>dispatch [maybe_letter][Digit][Digit][maybe_letter]</li>
+            <li>title->[desc]</li>
+          </rulesStrings>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VBooksE">
+        <xpath>/Defs/RulePackDef[defName="ArtDescription_NewspaperDesc"]/rulePack/rulesStrings</xpath>
+        <value>
+          <rulesStrings>
+            <li>desc->This issue covers the latest caravan traffic, gunfire, and rumors from the last few days.</li>
+          </rulesStrings>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

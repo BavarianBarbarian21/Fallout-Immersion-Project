@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VIE_RelicInertApple"]/label</xpath>
+        <value>
+          <label>strange orb</label>
+        </value>
+        <success>Always</success>
+        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VIE_RelicInertCeremonialMask"]/label</xpath>
+        <value>
+          <label>ritual mask</label>
+        </value>
+        <success>Always</success>
+        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VIE_RelicInertEngine"]/label</xpath>
+        <value>
+          <label>engine core</label>
+        </value>
+        <success>Always</success>
+        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VIE_RelicInertEngram"]/label</xpath>
+        <value>
+          <label>data core</label>
+        </value>
+        <success>Always</success>
+        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VIE_RelicInertIdol"]/label</xpath>
+        <value>
+          <label>totem</label>
+        </value>
+        <success>Always</success>
+        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
+      </li>
+    </operations>
+  </Operation>
+</Defs>

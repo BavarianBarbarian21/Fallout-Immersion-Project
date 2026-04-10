@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="IceAge"]/label</xpath>
+        <value>
+          <label>Nuclear Winter</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="IceAge"]/description</xpath>
+        <value>
+          <description>High-altitude ash and radioactive soot have choked the sky, plunging the region into a nuclear winter.
+
+Flora and fauna are suffering as biomes slide toward their colder counterparts. Food and fuel become scarce, and wasteland factions grow more desperate by the day.
+
+It can last anywhere between a season and several years.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="IceAge"]/endMessage</xpath>
+        <value>
+          <endMessage>The nuclear winter is easing.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_IceAge"]/label</xpath>
+        <value>
+          <label>nuclear winter</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_IceAge"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Nuclear Winter</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_IceAge"]/letterText</xpath>
+        <value>
+          <letterText>High-altitude ash and radioactive soot have choked the sky, plunging the region into a nuclear winter.
+
+Flora and fauna are suffering as biomes slide toward their colder counterparts. Food and fuel become scarce, and wasteland factions grow more desperate by the day.
+
+It can last anywhere between a season and several years.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="GlobalWarming"]/label</xpath>
+        <value>
+          <label>Scorched Summer</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="GlobalWarming"]/description</xpath>
+        <value>
+          <description>Heat trapped beneath a filthy radioactive haze has driven local temperatures to punishing levels.
+
+Flora and fauna are suffering as biomes drift toward their hotter counterparts. Water dries up, forage fails, and every faction in the wasteland feels the pressure.
+
+It can last anywhere between a season and several years.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="GlobalWarming"]/endMessage</xpath>
+        <value>
+          <endMessage>The scorched summer is breaking.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_GlobalWarming"]/label</xpath>
+        <value>
+          <label>scorched summer</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_GlobalWarming"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Scorched Summer</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_GlobalWarming"]/letterText</xpath>
+        <value>
+          <letterText>Heat trapped beneath a filthy radioactive haze has driven local temperatures to punishing levels.
+
+Flora and fauna are suffering as biomes drift toward their hotter counterparts. Water dries up, forage fails, and every faction in the wasteland feels the pressure.
+
+It can last anywhere between a season and several years.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicRain"]/label</xpath>
+        <value>
+          <label>Temporal Radstorm</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicRain"]/description</xpath>
+        <value>
+          <description>An unstable old-world weather anomaly has churned a temporal radstorm into the atmosphere.
+
+The storm lashes the land with strange glowing rain that twists flesh and time alike. Anyone left in the open will age at a frightening pace.
+
+It can last anywhere between a season and several years.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicRain"]/endMessage</xpath>
+        <value>
+          <endMessage>The temporal radstorm is passing.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicRain"]/label</xpath>
+        <value>
+          <label>temporal radstorm</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicRain"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Temporal Radstorm</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicRain"]/letterText</xpath>
+        <value>
+          <letterText>An unstable old-world weather anomaly has churned a temporal radstorm into the atmosphere.
+
+The storm lashes the land with strange glowing rain that twists flesh and time alike. Anyone left in the open will age at a frightening pace.
+
+It can last anywhere between a season and several years.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="LongNight"]/label</xpath>
+        <value>
+          <label>Ashen Skies</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="LongNight"]/description</xpath>
+        <value>
+          <description>Orbital debris and black ash have smothered the sun, throwing the region into a long, ruinous twilight.
+
+With the sky darkened and visibility ruined, wasteland factions take advantage of the confusion to raid, move, and settle scores under cover of gloom.
+
+It can last anywhere between a season and several years.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="LongNight"]/endMessage</xpath>
+        <value>
+          <endMessage>The ashen skies are clearing.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_LongNight"]/label</xpath>
+        <value>
+          <label>ashen skies</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_LongNight"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Ashen Skies</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_LongNight"]/letterText</xpath>
+        <value>
+          <letterText>Orbital debris and black ash have smothered the sun, throwing the region into a long, ruinous twilight.
+
+With the sky darkened and visibility ruined, wasteland factions take advantage of the confusion to raid, move, and settle scores under cover of gloom.
+
+It can last anywhere between a season and several years.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicBloom"]/label</xpath>
+        <value>
+          <label>Mutant Bloom</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicBloom"]/description</xpath>
+        <value>
+          <description>A surge of unstable spores and irradiated pollen has reshaped local plant life almost overnight.
+
+The sky glows with strange color while mutant flowers spread through fields, roads, and ruins alike. Colonists feel oddly uplifted, but the overgrowth can smother your crops if left unchecked.
+
+It can last anywhere between a few days and a season.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="PsychicBloom"]/endMessage</xpath>
+        <value>
+          <endMessage>The mutant bloom is fading.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicBloom"]/label</xpath>
+        <value>
+          <label>mutant bloom</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicBloom"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Mutant Bloom</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_PsychicBloom"]/letterText</xpath>
+        <value>
+          <letterText>A surge of unstable spores and irradiated pollen has reshaped local plant life almost overnight.
+
+The sky glows with strange color while mutant flowers spread through fields, roads, and ruins alike. Colonists feel oddly uplifted, but the overgrowth can smother your crops if left unchecked.
+
+It can last anywhere between a few days and a season.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="SpaceBattle"]/label</xpath>
+        <value>
+          <label>Vertibird Dogfight</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="SpaceBattle"]/description</xpath>
+        <value>
+          <description>A running vertibird dogfight is raging overhead. Wreckage and missed shots can rain down across the area for several hours.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="SpaceBattle"]/endMessage</xpath>
+        <value>
+          <endMessage>The vertibird dogfight is over.</endMessage>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/GameConditionDef[defName="SpaceBattle"]/letterText</xpath>
+        <value>
+          <letterText>Several vertibirds and old-world gunships have engaged in a running fight above the region. Missed shots and burning debris can impact the ground and start fires.</letterText>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_SpaceBattle"]/label</xpath>
+        <value>
+          <label>vertibird dogfight</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_SpaceBattle"]/letterLabel</xpath>
+        <value>
+          <letterLabel>Vertibird Dogfight</letterLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_SpaceBattle"]/letterText</xpath>
+        <value>
+          <letterText>Several vertibirds and old-world gunships have engaged in a running fight above the region. Missed shots and burning debris can impact the ground and start fires.</letterText>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_AnimalPodCrash"]/label</xpath>
+        <value>
+          <label>animal cargo bot crash</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_ShuttleCrash"]/label</xpath>
+        <value>
+          <label>vertibird crash</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_Cargopodsweapons"]/label</xpath>
+        <value>
+          <label>cargo bots (weapons)</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VEE">
+        <xpath>/Defs/IncidentDef[defName="VEE_Cargopodsapparel"]/label</xpath>
+        <value>
+          <label>cargo bots (apparel)</label>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

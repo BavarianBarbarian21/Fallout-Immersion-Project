@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VanillaAspirationsExpanded,Ludeon.RimWorld.Royalty">
+        <xpath>/Defs/VAspirE.AspirationDef[defName="VAspirE_BecomeNoble"]/label</xpath>
+        <value>
+          <label>join the wasteland elite</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VanillaAspirationsExpanded,Ludeon.RimWorld.Royalty">
+        <xpath>/Defs/VAspirE.AspirationDef[defName="VAspirE_BecomeNoble"]/description</xpath>
+        <value>
+          <description>{0} wants the privileges, pull, and ceremony that come with joining the wasteland elite.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VanillaAspirationsExpanded,Ludeon.RimWorld.Royalty">
+        <xpath>/Defs/VAspirE.AspirationDef[defName="VAspirE_BecomeNoble"]/satisfiedWhenText</xpath>
+        <value>
+          <satisfiedWhenText>{0} earns a formal elite rank.</satisfiedWhenText>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VanillaAspirationsExpanded,Ludeon.RimWorld.Royalty">
+        <xpath>/Defs/VAspirE.AspirationDef[defName="VAspirE_AttendSpeech"]/label</xpath>
+        <value>
+          <label>attend a command speech</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VanillaAspirationsExpanded,Ludeon.RimWorld.Royalty">
+        <xpath>/Defs/VAspirE.AspirationDef[defName="VAspirE_AttendSpeech"]/description</xpath>
+        <value>
+          <description>{0} wants to be there when a commanding figure gives a rousing speech.</description>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
