@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
+  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.Ideo.RelicsAndArtifacts">
     <operations>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIE_RelicInertApple"]/label</xpath>
@@ -8,7 +8,6 @@
           <label>strange orb</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIE_RelicInertCeremonialMask"]/label</xpath>
@@ -16,7 +15,6 @@
           <label>ritual mask</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIE_RelicInertEngine"]/label</xpath>
@@ -24,7 +22,6 @@
           <label>engine core</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIE_RelicInertEngram"]/label</xpath>
@@ -32,7 +29,6 @@
           <label>data core</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIE_RelicInertIdol"]/label</xpath>
@@ -40,7 +36,6 @@
           <label>totem</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.RelicsAndArtifacts</MayRequire>
       </li>
     </operations>
   </Operation>

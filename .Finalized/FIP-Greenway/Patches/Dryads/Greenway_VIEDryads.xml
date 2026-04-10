@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
+  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.Ideo.Dryads">
     <operations>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/GauranlenTreeModeDef[defName="VDE_Stonedigger"]/description</xpath>
@@ -8,7 +8,6 @@
           <description>An extremely easy-going treeminder caste that specializes in dragging up stone chunks. It absorbs minerals from the ground to harden its hide while leaving the oversized pieces aside.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/GauranlenTreeModeDef[defName="VDE_Spitter"]/description</xpath>
@@ -16,7 +15,6 @@
           <description>A treeminder caste specialized in territorial defense that can launch corrosive projectiles. Though it can dish out tremendous damage, it remains vulnerable in melee due to its oversized maw.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/GauranlenTreeModeDef[defName="VDE_Gaubricmaker"]/description</xpath>
@@ -24,7 +22,6 @@
           <description>A treeminder caste specialized in producing a shaggy, leather-like hide. Together with its Treefather, it can be sheared for a soft, insulative material on an ongoing basis, though it is slow and ineffective at work or combat.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/GauranlenTreeModeDef[defName="VDE_Nectarmaker"]/description</xpath>
@@ -32,7 +29,6 @@
           <description>A curious treeminder caste specialized in producing invigorating sap-fruit. Together with its Treefather, it can generate this stimulant crop on an ongoing basis, but it is completely defenseless and requires careful protection.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VDE_Dryad_Stonedigger"]/label</xpath>
@@ -40,7 +36,6 @@
           <label>stonedigger treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/PawnKindDef[defName="VDE_Dryad_Stonedigger"]/label</xpath>
@@ -48,7 +43,6 @@
           <label>stonedigger treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VDE_Dryad_Spitter"]/label</xpath>
@@ -56,7 +50,6 @@
           <label>spitter treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/PawnKindDef[defName="VDE_Dryad_Spitter"]/label</xpath>
@@ -64,7 +57,6 @@
           <label>spitter treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VDE_Dryad_Gaubricmaker"]/label</xpath>
@@ -72,7 +64,6 @@
           <label>hideweaver treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/PawnKindDef[defName="VDE_Dryad_Gaubricmaker"]/label</xpath>
@@ -80,7 +71,6 @@
           <label>hideweaver treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VDE_Dryad_Nectarmaker"]/label</xpath>
@@ -88,7 +78,6 @@
           <label>sapbrewer treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/PawnKindDef[defName="VDE_Dryad_Nectarmaker"]/label</xpath>
@@ -96,7 +85,6 @@
           <label>sapbrewer treeminder</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.Ideo.Dryads</MayRequire>
       </li>
     </operations>
   </Operation>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
+  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VanillaBackstoriesExpanded">
     <operations>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_GeneModdedBeauty"]/baseDesc</xpath>
@@ -8,7 +8,6 @@
           <baseDesc>[PAWN_nameDef] is the product of one of the old world's most lavish cosmetic clinics. During [PAWN_possessive] life, [PAWN_pronoun] spent an untold fortune on [PAWN_possessive] looks and had little time to practice anything more practical.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_ShipsNavigator"]/title</xpath>
@@ -16,7 +15,6 @@
           <title>Convoy navigator</title>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_ShipsNavigator"]/titleShort</xpath>
@@ -24,7 +22,6 @@
           <titleShort>Navigator</titleShort>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_ShipsNavigator"]/baseDesc</xpath>
@@ -32,7 +29,6 @@
           <baseDesc>[PAWN_nameDef] charted routes for long-haul convoys moving through the wastes and across dangerous old-world corridors. [PAWN_pronoun] had an uncanny ability to find the safest and quickest paths, though [PAWN_pronoun] struggled with mechanical tasks and often left those to others.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_EngineRoomTech"]/baseDesc</xpath>
@@ -40,7 +36,6 @@
           <baseDesc>As a reactor room technician, [PAWN_nameDef] kept long-haul rigs and settlement generators running. [PAWN_pronoun] could fix almost anything with the right tools, but [PAWN_pronoun] lacked finesse in social interactions and avoided tasks that required a gentle touch.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_GalacticMedic"]/title</xpath>
@@ -48,7 +43,6 @@
           <title>Convoy medic</title>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_GalacticMedic"]/baseDesc</xpath>
@@ -56,7 +50,6 @@
           <baseDesc>[PAWN_nameDef] served as the medic for a long-haul convoy, treating everything from radiation sickness to crash injuries on broken highways. [PAWN_possessive] knowledge of medicine was unparalleled, but [PAWN_pronoun] had no head for research or complex theories.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_CargoHandler"]/baseDesc</xpath>
@@ -64,7 +57,6 @@
           <baseDesc>[PAWN_nameDef] was responsible for managing freight yards and convoy manifests, ensuring supplies were securely stowed and inventory was accurately tracked. [PAWN_pronoun] was physically strong and highly organized, but [PAWN_pronoun] had little patience for detailed documentation or scholarly pursuits.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_GalleyChef"]/title</xpath>
@@ -72,7 +64,6 @@
           <title>Convoy cook</title>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_GalleyChef"]/baseDesc</xpath>
@@ -80,7 +71,6 @@
           <baseDesc>[PAWN_nameDef] kept a long-haul convoy fed, turning salvaged ingredients into hearty meals for the crew. Cooking on the move presented its own challenges, yet [PAWN_pronoun] mastered the art. However, [PAWN_pronoun] never took well to machinery, preferring pans over engines.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_BloodlineFounder"]/title</xpath>
@@ -88,7 +78,6 @@
           <title>Founder's heir</title>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_BloodlineFounder"]/titleShort</xpath>
@@ -96,7 +85,6 @@
           <titleShort>Heir</titleShort>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_BloodlineFounder"]/baseDesc</xpath>
@@ -104,7 +92,6 @@
           <baseDesc>[PAWN_nameDef] had a fiercely contested origin, with no one willing to admit [PAWN_possessive] connection to a powerful founder's bloodline. Somehow, [PAWN_pronoun] still carried the legacy of an old regime, and when those rights came to light, suddenly everyone wanted a piece of what remained.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_DeposedRoyalty"]/title</xpath>
@@ -112,7 +99,6 @@
           <title>Deposed warlord</title>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_DeposedRoyalty"]/titleShort</xpath>
@@ -120,7 +106,6 @@
           <titleShort>Warlord</titleShort>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/BackstoryDef[defName="VBE_DeposedRoyalty"]/baseDesc</xpath>
@@ -128,17 +113,14 @@
           <baseDesc>[PAWN_nameDef] carved out a region-spanning domain through brutal conflict, refusing to surrender [PAWN_possessive] people's right to live without oppression. Eventually, rival factions joined forces to break [PAWN_possessive] rule, and [PAWN_possessive] bodyguards forced [PAWN_objective] to flee. While [PAWN_pronoun] did everything possible to secure a future for [PAWN_possessive] people, failing to protect them remains [PAWN_possessive] greatest shame.</baseDesc>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationRemove">
         <xpath>/Defs/BackstoryDef[defName="VBE_Oracle"]</xpath>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
       <li Class="PatchOperationRemove">
         <xpath>/Defs/BackstoryDef[defName="VBE_MedievalPage"]</xpath>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VanillaBackstoriesExpanded</MayRequire>
       </li>
     </operations>
   </Operation>

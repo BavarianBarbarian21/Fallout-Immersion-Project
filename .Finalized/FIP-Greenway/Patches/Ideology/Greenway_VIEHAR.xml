@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
+  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VIEHAR">
     <operations>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Rags"]/description</xpath>
@@ -8,7 +8,6 @@
           <description>A set of worn rags meant to cover the body with minimal fuss. They offer almost no protection or warmth, but clearly signal a life of austerity and hard wasteland devotion.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_BishopHat"]/label</xpath>
@@ -16,7 +15,6 @@
           <label>high preacher hat</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_BishopHat"]/description</xpath>
@@ -24,7 +22,6 @@
           <description>A tall ceremonial headdress meant to mark the leader of an organized faith or wasteland cult.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_BrimlessHat"]/description</xpath>
@@ -32,7 +29,6 @@
           <description>A small, plain hat meant to rest gently on one's head. Those who favor it often claim it gives them the look of an old-world mystic.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_CommisarHat"]/label</xpath>
@@ -40,7 +36,6 @@
           <label>overseer cap</label>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_CommisarHat"]/description</xpath>
@@ -48,7 +43,6 @@
           <description>A distinguished brimmed cap adorned with a badge of rank, meant to inspire obedience in subordinates at any cost.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Fez"]/description</xpath>
@@ -56,7 +50,6 @@
           <description>A flat-topped conical hat decorated with a black tassel, often worn by desert traders, caravan bosses, and other old-road elites.</description>
         </value>
         <success>Always</success>
-        <MayRequire>VanillaExpanded.VIEHAR</MayRequire>
       </li>
     </operations>
   </Operation>
