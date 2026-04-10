@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
 	<li Class="PatchOperationReplace">
 		<xpath>/Defs/ResearchProjectDef[defName="Batteries"]/description</xpath>
 		<value>
@@ -288,4 +290,6 @@
 			<description>An industrial dispenser that synthesizes edible nutrient paste from feedstocks placed in adjacent hoppers. Efficient, joyless, and exactly the sort of machine a large contractor would call progress.</description>
 		</value>
 	</li>
+		</operations>
+	</Operation>
 </Patch>

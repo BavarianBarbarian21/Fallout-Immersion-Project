@@ -63,7 +63,7 @@ There should still be an operational terminal containing Moldaver&apos;s researc
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"We have discovered an ancient construction site")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[contains(.,"We have discovered an ancient construction site")]</xpath>
     <value>
       <li>questDescription(askerIsNull==True)-&gt;We have discovered an old research and construction site where Lee Moldaver was working on a prototype grid-scale reactor. The location lies in a remote area surrounded by the ruins of an unfinished project.
 
@@ -204,19 +204,19 @@ Completing this mission [questOutcome].</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[text()="arcName(p=4)-&gt;ARC"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName(p=4)-&gt;ARC")]</xpath>
     <value>
       <li>arcName(p=4)-&gt;fusion core</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;ARC"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName-&gt;ARC")]</xpath>
     <value>
       <li>arcName-&gt;fusion core</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;generator"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName-&gt;generator")]</xpath>
     <value>
       <li>arcName-&gt;prototype reactor</li>
     </value>

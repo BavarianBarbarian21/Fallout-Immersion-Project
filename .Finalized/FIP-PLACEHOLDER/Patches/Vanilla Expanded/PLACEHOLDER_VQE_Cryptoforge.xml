@@ -29,7 +29,7 @@ Complete the scans on both relays to discover the location of the crawler fragme
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.cryptoforge">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[contains(text(),"We've uncovered information about a long-lost starship")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[contains(.,"We've uncovered information about a long-lost starship")]</xpath>
     <value>
       <li>questDescription(askerIsNull==True)-&gt;We've uncovered information about a long-lost pre-war mobile base crawler. The platform appears to have broken apart during a failed deployment, scattering its fabrication sections across the frozen wastes. To locate them, we must reactivate an ancient scanning relay station.
 
