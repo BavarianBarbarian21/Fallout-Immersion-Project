@@ -55,7 +55,7 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"ancient construction site") and contains(text(),"prototype generator")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[1]</xpath>
     <value>
       <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of an old research and construction site where Lee Moldaver once worked on a prototype grid-scale reactor. The site appears abandoned, isolated, and surrounded by the ruins of a project that was never finished.
 
@@ -63,7 +63,7 @@ There should still be an operational terminal containing Moldaver&apos;s researc
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[contains(.,"We have discovered an ancient construction site")]</xpath>
+      <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[2]</xpath>
     <value>
       <li>questDescription(askerIsNull==True)-&gt;We have discovered an old research and construction site where Lee Moldaver was working on a prototype grid-scale reactor. The location lies in a remote area surrounded by the ruins of an unfinished project.
 
@@ -204,7 +204,7 @@ Completing this mission [questOutcome].</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName(p=4)-&gt;ARC")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questNameRules/rulesStrings/li[text()="arcName(p=4)-&gt;ARC"]</xpath>
     <value>
       <li>arcName(p=4)-&gt;fusion core</li>
     </value>
@@ -216,7 +216,7 @@ Completing this mission [questOutcome].</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName-&gt;generator")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questNameRules/rulesStrings/li[text()="arcName-&gt;generator"]</xpath>
     <value>
       <li>arcName-&gt;prototype reactor</li>
     </value>

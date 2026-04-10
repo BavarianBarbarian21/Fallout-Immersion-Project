@@ -31,7 +31,7 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[contains(.,"Operation: Deadlife") and contains(.,"shadows")]</xpath>
+     <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[starts-with(text(),"questDescription(asker_factionLeader==True)-&gt;")]</xpath>
     <value>
       <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of the location of a sealed entrance to one of the continuity bunkers left behind by an old U.S. military emergency command network.
 
@@ -45,7 +45,7 @@ Secure a meaningful share of the bunker&apos;s stored resources to complete the 
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.deadlife">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[contains(text(),"battle maps have revealed")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Deadlife_AncientSilo"]/questDescriptionRules/rulesStrings/li[starts-with(text(),"questDescription(askerIsNull==True)-&gt;")]</xpath>
     <value>
       <li>questDescription(askerIsNull==True)-&gt;Recovered military maps have revealed the location of a sealed continuity bunker built by an old U.S. military emergency command network.
 

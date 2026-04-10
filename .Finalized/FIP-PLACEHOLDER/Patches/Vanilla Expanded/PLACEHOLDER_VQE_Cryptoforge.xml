@@ -19,7 +19,7 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.cryptoforge">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[contains(text(),"long-lost starship")]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[1]</xpath>
     <value>
       <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has contacted us with news of a long-lost pre-war mobile base crawler. Generations ago, the platform broke apart during a catastrophic deployment failure, scattering its fabrication sections across the frozen wastes. To locate them, we must reactivate an ancient scanning relay station.
 
@@ -29,7 +29,7 @@ Complete the scans on both relays to discover the location of the crawler fragme
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.cryptoforge">
-    <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[contains(.,"We've uncovered information about a long-lost starship")]</xpath>
+      <xpath>/Defs/QuestScriptDef[defName="VQE_Cryptoforge_Chapter1"]/questDescriptionRules/rulesStrings/li[2]</xpath>
     <value>
       <li>questDescription(askerIsNull==True)-&gt;We've uncovered information about a long-lost pre-war mobile base crawler. The platform appears to have broken apart during a failed deployment, scattering its fabrication sections across the frozen wastes. To locate them, we must reactivate an ancient scanning relay station.
 
