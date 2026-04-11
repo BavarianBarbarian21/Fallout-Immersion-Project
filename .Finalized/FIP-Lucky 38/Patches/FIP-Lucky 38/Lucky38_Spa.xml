@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="Adamas.HospitalitySpa">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HospitalitySpa_WithdrawVendingMachineEarnings"]/label</xpath>
+        <value>
+          <label>collect bathhouse fees</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HospitalitySpa_WithdrawVendingMachineEarnings"]/verb</xpath>
+        <value>
+          <verb>collect bathhouse fees</verb>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

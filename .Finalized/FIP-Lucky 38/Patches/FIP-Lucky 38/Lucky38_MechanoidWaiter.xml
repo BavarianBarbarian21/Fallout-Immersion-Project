@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Mechanoid Waiter RobCo integration -->
+	<Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="CashRegister_Mech"]/label</xpath>
+				<value>
+					<label>RobCo hospitality terminal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="CashRegister_Mech"]/description</xpath>
+				<value>
+					<description>An automated RobCo terminal for assigning mechanoid attendants to dining-room and bazaar service. From here you can direct front-of-house operations without relying on a purpose-built waiter chassis.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationSequence" MayRequire="FIP.RobCo">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+						<value>
+							<li>Hauling</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+						<value>
+							<li>Gastronomy_Waiting</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd" MayRequire="Adamas.Storefront">
+						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+						<value>
+							<li>Storefront_Selling</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]</xpath>
+						<value>
+							<comps>
+								<li Class="MechanoidWaiter.CompProperties_EnsureSocialMechanoid" />
+							</comps>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Waiter"]</xpath>
+					</li>
+				</operations>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="CashRegister_Mech"]/description</xpath>
+				<value>
+					<description>An automated service terminal for mechanoid attendants. From here you can direct dining and front-of-house operations.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="CashRegister_Mech"]/label</xpath>
+				<value>
+					<label>autonomous service terminal</label>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

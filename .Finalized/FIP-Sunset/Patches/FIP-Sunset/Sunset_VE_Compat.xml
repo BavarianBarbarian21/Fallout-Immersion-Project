@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/settlementTexturePath</xpath>
+            <value>
+              <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/settlementTexturePath</xpath>
+            <value>
+              <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals,FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals,FIP.HHTools">
+            <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>GrenadeDestructive</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+              <li>NeolithicRangedBasic</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_") and not(contains(defName,"_Child"))]/weaponTags</xpath>
+            <value>
+              <li>SimpleGun</li>
+              <li>Revolver</li>
+              <li>IndustrialGunAdvanced</li>
+              <li>GrenadeDestructive</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="FIP.HHTools">
+            <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_")]/apparelTags</xpath>
+            <value>
+              <li>Outlander</li>
+              <li>IndustrialMilitaryBasic</li>
+              <li>IndustrialMilitaryAdvanced</li>
+              <li>BeltDefensePop</li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>10</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>10</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="SettlerSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <requiredCountAtGameStart>0</requiredCountAtGameStart>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerCivil"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="SettlerSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFES_Wanted"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFES_CaravanRaid"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="VFES_Bandits"]</xpath>
+            <value>
+              <showInUI>false</showInUI>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThinkTreeDef[defName="Muffalo_PreMain" and thinkRoot/@Class="VFE_Settlers.ThinkNodes.ThinkNode_ConditionalChemshinedMuffalo"]</xpath>
+          </li>
+        </operations>
+      </li>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Tribals">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/label</xpath>
+            <value>
+              <label>Tribal tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/description</xpath>
+            <value>
+              <description>You have successfully completed all survivalist research projects and have advanced to tribal tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/label</xpath>
+            <value>
+              <label>Prospector tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/description</xpath>
+            <value>
+              <description>You have successfully completed all tribal research projects and have advanced to prospector tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/label</xpath>
+            <value>
+              <label>Settler tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/description</xpath>
+            <value>
+              <description>You have successfully completed all prospector research projects and have advanced to settler tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/label</xpath>
+            <value>
+              <label>Vault-Tec tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/description</xpath>
+            <value>
+              <description>You have successfully completed all settler research projects and have advanced to Vault-Tec tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/label</xpath>
+            <value>
+              <label>Pre-War tech level</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/description</xpath>
+            <value>
+              <description>You have successfully completed all Vault-Tec research projects and have advanced to Pre-War tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+            </value>
+          </li>
+        </operations>
+      </li>
+      <li Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Medieval2">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ScenarioDef[defName="VFEM2_NewKingdom"]</xpath>
+            <value>
+              <showInUI>false</showInUI>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[designationCategory="Structure" and defName!="VFEM2_Palisade"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[category="Building" and starts-with(defName,"VFEM2_") and defName!="VFEM2_Palisade" and defName!="VFEM2_ArcheryTarget" and defName!="VFEM2_TrainingDummy"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/VFEMedieval.CobblestoneWallTemplateDef/designatorDropdown</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[comps/li/@Class="VFEMedieval.CompProperties_EditHeraldic"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_ArcheryTarget"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>FIP-Sunset/ArcheryTarget/ArcheryTarget</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_TrainingDummy"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>FIP-Sunset/TrainingDummy/TrainingDummy</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_TrainingDummy"]/uiIconPath</xpath>
+            <value>
+              <uiIconPath>FIP-Sunset/TrainingDummy/TrainingDummy_MenuIcon</uiIconPath>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/thingCategories/li[text()="Textiles"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/stuffProps/categories/li[text()="Fabric"]</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]</xpath>
+            <value>
+              <generateCommonality>0</generateCommonality>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath>
+            <value>
+              <generateAllowChance>0</generateAllowChance>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]</xpath>
+            <value>
+              <settlementGenerationWeight>0</settlementGenerationWeight>
+              <canMakeRandomly>false</canMakeRandomly>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]/maxConfigurableAtWorldCreation</xpath>
+            <value>
+              <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_Skirmish"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_SiegeCamp"]/rootSelectionWeight</xpath>
+            <value>
+              <rootSelectionWeight>0</rootSelectionWeight>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath>
+            <value>
+              <factionNameMaker>HHTools_FactionNameMaker_CaravanCompany</factionNameMaker>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/leaderTitle</xpath>
+            <value>
+              <leaderTitle>caravan master</leaderTitle>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/label</xpath>
+            <value>
+              <label>caravan company</label>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/description</xpath>
+            <value>
+              <description>A mobile caravan company camp moving goods, guards, and traders through the wasteland.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/VEF.Planet.MovingBaseDef[defName="VFEM2_MerchantGuildCaravan"]/attackConfirmationMessage</xpath>
+            <value>
+              <attackConfirmationMessage>You are about to attack a caravan company, which will make that faction hostile. Are you sure you want to do that?</attackConfirmationMessage>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TraderKindDef[defName="VFEM2_MerchantGuildTrader"]/stockGenerators</xpath>
+            <value>
+              <stockGenerators>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>ComponentIndustrial</thingDef>
+                  <countRange>20~50</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>ComponentSpacer</thingDef>
+                  <countRange>0~4</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Steel</thingDef>
+                  <countRange>350~700</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>WoodLog</thingDef>
+                  <countRange>200~500</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Plasteel</thingDef>
+                  <countRange>40~120</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Uranium</thingDef>
+                  <countRange>20~100</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Cloth</thingDef>
+                  <countRange>250~500</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Gold</thingDef>
+                  <countRange>20~80</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Neutroamine</thingDef>
+                  <countRange>40~120</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Chemfuel</thingDef>
+                  <countRange>200~450</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Chocolate</thingDef>
+                  <countRange>-20~60</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Beer</thingDef>
+                  <countRange>-20~80</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>MedicineIndustrial</thingDef>
+                  <countRange>15~35</countRange>
+                </li>
+                <li Class="StockGenerator_ReinforcedBarrels">
+                  <countRange>1~3</countRange>
+                </li>
+                <li Class="StockGenerator_Tag">
+                  <tradeTag>MortarShell</tradeTag>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <countRange>10~30</countRange>
+                  <excludedThingDefs>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Shell_Deadlife</li>
+                  </excludedThingDefs>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>Textiles</categoryDef>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <totalPriceRange>300~700</totalPriceRange>
+                  <excludedThingDefs>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Leather_Dread</li>
+                  </excludedThingDefs>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>ResourcesRaw</categoryDef>
+                  <thingDefCountRange>2~4</thingDefCountRange>
+                  <totalPriceRange>300~700</totalPriceRange>
+                  <excludedThingDefs>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">GravlitePanel</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">BlocksVacstone</li>
+                  </excludedThingDefs>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>FoodRaw</categoryDef>
+                  <thingDefCountRange>2~4</thingDefCountRange>
+                  <totalPriceRange>300~700</totalPriceRange>
+                  <excludedCategories>
+                    <li>EggsFertilized</li>
+                  </excludedCategories>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>FoodMeals</categoryDef>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <countRange>12~40</countRange>
+                </li>
+                <li Class="StockGenerator_MultiDef">
+                  <thingDefs>
+                    <li>Kibble</li>
+                    <li>Pemmican</li>
+                  </thingDefs>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>Drugs</categoryDef>
+                  <thingDefCountRange>3~4</thingDefCountRange>
+                  <totalPriceRange>700~1400</totalPriceRange>
+                </li>
+                <li Class="StockGenerator_Techprints">
+                  <countChances>
+                    <li>
+                      <count>1</count>
+                      <chance>0.5</chance>
+                    </li>
+                    <li>
+                      <count>2</count>
+                      <chance>0.5</chance>
+                    </li>
+                  </countChances>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>Books</categoryDef>
+                  <excludedThingDefs>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Tome</li>
+                  </excludedThingDefs>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <countRange>-1~1</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Schematic</thingDef>
+                  <countRange>0~1</countRange>
+                </li>
+                <li Class="StockGenerator_MarketValue">
+                  <tradeTag>WeaponRanged</tradeTag>
+                  <countRange>4~7</countRange>
+                </li>
+                <li Class="StockGenerator_Tag" MayRequire="Rick.FCP.BallisticWeapons">
+                  <tradeTag>FCP_Ballistic_Weapon</tradeTag>
+                  <thingDefCountRange>4~10</thingDefCountRange>
+                  <countRange>1~2</countRange>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>WeaponsMelee</categoryDef>
+                  <thingDefCountRange>2~4</thingDefCountRange>
+                  <countRange>1~2</countRange>
+                </li>
+                <li Class="StockGenerator_MarketValue">
+                  <tradeTag>BasicClothing</tradeTag>
+                  <countRange>6~10</countRange>
+                </li>
+                <li Class="StockGenerator_MarketValue">
+                  <tradeTag>Clothing</tradeTag>
+                  <countRange>2~4</countRange>
+                </li>
+                <li Class="StockGenerator_MarketValue">
+                  <tradeTag>Armor</tradeTag>
+                  <countRange>3~5</countRange>
+                </li>
+                <li Class="StockGenerator_Tag" MayRequire="Rick.FCP.PowerArmor">
+                  <tradeTag>FCP_Power_Armor_Basic</tradeTag>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <countRange>1~1</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef" MayRequire="Rick.FCP.PowerArmor">
+                  <thingDef>FCP_Item_Fusion_Core</thingDef>
+                  <countRange>2~6</countRange>
+                </li>
+                <li Class="StockGenerator_Tag">
+                  <tradeTag>TechHediff</tradeTag>
+                  <thingDefCountRange>1~3</thingDefCountRange>
+                  <countRange>1~1</countRange>
+                </li>
+                <li Class="StockGenerator_Category">
+                  <categoryDef>BuildingsFurniture</categoryDef>
+                  <thingDefCountRange>2~4</thingDefCountRange>
+                  <countRange>1~2</countRange>
+                </li>
+                <li Class="StockGenerator_MarketValue">
+                  <tradeTag>Art</tradeTag>
+                  <countRange>3~8</countRange>
+                </li>
+                <li Class="StockGenerator_Tag">
+                  <tradeTag>Television</tradeTag>
+                  <thingDefCountRange>1~2</thingDefCountRange>
+                  <countRange>1~1</countRange>
+                </li>
+                <li Class="StockGenerator_SingleDef">
+                  <thingDef>Telescope</thingDef>
+                  <countRange>0~1</countRange>
+                </li>
+                <li Class="StockGenerator_Tag">
+                  <tradeTag>Artifact</tradeTag>
+                  <thingDefCountRange>1~3</thingDefCountRange>
+                  <countRange>1~1</countRange>
+                </li>
+                <li Class="StockGenerator_Tag">
+                  <tradeTag>ExoticMisc</tradeTag>
+                  <thingDefCountRange>1~3</thingDefCountRange>
+                  <countRange>1~2</countRange>
+                  <excludedThingDefs>
+                    <li>Luciferium</li>
+                    <li>ComponentSpacer</li>
+                  </excludedThingDefs>
+                </li>
+                <li Class="StockGenerator_Animals">
+                  <tradeTagsSell>
+                    <li>AnimalFarm</li>
+                    <li>AnimalPet</li>
+                    <li>AnimalFighter</li>
+                    <li>AnimalUncommon</li>
+                  </tradeTagsSell>
+                  <tradeTagsBuy>
+                    <li>AnimalExotic</li>
+                  </tradeTagsBuy>
+                  <kindCountRange>2~3</kindCountRange>
+                  <countRange>1~3</countRange>
+                  <createMatingPair>
+                    <li>AnimalFarm</li>
+                  </createMatingPair>
+                </li>
+                <li Class="StockGenerator_BuyExpensiveSimple" />
+                <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+                <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+                <li Class="StockGenerator_BuyTradeTag" MayRequire="Rick.FCP.BallisticWeapons"><tag>FCP_Ballistic_Weapon</tag></li>
+                <li Class="StockGenerator_BuyTradeTag" MayRequire="Rick.FCP.EnergyWeapons"><tag>FCP_Energy_Weapon</tag></li>
+                <li Class="StockGenerator_BuyTradeTag" MayRequire="Rick.FCP.Core.Tools"><tag>FCP_Industrial_Weapon</tag></li>
+                <li Class="StockGenerator_BuyTradeTag" MayRequire="Rick.FCP.PowerArmor"><tag>FCP_PowerArmor</tag></li>
+              </stockGenerators>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Animals">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+            <value>
+              <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/caravanTraderKinds</xpath>
+            <value>
+              <caravanTraderKinds>
+                <li>Caravan_Outlander_BulkGoods</li>
+                <li>Caravan_Outlander_Exotic</li>
+                <li>Caravan_Outlander_CombatSupplier</li>
+              </caravanTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/visitorTraderKinds</xpath>
+            <value>
+              <visitorTraderKinds>
+                <li>Visitor_Outlander_Standard</li>
+              </visitorTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/baseTraderKinds</xpath>
+            <value>
+              <baseTraderKinds>
+                <li>Base_Outlander_Standard</li>
+              </baseTraderKinds>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace" MayRequire="FIP.HHTools">
+            <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers</xpath>
+            <value>
+              <pawnGroupMakers>
+                <li>
+                  <kindDef>Combat</kindDef>
+                  <commonality>100</commonality>
+                  <options>
+                    <HHTools_Settlement_Fighter>14</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>2</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+                <li>
+                  <kindDef>Peaceful</kindDef>
+                  <options>
+                    <HHTools_Settlement_Civilian>18</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>6</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>4</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+                <li>
+                  <kindDef>Trader</kindDef>
+                  <traders>
+                    <HHTools_Settlement_Trader>1</HHTools_Settlement_Trader>
+                  </traders>
+                  <carriers>
+                    <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">6</FCP_Animal_Bighorner>
+                    <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">3</FCP_Animal_Radstag>
+                    <Dromedary>2</Dromedary>
+                  </carriers>
+                  <guards>
+                    <HHTools_Settlement_Civilian>2</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>10</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Leader>1</HHTools_Settlement_Leader>
+                  </guards>
+                </li>
+                <li>
+                  <kindDef>Settlement</kindDef>
+                  <options>
+                    <HHTools_Settlement_Civilian>10</HHTools_Settlement_Civilian>
+                    <HHTools_Settlement_Fighter>10</HHTools_Settlement_Fighter>
+                    <HHTools_Settlement_Trader>5</HHTools_Settlement_Trader>
+                    <HHTools_Settlement_Leader>2</HHTools_Settlement_Leader>
+                  </options>
+                </li>
+              </pawnGroupMakers>
+            </value>
+          </li>
+        </operations>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemshine"]/label</xpath>
+    <value>
+      <label>rot gut</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemshine"]/description</xpath>
+    <value>
+      <description>A harsh, flammable wasteland liquor distilled from chemfuel. Rot gut dulls pain and misery for a while, but it leaves the drinker soaked in volatile fumes and can turn a bad death into a fireball.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Plant_Chemroot"]/label</xpath>
+    <value>
+      <label>radseng</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Plant_Chemroot"]/description</xpath>
+    <value>
+      <description>A mutated offshoot of ginseng whose roots burrow deep through loose soil until they tap underground oil pockets. Farmers cultivate radseng for the chemfuel-rich sludge in its roots, even though a bad spark can turn the field into an inferno.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="ChemBoiler"]/label</xpath>
+    <value>
+      <label>crude oil boiler</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemlamp"]/label</xpath>
+    <value>
+      <label>oil lamp</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="ChemlampPost"]/label</xpath>
+    <value>
+      <label>oil lamp post</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Building_ChemshineBarrel"]/label</xpath>
+    <value>
+      <label>rot gut barrel</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Building_ChemshineBarrel"]/description</xpath>
+    <value>
+      <description>A barrel for fermenting rot gut.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="TableFaro"]/label</xpath>
+    <value>
+      <label>caravan table</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="TableFaro"]/description</xpath>
+    <value>
+      <description>A travel-worn gaming table used for caravan games and roadside wagers. Allows up to two players at a time.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Building_ChemshineBarrel"]/notWorkingKey</xpath>
+    <value>
+      <notWorkingKey>This rot gut barrel is not working at the moment</notWorkingKey>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_Plant_Grape"]/label</xpath>
+    <value>
+      <label>bloody vine</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_Plant_Grape"]/description</xpath>
+    <value>
+      <description>A hardy wasteland vine that yields dark, bloody fruit when harvested. Its juice is prized for rough trade liquor and survival tonics, and the plant can be harvested repeatedly once established.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ArcheryTarget"]/label</xpath>
+    <value>
+      <label>archery target</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ArcheryTarget"]/description</xpath>
+    <value>
+      <description>A patched-up practice target mounted on a crude stand. It is kept around as a placeholder range fixture for anyone still trying to train their aim.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_TrainingDummy"]/label</xpath>
+    <value>
+      <label>training dummy</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_TrainingDummy"]/description</xpath>
+    <value>
+      <description>A straw-stuffed practice dummy lashed to a post. It is little more than a placeholder training fixture, but still lets people work on their form without risking a real fight.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AlchemicalWorkbench"]/label</xpath>
+    <value>
+      <label>fueled extract lab</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AlchemicalWorkbench"]/description</xpath>
+    <value>
+      <description>A wood-fueled station for brewing wasteland extracts.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AlchemicalWorkbench_Electric"]/label</xpath>
+    <value>
+      <label>electric extract lab</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AlchemicalWorkbench_Electric"]/description</xpath>
+    <value>
+      <description>An electrically powered station for brewing wasteland extracts.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="SettlerCivil"]/description</xpath>
+    <value>
+      <description>These people have lived here for decades or centuries and lost most of the technology that first brought them to this world. They can still defend themselves with basic gunpowder weapons while going about their daily routine of herding cattle, drinking rot gut, and hunting down bounties.\n\nThey care about trade, trust, and survival.\n\nThis particular group holds civil behavior in high regard.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="SettlerRough"]/description</xpath>
+    <value>
+      <description>These people have lived here for decades or centuries and lost most of the technology that first brought them to this world. They can still defend themselves with basic gunpowder weapons while going about their daily routine of herding cattle, drinking rot gut, and hunting down bounties.\n\nThey are not concerned with trade or trust.\n\nThis particular group believes that no one is created equal, and only strength allows one to survive on the frontier.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_MerchantGuild"]/label</xpath>
+    <value>
+      <label>caravan companies</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_MerchantGuild"]/description</xpath>
+    <value>
+      <description>These post-war traders are not a feudal guild but a loose network of caravan companies, brahmin drovers, guards, and deal-brokers who keep the wasteland moving. They abandon static lordships in favor of mobile camps, barter routes, and temporary markets, hauling scarce goods between isolated communities while armed escorts keep raiders honest.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_MerchantGuild"]/pawnSingular</xpath>
+    <value>
+      <pawnSingular>caravaneer</pawnSingular>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_MerchantGuild"]/pawnsPlural</xpath>
+    <value>
+      <pawnsPlural>caravaneers</pawnsPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_KingdomCivil"]/label</xpath>
+    <value>
+      <label>disabled kingdom remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_KingdomRough"]/label</xpath>
+    <value>
+      <label>disabled kingdom remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_KingdomSavage"]/label</xpath>
+    <value>
+      <label>disabled kingdom remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_CivilClan"]/label</xpath>
+    <value>
+      <label>disabled clan remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ClanRough"]/label</xpath>
+    <value>
+      <label>disabled clan remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ClanSavage"]/label</xpath>
+    <value>
+      <label>disabled clan remnants</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ImmunizationDraught"]/label</xpath>
+    <value>
+      <label>immunization extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_HealingDraught"]/label</xpath>
+    <value>
+      <label>healing extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_StrengthDraught"]/label</xpath>
+    <value>
+      <label>strength extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_EfficiencyDraught"]/label</xpath>
+    <value>
+      <label>efficiency extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_PainkillerDraught"]/label</xpath>
+    <value>
+      <label>painkiller extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_TorturerDraught"]/label</xpath>
+    <value>
+      <label>torturer extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_FocusDraught"]/label</xpath>
+    <value>
+      <label>focus extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_FertilityDraught"]/label</xpath>
+    <value>
+      <label>fertility extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_InspirationDraught"]/label</xpath>
+    <value>
+      <label>inspiration extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_StoneskinDraught"]/label</xpath>
+    <value>
+      <label>stoneskin extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AmnesiaDraught"]/label</xpath>
+    <value>
+      <label>amnesia extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ComaDraught"]/label</xpath>
+    <value>
+      <label>coma extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_PoisonDraught"]/label</xpath>
+    <value>
+      <label>poison extract</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemshined"]/label</xpath>
+    <value>
+      <label>rot gut</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemshined"]/labelNoun</xpath>
+    <value>
+      <labelNoun>rot-gutted</labelNoun>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ImmunizationDraught"]/description</xpath>
+    <value>
+      <description>An extract is improving this person's immune system, making them more capable of fighting off diseases and infections at the cost of making them sleepier.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_HealingDraught"]/description</xpath>
+    <value>
+      <description>An extract is improving this person's natural wound regeneration, letting them recover from injuries significantly faster than normal.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_StrengthDraught"]/description</xpath>
+    <value>
+      <description>An extract is sharpening the user's strength and reflexes, improving combat ability at the cost of higher social fight chance and a higher mental break threshold.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_EfficiencyDraught"]/description</xpath>
+    <value>
+      <description>An extract is boosting the user's global work speed while slowing energy loss, but it also raises the risk of a heart attack and leaves them with a major sleep-rate crash afterward.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_PainkillerDraught"]/description</xpath>
+    <value>
+      <description>An extract is dulling the user's sense of pain at the cost of greatly reduced focus and productivity.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_TorturerDraught"]/description</xpath>
+    <value>
+      <description>An extract is causing severe pain to the user, leaving them unable to move. Prisoners lose resistance quickly, and slaves become fully suppressed.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_FocusDraught"]/description</xpath>
+    <value>
+      <description>An extract is heightening the user's ability to learn, letting them gain knowledge faster, eat faster, rest quicker, and gain more psyfocus while the potent phase lasts. The effects reverse when it fades.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_FertilityDraught"]/description</xpath>
+    <value>
+      <description>An extract is artificially increasing the user's fertility. The boost is strong enough to give even infertile people a chance to become parents.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_InspirationDraught"]/description</xpath>
+    <value>
+      <description>An extract is providing mental clarity, helping the user focus on skills they are passionate about at the cost of diminished combat capability.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_StoneskinDraught"]/description</xpath>
+    <value>
+      <description>An extract is hardening the user's skin into a built-in layer of armor that resists burns and physical trauma, though it makes them much less attractive.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_AmnesiaDraught"]/description</xpath>
+    <value>
+      <description>An extract is causing the user to lose memories quickly, shortening both positive and negative memories far faster than normal.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_ComaDraught"]/description</xpath>
+    <value>
+      <description>An extract is shutting the user's body down into a deep coma-like state.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_PoisonDraught"]/description</xpath>
+    <value>
+      <description>An extract is poisoning the user and rapidly degrading their condition.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Play_Faro"]/reportString</xpath>
+    <value>
+      <reportString>playing caravan cards.</reportString>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFES_ChemfuelToChemshine"]/label</xpath>
+    <value>
+      <label>Ferment chemfuel into rot gut</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFES_ChemfuelToChemshine"]/description</xpath>
+    <value>
+      <description>Turns 50 chemfuel into 25 rot gut.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFES_ChemfuelToChemshine"]/labelOverride</xpath>
+    <value>
+      <labelOverride>Ferment 50 chemfuel into 25 rot gut</labelOverride>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFES_Bandits"]/label</xpath>
+    <value>
+      <label>Disabled Bandits</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFES_Bandits"]/description</xpath>
+    <value>
+      <description>This Settlers scenario has been disabled by Sunset.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_NewKingdom"]/label</xpath>
+    <value>
+      <label>Disabled New Kingdom</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_NewKingdom"]/description</xpath>
+    <value>
+      <description>This start has been disabled by Sunset.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="DiegoDire"]/description</xpath>
+    <value>
+      <description>Diego Dire believes the best stories are the violent ones, facing unfavorable odds and going down in a blaze of glory with exploding pack beasts and drunks.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="Chemshined"]/label</xpath>
+    <value>
+      <label>rot-gutted</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_MerchantGuildTrader"]/description</xpath>
+    <value>
+      <description>A caravan company broker trading practical goods hauled through the wasteland.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="TakeChemshineOutOfChemshineBarrel"]/label</xpath>
+    <value>
+      <label>draw rot gut from rot gut barrels</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="TakeChemshineOutOfChemshineBarrel"]/verb</xpath>
+    <value>
+      <verb>draw rot gut</verb>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="TakeChemshineOutOfChemshineBarrel"]/gerund</xpath>
+    <value>
+      <gerund>drawing rot gut from</gerund>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="FillChemshineBarrel"]/label</xpath>
+    <value>
+      <label>fill rot gut barrels</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_Alchemy"]/label</xpath>
+    <value>
+      <label>extract brewing</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_Alchemy"]/description</xpath>
+    <value>
+      <description>Learn to cultivate wasteland ingredients and brew different extracts at an extract lab.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_DestroyedMerchantGuildCamp"]/label</xpath>
+    <value>
+      <label>destroyed caravan camp</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VFEM2_DestroyedMerchantGuildCamp"]/description</xpath>
+    <value>
+      <description>A looted and abandoned caravan company camp.</description>
+    </value>
+  </Operation>
+</Patch>

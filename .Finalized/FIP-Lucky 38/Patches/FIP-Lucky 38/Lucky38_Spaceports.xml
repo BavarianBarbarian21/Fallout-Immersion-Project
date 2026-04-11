@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Brotherhood vertibird network rewrite for Spaceports -->
+	<Operation Class="PatchOperationSequence" MayRequire="zal.spaceports">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_ShuttleLandingPad"]/label</xpath>
+				<value>
+					<label>Brotherhood vertibird pad</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_ShuttleLandingPad"]/description</xpath>
+				<value>
+					<description>A hardened landing pad with guidance lights, fueling hookups, and an encrypted transponder for Brotherhood vertibirds. Keep it powered and clear, and visiting patrols, quartermasters, traders, and allied passengers can touch down here.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_Beacon"]/label</xpath>
+				<value>
+					<label>Brotherhood flight beacon</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_Beacon"]/description</xpath>
+				<value>
+					<description>A long-range IFF beacon and traffic-control mast used by Brotherhood cells and trusted allies to advertise a safe vertibird approach, coordinate landings, and broadcast refueling availability.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_VisitorSpot"]/label</xpath>
+				<value>
+					<label>vertibird mustering point</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_VisitorSpot"]/description</xpath>
+				<value>
+					<description>Designates a configurable point where visiting Brotherhood personnel, traders, and allied passengers will gather after landing. If no valid point is found, they will remain near their vertibird.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelProcessor"]/label</xpath>
+				<value>
+					<label>aviation fuel processor</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelProcessor"]/description</xpath>
+				<value>
+					<description>An industrial processor that refines volatile feedstock and water into aviation fuel for Brotherhood vertibirds. It runs best with water access and turns surplus chemfuel into saleable flight stock.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelTank"]/label</xpath>
+				<value>
+					<label>aviation fuel tank</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelTank"]/description</xpath>
+				<value>
+					<description>A chilled storage tank for processed aviation fuel. Keep it powered or the stock begins to evaporate away.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelDispenser"]/label</xpath>
+				<value>
+					<label>vertibird refueling terminal</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Spaceports_FuelDispenser"]/description</xpath>
+				<value>
+					<description>A service terminal that sells aviation fuel to Brotherhood vertibirds and other authorized aircraft. It must be placed adjacent to a vertibird pad; once payment is verified, pumps inside the pad draw fuel from tanks on the same power network.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ShuttleComm"]/label</xpath>
+				<value>
+					<label>Brotherhood field transponder</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ShuttleComm"]/description</xpath>
+				<value>
+					<description>A single-use field transponder used to request Brotherhood vertibird pickup.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ShuttleComm"]/verbs/li/label</xpath>
+				<value>
+					<label>call vertibird pickup</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ArchoShuttle"]/label</xpath>
+				<value>
+					<label>vertibird signal flare</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ArchoShuttle"]/description</xpath>
+				<value>
+					<description>A bizarre archotech signal flare that calls a vertibird out of nowhere. Whatever intelligence answers it is willing to provide one miraculous extraction.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_ArchoShuttle"]/verbs/li/label</xpath>
+				<value>
+					<label>pop signal flare</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/BackstoryDef[defName="Spaceports_ShuttlePilot"]/title</xpath>
+				<value>
+					<title>Vertibird pilot</title>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/BackstoryDef[defName="Spaceports_ShuttlePilot"]/titleShort</xpath>
+				<value>
+					<titleShort>Vertibird pilot</titleShort>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/BackstoryDef[defName="Spaceports_ShuttlePilot"]/description</xpath>
+				<value>
+					<description>A veteran Brotherhood vertibird pilot, [PAWN_nameDef] has hauled patrols, wounded, cargo, and dignitaries through weather and gunfire alike. [PAWN_pronoun] keeps a cool head, knows flightline discipline, and can trade stories with grunts and brass in equal measure.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorldObjectDef[defName="Spaceports_ShuttleWO"]/label</xpath>
+				<value>
+					<label>Brotherhood vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorldObjectDef[defName="Spaceports_ShuttleWO"]/description</xpath>
+				<value>
+					<description>A Brotherhood vertibird in flight.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_RoyaltyShuttle"]/label</xpath>
+				<value>
+					<label>Brotherhood vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleA"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleB"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleC"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleD"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleE"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleF"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleG"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleH"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleI"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleJ"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleK"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleSkip"]/label</xpath>
+				<value>
+					<label>vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_ShuttleInert"]/label</xpath>
+				<value>
+					<label>grounded vertibird</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TransportShipDef[defName="Spaceports_SurpriseShuttle"]/label</xpath>
+				<value>
+					<label>unidentified vertibird</label>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ImmediateDeparture</xpath>
+				<value>
+					<Spaceports_ImmediateDeparture>Scramble</Spaceports_ImmediateDeparture>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ImmediateDepartureTooltip</xpath>
+				<value>
+					<Spaceports_ImmediateDepartureTooltip>Force this vertibird to lift off and depart immediately, regardless of whether all required cargo is loaded.</Spaceports_ImmediateDepartureTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_RecallParty</xpath>
+				<value>
+					<Spaceports_RecallParty>Recall passengers</Spaceports_RecallParty>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_RecallPartyTooltip</xpath>
+				<value>
+					<Spaceports_RecallPartyTooltip>Force this vertibird's passengers to board immediately and depart.</Spaceports_RecallPartyTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_GizmoDisabled</xpath>
+				<value>
+					<Spaceports_GizmoDisabled>you do not control this vertibird, or it is incapable of taking off.</Spaceports_GizmoDisabled>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AccessControlButton</xpath>
+				<value>
+					<AccessControlButton>Flight control</AccessControlButton>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AccessControlDesc</xpath>
+				<value>
+					<AccessControlDesc>Specify what kind of vertibird traffic is allowed to use this pad.</AccessControlDesc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_None</xpath>
+				<value>
+					<Spaceports_None>No flights</Spaceports_None>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_AllTypes</xpath>
+				<value>
+					<Spaceports_AllTypes>All vertibirds</Spaceports_AllTypes>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_JustVisitors</xpath>
+				<value>
+					<Spaceports_JustVisitors>Visitors only</Spaceports_JustVisitors>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_JustTraders</xpath>
+				<value>
+					<Spaceports_JustTraders>Quartermasters only</Spaceports_JustTraders>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_JustGuests</xpath>
+				<value>
+					<Spaceports_JustGuests>Allied guests only</Spaceports_JustGuests>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_AirspaceLockdown</xpath>
+				<value>
+					<Spaceports_AirspaceLockdown>Flight lockdown</Spaceports_AirspaceLockdown>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_AirspaceLockdownDesc</xpath>
+				<value>
+					<Spaceports_AirspaceLockdownDesc>Due to hostiles, or because it was manually activated, one or more of your colonies has entered flight lockdown. No new vertibird traffic will arrive, but any landed craft can still depart. \n\nColonies currently under flight lockdown:\n</Spaceports_AirspaceLockdownDesc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_AutoEvac</xpath>
+				<value>
+					<Spaceports_AutoEvac>Emergency scramble in progress</Spaceports_AutoEvac>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_AutoEvacDesc</xpath>
+				<value>
+					<Spaceports_AutoEvacDesc>Due to hostiles, one or more of your colonies has initiated automatic evacuation of landed visitors and crews. \n\nColonies currently performing emergency scrambles:\n</Spaceports_AutoEvacDesc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconUnpowered</xpath>
+				<value>
+					<Spaceports_BeaconUnpowered>\nBeacon unpowered - flight network offline.</Spaceports_BeaconUnpowered>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconNoPads</xpath>
+				<value>
+					<Spaceports_BeaconNoPads>\nNo active vertibird pads detected - flight network offline.</Spaceports_BeaconNoPads>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconAtCap</xpath>
+				<value>
+					<Spaceports_BeaconAtCap>\nFlight traffic at user-defined limit - landings suspended.</Spaceports_BeaconAtCap>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconPadsFull</xpath>
+				<value>
+					<Spaceports_BeaconPadsFull>\nAll vertibird pads are occupied - landings suspended.</Spaceports_BeaconPadsFull>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconKessler</xpath>
+				<value>
+					<Spaceports_BeaconKessler>\nDebris hazard in the flight corridor - landings impossible.</Spaceports_BeaconKessler>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_BeaconOK</xpath>
+				<value>
+					<Spaceports_BeaconOK>\nFlight network online.</Spaceports_BeaconOK>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_CallTaxi</xpath>
+				<value>
+					<Spaceports_CallTaxi>Request transit vertibird</Spaceports_CallTaxi>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_CallTaxiTooltip</xpath>
+				<value>
+					<Spaceports_CallTaxiTooltip>Request a one-way Brotherhood-chartered vertibird for 500 silver.</Spaceports_CallTaxiTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_CallTaxiDisabled</xpath>
+				<value>
+					<Spaceports_CallTaxiDisabled>beacon is unpowered - cannot reach Brotherhood flight control.</Spaceports_CallTaxiDisabled>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_Uplink</xpath>
+				<value>
+					<Spaceports_Uplink>Brotherhood uplink established...</Spaceports_Uplink>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_CallTaxiInfo</xpath>
+				<value>
+					<Spaceports_CallTaxiInfo>Service: One-way transit vertibird\nFare: 500 silver\nBoarding: first open pad</Spaceports_CallTaxiInfo>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ManualAirspaceLockdown</xpath>
+				<value>
+					<Spaceports_ManualAirspaceLockdown>Flight lockdown</Spaceports_ManualAirspaceLockdown>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ManualAirspaceLockdownTooltip</xpath>
+				<value>
+					<Spaceports_ManualAirspaceLockdownTooltip>Manually toggle vertibird traffic lockdown.</Spaceports_ManualAirspaceLockdownTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_DismissAll</xpath>
+				<value>
+					<Spaceports_DismissAll>Scramble all</Spaceports_DismissAll>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_DismissAllTooltip</xpath>
+				<value>
+					<Spaceports_DismissAllTooltip>Force all vertibirds on the map to lift off and depart immediately, regardless of whether all required cargo is loaded.</Spaceports_DismissAllTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_RecallAll</xpath>
+				<value>
+					<Spaceports_RecallAll>Recall all crews</Spaceports_RecallAll>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_RecallAllTooltip</xpath>
+				<value>
+					<Spaceports_RecallAllTooltip>Force all landed parties to board their vertibirds and depart immediately.</Spaceports_RecallAllTooltip>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_RoofBlocking</xpath>
+				<value>
+					<Spaceports_RoofBlocking>Vertibird pad blocked by roofing.</Spaceports_RoofBlocking>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_TotalFuelProduced</xpath>
+				<value>
+					<Spaceports_TotalFuelProduced>Lifetime aviation fuel production: {0}</Spaceports_TotalFuelProduced>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ProductionCache</xpath>
+				<value>
+					<Spaceports_ProductionCache>Ready fuel stock: {0}</Spaceports_ProductionCache>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_FuelLevel</xpath>
+				<value>
+					<Spaceports_FuelLevel>Aviation fuel reserves: {0}</Spaceports_FuelLevel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_TotalSales</xpath>
+				<value>
+					<Spaceports_TotalSales>Lifetime refueling revenue: {0}</Spaceports_TotalSales>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_NetworkInfo</xpath>
+				<value>
+					<Spaceports_NetworkInfo>There are {0} tanks on the network holding a total of {1} aviation fuel.</Spaceports_NetworkInfo>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_DryModeWarning</xpath>
+				<value>
+					<Spaceports_DryModeWarning>Warning: without water access, the aviation fuel processor will run at 33% efficiency.</Spaceports_DryModeWarning>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_DryModeWarningDBH</xpath>
+				<value>
+					<Spaceports_DryModeWarningDBH>Warning: the aviation fuel processor requires water piping to operate at full efficiency.</Spaceports_DryModeWarningDBH>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_FFTerrain</xpath>
+				<value>
+					<Spaceports_FFTerrain>Aviation fuel processor must be placed in shallow water, a river, or on terrain that supports Heavy.</Spaceports_FFTerrain>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ModeWet</xpath>
+				<value>
+					<Spaceports_ModeWet>Operating mode: wet (full yield)</Spaceports_ModeWet>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ModeDry</xpath>
+				<value>
+					<Spaceports_ModeDry>Operating mode: dry (reduced yield)</Spaceports_ModeDry>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_SingleVisitorLanding</xpath>
+				<value>
+					<Spaceports_SingleVisitorLanding>A Brotherhood vertibird from {1} is landing with a visiting patron. {PAWN_titleIndef} named {PAWN_nameFull} is onboard.</Spaceports_SingleVisitorLanding>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_GroupVisitorsLanding</xpath>
+				<value>
+					<Spaceports_GroupVisitorsLanding>A Brotherhood vertibird from {0} is landing with visitors.</Spaceports_GroupVisitorsLanding>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_VisitorsLeaving</xpath>
+				<value>
+					<Spaceports_VisitorsLeaving>Visitors from {0} are departing by Brotherhood vertibird.</Spaceports_VisitorsLeaving>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/LetterTraderShuttleArrival</xpath>
+				<value>
+					<LetterTraderShuttleArrival>A Brotherhood quartermaster vertibird from {0} is landing. They are a {1}.</LetterTraderShuttleArrival>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleDisabled</xpath>
+				<value>
+					<Spaceports_ShuttleDisabled>No free vertibird pads</Spaceports_ShuttleDisabled>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleMedevacLetterLabel</xpath>
+				<value>
+					<Spaceports_ShuttleMedevacLetterLabel>Brotherhood medevac</Spaceports_ShuttleMedevacLetterLabel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleMedevacLetter</xpath>
+				<value>
+					<Spaceports_ShuttleMedevacLetter>Your short-range radio crackles to life with a distressed Brotherhood pilot from {0}. Their medevac vertibird is carrying a badly injured ally.\n\nUnfortunately, the patient’s condition has deteriorated rapidly, and the onboard medic fears they may not reach the nearest {0} base with proper medical facilities in time. Your settlement, however, is only a few minutes away.\n\nThe pilot and medic both implore you to clear them for an emergency landing so you can stabilize the patient. They cannot promise a concrete material reward, but they swear they will put in a good word with {1} and try to route some token of gratitude your way.</Spaceports_ShuttleMedevacLetter>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleMedevacAccept</xpath>
+				<value>
+					<Spaceports_ShuttleMedevacAccept>Clear the vertibird for emergency landing.</Spaceports_ShuttleMedevacAccept>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleMedevacRewardLabel</xpath>
+				<value>
+					<Spaceports_ShuttleMedevacRewardLabel>Brotherhood medevac reward</Spaceports_ShuttleMedevacRewardLabel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_ShuttleMedevacReward</xpath>
+				<value>
+					<Spaceports_ShuttleMedevacReward>Some time ago, you assisted a distressed Brotherhood medevac vertibird. The pilot and medic kept their word and managed to have a reward drop sent your way.</Spaceports_ShuttleMedevacReward>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_InterstellarDerelictLetter</xpath>
+				<value>
+					<Spaceports_InterstellarDerelictLetter>Your short-range radio has picked up an automated distress call from a crippled vessel drifting in-system. As you watch its passage, a battered emergency lander breaks away from the hull and fires its drive for a last descent. Soon after, you receive a transmission from the passengers: they picked up your flight beacon.\n\nThe pilot explains that the craft is too unstable to perform a controlled descent and begs you to clear them for an emergency landing. He offers some advanced equipment as a reward.\n\nYou can accept their request, but be warned: the lander's damaged reactor could detonate during atmospheric entry, raining debris down on your colony. It might even explode on impact, wreaking havoc on your vertibird facilities.</Spaceports_InterstellarDerelictLetter>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_InterstellarDerelictSafe</xpath>
+				<value>
+					<Spaceports_InterstellarDerelictSafe>The lander's drive holds steady as it approaches your beacon. It is going to make it.</Spaceports_InterstellarDerelictSafe>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_InterstellarDerelictBoom</xpath>
+				<value>
+					<Spaceports_InterstellarDerelictBoom>The lander's drive sputters dangerously as it nears your colony. It is going to crash.</Spaceports_InterstellarDerelictBoom>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_InterstellarDerelictShrapnel</xpath>
+				<value>
+					<Spaceports_InterstellarDerelictShrapnel>The lander's reactor lost containment during atmospheric entry. Your flight beacon has picked up {0} inbound chunks of shrapnel and debris.</Spaceports_InterstellarDerelictShrapnel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo</xpath>
+				<value>
+					<Spaceports_MysteryCargo>Unidentified vertibird</Spaceports_MysteryCargo>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargoLetter</xpath>
+				<value>
+					<Spaceports_MysteryCargoLetter>Your Brotherhood flight beacon has detected an unidentified vertibird approaching on autopilot. Its transponder has been disabled, and all attempts to contact any crew onboard have failed.\n\nHowever, analysis of its trajectory suggests it carries a heavy payload. It could be something valuable... or it could be a trap.\n\nYou can quash your beacon to hide from the approach, or keep it active and let the vertibird land.</Spaceports_MysteryCargoLetter>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargoAccept</xpath>
+				<value>
+					<Spaceports_MysteryCargoAccept>Let the vertibird land.</Spaceports_MysteryCargoAccept>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo0</xpath>
+				<value>
+					<Spaceports_MysteryCargo0>It seems the vertibird contains a small assortment of useful things.</Spaceports_MysteryCargo0>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo1</xpath>
+				<value>
+					<Spaceports_MysteryCargo1>It seems the vertibird contains a large assortment of useful things.</Spaceports_MysteryCargo1>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo2</xpath>
+				<value>
+					<Spaceports_MysteryCargo2>It seems the vertibird is empty. Its engines are damaged, making it useful only for scrap.</Spaceports_MysteryCargo2>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo3</xpath>
+				<value>
+					<Spaceports_MysteryCargo3>The vertibird's engine spins up as you approach, and it takes off for parts unknown.</Spaceports_MysteryCargo3>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo4</xpath>
+				<value>
+					<Spaceports_MysteryCargo4>The vertibird depressurizes violently when you approach, hurling several desiccated skeletons out of its cabin.</Spaceports_MysteryCargo4>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo5</xpath>
+				<value>
+					<Spaceports_MysteryCargo5>A piercing mental scream emits from the vertibird as you approach. A psychic charge.</Spaceports_MysteryCargo5>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo6</xpath>
+				<value>
+					<Spaceports_MysteryCargo6>The vertibird's hatch springs open when you approach, and a small attack party from {0} pours out.</Spaceports_MysteryCargo6>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_MysteryCargo7</xpath>
+				<value>
+					<Spaceports_MysteryCargo7>The vertibird's reactor begins to wail louder and louder as you approach. It is a bomb.</Spaceports_MysteryCargo7>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_PrisonerTransferLetter</xpath>
+				<value>
+					<Spaceports_PrisonerTransferLetter>You’ve just received a proposition from {0} of {1}. They have a surplus of prisoners at one of their holdings and are looking to offload a few for a fee.\n\n{0} says that two batches are available for transfer - one low-security, the other high-security. If you accept, both the payment and the prisoners will be transferred to you by vertibird.\n\nLow-sec payment: {2}\nHigh-sec payment: {3}</Spaceports_PrisonerTransferLetter>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_SpicyPawnLendingLetter</xpath>
+				<value>
+					<Spaceports_SpicyPawnLendingLetter>You've just received a proposition from {0}. They need professional help with a particularly complex and risky {1} job, and they think one of your colonists - {2} - is exactly who they need.\n\nIf you accept, {0} will send a vertibird to ferry {2} to the worksite, where {3} will {4} The job will take 10 to 15 days, after which {2} will be flown back on a second vertibird alongside the promised reward.\n\nHowever, {0} warns that while they can say {2} is not at risk of death, they cannot guarantee {2}'s general safety and health while on the job.\n\nIf you choose to accept, {0} offers the following reward: {5}</Spaceports_SpicyPawnLendingLetter>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Spaceports_PickupInbound</xpath>
+				<value>
+					<Spaceports_PickupInbound>A vertibird is landing to pick up {0}.</Spaceports_PickupInbound>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

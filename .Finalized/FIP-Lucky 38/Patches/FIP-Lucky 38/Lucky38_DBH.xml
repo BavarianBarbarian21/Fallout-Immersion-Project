@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="Dubwise.DubsBadHygiene">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="ColdBath"]/stages/li[1]/label</xpath>
+        <value>
+          <label>cold bathhouse plunge</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HeatedPool"]/stages/li[1]/description</xpath>
+        <value>
+          <description>The heated bathhouse pool was deeply relaxing.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HeatedPool"]/stages/li[1]/label</xpath>
+        <value>
+          <label>heated bathhouse pool</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HotBath"]/stages/li[1]/label</xpath>
+        <value>
+          <label>hot bathhouse soak</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HotShower"]/stages/li[1]/description</xpath>
+        <value>
+          <description>I had a proper hot shower in the bathhouse.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="HotShower"]/stages/li[1]/label</xpath>
+        <value>
+          <label>hot bathhouse shower</label>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewE">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationSequence" MayRequire="VanillaExpanded.VCookE">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/label</xpath>
+								<value>
+									<label>coyote tobacco</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/description</xpath>
+								<value>
+									<description>A hardy stand of coyote tobacco suited to the Mojave and other dry wasteland climates. Once cured down, the leaves become coyote tobacco chew for smoking, rolling, or trading.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/label</xpath>
+								<value>
+									<label>instant coffee</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/description</xpath>
+								<value>
+									<description>Vacuum-sealed tins of pre-war instant coffee. Bitter, shelf-stable, and still potent enough to anchor every Lucky 38 breakfast service.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTea"]/label</xpath>
+								<value>
+									<label>dried tea leaves</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTea"]/description</xpath>
+								<value>
+									<description>Dried pre-war tea leaves stored in a Lucky 38 pantry tin. They keep well and still steep into a proper serviceable cup.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTea"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/label</xpath>
+								<value>
+									<label>coyote tobacco chew</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/description</xpath>
+								<value>
+									<description>A cured pouch of coyote tobacco chew. Dry enough to smoke, roll, or pack into richer blends, with the dusty bite wasteland smokers expect.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/plant/sowTags</xpath>
+								<value>
+									<sowTags />
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/plant/sowTags</xpath>
+								<value>
+									<sowTags />
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/plant/sowTags</xpath>
+								<value>
+									<sowTags>
+										<li>Ground</li>
+										<li>Hydroponic</li>
+									</sowTags>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Cigarettes"]/description</xpath>
+								<value>
+									<description>A small, rolled paper tube stuffed loosely with coyote tobacco chew. It offers a brief euphoria, mild stimulation, and the same stale wasteland smell that keeps smokers coming back.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Cigars"]/description</xpath>
+								<value>
+									<description>A thick cigar rolled from coyote tobacco chew and finished for a more expensive, more deliberate smoke. It carries a rough desert bitterness under the fancy presentation.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCigarettes"]/description</xpath>
+								<value>
+									<description>Roll coyote tobacco chew into cigarettes.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCigars"]/description</xpath>
+								<value>
+									<description>Roll coyote tobacco chew into cigars with a bit of gold trim for a more refined smoke.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VBE_RawCoffee"]</xpath>
+								<value>
+									<li>FCP_Raw_Honey_Mesquite</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VBE_RawCoffee"]</xpath>
+								<value>
+									<li>FCP_Raw_Honey_Mesquite</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VBE_RawCoffee"]</xpath>
+								<value>
+									<li>FCP_Raw_Honey_Mesquite</li>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VBE_RawTea"]</xpath>
+								<value>
+									<li>FCP_Raw_Mutated_Fern</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VBE_RawTea"]</xpath>
+								<value>
+									<li>FCP_Raw_Mutated_Fern</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VBE_RawTea"]</xpath>
+								<value>
+									<li>FCP_Raw_Mutated_Fern</li>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Soda"]/label</xpath>
+								<value>
+									<label>homebrew sarsaparilla</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_Soda"]/description</xpath>
+								<value>
+									<description>A sweet, fizzy bottle of homebrew sarsaparilla. It is more refreshing than nutritious, but a chilled bottle still feels like a pre-war luxury.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SodaSyrup"]/label</xpath>
+								<value>
+									<label>homebrew sarsaparilla syrup</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SodaSyrup"]/description</xpath>
+								<value>
+									<description>A thick, intensely sweet base for homebrew sarsaparilla. It is meant to be cut, carbonated, and bottled before serving.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SodaFountain"]/label</xpath>
+								<value>
+									<label>homebrew sarsaparilla fountain</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SodaFountain"]/description</xpath>
+								<value>
+									<description>An all-in-one homebrew sarsaparilla bottling unit. Syrup is mixed, carbonated, chilled, and dispensed into sterilized bottles for service.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrup"]/label</xpath>
+								<value>
+									<label>make homebrew sarsaparilla syrup</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrup"]/description</xpath>
+								<value>
+									<description>Make homebrew sarsaparilla syrup by reducing fruit juice and sweetener into a thick bottling concentrate.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrup"]/jobString</xpath>
+								<value>
+									<jobString>Making homebrew sarsaparilla syrup.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrupBulk"]/label</xpath>
+								<value>
+									<label>make homebrew sarsaparilla syrup (efficient)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrupBulk"]/description</xpath>
+								<value>
+									<description>Make homebrew sarsaparilla syrup by mixing natural fruit juice with sugar or preserved syrup. This recipe is much more efficient.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeSodaSyrupBulk"]/jobString</xpath>
+								<value>
+									<jobString>Making homebrew sarsaparilla syrup.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_DrankSoda"]/label</xpath>
+								<value>
+									<label>drank homebrew sarsaparilla</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_DrankSoda"]/description</xpath>
+								<value>
+									<description>A burst of sugar from a bottle of homebrew sarsaparilla provides a short-lived lift. Provides a 5% manipulation buff for 5 hours.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_DrankSoda"]/stages/li/label</xpath>
+								<value>
+									<label>drank homebrew sarsaparilla</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_DrankSoda"]/stages/li/description</xpath>
+								<value>
+									<description>I drank a chilled bottle of homebrew sarsaparilla. A small luxury.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_EnergyDrink"]/label</xpath>
+								<value>
+									<label>guarana</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_EnergyDrink"]/description</xpath>
+								<value>
+									<description>A sharp, fizzy bottle of guarana finished with bitterness and a radioactive aftertaste. It hits hard up front and leaves a crash waiting on the other side.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeEnergyDrink"]/label</xpath>
+								<value>
+									<label>make guarana</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeEnergyDrink"]/description</xpath>
+								<value>
+									<description>Make guarana by fortifying homebrew sarsaparilla with caffeine and a radioactive kick. It delivers fast energy and a later crash.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeEnergyDrink"]/jobString</xpath>
+								<value>
+									<jobString>Making guarana.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkHigh"]/label</xpath>
+								<value>
+									<label>guarana high</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkHigh"]/labelNoun</xpath>
+								<value>
+									<labelNoun>a guarana high</labelNoun>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkHigh"]/description</xpath>
+								<value>
+									<description>Guarana restores rest immediately and increases movement speed, but it always leaves a crash behind it.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkCrash"]/label</xpath>
+								<value>
+									<label>guarana crash</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkCrash"]/labelNoun</xpath>
+								<value>
+									<labelNoun>a guarana crash</labelNoun>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_EnergyDrinkCrash"]/description</xpath>
+								<value>
+									<description>An unpleasant delayed after-effect of guarana consumption.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SimpleCocktail"]/label</xpath>
+								<value>
+									<label>simple atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_SimpleCocktail"]/description</xpath>
+								<value>
+									<description>A simple atomic cocktail quickly mixed from a duo of ingredients.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_FineCocktail"]/label</xpath>
+								<value>
+									<label>fine atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_FineCocktail"]/description</xpath>
+								<value>
+									<description>A fine atomic cocktail, mixed precisely from multiple ingredients.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_LavishCocktail"]/label</xpath>
+								<value>
+									<label>lavish atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_LavishCocktail"]/description</xpath>
+								<value>
+									<description>A lavish atomic cocktail mixed from a wide variety of ingredients and chilled to perfection before being served.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_GourmetCocktail"]/label</xpath>
+								<value>
+									<label>gourmet atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_GourmetCocktail"]/description</xpath>
+								<value>
+									<description>A miracle of mixology where every glass, garnish, and stir has been tuned into a gourmet atomic cocktail.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailSimple"]/label</xpath>
+								<value>
+									<label>make simple atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailSimple"]/description</xpath>
+								<value>
+									<description>Make a simple atomic cocktail quickly mixed from a duo of ingredients.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailSimple"]/jobString</xpath>
+								<value>
+									<jobString>Making simple atomic cocktail.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailFine"]/label</xpath>
+								<value>
+									<label>make fine atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailFine"]/description</xpath>
+								<value>
+									<description>Make a fine atomic cocktail, mixed precisely from multiple ingredients.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailFine"]/jobString</xpath>
+								<value>
+									<jobString>Making fine atomic cocktail.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailLavish"]/label</xpath>
+								<value>
+									<label>make lavish atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailLavish"]/description</xpath>
+								<value>
+									<description>Make a lavish atomic cocktail mixed from a wide variety of ingredients and chilled to perfection before serving.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailLavish"]/jobString</xpath>
+								<value>
+									<jobString>Making lavish atomic cocktail.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailGourmet"]/label</xpath>
+								<value>
+									<label>make gourmet atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailGourmet"]/description</xpath>
+								<value>
+									<description>Make a gourmet atomic cocktail where every factor has been calculated for maximum flavor and body.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VBE_MakeCocktailGourmet"]/jobString</xpath>
+								<value>
+									<jobString>Making gourmet atomic cocktail.</jobString>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_ConsumedCocktail"]/label</xpath>
+								<value>
+									<label>consumed atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_ConsumedCocktail"]/labelNoun</xpath>
+								<value>
+									<labelNoun>an atomic cocktail</labelNoun>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_ConsumedCocktail"]/description</xpath>
+								<value>
+									<description>Consumed a nice atomic cocktail. Has a chance to provide a random inspiration.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_TequilaAsIngredient"]/label</xpath>
+								<value>
+									<label>drank tequila-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_WhiskeyAsIngredient"]/label</xpath>
+								<value>
+									<label>drank whiskey-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_VodkaAsIngredient"]/label</xpath>
+								<value>
+									<label>drank vodka-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_GinAsIngredient"]/label</xpath>
+								<value>
+									<label>drank gin-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_RBMeadAsIngredient"]/label</xpath>
+								<value>
+									<label>drank mead-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_WineAsIngredient"]/label</xpath>
+								<value>
+									<label>drank wine-based atomic cocktail</label>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_TequilaAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank tequila-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_WhiskeyAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank whiskey-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_VodkaAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank vodka-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_GinAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank gin-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_RBMeadAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank mead-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_WineAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank wine-based atomic cocktail</label>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyAwful"]/label</xpath>
+								<value>
+									<label>pungashine (awful)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyPoor"]/label</xpath>
+								<value>
+									<label>pungashine (poor)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyNormal"]/label</xpath>
+								<value>
+									<label>pungashine (normal)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyGood"]/label</xpath>
+								<value>
+									<label>pungashine (good)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyExcellent"]/label</xpath>
+								<value>
+									<label>pungashine (excellent)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMasterwork"]/label</xpath>
+								<value>
+									<label>pungashine (masterwork)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyLegendary"]/label</xpath>
+								<value>
+									<label>pungashine (legendary)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[@Name="VBE_AmbrandyBase"]/description</xpath>
+								<value>
+									<description>Also known as liquid sunshine, pungashine is a refined liquor distilled from ripe punga fruit. It is rare, expensive, and prized anywhere a properly stocked bar still exists.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMush"]/label</xpath>
+								<value>
+									<label>pungashine mash</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMush"]/description</xpath>
+								<value>
+									<description>Sliced and pressed punga fruit ready to ripen toward pungashine.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMust"]/label</xpath>
+								<value>
+									<label>pungashine must</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyMust"]/description</xpath>
+								<value>
+									<description>Fully ripened punga liquor base, ready to be distilled into pungashine.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyDistillery"]/label</xpath>
+								<value>
+									<label>pungashine still</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VBE_AmbrandyDistillery"]/description</xpath>
+								<value>
+									<description>A gilded distillery of very delicate craftsmanship meant for aging pungashine must into a drinkable form.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_AmbrandyInspiration"]/label</xpath>
+								<value>
+									<label>pungashine inspiration</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_AmbrandyInspiration"]/labelNoun</xpath>
+								<value>
+									<labelNoun>a pungashine inspiration</labelNoun>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_AmbrandyAsIngredient"]/label</xpath>
+								<value>
+									<label>drank pungashine-based atomic cocktail</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VBE_AmbrandyAsIngredient"]/description</xpath>
+								<value>
+									<description>This colonist drank an atomic cocktail that had pungashine as one of its ingredients.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VBE_AmbrandyAsIngredient"]/stages/li/label</xpath>
+								<value>
+									<label>drank pungashine-based atomic cocktail</label>
+								</value>
+							</li>
+
+							<li Class="PatchOperationFindMod">
+								<mods>
+									<li>Vanilla Factions Expanded - Settlers</li>
+								</mods>
+								<match Class="PatchOperationSequence">
+									<success>Always</success>
+									<operations>
+										<li Class="PatchOperationReplace">
+											<xpath>/Defs/ThingDef[defName="Chemshine"]/label</xpath>
+											<value>
+												<label>rot gut</label>
+											</value>
+										</li>
+										<li Class="PatchOperationReplace">
+											<xpath>/Defs/ThingDef[defName="Chemshine"]/description</xpath>
+											<value>
+												<description>A harsh frontier liquor with a reputation for stripping paint and dulling good judgment. Exactly the sort of bottle a wasteland bar keeps under the counter.</description>
+											</value>
+										</li>
+										<li Class="PatchOperationReplace">
+											<xpath>/Defs/ThoughtDef[defName="VBE_ChemshineAsIngredient"]/stages/li/label</xpath>
+											<value>
+												<label>drank rot gut-based atomic cocktail</label>
+											</value>
+										</li>
+									</operations>
+								</match>
+							</li>
+						</operations>
+					</li>
+				</operations>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

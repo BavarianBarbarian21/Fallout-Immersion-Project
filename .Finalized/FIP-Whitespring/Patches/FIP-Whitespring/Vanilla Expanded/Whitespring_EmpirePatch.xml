@@ -1,0 +1,2838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Vanilla Expanded Empire patches -->
+  <Operation Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Empire">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="VFEE_TerribleExhibit"]/stages/li[1]/description</xpath>
+        <value>
+          <description>I&apos;m embarrassed that we hosted such a terrible art exhibit. Our art will never be respected in the Whitespring Enclave now!</description>
+        </value>
+      </li>
+  <!-- AbilityDefs/Abilities.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_RoyalAddress"]/label</xpath>
+    <value>
+      <label>presidential address</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_RoyalAddress"]/description</xpath>
+    <value>
+      <description>is giving a presidential address from the dais. If all goes well, every ranked participant will gain a small amount of Votes, and they will gain Votes for each ranked participant. If it goes poorly, the speech will cause social strain and lose Votes for each ranked participant. The outcome depends on their social abilities. Whitespring officials currently in the area will join the address and count as ranked participants.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowFreeholder"]/label</xpath>
+    <value>
+      <label>commission: member</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowFreeholder"]/description</xpath>
+    <value>
+      <description>Commissions the Member title on a selected pawn. That pawn receives 1 Votes. Can’t be cast on a pawn that’s already a Member or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowYeoman"]/label</xpath>
+    <value>
+      <label>commission: private</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowYeoman"]/description</xpath>
+    <value>
+      <description>Commissions the Private title on a selected pawn. That pawn now has 7 Votes. Can’t be cast on a pawn that’s already a Private or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowAcolyte"]/label</xpath>
+    <value>
+      <label>commission: sergeant</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowAcolyte"]/description</xpath>
+    <value>
+      <description>Commissions the Sergeant title on a selected pawn. That pawn now has 13 Votes. Can’t be cast on a pawn that’s already a Sergeant or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowKnight"]/label</xpath>
+    <value>
+      <label>commission: lieutenant</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowKnight"]/description</xpath>
+    <value>
+      <description>Commissions the Lieutenant title on a selected pawn. That pawn now has 21 Votes. Can’t be cast on a pawn that’s already a Lieutenant or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowPraetor"]/label</xpath>
+    <value>
+      <label>commission: captain</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowPraetor"]/description</xpath>
+    <value>
+      <description>Commissions the Captain title on a selected pawn. That pawn now has 31 Votes. Can’t be cast on a pawn that’s already a Captain or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowBaron"]/label</xpath>
+    <value>
+      <label>commission: colonel</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowBaron"]/description</xpath>
+    <value>
+      <description>Commissions the Colonel title on a selected pawn. That pawn now has 45 Votes. Can’t be cast on a pawn that’s already a Colonel or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowCount"]/label</xpath>
+    <value>
+      <label>commission: general</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/AbilityDef[defName="VFEE_BestowCount"]/description</xpath>
+    <value>
+      <description>Commissions the General title on a selected pawn. That pawn now has 45 Votes. Can’t be cast on a pawn that’s already a General or higher. Has a 3 day cooldown.</description>
+    </value>
+  </li>
+  <!-- DamageDefs/Damages_MeleeWeapon.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/DamageDef[defName="VFEE_CutToxblade"]/label</xpath>
+    <value>
+      <label>cut</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/DamageDef[defName="VFEE_StabToxblade"]/label</xpath>
+    <value>
+      <label>stab</label>
+    </value>
+  </li>
+  -->
+  <!-- DamageDefs/Damages_Ranged.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/DamageDef[defName="VFEE_Fletcher"]/label</xpath>
+    <value>
+      <label>acid dart</label>
+    </value>
+  </li>
+  -->
+  <!-- Drugs/Aperitif.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Aperitif"]/label</xpath>
+    <value>
+      <label>aperitif</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Aperitif"]/description</xpath>
+    <value>
+      <description>A non-alcoholic, pleasantly light, citrusy, and slightly bitter aperitif that owes its flavors and aromas to sweet and bitter oranges, rhubarb, and Whitespring craftsmanship. Its recipe is guarded by Whitespring hospitality offices, and few on the rim have managed to recreate it. Drinking it induces heavy but painless vomiting, completely clearing the stomach and resetting the palate.\n\nWhitespring officials prize aperitif for letting them indulge in even more of the settlement&apos;s finest cuisine.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_IngestedAperitif"]/label</xpath>
+    <value>
+      <label>ingested aperitif</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_IngestedAperitif"]/description</xpath>
+    <value>
+      <description>Infection and poison protection in the stomach, as well as an ability to consume additional meals for a higher mood buff.</description>
+    </value>
+  </li>
+  -->
+  <!-- FactionDefs/Factions_Hidden.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/label</xpath>
+    <value>
+      <label>Brotherhood of Steel Expeditionary Force</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/description</xpath>
+    <value>
+      <description>An organized Brotherhood expeditionary force dedicated to disrupting the Whitespring Enclave.</description>
+    </value>
+  </li>
+  <!-- FactionDefs/Factions_Player.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEE_NewFamily"]/label</xpath>
+    <value>
+      <label>Enclave Splinter Cell</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEE_NewFamily"]/description</xpath>
+    <value>
+      <description>A colony founded by a former Whitespring leadership family.</description>
+    </value>
+  </li>
+  -->
+  <!-- HediffDefs/Hediffs_Global_Misc.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_AcidifierFletcher"]/label</xpath>
+    <value>
+      <label>acidifier</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_AcidifierFletcher"]/description</xpath>
+    <value>
+      <description>Acidifier mixture injected into veins through a fletcher dart. Causes extreme pain and nearly instant death through internal acid burns.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_AcidifierToxblade"]/label</xpath>
+    <value>
+      <label>acidifier</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HediffDef[defName="VFEE_AcidifierToxblade"]/description</xpath>
+    <value>
+      <description>Acidifier mixture injected into veins through a fletcher dart. Causes extreme pain and nearly instant death through internal acid burns.</description>
+    </value>
+  </li>
+  -->
+  <!-- HistoryEventDef/HistoryEventDefs.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/HistoryEventDef[defName="VFEE_ChoseEmpire"]/label</xpath>
+    <value>
+      <label>joined Whitespring</label>
+    </value>
+  </li>
+  <!-- IncidentDefs/Incidents_World_Quests.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/IncidentDef[defName="VFEE_GiveQuest_EndGame_Stellarch"]/label</xpath>
+    <value>
+      <label>presidential succession</label>
+    </value>
+  </li>
+  <!-- InteractionDefs/Interactions_Social.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/InteractionDef[defName="VFEE_RoyalGossip"]/label</xpath>
+    <value>
+      <label>presidential gossip</label>
+    </value>
+  </li>
+  <!-- Misc.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/JoyKindDef[defName="VFEE_Research"]/label</xpath>
+    <value>
+      <label>research</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/MainButtonDef[defName="VFEE_Royalty"]/label</xpath>
+    <value>
+      <label>government</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/TransportShipDef[defName="VFEE_Ship_ArmoredShuttle"]/label</xpath>
+    <value>
+      <label>XVB02</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_OrbitalSlicer"]/label</xpath>
+    <value>
+      <label>orbital beam</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Poison"]/label</xpath>
+    <value>
+      <label>poison</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Poison"]/description</xpath>
+    <value>
+      <description>text_todo</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RaidStrategyDef[defName="VFEE_Deserters"]/label</xpath>
+    <value>
+      <label>Brotherhood of Steel Expeditionary Force</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RaidStrategyDef[defName="VFEE_Deserters"]/description</xpath>
+    <value>
+      <description>Brotherhood of Steel Expeditionary Force</description>
+    </value>
+  </li>
+  <!-- Misc/Expectations.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ExpectationDef[defName="VFEE_Stellar"]/label</xpath>
+    <value>
+      <label>executive</label>
+    </value>
+  </li>
+  <!-- Misc/HonorDefs.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_FirstOfName"]/label</xpath>
+    <value>
+      <label>First of {PAWN_possessive} Name</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_FirstOfName"]/description</xpath>
+    <value>
+      <description>Every ranked official has +5 opinion of this pawn.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_TheGreat"]/label</xpath>
+    <value>
+      <label>The Great</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_TheGreat"]/description</xpath>
+    <value>
+      <description>+5 mood</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Chosen"]/label</xpath>
+    <value>
+      <label>Chosen of {FACTION_name}</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Chosen"]/description</xpath>
+    <value>
+      <description>+10 Opinion from every pawn of {FACTION_name}. +10 Opinion about every pawn of {FACTION_name}.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Destroyer"]/label</xpath>
+    <value>
+      <label>Destroyer of {FACTION_name}</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Destroyer"]/description</xpath>
+    <value>
+      <description>+10% Trade Price Improvement with Enemies of {FACTION_name}.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_LordOf"]/label</xpath>
+    <value>
+      <label>{RANK} of {SETTLEMENT_label}</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_LordOf"]/description</xpath>
+    <value>
+      <description>+1 Votes every 5 days when {PAWN_pronoun} is in {SETTLEMENT_label}.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_RulerOf"]/label</xpath>
+    <value>
+      <label>Administrator of {SETTLEMENT_label}</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_RulerOf"]/description</xpath>
+    <value>
+      <description>Votes collection speed from {SETTLEMENT_label} is doubled.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_WieldOfWeapon"]/label</xpath>
+    <value>
+      <label>Wielder of the {WEAPON_label}</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_WieldOfWeapon"]/description</xpath>
+    <value>
+      <description>50% chance of +1 Votes for every kill with {WEAPON_label}.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_PatronOfArts"]/label</xpath>
+    <value>
+      <label>Patron of Arts</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_PatronOfArts"]/description</xpath>
+    <value>
+      <description>+3 Votes after a successful art exhibition.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_ChildOf"]/label</xpath>
+    <value>
+      <label>{CHILD} of {PARENT_labelShort}</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_ChildOf"]/description</xpath>
+    <value>
+      <description>Opinion of {PARENT_labelShort} about {PAWN_labelShort} is locked at 100. Opinion of {PAWN_labelShort} about {PARENT_labelShort} is locked at 100.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Marksman"]/label</xpath>
+    <value>
+      <label>The Marksman</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Marksman"]/description</xpath>
+    <value>
+      <description>Shooting skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Warrior"]/label</xpath>
+    <value>
+      <label>The Warrior</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Warrior"]/description</xpath>
+    <value>
+      <description>Melee skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Architect"]/label</xpath>
+    <value>
+      <label>The Architect</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Architect"]/description</xpath>
+    <value>
+      <description>Construction skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Miner"]/label</xpath>
+    <value>
+      <label>The Miner</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Miner"]/description</xpath>
+    <value>
+      <description>Mining skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Chef"]/label</xpath>
+    <value>
+      <label>The Chef</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Chef"]/description</xpath>
+    <value>
+      <description>Cooking skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Gardener"]/label</xpath>
+    <value>
+      <label>The Gardener</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Gardener"]/description</xpath>
+    <value>
+      <description>Plants skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Rancher"]/label</xpath>
+    <value>
+      <label>The Rancher</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Rancher"]/description</xpath>
+    <value>
+      <description>Animals skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Craftsman"]/label</xpath>
+    <value>
+      <label>The Craftsman</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Craftsman"]/description</xpath>
+    <value>
+      <description>Crafting skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Artist"]/label</xpath>
+    <value>
+      <label>The Artist</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Artist"]/description</xpath>
+    <value>
+      <description>Artistic skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Healer"]/label</xpath>
+    <value>
+      <label>The Healer</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Healer"]/description</xpath>
+    <value>
+      <description>Medicine skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Negotiator"]/label</xpath>
+    <value>
+      <label>The Negotiator</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Negotiator"]/description</xpath>
+    <value>
+      <description>Social skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Intellectual"]/label</xpath>
+    <value>
+      <label>The Intellectual</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.HonorDef[defName="VFEE_Intellectual"]/description</xpath>
+    <value>
+      <description>Intellectual skill never decays.</description>
+    </value>
+  </li>
+  -->
+  <!-- Misc/RoyaltyTabDefs.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_GreatHierarchy"]/label</xpath>
+    <value>
+      <label>organizational chart</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_GreatHierarchy"]/description</xpath>
+    <value>
+      <description>This screen allows you to view all members of the Whitespring Enclave faction. You can spend Votes to invite them as visitors.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Permits"]/label</xpath>
+    <value>
+      <label>Permits</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Permits"]/description</xpath>
+    <value>
+      <description>This screen allows you to customize and select permits for each of your commissioned officials.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Vassalage"]/label</xpath>
+    <value>
+      <label>government contracts</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Vassalage"]/description</xpath>
+    <value>
+      <description>This screen allows you to contract nearby Whitespring bases to receive regular contributions from them.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Honors"]/label</xpath>
+    <value>
+      <label>commendations</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.RoyaltyTabDef[defName="VFEE_Honors"]/description</xpath>
+    <value>
+      <description>This screen allows you to assign previously unlocked ranks to your colonists, providing them with unique but highly specific perks.</description>
+    </value>
+  </li>
+  <!-- Misc/TitheTypeDefs.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Steel"]/label</xpath>
+    <value>
+      <label>steel mining</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Steel"]/description</xpath>
+    <value>
+      <description>This settlement mines steel for their overlord.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Wood"]/label</xpath>
+    <value>
+      <label>wood cutting</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Wood"]/description</xpath>
+    <value>
+      <description>This settlement chops wood for their overlord.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Gold"]/label</xpath>
+    <value>
+      <label>gold tax</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Gold"]/description</xpath>
+    <value>
+      <description>This settlement pays gold to their overlord.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Silver"]/label</xpath>
+    <value>
+      <label>silver tax</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Silver"]/description</xpath>
+    <value>
+      <description>This settlement pays silver to their overlord.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Farming"]/label</xpath>
+    <value>
+      <label>farming</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Farming"]/description</xpath>
+    <value>
+      <description>This settlement produces survival meals for their overlord.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Honor"]/label</xpath>
+    <value>
+      <label>Votes levy</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Honor"]/description</xpath>
+    <value>
+      <description>This settlement provides Votes to its supervising administration.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Slavery"]/label</xpath>
+    <value>
+      <label>slavery</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/VFEEmpire.TitheTypeDef[defName="VFEE_Slavery"]/description</xpath>
+    <value>
+      <description>This settlement captures slaves for their overlord.</description>
+    </value>
+  </li>
+  -->
+  <!-- PawnKinds/PawnKinds_Deserter.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Deserter"]/label</xpath>
+    <value>
+      <label>deserter</label>
+    </value>
+  </li>
+  -->
+  <!-- PawnKinds/PawnKinds_Empire.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archcount"]/label</xpath>
+    <value>
+      <label>general</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Marquess"]/label</xpath>
+    <value>
+      <label>attorney general</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archduke"]/label</xpath>
+    <value>
+      <label>senator</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/label</xpath>
+    <value>
+      <label>state secretary</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Despot"]/label</xpath>
+    <value>
+      <label>minister</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_HighStellarch"]/label</xpath>
+    <value>
+      <label>president</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/label</xpath>
+    <value>
+      <label>emperor</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Fighter_Absolver"]/label</xpath>
+    <value>
+      <label>light trooper</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Techfriar"]/label</xpath>
+    <value>
+      <label>scientist</label>
+    </value>
+  </li>
+  <!-- QuestScriptDef/Permit_CallTechfriar.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallTechfriar"]/root/nodes/li[9]/label</xpath>
+    <value>
+      <label>Scientist arrived</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallTechfriar"]/root/nodes/li[11]/node/nodes/li[3]/label</xpath>
+    <value>
+      <label>Shuttle arrived</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallTechfriar"]/root/nodes/li[14]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Laborer died: {SUBJECT_definite}</label>
+    </value>
+  </li>
+  -->
+  <!-- QuestScriptDef/Script_Absolver.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallAbsolver"]/root/nodes/li[8]/label</xpath>
+    <value>
+      <label>Light Trooper arrived</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallAbsolver"]/root/nodes/li[10]/node/nodes/li[3]/label</xpath>
+    <value>
+      <label>Shuttle arrived</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallAbsolver"]/root/nodes/li[12]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Light Trooper died: {SUBJECT_definite}</label>
+    </value>
+  </li>
+  <!-- ResearchProjectDefs/ResearchProjects_1.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_PipeOrgans"]/label</xpath>
+    <value>
+      <label>pipe organs</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_PipeOrgans"]/description</xpath>
+    <value>
+      <description>Craft the pipe organs, an incredibly advanced and intricate stationary musical instrument.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_NobleDecorations"]/label</xpath>
+    <value>
+      <label>presidential decor</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_NobleDecorations"]/description</xpath>
+    <value>
+      <description>Build presidential decor like Whitespring rugs, mirrors, grand chairs, Whitespring slabs, candelabras, and more.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_StellicThrone"]/label</xpath>
+    <value>
+      <label>presidential desk chair</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_StellicThrone"]/description</xpath>
+    <value>
+      <description>Construct a presidential desk chair suited for senior Whitespring officials and their ceremonial duties.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_JanissaryGear"]/label</xpath>
+    <value>
+      <label>janissary gear</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFEE_JanissaryGear"]/description</xpath>
+    <value>
+      <description>Craft heavy trooper armor, light powered armor that’s commonly used by Whitespring recon troops. Note that these also require advanced components.</description>
+    </value>
+  </li>
+  <!-- Rituals/ArtExhibition.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/description</xpath>
+    <value>
+      <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/comps/li[1]/label</xpath>
+    <value>
+      <label>participant count</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/comps/li[2]/label</xpath>
+    <value>
+      <label>room impressiveness</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/outcomeChances/li[1]/label</xpath>
+    <value>
+      <label>Terrible</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/outcomeChances/li[2]/label</xpath>
+    <value>
+      <label>Boring</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/outcomeChances/li[3]/label</xpath>
+    <value>
+      <label>Enjoyable</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_ArtExhibit_Outcome"]/outcomeChances/li[4]/label</xpath>
+    <value>
+      <label>Amazing</label>
+    </value>
+  </li>
+  -->
+  <!-- Rituals/BestowHonor.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_BestowHonor"]/label</xpath>
+    <value>
+      <label>issue commendation</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_BestowHonor"]/description</xpath>
+    <value>
+      <description>Issues a commendation to a worthy pawn.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_BestowHonor_Behavior"]/roles/li[1]/label</xpath>
+    <value>
+      <label>bestower</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_BestowHonor_Behavior"]/roles/li[2]/label</xpath>
+    <value>
+      <label>recipient</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowHonor_Outcome"]/description</xpath>
+    <value>
+      <description>{ORGANIZER} will gain {HONORS}.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowHonor_Outcome"]/comps/li/label</xpath>
+    <value>
+      <label>test</label>
+    </value>
+  </li>
+  -->
+  <!-- Rituals/BestowTitle.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_BestowTitle"]/label</xpath>
+    <value>
+      <label>commission rank</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_BestowTitle"]/description</xpath>
+    <value>
+      <description>Commissions a government rank for a worthy pawn.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_BestowTitle_Behavior"]/roles/li[1]/label</xpath>
+    <value>
+      <label>organizer</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_BestowTitle_Behavior"]/roles/li[2]/label</xpath>
+    <value>
+      <label>recipient</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/description</xpath>
+    <value>
+      <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/comps/li[1]/label</xpath>
+    <value>
+      <label>{PAWN_labelShort}&apos;s social impact</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/comps/li[2]/label</xpath>
+    <value>
+      <label>participant count</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/comps/li[3]/label</xpath>
+    <value>
+      <label>assigned desk chair</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/outcomeChances/li[1]/label</xpath>
+    <value>
+      <label>Awkward</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/outcomeChances/li[2]/label</xpath>
+    <value>
+      <label>Good</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_BestowTitle_Outcome"]/outcomeChances/li[3]/label</xpath>
+    <value>
+      <label>Amazing</label>
+    </value>
+  </li>
+  -->
+  <!-- Rituals/Parade.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_ParadePrecept"]/label</xpath>
+    <value>
+      <label>presidential parade</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_ParadePrecept"]/description</xpath>
+    <value>
+      <description>Parade</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_Parade_Behavior"]/spectatorFilter/description</xpath>
+    <value>
+      <description>Ranked officials</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_Parade_Behavior"]/roles/li[1]/label</xpath>
+    <value>
+      <label>vice president</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_Parade_Behavior"]/roles/li[2]/label</xpath>
+    <value>
+      <label>guard</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_Parade_Outcome"]/description</xpath>
+    <value>
+      <description>Upon completion of the parade, the vice president and their chosen companions will formally enter executive service to the Whitespring Enclave.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_Parade_Outcome"]/outcomeChances/li/label</xpath>
+    <value>
+      <label>Amazing</label>
+    </value>
+  </li>
+  -->
+  <!-- Rituals/RoyalAddress.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_RoyalAddress"]/label</xpath>
+    <value>
+      <label>presidential address</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/PreceptDef[defName="VFEE_RoyalAddress"]/description</xpath>
+    <value>
+      <description>Initiate a presidential address from the dais. {ORGANIZER_labelShort} is giving a presidential address from the dais. If all goes well, every ranked participant will gain a small amount of Votes, and {ORGANIZER_labelShort} will gain Votes for each ranked participant. If it goes poorly, the speech will cause social strain and {ORGANIZER_labelShort} will lose Votes for each ranked participant. The outcome depends on {ORGANIZER_labelShort}&apos;s social abilities. Whitespring officials currently in the area will join the address and count as ranked participants.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_RoyalAddres_Behavior"]/roles/li[1]/label</xpath>
+    <value>
+      <label>organizer</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualBehaviorDef[defName="VFEE_RoyalAddres_Behavior"]/roles/li[2]/label</xpath>
+    <value>
+      <label>title holders</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/description</xpath>
+    <value>
+      <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/comps/li[1]/label</xpath>
+    <value>
+      <label>{PAWN_labelShort}&apos;s social impact</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/comps/li[2]/label</xpath>
+    <value>
+      <label>participant count</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/comps/li[3]/label</xpath>
+    <value>
+      <label>room impressiveness</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/outcomeChances/li[1]/label</xpath>
+    <value>
+      <label>Terrible</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/outcomeChances/li[2]/label</xpath>
+    <value>
+      <label>Uninspiring</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/outcomeChances/li[3]/label</xpath>
+    <value>
+      <label>Encouraging</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_RoyalAddres_Outcome"]/outcomeChances/li[4]/label</xpath>
+    <value>
+      <label>Inspirational</label>
+    </value>
+  </li>
+  -->
+  <!-- Rituals/RoyalBall.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/description</xpath>
+    <value>
+      <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/comps/li[1]/label</xpath>
+    <value>
+      <label>participant count</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/comps/li[2]/label</xpath>
+    <value>
+      <label>room impressiveness</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/outcomeChances/li[1]/label</xpath>
+    <value>
+      <label>Terrible</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/outcomeChances/li[2]/label</xpath>
+    <value>
+      <label>Boring</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/outcomeChances/li[3]/label</xpath>
+    <value>
+      <label>Enjoyable</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RitualOutcomeEffectDef[defName="VFEE_GrandBall_Outcome"]/outcomeChances/li[4]/label</xpath>
+    <value>
+      <label>Amazing</label>
+    </value>
+  </li>
+  -->
+  <!-- Rooms/RoomRoles.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoomRoleDef[defName="VFEE_Ballroom"]/label</xpath>
+    <value>
+      <label>ballroom</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoomRoleDef[defName="VFEE_Gallery"]/label</xpath>
+    <value>
+      <label>gallery</label>
+    </value>
+  </li>
+  -->
+  <!-- RoyalTitles/RoyalPermits_Empire.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_GoldDrop"]/label</xpath>
+    <value>
+      <label>gold drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_GoldDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 50 gold.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_PlasteelDrop"]/label</xpath>
+    <value>
+      <label>plasteel drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_PlasteelDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 55 plasteel.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_JadeDrop"]/label</xpath>
+    <value>
+      <label>jade drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_JadeDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 100 jade.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_UraniumDrop"]/label</xpath>
+    <value>
+      <label>uranium drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_UraniumDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 80 uranium.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ClothDrop"]/label</xpath>
+    <value>
+      <label>cloth drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ClothDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 330 cloth.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_WoodDrop"]/label</xpath>
+    <value>
+      <label>wood drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_WoodDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 400 wood.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_SynthreadDrop"]/label</xpath>
+    <value>
+      <label>synthread drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_SynthreadDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 125 synthread.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HerbalMedDrop"]/label</xpath>
+    <value>
+      <label>herbal med drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HerbalMedDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 40 herbal medicine.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_MedDrop"]/label</xpath>
+    <value>
+      <label>med drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_MedDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 25 medicine.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_DevilstrandDrop"]/label</xpath>
+    <value>
+      <label>devilstrand drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_DevilstrandDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 90 devilstrand.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HyperweaveDrop"]/label</xpath>
+    <value>
+      <label>hyperweave drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HyperweaveDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 55 hyperweave.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ChemfuelDrop"]/label</xpath>
+    <value>
+      <label>chemfuel drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ChemfuelDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 220 chemfuel.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ComponentDrop"]/label</xpath>
+    <value>
+      <label>component drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ComponentDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 15 components.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ComponentSpacerDrop"]/label</xpath>
+    <value>
+      <label>advanced component drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_ComponentSpacerDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 3 advanced components.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HEShellsDrop"]/label</xpath>
+    <value>
+      <label>shells drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_HEShellsDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 10 high-explosive shells.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_NobleFoodDrop"]/label</xpath>
+    <value>
+      <label>official meal drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_NobleFoodDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 15 lavish meals.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallTrooperPlatoon"]/label</xpath>
+    <value>
+      <label>call trooper platoon</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallTrooperPlatoon"]/description</xpath>
+    <value>
+      <description>Call a group of 8 light troopers to aid you in battle.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallJanissaryPlatoon"]/label</xpath>
+    <value>
+      <label>call janissary platoon</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallJanissaryPlatoon"]/description</xpath>
+    <value>
+      <description>Call a group of 8 professional janissaries to aid you in battle.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallCataphractPlatoon"]/label</xpath>
+    <value>
+      <label>call cataphract platoon</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallCataphractPlatoon"]/description</xpath>
+    <value>
+      <description>Call a group of 8 heavy cataphracts to aid you in battle.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallTechfriar"]/label</xpath>
+    <value>
+      <label>call scientist</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallTechfriar"]/description</xpath>
+    <value>
+      <description>Call a scientist to assist you for 4 days. This specialist can only perform research-related tasks. You can control him as though he were one of your own colonists. You are required to keep him safe.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallLaborerUnion"]/label</xpath>
+    <value>
+      <label>call laborer union</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallLaborerUnion"]/description</xpath>
+    <value>
+      <description>Call a group of 12 laborers to assist you for 4 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_StrikerTurretDrop"]/label</xpath>
+    <value>
+      <label>striker drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_StrikerTurretDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of three striker turrets to aid you in battle. After they fire all their ammo, striker turrets self-detonate.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_BurnoutShieldDrop"]/label</xpath>
+    <value>
+      <label>burnout shield drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_BurnoutShieldDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of a burnout low shield to aid you in battle. It activates where it lands and will last 30 seconds before deactivating.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallEvacShuttle"]/label</xpath>
+    <value>
+      <label>call evac shuttle</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallEvacShuttle"]/description</xpath>
+    <value>
+      <description>Call an armed shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 40 world tiles. It will stay in the area only for a brief moment.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_StoneDrop"]/label</xpath>
+    <value>
+      <label>stone drop</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_StoneDrop"]/description</xpath>
+    <value>
+      <description>Call for a drop of 500 random stone bricks.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallStellicGuards"]/label</xpath>
+    <value>
+      <label>call stellic guards</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallStellicGuards"]/description</xpath>
+    <value>
+      <description>Call a group of 6 presidential guards, ranged and melee, to aid you in battle.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallImperialRegiment"]/label</xpath>
+    <value>
+      <label>call government regiment</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallImperialRegiment"]/description</xpath>
+    <value>
+      <description>Call a group of 10 janissaries and 6 heavy cataphracts that will arrive in an armed shuttle, to aid you in battle. You cannot control them, but they will help you eliminate any threats in the area. They will leave after all threats are eliminated.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallOrbitalSlicingBeam"]/label</xpath>
+    <value>
+      <label>call orbital slicing beam</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallOrbitalSlicingBeam"]/description</xpath>
+    <value>
+      <description>Call an orbital beam from a Whitespring flagship in orbit. The beam will travel in a direction specified by you, burning everything it touches.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallAbsolver"]/label</xpath>
+    <value>
+      <label>call light trooper</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="VFEI_CallAbsolver"]/description</xpath>
+    <value>
+      <description>Call a light trooper to assist you for 4 days. This specialist is a master assassin and will not perform any tasks other than killing. You can control them as though they were one of your own colonists. If a light trooper dies, a replacement will arrive immediately and inherit the remaining contract time.</description>
+    </value>
+  </li>
+  <!-- RoyalTitles/RoyalTitles_Empire.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archcount"]/label</xpath>
+    <value>
+      <label>general</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archcount"]/description</xpath>
+    <value>
+      <description>The Whitespring rank of general is reserved for senior commanders who have built the infrastructure needed to host inspections, briefings, and high-level visitors.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Marquess"]/label</xpath>
+    <value>
+      <label>attorney general</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Marquess"]/description</xpath>
+    <value>
+      <description>The Whitespring title of attorney general is one of the highest ranks in the middle government. In the Whitespring Enclave, attorney generals oversee frontier territories and protect the edge of Whitespring space. During wartime, they can field fleets that either hold the line or support broader offensive operations.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archduke"]/label</xpath>
+    <value>
+      <label>senator</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archduke"]/description</xpath>
+    <value>
+      <description>The Whitespring title of senator is commissioned to secretaries whose jurisdiction requires a larger command structure to maintain order. Senators are expected to field and train their own divisions and, in peacetime, expand the Enclave's regional administrative reach.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Magister"]/label</xpath>
+    <value>
+      <label>state secretary</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Magister"]/description</xpath>
+    <value>
+      <description>The Whitespring title of state secretary is the middle rank of high government. In the Whitespring Enclave, a state secretary is expected to coordinate the settlement's vast military capabilities in both peace and wartime, operating directly under the president.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Despot"]/label</xpath>
+    <value>
+      <label>minister</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Despot"]/description</xpath>
+    <value>
+      <description>The Whitespring title of minister maintains authority over a strategically important system. In the Whitespring Enclave, ministers ensure that resources continue to flow into Whitespring stockpiles and factories while their offices hold key administrative positions throughout the system of government.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_HighStellarch"]/label</xpath>
+    <value>
+      <label>president</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_HighStellarch"]/description</xpath>
+    <value>
+      <description>The Whitespring title of president represents supreme executive authority within the Whitespring Enclave. The office answers to no higher power and is expected not only to maintain control, but to expand the Enclave's influence wherever possible. Very few are capable of receiving this title, and even fewer wish to take on its responsibilities.</description>
+    </value>
+  </li>
+  <!-- Scenarios/Scenarios_Classic.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenPartDef[defName="VFEE_SpawnFamilyMembers"]/label</xpath>
+    <value>
+      <label>spawn dead family members on map</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenPartDef[defName="VFEE_SpawnRaid"]/label</xpath>
+    <value>
+      <label>spawn raid on map</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenarioDef[defName="VFEE_NewFamily"]/label</xpath>
+    <value>
+      <label>New Splinter Cell</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenarioDef[defName="VFEE_NewFamily"]/description</xpath>
+    <value>
+      <description>It was supposed to be another quiet night for your Whitespring splinter cell, tucked away in a secluded estate far from the main administrative halls. You do not know whether the blackout was caused by Brotherhood sabotage, a compromised security officer, or a simple systems failure, but when the perimeter defenses died at midnight your enclave cell was left blind and exposed. By the time the gates opened, there was no time to organize a proper response - only to hide and survive.
+You heard your officers, researchers, and support staff being cut down as the Brotherhood expeditionary strike team swept through the compound. Whatever remained of your old command structure died with them. Now your splinter cell is shattered, your safehouse is burning, and revenge will mean nothing unless you escape this raid alive. You can wait the assault out, use permits to call for reinforcements, or try running for the hills - the choice is yours.
+Note: Since you start during a raid in progress, this is a difficult scenario.
+</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ScenarioDef[defName="VFEE_NewFamily"]/scenario/parts/li[def="GameStartDialog"]/text</xpath>
+    <value>
+      <text>It was supposed to be another quiet night for your Whitespring splinter cell, tucked away in a secluded estate far from the main administrative halls. You do not know whether the blackout was caused by Brotherhood sabotage, a compromised security officer, or a simple systems failure, but when the perimeter defenses died at midnight your enclave cell was left blind and exposed. By the time the gates opened, there was no time to organize a proper response - only to hide and survive.
+You heard your officers, researchers, and support staff being cut down as the Brotherhood expeditionary strike team swept through the compound. Whatever remained of your old command structure died with them. Now your splinter cell is shattered, your safehouse is burning, and revenge will mean nothing unless you escape this raid alive. You can either wait the raid out, use permits to call for reinforcements, or try running for the hills - the choice is yours.</text>
+    </value>
+  </li>
+  <!-- Storyteller/Storytellers.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/StorytellerDef[defName="VFEE_AriadneArchduchess"]/label</xpath>
+    <value>
+      <label>Ariadne Archduchess</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/StorytellerDef[defName="VFEE_AriadneArchduchess"]/description</xpath>
+    <value>
+      <description>Ariadne got tired of the unpredictability of the nobility, and whilst she will create a story of increasing tension, she will force dangerous events on you as your wealth increases. After all, it’s not fun to kick someone while they’re down.</description>
+    </value>
+  </li>
+  -->
+  <!-- TerrainDefs/Terrain_Ash.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/TerrainDef[defName="VFEE_ThickAsh"]/label</xpath>
+    <value>
+      <label>thick ash</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/TerrainDef[defName="VFEE_ThickAsh"]/description</xpath>
+    <value>
+      <description>Burned-out thick layer of ash and glass shards.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_Art.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureSmall"]/label</xpath>
+    <value>
+      <label>small presidential sculpture</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureSmall"]/description</xpath>
+    <value>
+      <description>A torso-sized piece of material sculpted into an artistic form.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureLarge"]/label</xpath>
+    <value>
+      <label>large presidential sculpture</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureLarge"]/description</xpath>
+    <value>
+      <description>A person-sized piece of material sculpted into an artistic form.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureGrand"]/label</xpath>
+    <value>
+      <label>grand presidential sculpture</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalSculptureGrand"]/description</xpath>
+    <value>
+      <description>A huge sculpture sized to dominate a room.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_Exotic.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_ArmoredShuttle"]/label</xpath>
+    <value>
+      <label>XVB02</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_ArmoredShuttle"]/description</xpath>
+    <value>
+      <description>A spacer-tech Whitespring gunship designed for transit between surface and orbit, or between moons of a planetary system. Equipped with a twin-linked autocannon for ground support, these XVB02s often land in the middle of the battlefield to extract stranded troops.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_TurretArmoredShuttle"]/label</xpath>
+    <value>
+      <label>double autocannon</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_TurretArmoredShuttle"]/description</xpath>
+    <value>
+      <description>A powerful, twin-linked autocannon.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_Furniture.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandTable"]/label</xpath>
+    <value>
+      <label>Whitespring table</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandTable"]/description</xpath>
+    <value>
+      <description>A luxurious, beautiful gold-inlaid table fit for the highborn, it is a work of art in itself. People eat off tables when chairs are placed facing them.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandChair"]/label</xpath>
+    <value>
+      <label>Whitespring chair</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandChair"]/description</xpath>
+    <value>
+      <description>A comfortable and elegant chair, it is a work of art in itself. Can be used at tables, work stations, and elsewhere.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_ImperialBanner"]/label</xpath>
+    <value>
+      <label>Whitespring sign</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_ImperialBanner"]/description</xpath>
+    <value>
+      <description>A decorative strip of cloth hanging from a vertical wooden frame. Appropriate for presidential rooms.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalStool"]/label</xpath>
+    <value>
+      <label>Whitespring stool</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalStool"]/description</xpath>
+    <value>
+      <description>A luxurious gold-inlaid stool fit for the nobility. Can be used at tables, work stations, and elsewhere.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_StellicThrone"]/label</xpath>
+    <value>
+      <label>presidential desk chair</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_StellicThrone"]/description</xpath>
+    <value>
+      <description>An ornate chair used by the President for official addresses and meditation. Sitting in the presidential desk chair can serve as a focus for ceremonial duties and cryptid meditation.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Candelabra"]/label</xpath>
+    <value>
+      <label>candelabra</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Candelabra"]/description</xpath>
+    <value>
+      <description>An elaborate, artistic electrical standing lamp that lights an area. People need light to move and work at full speed.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalMirror"]/label</xpath>
+    <value>
+      <label>Whitespring mirror</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_RoyalMirror"]/description</xpath>
+    <value>
+      <description>A beautiful and elegant mirror. Gives a small comfort bonus to all nearby beds. Placing more than one mirror near the same bed has no effect.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_Misc.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_SteleSmall"]/label</xpath>
+    <value>
+      <label>presidential plaque</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_SteleSmall"]/description</xpath>
+    <value>
+      <description>A slender, modest slab with limited engravings on the sides. Steles have been used since ancient times to memorialize individuals, battles, and other important events.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bomb"]/label</xpath>
+    <value>
+      <label>bomb</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bomb"]/description</xpath>
+    <value>
+      <description>A small, makeshift bomb. Can be easily defused if found on time.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_MusicalInstruments.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_UnfinishedOrgan"]/label</xpath>
+    <value>
+      <label>unfinished organ</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_UnfinishedOrgan"]/description</xpath>
+    <value>
+      <description>An unfinished organ.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_PipeOrgan"]/label</xpath>
+    <value>
+      <label>organ</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_PipeOrgan"]/description</xpath>
+    <value>
+      <description>An exceedingly complex stationary musical instrument crafted at a smithy. A series of tuned pipes are played from the keyboard which releases pressurized air to produce the desired pitch, which lasts as long as the key is pressed. The complex and intricate design, along with the unique sound it produces, make it an ideal apparatus for instigating concerts of the nobility as its music reaches far and wide.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Buildings/Buildings_Security_Turrets.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Turret_StrikerTurret"]/label</xpath>
+    <value>
+      <label>striker turret</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Turret_StrikerTurret"]/description</xpath>
+    <value>
+      <description>A redesigned cargo pod designed to bury stabilizing legs upon impact and deploy a powerful turret. Has a limited battery and ammunition pool, and will self-destruct if either run out or it is sufficiently damaged.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_StrikerTurret"]/label</xpath>
+    <value>
+      <label>striker gun</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_StrikerTurret"]/description</xpath>
+    <value>
+      <description>A powerful turret mounted on the striker drop pod.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Apparel_Headgear.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_TechfriarCrown"]/label</xpath>
+    <value>
+      <label>Whitespring scientist helmet</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_TechfriarCrown"]/description</xpath>
+    <value>
+      <description>An exceedingly complex facemask fitted with advanced technology reserved for senior Whitespring scientists. It is designed for designated researchers so they can advance the Whitespring Enclave's needs without rest.\n\nThe inlaid techprint synchronizes with the wearer's brain while they perform research, effectively doubling research speed while restoring rest and recreation.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_AbsolverHelmet"]/label</xpath>
+    <value>
+      <label>Whitespring light helmet</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_AbsolverHelmet"]/description</xpath>
+    <value>
+      <description>A high-tech helmet with a solid plasteel-weave shell and multi-spectrum sensors that feed telemetry data to the wearer. While it provides excellent protection, its primary purpose is concealment through an intricate optical camouflage system backed by real-time firing solutions. Armor like this is reserved for the Whitespring Enclave's elite assassins due to limited production.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/label</xpath>
+    <value>
+      <label>Brotherhood expeditionary helmet</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/description</xpath>
+    <value>
+      <description>A heavily-armored high-tech helmet, with a solid plasteel-weave shell and indirect visual system for non-frontal view angles. It protects against all but the most powerful or luckily-aimed shots.\n\nOriginally a standard cataphract helmet, this has been modified to include a gunlink at the cost of removing the faceplate, sacrificing defense to improve offensive capabilities.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryHelmet"]/label</xpath>
+    <value>
+      <label>Whitespring heavy helmet</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryHelmet"]/description</xpath>
+    <value>
+      <description>A high-tech armored helmet with a built-in status computer and a protective plasteel-weave plate.\n\nIncludes a plasteel-plated gas mask that offers full protection against gas-related attacks, such as toxic environments.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Apparel_Royal.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]/label</xpath>
+    <value>
+      <label>Whitespring suite</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]/description</xpath>
+    <value>
+      <description>A glorious, long and flowing robe embroidered with intricately complex decorative designs.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Apparel_Various.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/label</xpath>
+    <value>
+      <label>Brotherhood expeditionary armor</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/description</xpath>
+    <value>
+      <description>A suit of heavy powered armor, built for maximum protection at the cost of mobility. Heavy layered plasteel-weave plates with solid ablative coatings stop all but the most well-aimed or powerful attacks. Neuro-memetic assistors prevent the suit&apos;s massive weight from immobilizing the wearer entirely, but the suit is still quite cumbersome.\n\nOriginally an elaborate suit of prestige armor, this has been modified to make greater use of eltex weave in order to improve the performance of psycasters. This comes at a cost of removing interfering armor plating, but enhances psychic sensitivity and neural heat dissipation.</description>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorAbsolver"]/label</xpath>
+    <value>
+      <label>Whitespring light armor</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorAbsolver"]/description</xpath>
+    <value>
+      <description>A high-tech suit of powered armor with layered plasteel-weave plates and multi-spectrum sensors that feed telemetry data to the wearer. While it provides excellent protection, its primary purpose is concealment through an intricate optical camouflage system that also assists the user's movement. Armor like this is reserved for the Whitespring Enclave's elite assassins due to limited production.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryCuirass"]/label</xpath>
+    <value>
+      <label>Whitespring heavy armor</label>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryCuirass"]/description</xpath>
+    <value>
+      <description>A set of pauldrons and neck guard that extends down the wearer’s chest made from layered plasteel-weave plates. While it offers high protection for those areas, it is more of a status symbol and is intended to be worn over clothing and under armor without affecting mobility.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Ethereal_Skyfallers.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_ArmoredShuttleIncoming"]/label</xpath>
+    <value>
+      <label>armored shuttle (incoming)</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEI_ArmoredShuttleLeaving"]/label</xpath>
+    <value>
+      <label>armored shuttle (leaving)</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_DropPodIncoming_Building"]/label</xpath>
+    <value>
+      <label>drop pod (incoming)</label>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/FloorCoverings.xml -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_ImperialSlab"]/label</xpath>
+    <value>
+      <label>Whitespring slab</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_ImperialSlab"]/description</xpath>
+    <value>
+      <description>A stoney bas relief of Whitespring imagery for decorating a floor.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_LargeRoyalRug"]/label</xpath>
+    <value>
+      <label>large Whitespring rug</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_LargeRoyalRug"]/description</xpath>
+    <value>
+      <description>An intricate rug with a Whitespring-style pattern, for decorating a floor.</description>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandRoyalRug"]/label</xpath>
+    <value>
+      <label>grand Whitespring rug</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_GrandRoyalRug"]/description</xpath>
+    <value>
+      <description>A majestic rug with a Whitespring-style pattern, for decorating a floor.</description>
+    </value>
+  </li>
+  <!-- ThingDefs_Misc/Weapons/MeleeBladelink.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/label</xpath>
+    <value>
+      <label>shock officer blade</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/description</xpath>
+    <value>
+      <description>A defensive melee weapon usually assigned to Whitespring field officers of rank Private or above. While armor penetration is comparable to plasteel blades, the primary function is to dispense acidifer fluids and toxic vapors upon inflicted cuts. The effect only lasts a few seconds and is inflicted roughly half of the time due to the limited size of the weapon.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/tools/li[1]/label</xpath>
+    <value>
+      <label>handle</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/tools/li[2]/label</xpath>
+    <value>
+      <label>point</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/tools/li[3]/label</xpath>
+    <value>
+      <label>edge</label>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Weapons/MeleeUltratech.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_Toxblade"]/label</xpath>
+    <value>
+      <label>shock blade</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_Toxblade"]/description</xpath>
+    <value>
+      <description>A defensive melee weapon usually assigned to Whitespring field officers of rank Private or above. While armor penetration is comparable to plasteel blades, the primary function is to dispense acidifer fluids and toxic vapors upon inflicted cuts. The effect only lasts a few seconds and is inflicted roughly half of the time due to the limited size of the weapon.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_Toxblade"]/tools/li[1]/label</xpath>
+    <value>
+      <label>handle</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_Toxblade"]/tools/li[2]/label</xpath>
+    <value>
+      <label>point</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_MeleeWeapon_Toxblade"]/tools/li[3]/label</xpath>
+    <value>
+      <label>edge</label>
+    </value>
+  </li>
+  -->
+  <!-- ThingDefs_Misc/Weapons/RangedSpacer.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VEE_Gun_Fletcher"]/label</xpath>
+    <value>
+      <label>marksman rifle</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VEE_Gun_Fletcher"]/description</xpath>
+    <value>
+      <description>An ultra-long range sniper rifle which fires fin-stabilized flechettes with acidifier injectors. Due to their lethality and danger of falling into enemy hands, they are always biocoded and will self-destruct if their owner either dies or is disarmed. Lethal to organics and almost useless against non-organics, such as mechanoids.\n\nTargets hit by these flechettes will be inflicted with an unstable variant of acidifier fluids, designed to dissolve the target from the inside rather than destroy their equipment. The acid will rampage through the target’s body and usually results in vital organs being dissolved, however lethality isn’t guaranteed.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VEE_Gun_Fletcher"]/tools/li/label</xpath>
+    <value>
+      <label>barrel</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bullet_FletcherDart"]/label</xpath>
+    <value>
+      <label>acid dart</label>
+    </value>
+  </li>
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_ChargeThumper"]/label</xpath>
+    <value>
+      <label>pulse thumper</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_ChargeThumper"]/description</xpath>
+    <value>
+      <description>A modified charged-shot assault shotgun that incorporates mechanoid technology. Recovered thump cannons have been reversed engineered to produce a portable ranged weapon capable of firing blunt projectiles. Quite powerful but short ranged, with high performance against structures and heavily armored targets.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_ChargeThumper"]/tools/li[1]/label</xpath>
+    <value>
+      <label>stock</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Gun_ChargeThumper"]/tools/li[2]/label</xpath>
+    <value>
+      <label>barrel</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bullet_ChargeThumper"]/label</xpath>
+    <value>
+      <label>concussion charge</label>
+    </value>
+  </li>
+  -->
+  <!-- ThoughtDefs/Thoughts_Honors.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_FirstOfName"]/stages/li/label</xpath>
+    <value>
+      <label>First of {OTHERPAWN_possessive} Name</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_FirstOfName"]/stages/li/description</xpath>
+    <value>
+      <description>{OTHERPAWN_name} is the first of {OTHERPAWN_possessive} name.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TheGreat"]/stages/li/label</xpath>
+    <value>
+      <label>Great honor</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TheGreat"]/stages/li/description</xpath>
+    <value>
+      <description>I am the recipient of the Great Commendation.</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_Chosen"]/stages/li/label</xpath>
+    <value>
+      <label>Chosen</label>
+    </value>
+  </li>
+  -->
+  <!-- ThoughtDefs/Thoughts_Memory_Ritual.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TerribleBall"]/stages/li/label</xpath>
+    <value>
+      <label>terrible ball</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TerribleBall"]/stages/li/description</xpath>
+    <value>
+      <description>I&apos;m embarrassed to be a part of that train wreck. I just hope no one gossips about this.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BoringBall"]/stages/li/label</xpath>
+    <value>
+      <label>boring ball</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BoringBall"]/stages/li/description</xpath>
+    <value>
+      <description>I was expecting a grand time. What I got was seriously lacking.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_EnjoyableBall"]/stages/li/label</xpath>
+    <value>
+      <label>enjoyable ball</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_EnjoyableBall"]/stages/li/description</xpath>
+    <value>
+      <description>I had a great time dancing in that ball!</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_AmazingBall"]/stages/li/label</xpath>
+    <value>
+      <label>amazing ball</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_AmazingBall"]/stages/li/description</xpath>
+    <value>
+      <description>I had such an amazing time at that ball. It was everything I imagined and more!</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TerribleExhibit"]/stages/li/label</xpath>
+    <value>
+      <label>terrible exhibit</label>
+    </value>
+  </li>
+  -->
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TerribleExhibit"]/stages/li/description</xpath>
+    <value>
+      <description>I&apos;m embarrassed that we hosted such a terrible art exhibit. Our art will never be respected in the Whitespring Enclave now!</description>
+    </value>
+  </li>
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BoringExhibit"]/stages/li/label</xpath>
+    <value>
+      <label>boring exhibit</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BoringExhibit"]/stages/li/description</xpath>
+    <value>
+      <description>I was expecting a a lot more interesting pieces, and better presentation.</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_EnjoyableExhibit"]/stages/li/label</xpath>
+    <value>
+      <label>enjoyable exhibit</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_EnjoyableExhibit"]/stages/li/description</xpath>
+    <value>
+      <description>It was really interesting seeing our collection displayed like this. Was a great time!</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_AmazingExhibit"]/stages/li/label</xpath>
+    <value>
+      <label>amazing exhibit</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_AmazingExhibit"]/stages/li/description</xpath>
+    <value>
+      <description>I couldn&apos;t believe art I&apos;ve seen many times could still be so fascinating, and the visiting officials were just as engaging.</description>
+    </value>
+  </li>
+  -->
+  <!-- ThoughtDefs/Thoughts_Memory_Royal.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleNoBallroom"]/stages/li/label</xpath>
+    <value>
+      <label>no ballroom</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleNoBallroom"]/stages/li/description</xpath>
+    <value>
+      <description>What is a senior official without a ballroom?</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleNoGallery"]/stages/li/label</xpath>
+    <value>
+      <label>no gallery</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleNoGallery"]/stages/li/description</xpath>
+    <value>
+      <description>What is a senior official without a proper gallery?</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleBallroomRequirementsNotMet"]/stages/li/label</xpath>
+    <value>
+      <label>undignified ballroom</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleBallroomRequirementsNotMet"]/stages/li/description</xpath>
+    <value>
+      <description>I am {TITLE_indefinite} and I should have these items in my ballroom:\n\n{0}</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleGalleryRequirementsNotMet"]/stages/li/label</xpath>
+    <value>
+      <label>undignified gallery</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_TitleGalleryRequirementsNotMet"]/stages/li/description</xpath>
+    <value>
+      <description>I am {TITLE_indefinite} and I should have these items in my gallery:\n\n{0}</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_LackingNobleCourt"]/stages/li/label</xpath>
+    <value>
+      <label>lacking cabinet</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_LackingNobleCourt"]/stages/li/description</xpath>
+    <value>
+      <description>My cabinet is lacking. My rank&apos;s formal requirements should always be respected. I expect to be surrounded by: \n\n{0}</description>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BadVisit"]/stages/li/label</xpath>
+    <value>
+      <label>terrible visit</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFEE_BadVisit"]/stages/li/description</xpath>
+    <value>
+      <description>I had a terrible time with that host.</description>
+    </value>
+  </li>
+  -->
+  <!-- ToolCapacityDefs/ToolCapacity.xml -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ToolCapacityDef[defName="VFEE_CutToxblade"]/label</xpath>
+    <value>
+      <label>cut</label>
+    </value>
+  </li>
+  -->
+  <!--
+  <li Class="PatchOperationReplace">
+    <xpath>/Defs/ToolCapacityDef[defName="VFEE_StabToxblade"]/label</xpath>
+    <value>
+      <label>stab</label>
+    </value>
+  </li>
+  -->
+    </operations>
+  </Operation>
+</Patch>
+

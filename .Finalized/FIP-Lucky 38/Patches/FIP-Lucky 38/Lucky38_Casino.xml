@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Hospitality Casino flavor pass -->
+	<Operation Class="PatchOperationSequence" MayRequire="Adamas.HospitalityCasino">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineRed"]/label</xpath>
+				<value>
+					<label>Vault 21 penny slots</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineRed"]/description</xpath>
+				<value>
+					<description>A reclaimed Vault 21 slot machine with a modest stake and a forgiving house edge.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineGreen"]/label</xpath>
+				<value>
+					<label>Lucky 38 standard reels</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineGreen"]/description</xpath>
+				<value>
+					<description>A House-era slot bank tuned for regular patrons and reliable nightly traffic.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineBlue"]/label</xpath>
+				<value>
+					<label>Lucky 38 high roller reels</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineBlue"]/description</xpath>
+				<value>
+					<description>A premium Lucky 38 slot bank built for high-limit play, polished brass, and a hungry house cut.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

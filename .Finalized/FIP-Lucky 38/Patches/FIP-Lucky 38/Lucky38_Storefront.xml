@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Storefront bazaar terminology -->
+	<Operation Class="PatchOperationSequence" MayRequire="Adamas.Storefront">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/StoreMessageIncomeToday</xpath>
+				<value>
+					<StoreMessageIncomeToday>Your bazaar has earned {0} today.</StoreMessageIncomeToday>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/TabRegisterStore</xpath>
+				<value>
+					<TabRegisterStore>Bazaar</TabRegisterStore>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/StoreDefaultName</xpath>
+				<value>
+					<StoreDefaultName>bazaar {0}</StoreDefaultName>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/StoreTooltipRename</xpath>
+				<value>
+					<StoreTooltipRename>Rename this bazaar.</StoreTooltipRename>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/TabRegisterOpenedTooltip</xpath>
+				<value>
+					<TabRegisterOpenedTooltip>When checked, patrons can browse the bazaar while a sales shift is active.</TabRegisterOpenedTooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/TabRegisterActiveStaff</xpath>
+				<value>
+					<TabRegisterActiveStaff>Bazaar staff:</TabRegisterActiveStaff>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/TabRegisterCustomers</xpath>
+				<value>
+					<TabRegisterCustomers>Patrons:</TabRegisterCustomers>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AlertNoRegister</xpath>
+				<value>
+					<AlertNoRegister>No bazaar counter</AlertNoRegister>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AlertNoRegisterExplanation</xpath>
+				<value>
+					<AlertNoRegisterExplanation>To open your bazaar, you need at least one register. This can be built from the production tab.</AlertNoRegisterExplanation>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AlertNoCashier</xpath>
+				<value>
+					<AlertNoCashier>No bazaar clerk</AlertNoCashier>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/AlertNoCashierExplanation</xpath>
+				<value>
+					<AlertNoCashierExplanation>To operate your bazaar, you need at least one active shift at a register and an assigned clerk.</AlertNoCashierExplanation>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Storefront_StandBy.reportString</xpath>
+				<value>
+					<Storefront_StandBy.reportString>waiting for bazaar work.</Storefront_StandBy.reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Storefront_Sell.reportString</xpath>
+				<value>
+					<Storefront_Sell.reportString>selling TargetB to TargetA at the bazaar.</Storefront_Sell.reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Storefront_BrowseItems.reportString</xpath>
+				<value>
+					<Storefront_BrowseItems.reportString>browsing the bazaar.</Storefront_BrowseItems.reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/Storefront_BuyItem.reportString</xpath>
+				<value>
+					<Storefront_BuyItem.reportString>buying TargetA from the bazaar.</Storefront_BuyItem.reportString>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

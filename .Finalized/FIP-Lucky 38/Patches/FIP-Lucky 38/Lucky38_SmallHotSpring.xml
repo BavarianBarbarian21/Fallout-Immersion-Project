@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="zal.smallhotspring">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="SmallHotSpring"]/description</xpath>
+        <value>
+          <description>A carefully worked hot spring built over a steam geyser. Its mineral waters offer meditative relaxation, modest recovery benefits, and a premium bathhouse amenity for up to four pawns at once.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="SmallHotSpring"]/label</xpath>
+        <value>
+          <label>resort hot spring</label>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

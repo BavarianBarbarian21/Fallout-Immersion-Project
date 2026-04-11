@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VCookE">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewE">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_RawSugar"]/description</xpath>
+								<value>
+									<description>Sealed packets of pre-war sugar recovered from old kitchens and pantry caches. It keeps indefinitely and still delivers the same quick rush of sweetness.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_RawSugar"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_RawSpices"]/description</xpath>
+								<value>
+									<description>A preserved blend of pre-war kitchen spices sealed away in a Lucky 38 pantry tin. Enough survives inside each can to brighten stews, sauces, and grills.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_RawSpices"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="Chocolate"]/label</xpath>
+								<value>
+									<label>preserved chocolate</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="Chocolate"]/description</xpath>
+								<value>
+									<description>A carefully wrapped cache of pre-war chocolate. Rich, sweet, and still decadent enough to anchor desserts and syrups.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/label</xpath>
+								<value>
+									<label>brahmin shroom butter</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_SmokeleafButter"]/description</xpath>
+								<value>
+									<description>A dense, intoxicating butter churned for indulgent Lucky 38 cooking. It spreads rich, hits hard, and turns any meal into a bad idea with excellent flavor.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VCE_SmokeleafButter"]/label</xpath>
+								<value>
+									<label>make brahmin shroom butter</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VCE_SmokeleafButter"]/description</xpath>
+								<value>
+									<description>Create brahmin shroom butter from milk and smokeleaf. Rich, fatty, and wildly irresponsible, it is the sort of condiment only a place like the Lucky 38 would serve on purpose.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/RecipeDef[defName="VCE_SmokeleafButter"]/jobString</xpath>
+								<value>
+									<jobString>Making brahmin shroom butter.</jobString>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VCE_SmokeleafButterHigh"]/stages/li/label</xpath>
+								<value>
+									<label>high on brahmin shroom butter</label>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_DigestibleResurrectorNanites"]/label</xpath>
+								<value>
+									<label>aqua cura</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_DigestibleResurrectorNanites"]/description</xpath>
+								<value>
+									<description>A rare pre-war medical suspension repackaged for the Lucky 38 kitchen. When folded into food, aqua cura floods the body with emergency repair nanites that can drag a diner back from death.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VCE_ConsumedDigestibleResurrectorNanites"]/label</xpath>
+								<value>
+									<label>consumed aqua cura (from meal)</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/HediffDef[defName="VCE_ConsumedDigestibleResurrectorNanites"]/description</xpath>
+								<value>
+									<description>A dose of aqua cura is active in this person's bloodstream. If they die while it remains active, the suspended repair nanites will try to rebuild them on the spot.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VCE_ConsumedDigestibleResurrectorNanites"]/stages/li/label</xpath>
+								<value>
+									<label>aqua cura</label>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThoughtDef[defName="VCE_ConsumedDigestibleResurrectorNanites"]/stages/li/description</xpath>
+								<value>
+									<description>I feel invincible after that dose of aqua cura.</description>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef[defName="VCE_AgaveNectar"]/ingredients/li/filter/thingDefs</xpath>
+								<value>
+									<li>FCP_Raw_Nevada_Agave</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef[defName="VCE_AgaveNectar"]/fixedIngredientFilter/thingDefs</xpath>
+								<value>
+									<li>FCP_Raw_Nevada_Agave</li>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VCE_RawSugar"]</xpath>
+								<value>
+									<li>Lucky38_Syrup</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VCE_RawSugar"]</xpath>
+								<value>
+									<li>Lucky38_Syrup</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VCE_RawSugar"]</xpath>
+								<value>
+									<li>Lucky38_Syrup</li>
+								</value>
+							</li>
+
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_Sugarcane"]/plant/sowTags</xpath>
+								<value>
+									<sowTags />
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_Allspice"]/plant/sowTags</xpath>
+								<value>
+									<sowTags />
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="VCE_Wheat"]/plant/sowTags</xpath>
+								<value>
+									<sowTags />
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs</xpath>
+								<value>
+									<ThingDef ParentName="OrganicProductBase">
+										<defName>Lucky38_Syrup</defName>
+										<label>syrup</label>
+										<description>A thick preserved sweetener rendered down for Lucky 38 kitchens. It fills the same role as sugar in sauces, desserts, and mixed drinks.</description>
+										<graphicData>
+											<texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+										</graphicData>
+										<statBases>
+											<MarketValue>12.1</MarketValue>
+											<Nutrition>0</Nutrition>
+											<Flammability>1.3</Flammability>
+										</statBases>
+										<comps>
+											<li Class="CompProperties_Rottable">
+												<daysToRotStart>120</daysToRotStart>
+												<rotDestroys>true</rotDestroys>
+											</li>
+										</comps>
+										<thingCategories>
+											<li>VCE_Condiments</li>
+										</thingCategories>
+										<ingestible>
+											<preferability>NeverForNutrition</preferability>
+											<specialThoughtAsIngredient>VCE_ConsumedSugar</specialThoughtAsIngredient>
+											<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+											<foodType>Processed</foodType>
+										</ingestible>
+										<ingredient>
+											<mergeCompatibilityTags>
+												<li>Condiments</li>
+											</mergeCompatibilityTags>
+										</ingredient>
+										<modExtensions>
+											<li Class="VEF.AnimalBehaviours.AnimalStatExtension">
+												<statToAdd>
+													<li>VCE_CondimentEffects</li>
+												</statToAdd>
+												<statValues>
+													<li>VCE_CondimentEffectsTitle</li>
+												</statValues>
+												<statDescriptions>
+													<li>VCE_CondimentEffectsSugar</li>
+												</statDescriptions>
+											</li>
+										</modExtensions>
+									</ThingDef>
+
+									<RecipeDef>
+										<defName>Lucky38_MakeSyrup</defName>
+										<label>make syrup</label>
+										<description>Render down maize or xander root into a thick preserved syrup suited for Lucky 38 desserts and bar stock.</description>
+										<jobString>Making syrup.</jobString>
+										<workSpeedStat>CookSpeed</workSpeedStat>
+										<effectWorking>Cook</effectWorking>
+										<soundWorking>Recipe_CookMeal</soundWorking>
+										<workAmount>1500</workAmount>
+										<recipeUsers>
+											<li>VCE_CondimentPrepTable</li>
+										</recipeUsers>
+										<ingredients>
+											<li>
+												<filter>
+													<thingDefs>
+														<li>FCP_Raw_Xander_Root</li>
+														<li>FCP_Raw_Maize</li>
+													</thingDefs>
+												</filter>
+												<count>75</count>
+											</li>
+										</ingredients>
+										<fixedIngredientFilter>
+											<thingDefs>
+												<li>FCP_Raw_Xander_Root</li>
+												<li>FCP_Raw_Maize</li>
+											</thingDefs>
+										</fixedIngredientFilter>
+										<products>
+											<Lucky38_Syrup>25</Lucky38_Syrup>
+										</products>
+										<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+									</RecipeDef>
+
+									<RecipeDef>
+										<defName>Lucky38_MakeSyrupFromCarrot</defName>
+										<label>make syrup from carrot</label>
+										<description>Render down carrots into a thick preserved syrup suited for Lucky 38 desserts and bar stock.</description>
+										<jobString>Making syrup from carrot.</jobString>
+										<workSpeedStat>CookSpeed</workSpeedStat>
+										<effectWorking>Cook</effectWorking>
+										<soundWorking>Recipe_CookMeal</soundWorking>
+										<workAmount>1500</workAmount>
+										<recipeUsers>
+											<li>VCE_CondimentPrepTable</li>
+										</recipeUsers>
+										<ingredients>
+											<li>
+												<filter>
+													<thingDefs>
+														<li>FCP_Raw_Carrot</li>
+													</thingDefs>
+												</filter>
+												<count>75</count>
+											</li>
+										</ingredients>
+										<fixedIngredientFilter>
+											<thingDefs>
+												<li>FCP_Raw_Carrot</li>
+											</thingDefs>
+										</fixedIngredientFilter>
+										<products>
+											<Lucky38_Syrup>25</Lucky38_Syrup>
+										</products>
+										<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+									</RecipeDef>
+
+									<RecipeDef>
+										<defName>Lucky38_MakeSpices</defName>
+										<label>make spices</label>
+										<description>Blend broc flower and carrot flower into a preserved seasoning mix fit for Lucky 38 kitchens.</description>
+										<jobString>Making spices.</jobString>
+										<workSpeedStat>CookSpeed</workSpeedStat>
+										<effectWorking>Cook</effectWorking>
+										<soundWorking>Recipe_CookMeal</soundWorking>
+										<workAmount>800</workAmount>
+										<recipeUsers>
+											<li>VCE_CondimentPrepTable</li>
+										</recipeUsers>
+										<ingredients>
+											<li>
+												<filter>
+													<thingDefs>
+														<li>FCP_Raw_Broc_Flower</li>
+													</thingDefs>
+												</filter>
+												<count>25</count>
+											</li>
+											<li>
+												<filter>
+													<thingDefs>
+														<li>FCP_Raw_Carrot_Flower</li>
+													</thingDefs>
+												</filter>
+												<count>25</count>
+											</li>
+										</ingredients>
+										<fixedIngredientFilter>
+											<thingDefs>
+												<li>FCP_Raw_Broc_Flower</li>
+												<li>FCP_Raw_Carrot_Flower</li>
+											</thingDefs>
+										</fixedIngredientFilter>
+										<products>
+											<VCE_RawSpices>25</VCE_RawSpices>
+										</products>
+										<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+									</RecipeDef>
+								</value>
+							</li>
+						</operations>
+					</li>
+
+					<li Class="PatchOperationFindMod">
+						<mods>
+							<li>Vanilla Plants Expanded</li>
+						</mods>
+						<match Class="PatchOperationSequence">
+							<success>Always</success>
+							<operations>
+								<li Class="PatchOperationAdd">
+									<xpath>/Defs/RecipeDef[defName="VCE_Ketchup"]/ingredients/li/filter/thingDefs</xpath>
+									<value>
+										<li>FCP_Raw_Tato</li>
+									</value>
+								</li>
+								<li Class="PatchOperationAdd">
+									<xpath>/Defs/RecipeDef[defName="VCE_Ketchup"]/fixedIngredientFilter/thingDefs</xpath>
+									<value>
+										<li>FCP_Raw_Tato</li>
+									</value>
+								</li>
+								<li Class="PatchOperationReplace">
+									<xpath>/Defs/RecipeDef[defName="VCE_Ketchup"]/description</xpath>
+									<value>
+										<description>Create ketchup from tomatoes or tatos. A thick sauce with the same sweet tang Lucky 38 diners expect from the pre-war original.</description>
+									</value>
+								</li>
+
+								<li Class="PatchOperationAdd">
+									<xpath>/Defs/RecipeDef[defName="VCE_HotSauce"]/ingredients/li/filter/thingDefs</xpath>
+									<value>
+										<li>FCP_Raw_Jalapeno</li>
+									</value>
+								</li>
+								<li Class="PatchOperationAdd">
+									<xpath>/Defs/RecipeDef[defName="VCE_HotSauce"]/fixedIngredientFilter/thingDefs</xpath>
+									<value>
+										<li>FCP_Raw_Jalapeno</li>
+									</value>
+								</li>
+								<li Class="PatchOperationReplace">
+									<xpath>/Defs/RecipeDef[defName="VCE_HotSauce"]/description</xpath>
+									<value>
+										<description>Create hot sauce from peppers or jalapenos. It keeps the same throat-burning kick while fitting the Lucky 38 pantry better.</description>
+									</value>
+								</li>
+
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Prickly_Pear"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Prickly_Pear"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Prickly_Pear"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Barrel_Cactus"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Barrel_Cactus"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Barrel_Cactus"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Banana_Yucca"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Banana_Yucca"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Food_Banana_Yucca"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Tarberry"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Tarberry"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Tarberry"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Cranberry"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Cranberry"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Cranberry"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+								<li Class="PatchOperationConditional">
+									<success>Always</success>
+									<xpath>/Defs/ThingDef[defName="FCP_Raw_Mutfruit"]/thingCategories</xpath>
+									<nomatch Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Mutfruit"]</xpath>
+										<value>
+											<thingCategories>
+												<li>VCE_Fruit</li>
+											</thingCategories>
+										</value>
+									</nomatch>
+									<match Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName="FCP_Raw_Mutfruit"]/thingCategories</xpath>
+										<value>
+											<li>VCE_Fruit</li>
+										</value>
+									</match>
+								</li>
+							</operations>
+						</match>
+					</li>
+				</operations>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="Orion.Gastronomy">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="Gastronomy_Waiting"]/description</xpath>
+        <value>
+          <description>Takes orders and serves meals to patrons in your lounges and dining rooms.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="Gastronomy_Waiting"]/gerundLabel</xpath>
+        <value>
+          <gerundLabel>attending</gerundLabel>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="Gastronomy_Waiting"]/labelShort</xpath>
+        <value>
+          <labelShort>Attend</labelShort>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/*[defName="Gastronomy_Waiting"]/verb</xpath>
+        <value>
+          <verb>Attend</verb>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

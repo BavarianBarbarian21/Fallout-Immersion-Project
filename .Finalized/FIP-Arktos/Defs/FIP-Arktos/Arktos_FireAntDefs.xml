@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Fire ants are Arktos-owned counterparts to the vanilla insect roster.
+       They are fully defined here, but vanilla infestation generation still needs a code-side hook to choose them. -->
+
+  <FactionDef ParentName="FactionBase">
+    <defName>Arktos_FireAnts</defName>
+    <label>fire ant colony</label>
+    <description>A divergent insect geneline adapted into aggressive fire ants. They share the same eusocial behavior as the black ant strain, but operate as a separate colony and field only ember-colored castes.</description>
+    <pawnSingular>fire ant</pawnSingular>
+    <pawnsPlural>fire ants</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <fixedName>Fire Ant Colony</fixedName>
+    <factionIconPath>World/WorldObjects/Expanding/Insects</factionIconPath>
+    <colorSpectrum>
+      <li>(0.51, 0.14, 0.08)</li>
+      <li>(0.65, 0.18, 0.10)</li>
+      <li>(0.78, 0.26, 0.14)</li>
+    </colorSpectrum>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(100,100)</li>
+        <li>(10000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Arktos_FireAnt>2</Arktos_FireAnt>
+          <Arktos_FireWorkerAnt>2</Arktos_FireWorkerAnt>
+          <Arktos_FireSoldierAnt>1</Arktos_FireSoldierAnt>
+          <Arktos_FireAntDrone MayRequire="Ludeon.RimWorld.Odyssey">2</Arktos_FireAntDrone>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Animal</techLevel>
+    <animalsFleeDanger>false</animalsFleeDanger>
+    <permanentEnemyToEveryoneExcept>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Entities</li>
+    </permanentEnemyToEveryoneExcept>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <allowedArrivalTemperatureRange>0~45</allowedArrivalTemperatureRange>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>1001</configurationListOrderPriority>
+  </FactionDef>
+
+  <PawnKindDef Name="Arktos_FireAntKindBase" ParentName="InsectKindBase" Abstract="True">
+    <defaultFactionDef>Arktos_FireAnts</defaultFactionDef>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect">
+    <defName>Arktos_FireWorkerAnt</defName>
+    <label>fire worker ant</label>
+    <description>A massive fire ant engineered for strength and resilience. Fire worker ants are fiercely territorial and maintain their hive with absolute loyalty.</description>
+    <statBases>
+      <MoveSpeed>3.75</MoveSpeed>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.36</ArmorRating_Heat>
+      <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
+      <MarketValue>100</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <Wildness>0.2</Wildness>
+    </statBases>
+    <uiIconScale>2</uiIconScale>
+    <tools>
+      <li>
+        <label>mandibles</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.1</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BeetleLike</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <lifeExpectancy>10</lifeExpectancy>
+      <trainability>Intermediate</trainability>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Pawn_Megascarab_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.12)</li>
+        <li>(0.07, 0, -0.05)</li>
+        <li>(0.0, 0, -0.08)</li>
+        <li>(-0.07, 0, -0.05)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase">
+    <defName>Arktos_FireWorkerAnt</defName>
+    <label>fire worker ant</label>
+    <race>Arktos_FireWorkerAnt</race>
+    <combatPower>40</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect">
+    <defName>Arktos_FireAnt</defName>
+    <label>fire ant</label>
+    <description>A fire ant adapted for underground life. Its digging claws and hive coordination make it a formidable tunnel dweller.</description>
+    <statBases>
+      <MoveSpeed>3.65</MoveSpeed>
+      <ArmorRating_Heat>0.5</ArmorRating_Heat>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
+      <MarketValue>200</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+      <Wildness>0.3</Wildness>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>head claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BeetleLikeWithClaw</body>
+      <baseHungerRate>0.25</baseHungerRate>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHealthScale>1.7</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <lifeExpectancy>6</lifeExpectancy>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">Dig</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Spelopede_Pain</soundWounded>
+          <soundDeath>Pawn_Spelopede_Death</soundDeath>
+          <soundCall>Pawn_Spelopede_Call</soundCall>
+          <soundAngry>Pawn_Spelopede_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.14)</li>
+        <li>(0.07, 0, 0.08)</li>
+        <li>(0.0, 0, -0.12)</li>
+        <li>(-0.07, 0, 0.08)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase">
+    <defName>Arktos_FireAnt</defName>
+    <label>fire ant</label>
+    <race>Arktos_FireAnt</race>
+    <combatPower>75</combatPower>
+    <ecoSystemWeight>0.35</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.65</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.5, 0.37)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.65</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect">
+    <defName>Arktos_FireSoldierAnt</defName>
+    <label>fire soldier ant</label>
+    <description>The most aggressive of the fire ants. These creatures defend their hive with relentless ferocity, thick chitin, and powerful jaws.</description>
+    <statBases>
+      <MoveSpeed>3.60</MoveSpeed>
+      <ArmorRating_Heat>0.7</ArmorRating_Heat>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <Flammability>0.08</Flammability>
+      <MarketValue>500</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+      <Wildness>0.4</Wildness>
+    </statBases>
+    <uiIconScale>1.15</uiIconScale>
+    <tools>
+      <li>
+        <label>head claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BeetleLikeWithClaw</body>
+      <baseHungerRate>0.35</baseHungerRate>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>2.5</baseHealthScale>
+      <meatLabel>insect meat</meatLabel>
+      <lifeExpectancy>6</lifeExpectancy>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+          <soundDeath>Pawn_BigInsect_Death</soundDeath>
+          <soundCall>Pawn_BigInsect_Call</soundCall>
+          <soundAngry>Pawn_BigInsect_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <verbs>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <verbClass>Verb_SpewFire</verbClass>
+        <warmupTime>0</warmupTime>
+        <range>4.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>Shot_MiniFlameblaster</soundCast>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase">
+    <defName>Arktos_FireSoldierAnt</defName>
+    <label>fire soldier ant</label>
+    <race>Arktos_FireSoldierAnt</race>
+    <combatPower>150</combatPower>
+    <ecoSystemWeight>0.50</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>1.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.7, 0.43)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntLarva</defName>
+    <label>fire ant larva</label>
+    <description>The juvenile stage of a fire ant. Fire ant larvae are nurtured by workers and mature into the hive's next caste.</description>
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ArmorRating_Heat>0.24</ArmorRating_Heat>
+      <Flammability>0.12</Flammability>
+      <MarketValue>35</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <Wildness>0.2</Wildness>
+    </statBases>
+    <tools>
+      <li>
+        <label>mandibles</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.1</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>Larva</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseHealthScale>0.25</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <lifeExpectancy>4</lifeExpectancy>
+      <trainability>Intermediate</trainability>
+      <specialTrainables>
+        <li>SludgeSpew</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Larva_Wounded</soundWounded>
+          <soundDeath>Pawn_Larva_Death</soundDeath>
+          <soundCall>Pawn_Larva_Call</soundCall>
+          <soundAngry>Pawn_Larva_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_SpreadSludge">
+        <mtbTicks>15000</mtbTicks>
+        <abilityDef>SludgeSpew</abilityDef>
+        <tryAvoidSludge>true</tryAvoidSludge>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntLarva</defName>
+    <label>fire ant larva</label>
+    <race>Arktos_FireAntLarva</race>
+    <combatPower>25</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
+    <abilities>
+      <li>SludgeSpew</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Red/Ant_Red</texPath>
+          <drawSize>0.85</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/Ant/Ant_Dessicated</texPath>
+          <drawSize>0.85</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntQueen</defName>
+    <label>fire ant queen</label>
+    <description>The queen of a fire ant megahive. She anchors the colony, lays the next generation, and turns any nest she survives in into a larger threat.</description>
+    <statBases>
+      <MoveSpeed>3.4</MoveSpeed>
+      <ArmorRating_Heat>1.0</ArmorRating_Heat>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <Flammability>0.05</Flammability>
+      <MarketValue>2000</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>0.27</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.22</ArmorRating_Sharp>
+      <FilthRate>28</FilthRate>
+      <Wildness>0.99</Wildness>
+    </statBases>
+    <tools>
+      <li>
+        <label>head claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BeetleLikeWithClaw</body>
+      <forceGender>Female</forceGender>
+      <baseBodySize>4.5</baseBodySize>
+      <baseHealthScale>9.8</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <needsRest>false</needsRest>
+      <lifeExpectancy>75</lifeExpectancy>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li>EggSpew</li>
+      </specialTrainables>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <soundWounded>Pawn_HiveQueen_Wounded</soundWounded>
+          <soundDeath>Pawn_HiveQueen_Death</soundDeath>
+          <soundCall>Pawn_HiveQueen_Call</soundCall>
+          <soundAngry>Pawn_HiveQueen_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <comps>
+      <li Class="CompProperties_SpreadSludge">
+        <mtbTicks>15000</mtbTicks>
+        <abilityDef>EggSpew</abilityDef>
+      </li>
+      <li Class="CompProperties_LetterOnRevealed">
+        <label>Fire ant queen</label>
+        <text>You've discovered the center of the fire ant nest. It's guarded by a massive queen!</text>
+        <letterDef>ThreatBig</letterDef>
+      </li>
+    </comps>
+    <verbs>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <verbClass>Verb_SpewFire</verbClass>
+        <warmupTime>0</warmupTime>
+        <range>5.9</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>Shot_MiniFlameblaster</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+    <butcherProducts>
+      <InsectJelly>150</InsectJelly>
+    </butcherProducts>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntQueen</defName>
+    <label>fire ant queen</label>
+    <race>Arktos_FireAntQueen</race>
+    <combatPower>500</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
+    <appearsRandomlyInCombatGroups>false</appearsRandomlyInCombatGroups>
+    <canBeScattered>false</canBeScattered>
+    <isBoss>true</isBoss>
+    <abilities>
+      <li>EggSpew</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntQueen/Red/AntQueen_Red</texPath>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntQueen/AntQueen_Dessicated</texPath>
+          <drawSize>4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseInsect" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntDrone</defName>
+    <label>fire ant drone</label>
+    <description>A winged fire ant bred for mating flights and scouting. On its own it is fragile, but swarms of drones are still dangerous.</description>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <Flammability>0.1</Flammability>
+      <MarketValue>120</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <MaxFlightTime>10</MaxFlightTime>
+      <FlightCooldown>5</FlightCooldown>
+      <Wildness>0.3</Wildness>
+    </statBases>
+    <uiIconScale>1.5</uiIconScale>
+    <tools>
+      <li>
+        <label>mandibles</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.1</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BeetleLike</body>
+      <baseBodySize>0.6</baseBodySize>
+      <baseHungerRate>0.15</baseHungerRate>
+      <baseHealthScale>0.7</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
+      <lifeExpectancy>10</lifeExpectancy>
+      <trainability>Intermediate</trainability>
+      <specialTrainables>
+        <li>Forage</li>
+      </specialTrainables>
+      <flightStartChanceOnJobStart>0.1</flightStartChanceOnJobStart>
+      <flightSpeedFactor>2.5</flightSpeedFactor>
+      <canFlyIntoMap>true</canFlyIntoMap>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Locust_Wounded</soundWounded>
+          <soundDeath>Pawn_Locust_Death</soundDeath>
+          <soundCall>Pawn_Locust_Call</soundCall>
+          <soundAngry>Pawn_Locust_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.12)</li>
+        <li>(0.07, 0, -0.05)</li>
+        <li>(0.0, 0, -0.08)</li>
+        <li>(-0.07, 0, -0.05)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalInsect</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="Arktos_FireAntKindBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_FireAntDrone</defName>
+    <label>fire ant drone</label>
+    <race>Arktos_FireAntDrone</race>
+    <combatPower>55</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
+    <flyingAnimationFramePathPrefix>Things/Pawn/Insect/Locust/LocustFlying/Locust_Flying_</flyingAnimationFramePathPrefix>
+    <flyingAnimationFrameCount>5</flyingAnimationFrameCount>
+    <flyingAnimationTicksPerFrame>2</flyingAnimationTicksPerFrame>
+    <flyingAnimationDrawSize>1</flyingAnimationDrawSize>
+    <flyingAnimationDrawSizeIsMultiplier>false</flyingAnimationDrawSizeIsMultiplier>
+    <flyingAnimationInheritColors>true</flyingAnimationInheritColors>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/Red/AntWinged_Red</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/Red/AntWinged_Red</texPath>
+          <drawSize>1.45</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+          <drawSize>1.45</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/Red/AntWinged_Red</texPath>
+          <drawSize>1.65</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Ants/AntWinged/AntWinged_Dessicated</texPath>
+          <drawSize>1.65</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>Arktos_FireAntHive</defName>
+    <label>fire ant hive</label>
+    <description>A hive of giant fire ants. If activated, it will spawn additional fire ants and hives over time, as well as valuable insect jelly.</description>
+    <thingClass>Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Natural/Hive</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <comps>
+      <li Class="CompProperties_CanBeDormant">
+        <startsDormant>true</startsDormant>
+        <canWakeUpFogged>false</canWakeUpFogged>
+      </li>
+      <li Class="CompProperties_WakeUpDormant" />
+      <li Class="CompProperties_SpawnerPawn">
+        <spawnablePawnKinds>
+          <li>Arktos_FireWorkerAnt</li>
+          <li>Arktos_FireAnt</li>
+          <li>Arktos_FireSoldierAnt</li>
+          <li MayRequire="Ludeon.RimWorld.Odyssey">Arktos_FireAntDrone</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_DefendAndExpandHive</lordJob>
+        <spawnSound>Hive_Spawn</spawnSound>
+        <initialPawnsPoints>200</initialPawnsPoints>
+        <maxSpawnedPawnsPoints>500</maxSpawnedPawnsPoints>
+        <lordJoinRadius>10</lordJoinRadius>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_SpawnerHives" />
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>InsectJelly</thingToSpawn>
+        <spawnCount>20</spawnCount>
+        <spawnIntervalRange>26000~30000</spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>true</spawnForbidden>
+        <saveKeysPrefix>jelly</saveKeysPrefix>
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>GlowPod</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>30000~60000</spawnIntervalRange>
+        <spawnMaxAdjacent>1</spawnMaxAdjacent>
+        <saveKeysPrefix>pod</saveKeysPrefix>
+        <inheritFaction>true</inheritFaction>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>6</heatPerSecond>
+        <heatPushMaxTemperature>38</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_SpawnerFilth">
+        <filthDef>Filth_Slime</filthDef>
+        <spawnCountOnSpawn>10</spawnCountOnSpawn>
+        <spawnMtbHours>4</spawnMtbHours>
+        <spawnRadius>5</spawnRadius>
+      </li>
+      <li Class="CompProperties_Maintainable">
+        <ticksHealthy>60000</ticksHealthy>
+        <ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+        <damagePerTickRare>10</damagePerTickRare>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CocoonBase">
+    <defName>Arktos_CocoonFireSoldierAnt</defName>
+    <label>fire soldier ant cocoon</label>
+    <description>A stasis cocoon containing a fire soldier ant.</description>
+    <graphicData>
+      <texPath>Things/Building/Natural/CocoonMegaspider</texPath>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.5</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <building>
+      <combatPower>150</combatPower>
+    </building>
+    <comps>
+      <li Class="CompProperties_PawnSpawnOnWakeup">
+        <pawnSpawnRadius>0</pawnSpawnRadius>
+        <points>150</points>
+        <spawnablePawnKinds>
+          <li>Arktos_FireSoldierAnt</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_AssaultColony</lordJob>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+        <mentalState>CocoonDisturbed</mentalState>
+        <destroyAfterSpawn>true</destroyAfterSpawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CocoonBase">
+    <defName>Arktos_CocoonFireWorkerAnt</defName>
+    <label>fire worker ant cocoon</label>
+    <description>A stasis cocoon containing a fire worker ant.</description>
+    <graphicData>
+      <texPath>Things/Building/Natural/CocoonMegascarab</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <building>
+      <combatPower>40</combatPower>
+    </building>
+    <comps>
+      <li Class="CompProperties_PawnSpawnOnWakeup">
+        <pawnSpawnRadius>0</pawnSpawnRadius>
+        <points>40</points>
+        <spawnablePawnKinds>
+          <li>Arktos_FireWorkerAnt</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_AssaultColony</lordJob>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+        <mentalState>CocoonDisturbed</mentalState>
+        <destroyAfterSpawn>true</destroyAfterSpawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CocoonBase">
+    <defName>Arktos_CocoonFireAnt</defName>
+    <label>fire ant cocoon</label>
+    <description>A stasis cocoon containing a fire ant.</description>
+    <graphicData>
+      <texPath>Things/Building/Natural/CocoonSpelopede</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <building>
+      <combatPower>75</combatPower>
+    </building>
+    <comps>
+      <li Class="CompProperties_PawnSpawnOnWakeup">
+        <pawnSpawnRadius>0</pawnSpawnRadius>
+        <points>75</points>
+        <spawnablePawnKinds>
+          <li>Arktos_FireAnt</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_AssaultColony</lordJob>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+        <mentalState>CocoonDisturbed</mentalState>
+        <destroyAfterSpawn>true</destroyAfterSpawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
