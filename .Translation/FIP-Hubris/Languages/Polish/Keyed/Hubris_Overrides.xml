@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>Zdobyto tajemniczy wgląd</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} uzyskał {USER_labelShort} pierwszy poziom tajemniczego wglądu! {USER_labelShort} jest teraz okultysta.
+{USER_labelShort} musi budować tajemnicze skupienie poprzez medytację. Skuteczność tej medytacji wzrasta, jeśli osoba medytująca może skupić się na konkretnym przedmiocie.
+
+Różni ludzie potrafią skupiać uwagę na różnych obiektach. Zależy to od historii, cech i rang danej osoby. Na przykład:
+
+- Okultyści mający rangę enklawy medytują na przydzielonych im stanowiskach.
+- Okultyści z plemiennym dzieciństwem medytują przy tajemniczych kapliczkach i totemach.
+- Ascetyczni okultyści medytują przy pustych ścianach.
+- Psychopatyczni okultyści medytują do grobów, najlepiej z ukochaną osobą w środku.
+
+Możesz sprawdzić czyjeś typy skupienia na medytacji, przeglądając jego kartę informacyjną z przyciskiem „i”.</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_pronoun} zyskał nowy poziom tajemniczego wglądu! {USER_pronoun} może teraz korzystać z tajemniczych odkryć na wyższym poziomie, ale {USER_pronoun} musi się ich najpierw nauczyć.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>Po zdobyciu nowego poziomu wglądu w tajemnice, {2} automatycznie poznał te odkrycia: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>esencja kryptydy ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Użyj tajemniczej esencji, aby poznać objawienie {0}</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Jednorazowa szczepionka neuronowa, która uczy konkretnego tajemniczego odkrycia.
+
+Dawka podawana jest poprzez wyspecjalizowany punkt implantacji. Po uwolnieniu do mózgu mechanizm tworzy wiedzę o konkretnym odkryciu, przekształcając się w tkankę nerwową, jeśli zajdzie taka potrzeba.
+
+{PSYCASTDESCRIPTION}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>wymaga tajemniczego wglądu</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>Kryptowalne skupienie</Psyfocus>
+  <PsyfocusLabelGizmo>Kryptowalne skupienie</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Kryptidowe skupienie to szczególny rodzaj mentalnej struktury wymaganej do korzystania z tajemniczych objawień. Skupienie na kryptach zanika z czasem i należy je budować poprzez regularną medytację. Utrata tajemniczego skupienia uniemożliwia korzystanie z objawień.
+
+Wyższe skupienie kryptyd pozwala na odkrycie wyższego poziomu, ale także zwiększa tempo rozpraszania skupienia.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{1}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Rewelacje aż do poziomu {0}.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Koncentracja na kryptach spada do {0} dziennie.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Szybkość wzmocnienia skupienia kryptyd: {0}/d</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualNeedPsylink>Potrzebujesz typu skupienia tajemniczego wglądu {0}</BeginLinkingRitualNeedPsylink>
+  <BeginLinkingRitualMaxPsylinkLevel>Maksymalny poziom wglądu w tajemnicę</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_pronoun} zakończył rytuał łączenia z {PAWN_pronoun}.
+
+{PAWN_pronoun} ma teraz ulepszony wgląd w tajemnice, pozwalający na wykorzystanie nowych rewelacji.</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>Totem Ćmoczłowieka</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>W tej chwili nie ma kolonistów, którzy mogliby połączyć się z Totemem Ćmoczłowieka.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>Brak kolonistów z naturalnym typem skupienia na medytacji.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Potrzebujesz co najmniej jaj {0} Mothmana.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Musi to być kolonista z naturalnym typem skupienia na medytacji, który jest poniżej maksymalnego poziomu wglądu w tajemnicę.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Nie może być niewrażliwy na kryptydy.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>Ceremonia łączenia jest silniejsza przy większej liczbie uczestników. Im więcej osób weźmie udział, tym mniej czasu zajmie ceremonia i tym więcej jaj Ćmoczłeka zostanie przywróconych.
+
+Dzięki dodatkowym uczestnikom {1} jaja {1} Mothmana zostaną przywrócone na koniec ceremonii.</AnimaLinkingExplanationBase>
+
+
+</LanguageData>

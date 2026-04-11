@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Dubs Bad Hygiene bathhouse flavor -->
+	<Operation Class="PatchOperationSequence" MayRequire="Dubwise.DubsBadHygiene">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/DBH.HeatedPool</xpath>
+				<value>
+					<DBH.HeatedPool>Bathhouse pool is heated</DBH.HeatedPool>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="HotShower"]/stages/li/label</xpath>
+				<value>
+					<label>hot bathhouse shower</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="HotShower"]/stages/li/description</xpath>
+				<value>
+					<description>I had a proper hot shower in the bathhouse.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="HeatedPool"]/stages/li/label</xpath>
+				<value>
+					<label>heated bathhouse pool</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="HeatedPool"]/stages/li/description</xpath>
+				<value>
+					<description>The heated bathhouse pool was deeply relaxing.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="HotBath"]/stages/li/label</xpath>
+				<value>
+					<label>hot bathhouse soak</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName="ColdBath"]/stages/li/label</xpath>
+				<value>
+					<label>cold bathhouse plunge</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="DBHSwimmingPool"]/label</xpath>
+				<value>
+					<label>bathhouse pool</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="DBHSwimmingPool"]/description</xpath>
+				<value>
+					<description>A bathhouse pool for hydrotherapy, leisure, and premium patron use. It must be filled from your water system before first use.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HotTub"]/label</xpath>
+				<value>
+					<label>bathhouse hot tub</label>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

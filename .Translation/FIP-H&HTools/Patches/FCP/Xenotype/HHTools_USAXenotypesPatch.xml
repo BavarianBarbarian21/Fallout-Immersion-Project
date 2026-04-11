@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.UnitedStates">
+        <xpath>Defs/FactionDef[defName="FCP_Faction_USA"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.55</Baseliner>
+              <WestTek_Xenotype_TwoCalifornia MayRequire="FIP.WestTek">0.1</WestTek_Xenotype_TwoCalifornia>
+              <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_NatL>
+              <WestTek_Xenotype_Cascadia MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_Cascadia>
+              <WestTek_Xenotype_NuevoTexico MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_NuevoTexico>
+              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.06</WestTek_Xenotype_Atlantic>
+              <WestTek_Xenotype_Ghoul MayRequire="FIP.WestTek">0.05</WestTek_Xenotype_Ghoul>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!--Overwrite with FCP Ghouls-->
+	<Operation Class="PatchOperationSequence" MayRequire="Rick.FCP.Ghouls">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Ghouls">
+        <xpath>Defs/FactionDef[defName="FCP_Faction_USA"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.55</Baseliner>
+              <WestTek_Xenotype_TwoCalifornia MayRequire="FIP.WestTek">0.1</WestTek_Xenotype_TwoCalifornia>
+              <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_NatL>
+              <WestTek_Xenotype_Cascadia MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_Cascadia>
+              <WestTek_Xenotype_NuevoTexico MayRequire="FIP.WestTek">0.08</WestTek_Xenotype_NuevoTexico>
+              <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.06</WestTek_Xenotype_Atlantic>
+              <FCP_Xenotype_Ghoul MayRequire="Rick.FCP.Ghouls">0.05</FCP_Xenotype_Ghoul>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

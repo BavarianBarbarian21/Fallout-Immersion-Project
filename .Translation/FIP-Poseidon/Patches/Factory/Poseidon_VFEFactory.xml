@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VFEFactory">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/DesignationCategoryDef[defName="VFEFactory_Factories"]/label</xpath>
+				<value>
+					<label>Corvega Works</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/DesignationCategoryDef[defName="VFEFactory_Factories"]/description</xpath>
+				<value>
+					<description>Corvega industrial machinery for automated extraction, refining, transfer, and fabrication. Clean, quiet, and efficient, just as the pre-War brochures promised.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_BasicFactories"]/label</xpath>
+				<value>
+					<label>Corvega basic works</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_BasicFactories"]/description</xpath>
+				<value>
+					<description>Construct basic Corvega industrial works, including conveyors, buried transfer lines, hoppers, and entry-level automated equipment for a proper pre-War factory floor.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_ComplexFactories"]/label</xpath>
+				<value>
+					<label>Corvega advanced works</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_ComplexFactories"]/description</xpath>
+				<value>
+					<description>Construct specialized Corvega industrial systems for component fabrication, alloy processing, and other high-end automated production lines.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_Conveyor"]/label</xpath>
+				<value>
+					<label>industrial conveyor</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_Conveyor"]/description</xpath>
+				<value>
+					<description>A basic industrial conveyor for moving materials between work cells with minimal labor handling.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_UndergroundConveyorEntrance"]/label</xpath>
+				<value>
+					<label>buried conveyor intake</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_UndergroundConveyorEntrance"]/description</xpath>
+				<value>
+					<description>A buried intake point that lets an industrial conveyor run beneath short stretches of ground before resurfacing.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_UndergroundConveyorExit"]/label</xpath>
+				<value>
+					<label>buried conveyor discharge</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_UndergroundConveyorExit"]/description</xpath>
+				<value>
+					<description>A buried discharge point that brings an underground conveyor back to the surface near the next work cell.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_FactoryHopper"]/label</xpath>
+				<value>
+					<label>works hopper</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_FactoryHopper"]/description</xpath>
+				<value>
+					<description>Stores feedstock and finished goods for automated Corvega works machinery.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_Autofarmer"]/label</xpath>
+				<value>
+					<label>agri-industrial harvester</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_Autofarmer"]/description</xpath>
+				<value>
+					<description>A large Corvega field machine that handles sowing and harvest cycles across a designated crop zone, then pushes the yield into attached works hoppers.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedDrillPlatform"]/label</xpath>
+				<value>
+					<label>Corvega drill platform</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedDrillPlatform"]/description</xpath>
+				<value>
+					<description>An automated Corvega deep extraction rig for pulling stone and buried metals up from the crust. Works machinery needs hoppers for intake and output, throws off serious heat, and can be overclocked at the cost of even greater draw and temperature.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedSmelter"]/label</xpath>
+				<value>
+					<label>Corvega reclamation smelter</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedSmelter"]/description</xpath>
+				<value>
+					<description>A heavy Corvega smelter for recovering metal from slag, scrap gear, stone, and mechanoid remains. It belongs on a factory floor and can be overclocked for harsher but faster reclamation.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedBiofuelRefinery"]/label</xpath>
+				<value>
+					<label>Corvega oil refinery</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedBiofuelRefinery"]/description</xpath>
+				<value>
+					<description>An automated Corvega refinery that converts wood and other organic feedstock into oil. It requires a factory floor, works hoppers, and can be overclocked for higher output at higher heat and power cost.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedMasonrySaw"]/label</xpath>
+				<value>
+					<label>automated masonry line</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFEFactory_AutomatedMasonrySaw"]/description</xpath>
+				<value>
+					<description>A Corvega masonry line for turning stone chunks into consistent construction blocks. It needs hoppers, throws heat, and responds well to overclocking if your grid can support it.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Gravcore"]/label</xpath>
+        <value><label>reactor core</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Gravcore"]/description</xpath>
+        <value><description>A compact pre-war reactor core recovered from prototype Hellion systems and related military hardware. It is useless by itself, but it can be integrated into advanced Hellion support equipment.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravlitePanel"]/label</xpath>
+        <value><label>airframe panel</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravlitePanel"]/description</xpath>
+        <value><description>A lightweight pre-war airframe panel used to assemble and reinforce Hellion components. It is durable, heat-resistant, and ideal for advanced aerospace construction.
+
+Requires vacstone blocks, which can be obtained from orbital asteroids.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravshipHull"]/label</xpath>
+        <value><label>Hellion hull</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravshipHull"]/description</xpath>
+        <value><description>An airtight armored hull section sized for the Hellion's frame. It seals the craft against vacuum exposure and locks directly into the underlying deck plating, so it can only be built as part of the Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ShipChunk_Mech"]/description</xpath>
+        <value><description>A chunk of robot craft made of steel and salvaged airframe panels. It looks like it was torn free during re-entry or blasted off by heavy weapons.
+
+Deconstruct it to obtain valuable resources.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravEngine"]/label</xpath>
+        <value><label>Hellion reactor</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravEngine"]/description</xpath>
+        <value><description>The pre-war reactor assembly at the heart of the Hellion. It sustains the aircraft's vertical lift envelope and powers the heavy systems needed for long-range atmospheric and orbital operations.
+
+When launched, anything on deck plating connected to the reactor will be transported to a new map. Without a mooring mast, launching the Hellion will abandon your current map.
+
+The Hellion was designed as an unfinished military prototype, requiring rare components, specialist fabrication, and a great deal of salvage to keep flying.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravFieldExtender"]/label</xpath>
+        <value><label>airframe extender</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravFieldExtender"]/description</xpath>
+        <value><description>A support assembly used to expand the Hellion's airframe. It increases the amount of deck plating the craft can carry and must be built near the Hellion reactor.
+
+One Hellion can support up to six airframe extenders.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="PilotConsole"]/label</xpath>
+        <value><label>cockpit console</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="PilotConsole"]/description</xpath>
+        <value><description>A hardened flight console used to launch and pilot the Hellion. It draws power directly from the Hellion reactor.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SmallThruster"]/label</xpath>
+        <value><label>small VTOL thruster</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SmallThruster"]/description</xpath>
+        <value><description>A compact VTOL thruster that increases the Hellion's operational range. Thrusters require an unobstructed exhaust area free of large buildings and Hellion deck plating.
+
+One Hellion can support up to four small VTOL thrusters.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LargeThruster"]/label</xpath>
+        <value><label>heavy VTOL thruster</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LargeThruster"]/description</xpath>
+        <value><description>An advanced VTOL thruster with a heat-resistant vacstone liner. It greatly increases the Hellion's operational range. Thrusters require an unobstructed exhaust area free of large buildings and Hellion deck plating.
+
+Requires vacstone blocks, which can be obtained from orbital asteroids.
+
+One Hellion can support up to six heavy VTOL thrusters.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="FuelOptimizer"]/label</xpath>
+        <value><label>fuel regulator</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="FuelOptimizer"]/description</xpath>
+        <value><description>A control unit that synchronizes the Hellion reactor with its VTOL thrust systems. It reduces the fuel needed for Hellion flight.
+
+One Hellion can support two fuel regulators.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SignalJammer"]/label</xpath>
+        <value><label>ECM suite</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="SignalJammer"]/description</xpath>
+        <value><description>An electronic countermeasures suite that masks the Hellion's signature and helps it approach heavily defended landing sites.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravcorePowerCell"]/label</xpath>
+        <value><label>reactor-core power cell</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravcorePowerCell"]/description</xpath>
+        <value><description>A compact generator built around a salvaged reactor core, adapted to provide steady power for the Hellion's onboard systems.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="PilotSubpersonaCore"]/label</xpath>
+        <value><label>navigation core</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="PilotSubpersonaCore"]/description</xpath>
+        <value><description>A low-grade navigation core tuned for Hellion flight. It reduces the chance of an accident when flying the Hellion, though it cannot fully compensate for pilot error.
+
+One Hellion can support up to two navigation cores.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravshipShieldGenerator"]/label</xpath>
+        <value><label>Hellion shield projector</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravshipShieldGenerator"]/description</xpath>
+        <value><description>A defensive projector that protects the Hellion by generating a short-lived repulsor screen against incoming rounds and mortar fire. Those inside the field can still shoot out.
+
+It must be charged before use. One Hellion can support two shield projectors.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravAnchor"]/label</xpath>
+        <value><label>mooring mast</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="GravAnchor"]/description</xpath>
+        <value><description>Prevents the local map from being destroyed during a Hellion launch.
+
+Mooring masts stabilize the launch zone around the aircraft and keep the surrounding settlement intact during departure. They cannot be constructed on the Hellion itself, because doing so would prevent takeoff entirely.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="Substructure"]/label</xpath>
+        <value><label>Hellion deck plating</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="Substructure"]/description</xpath>
+        <value><description>A lightweight structural deck that forms the floor of the Hellion. Only things resting on this plating can be carried by the aircraft, and it must be built within range of the Hellion reactor.
+
+Hellion deck plating can be removed using the 'remove foundation' designator.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainAffordanceDef[defName="Substructure"]/label</xpath>
+        <value><label>Hellion deck plating</label></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="BasicGravtech"]/label</xpath>
+        <value><label>Hellion airframe</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="BasicGravtech"]/description</xpath>
+        <value><description>Rebuild the Hellion and use it to travel the planet. Without a mooring mast, launching the Hellion will abandon your current map.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="StandardGravtech"]/label</xpath>
+        <value><label>Hellion systems</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="StandardGravtech"]/description</xpath>
+        <value><description>Build more complex Hellion components and flight systems.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="StandardGravtech"]/discoveredLetterText</xpath>
+        <value><discoveredLetterText>You now have the technology to build heavy VTOL thrusters. These require vacstone blocks which can be obtained from orbital asteroids.
+
+You can travel to orbital locations using transport pods, shuttles, or the Hellion. Make sure to equip your colonists with vacsuits or other advanced armors to survive in space.</discoveredLetterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="AdvancedGravtech"]/label</xpath>
+        <value><label>advanced Hellion systems</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="AdvancedGravtech"]/description</xpath>
+        <value><description>Build advanced Hellion upgrades and support systems.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="GravshipWreckage"]/label</xpath>
+        <value><label>Hellion wreckage</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="GravshipWreckage"]/description</xpath>
+        <value><description>The crash site of a Hellion prototype.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="GravshipWreckage"]/mainPartAllThreatsLabel</xpath>
+        <value><mainPartAllThreatsLabel>Contains: Hellion reactor</mainPartAllThreatsLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[@Name="GravcoreLocationBase"]/mainPartAllThreatsLabel</xpath>
+        <value><mainPartAllThreatsLabel>Contains: Reactor core</mainPartAllThreatsLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="AbandonedSettlement"]/description</xpath>
+        <value><description>The reactor-core signal is coming from somewhere in this settlement. Search the abandoned buildings to recover the core.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="MechanoidRelay"]/description</xpath>
+        <value><description>The reactor-core signal is coming from a robot communication relay here. Disassemble it to acquire the reactor core.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="InsectLair"]/description</xpath>
+        <value><description>You have detected the signal of a reactor core emanating from a cave system deep underground. The entrance is marked on the world map.
+
+Recover reactor cores and airframe panels to upgrade your Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="AncientReactor"]/description</xpath>
+        <value><description>An ancient reactor is hidden within nearby ruins. The reactor is cracked and leaking toxic fallout over the whole region. Locate and disable it to obtain a reactor core and stop the fallout.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="OrbitalMechanoidPlatform"]/description</xpath>
+        <value><description>You have detected the signal of a reactor core on this platform. There is a heavy robot presence.
+
+Be careful, orbital locations are extremely dangerous. Ensure your Hellion is fully enclosed with airtight walls and equip your colonists with vacsuits. Plan your return trip, as living in orbit for long periods is very difficult.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="AncientStockpile"]/description</xpath>
+        <value><description>You have detected the signal of a reactor core emanating from an ancient underground stockpile. The location is marked on the world map.
+
+Recover reactor cores and airframe panels to expand your Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="CrashedMechanoidPlatform"]/description</xpath>
+        <value><description>The remains of an orbital platform are strewn nearby. Be careful, the wreckage contains hostile robots.
+
+The reactor-core signal is coming from somewhere within the crash site.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="OrbitalAncientPlatform"]/description</xpath>
+        <value><description>You have detected the signal of a reactor core.
+
+Be careful - orbital locations are extremely dangerous. Ensure your Hellion is fully enclosed with airtight walls and equip your colonists with vacsuits. Plan your return trip, as living in orbit for long periods is very difficult.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/SitePartDef[defName="FrozenTerraformer"]/description</xpath>
+        <value><description>You have detected the signal of a reactor core. The core is powering a malfunctioning ancient terraformer. Its location is marked on the world map.
+
+The terraformer is cooling the local region to dangerously low temperatures. Be prepared for cold weather.
+
+Recover reactor cores and airframe panels to expand your Hellion.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MechRelay"]/comps/li[@Class="CompProperties_MechRelay"]/activeInspectString</xpath>
+        <value><activeInspectString>Hack or destroy relay stabilizers to obtain the reactor core.</activeInspectString></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MechRelay"]/comps/li[@Class="CompProperties_MechRelay"]/crashedLetterText</xpath>
+        <value><crashedLetterText>The robot relay has crashed to the ground. Destroy it to obtain a reactor core.
+
+      Be warned, hostile robots will soon arrive in response to the relay going offline.</crashedLetterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MechRelay_Crashed"]/comps/li[@Class="CompProperties_InspectString"]/inspectString</xpath>
+        <value><inspectString>Contains: Reactor core</inspectString></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/label</xpath>
+        <value><label>ancient reactor</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/description</xpath>
+        <value><description>An ancient generator powered by a reactor core. Once capable of producing massive amounts of power, it has now fallen into disrepair. The containment shield is leaking, causing toxic fallout to blanket the whole region.
+
+Hack or destroy the reactor to obtain the core. Be warned, it may explode if damaged.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/comps/li[@Class="CompProperties_Hackable"]/notHackedInspectString</xpath>
+        <value><notHackedInspectString>Hack to obtain reactor core.</notHackedInspectString></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/comps/li[@Class="CompProperties_Hackable"]/hackedLetterLabel</xpath>
+        <value><hackedLetterLabel>Reactor core obtained</hackedLetterLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/comps/li[@Class="CompProperties_Hackable"]/hackedLetterText</xpath>
+        <value><hackedLetterText>You've obtained a reactor core from the ancient reactor.
+
+The reactor is shutting down and the toxic fallout is already beginning to clear.</hackedLetterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/comps/li[@Class="CompProperties_Hackable"]/destroyedLetterLabel</xpath>
+        <value><destroyedLetterLabel>Reactor core obtained</destroyedLetterLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AncientGravReactor"]/comps/li[@Class="CompProperties_Hackable"]/destroyedLetterText</xpath>
+        <value><destroyedLetterText>You've obtained a reactor core from the ancient reactor.
+
+The reactor is shutting down and the toxic fallout is already beginning to clear.</destroyedLetterText></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="MechanoidSignal"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You've detected a signal from a robot ship in orbit. The ship has malfunctioned and is slowly losing altitude.
+
+By falsely responding to the signal you can make the ship crash-land nearby, letting you salvage prototype Hellion hardware.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="MechanoidSignal"]/questDescriptionRules/rulesStrings/li[2]</xpath>
+        <value><li>gravEngineSpawnedLetterLabel->Hellion reactor</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="MechanoidSignal"]/questDescriptionRules/rulesStrings/li[3]</xpath>
+        <value><li>gravEngineSpawnedLetterText->The robot ship has crash-landed nearby.
+
+It contains an intact Hellion reactor. The assembly can lift a heavily armored aircraft or orbital platform while operating near a planet, making it ideal for long-range travel and orbital insertion.
+
+Inspect the reactor to make use of it.</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravEngine"]/questNameRules/rulesStrings/li[1]</xpath>
+        <value><li>questName->the Hellion</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravEngine"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You've discovered a robot Hellion reactor. You can use it to rebuild the Hellion and rapidly move around the planet.
+
+The reactor includes instrumentation that passively scans for compatible pre-war components. Recovering those components will let you upgrade the Hellion over time.</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_MechanoidRelay"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. It is powering a relay that is part of a huge robot communication network.
+
+      You can disassemble the relay, but the process will take days to complete. The relay itself will be heavily defended by robots.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_MechanoidRelay"]/questContentRules/rulesStrings/li[2]</xpath>
+        <value><li>letterTextMapGenerated->A robot relay is nearby, powered by a reactor core.
+
+The relay is currently protected by nearby stabilizers. Extract the reactor core by first hacking or destroying all the stabilizers.
+
+Be careful, destroying a stabilizer will prompt a defensive response. Hacking is a slower but safer option.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_MechanoidRelay"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Robot relay</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_InsectLair"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source lies in a cave system deep underground. The entrance is marked on the world map.
+
+Subterranean caves can be extremely dangerous and may take days to explore.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_InsectLair"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Cave entrance</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientReactor"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source originates from an ancient decaying reactor. The location is marked on the world map.
+
+Cracks in the reactor's shielding are leaking harmful material, bathing the nearby area in toxic fallout. The reactor itself will be heavily guarded by ancient security systems.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientReactor"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Ancient reactor</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_OrbitalMechanoidPlatform"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source is an orbital robot platform. Scans reveal a heavy defensive presence.
+
+You can travel to orbital platforms using the Hellion, shuttles, or transport pods.
+
+Be careful, orbital locations are extremely dangerous. Equip your colonists with vacsuits. Plan your return trip, as living in orbit for long periods is very difficult.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_OrbitalMechanoidPlatform"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Robot platform</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientStockpile"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source originates from an ancient underground stockpile. The location is marked on the world map.
+
+Underground stockpiles must be hacked to enter. This process can take days to complete.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_AncientStockpile"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Ancient stockpile</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_CrashedMechanoidPlatform"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source is coming from the wreckage of a crashed orbital platform.
+
+Scans reveal a heavy robot presence.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_CrashedMechanoidPlatform"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Crash site</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_OrbitalAncientPlatform"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The source is coming from an abandoned orbital platform.
+
+You can travel to orbital platforms using the Hellion, shuttles, or transport pods.
+
+Be careful, orbital locations are extremely dangerous. Equip your colonists with vacsuits. Plan your return trip, as living in orbit for long periods is very difficult.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_OrbitalAncientPlatform"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Orbital platform</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_FrozenTerraformer"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected the signal of a reactor core. The core is powering a malfunctioning ancient terraformer. Its location is marked on the world map.
+
+The terraformer is cooling the local region to dangerously low temperatures. Be prepared for cold weather and a long stay.
+
+Recover reactor cores and airframe panels to expand your Hellion.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_FrozenTerraformer"]/questAvailableLetterLabel</xpath>
+        <value><questAvailableLetterLabel>Reactor core detected: Frozen terraformer</questAvailableLetterLabel></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="Gravcore_Mechhive"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->You have detected a huge Hellion-systems energy spike originating from a robot command hub in orbit. Its location is marked on the world map.
+
+      This robot command hub is the center of robot coordination on this planet. Shutting it down will disable all murderous robots planet-wide. Alternatively, you may be able to use the command hub for your own purposes.
+
+      The robot command hub is defended with anti-ship weapons. Build an ECM suite before approaching it.
+
+      Be warned, robot command hubs are extremely dangerous. Finish exploring other locations first and ensure you're prepared for a long stay in orbit.</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravshipWreckage"]/questNameRules/rulesStrings/li[1]</xpath>
+        <value><li>questName->Hellion wreckage</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravshipWreckage"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription(askerIsNull==true)->You've intercepted the distress beacon from a crashed Hellion. The wreckage contains valuable pre-war flight hardware. Be careful - it is guarded by hostile robots.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravshipWreckage"]/questDescriptionRules/rulesStrings/li[2]</xpath>
+        <value><li>questDescription(asker_factionLeader==true)->[asker_faction_leaderTitle] [asker_nameFull] of [asker_faction_name] has shared with you the location of a crashed Hellion. [asker_pronoun] heard of your study of reactor-core technology and thought you might be interested in scavenging whatever pre-war flight hardware remains. [asker_nameDef] warns you that the crash site is guarded by hostile robots.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="GravshipWreckage"]/questDescriptionRules/rulesStrings/li[3]</xpath>
+        <value><li>questDescription(asker_royalInCurrentFaction==true)->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name], demands that you destroy a number of bothersome robots that are harassing a nearby settlement. The robots are guarding the wreckage of a Hellion. If you destroy them, [asker_nameDef] will let you keep whatever pre-war flight hardware you're able to scavenge.</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OpportunitySite_Asteroid"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->[discoveryMethod] the location of an asteroid orbiting the planet. It contains significant amounts of [resource], and potentially other resources as well.
+
+Orbital miners steer asteroids into orbit so that they can be mined and the ore sold to orbital traders. You do not detect any signs of life from this asteroid.
+
+You can reach the asteroid with transport pods, shuttles, or the Hellion. Equip your colonists with sufficient orbital apparel before departing.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OpportunitySite_AbandonedPlatform"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->[discoveryMethod] the location of an abandoned orbital platform. You don't detect any signs of life.
+
+You can break in to obtain the loot inside, but the platform probably has defense systems.
+
+You can travel to orbital locations using the Hellion, shuttles, or transport pods.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OpportunitySite_OrbitalWreck"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->[discoveryMethod] the coordinates of a massive piece of wreckage in orbit. It could contain valuable resources. Orbital debris fields are often occupied by hostile scavengers.
+
+You can travel to orbital locations using the Hellion, shuttles, or transport pods.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OpportunitySite_MechanoidPlatform"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->[discoveryMethod] the location of an orbital platform. You detect high levels of robot activity.
+
+You can scavenge valuables from the platform.
+
+You can travel to orbital locations using the Hellion, shuttles, or transport pods.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OpportunitySite_Satellite"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription->[discoveryMethod] the location of an orbital satellite. These satellites are unmanned and often incapable of supporting life. Satellites serve a wide variety of purposes, from power collection to weapons platforms.
+
+You can scavenge valuable technology from the satellites but be warned, satellites are heavily guarded by ancient security systems.
+
+You can travel to orbital locations using the Hellion, shuttles, or transport pods.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="SurveySite"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription(askerIsNull==true)->An anonymous AI has requested your help defending surveying equipment at a remote site.
+
+The surveying operation will take ten to fifteen days and will require traveling to a remote destination.
+
+In exchange for your services, the AI is offering a valuable Hellion component.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="SurveySite"]/questDescriptionRules/rulesStrings/li[2]</xpath>
+        <value><li>questDescription(asker_factionLeader==true)->[asker_faction_leaderTitle] [asker_nameFull] of [asker_faction_name] has heard rumors of your Hellion. [asker_pronoun] wants to survey a distant region and asks that you protect [asker_possessive] surveying equipment.
+
+The surveying operation will take ten to fifteen days and will require traveling to a remote destination.
+
+In exchange for your services, [asker_nameDef] is offering a valuable Hellion component.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="SurveySite"]/questDescriptionRules/rulesStrings/li[3]</xpath>
+        <value><li>questDescription(asker_royalInCurrentFaction==true)->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name], requests that you protect [asker_possessive] surveying operation. If you do so, [asker_pronoun] will reward you handsomely.
+
+The surveying operation will take ten to fifteen days and will require traveling to a remote destination.
+
+In exchange for your services, [asker_nameDef] is offering a valuable Hellion component.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OrbitalFugitive"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+        <value><li>questDescription(askerIsNull==true)->An anonymous AI has requested your help dealing with an outlaw named [fugitive_nameDef]. The AI claims [fugitive_nameDef] is wanted for [reason_AI].
+
+[fugitive_nameDef] has stolen a transport pod and has fled to an abandoned orbital platform.
+
+Having heard rumors of your Hellion, the AI requests that you travel to the abandoned platform and kill [fugitive_nameDef]. In return, it will reward you with a valuable Hellion component.
+
+The AI warns you that [fugitive_nameDef] may be in the company of hostile orbital pirates.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OrbitalFugitive"]/questDescriptionRules/rulesStrings/li[2]</xpath>
+        <value><li>questDescription(asker_factionLeader==true)->[asker_faction_leaderTitle] [asker_nameFull] of [asker_faction_name] has sent us a message. A fugitive named [fugitive_nameDef] escaped from [asker_possessive] custody and used a transport pod to flee to an abandoned orbital platform. [fugitive_nameDef] was in custody for [reason].
+
+Having heard rumors of your Hellion, the [asker_faction_leaderTitle] asks that you travel to the abandoned platform and kill [fugitive_nameDef]. If you do so, [asker_nameDef] will reward you with a valuable Hellion component.
+
+[asker_nameDef] warns you that [fugitive_nameDef] may be in the company of hostile orbital pirates.</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/QuestScriptDef[defName="OrbitalFugitive"]/questDescriptionRules/rulesStrings/li[3]</xpath>
+        <value><li>questDescription(asker_royalInCurrentFaction==true)->[asker_nameFull], a [asker_royalTitleInCurrentFaction] of [asker_faction_name], requests that you track down and kill a dangerous fugitive known as [fugitive_nameDef]. The fugitive is wanted for [reason_royal].
+
+[fugitive_nameDef] is hiding out on an abandoned orbital platform and may be guarded by orbital pirates. If you kill the fugitive, [asker_nameDef] will reward you with a valuable Hellion component.</li></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/label</xpath>
+        <value><label>The Hellion</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/description</xpath>
+        <value><description>Your Hellion sits docked at the orbital relay. As your crew begins salvaging its systems, you realize this is no ordinary pre-war cache - it is a robot beacon. The relay crackles to life and broadcasts a war alert to a distant robot command hub. They are hunting you now, and they will eventually find you wherever you go.
+
+Note: This is a difficult scenario and is not recommended for new players.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/summary</xpath>
+        <value><summary>A crew of three hunted by robots aboard the Hellion.</summary></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+        <value><text>You screwed up, and now the robot command hub wants you dead. Its terrifying killer robots will arrive soon. Gather the valuable airframe panels, then use the Hellion to flee to a safe location on the planet below.
+
+To launch the Hellion, select the cockpit console, then select the launch command.
+
+On the world map, select 'view planet' to choose a landing spot on the planet.
+
+From now on, wherever you go, the robots will eventually find you. To stop them, you must find and defeat the robot command hub itself.</text></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ConceptDef[defName="Gravship"]/label</xpath>
+        <value><label>Hellion</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ConceptDef[defName="Gravship"]/helpText</xpath>
+        <value><helpText>Build the Hellion around your Hellion reactor. When you launch, the aircraft will carry the entire connected structure to a new map.
+
+Launching the Hellion destroys the current map. You can build a mooring mast to prevent this.
+
+To launch, the Hellion needs:
+     - Cockpit console
+     - Fuel tanks
+     - VTOL thrusters
+
+Research 'Hellion airframe' to unlock these.
+
+You can only build a limited amount of deck plating. To increase this limit, find reactor cores and airframe panels.
+
+Hellion deck plating can be removed using the 'remove foundation' designator.
+
+Your Hellion reactor will occasionally detect compatible pre-war hardware around the planet and mark it on your world map.</helpText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ConceptDef[defName="Orbit"]/helpText</xpath>
+        <value><helpText>On the world map, use the 'view planet' and 'view orbit' buttons to switch between planetary and orbital views.
+
+You can travel to orbital locations using transport pods, shuttles, or the Hellion.
+
+Colonists need vacsuits or other advanced armor to survive in the vacuum of space.
+
+If using the Hellion, make sure it is well heated. Build oxygen pumps to maintain breathable air and enclose the aircraft with airtight walls and doors. Avoid using wood or stone for exterior walls and doors.
+
+Plan your return trip before you launch. Living in orbit for a long time is very challenging. Getting stranded in orbit is deadly.</helpText></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/PreceptDef[defName="GravshipLaunch"]/label</xpath>
+        <value><label>Hellion launch</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/PreceptDef[defName="GravshipLaunch"]/description</xpath>
+        <value><description>Travel to a remote destination using the Hellion. Unless you build a mooring mast, your current map and anything not on Hellion deck plating will be permanently lost. You will not be able to return.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/description</xpath>
+        <value><description>Quality factors determine the reactor's cooldown duration and the chance for a mishap when landing.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/extraOutcomeDescriptions/li[1]/description</xpath>
+        <value><description>At the current quality, the Hellion will not be able to launch again for {0_time} after landing.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/extraOutcomeDescriptions/li[2]/description</xpath>
+        <value><description>Additionally, there is a {0_percentage} chance of having a minor incident when landing the Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/comps/li[@Class="RitualOutcomeComp_ParticipantCount"]/label</xpath>
+        <value><label>crew count</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/comps/li[@Class="RitualOutcomeComp_GravshipFacilities"][1]/label</xpath>
+        <value><label>small VTOL thrusters</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/comps/li[@Class="RitualOutcomeComp_GravshipFacilities"][2]/label</xpath>
+        <value><label>heavy VTOL thrusters</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RitualOutcomeEffectDef[defName="GravshipLaunch"]/comps/li[@Class="RitualOutcomeComp_GravshipFacilities"][3]/label</xpath>
+        <value><label>navigation core</label></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/HediffDef[defName="GravNausea"]/label</xpath>
+        <value><label>flight sickness</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/HediffDef[defName="GravNausea"]/description</xpath>
+        <value><description>Intense nausea caused by sudden acceleration or violent deceleration aboard the Hellion.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="MinorGravshipCrash"]/letterLabel</xpath>
+        <value><letterLabel>rough Hellion landing</letterLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="MinorGravshipCrash"]/letterText</xpath>
+        <value><letterText>While landing {GRAVSHIP}, {PILOT_nameDef} disengaged the Hellion reactor too early, causing the aircraft to drop several feet. Some structures aboard the Hellion have sustained light damage from the impact.</letterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="ThrusterBreakdown"]/letterText</xpath>
+        <value><letterText>While landing {GRAVSHIP}, {PILOT_nameDef} overheated the Hellion's VTOL thrusters, frying valuable components. The thrusters will need to be repaired before they can be used again.</letterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="OverheatedGravEngine"]/letterLabel</xpath>
+        <value><letterLabel>overheated Hellion reactor</letterLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="OverheatedGravEngine"]/letterText</xpath>
+        <value><letterText>While landing {GRAVSHIP}, {PILOT_nameDef} overworked the Hellion reactor, causing it to overheat. The reactor will take longer than normal to cool down. In the meantime, the Hellion cannot be launched.</letterText></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="GravNausea"]/letterLabel</xpath>
+        <value><letterLabel>flight sickness</letterLabel></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandingOutcomeDef[defName="GravNausea"]/letterText</xpath>
+        <value><letterText>While landing {GRAVSHIP}, {PILOT_nameDef} was forced into an emergency maneuver, resulting in an intense and prolonged deceleration. The experience has left your colonists badly motion-sick, though the effects will fade quickly.</letterText></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/HistoryEventDef[defName="PawnKidnappedOnGravShip"]/label</xpath>
+        <value><label>member kidnapped aboard Hellion</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/StatDef[defName="GravshipRange"]/label</xpath>
+        <value><label>Hellion range</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/StatDef[defName="GravshipRange"]/description</xpath>
+        <value><description>The maximum distance this Hellion can travel with its connected deck plating.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/StatDef[defName="SubstructureSupport"]/label</xpath>
+        <value><label>deck-plating support</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/StatDef[defName="SubstructureSupport"]/description</xpath>
+        <value><description>The maximum amount of Hellion deck plating supported by this Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="Gravship"]/label</xpath>
+        <value><label>Hellion</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="Gravship"]/description</xpath>
+        <value><description>A Hellion in flight.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="SpaceSettlement"]/description</xpath>
+        <value><description>An orbital platform controlled by another human faction. They won't appreciate visitors.
+
+These platforms have long-range automatic weapon systems capable of destroying incoming ships. They can only safely be approached by the Hellion if it is fitted with an ECM suite.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="AsteroidMiningSite"]/description</xpath>
+        <value><description>A vacstone asteroid that was towed into orbit around the planet as part of a mining operation long ago. This asteroid has only been partially mined.
+
+This location can be reached using transport pods, shuttles, or the Hellion.</description></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[@Name="GeneratedAsteroid"]/description</xpath>
+        <value><description>A vacstone asteroid that was towed into orbit around the planet as part of a mining operation long ago. Most of the valuable resources have been depleted from this asteroid.
+
+This location can be reached using transport pods, shuttles, or the Hellion.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="GravshipLaunch"]/label</xpath>
+        <value><label>Hellion launch</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorldObjectDef[defName="GravshipLaunch"]/description</xpath>
+        <value><description>The launch site of the Hellion.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="GravshipCrew"]/label</xpath>
+        <value><label>Hellion crew</label></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="GravshipCrew"]/description</xpath>
+        <value><description>The crew assigned to the Hellion.</description></value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RulePackDef[defName="NamerGravship"]/rulePack/rulesStrings/li[text()="greekmyth_noun-&gt;odyssey"]</xpath>
+        <value><li>greekmyth_noun->hellion</li></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RulePackDef[defName="NamerGravship"]/rulePack/rulesStrings/li[text()="ship_word-&gt;gravship"]</xpath>
+        <value><li>ship_word->Hellion</li></value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

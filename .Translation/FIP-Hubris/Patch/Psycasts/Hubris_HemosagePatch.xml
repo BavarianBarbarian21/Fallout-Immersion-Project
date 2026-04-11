@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VPE.Hemosage">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEH_Hemosage"]/label</xpath><value><label>blood sage</label></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEH_Hemosage"]/description</xpath><value><description>Blood sage revelations burn hemogen as ritual fuel, turning blood into pain, sacrifice, and predatory miracles.</description></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEH_Hemosage"]/tooltip</xpath><value><tooltip>Blood sages are occultists who feed revelations through blood rites and curse-loaded hemogen. Their rituals leech vitality, seed terror, and leave only nightmares in their wake.</tooltip></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEH_Hemosage"]/lockedReason</xpath><value><lockedReason>Hemogenic occultists only</lockedReason></value></li>
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/VEF.Storyteller.QuestChainDef[defName="VQE_TheGeneratorQuestChain"]/description</xpath>
+    <value>
+      <description>This quest chain will have you explore the scattered work sites where Lee Moldaver tried to assemble a prototype fusion power system capable of restoring whole grids. If you recover enough data, parts, and field notes, you may be able to finish her work and build your own reactor network.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_Genetron_Basic"]/label</xpath>
+    <value>
+      <label>prototype fusion core</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_Genetron_Basic"]/description</xpath>
+    <value>
+      <description>A prototype fusion core capable of generating large amounts of power from a geothermal foundation. It can later be upgraded into more advanced reactor variants once the correct research notes and hardware have been recovered. Must be placed on a steam geyser.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/PawnKindDef[defName="VQE_Inventor"]</xpath>
+    <value>
+      <fixedGender>Female</fixedGender>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/RulePackDef[defName="VQE_InventorMaleNames"]/rulePack/rulesStrings/li[contains(text(),"r_first_name")]</xpath>
+    <value>
+      <li>r_first_name-&gt;Lee</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/RulePackDef[defName="VQE_InventorFemaleNames"]/rulePack/rulesStrings/li[contains(text(),"r_first_name")]</xpath>
+    <value>
+      <li>r_first_name-&gt;Lee</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/RulePackDef[defName="VQE_InventorLastNames"]/rulePack/rulesStrings/li[contains(text(),"r_last_name")]</xpath>
+    <value>
+      <li>r_last_name-&gt;Moldaver</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/BackstoryDef[defName="VQE_InventorGenetronAdulthood"]/title</xpath>
+    <value>
+      <title>restoration engineer</title>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/BackstoryDef[defName="VQE_InventorGenetronAdulthood"]/description</xpath>
+    <value>
+      <description>[PAWN_nameDef] became famous among engineers for designing a prototype fusion system intended to restore entire regional grids. Driven by a relentless need to solve catastrophic power shortages, [PAWN_pronoun] pushed dangerous research farther than anyone else would dare. Early reactor trials were rushed and unstable, and the accidents that followed cost many lives. Those failures never stopped [PAWN_objective]; they hardened [PAWN_possessive] belief that the work had to be finished. After countless revisions, [PAWN_nameDef] produced the prototype that made [PAWN_objective] a hero to some and a reckless visionary to others.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[1]</xpath>
+    <value>
+      <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has informed us of an old research and construction site where Lee Moldaver once worked on a prototype grid-scale reactor. The site appears abandoned, isolated, and surrounded by the ruins of a project that was never finished.
+
+There should still be an operational terminal containing Moldaver&apos;s research notes, engineering logs, and prototype schematics. Exploring the site may yield advanced components, reactor data, and salvage that could help us continue the work. The trip will be long and dangerous, but the potential reward is enormous.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+      <xpath>/Defs/QuestScriptDef[defName="VQE_PrototypeARC"]/questDescriptionRules/rulesStrings/li[2]</xpath>
+    <value>
+      <li>questDescription(askerIsNull==True)-&gt;We have discovered an old research and construction site where Lee Moldaver was working on a prototype grid-scale reactor. The location lies in a remote area surrounded by the ruins of an unfinished project.
+
+An operational terminal may still contain Moldaver&apos;s notes, engineering records, and reactor schematics. Exploring the site could yield rare components, prototype hardware, and the data needed to continue her work. The expedition will be demanding, but the payoff could change the future of our colony&apos;s power supply.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"According to the data extracted on the old prototype site")]
+    </xpath>
+    <value>
+      <li>questDescription-&gt;According to the data extracted from Moldaver&apos;s old prototype site, we have located an abandoned industrial complex where work on her restoration reactor continued. The facility once held engineers, power technicians, and fabrication crews pushing the project toward a grid-ready prototype, but now it stands silent and broken.
+
+The site contains [siteDetails], but it is now [siteThreat].
+
+[studyWarning] [questFailWarning]
+
+Successfully completing this expedition [questOutcome].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"Data from the prototype site revealed the coordinates")]
+    </xpath>
+    <value>
+      <li>questDescription-&gt;Data from the prototype site revealed the coordinates of an abandoned industrial yard where Lee Moldaver and her team expanded the restoration reactor project. Rusted frames, collapsed gantries, and half-finished housings still mark the place where the work stalled.
+
+Within the complex are [siteDetails], but [siteThreat] must be dealt with before any meaningful research can be done.
+
+[studyWarning] [questFailWarning]
+
+Resolving this task [questOutcome].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"Analyzing the prototype's data") or contains(text(),"Analyzing the prototype’s data")]</xpath>
+    <value>
+      <li>questDescription-&gt;Analyzing the prototype data has pinpointed a construction yard that served as the next stage of Moldaver&apos;s reactor network. What was once a major industrial build site is now a graveyard of cranes, housings, and unfinished power infrastructure left to rot in the open.
+
+Inside, you&apos;ll find [siteDetails], but it is [siteThreat].
+
+[studyWarning] [questFailWarning]
+
+Your efforts here [questOutcome].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"The data retrieved from the old prototype")]
+    </xpath>
+    <value>
+      <li>questDescription-&gt;The data retrieved from the old prototype has led us to an industrial complex that once played a key role in advancing Moldaver&apos;s restoration reactor. The place is ruined now, but its machine halls and service yards still contain evidence of how close the project came to completion.
+
+Among the remnants are [siteDetails], though the complex has become [siteThreat].
+
+[studyWarning] [questFailWarning]
+
+Completing this mission [questOutcome].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;ARC"]</xpath>
+    <value>
+      <li>arcName-&gt;restoration reactor</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;generator"]</xpath>
+    <value>
+      <li>arcName-&gt;fusion plant</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;machine"]</xpath>
+    <value>
+      <li>arcName-&gt;reactor assembly</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;core"]</xpath>
+    <value>
+      <li>arcName-&gt;fusion core</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;power source"]</xpath>
+    <value>
+      <li>arcName-&gt;grid reactor</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;device"]</xpath>
+    <value>
+      <li>arcName-&gt;reactor rig</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;artifact"]</xpath>
+    <value>
+      <li>arcName-&gt;power project</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"actual ARC location")]</xpath>
+    <value>
+      <li>questOutcome-&gt;could lead us to Moldaver&apos;s final reactor site.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"true ARC site")]</xpath>
+    <value>
+      <li>questOutcome-&gt;may uncover the true restoration reactor site.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"final ARC project")]</xpath>
+    <value>
+      <li>questOutcome-&gt;might point us to Moldaver&apos;s final project.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"ancient ARC")]</xpath>
+    <value>
+      <li>questOutcome-&gt;should reveal the next steps needed to find the restoration reactor.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AbandonedARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"secrets of the ARC")]</xpath>
+    <value>
+      <li>questOutcome-&gt;will bring us closer to uncovering Moldaver&apos;s reactor secrets.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(text(),"potentially final prototype") and contains(text(),"villagers")]</xpath>
+    <value>
+      <li>questDescription-&gt;You have [discoveryDesc] of a [adj] village where one of Lee Moldaver&apos;s late-stage reactor prototypes was built. The villagers [villagerBehavior], and the site [villageCondition].
+
+[arcDetails] However, [villagerWarnings]. If [trigger], the villagers will [villagerReaction].
+
+[finalWarning]</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questNameRules/rulesStrings/li[text()="arcName(p=4)-&gt;ARC"]</xpath>
+    <value>
+      <li>arcName(p=4)-&gt;fusion core</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[contains(.,"arcName-&gt;ARC")]</xpath>
+    <value>
+      <li>arcName-&gt;fusion core</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questNameRules/rulesStrings/li[text()="arcName-&gt;generator"]</xpath>
+    <value>
+      <li>arcName-&gt;prototype reactor</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_AncientARC"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;core"]</xpath>
+    <value>
+      <li>arcName-&gt;reactor core</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_InventorShelter"]/questDescriptionRules/rulesStrings/li[contains(text(),"rests in cryptosleep") and contains(text(),"primary task")]</xpath>
+    <value>
+      <li>questDescription-&gt;[dataDiscovery] revealed the location of a [adj] underground [structureType] where Lee Moldaver rests in cryptosleep. The journey will be grueling, as the site is afflicted by a[coldSnapDesc], pushing the entire region into lethal temperatures.
+
+Inside the bunker, a few [turretDefense] still guard the interior, powered by an ancient [arcName]. The reactor cannot be studied here but can be broken down for [arcComponents]. Your primary task is to reach the casket and release Moldaver. Prepare carefully for the extreme cold or risk severe [hypothermiaDanger].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_InventorShelter"]/questDescriptionRules/rulesStrings/li[contains(text(),"legendary mind behind the ARC project")]</xpath>
+    <value>
+      <li>questDescription-&gt;Recovered data points us to a [adj] bunker buried beneath a region suffering from a[coldSnapDesc]. It is here that Lee Moldaver, the engineer behind the restoration reactor project, lies sealed in cryptosleep.
+
+The area&apos;s temperatures are falling to dangerous lows, creating an immediate risk of [hypothermiaDanger] during your approach. Inside, [turretDefense] remain active, powered by an overgrown [arcName]. The reactor can be deconstructed for [arcComponents], but the real prize is freeing Moldaver and bringing her back to your colony.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_InventorShelter"]/questDescriptionRules/rulesStrings/li[contains(text(),"preserved in a cryptosleep casket")]</xpath>
+    <value>
+      <li>questDescription-&gt;We&apos;ve identified the location of a [adj] [structureType] where Lee Moldaver has been preserved in a cryptosleep casket. The area surrounding the site is cursed with a[coldSnapDesc], dropping temperatures to deadly extremes.
+
+The bunker itself houses a few [turretDefense], powered by an overgrown [arcName]. While the reactor cannot be studied, it can be salvaged for [arcComponents]. Be ready for freezing conditions and hypothermia as you attempt to retrieve Moldaver alive.</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_InventorShelter"]/questDescriptionRules/rulesStrings/li[text()="arcName-&gt;ARC generator"]</xpath>
+    <value>
+      <li>arcName-&gt;prototype fusion core</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"abandoned ARC generator site") and contains(text(),"recover valuable ARC components")]</xpath>
+    <value>
+      <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has occupied one of Lee Moldaver&apos;s abandoned reactor sites. The camp is under the control of [siteFaction_name].
+
+[asker_nameDef] wants us to clear the area by eliminating all enemies and defenses. Once the site is secured, we will be able to study the reactor hardware and recover valuable fusion components. [asker_label] also says that [sitePart0_description].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"old ARC generator site") and contains(text(),"salvageable ARC components")]</xpath>
+    <value>
+      <li>questDescription(askerIsNull==true)-&gt;We have received information that one of Moldaver&apos;s old reactor sites has been taken over by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the location as a hideout.
+
+Securing the site will let us examine the reactor for remaining research data and salvageable fusion components. Be prepared for resistance, as the site is likely heavily guarded. Additionally, [sitePart0_description].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questNameRules/rulesStrings/li[text()="arcName-&gt;ARC generator site"]</xpath>
+    <value>
+      <li>arcName-&gt;reactor site</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questNameRules/rulesStrings/li[text()="arcName-&gt;ARC ruins"]</xpath>
+    <value>
+      <li>arcName-&gt;reactor ruins</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"ARC generator is visibly damaged")]
+    </xpath>
+    <value>
+      <li>sitePart0_description-&gt;the reactor frame is visibly damaged but still holds valuable salvage</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_ArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"using the generator to power")]
+    </xpath>
+    <value>
+      <li>sitePart0_description-&gt;the bandits are using the remaining reactor equipment to power their crude operations</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"abandoned nuclear ARC husk site") and contains(text(),"recover valuable ARC components")]</xpath>
+    <value>
+      <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has taken control of an abandoned nuclear reactor test site. The camp is currently under the control of [siteFaction_name].
+
+[asker_nameDef] is requesting that we clear out the area by eliminating all enemies and defenses. Once the site is secured, we will have the opportunity to study the damaged reactor and recover valuable fusion components. [asker_label] also mentions that [sitePart0_description]. [sitePart1_description]</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"abandoned nuclear ARC husk site has been overtaken")]
+    </xpath>
+    <value>
+      <li>questDescription(askerIsNull==true)-&gt;We have received intelligence that an abandoned nuclear reactor test site has been overtaken by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the location as a hideout.
+
+Securing the site will allow us to examine the damaged reactor for any remaining research data and salvageable fusion components. Be prepared for resistance, as the bandits have likely set up significant defenses. Additionally, [sitePart0_description]. [sitePart1_description]</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questNameRules/rulesStrings/li[text()="nuclearArcName-&gt;Nuclear ARC Site"]</xpath>
+    <value>
+      <li>nuclearArcName-&gt;nuclear reactor site</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questNameRules/rulesStrings/li[text()="nuclearArcName-&gt;ARC Husk"]</xpath>
+    <value>
+      <li>nuclearArcName-&gt;reactor husk</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questNameRules/rulesStrings/li[text()="nuclearArcName-&gt;ARC Ruins"]</xpath>
+    <value>
+      <li>nuclearArcName-&gt;reactor ruins</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"using the ARC husk to power their crude machinery and weapons")]
+    </xpath>
+    <value>
+      <li>sitePart0_description-&gt;the bandits are using the reactor husk to power their crude machinery and weapons</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"ARC husk's old reactor") or contains(text(),"ARC husk’s old reactor")]
+    </xpath>
+    <value>
+      <li>sitePart1_description-&gt;Toxic fallout from the site's damaged reactor has poisoned the area, presenting a significant environmental danger</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_NuclearArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"ARC's unstable nuclear past") or contains(text(),"ARC’s unstable nuclear past")]
+    </xpath>
+    <value>
+      <li>sitePart1_description-&gt;Hazardous fallout clouds the area, a grim reminder of how unstable the test reactor became</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"abandoned geothermal ARC site") and contains(text(),"recover valuable components")]
+    </xpath>
+    <value>
+      <li>questDescription(asker_factionLeader==True)-&gt;[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. A group of [siteFaction_pawnsPlural] has taken control of an abandoned geothermal reactor site. The camp is under the control of [siteFaction_name].
+
+[asker_nameDef] is requesting that we clear out the area by eliminating all enemies and defenses. Securing the site will allow us to study the geothermal reactor and recover valuable components for future use. Additionally, [sitePart0_description].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"old geothermal ARC site") and contains(text(),"extract useful components")]
+    </xpath>
+    <value>
+      <li>questDescription(askerIsNull==true)-&gt;We have received information that an old geothermal reactor site has been occupied by [siteFaction_pawnsPlural] from [siteFaction_name]. The bandits have fortified their position and are using the site to control the surrounding area.
+
+Securing the site will give us access to study the geothermal reactor and extract useful components. The site is likely well-defended, so prepare for resistance. Additionally, [sitePart0_description].</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questNameRules/rulesStrings/li[text()="arcType-&gt;geothermal ARC"]</xpath>
+    <value>
+      <li>arcType-&gt;geothermal reactor</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questNameRules/rulesStrings/li[text()="arcType-&gt;ARC generator"]</xpath>
+    <value>
+      <li>arcType-&gt;reactor array</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questNameRules/rulesStrings/li[text()="arcType-&gt;ARC station"]</xpath>
+    <value>
+      <li>arcType-&gt;reactor station</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"the geothermal ARC appears heavily worn")]
+    </xpath>
+    <value>
+      <li>sitePart0_description-&gt;the geothermal reactor appears heavily worn but intact enough to salvage parts</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/QuestScriptDef[defName="VQE_GeothermalArcSite"]/questDescriptionRules/rulesStrings/li[contains(text(),"utilizing the ARC to power their operations")]
+    </xpath>
+    <value>
+      <li>sitePart0_description-&gt;the bandits seem to be utilizing the reactor equipment to power their operations</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_GenetronJunk"]/label</xpath>
+    <value>
+      <label>reactor junk</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_GenetronJunk"]/description</xpath>
+    <value>
+      <description>A twisted chunk of reactor housing from one of Moldaver's abandoned projects. The valuable parts are gone, and everything else has degraded into scrap.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_AncientARCPart"]/label</xpath>
+    <value>
+      <label>ancient reactor part</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_AncientARCPart"]/description</xpath>
+    <value>
+      <description>An old, rusted fragment of a prototype reactor. It was likely abandoned when Moldaver's construction program was halted. It may still be possible to disassemble it and recover valuable fusion components.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="vanillaquestsexpanded.generator">
+    <xpath>/Defs/ThingDef[defName="VQE_AncientARCPrototype_Two"]/modExtensions/li[@Class="VanillaQuestsExpandedTheGenerator.ExtraGenetronParameters"]/descriptionOverride</xpath>
+    <value>
+      <descriptionOverride>Study the unfinished prototype fusion core. The information it holds can help you locate Moldaver's operational reactor.</descriptionOverride>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Small Hot Spring flavor pass -->
+	<Operation Class="PatchOperationSequence" MayRequire="zal.smallhotspring">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/JobDef[defName="BathSmallHotSpring"]/reportString</xpath>
+				<value>
+					<reportString>soaking in the spring.</reportString>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="IntheSmallHotSpring"]/label</xpath>
+				<value>
+					<label>spring restoration</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="IntheSmallHotSpring"]/description</xpath>
+				<value>
+					<description>The mineral waters of this spring help the body mend wounds and recover more quickly while the bather remains submerged.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="BathedInSmallHotSpring"]/label</xpath>
+				<value>
+					<label>residual restoration</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="SmallHotSpring"]/label</xpath>
+				<value>
+					<label>resort hot spring</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="SmallHotSpring"]/description</xpath>
+				<value>
+					<description>A carefully worked hot spring built over a steam geyser. Its mineral waters offer meditative relaxation, modest recovery benefits, and a premium bathhouse amenity for up to four pawns at once.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

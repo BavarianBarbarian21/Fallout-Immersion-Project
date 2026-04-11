@@ -1,0 +1,2560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BiomeDef Name="Arktos_Nature" Abstract="True">
+    <animalDensity>0</animalDensity>
+    <plantDensity>0</plantDensity>
+    <settlementSelectionWeight>0.5</settlementSelectionWeight>
+    <campSelectionWeight>0.1</campSelectionWeight>
+    <movementDifficulty>1</movementDifficulty>
+    <lakeBeachTerrain>Sand</lakeBeachTerrain>
+    <riverbankTerrain>Riverbank</riverbankTerrain>
+    <riverbankSizeRange>6~8</riverbankSizeRange>
+    <forageability>0</forageability>
+    <wildPlantRegrowDays>60</wildPlantRegrowDays>
+    <baseWeatherCommonalities>
+      <Clear>12</Clear>
+      <Fog>1</Fog>
+      <Rain>1</Rain>
+      <SnowGentle>1</SnowGentle>
+    </baseWeatherCommonalities>
+    <soundsAmbient>
+      <li>Ambient_NightInsects_Standard</li>
+    </soundsAmbient>
+    <allowedPackAnimals>
+      <li>Horse</li>
+    </allowedPackAnimals>
+    <terrainsByFertility>
+      <li>
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.9</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.9</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef Name="Arktos_Urban" ParentName="Arktos_Nature" Abstract="True">
+    <canAutoChoose>false</canAutoChoose>
+    <generatesNaturally>false</generatesNaturally>
+    <allowRoads>true</allowRoads>
+    <allowPollution>true</allowPollution>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_SeaIce</defName>
+    <label>sea ice</label>
+    <description>Broken white sheets drift over the northern sea, creaking under the wind and cold. Nothing grows here, little hunts here, and anyone caught out on the ice is far from help.</description>
+    <workerClass>BiomeWorker_SeaIce</workerClass>
+    <isWaterBiome>true</isWaterBiome>
+    <canBuildBase>false</canBuildBase>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
+    <hasVirtualPlants>false</hasVirtualPlants>
+    <texture>World/Biomes/IceSheetOcean</texture>
+    <impassable>true</impassable>
+    <isBackgroundBiome>true</isBackgroundBiome>
+    <animalDensity>0.1</animalDensity>
+    <plantDensity>0</plantDensity>
+    <movementDifficulty>1.5</movementDifficulty>
+    <isExtremeBiome>true</isExtremeBiome>
+    <lakeBeachTerrain>Ice</lakeBeachTerrain>
+    <mudTerrain>Ice</mudTerrain>
+    <coastalBeachTerrain>Ice</coastalBeachTerrain>
+    <maxFishPopulation>620</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <soundsAmbient>
+      <li>Ambient_Wind_Desolate</li>
+    </soundsAmbient>
+    <diseaseMtbDays>90</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalFlu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalPlague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_OrganDecay</diseaseInc>
+        <commonality>10</commonality>
+      </li>
+    </diseases>
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.015</perlinFrequency>
+        <isPond>true</isPond>
+        <thresholds>
+          <li>
+            <terrain>WaterShallow</terrain>
+            <min>0.76</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_IceSheet</defName>
+    <label>ice sheet</label>
+    <description>Ancient ice lies over the land in hard blue-white plates. There is no soil, almost no life, and only the desperate or the doomed try to make a home here.</description>
+    <workerClass>BiomeWorker_IceSheet</workerClass>
+    <texture>World/Biomes/IceSheet</texture>
+    <animalDensity>0.2</animalDensity>
+    <plantDensity>0</plantDensity>
+    <movementDifficulty>1.5</movementDifficulty>
+    <isExtremeBiome>true</isExtremeBiome>
+    <lakeBeachTerrain>Ice</lakeBeachTerrain>
+    <mudTerrain>Ice</mudTerrain>
+    <maxFishPopulation>560</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <soundsAmbient>
+      <li>Ambient_Wind_Desolate</li>
+    </soundsAmbient>
+    <diseaseMtbDays>90</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalFlu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalPlague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_OrganDecay</diseaseInc>
+        <commonality>10</commonality>
+      </li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain>Ice</terrain>
+        <min>-999</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_GlacialPlain</defName>
+    <label>glacial plain</label>
+    <description>These frozen flats thaw only a little before winter takes them again. Sparse brush and wandering herds can survive here, but the cold rules everything.</description>
+    <workerClass>BiomeWorker_GlacialPlain</workerClass>
+    <texture>Arktos/Biomes/Arktos_GlacialPlains</texture>
+    <animalDensity>1.2</animalDensity>
+    <plantDensity>0.4</plantDensity>
+    <forageability>0.4</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>32</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>3.6</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">3.0</Plant_GrayGrass>
+      <Plant_Moss>0.50</Plant_Moss>
+      <Plant_ShrubLow>0.20</Plant_ShrubLow>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Fireweed>
+    </wildPlants>
+    <maxFishPopulation>480</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>82</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalFlu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalPlague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_OrganDecay</diseaseInc>
+        <commonality>10</commonality>
+      </li>
+    </diseases>
+    <wildAnimals>
+      <Fox_Arctic>0.40</Fox_Arctic>
+      <Lynx>0.14</Lynx>
+      <Rat>0.50</Rat>
+      <Squirrel>0.45</Squirrel>
+      <Wolf_Timber>0.10</Wolf_Timber>
+      <Muskox MayRequire="Ludeon.RimWorld.Odyssey">0.25</Muskox>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.35</Sparrow>
+      <Wolverine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Wolverine>
+      <Raccoon>0.15</Raccoon>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <Walrus MayRequire="Ludeon.RimWorld.Odyssey">0.12</Walrus>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.16</Seal>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.30</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+    <lakeBeachTerrain>Ice</lakeBeachTerrain>
+    <mudTerrain>Ice</mudTerrain>
+    <coastalBeachTerrain>Ice</coastalBeachTerrain>
+    <terrainsByFertility>
+      <li>
+        <terrain>Soil</terrain>
+        <min>-999</min>
+        <max>0.9</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.9</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Tundra</defName>
+    <label>tundra</label>
+    <description>Open plains of frost-hardened soil stretch beneath long gray skies. There are a few shrubs, a few animals, and just enough life to tempt settlers into staying.</description>
+    <workerClass>BiomeWorker_Tundra</workerClass>
+    <texture>World/Biomes/Tundra</texture>
+    <animalDensity>1.3</animalDensity>
+    <plantDensity>0.19</plantDensity>
+    <forageability>0.45</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>30</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>3.6</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">3.0</Plant_GrayGrass>
+      <Plant_Dandelion>0.14</Plant_Dandelion>
+      <Plant_Astragalus>0.16</Plant_Astragalus>
+      <Plant_Moss>0.50</Plant_Moss>
+      <Plant_ShrubLow>0.18</Plant_ShrubLow>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_TreeWillow>0.01</Plant_TreeWillow>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Fireweed>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Xander_Root>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Carrot_Flower>
+    </wildPlants>
+    <maxFishPopulation>540</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>80</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalFlu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalPlague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_OrganDecay</diseaseInc>
+        <commonality>10</commonality>
+      </li>
+    </diseases>
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.015</perlinFrequency>
+        <isPond>true</isPond>
+        <thresholds>
+          <li>
+            <terrain>MossyTerrain</terrain>
+            <min>0.64</min>
+            <max>0.83</max>
+          </li>
+          <li>
+            <terrain>Marsh</terrain>
+            <min>0.83</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+    <wildAnimals>
+      <Fox_Arctic>0.45</Fox_Arctic>
+      <Lynx>0.16</Lynx>
+      <Rat>0.45</Rat>
+      <Squirrel>0.40</Squirrel>
+      <Wolf_Timber>0.12</Wolf_Timber>
+      <Muskox MayRequire="Ludeon.RimWorld.Odyssey">0.22</Muskox>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.10</Bluebird>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.30</Sparrow>
+      <Wolverine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Wolverine>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <Walrus MayRequire="Ludeon.RimWorld.Odyssey">0.10</Walrus>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.14</Seal>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.25</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+    <lakeBeachTerrain>Gravel</lakeBeachTerrain>
+    <mudTerrain>Gravel</mudTerrain>
+    <riverbankTerrain>Gravel</riverbankTerrain>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Preserve</defName>
+    <label>preserve</label>
+    <description>Cold evergreen forest and marshy lowland meet in these protected backwoods. The air is clean, the game is wary, and old-world quiet still survives between the trees.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Preserve</workerClass>
+    <texture>Arktos/Biomes/Arktos_Preserve</texture>
+    <animalDensity>2.2</animalDensity>
+    <plantDensity>0.4</plantDensity>
+    <forageability>0.7</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>27</wildPlantRegrowDays>
+    <lakeBeachTerrain>Marsh</lakeBeachTerrain>
+    <mudTerrain>Marsh</mudTerrain>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Bush>0.32</Plant_Bush>
+      <Plant_Brambles>0.25</Plant_Brambles>
+      <Plant_Berry>0.16</Plant_Berry>
+      <Plant_Dandelion>0.12</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.22</Plant_Moss>
+      <Plant_HealrootWild>0.03</Plant_HealrootWild>
+      <Plant_TreePine>0.22</Plant_TreePine>
+      <Plant_TreeBirch>0.14</Plant_TreeBirch>
+      <Plant_TreeWillow>0.03</Plant_TreeWillow>
+      <Plant_TreeCypress>0.04</Plant_TreeCypress>
+      <Plant_TreeMaple>0.09</Plant_TreeMaple>
+      <Plant_TreeBamboo>0.02</Plant_TreeBamboo>
+      <Plant_TreeDrago>0.01</Plant_TreeDrago>
+      <Plant_Rose>0.015</Plant_Rose>
+      <Plant_Daylily>0.015</Plant_Daylily>
+      <Glowstool>0.01</Glowstool>
+      <Agarilux>0.01</Agarilux>
+      <Bryolux>0.01</Bryolux>
+      <Plant_Timbershroom>0.01</Plant_Timbershroom>
+      <Plant_GrassAnima MayRequire="Ludeon.RimWorld.Royalty">0.03</Plant_GrassAnima>
+      <Plant_TreeAnima MayRequire="Ludeon.RimWorld.Royalty">0.004</Plant_TreeAnima>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.01</Plant_TreeBonsai>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.004</Plant_TreeGauranlen>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.02</Plant_MossGauranlen>
+      <Plant_PodGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_PodGauranlen>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.015</FCP_Plant_Tarberry>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_BearBerryBush>
+    </wildPlants>
+    <maxFishPopulation>470</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>60</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Cat>0.20</Cat>
+      <Cougar>0.12</Cougar>
+      <Duck>0.28</Duck>
+      <Goose>0.22</Goose>
+      <Lynx>0.14</Lynx>
+      <Raccoon>0.32</Raccoon>
+      <Rat>0.35</Rat>
+      <Fox_Red>0.24</Fox_Red>
+      <Squirrel>0.45</Squirrel>
+      <Wolf_Timber>0.10</Wolf_Timber>
+      <Turkey>0.22</Turkey>
+      <Badger MayRequire="Ludeon.RimWorld.Odyssey">0.18</Badger>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.18</Bluebird>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.18</Bullfrog>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.16</Heron>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.12</Mink>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.16</Otter>
+      <Porcupine MayRequire="Ludeon.RimWorld.Odyssey">0.16</Porcupine>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.18</Quail>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.26</Sparrow>
+      <Swan MayRequire="Ludeon.RimWorld.Odyssey">0.08</Swan>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.04</Vulture>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</Beaver>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.16</AEXP_Coyote>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.12</VAERoy_Pheasant>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Yao_Guai>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Radstag>
+      <FCP_Animal_Minutemen_Guard_Dog MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Minutemen_Guard_Dog>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.14</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.16</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.12</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.30</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Ceek</defName>
+    <label>creek</label>
+    <description>These cold creek bottoms cut through the preserve with soft ground, brush, and black water. They are rich compared to the uplands, but travel is slow and the wet gets everywhere.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Ceek</workerClass>
+    <texture>Arktos/Biomes/Arktos_Ceek</texture>
+    <animalDensity>2.4</animalDensity>
+    <plantDensity>0.6</plantDensity>
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>22</wildPlantRegrowDays>
+    <lakeBeachTerrain>Marsh</lakeBeachTerrain>
+    <mudTerrain>Marsh</mudTerrain>
+    <wildPlants>
+      <Plant_TallGrass>3.2</Plant_TallGrass>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
+      <Plant_Berry>0.18</Plant_Berry>
+      <Plant_Bush>0.30</Plant_Bush>
+      <Plant_Brambles>0.24</Plant_Brambles>
+      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_TreeWillow>0.10</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreeMaple>0.06</Plant_TreeMaple>
+      <Plant_TreeBamboo>0.04</Plant_TreeBamboo>
+      <Glowstool>0.02</Glowstool>
+      <Agarilux>0.02</Agarilux>
+      <Bryolux>0.02</Bryolux>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.18</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.05</Plant_Lotus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot_Flower>
+    </wildPlants>
+    <maxFishPopulation>620</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>45</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Duck>0.30</Duck>
+      <Goose>0.22</Goose>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.22</Heron>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.20</Otter>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.24</Bullfrog>
+      <Swan MayRequire="Ludeon.RimWorld.Odyssey">0.10</Swan>
+      <Rat>0.28</Rat>
+      <Raccoon>0.24</Raccoon>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.14</Mink>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.16</Bluebird>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.24</Sparrow>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.14</Quail>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.10</VAERoy_Pheasant>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.22</Beaver>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.10</AEXP_Coyote>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.22</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+      <FCP_Animal_Riverlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Riverlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Lakelurk>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Rabbit>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.10</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.14</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.10</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_CentralValley</defName>
+    <label>central valley</label>
+    <description>Wide interior flats once fed cities from Sacramento to Bakersfield. Now the valley is still fertile by wasteland standards, but dust, heat, and ruin press in from every side.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_CentralValley</workerClass>
+    <texture>Arktos/Biomes/Arktos_CentralValley</texture>
+    <animalDensity>1.4</animalDensity>
+    <plantDensity>1.0</plantDensity>
+    <forageability>0.9</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>15</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>7.0</Plant_Grass>
+      <Plant_TallGrass>5.0</Plant_TallGrass>
+      <Plant_Bush>0.20</Plant_Bush>
+      <Plant_Brambles>0.15</Plant_Brambles>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Astragalus>0.08</Plant_Astragalus>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_TreeOak>0.015</Plant_TreeOak>
+      <Plant_TreePoplar>0.005</Plant_TreePoplar>
+    </wildPlants>
+    <maxFishPopulation>520</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Malaria</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain MayRequire="Ludeon.RimWorld.Odyssey">GrasslandSoil</terrain>
+        <min>-999</min>
+        <max>0.78</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.78</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <wildAnimals>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.16</AEXP_Coyote>
+      <AEXP_Rattlesnake MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.14</AEXP_Rattlesnake>
+      <AEXP_WildGoose MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</AEXP_WildGoose>
+      <VAERoy_Crane MayRequire="VanillaExpanded.VAERoy">0.12</VAERoy_Crane>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.12</VAERoy_Pheasant>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.16</Quail>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.18</Sparrow>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <FCP_Animal_Rad_Chicken MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Chicken>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Radstag>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Bighorner>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Molerat>
+      <FCP_Animal_Vicious_Guard_Dog MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Vicious_Guard_Dog>
+      <FCP_Animal_Minutemen_Guard_Dog MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Minutemen_Guard_Dog>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Thrasher>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.26</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_BrahminWoods</defName>
+    <label>brahmin woods</label>
+    <description>Oak and pine woodland covers the rolling middle country between valley and mountain. It is gentler than the wastes below, though raiders, predators, and hungry brahmin still leave their mark.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_BrahminWoods</workerClass>
+    <texture>Arktos/Biomes/Arktos_BrahminWoods</texture>
+    <animalDensity>1.7</animalDensity>
+    <plantDensity>0.65</plantDensity>
+    <forageability>0.8</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>18</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Bush>0.25</Plant_Bush>
+      <Plant_Brambles>0.20</Plant_Brambles>
+      <Plant_Berry>0.12</Plant_Berry>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.15</Plant_Moss>
+      <Plant_TreeOak>0.14</Plant_TreeOak>
+      <Plant_TreePine>0.16</Plant_TreePine>
+      <Plant_TreeBirch>0.10</Plant_TreeBirch>
+      <Plant_TreeMaple>0.08</Plant_TreeMaple>
+      <Plant_TreePoplar>0.04</Plant_TreePoplar>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Mutated_Fern>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.04</VCE_BearBerryBush>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Tulip>
+      <VCE_FragrantbloomRose MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_FragrantbloomRose>
+    </wildPlants>
+    <maxFishPopulation>500</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Malaria</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Cougar>0.10</Cougar>
+      <Fox_Red>0.18</Fox_Red>
+      <Turkey>0.16</Turkey>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.18</Quail>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.12</VAERoy_Pheasant>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.16</AEXP_Coyote>
+      <AEXP_Rattlesnake MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.10</AEXP_Rattlesnake>
+      <AEXP_WildGoose MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.12</AEXP_WildGoose>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Radstag>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Bighorner>
+      <FCP_Animal_Minutemen_Guard_Dog MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Minutemen_Guard_Dog>
+      <FCP_Animal_Vicious_Guard_Dog MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Vicious_Guard_Dog>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.05</FCP_Animal_Yao_Guai>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.24</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Aqueduct</defName>
+    <label>aqueduct</label>
+    <description>Concrete channels and cracked embankments still drag water across the heartland. Where the old system holds, the land is greener, richer, and fought over all the harder.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Aqueduct</workerClass>
+    <texture>Arktos/Biomes/Arktos_Aqueduct</texture>
+    <animalDensity>1.8</animalDensity>
+    <plantDensity>0.8</plantDensity>
+    <forageability>0.85</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>17</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>3.0</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.12</Plant_Brambles>
+      <Plant_Berry>0.08</Plant_Berry>
+      <Plant_TreeWillow>0.05</Plant_TreeWillow>
+      <Plant_TreePoplar>0.05</Plant_TreePoplar>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Lotus>
+    </wildPlants>
+    <maxFishPopulation>540</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Malaria</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain MayRequire="Ludeon.RimWorld.Odyssey">GrasslandSoil</terrain>
+        <min>-999</min>
+        <max>0.85</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.85</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <wildAnimals>
+      <Duck>0.24</Duck>
+      <Goose>0.18</Goose>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.20</Heron>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</Beaver>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.16</Bullfrog>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.16</Otter>
+      <Rat>0.24</Rat>
+      <Raccoon>0.18</Raccoon>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.16</Sparrow>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.10</VAERoy_Pheasant>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.12</AEXP_Coyote>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+      <FCP_Animal_Riverlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Riverlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Lakelurk>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Molerat>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Radstag>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.10</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.12</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.08</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Floodplains</defName>
+    <label>floodplains</label>
+    <description>Broad rivers spill out over flat country, leaving behind mud, reeds, and good soil. These bottoms can be abundant in the right season and miserable in the wrong one.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Floodplains</workerClass>
+    <texture>Arktos/Biomes/Arktos_Floodplains</texture>
+    <animalDensity>2.0</animalDensity>
+    <plantDensity>0.8</plantDensity>
+    <forageability>0.8</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>18</wildPlantRegrowDays>
+    <lakeBeachTerrain>Marsh</lakeBeachTerrain>
+    <mudTerrain>Marsh</mudTerrain>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>3.2</Plant_TallGrass>
+      <Plant_Bush>0.22</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.10</Plant_Berry>
+      <Plant_Moss>0.22</Plant_Moss>
+      <Plant_TreeWillow>0.10</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreePoplar>0.08</Plant_TreePoplar>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.22</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.14</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Lotus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Tarberry>
+    </wildPlants>
+    <maxFishPopulation>560</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Malaria</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain MayRequire="Ludeon.RimWorld.Odyssey">GrasslandSoil</terrain>
+        <min>-999</min>
+        <max>0.83</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.83</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <wildAnimals>
+      <Duck>0.26</Duck>
+      <Goose>0.20</Goose>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.22</Heron>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.18</Bullfrog>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.18</Otter>
+      <Swan MayRequire="Ludeon.RimWorld.Odyssey">0.10</Swan>
+      <Rat>0.22</Rat>
+      <Raccoon>0.18</Raccoon>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.12</Mink>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.16</Sparrow>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.12</Quail>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.10</VAERoy_Pheasant>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.20</Beaver>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.08</AEXP_Coyote>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+      <FCP_Animal_Riverlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Riverlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Lakelurk>
+      <FCP_Animal_Rad_Chicken MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Rad_Chicken>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.10</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.12</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.10</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Mojave</defName>
+    <label>mojave</label>
+    <description>The open desert bakes under a white sun and cools fast after dark. Scrub, stone, and long empty distances define this country, along with the bones of highways that once crossed it.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Mojave</workerClass>
+    <texture>Arktos/Biomes/Arktos_Mojave</texture>
+    <animalDensity>0.8</animalDensity>
+    <plantDensity>0.24</plantDensity>
+    <forageability>0.45</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>29</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>3.5</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.5</Plant_GrayGrass>
+      <Plant_Agave>0.35</Plant_Agave>
+      <Plant_PincushionCactus>0.25</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.10</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.06</Plant_TreeDrago>
+      <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_PebbleCactus>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">4.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">2.5</Plant_YellowTallGrass>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.40</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.30</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.26</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Xander_Root>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.16</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.10</VCE_Opuntia>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.06</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.08</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_PincushionPlant>
+    </wildPlants>
+    <maxFishPopulation>430</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>65</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.48</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.48</min>
+        <max>0.93</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.93</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <wildAnimals>
+      <AEXP_DesertTortoise MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.22</AEXP_DesertTortoise>
+      <AEXP_Rattlesnake MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</AEXP_Rattlesnake>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.16</AEXP_Coyote>
+      <Cougar>0.06</Cougar>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.14</Quail>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.16</Vulture>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Thrasher>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Molerat>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.18</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.18</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Nightstalker>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.05</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Bighorner>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaLion>
+      <SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaTurtle>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.24</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Canyon</defName>
+    <label>canyon</label>
+    <description>Where water cuts into the desert, steep walls, dry shelves, and stubborn life gather around the channel. These canyons offer shade and ambush in equal measure.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Canyon</workerClass>
+    <texture>Arktos/Biomes/Arktos_Canyon</texture>
+    <animalDensity>1.1</animalDensity>
+    <plantDensity>0.24</plantDensity>
+    <forageability>0.4</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>30</wildPlantRegrowDays>
+    <lakeBeachTerrain>Gravel</lakeBeachTerrain>
+    <mudTerrain>Gravel</mudTerrain>
+    <riverbankTerrain>Gravel</riverbankTerrain>
+    <wildPlants>
+      <Plant_Grass>3.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_Agave>0.22</Plant_Agave>
+      <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.04</Plant_TreeDrago>
+      <Plant_TreeWillow>0.03</Plant_TreeWillow>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_Lotus>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.8</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">2.2</Plant_YellowTallGrass>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.28</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.12</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_Opuntia>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+    </wildPlants>
+    <maxFishPopulation>430</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>65</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain>Gravel</terrain>
+        <min>-999</min>
+        <max>0.48</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.48</min>
+        <max>0.93</max>
+      </li>
+      <li>
+        <terrain>SoilRich</terrain>
+        <min>0.93</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <wildAnimals>
+      <AEXP_DesertTortoise MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</AEXP_DesertTortoise>
+      <AEXP_Rattlesnake MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.16</AEXP_Rattlesnake>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.14</AEXP_Coyote>
+      <Cougar>0.06</Cougar>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.14</Quail>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.14</Vulture>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.08</Bullfrog>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.08</Heron>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.18</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+      <FCP_Animal_Riverlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Riverlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Lakelurk>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Nightstalker>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Molerat>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Bighorner>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Thrasher>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaLion>
+      <SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaTurtle>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.24</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Marina</defName>
+    <label>marina</label>
+    <description>Along the coast, salt wind blows through rotting piers, stranded hulls, and drowned suburbs. The sea softens the temperature here, but not the dangers that washed in with the old world.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Marina</workerClass>
+    <texture>Arktos/Biomes/Arktos_Marina</texture>
+    <animalDensity>2.2</animalDensity>
+    <plantDensity>0.65</plantDensity>
+    <forageability>0.9</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>22</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.5</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.12</Plant_Brambles>
+      <Plant_Berry>0.08</Plant_Berry>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Reeds>
+      <VCE_Plumeria MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Plumeria>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Tulip>
+      <VCE_Violet MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Violet>
+      <VCE_YlangYlang MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_YlangYlang>
+      <VCE_CoconutPalm MayRequire="VanillaExpanded.VPlantsEMore">0.02</VCE_CoconutPalm>
+      <VCE_Plant_Echeveria MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_Echeveria>
+      <VCE_Plant_FairyWashboard MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_FairyWashboard>
+      <VCE_Plant_JadePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_JadePlant>
+      <VCE_Plant_Schlumbergera MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_Schlumbergera>
+      <VCE_Plant_SnakePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_SnakePlant>
+      <VCE_Plant_SweetheartPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_SweetheartPlant>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_AloeVera>
+    </wildPlants>
+    <maxFishPopulation>500</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>50</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Malaria</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Cat>0.18</Cat>
+      <Raccoon>0.24</Raccoon>
+      <Rat>0.28</Rat>
+      <Goose>0.14</Goose>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.22</Heron>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.18</Otter>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.20</Sparrow>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.10</AEXP_Coyote>
+      <AEXP_WildGoose MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.12</AEXP_WildGoose>
+      <VAERoy_Crane MayRequire="VanillaExpanded.VAERoy">0.12</VAERoy_Crane>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.24</SeaLion>
+      <SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.16</SeaTurtle>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.18</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.18</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.32</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Beachlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Lakelurk>
+      <FCP_Animal_Mirelurk_King MayRequire="Rick.FCP.Animals">0.03</FCP_Animal_Mirelurk_King>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Redwood</defName>
+    <label>redwood</label>
+    <description>Great red trunks rise over cool mountain fog and dim forest ground. These woods feel older than the war, and deep enough to hide both safe camps and things better left alone.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Redwood</workerClass>
+    <texture>Arktos/Biomes/Arktos_Redwood</texture>
+    <animalDensity>2.3</animalDensity>
+    <plantDensity>0.4</plantDensity>
+    <forageability>0.7</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>27</wildPlantRegrowDays>
+    <lakeBeachTerrain>Marsh</lakeBeachTerrain>
+    <mudTerrain>Marsh</mudTerrain>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Moss>0.28</Plant_Moss>
+      <Plant_Berry>0.10</Plant_Berry>
+      <Plant_Brambles>0.10</Plant_Brambles>
+      <Plant_Bush>0.10</Plant_Bush>
+      <Plant_ShrubLow>0.14</Plant_ShrubLow>
+      <Plant_Dandelion>0.06</Plant_Dandelion>
+      <Plant_HealrootWild>0.03</Plant_HealrootWild>
+      <Plant_TreePine>0.10</Plant_TreePine>
+      <Plant_TreeBirch>0.06</Plant_TreeBirch>
+      <Plant_TreeMaple>0.04</Plant_TreeMaple>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Glowstool>0.015</Glowstool>
+      <Agarilux>0.015</Agarilux>
+      <Bryolux>0.015</Bryolux>
+      <Plant_Timbershroom>0.01</Plant_Timbershroom>
+      <Plant_TreeAnima MayRequire="Ludeon.RimWorld.Royalty">0.003</Plant_TreeAnima>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.003</Plant_TreeGauranlen>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.015</Plant_MossGauranlen>
+      <Plant_PodGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.004</Plant_PodGauranlen>
+      <Plant_Willowgill MayRequire="Ludeon.RimWorld.Odyssey">0.01</Plant_Willowgill>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.015</FCP_Plant_Mutated_Fern>
+      <VCE_BearBerryBush MayRequire="VanillaExpanded.VPlantsE">0.03</VCE_BearBerryBush>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_FragrantbloomRose MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_FragrantbloomRose>
+    </wildPlants>
+    <maxFishPopulation>470</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Dogfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Dogfish>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+        <VCEF_RawLobster MayRequire="VanillaExpanded.VCEF">1</VCEF_RawLobster>
+        <VCEF_RawSwordfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSwordfish>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Cold</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>60</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Cat>0.16</Cat>
+      <Cougar>0.10</Cougar>
+      <Goose>0.12</Goose>
+      <Lynx>0.16</Lynx>
+      <Raccoon>0.24</Raccoon>
+      <Fox_Red>0.22</Fox_Red>
+      <Squirrel>0.40</Squirrel>
+      <Wolf_Timber>0.12</Wolf_Timber>
+      <Turkey>0.16</Turkey>
+      <Badger MayRequire="Ludeon.RimWorld.Odyssey">0.16</Badger>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.14</Bluebird>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.08</Heron>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.10</Mink>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.12</Otter>
+      <Porcupine MayRequire="Ludeon.RimWorld.Odyssey">0.16</Porcupine>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.14</Quail>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.18</Sparrow>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.04</Vulture>
+      <Wolverine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Wolverine>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</Beaver>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.14</AEXP_Coyote>
+      <AEXP_ArcticCoyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.10</AEXP_ArcticCoyote>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Yao_Guai>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Radstag>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.10</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.12</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.08</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Sequoia</defName>
+    <label>sequoia</label>
+    <description>Warm mountain slopes carry giant trees, dry needles, and long views over the wastes below. The forest is beautiful from a distance and unforgiving once you are inside it.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Sequoia</workerClass>
+    <texture>Arktos/Biomes/Arktos_Sequoia</texture>
+    <animalDensity>2.1</animalDensity>
+    <plantDensity>0.65</plantDensity>
+    <forageability>0.65</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>26</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_TallGrass>2.5</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.12</Plant_Brambles>
+      <Plant_Berry>0.08</Plant_Berry>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Astragalus>0.10</Plant_Astragalus>
+      <Plant_Moss>0.12</Plant_Moss>
+      <Plant_TreePine>0.12</Plant_TreePine>
+      <Plant_TreeOak>0.10</Plant_TreeOak>
+      <Plant_TreeBirch>0.06</Plant_TreeBirch>
+      <Plant_TreeMaple>0.04</Plant_TreeMaple>
+      <Plant_TreeWillow>0.02</Plant_TreeWillow>
+      <Plant_Rose>0.01</Plant_Rose>
+      <Plant_Daylily>0.01</Plant_Daylily>
+      <Plant_TreeBonsai MayRequire="Ludeon.RimWorld.Ideology">0.006</Plant_TreeBonsai>
+      <Plant_TreeGrayPine MayRequire="Ludeon.RimWorld.Biotech">0.03</Plant_TreeGrayPine>
+      <Plant_Fireweed MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Fireweed>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.02</FCP_Plant_Carrot_Flower>
+      <VCE_Lavender MayRequire="VanillaExpanded.VPlantsEMore">0.015</VCE_Lavender>
+      <VCE_Hyacinth MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Hyacinth>
+      <VCE_Tulip MayRequire="VanillaExpanded.VPlantsEMore">0.01</VCE_Tulip>
+    </wildPlants>
+    <maxFishPopulation>460</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Frostfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Frostfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>55</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Cat>0.14</Cat>
+      <Cougar>0.10</Cougar>
+      <Goose>0.10</Goose>
+      <Lynx>0.14</Lynx>
+      <Raccoon>0.20</Raccoon>
+      <Fox_Red>0.20</Fox_Red>
+      <Squirrel>0.36</Squirrel>
+      <Wolf_Timber>0.10</Wolf_Timber>
+      <Turkey>0.14</Turkey>
+      <Badger MayRequire="Ludeon.RimWorld.Odyssey">0.14</Badger>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.12</Bluebird>
+      <Porcupine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Porcupine>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.12</Quail>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.16</Sparrow>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.04</Vulture>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.14</Beaver>
+      <AEXP_Coyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.12</AEXP_Coyote>
+      <AEXP_ArcticCoyote MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.08</AEXP_ArcticCoyote>
+      <VAERoy_Pheasant MayRequire="VanillaExpanded.VAERoy">0.10</VAERoy_Pheasant>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Yao_Guai>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Radstag>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Bighorner>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.08</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.10</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.08</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.26</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Divide</defName>
+    <label>divide</label>
+    <description>The land here is dry, broken, and bitter, split by ridges, gullies, and old fire scars. Water is scarce, cover is thin, and every mile feels farther than it should.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Divide</workerClass>
+    <texture>Arktos/Biomes/Arktos_Divide</texture>
+    <animalDensity>0.6</animalDensity>
+    <plantDensity>0.05</plantDensity>
+    <forageability>0</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>38</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>2.5</Plant_Grass>
+      <Plant_Agave>0.20</Plant_Agave>
+      <Plant_TreeDrago>0.05</Plant_TreeDrago>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.16</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.0</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.8</Plant_YellowTallGrass>
+      <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Bush_Leafless>
+      <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Brambles_Leafless>
+      <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.03</Plant_Berry_Leafless>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.24</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+    </wildPlants>
+    <maxFishPopulation>240</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Guppy MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Guppy>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>90</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>40</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>40</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.05</perlinFrequency>
+        <minSize>13</minSize>
+        <thresholds>
+          <li>
+            <terrain>SoftSand</terrain>
+            <min>0.55</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+    <wildAnimals>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.12</Quail>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.14</Vulture>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.18</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Nightstalker>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Thrasher>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaLion>
+      <SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaTurtle>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.22</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Mesa</defName>
+    <label>mesa</label>
+    <description>High desert plateaus sit above the low country in wind and heat. The ground is harsh, the horizons are wide, and survival depends on seeing trouble long before it reaches you.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Mesa</workerClass>
+    <texture>Arktos/Biomes/Arktos_Mesa</texture>
+    <animalDensity>0.25</animalDensity>
+    <plantDensity>0.05</plantDensity>
+    <forageability>0.2</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>36</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>2.5</Plant_Grass>
+      <Plant_Agave>0.24</Plant_Agave>
+      <Plant_PincushionCactus>0.18</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>0.07</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.04</Plant_TreeDrago>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_PebbleCactus MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_PebbleCactus>
+      <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_MagmaCactus>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">3.0</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.8</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.26</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.22</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Xander_Root>
+      <VCE_Agave MayRequire="VanillaExpanded.VPlantsE">0.14</VCE_Agave>
+      <VCE_Opuntia MayRequire="VanillaExpanded.VPlantsE">0.08</VCE_Opuntia>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.05</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.06</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PincushionPlant>
+    </wildPlants>
+    <maxFishPopulation>320</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Guppy MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Guppy>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>88</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <terrainsByFertility>
+      <li>
+        <terrain>Sand</terrain>
+        <min>-999</min>
+        <max>0.82</max>
+      </li>
+      <li>
+        <terrain>Soil</terrain>
+        <min>0.82</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.05</perlinFrequency>
+        <maxFertility>0.8</maxFertility>
+        <minSize>13</minSize>
+        <thresholds>
+          <li>
+            <terrain>SoftSand</terrain>
+            <min>0.65</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+    <wildAnimals>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.14</Quail>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.16</Vulture>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.18</FCP_Animal_Thrasher>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Urban">
+    <defName>Arktos_Crater</defName>
+    <label>crater</label>
+    <description>The bomb fell hardest here. Glassed earth, shattered concrete, and poisoned dust fill the impact zones where cities and test sites were erased in an instant.</description>
+    <texture>Arktos/Biomes/Arktos_Crater</texture>
+    <animalDensity>0.8</animalDensity>
+    <plantDensity>0.05</plantDensity>
+    <forageability>0</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>45</wildPlantRegrowDays>
+    <wildPlants />
+    <maxFishPopulation>0</maxFishPopulation>
+    <diseaseMtbDays>90</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.22</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Deathclaw MayRequire="Rick.FCP.Animals">0.05</FCP_Animal_Deathclaw>
+      <FCP_Animal_Chameleon_Deathclaw MayRequire="Rick.FCP.Animals">0.03</FCP_Animal_Chameleon_Deathclaw>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Molerat>
+    </wildAnimals>
+    <pollutionWildAnimals>
+      <VAEWaste_Megatardi MayRequire="VanillaExpanded.VAEWaste">0.20</VAEWaste_Megatardi>
+      <VAEWaste_Toxscorpion MayRequire="VanillaExpanded.VAEWaste">0.16</VAEWaste_Toxscorpion>
+    </pollutionWildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Beachlurk>
+      <VAEWaste_Hydra MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Hydra>
+      <VAEWaste_Pestigator MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Pestigator>
+    </coastalWildAnimals>
+    <extraGenSteps>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersLarge</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersMedium</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersSmall</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkClusters</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
+    <pollutionOffset>0.04</pollutionOffset>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Urban">
+    <defName>Arktos_Ruin</defName>
+    <label>ruin</label>
+    <description>Beyond the ground zeroes lie collapsed districts, dead roads, and the shells of neighborhoods that never recovered. There is scrap here, shelter too, and plenty willing to kill for both.</description>
+    <texture>Arktos/Biomes/Arktos_Ruin</texture>
+    <animalDensity>1.1</animalDensity>
+    <plantDensity>0.4</plantDensity>
+    <forageability>0.2</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>34</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Dandelion>0.08</Plant_Dandelion>
+      <Plant_Grass>4.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.04</Plant_Berry>
+      <Plant_Moss>0.10</Plant_Moss>
+      <Plant_Agave>0.06</Plant_Agave>
+      <Plant_Rose>0.008</Plant_Rose>
+      <Plant_Daylily>0.008</Plant_Daylily>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.12</Plant_Ripthorn>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
+      <Plant_Bush_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.06</Plant_Bush_Leafless>
+      <Plant_Brambles_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.05</Plant_Brambles_Leafless>
+      <Plant_Berry_Leafless MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_Berry_Leafless>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Xander_Root>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.03</FCP_Plant_Tarberry>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.03</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.03</VCE_Plant_AloeVera>
+      <VCE_Plant_JadePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.02</VCE_Plant_JadePlant>
+    </wildPlants>
+    <maxFishPopulation>260</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Guppy MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Guppy>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>70</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>55</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>55</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Molerat>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Chicken MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Rad_Chicken>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Radstag>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Bighorner>
+      <FCP_Animal_Vicious_Guard_Dog MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Vicious_Guard_Dog>
+      <FCP_Animal_Minutemen_Guard_Dog MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Minutemen_Guard_Dog>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Nightstalker>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.05</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Thrasher>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Yao_Guai>
+    </wildAnimals>
+    <pollutionWildAnimals>
+      <VAEWaste_Toxafox MayRequire="VanillaExpanded.VAEWaste">0.18</VAEWaste_Toxafox>
+      <VAEWaste_Toxbear MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Toxbear>
+      <VAEWaste_Toxlion MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Toxlion>
+      <VAEWaste_Toxscorpion MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Toxscorpion>
+      <VAEWaste_Wasteboar MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Wasteboar>
+    </pollutionWildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.30</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Beachlurk>
+      <VAEWaste_Pestigator MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Pestigator>
+    </coastalWildAnimals>
+    <extraGenSteps>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">AncientRuins_Scarlands</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersLarge</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersMedium</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersSmall</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkClusters</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
+    <pollutionOffset>0.02</pollutionOffset>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Urban">
+    <defName>Arktos_Wasteland</defName>
+    <label>wasteland</label>
+    <description>These outer blasted belts were spared the worst of the fire and caught the long death after. Ash, rubble, and tainted soil stretch between civilization's corpse and the living frontier.</description>
+    <texture>Arktos/Biomes/Arktos_Wasteland</texture>
+    <animalDensity>1.3</animalDensity>
+    <plantDensity>0.4</plantDensity>
+    <forageability>0.35</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>32</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Dandelion>0.10</Plant_Dandelion>
+      <Plant_Grass>4.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Bush>0.20</Plant_Bush>
+      <Plant_Brambles>0.16</Plant_Brambles>
+      <Plant_Berry>0.04</Plant_Berry>
+      <Plant_Moss>0.08</Plant_Moss>
+      <Plant_Agave>0.12</Plant_Agave>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">2.0</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.10</Plant_Ripthorn>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.015</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">1.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.0</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.20</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Buffalo_Gourd MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Buffalo_Gourd>
+      <FCP_Plant_Carrot_Flower MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Carrot_Flower>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Glowing_Mushroom>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.14</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Tarberry>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.05</FCP_Plant_Xander_Root>
+    </wildPlants>
+    <maxFishPopulation>380</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>70</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>55</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>55</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <FCP_Animal_Molerat MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Molerat>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Chicken MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Rad_Chicken>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Radstag>
+      <FCP_Animal_Glowing_Radstag MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Glowing_Radstag>
+      <FCP_Animal_Pale_Radstag MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Pale_Radstag>
+      <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Bighorner>
+      <FCP_Animal_Vicious_Guard_Dog MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Vicious_Guard_Dog>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Nightstalker>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Thrasher>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Yao_Guai>
+    </wildAnimals>
+    <pollutionWildAnimals>
+      <VAEWaste_Toxafox MayRequire="VanillaExpanded.VAEWaste">0.18</VAEWaste_Toxafox>
+      <VAEWaste_Toxbear MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Toxbear>
+      <VAEWaste_Toxiguana MayRequire="VanillaExpanded.VAEWaste">0.16</VAEWaste_Toxiguana>
+      <VAEWaste_Toxlion MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Toxlion>
+      <VAEWaste_Toxscorpion MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Toxscorpion>
+      <VAEWaste_Wasteboar MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Wasteboar>
+      <VAEWaste_Wastedeer MayRequire="VanillaExpanded.VAEWaste">0.14</VAEWaste_Wastedeer>
+      <VAEWaste_Wasteffalo MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Wasteffalo>
+    </pollutionWildAnimals>
+    <coastalWildAnimals>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.30</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Beachlurk>
+      <VAEWaste_Pestigator MayRequire="VanillaExpanded.VAEWaste">0.12</VAEWaste_Pestigator>
+    </coastalWildAnimals>
+    <extraGenSteps>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersLarge</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersMedium</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">CratersSmall</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkClusters</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
+    <pollutionOffset>0.01</pollutionOffset>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_Malpais</defName>
+    <label>malpais</label>
+    <description>Black volcanic stone and raw earth make this country look half-finished by the world. Heat lingers in the rock, plant life is thin, and the ground feels hostile even when it stands still.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_Malpais</workerClass>
+    <texture>World/Biomes/LavaFields</texture>
+    <animalDensity>0.7</animalDensity>
+    <plantDensity>0.45</plantDensity>
+    <forageability>0.15</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlantRegrowDays>38</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_Grass>7.0</Plant_Grass>
+      <Plant_Agave>0.12</Plant_Agave>
+      <Plant_GrayGrass MayRequire="Ludeon.RimWorld.Biotech">5.0</Plant_GrayGrass>
+      <Plant_Ripthorn MayRequire="Ludeon.RimWorld.Biotech">0.08</Plant_Ripthorn>
+      <Plant_MagmaCactus MayRequire="Ludeon.RimWorld.Odyssey">0.12</Plant_MagmaCactus>
+      <Plant_Thornvine MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Thornvine>
+      <Plant_TreeSnagroot MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_TreeSnagroot>
+      <Plant_YellowGrass MayRequire="Ludeon.RimWorld.Odyssey">1.5</Plant_YellowGrass>
+      <Plant_YellowTallGrass MayRequire="Ludeon.RimWorld.Odyssey">1.0</Plant_YellowTallGrass>
+      <FCP_Plant_Banana_Yucca MayRequire="Rick.FCP.Plants">0.18</FCP_Plant_Banana_Yucca>
+      <FCP_Plant_Barrel_Cactus MayRequire="Rick.FCP.Plants">0.16</FCP_Plant_Barrel_Cactus>
+      <FCP_Plant_Broc_Flower MayRequire="Rick.FCP.Plants">0.06</FCP_Plant_Broc_Flower>
+      <FCP_Plant_Honey_Mesquite MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Honey_Mesquite>
+      <FCP_Plant_Nevada_Agave MayRequire="Rick.FCP.Plants">0.10</FCP_Plant_Nevada_Agave>
+      <FCP_Plant_Prickly_Pear_Cactus MayRequire="Rick.FCP.Plants">0.12</FCP_Plant_Prickly_Pear_Cactus>
+      <FCP_Plant_Xander_Root MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Xander_Root>
+      <VCE_AloeVera MayRequire="VanillaExpanded.VPlantsEMore">0.05</VCE_AloeVera>
+      <VCE_Plant_AloeVera MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_AloeVera>
+      <VCE_Plant_BunnyEarsCactus MayRequire="VanillaExpanded.VPlantsESucculents">0.05</VCE_Plant_BunnyEarsCactus>
+      <VCE_Plant_PeyotePlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PeyotePlant>
+      <VCE_Plant_PincushionPlant MayRequire="VanillaExpanded.VPlantsESucculents">0.04</VCE_Plant_PincushionPlant>
+    </wildPlants>
+    <maxFishPopulation>300</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Hot</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>85</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>50</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <AEXP_Rattlesnake MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.14</AEXP_Rattlesnake>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.12</Quail>
+      <Vulture MayRequire="Ludeon.RimWorld.Odyssey">0.14</Vulture>
+      <FCP_Animal_Radroach MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Radroach>
+      <FCP_Animal_Glowing_Radroach MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Glowing_Radroach>
+      <FCP_Animal_Fire_Gecko MayRequire="Rick.FCP.Animals">0.16</FCP_Animal_Fire_Gecko>
+      <FCP_Animal_Golden_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Golden_Gecko>
+      <FCP_Animal_Green_Gecko MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Green_Gecko>
+      <FCP_Animal_Nightstalker MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Nightstalker>
+      <FCP_Animal_Alpha_Deathclaw MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Alpha_Deathclaw>
+      <FCP_Animal_Thrasher MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Thrasher>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaLion>
+      <SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.06</SeaTurtle>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.22</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.06</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+  </BiomeDef>
+
+  <BiomeDef ParentName="Arktos_Nature">
+    <defName>Arktos_CranberryBog</defName>
+    <label>cranberry bog</label>
+    <description>Tangled wet ground, red growth, and strange light make these bogs feel wrong even before night falls. They are rich, eerie places where beauty and decay have learned to share the same water.</description>
+    <workerClass>FIP.Arktos.BiomeWorker_CranberryBog</workerClass>
+    <texture>World/Biomes/Glowforest</texture>
+    <animalDensity>1.8</animalDensity>
+    <plantDensity>0.75</plantDensity>
+    <forageability>0.45</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>22</wildPlantRegrowDays>
+    <wildPlants>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Moss>0.30</Plant_Moss>
+      <Plant_Bush>0.18</Plant_Bush>
+      <Plant_Brambles>0.14</Plant_Brambles>
+      <Plant_Berry>0.12</Plant_Berry>
+      <Plant_TreeWillow>0.06</Plant_TreeWillow>
+      <Plant_TreeCypress>0.08</Plant_TreeCypress>
+      <Plant_TreePoplar>0.05</Plant_TreePoplar>
+      <Glowstool>0.04</Glowstool>
+      <Agarilux>0.04</Agarilux>
+      <Bryolux>0.04</Bryolux>
+      <Plant_Timbershroom>0.02</Plant_Timbershroom>
+      <Plant_Nutrifungus MayRequire="Ludeon.RimWorld.Ideology">0.08</Plant_Nutrifungus>
+      <Plant_MossGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.015</Plant_MossGauranlen>
+      <Plant_TreeGauranlen MayRequire="Ludeon.RimWorld.Ideology">0.003</Plant_TreeGauranlen>
+      <Plant_TreePolux MayRequire="Ludeon.RimWorld.Biotech">0.002</Plant_TreePolux>
+      <Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_Reeds>
+      <Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Bulrush>
+      <Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">0.10</Plant_LilyPad>
+      <Plant_Lotus MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Lotus>
+      <Plant_Nightgrass MayRequire="Ludeon.RimWorld.Odyssey">8.0</Plant_Nightgrass>
+      <Boomshroom MayRequire="Ludeon.RimWorld.Odyssey">0.08</Boomshroom>
+      <Plant_Psilocap MayRequire="Ludeon.RimWorld.Odyssey">0.08</Plant_Psilocap>
+      <Plant_Willowgill MayRequire="Ludeon.RimWorld.Odyssey">0.04</Plant_Willowgill>
+      <Plant_NightRafflesia MayRequire="Ludeon.RimWorld.Odyssey">0.02</Plant_NightRafflesia>
+      <Plant_TreeArchean MayRequire="Ludeon.RimWorld.Odyssey">0.001</Plant_TreeArchean>
+      <FCP_Plant_Tarberry MayRequire="Rick.FCP.Plants">0.08</FCP_Plant_Tarberry>
+      <FCP_Plant_Mutated_Fern MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Mutated_Fern>
+      <FCP_Plant_Glowing_Mushroom MayRequire="Rick.FCP.Plants">0.04</FCP_Plant_Glowing_Mushroom>
+      <VPE_Plant_Bileceps MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Bileceps>
+      <VPE_Plant_Blisscap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Blisscap>
+      <VPE_Plant_Foampuffer MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Foampuffer>
+      <VPE_Plant_Glowcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Glowcap>
+      <VPE_Plant_Healtruffle MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Healtruffle>
+      <VPE_Plant_Lullabloom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Lullabloom>
+      <VPE_Plant_MycothreadMushroom MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_MycothreadMushroom>
+      <VPE_Plant_Redcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Redcap>
+      <VPE_Plant_Stinker MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Stinker>
+      <VPE_Plant_Thermoregulus MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Thermoregulus>
+      <VPE_Plant_Timbercap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Timbercap>
+      <VPE_Plant_Zapcap MayRequire="VanillaExpanded.VPlantsEMushrooms">0.03</VPE_Plant_Zapcap>
+    </wildPlants>
+    <maxFishPopulation>560</maxFishPopulation>
+    <fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+      <freshwater_Common>
+        <Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <VCEF_RawAngelfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAngelfish>
+        <VCEF_RawGoldfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawGoldfish>
+        <VCEF_RawHerring MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHerring>
+        <VCEF_RawTrout MayRequire="VanillaExpanded.VCEF">1</VCEF_RawTrout>
+        <VCEF_RawMinnow MayRequire="VanillaExpanded.VCEF">1</VCEF_RawMinnow>
+        <VCEF_RawKoi MayRequire="VanillaExpanded.VCEF">1</VCEF_RawKoi>
+        <VCEF_RawPerch MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPerch>
+      </freshwater_Common>
+      <freshwater_Uncommon>
+        <Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+      </freshwater_Uncommon>
+      <saltwater_Common>
+        <Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+        <Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+        <VCEF_RawAnchovy MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnchovy>
+        <VCEF_RawEel MayRequire="VanillaExpanded.VCEF">1</VCEF_RawEel>
+        <VCEF_RawClownfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawClownfish>
+        <VCEF_RawSprat MayRequire="VanillaExpanded.VCEF">1</VCEF_RawSprat>
+        <VCEF_RawAnglerfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawAnglerfish>
+        <VCEF_RawHaddock MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHaddock>
+        <VCEF_RawPufferfish MayRequire="VanillaExpanded.VCEF">1</VCEF_RawPufferfish>
+      </saltwater_Common>
+      <saltwater_Uncommon>
+        <Fish_Tuna MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tuna>
+        <Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+        <VCEF_RawHalibut MayRequire="VanillaExpanded.VCEF">1</VCEF_RawHalibut>
+      </saltwater_Uncommon>
+      <rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Temperate</rareCatchesSetMaker>
+    </fishTypes>
+    <diseaseMtbDays>45</diseaseMtbDays>
+    <diseases>
+      <li><diseaseInc>Disease_Flu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_Plague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_GutWorms</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_FibrousMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_SensoryMechanites</diseaseInc><commonality>30</commonality></li>
+      <li><diseaseInc>Disease_MuscleParasites</diseaseInc><commonality>60</commonality></li>
+      <li><diseaseInc>Disease_AnimalFlu</diseaseInc><commonality>100</commonality></li>
+      <li><diseaseInc>Disease_AnimalPlague</diseaseInc><commonality>80</commonality></li>
+      <li><diseaseInc>Disease_OrganDecay</diseaseInc><commonality>10</commonality></li>
+    </diseases>
+    <wildAnimals>
+      <Bullfrog MayRequire="Ludeon.RimWorld.Odyssey">0.24</Bullfrog>
+      <Heron MayRequire="Ludeon.RimWorld.Odyssey">0.18</Heron>
+      <Otter MayRequire="Ludeon.RimWorld.Odyssey">0.18</Otter>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.12</Mink>
+      <Swan MayRequire="Ludeon.RimWorld.Odyssey">0.10</Swan>
+      <Goose>0.16</Goose>
+      <Rat>0.24</Rat>
+      <Raccoon>0.20</Raccoon>
+      <Beaver MayRequire="VanillaExpanded.VanillaAnimalsExpanded">0.18</Beaver>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.20</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Beachlurk>
+      <FCP_Animal_Riverlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Riverlurk>
+      <FCP_Animal_Lakelurk MayRequire="Rick.FCP.Animals">0.10</FCP_Animal_Lakelurk>
+      <FCP_Animal_Lakelurk_King MayRequire="Rick.FCP.Animals">0.03</FCP_Animal_Lakelurk_King>
+      <FCP_Animal_Mirelurk_King MayRequire="Rick.FCP.Animals">0.03</FCP_Animal_Mirelurk_King>
+      <FCP_Animal_Rad_Rabbit MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Rad_Rabbit>
+      <FCP_Animal_Rad_Raven MayRequire="Rick.FCP.Animals">0.08</FCP_Animal_Rad_Raven>
+      <FCP_Animal_Yao_Guai MayRequire="Rick.FCP.Animals">0.04</FCP_Animal_Yao_Guai>
+    </wildAnimals>
+    <coastalWildAnimals>
+      <SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.10</SeaLion>
+      <Seal MayRequire="Ludeon.RimWorld.Odyssey">0.12</Seal>
+      <HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.08</HermitCrab>
+      <FCP_Animal_Radgull MayRequire="Rick.FCP.Animals">0.28</FCP_Animal_Radgull>
+      <FCP_Animal_Mirelurk MayRequire="Rick.FCP.Animals">0.14</FCP_Animal_Mirelurk>
+      <FCP_Animal_Beachlurk MayRequire="Rick.FCP.Animals">0.12</FCP_Animal_Beachlurk>
+    </coastalWildAnimals>
+    <lakeBeachTerrain>Marsh</lakeBeachTerrain>
+    <mudTerrain>Marsh</mudTerrain>
+  </BiomeDef>
+</Defs>

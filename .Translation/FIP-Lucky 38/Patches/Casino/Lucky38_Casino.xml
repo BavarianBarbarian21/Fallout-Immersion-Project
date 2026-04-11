@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Hospitality Casino flavor pass -->
+	<Operation Class="PatchOperationSequence" MayRequire="Adamas.HospitalityCasino">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineRed"]/label</xpath>
+				<value>
+					<label>Vault 21 penny slots</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineRed"]/description</xpath>
+				<value>
+					<description>A reclaimed Vault 21 slot machine with a modest stake and a forgiving house edge.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineGreen"]/label</xpath>
+				<value>
+					<label>Lucky 38 standard reels</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineGreen"]/description</xpath>
+				<value>
+					<description>A House-era slot bank tuned for regular patrons and reliable nightly traffic.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineBlue"]/label</xpath>
+				<value>
+					<label>Lucky 38 high roller reels</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="HC_SlotMachineBlue"]/description</xpath>
+				<value>
+					<description>A premium Lucky 38 slot bank built for high-limit play, polished brass, and a hungry house cut.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_VendingMachine</xpath>
+				<value>
+					<HospitalityCasino_VendingMachine>slot bank</HospitalityCasino_VendingMachine>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_VendingMachineContains</xpath>
+				<value>
+					<HospitalityCasino_VendingMachineContains>Holds:</HospitalityCasino_VendingMachineContains>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_VendingMachineTotal</xpath>
+				<value>
+					<HospitalityCasino_VendingMachineTotal>Lifetime take:</HospitalityCasino_VendingMachineTotal>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_VendingMachineToggleDesc</xpath>
+				<value>
+					<HospitalityCasino_VendingMachineToggleDesc>Allow patrons to use this gaming machine.</HospitalityCasino_VendingMachineToggleDesc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_SetPricing</xpath>
+				<value>
+					<HospitalityCasino_SetPricing>Set house odds</HospitalityCasino_SetPricing>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_Free</xpath>
+				<value>
+					<HospitalityCasino_Free>complimentary play</HospitalityCasino_Free>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_Low</xpath>
+				<value>
+					<HospitalityCasino_Low>low stakes - light house edge</HospitalityCasino_Low>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_Medium</xpath>
+				<value>
+					<HospitalityCasino_Medium>house standard - standard edge</HospitalityCasino_Medium>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_High</xpath>
+				<value>
+					<HospitalityCasino_High>high roller - steep edge</HospitalityCasino_High>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_EmptyAfterHours</xpath>
+				<value>
+					<HospitalityCasino_EmptyAfterHours>Empty every slot bank after X hours</HospitalityCasino_EmptyAfterHours>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/HospitalityCasino_EmptyAfterHoursTooltip</xpath>
+				<value>
+					<HospitalityCasino_EmptyAfterHoursTooltip>If a slot bank has not been cleared after this many hours, someone will need to come collect the take.</HospitalityCasino_EmptyAfterHoursTooltip>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

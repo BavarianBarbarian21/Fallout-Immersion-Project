@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/label</xpath>
+        <value>
+          <label>Enclave Radicals</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/description</xpath>
+        <value>
+          <description>The Enclave Radicals burn with fanatic fire, wielding doctrine like a blade. Purity, dominance, and absolute control drive them to purge what they deem impure. Their zeal knows no bounds, turning even allies into enemies in their relentless crusade.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/pawnSingular</xpath>
+        <value>
+          <pawnSingular>Zealot</pawnSingular>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+        <xpath>Defs/FactionDef[defName="Salvagers"]/pawnsPlural</xpath>
+        <value>
+          <pawnsPlural>Zealots</pawnsPlural>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Odyssey</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace" MayRequire="FIP.WestTek">
+          <xpath>Defs/FactionDef[defName="Salvagers"]/xenotypeSet</xpath>
+          <value>
+            <xenotypeSet>
+              <xenotypeChances>
+                <WestTek_Xenotype_PureHumans MayRequire="FIP.WestTek">0.85</WestTek_Xenotype_PureHumans>
+                <WestTek_Xenotype_VaultDweller MayRequire="FIP.WestTek">0.15</WestTek_Xenotype_VaultDweller>
+              </xenotypeChances>
+            </xenotypeSet>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

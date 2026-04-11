@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>vanillaexpanded.gravship</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravjumperEngine"]/label</xpath>
+          <value>
+            <label>light Hellion reactor</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravjumperEngine"]/description</xpath>
+          <value>
+            <description>A compact reactor package adapted for a light Hellion. It generates the lift field needed for rapid vertical launch and short-range atmospheric insertion, but it is not suited to true interplanetary travel.
+
+When launched, anything on Hellion deck plating connected to the reactor will be transported to a new map.
+
+Often salvaged from scout craft, courier platforms, and other pre-war aerospace projects, these reactors are valued for their agility and relatively modest support requirements.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravhulkEngine"]/label</xpath>
+          <value>
+            <label>heavy Hellion reactor</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravhulkEngine"]/description</xpath>
+          <value>
+            <description>A heavy reactor package built for the largest Hellion frames and orbital support hulls. It sustains an enormous lift field, allowing massive aircraft to rise under their own power while operating near a planetary gravity well.
+
+When launched, anything on Hellion deck plating connected to the reactor will be transported to a new map.
+
+These oversized assemblies were intended for pre-war logistics craft and mobile aerospace platforms, and they demand immense fabrication capacity to keep operational.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_PilotCockpit"]/description</xpath>
+          <value>
+            <description>An interface that allows launching and piloting a light Hellion. It draws power directly from the Hellion reactor.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_PilotBridge"]/description</xpath>
+          <value>
+            <description>An interface that allows launching and piloting a heavy Hellion. It draws power directly from the heavy Hellion reactor.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_CopilotConsole"]/description</xpath>
+          <value>
+            <description>An auxiliary interface that allows a copilot to assist in launching and piloting a Hellion. It draws power directly from the Hellion reactor.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_TargetingTerminal"]/description</xpath>
+          <value>
+            <description>A control station dedicated to operating a single Hellion artillery piece. Requires a crew member to manually aim and fire the weapon. It draws power directly from the Hellion reactor.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_PointDefenseTurret"]/description</xpath>
+          <value>
+            <description>A specialized defensive turret built exclusively for the Hellion. It intercepts explosive projectiles and incoming drop pods within its protective radius, but cannot engage ground targets. Interception chance scales with the target's velocity.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_Gun_PointDefense"]/description</xpath>
+          <value>
+            <description>A rapid-fire gun for point-defense use aboard the Hellion.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_AmmoBox_GaussShell"]/description</xpath>
+          <value>
+            <description>A small crate containing heavy uranium shells. Used by gauss artillery to reload. A crate is fed directly into adjacent Hellion artillery when it needs to be rearmed.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GaussGun"]/description</xpath>
+          <value>
+            <description>A compact electromagnetic cannon that launches dense uranium slugs at extreme velocities. Designed for local bombardment and medium-range interception, it can also target hostile orbital craft. Requires a linked targeting terminal with an operator to function. It draws power directly from the Hellion reactor.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravcorePowerCoil"]/label</xpath>
+          <value>
+            <label>reactor-core power coil</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravcorePowerCoil"]/description</xpath>
+          <value>
+            <description>A massive reactor assembly that channels a salvaged reactor core into immense electrical output. Its reinforced coils can handle extreme load, making it one of the most potent power sources available for Hellion systems. Adjacent reactor-core power cells multiply the output by 15% each.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravshipCapacitor"]/label</xpath>
+          <value>
+            <label>Hellion capacitor</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_GravshipCapacitor"]/description</xpath>
+          <value>
+            <description>Stores large amounts of electricity for later use. Constructed in Hellion deck plating, Hellion capacitors do not obstruct movement.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="VGE_SolarPanelling"]/description</xpath>
+          <value>
+            <description>Produces electricity from sunlight. Does not work in darkness or under artificial light. It does not obstruct movement or provide cover, but it can only be constructed on Hellion deck plating.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipWeaponry"]/label</xpath>
+          <value>
+            <label>Hellion weapon systems</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipWeaponry"]/description</xpath>
+          <value>
+            <description>Construct Hellion artillery and point-defense turrets to fight hostile craft in orbit or provide bombardment from the sky.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_CompactWorkspaces"]/description</xpath>
+          <value>
+            <description>Unlock smaller variants of workbenches designed for the Hellion. Compact enough to fit into tight quarters without sacrificing essential functions.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_OxygenNetwork"]/description</xpath>
+          <value>
+            <description>Harvest and store oxygen for use on the Hellion. Unlocks construction of vacsuits and other survival gear needed to operate in vacuum.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_AstrofuelRefining"]/description</xpath>
+          <value>
+            <description>Construct astrofuel synthesizers that automatically convert chemfuel into astrofuel for Hellion use.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipPower"]/label</xpath>
+          <value>
+            <label>Hellion power</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipPower"]/description</xpath>
+          <value>
+            <description>Construct Hellion solar panelling, reactor-core power cells, and astrofuel generators to supply energy for Hellion systems.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_HeatDissipation"]/description</xpath>
+          <value>
+            <description>Harvest structural heat generated during Hellion launches and dissipate it safely. Excess heat can be converted into usable power.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipLiving"]/label</xpath>
+          <value>
+            <label>Hellion quarters</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VGE_GravshipLiving"]/description</xpath>
+          <value>
+            <description>Build Hellion-exclusive furniture such as bunk beds, lockers, and medbay beds to keep crew comfortable and functional during long voyages.</description>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_OxygenLeak"]/letterText</xpath>
+          <value>
+            <letterText>While landing {GRAVSHIP}, a small breach opened in one of the oxygen tanks, venting the tank's entire supply. Until the leak is repaired, the oxygen tank will not work.</letterText>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_VacBarrierFlicker"]/letterText</xpath>
+          <value>
+            <letterText>While landing {GRAVSHIP}, a power fluctuation caused one of the vac barriers to fail, depressurizing a small section of the Hellion. It will need to be repaired before it functions again.</letterText>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_AstrofuelPipeRupture"]/letterText</xpath>
+          <value>
+            <letterText>During {GRAVSHIP}'s landing, a damaged fuel line sprayed astrofuel into the compartment. A stray spark set it ablaze in a sudden astrofire.</letterText>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_CriticalHeatSpike"]/letterText</xpath>
+          <value>
+            <letterText>While bringing {GRAVSHIP} down, the Hellion reactor's heat-control system malfunctioned, causing structural heat to surge far beyond safe limits.</letterText>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_GravTurbulence"]/letterLabel</xpath>
+          <value>
+            <letterLabel>airframe turbulence</letterLabel>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/LandingOutcomeDef[defName="VGE_GravTurbulence"]/letterText</xpath>
+          <value>
+            <letterText>An unexpected lift-field vibration during {GRAVSHIP}'s descent shook every component on board, loosening bolts and wearing joints.</letterText>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/VanillaGravshipExpanded.LaunchBoonDef[defName="VGE_GravframeHarmony"]/label</xpath>
+          <value>
+            <label>airframe harmony</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/VanillaGravshipExpanded.LaunchBoonDef[defName="VGE_GravframeHarmony"]/letterLabel</xpath>
+          <value>
+            <letterLabel>airframe harmony</letterLabel>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/VanillaGravshipExpanded.LaunchBoonDef[defName="VGE_GravframeHarmony"]/letterText</xpath>
+          <value>
+            <letterText>{GRAVSHIP}'s structural frame experienced minimal stress during launch. The lift-field alignment was perfect, placing no extra strain on the craft's components.</letterText>
+          </value>
+        </li>
+
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>vanillaexpanded.skills</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipResearch"]/label</xpath>
+                <value>
+                  <label>Hellion systems research</label>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipResearch"]/description</xpath>
+                <value>
+                  <description>An expertise in researching new Hellion systems.</description>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipMaintaining"]/label</xpath>
+                <value>
+                  <label>Hellion maintenance</label>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipMaintaining"]/description</xpath>
+                <value>
+                  <description>An expertise in maintaining Hellion structures.</description>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipTargeting"]/label</xpath>
+                <value>
+                  <label>Hellion combat</label>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/VSE.Expertise.ExpertiseDef[defName="VGE_GravshipTargeting"]/description</xpath>
+                <value>
+                  <description>An expertise in handling a targeting terminal aboard the Hellion.</description>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

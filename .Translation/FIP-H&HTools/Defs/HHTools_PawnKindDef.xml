@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Settlement -->
+  <PawnKindDef ParentName="VillagerBase" Name="HHTools_Settlement_Civilian">
+    <defName>HHTools_Settlement_Civilian</defName>
+    <label>settler</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GuardBase" Name="HHTools_Settlement_Fighter">
+    <defName>HHTools_Settlement_Fighter</defName>
+    <label>settlement guard</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TraderBase" Name="HHTools_Settlement_Trader">
+    <defName>HHTools_Settlement_Trader</defName>
+    <label>settlement trader</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CouncilmanBase" Name="HHTools_Settlement_Leader">
+    <defName>HHTools_Settlement_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+      <li>HHTools_Militia</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Villager_Child" Name="HHTools_Settlement_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Settlement_Child</defName>
+    <label>settlement child</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags />
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="VillagerBase" Name="HHTools_Settlement_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Settlement_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+    </weaponTags>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="VillagerBase" Name="HHTools_Settlement_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Settlement_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+    </weaponTags>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="VillagerBase" Name="HHTools_Settlement_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Settlement_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+    </weaponTags>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="VillagerBase" Name="HHTools_Settlement_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Settlement_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Settlement</li>
+    </weaponTags>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Raider -->
+  <PawnKindDef ParentName="DrifterBase" Name="HHTools_Raider_Civilian">
+    <defName>HHTools_Raider_Civilian</defName>
+    <label>squatter</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>MedievalMeleeBasic</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="PirateKindBase" Name="HHTools_Raider_Fighter">
+    <defName>HHTools_Raider_Fighter</defName>
+    <label>raider</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="PirateKindBase" Name="HHTools_Raider_Trader">
+    <defName>HHTools_Raider_Trader</defName>
+    <label>fence</label>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>55</combatPower>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <weaponMoney>200~300</weaponMoney>
+    <initialResistanceRange>10~18</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteTierBase" Name="HHTools_Raider_Leader">
+    <defName>HHTools_Raider_Leader</defName>
+    <label>boss</label>
+    <labelPlural>bosses</labelPlural>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <weaponTags Inherit="False">
+      <li>IndustrialGunAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Villager_Child" Name="HHTools_Raider_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Raider_Child</defName>
+    <label>raider child</label>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <weaponTags />
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DrifterBase" Name="HHTools_Raider_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Raider_Miner</defName>
+    <label>raider miner</label>
+    <combatPower>38</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DrifterBase" Name="HHTools_Raider_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Raider_Hunter</defName>
+    <label>raider hunter</label>
+    <combatPower>48</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <weaponMoney>140~220</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DrifterBase" Name="HHTools_Raider_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Raider_Logger</defName>
+    <label>raider logger</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="DrifterBase" Name="HHTools_Raider_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Raider_Farmer</defName>
+    <label>raider farmer</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>Gun</li>
+      <li>MedievalMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_Raider</li>
+    </weaponTags>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <apparelTags Inherit="False">
+      <li>IndustrialBasic</li>
+      <li>FCP_Wastelander_Apparel</li>
+      <li>FCP_Raider_Armor</li>
+    </apparelTags>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+  </PawnKindDef>
+
+  <!-- Tribal -->
+  <PawnKindDef ParentName="TribalBase" Name="HHTools_Tribal_Civilian">
+    <defName>HHTools_Tribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Tribal_Hunter" Name="HHTools_Tribal_Fighter">
+    <defName>HHTools_Tribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>NeolithicMeleeBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Tribal_Hunter" Name="HHTools_Tribal_Trader">
+    <defName>HHTools_Tribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalChiefBase" Name="HHTools_Tribal_Leader">
+    <defName>HHTools_Tribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedChief</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalChildBase" Name="HHTools_Tribal_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>HHTools_Tribal_Child</defName>
+    <label>tribal child</label>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <weaponTags />
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="HHTools_Tribal_Miner" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Tribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Tribal_Hunter" Name="HHTools_Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Tribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>NeolithicRangedDecent</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_WarringTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="HHTools_Tribal_Logger" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Tribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="HHTools_Tribal_Farmer" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>HHTools_Tribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>NeolithicMeleeBasic</li>
+      <li>NeolithicRangedBasic</li>
+      <li>HHTools_Wasteland</li>
+      <li>HHTools_PeacefulTribe</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>Neolithic</li>
+      <li>FCP_Wastelander_Apparel</li>
+    </apparelTags>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

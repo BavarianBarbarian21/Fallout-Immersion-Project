@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VChemfuelE">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Chemfuel"]/label</xpath>
+				<value>
+					<label>oil</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Chemfuel"]/description</xpath>
+				<value>
+					<description>A refined liquid fuel suitable for burners, generators, and industrial feed systems.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.PipeNetDef[defName="VCHE_ChemfuelNet"]/resource/name</xpath>
+				<value>
+					<name>Oil</name>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelPipe"]/label</xpath>
+				<value>
+					<label>oil pipe</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelPipe"]/description</xpath>
+				<value>
+					<description>Steel pipes designed to move usable oil from deepchem refineries to oil tanks for storage or to oil-fed structures for automatic refilling.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_UndergroundChemfuelPipe"]/label</xpath>
+				<value>
+					<label>subterranean oil pipe</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_UndergroundChemfuelPipe"]/description</xpath>
+				<value>
+					<description>Buried steel pipes designed to move usable oil from deepchem refineries to oil tanks for storage or to oil-fed structures for automatic refilling.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelValve"]/label</xpath>
+				<value>
+					<label>oil valve</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelValve"]/description</xpath>
+				<value>
+					<description>Switches oil flow on or off.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="PS_ChemfuelTank"]/label</xpath>
+				<value>
+					<label>oil tank</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="PS_ChemfuelTank"]/description</xpath>
+				<value>
+					<description>An industrial storage tank meant for oil delivered through the pipe network. Tanks can be siphoned for usable fuel as needed, but even light damage can turn leaking vapors into a violent fireball.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelTap"]/label</xpath>
+				<value>
+					<label>oil tap</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelTap"]/description</xpath>
+				<value>
+					<description>A basin meant to hold dispensed oil from storage tanks for later use.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelDrain"]/label</xpath>
+				<value>
+					<label>oil drain</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VCHE_ChemfuelDrain"]/description</xpath>
+				<value>
+					<description>A basin meant to feed stored oil into the network and fill connected tanks.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VCHE_ExtractChemfuel</xpath>
+				<value>
+					<VCHE_ExtractChemfuel>Extract 150 oil</VCHE_ExtractChemfuel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VCHE_ExtractChemfuelDesc</xpath>
+				<value>
+					<VCHE_ExtractChemfuelDesc>Extract 150 oil from the tank. A pawn will come to extract it.</VCHE_ExtractChemfuelDesc>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VCHE_ChemValve</xpath>
+				<value>
+					<VCHE_ChemValve>Switches oil flow on or off.</VCHE_ChemValve>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/LanguageData/VCHE_ChemValveDesc</xpath>
+				<value>
+					<VCHE_ChemValveDesc>Switches oil flow on or off. A pawn will come open or close the valve.</VCHE_ChemValveDesc>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

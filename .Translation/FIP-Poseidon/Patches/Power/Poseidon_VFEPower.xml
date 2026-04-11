@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VFEPower">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_IndustrialGenerators"]/description</xpath>
+				<value>
+					<description>Develop heavy-duty Poseidon generator systems built to store more fuel and feed more power into the grid.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_AdvancedBatteries"]/description</xpath>
+				<value>
+					<description>Develop pre-War Poseidon battery units capable of storing large amounts of energy with minimal loss.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_AdvancedPowerSources"]/description</xpath>
+				<value>
+					<description>Recover advanced Poseidon generation hardware, including solar arrays, hydro units, and high-capacity turbine systems.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_NuclearPower"]/description</xpath>
+				<value>
+					<description>Restore the harshest end of the pre-War power ladder: compact reactor systems with enormous output and equally severe failure risks.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VFE_TidalPower"]/description</xpath>
+				<value>
+					<description>Build Poseidon tidal generators on open water to supply steady industrial power from current and surf.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]/label</xpath>
+				<value>
+					<label>industrial wind turbine</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]/description</xpath>
+				<value>
+					<description>A pre-War Poseidon utility turbine built for industrial output. It needs broad clear approaches to keep airflow stable and advertises the sort of oversized confidence Poseidon loved to stamp on its public works.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedSolarGenerator"]/label</xpath>
+				<value>
+					<label>Industrial Helios Two</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedSolarGenerator"]/description</xpath>
+				<value>
+					<description>A high-efficiency Poseidon solar array marketed as the Industrial Helios Two, built to pull significantly more charge from direct sunlight than ordinary civilian panels.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedWatermillGenerator"]/label</xpath>
+				<value>
+					<label>industrial hydro turbine</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedWatermillGenerator"]/description</xpath>
+				<value>
+					<description>A Poseidon hydro unit designed to draw industrial power from moving water. Crowded installations create turbulence and reduce output.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_LargeBattery"]/description</xpath>
+				<value>
+					<description>A large Poseidon battery bank meant to hold reserve power for later demand. Fully charged units are dangerous when exposed to rain or fire.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_SmallBattery"]/description</xpath>
+				<value>
+					<description>A compact reserve battery for local circuits and small industrial loads. Charged units can still blow when exposed to rain or fire.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_AdvancedBattery"]/description</xpath>
+				<value>
+					<description>A sealed Poseidon battery unit with far better efficiency than common storage cells. These pre-War housings are rainproof and less prone to catastrophic discharge.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_LargeAdvancedBattery"]/description</xpath>
+				<value>
+					<description>A large sealed Poseidon battery bank built for dependable utility storage. Unlike older packs, these housings withstand rain without exploding.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
