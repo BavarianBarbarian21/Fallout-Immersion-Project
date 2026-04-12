@@ -594,20 +594,38 @@ Having heard rumors of your Hellion, the [asker_faction_leaderTitle] asks that y
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/label</xpath>
         <value><label>The Helixen</label></value>
       </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="TheGravship"]/label/text()</xpath>
+          <value>The Helixen</value>
+        </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/description</xpath>
         <value><description>Your Helixen, a pre-war REPCONN aircraft, sits docked at the orbital relay. As your crew begins salvaging its systems, you realize this is no ordinary pre-war cache - it is a robot beacon. The relay crackles to life and broadcasts a war alert to a distant robot command hub. They are hunting you now, and they will eventually find you wherever you go.
 
 Note: This is a difficult scenario and is not recommended for new players.</description></value>
       </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="TheGravship"]/description/text()</xpath>
+          <value>Your Helixen, a pre-war REPCONN aircraft, sits docked at the orbital relay. As your crew begins salvaging its systems, you realize this is no ordinary pre-war cache - it is a robot beacon. The relay crackles to life and broadcasts a war alert to a distant robot command hub. They are hunting you now, and they will eventually find you wherever you go.
+
+  Note: This is a difficult scenario and is not recommended for new players.</value>
+        </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/summary</xpath>
         <value><summary>A crew of three hunted by robots aboard the Helixen.</summary></value>
       </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/summary/text()</xpath>
+          <value>A crew of three hunted by robots aboard the Helixen.</value>
+        </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns"]/customSummary</xpath>
         <value><customSummary>Start with three survivors aboard the Helixen, a pre-war REPCONN aircraft, while a distant robot command hub hunts you down.</customSummary></value>
       </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns"]/customSummary/text()</xpath>
+          <value>Start with three survivors aboard the Helixen, a pre-war REPCONN aircraft, while a distant robot command hub hunts you down.</value>
+        </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
         <value><text>You tripped the wrong relay, and now the robot command hub wants you dead. Its terrifying killer robots will arrive soon. Gather the valuable airframe panels, then use the Helixen to flee to a safe landing site on the planet below.
@@ -618,6 +636,16 @@ On the world map, select 'view planet' to choose a landing spot on the planet.
 
 From now on, wherever you go, the robots will eventually track the Helixen's signal. To stop them, you must find and defeat the robot command hub itself.</text></value>
       </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text/text()</xpath>
+          <value>You tripped the wrong relay, and now the robot command hub wants you dead. Its terrifying killer robots will arrive soon. Gather the valuable airframe panels, then use the Helixen to flee to a safe landing site on the planet below.
+
+  To launch the Helixen, select the cockpit console, then select the launch command.
+
+  On the world map, select 'view planet' to choose a landing spot on the planet.
+
+  From now on, wherever you go, the robots will eventually track the Helixen's signal. To stop them, you must find and defeat the robot command hub itself.</value>
+        </li>
 
       <li Class="PatchOperationReplace">
         <xpath>/Defs/ConceptDef[defName="Gravship"]/label</xpath>

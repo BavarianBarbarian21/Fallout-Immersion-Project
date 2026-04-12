@@ -53,7 +53,13 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/graphicData/texPath</xpath>
         <value>
-            <texPath>FIP-Whitespring/Totem</texPath>
+            <texPath>FIP-Whitespring/Hubris_MothmanTree</texPath>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/graphicData/graphicClass</xpath>
+        <value>
+            <graphicClass>Graphic_Single</graphicClass>
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
