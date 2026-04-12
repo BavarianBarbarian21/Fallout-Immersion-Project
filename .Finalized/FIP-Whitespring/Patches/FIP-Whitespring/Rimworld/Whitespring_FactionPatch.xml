@@ -14,6 +14,20 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Empire"]/factionIconPath</xpath>
+        <value>
+            <factionIconPath>FIP-Whitespring/Whitespring</factionIconPath>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Empire"]/colorSpectrum</xpath>
+        <value>
+            <colorSpectrum>
+                <li>(1, 1, 1)</li>
+            </colorSpectrum>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/FactionDef[defName="Empire"]/pawnSingular</xpath>
         <value>
             <pawnSingular>Whitespring agent</pawnSingular>

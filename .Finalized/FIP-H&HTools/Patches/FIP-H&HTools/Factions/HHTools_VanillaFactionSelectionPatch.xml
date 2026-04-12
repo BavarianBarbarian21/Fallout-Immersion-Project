@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>/Defs/FactionDef[defName="PirateYttakin"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+        <xpath>/Defs/FactionDef[defName="PirateWaster"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/maxConfigurableAtWorldCreation</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="OutlanderRough"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="TribeCivil"]/maxConfigurableAtWorldCreation</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="TribeRough"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="TribeSavage"]</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="Pirate"]/maxConfigurableAtWorldCreation</xpath>
+        <value>
+          <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

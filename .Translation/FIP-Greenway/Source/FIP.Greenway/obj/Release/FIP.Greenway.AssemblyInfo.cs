@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIP_Greenway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0dbeda944abeda9213b6fcf0f441eb87e0c25c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bd1123c5b965ad6d073a57a90cb2bc553ddf12e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIP_Greenway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIP_Greenway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

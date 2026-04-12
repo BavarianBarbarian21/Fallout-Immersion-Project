@@ -27,6 +27,20 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="Mechanoid"]/factionIconPath</xpath>
+        <value>
+            <factionIconPath>FIP-H&amp;HTools/HHTools_Mechanist</factionIconPath>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="Mechanoid"]/colorSpectrum</xpath>
+        <value>
+            <colorSpectrum>
+                <li>(1, 1, 1)</li>
+            </colorSpectrum>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
         <xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnSingular</xpath>
         <value>
             <pawnSingular>Robot</pawnSingular>

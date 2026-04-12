@@ -14,6 +14,20 @@
           <description>Ruthless and unyielding, the Antagonizer is a force of destruction and discord. Their motives shrouded in darkness, they seek power through chaos, crushing all opposition without mercy. Cross their path, and you’ll know true enmity in the wasteland.</description>
         </value>
       </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/factionIconPath</xpath>
+        <value>
+          <factionIconPath>FIP-H&amp;HTools/HHTools_Antagonizer</factionIconPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/colorSpectrum</xpath>
+        <value>
+          <colorSpectrum>
+            <li>(1, 1, 1)</li>
+          </colorSpectrum>
+        </value>
+      </li>
       <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
         <xpath>Defs/FactionDef[defName="Insect"]/pawnSingular</xpath>
         <value>
