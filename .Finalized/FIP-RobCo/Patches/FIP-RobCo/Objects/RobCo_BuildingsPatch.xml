@@ -230,22 +230,34 @@
             <description>A heavy-duty yard guardian for when "keep out" signs just aren't enough. Its breaching rockets turn raider cover, and the occasional garden shed, into decorative rubble.</description>
         </value>
     </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]/label</xpath>
-        <value>
-            <label>scurrybot laser cannon</label>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <success>Always</success>
+        <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]/label</xpath>
+                    <value>
+                        <label>scurrybot laser cannon</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]/description</xpath>
+                    <value>
+                        <description>Compact integrated laser mounted on a Scurrybot surveillance unit.</description>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]/description</xpath>
-        <value>
-            <description>Compact integrated laser mounted on a Scurrybot surveillance unit.</description>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/*[defName="RobCo_Laser_Combat"]/description</xpath>
-        <value>
-            <description>Integrated laser cannon mounted on a Securitron. Lethal combat weapon.</description>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <success>Always</success>
+        <xpath>/Defs/*[defName="RobCo_Laser_Combat"]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/*[defName="RobCo_Laser_Combat"]/description</xpath>
+            <value>
+                <description>Integrated laser cannon mounted on a Securitron. Lethal combat weapon.</description>
+            </value>
+        </match>
     </Operation>
 </Patch>
