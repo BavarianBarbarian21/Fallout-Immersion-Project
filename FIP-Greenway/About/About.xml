@@ -2,22 +2,25 @@
 <ModMetaData>
   <packageId>FIP.Greenway</packageId>
   <name>FIP - Greenway</name>
-  <author>BavarianBarbarian21</author>
-  <description>Greenway immersion patch for Fallout Community Project. Reframes Odyssey's gravship systems around the Fallout Tactics Hellion.</description>
-  <modDependencies>
-    <li>
-      <packageId>Ludeon.RimWorld.Odyssey</packageId>
-      <displayName>Odyssey</displayName>
-    </li>
-  </modDependencies>
+  <author>Feil</author>
+  <description>Greenway finalized staging mod. Rebuilds Fallout-flavored Ideology, dryad, and gauranlen content without making Odyssey mandatory.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+  <modDependencies>
+    <li>
+		<packageId>Ludeon.RimWorld.Ideology</packageId>
+		<displayName>Ideology</displayName>
+	</li>
+    <li>
+      <packageId>FIP.HHTools</packageId>
+      <displayName>FIP - H&amp;H Tools</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3592202124</steamWorkshopUrl>
+    </li>
+  </modDependencies>
   <loadAfter>
-    <li>Ludeon.RimWorld.Odyssey</li>
     <li>FIP.HHTools</li>
-    <li>FIP.Arktos</li>
-    <li>FIP.RobCo</li>
-    <li>FIP.Repconn</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
   </loadAfter>
 </ModMetaData>

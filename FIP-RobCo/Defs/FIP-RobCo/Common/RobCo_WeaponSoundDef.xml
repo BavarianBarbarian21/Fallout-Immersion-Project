@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--Weapon Laser Blaster-->
+	<SoundDef>
+		<defName>RobCo_Laser</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FIP-RobCo/Weapons/WPN_Rifle_Laser_Fire_NPC_LayerA_03</clipPath>
+					</li>
+				</grains>
+				<pitchRange>1.4~1.6</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<!--Weapon Sonic Bark-->
+	<SoundDef>
+		<defName>RobCo_SonicBark</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FIP-RobCo/Weapons/SonicBark</clipPath>
+					</li>
+				</grains>
+				<volumeRange>20</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>Shot_ChargeBlasterCannon</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FIP-RobCo/Weapons/WPN_Rifle_Laser_Fire_NPC_LayerA_03</clipPath>
+					</li>
+				</grains>
+				<pitchRange>0.8~0.95</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

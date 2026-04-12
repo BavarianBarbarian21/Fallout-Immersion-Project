@@ -32,6 +32,7 @@ public sealed class GreenwayMod : Mod
         GreenwayVanillaMemeApplier.Initialize();
         GreenwayVanillaIdeologyFactionApplier.Initialize();
         ApplySettings();
+        LongEventHandler.ExecuteWhenFinished(ApplySettings);
     }
 
     public override string SettingsCategory()
@@ -109,29 +110,28 @@ internal static class GreenwayVanillaIdeologyOriginApplier
 
     public static void Initialize()
     {
-        if (initialized)
-        {
-            return;
-        }
-
         foreach (string memeDefName in TargetMemeDefNames)
         {
-            MemeDef memeDef = DefDatabase<MemeDef>.GetNamedSilentFail(memeDefName);
-            if (memeDef != null)
+            if (OriginalHiddenInChooseMemesStatesByMemeDefName.ContainsKey(memeDefName))
             {
-                OriginalHiddenInChooseMemesStatesByMemeDefName[memeDefName] = memeDef.hiddenInChooseMemes;
+                continue;
             }
+
+            MemeDef memeDef = DefDatabase<MemeDef>.GetNamedSilentFail(memeDefName);
+            if (memeDef == null)
+            {
+                continue;
+            }
+
+            OriginalHiddenInChooseMemesStatesByMemeDefName[memeDefName] = memeDef.hiddenInChooseMemes;
         }
 
-        initialized = true;
+        initialized = initialized || OriginalHiddenInChooseMemesStatesByMemeDefName.Count > 0;
     }
 
     public static void Apply(bool hideVanillaIdeologyOrigins)
     {
-        if (!initialized)
-        {
-            Initialize();
-        }
+        Initialize();
 
         foreach ((string memeDefName, bool originalHiddenInChooseMemesState) in OriginalHiddenInChooseMemesStatesByMemeDefName)
         {
@@ -153,14 +153,9 @@ internal static class GreenwayVanillaMemeApplier
 
     public static void Initialize()
     {
-        if (initialized)
-        {
-            return;
-        }
-
         foreach (MemeDef memeDef in DefDatabase<MemeDef>.AllDefsListForReading)
         {
-            if (memeDef == null || memeDef.category == MemeCategory.Structure)
+            if (memeDef == null || string.IsNullOrEmpty(memeDef.defName))
             {
                 continue;
             }
@@ -171,18 +166,20 @@ internal static class GreenwayVanillaMemeApplier
                 continue;
             }
 
+            if (OriginalHiddenInChooseMemesStatesByMemeDefName.ContainsKey(memeDef.defName))
+            {
+                continue;
+            }
+
             OriginalHiddenInChooseMemesStatesByMemeDefName[memeDef.defName] = memeDef.hiddenInChooseMemes;
         }
 
-        initialized = true;
+        initialized = initialized || OriginalHiddenInChooseMemesStatesByMemeDefName.Count > 0;
     }
 
     public static void Apply(bool hideVanillaMemes)
     {
-        if (!initialized)
-        {
-            Initialize();
-        }
+        Initialize();
 
         foreach ((string memeDefName, bool originalHiddenInChooseMemesState) in OriginalHiddenInChooseMemesStatesByMemeDefName)
         {
@@ -223,13 +220,13 @@ internal static class GreenwayVanillaIdeologyFactionApplier
 
     public static void Initialize()
     {
-        if (initialized)
-        {
-            return;
-        }
-
         foreach (string factionDefName in TargetFactionDefNames)
         {
+            if (OriginalStatesByFactionDefName.ContainsKey(factionDefName))
+            {
+                continue;
+            }
+
             FactionDef factionDef = DefDatabase<FactionDef>.GetNamedSilentFail(factionDefName);
             if (factionDef == null)
             {
@@ -244,15 +241,12 @@ internal static class GreenwayVanillaIdeologyFactionApplier
             };
         }
 
-        initialized = true;
+        initialized = initialized || OriginalStatesByFactionDefName.Count > 0;
     }
 
     public static void Apply(bool hideVanillaIdeologyFactions)
     {
-        if (!initialized)
-        {
-            Initialize();
-        }
+        Initialize();
 
         foreach ((string factionDefName, FactionVisibilityState originalState) in OriginalStatesByFactionDefName)
         {

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+          <value>
+            <label>The Wendigo</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+          <value>
+            <description>The old stories called creatures like you Wendigos: starving things that outlived the people they once were. However it happened, you carry that curse now. Hunted, half-feral, and never truly full, you fled into the wastes before the wrong people could pin you down.
+
+Note: Wendigos have unique strengths and brutal weaknesses, making this a difficult scenario.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+          <value>
+            <summary>One hunted Wendigo, one human companion, and a hunger that never sleeps.</summary>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes"]/customSummary</xpath>
+          <value>
+            <customSummary>Start with one adult or child Wendigo and one human companion of any age.</customSummary>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+          <value>
+            <text>The old tales were supposed to be superstition until you became one of them. You are a Wendigo now - hard to kill, harder to trust, and always hungry.
+
+When the hunters closed in, you fled aboard the first failing craft that would lift off. It did not stay in the air for long. Now you wake in the wreckage with one companion, a cold knot of hunger in your gut, and the wasteland deciding what kind of monster you will be.</text>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_ExtremeHemogenDrain"]/label</xpath>
+        <value>
+          <label>wasting hunger</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_ExtremeHemogenDrain"]/description</xpath>
+        <value>
+          <description>Carriers burn through hemogen at a grotesque rate. Their starving, mutation-wracked metabolism strips nutrients faster than ordinary feeding can replace them.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_CorpseFeeder"]/label</xpath>
+        <value>
+          <label>carrion feeder</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_CorpseFeeder"]/description</xpath>
+        <value>
+          <description>Carriers can still draw nourishment from cold, spoiled blood. Wendigo survivors learn to bleed ruined corpses and irradiated remains when nothing living can sate the hunger.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_AnimalFeeder"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_SanguoFeeder"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/GeneDef[defName="VRE_LowHemogenDrain"]</xpath>
+        <value>
+          <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        </value>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="HemogenDrain"]</xpath>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
+        <value>
+          <li>VRE_ExtremeHemogenDrain</li>
+          <li>VRE_CorpseFeeder</li>
+        </value>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Strigoi</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Ekkimian</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Bruxa</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Strigoi"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Ekkimian"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove" MayRequire="vanillaracesexpanded.sanguophage">
+        <xpath>/Defs/XenotypeDef[defName="VRE_Bruxa"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
