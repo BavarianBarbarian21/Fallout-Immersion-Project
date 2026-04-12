@@ -99,6 +99,25 @@
 		<defName>RobCo_WarMachine</defName>
 		<label>War Machine</label>
 		<description>A colossal humanoid war engine. Can throw mini-nuke projectiles and spawn Liberators to aid in combat. Weighs several tons and packs enough firepower to level buildings. A walking WMD.</description>
+		<comps>
+			<li Class="CompProperties_MechCarrier">
+				<spawnPawnKind>RobCo_Liberator</spawnPawnKind>
+				<fixedIngredient>Steel</fixedIngredient>
+				<costPerPawn>40</costPerPawn>
+				<startingIngredientCount>600</startingIngredientCount>
+				<maxIngredientCount>600</maxIngredientCount>
+				<spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+				<spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+				<attachSpawnedEffecter>true</attachSpawnedEffecter>
+				<attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+			</li>
+			<li Class="FIP_RobCo.CompProperties_WarMachineLiberatorAura">
+				<radius>10</radius>
+				<refreshTicks>30</refreshTicks>
+				<targetThingDefName>RobCo_Liberator</targetThingDefName>
+				<hediffDef>RobCo_WarMachineLiberatorUplink</hediffDef>
+			</li>
+		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_WarMachine</defName>

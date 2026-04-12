@@ -342,6 +342,9 @@
 				</li>
 			</lifeStageAges>
 		</race>
+		<comps>
+			<li Class="FIP_RobCo.CompProperties_AbilityReloadable" />
+		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_MisterGutsy</defName>
@@ -378,6 +381,9 @@
 		<weaponTags>
 			<li>RobCo_MisterGutsyArray</li>
 		</weaponTags>
+		<abilities>
+			<li>RobCo_LightFlamer</li>
+		</abilities>
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_HandyBase_Recipe">
 		<defName>RobCo_MisterGutsy_Recipe</defName>
@@ -418,6 +424,7 @@
 				<attachSpawnedEffecter>true</attachSpawnedEffecter>
 				<attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
 			</li>
+			<li Class="FIP_RobCo.CompProperties_AbilityReloadable" />
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
@@ -442,6 +449,9 @@
 		<weaponTags>
 			<li>RobCo_GutsyHydraArray</li>
 		</weaponTags>
+		<abilities>
+			<li>RobCo_LightFlamer</li>
+		</abilities>
 	</PawnKindDef>
 	<!-- Head of Hydra -->
 	<ThingDef ParentName="RobCo_HandyBase">

@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="RobCo_BaseGun"><defName>RobCo_SecuritronLaser</defName><label>securitron laser cannon</label><description>Integrated laser cannon mounted on a Securitron security platform.</description><weaponTags><li>RobCo_SecuritronLaser</li></weaponTags><verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RobCo_Bullet_SecuritronLaser</defaultProjectile><warmupTime>1.8</warmupTime><range>28</range><burstShotCount>2</burstShotCount><ticksBetweenBurstShots>15</ticksBetweenBurstShots><soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Medium</soundCastTail><muzzleFlashScale>1.5</muzzleFlashScale></li></verbs><tools><li><label>laser cannon</label><capacities><li>Blunt</li></capacities><power>6</power><cooldownTime>2.5</cooldownTime></li></tools></ThingDef>
-	<ThingDef ParentName="RobCo_BaseGun"><defName>RobCo_SecuritronElectroshock</defName><label>securitron electroshock prod</label><description>Non-lethal electroshock system integrated into a Securitron Mark II.</description><weaponTags><li>RobCo_SecuritronElectroshock</li></weaponTags><verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RobCo_Bullet_Electroshock</defaultProjectile><warmupTime>2.0</warmupTime><range>20</range><burstShotCount>2</burstShotCount><ticksBetweenBurstShots>12</ticksBetweenBurstShots><soundCast>Shot_ChargeRifle</soundCast><soundCastTail>GunTail_Light</soundCastTail><muzzleFlashScale>1.2</muzzleFlashScale></li></verbs><tools><li><label>electroshock prod</label><capacities><li>Blunt</li></capacities><power>5</power><cooldownTime>2.0</cooldownTime></li></tools></ThingDef>
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_SecuritronLaser</defName>
+		<label>securitron ballistic repeater</label>
+		<description>Integrated ballistic repeater mounted on a Securitron Mark I security platform.</description>
+		<graphicData>
+			<texPath>FIP-RobCo/Weapons/Securitron/RobCo_SecuritronArm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+			<li>RobCo_SecuritronLaser</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RobCo_Bullet_BallisticAuto</defaultProjectile>
+				<warmupTime>0.9</warmupTime>
+				<range>28</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>1.5</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>shock baton</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_SecuritronElectroshock</defName>
+		<label>securitron police laser</label>
+		<description>Upgraded laser platform integrated into a Securitron Mark II with an onboard rocket battery.</description>
+		<graphicData>
+			<texPath>FIP-RobCo/Weapons/Securitron/RobCo_SecuritronArm</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+			<li>RobCo_SecuritronElectroshock</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RobCo_Bullet_LaserMedium</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>26</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>1.2</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>high-voltage baton</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
 </Defs>

@@ -605,6 +605,10 @@ Note: This is a difficult scenario and is not recommended for new players.</desc
         <value><summary>A crew of three hunted by robots aboard the Hellion.</summary></value>
       </li>
       <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns"]/customSummary</xpath>
+        <value><customSummary>Start with three survivors aboard the Hellion while a distant robot command hub hunts you down.</customSummary></value>
+      </li>
+      <li Class="PatchOperationReplace">
         <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
         <value><text>You screwed up, and now the robot command hub wants you dead. Its terrifying killer robots will arrive soon. Gather the valuable airframe panels, then use the Hellion to flee to a safe location on the planet below.
 

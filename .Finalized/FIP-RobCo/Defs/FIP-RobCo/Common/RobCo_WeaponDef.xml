@@ -3,7 +3,7 @@
 	<!-- Shared projectile bases -->
 	<ThingDef Name="RobCo_BaseBullet" ParentName="BaseBullet" Abstract="True">
 		<graphicData>
-			<texPath>FIP-RobCo/Misc/Laser</texPath>
+			<texPath>FIP-RobCo/Bullets/Robco_Laser</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
@@ -61,15 +61,16 @@
 	<ThingDef ParentName="BaseBullet">
 		<defName>RobCo_Bullet_LaserAssaultron</defName>
 		<label>RobCo Assaultron head laser</label>
-		<thingClass>Projectile_HellsphereCannon</thingClass>
 		<graphicData>
-			<texPath>Things/Projectile/HellsphereCannon</texPath>
+			<texPath>FIP-RobCo/Bullets/Robco_Laser</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>MoteGlow</shaderType>
 			<drawSize>(1.2, 2.4)</drawSize>
 		</graphicData>
 		<projectile>
 			<damageDef>RobCo_LaserAssaultronDamage</damageDef>
+			<damageAmountBase>24</damageAmountBase>
+			<armorPenetrationBase>0.7</armorPenetrationBase>
 			<speed>75</speed>
 			<explosionRadius>2.9</explosionRadius>
 			<screenShakeFactor>1.0</screenShakeFactor>
@@ -107,15 +108,16 @@
 	<ThingDef ParentName="BaseBullet">
 		<defName>RobCo_Bullet_LaserSheepsquatch</defName>
 		<label>RobCo Assaultron head laser</label>
-		<thingClass>Projectile_HellsphereCannon</thingClass>
 		<graphicData>
-			<texPath>Things/Projectile/HellsphereCannon</texPath>
+			<texPath>FIP-RobCo/Bullets/Robco_Laser</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>MoteGlow</shaderType>
 			<drawSize>(1.5, 3)</drawSize>
 		</graphicData>
 		<projectile>
 			<damageDef>Vaporize</damageDef>
+			<damageAmountBase>36</damageAmountBase>
+			<armorPenetrationBase>0.9</armorPenetrationBase>
 			<speed>75</speed>
 			<explosionRadius>4.9</explosionRadius>
 			<screenShakeFactor>1.5</screenShakeFactor>
@@ -128,7 +130,7 @@
 		<defName>RobCo_Bullet_SonicBark</defName>
 		<label>sonic bark</label>
 		<graphicData>
-			<texPath>FIP-RobCo/Misc/Invisible</texPath>
+			<texPath>FIP-RobCo/Weapons/Misc/RobCo_Invisible</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -214,7 +216,7 @@
 		<destroyOnDrop>true</destroyOnDrop>
 		<relicChance>0</relicChance>
 		<graphicData>
-			<texPath>FIP-RobCo/Misc/Invisible</texPath>
+			<texPath>FIP-RobCo/Weapons/Misc/RobCo_Invisible</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<equippedDistanceOffset>-0.14</equippedDistanceOffset>

@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/label</xpath>
+          <value>
+            <label>The Wendigo</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/description</xpath>
+          <value>
+            <description>When a desperate cure was offered for your failing body, you took it and became something the wastes barely remember by name: a Wendigo. You hid the hunger as long as you could, but sooner or later the truth always reaches the wrong ears. Now you have crashlanded far from safety with blood in your veins and a curse that never sleeps.
+
+Note: Wendigos have unique strengths and brutal weaknesses, making this a difficult scenario.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/summary</xpath>
+          <value>
+            <summary>One crashlanded Wendigo fighting hunger, and one human companion.</summary>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes"]/customSummary</xpath>
+          <value>
+            <customSummary>Start with one adult or child Wendigo and one other colonist of any age.</customSummary>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ScenarioDef[defName="Sanguophage"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+          <value>
+            <text>When a dark cure was offered for your dying body, you accepted it and became a Wendigo - immortal, starving, and feared wherever the old stories survive. You hid the hunger for years, but eventually the hunters caught your scent.
+
+Then came the crash. Only a few made it to the escape pods. You wake on an unknown rimworld with the cold in your bones and the hunger already clawing at your thoughts. What will you become to survive?</text>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
   <Operation Class="PatchOperationSequence">
     <success>Always</success>
     <operations>

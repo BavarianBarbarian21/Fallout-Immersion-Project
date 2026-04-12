@@ -13,6 +13,12 @@
             <description>You are a RobCo Mechanic, master of pre-war robotics. You left humanity behind to pursue your true potential with your mechanical servants. Can you survive and thrive in the wasteland? Note: This scenario is challenging due to your unique skills and starting conditions.</description>
         </value>
     </Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/summary</xpath>
+			<value>
+				<summary>One RobCo mechanic and a small crew of pre-war utility robots.</summary>
+			</value>
+		</Operation>
     
     <!-- Patch label and description for MechanitorStartingMech -->
 	<Operation Class="PatchOperationReplace">

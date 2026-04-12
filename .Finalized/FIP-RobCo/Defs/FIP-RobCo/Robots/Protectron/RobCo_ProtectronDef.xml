@@ -93,7 +93,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>FIP-RobCo/Robots/Protectron/Utilitron/Utilitron</texPath>
+					<texPath>FIP-RobCo/Robots/Protectron/Constructron/Constructron</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.25</drawSize>
@@ -140,7 +140,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>FIP-RobCo/Robots/Protectron/Collectron/Collectron</texPath>
+					<texPath>FIP-RobCo/Robots/Protectron/Factotron/Factotron</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.25</drawSize>
@@ -176,6 +176,18 @@
 				<li>Mining</li>
 			</mechEnabledWorkTypes>
 		</race>
+		<tools>
+			<li>
+				<label>drill</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.0</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Utilitron</defName>

@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="RobCo_BaseGun"><defName>RobCo_WarMachineMiniNukeLauncher</defName><label>liberty prime mini-nuke launcher</label><description>Devastating miniature nuclear warhead launcher system integrated into a colossal war machine.</description><weaponTags><li>RobCo_WarMachineMiniNukeLauncher</li></weaponTags><verbs><li><verbClass>Verb_Shoot</verbClass><defaultProjectile>RobCo_Bullet_LibertyPrimeMiniNuke</defaultProjectile><warmupTime>3.5</warmupTime><range>38</range><burstShotCount>1</burstShotCount><soundCast>Shot_IncendiaryLauncher</soundCast><soundCastTail>GunTail_Heavy</soundCastTail><muzzleFlashScale>3.0</muzzleFlashScale></li></verbs><tools><li><label>mini-nuke launcher</label><capacities><li>Blunt</li></capacities><power>15</power><cooldownTime>4.5</cooldownTime></li></tools></ThingDef>
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_WarMachineMiniNukeLauncher</defName>
+		<label>war machine pulse battery</label>
+		<description>A sustained pulse battery integrated into the War Machine's torso hardpoints.</description>
+		<weaponTags>
+			<li>RobCo_WarMachineMiniNukeLauncher</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RobCo_Bullet_WarMachinePulse</defaultProjectile>
+				<warmupTime>2.1</warmupTime>
+				<range>32</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeBlasterCannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>2.4</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>war gauntlet</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2.0</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
 </Defs>
