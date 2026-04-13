@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Tribals">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/label</xpath>
+        <value>
+          <label>Tribal tech level</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTribe"]/description</xpath>
+        <value>
+          <description>You have successfully completed all survivalist research projects and have advanced to tribal tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/label</xpath>
+        <value>
+          <label>Prospector tech level</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormTown"]/description</xpath>
+        <value>
+          <description>You have successfully completed all tribal research projects and have advanced to prospector tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/label</xpath>
+        <value>
+          <label>Settler tech level</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCity"]/description</xpath>
+        <value>
+          <description>You have successfully completed all prospector research projects and have advanced to settler tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/label</xpath>
+        <value>
+          <label>Vault-Tec tech level</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormCollective"]/description</xpath>
+        <value>
+          <description>You have successfully completed all settler research projects and have advanced to Vault-Tec tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/label</xpath>
+        <value>
+          <label>Pre-War tech level</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/VFETribals.EraAdvancementDef[defName="VFET_FormNexus"]/description</xpath>
+        <value>
+          <description>You have successfully completed all Vault-Tec research projects and have advanced to Pre-War tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
