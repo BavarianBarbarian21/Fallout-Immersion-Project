@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>Kryptiden-Einsicht erlangt</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} hat {USER_possessive} erste Stufe der Kryptiden-Einsicht erlangt! {USER_pronoun} ist jetzt ein Okkultist.
+{USER_labelShort} muss Kryptiden-Fokus durch Meditation aufbauen. Die Wirksamkeit dieser Meditation wird erhöht, wenn die Person sich während der Meditation auf ein bestimmtes Objekt konzentrieren kann.
+
+Verschiedene Personen können sich auf verschiedene Objekte konzentrieren. Dies hängt von den Hintergrundgeschichten, Eigenschaften und Rängen der Person ab. Zum Beispiel:
+
+- Okkultisten mit Enclave-Rängen meditieren an ihren zugewiesenen Posten.
+- Okkultisten mit Stammes-Kindheit meditieren an kryptischen Schreinen und Totems.
+- Asketische Okkultisten meditieren an leeren Wänden.
+- Psychopathische Okkultisten meditieren an Gräbern, idealerweise mit einer geliebten Person darin.
+
+Du kannst die Meditationsfokus-Typen einer Person sehen, indem du ihre Infokarte mit dem 'i'-Button öffnest.</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} hat eine neue Stufe der Kryptiden-Einsicht erlangt! {USER_pronoun} kann jetzt kryptische Offenbarungen dieser höheren Stufe nutzen, muss sie aber zuerst erlernen.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>Beim Erlangen der neuen Kryptiden-Einsicht-Stufe hat {USER_labelShort} automatisch diese Offenbarungen erlernt: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>Kryptiden-Essenz ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Kryptiden-Essenz verwenden, um {0} Offenbarung zu erlernen</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Eine einmalige neurale Inokulation, die eine bestimmte kryptische Offenbarung trainiert.
+
+Die Dosis wird über einen spezialisierten Implantatpunkt verabreicht. Einmal ins Gehirn freigesetzt, bildet der Mechanismus Wissen über eine bestimmte Offenbarung und verwandelt sich dabei nach Bedarf in neurales Gewebe.
+
+{PSYCAST_label}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>erfordert Kryptiden-Einsicht</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>Kryptiden-Fokus</Psyfocus>
+  <PsyfocusLabelGizmo>Kryptiden-Fokus</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Kryptiden-Fokus ist eine besondere Art mentaler Strukturierung, die zur Nutzung kryptischer Offenbarungen erforderlich ist. Kryptiden-Fokus schwindet mit der Zeit und muss durch regelmäßige Meditation aufgebaut werden. Der Verlust des gesamten Kryptiden-Fokus macht jemanden unfähig, Offenbarungen zu nutzen.
+
+Höherer Kryptiden-Fokus ermöglicht Offenbarungen höherer Stufe, erhöht aber auch die Rate des Fokusverlusts.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{0}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Bis zu Stufe {0} Offenbarungen.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Kryptiden-Fokus sinkt um {0} pro Tag.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Kryptiden-Fokus-Zuwachsrate: {0}/Tag</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualMaxPsylinkLevel>Maximale Kryptiden-Einsicht-Stufe</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} hat das Verbindungsritual mit {LINKABLE_labelShort} abgeschlossen.
+
+{PAWN_pronoun} hat jetzt eine verbesserte Kryptiden-Einsicht, die die Nutzung neuer Offenbarungen ermöglicht.</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>ein Mothman-Totem</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>Derzeit können keine Kolonisten eine Verbindung mit dem Mothman-Totem herstellen.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>Keine Kolonisten mit dem natürlichen Meditationsfokus-Typ.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Mindestens {0} Mothman-Eier benötigt.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Muss ein Kolonist mit dem natürlichen Meditationsfokus-Typ sein, der unter der maximalen Kryptiden-Einsicht-Stufe liegt.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Darf nicht kryptiden-unempfindlich sein.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>Die Verbindungszeremonie ist mit mehr Teilnehmern wirkungsvoller. Je mehr Personen teilnehmen, desto weniger Zeit benötigt die Zeremonie und desto mehr Mothman-Eier werden wiederhergestellt.
+
+Mit {0} zusätzlichen Teilnehmern werden {1} Mothman-Eier am Ende der Zeremonie wiederhergestellt.</AnimaLinkingExplanationBase>
+
+
+</LanguageData>

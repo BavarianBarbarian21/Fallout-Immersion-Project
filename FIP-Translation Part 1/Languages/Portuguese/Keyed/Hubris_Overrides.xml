@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
+  <LetterLabelPsylinkLevelGained>Cryptid insight gained</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} has gained {USER_possessive} first level of cryptid insight! {USER_pronoun} is now an occultist.
+{USER_labelShort} must build up cryptid focus through meditation. The effectiveness of this meditation is increased if the person can focus on a specific object while meditating.
+
+Different people are able to focus on different objects. This depends on the person's backstories, traits, and ranks. For example:
+
+- Occultists with enclave ranks meditate on their assigned posts.
+- Occultists with tribal childhoods meditate to cryptic shrines and totems.
+- Ascetic occultists meditate to blank walls.
+- Psychopathic occultists meditate to graves, ideally with a loved one inside.
+
+You can see someone's meditation focus types by looking at their info card with the 'i' button.</LetterPsylinkLevelGained_First>
+
+  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} has gained a new level of cryptid insight! {USER_pronoun} can now use cryptic revelations of that higher level, but {USER_pronoun} needs to learn them first.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>Upon gaining the new cryptid insight level, {USER_labelShort} automatically learned these revelations: {2}</LetterPsylinkLevelGained_PsycastLearned>
+
+  <!-- Neurotrainers / Psylink -> Cryptid Insight -->
+  <PsycastNeurotrainerLabel>cryptid essence ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Use cryptid essence to learn {0} revelation</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>A one-use neural inoculation which trains a specific cryptic revelation.
+
+The dose is administered through a specialized implant point. Once released into the brain, the mechanism forms knowledge of a specific revelation, transmuting itself into neural tissue as needed.
+
+{PSYCAST_label}
+
+{PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
+  <PsycastNeurotrainerNoPsylink>requires cryptid insight</PsycastNeurotrainerNoPsylink>
+
+  <Psyfocus>Cryptid focus</Psyfocus>
+  <PsyfocusLabelGizmo>Cryptid focus</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Cryptid focus is a special type of mental structuring required to use cryptic revelations. Cryptid focus dissipates over time and must be built by regular meditation. Losing all cryptid focus makes someone unable to use revelations.
+
+Higher cryptid focus permits higher-level revelations, but also increases the rate of focus dissipation.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{0}-{1}%</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Up to level {0} revelations.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Cryptid focus falls at {0} per day.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Cryptid focus gain rate: {0}/d</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualMaxPsylinkLevel>Max cryptid insight level</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} has completed the linking ritual with {LINKABLE_labelShort}.
+
+{PAWN_pronoun} now has an upgraded cryptid insight, permitting the use of new revelations.</LetterTextLinkingRitualCompleted>
+
+  <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
+  <RitualTargetAnimaTreeInfo>a Mothman Totem</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>No colonists that can link with the Mothman Totem right now.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>No colonists with the natural meditation focus type.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Need at least {0} Mothman eggs.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Must be a colonist with the natural meditation focus type who is below maximum cryptid insight level.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Must not be cryptid-insensitive.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>The linking ceremony is more powerful with more participants. The more people participate, the less time the ceremony takes, and the more Mothman eggs will be restored.
+
+With {0} additional participants, {1} Mothman eggs will be restored at the end of the ceremony.</AnimaLinkingExplanationBase>
+
+
+</LanguageData>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Replace throne/throneroom terminology with presidential equivalents -->
+  <NeedThroneAssigned>Präsidialsuite benötigt</NeedThroneAssigned>
+  <NeedThroneAssignedDesc>Eine eurer Personen hat einen Präsidentenrang, der eine Präsidialsuite erfordert, aber es ist keine Präsidialsuite zugewiesen.\n Stellt sicher, dass dem Ranginhaber ein Präsidentenstuhl in einer geeigneten Präsidialsuite zugewiesen ist.\nDie Präsidialsuite sollte in angemessener Größe und Ausstattung den spezifischen Anforderungen des Rangs entsprechen.</NeedThroneAssignedDesc>
+
+  <UndignifiedThroneroom>Unwürdige Präsidialsuite</UndignifiedThroneroom>
+  <UndignifiedThroneroomDesc>Eine eurer Personen hat einen Präsidentenrang und einen Präsidentenstuhl, aber die Präsidialsuite erfüllt nicht die Anforderungen des Rangs.</UndignifiedThroneroomDesc>
+
+  <ThroneroomInvalidConfiguration>Präsidentenstuhl nicht nutzbar</ThroneroomInvalidConfiguration>
+  <ThroneroomInvalidConfigurationDesc>Ein Präsidentenstuhl ist aufgrund seiner Aufstellung nicht nutzbar:</ThroneroomInvalidConfigurationDesc>
+
+  <ThroneMustBePlacedInside>Präsidentenstuhl muss in Innräumen platziert werden.</ThroneMustBePlacedInside>
+  <ThroneRoomImpressivenessInfo>({0} Eindruck)</ThroneRoomImpressivenessInfo>
+  <ThroneMaxSatisfiedTitle>Erfüllt Rang</ThroneMaxSatisfiedTitle>
+
+  <AbilitySpeechDisabledNoThroneAssigned>Kein Präsidentenstuhl zugewiesen.</AbilitySpeechDisabledNoThroneAssigned>
+  <AbilitySpeechDisabledNoThroneIsNotAccessible>Präsidentenstuhl ist nicht erreichbar.</AbilitySpeechDisabledNoThroneIsNotAccessible>
+  <AbilitySpeechDisabledNoThroneUndignified>Präsidentenstuhl nicht nutzbar, da unwürdig.</AbilitySpeechDisabledNoThroneUndignified>
+  <AbilitySpeechTargetDescThrone>Standesgemäßer Präsidentenstuhl</AbilitySpeechTargetDescThrone>
+
+  <RoyalTitleSpeechAbilityGained>{PAWN_pronoun} kann jetzt Präsidentenansprachen vom Präsidentenstuhl halten. Wenn es gut läuft, werden die Zuhörer inspiriert sein. Wenn es schlecht läuft, wird die Ansprache sozialen Schaden anrichten. Das Ergebnis hängt von den sozialen Fähigkeiten von {PAWN_labelShort} ab.</RoyalTitleSpeechAbilityGained>
+
+  <!-- Bedroom / food alerts -->
+  <UndignifiedBedroom>Unwürdiges Schlafzimmer</UndignifiedBedroom>
+  <UndignifiedBedroomDesc>Eine eurer Personen hat einen Präsidentenrang, der ein Schlafzimmer mit bestimmten Merkmalen erfordert. Entweder ist kein Schlafzimmer zugewiesen, oder das zugewiesene Schlafzimmer erfüllt die Anforderungen nicht.</UndignifiedBedroomDesc>
+  <NeedBedroomAssigned>Rang erfordert Schlafzimmer</NeedBedroomAssigned>
+  <NeedBedroomAssignedDesc>Eine eurer Personen hat einen Präsidentenrang, der ein persönliches Schlafzimmer erfordert, aber es ist kein Schlafzimmer zugewiesen.\nWeist ein persönliches Schlafzimmer zu. Das Schlafzimmer sollte in angemessener Größe und Ausstattung den spezifischen Anforderungen des Rangs entsprechen.</NeedBedroomAssignedDesc>
+
+  <RoyalNoAcceptableFood>Kein akzeptables Essen</RoyalNoAcceptableFood>
+  <RoyalNoAcceptableFoodDesc>Eine eurer Personen hat einen Präsidentenrang mit bestimmten Essensanforderungen. Aber es ist kein Essen verfügbar, das diese Anforderungen erfüllt.</RoyalNoAcceptableFoodDesc>
+
+  <!-- Favor / ranks -->
+  <RoyalFavorDescription>Die Menge an {FACTION_royalFavorLabel} (Whitespring-Gunst), die euer Verhandlungsführer als Ergebnis dieses Handels persönlich erhält.</RoyalFavorDescription>
+  <QuestGivesRoyalFavor>Dieser Auftrag belohnt {FACTION_royalFavorLabel} und damit Whitespring-Ränge für {PAWN_labelShort}.</QuestGivesRoyalFavor>
+  <Reward_RoyalFavor>Wer den Auftrag angenommen hat, erhält {1} {0_royalFavorLabel} von {0_name}</Reward_RoyalFavor>
+  <Reward_RoyalFavor_ChoosePawn>Ihr dürft einen der teilnehmenden {2} auswählen, der {1} {0_royalFavorLabel} von {0_name} erhält</Reward_RoyalFavor_ChoosePawn>
+
+  <RoyalIncapableOfSocial>{PAWN_labelShort} ist nicht in der Lage, soziale Aufgaben zu übernehmen. Personen mit Whitespring-Rängen haben großen Bedarf an sozialen Fähigkeiten. Wenn {PAWN_labelShort} einen Rang erhält, könnte {PAWN_pronoun} Schwierigkeiten haben. Ein anderer Kolonist wäre möglicherweise sozial begabter.</RoyalIncapableOfSocial>
+  <RoyalWithConceitedTrait>Da {PAWN_labelShort} {2} ist, wird {PAWN_pronoun} darauf bestehen, dass die Privilegien des Rangs vollständig respektiert werden. {PAWN_labelShort} könnte bestimmte Arbeiten oder minderwertiges Essen verweigern und Dekrete erlassen. Ein anderer Kolonist wäre wahrscheinlich flexibler.</RoyalWithConceitedTrait>
+
+  <!-- Implants / weapons / permits -->
+  <RoyalImplantIllegalUseWarning>Laut den Gesetzen von {FACTION_name} muss man den erforderlichen Rang von {TITLE} haben, um {IMPLANT} legal zu nutzen.\n{VIOLATIONTRIGGER}, besteht die Chance, dass {FACTION_name} seine psychische Signatur erkennt. Dies wird diplomatische Konsequenzen nach sich ziehen.</RoyalImplantIllegalUseWarning>
+  <RoyalImplantInstallConfirmation>Dieses Implantat trotzdem installieren?</RoyalImplantInstallConfirmation>
+  <RoyalImplantUpgradeConfirmation>Dieses Implantat trotzdem verbessern?</RoyalImplantUpgradeConfirmation>
+  <RoyalWeaponEquipConfirmation>Seid ihr sicher, dass ihr diesen Gegenstand ausrüsten wollt?</RoyalWeaponEquipConfirmation>
+
+  <LetterRoyalTitlePermits>{PAWN_pronoun} hat diese Genehmigungen:</LetterRoyalTitlePermits>
+  <LetterRoyalTitleLostPermits>{PAWN_pronoun} hat diese Genehmigungen verloren:</LetterRoyalTitleLostPermits>
+  <LetterRoyalTitleDisabledWorkTag>{PAWN_pronoun} ist nicht bereit, diese Arbeitstypen auszuüben:\n{1}</LetterRoyalTitleDisabledWorkTag>
+
+  <LetterRoyalTitleSpeechAbilityGained>{PAWN_pronoun} kann jetzt Präsidentenansprachen vom Präsidentenstuhl halten. Wenn es gut läuft, werden die Zuhörer inspiriert sein. Wenn es schlecht läuft, wird die Ansprache sozialen Schaden anrichten. Das Ergebnis hängt von den sozialen Fähigkeiten von {PAWN_labelShort} ab.</LetterRoyalTitleSpeechAbilityGained>
+  <LetterRoyalTitleThroneroomRequirements>Dieser Rang erfordert eine Präsidialsuite, die diese Anforderungen erfüllt:{1}</LetterRoyalTitleThroneroomRequirements>
+  <LetterRoyalTitleBedroomRequirements>Dieser Rang erfordert ein Schlafzimmer, das diese Anforderungen erfüllt:{1}</LetterRoyalTitleBedroomRequirements>
+
+  <!-- Successor / inheritance (replace heir language) -->
+  <LetterRoyalTitleHeir>Falls {PAWN_pronoun} stirbt, wird dieser Rang als Nachfolger auf {HEIR_nameFull} übertragen.</LetterRoyalTitleHeir>
+  <LetterRoyalTitleNoHeir>Falls {PAWN_pronoun} stirbt, ist kein Nachfolger für diesen Rang bestimmt.</LetterRoyalTitleNoHeir>
+  <LetterRoyalTitleHeirFactionWarning>{PAWN_nameFull} ist Mitglied von {FACTION_name}.</LetterRoyalTitleHeirFactionWarning>
+  <LetterRoyalTitleChangingHeir>Ein neuer Nachfolger kann gewählt werden, indem {FACTION_name} über eine Kommunikationskonsole kontaktiert wird.</LetterRoyalTitleChangingHeir>
+  <LetterTitleHeirLostLabel>Nachfolger verloren</LetterTitleHeirLostLabel>
+  <LetterTitleHeirLost>{HEIR_nameFull} ist gestorben und hat {HOLDER_labelShort} ohne bestimmten Nachfolger für den von {FACTION_name} erhaltenen Rang zurückgelassen. Ihr könnt {FACTION_name} über eine Kommunikationskonsole kontaktieren, um einen neuen Nachfolger zu bestimmen.</LetterTitleHeirLost>
+  <LetterRoyalTitleCantBeInherited>Der Rang {TITLE} kann nicht vererbt werden.</LetterRoyalTitleCantBeInherited>
+
+  <!-- Decrees and bestowing -->
+  <LetterDecreeMentalBreak>{0_nameIndef} hat in einem Versuch, {0_possessive} Stress abzubauen, ein wildes Präsidentendekret erlassen und fordert nun dessen Umsetzung.</LetterDecreeMentalBreak>
+  <LetterRandomDecree>{0_nameIndef} hat zur Bestätigung {0_possessive} Rangs als {0_bestRoyalTitleIndef} ein Dekret erlassen und fordert nun dessen Umsetzung.</LetterRandomDecree>
+
+  <!-- Bestowing -> Inauguration replacements -->
+  <BestowerWaitingAlert>Whitespring-Gesandter wartet</BestowerWaitingAlert>
+  <BestowerWaitingAlertDesc>Ein Whitespring-Gesandter wartet, um die Amtseinführung zu beginnen.</BestowerWaitingAlertDesc>
+
+  <RitualBestowingCeremony>Amtseinführung</RitualBestowingCeremony>
+  <BestowingSpotUnavailable>Kein geeigneter Ort in der Nähe des Gesandten</BestowingSpotUnavailable>
+  <BeginCeremony>Amtseinführung für {0_labelShort} beginnen</BeginCeremony>
+  <BestowingCeremonyLabel>Amtseinführung</BestowingCeremonyLabel>
+  <BestowingOutcomeQualitySpecific>Die Gesamtqualität der Amtseinführung war {0}, bestimmt durch diese Faktoren</BestowingOutcomeQualitySpecific>
+
+  <MessageBestowerWaiting>Wählt {BESTOWER_definite} und klickt auf 'Amtseinführung beginnen', um die Zeremonie zu starten.</MessageBestowerWaiting>
+  <MessageBestowerUnreachable>Der Whitespring-Gesandte ist nicht erreichbar!</MessageBestowerUnreachable>
+  <MessageBestowingTargetIsBusy>{0} ist beschäftigt.</MessageBestowingTargetIsBusy>
+  <MessageBestowingSpotUnreachable>Der Whitespring-Gesandte ist verärgert über die Störung und hat beschlossen zu gehen.</MessageBestowingSpotUnreachable>
+  <MessageBestowingDanger>Der Whitespring-Gesandte geht wegen lebensbedrohlicher Gefahr.</MessageBestowingDanger>
+  <MessageBestowingDangerTemperature>Der Whitespring-Gesandte geht wegen lebensbedrohlicher Temperatur.</MessageBestowingDangerTemperature>
+  <MessageBestowingDangerGas>Der Whitespring-Gesandte geht wegen gefährlicher Gase in der Umgebung.</MessageBestowingDangerGas>
+  <MessageBestowingInterrupted>Die Amtseinführung wurde unterbrochen.</MessageBestowingInterrupted>
+  <MessageBestowingCeremonyStarted>Die Amtseinführung von {PAWN_definite} hat begonnen.</MessageBestowingCeremonyStarted>
+
+  <LetterLabelBestowingCeremonyExpired>Amtseinführung abgelaufen</LetterLabelBestowingCeremonyExpired>
+  <LetterTextBestowingCeremonyExpired>{TARGET_definite} ist nicht zur Amtseinführung erschienen. Die Zeremonie wurde abgesagt.</LetterTextBestowingCeremonyExpired>
+
+  <BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>Die Präsidialsuite von {PAWN_definite} erfüllt nicht die Anforderungen des Rangs {TITLE}.</BestowingCeremonyThroneroomRequirementsNotSatisfiedShort>
+  <BestowingCeremonyThroneroomRequirementsNotSatisfied>Der Gesandte ist beleidigt, dass die Präsidialsuite von {PAWN_definite} nicht die Anforderungen des Rangs {TITLE} erfüllt. Die Amtseinführung wurde abgesagt.</BestowingCeremonyThroneroomRequirementsNotSatisfied>
+
+  <CommandLeaveBestowingCeremony>Amtseinführung verlassen</CommandLeaveBestowingCeremony>
+  <CommandLeaveBestowingCeremonyDesc>Teilnahme an der Amtseinführung beenden.</CommandLeaveBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremony>Amtseinführung abbrechen</CommandCancelBestowingCeremony>
+  <CommandCancelBestowingCeremonyDesc>Die Amtseinführung sofort beenden. Der Gesandte wird gehen, aber eine weitere Gelegenheit zur Durchführung der Amtseinführung wird sich bald ergeben.</CommandCancelBestowingCeremonyDesc>
+  <CommandCancelBestowingCeremonyConfirm>Seid ihr sicher, dass ihr die Amtseinführung abbrechen wollt?</CommandCancelBestowingCeremonyConfirm>
+
+  <!-- Tribute / envoy -->
+
+  <!-- Meditation focus info -->
+  <LetterPsylinkLevelGained_First>{USER_labelShort} hat {USER_possessive} erste Stufe der Psylink erlangt! {USER_pronoun} ist jetzt ein Psycaster.
+
+Um psychische Kräfte zu nutzen, muss {USER_labelShort} Psyfokus durch Meditation aufbauen. Die Wirksamkeit dieser Meditation wird erhöht, wenn die Person sich während der Meditation auf ein bestimmtes Objekt konzentrieren kann.
+
+Verschiedene Personen können sich auf verschiedene Objekte konzentrieren. Dies hängt von den Hintergrundgeschichten, Eigenschaften und Rängen der Person ab. Zum Beispiel:
+
+- Psycaster mit Präsidententiteln meditieren an ihrem Präsidentenstuhl.
+- Psycaster mit Stammes-Kindheit meditieren an Animabäumen und Naturschreinen.
+- Asketische Psycaster meditieren an leeren Wänden.
+- Psychopathische Psycaster meditieren an Gräbern, idealerweise mit einer geliebten Person darin.
+
+Du kannst die Meditationsfokus-Typen einer Person sehen, indem du ihre Infokarte mit dem 'i'-Button öffnest.</LetterPsylinkLevelGained_First>
+
+  <!-- Gameplay commands / permits -->
+  <CommandCallRoyalAid>Enclave-Hilfe rufen...</CommandCallRoyalAid>
+  <CommandCallRoyalAidDesc>Hilfe mit einer speziellen Genehmigung anfordern.
+
+Jede Art von Hilfe kann einmal kostenlos genutzt werden, danach müsst ihr warten, um sie erneut kostenlos nutzen zu können. Ihr könnt die Hilfe häufiger nutzen, aber das kostet Gunst.</CommandCallRoyalAidDesc>
+  <CommandCallRoyalAidFavorOption>{0} Tage verbleibend, kostet {1} {FACTION_royalFavorLabel}</CommandCallRoyalAidFavorOption>
+  <ChooseRoyalPermit>Genehmigung wählen</ChooseRoyalPermit>
+  <ChooseRoyalPermit_Desc>Den Genehmigungs-Auswahlbildschirm öffnen und eine neue Genehmigung wählen.</ChooseRoyalPermit_Desc>
+
+  <!-- Tooltip / UI -->
+  <RoyalFavorTip>Ihr könnt einen eurer {0} auswählen, der {1} {2} von {3_name} erhält.
+
+Durch den Erhalt von {2} steigt ihr in Rängen auf. Ränge bringen Psylink-Belohnungen und spezielle Genehmigungen wie militärische Hilfe. Allerdings benötigen {0} mit höheren Rängen auch bestimmte Kleidung und Schlafzimmerausstattung.</RoyalFavorTip>
+  <WorkDisabledByRoyalTitle>Deaktiviert durch Rang {0}</WorkDisabledByRoyalTitle>
+  <RoyalTitleTooltipHasTitle>{PAWN_labelShort} hat derzeit den Rang {TITLE}, verliehen von {FACTION_name}.</RoyalTitleTooltipHasTitle>
+  <RoyalTitleTooltipConceited>{PAWN_labelShort} wird darauf bestehen, dass die Privilegien dieses Rangs vollständig respektiert werden.</RoyalTitleTooltipConceited>
+  <RoyalTitleTooltipNonConceited>{PAWN_labelShort} ist flexibel bezüglich der Privilegien dieses Rangs.</RoyalTitleTooltipNonConceited>
+  <RoyalTitleTooltipNextTitle>Nächster Rang</RoyalTitleTooltipNextTitle>
+  <RoyalTitleTooltipNextTitleFavorCost>Kostet {0} {FACTION_royalFavorLabel}</RoyalTitleTooltipNextTitleFavorCost>
+
+  <!-- Dialogs / heir -> successor -->
+  <RequestChangeRoyalHeir>Nachfolger von {HOLDER_labelShort}s Rang {TITLE} von {HEIR_labelShort} ändern</RequestChangeRoyalHeir>
+  <RequestSetRoyalHeir>Nachfolger für {HOLDER_labelShort}s Rang {TITLE} bestimmen</RequestSetRoyalHeir>
+
+</LanguageData>

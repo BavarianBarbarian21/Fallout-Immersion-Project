@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <VGE_TargetingTerminalCanOnlyLinkWithGravshipArtillery>Targeting terminal can only link with gravship artillery.</VGE_TargetingTerminalCanOnlyLinkWithGravshipArtillery>
+    <VGE_NeedsLinkedTargetingTerminal>Needs a linked targeting terminal.</VGE_NeedsLinkedTargetingTerminal>
+    <VGE_LinkWithTerminal>Link with a terminal</VGE_LinkWithTerminal>
+    <VGE_LinkWithTerminalDesc>Select a targeting terminal to link with. A targeting terminal is required to operate gravship artillery.</VGE_LinkWithTerminalDesc>
+    <VGE_UnlinkWithTerminal>Unlink with a terminal</VGE_UnlinkWithTerminal>
+    <VGE_UnlinkWithTerminalDesc>Break the current link to a targeting terminal, allowing you to link with a different one.</VGE_UnlinkWithTerminalDesc>
+    <VGE_SelectLinkedTerminal>Select linked terminal</VGE_SelectLinkedTerminal>
+    <VGE_SelectLinkedTerminalDesc>Show the linked targeting terminal.</VGE_SelectLinkedTerminalDesc>
+    <VGE_SetWorldTarget>Set world target</VGE_SetWorldTarget>
+    <VGE_SetWorldTargetDesc>Set the target on the world map for the gravship artillery to fire at. Shots fired over the world map are less accurate. Can only fire at revealed locations.</VGE_SetWorldTargetDesc>
+    <VGE_NeedsMannedTargetingTerminal>Needs a manned targeting terminal.</VGE_NeedsMannedTargetingTerminal>
+    <VGE_LinkWithTurret>Link with a turret</VGE_LinkWithTurret>
+    <VGE_LinkWithTurretDesc>Select a turret to link with. This targeting terminal will be used to operate that turret.</VGE_LinkWithTurretDesc>
+    <VGE_UnlinkWithTurret>Unlink turret</VGE_UnlinkWithTurret>
+    <VGE_UnlinkWithTurretDesc>Break the current link to a turret, allowing you to link with a different turret.</VGE_UnlinkWithTurretDesc>
+    <VGE_SelectLinkedTurret>Select linked turret</VGE_SelectLinkedTurret>
+    <VGE_SelectLinkedTurretDesc>Show the linked turret.</VGE_SelectLinkedTurretDesc>
+    <VGE_GravshipArtilleryNeedsVisibleMap>Gravship artillery needs to target a visible, explored map.</VGE_GravshipArtilleryNeedsVisibleMap>
+    <VGE_GravshipArtilleryOutOfRange>Target is out of range.</VGE_GravshipArtilleryOutOfRange>
+    <VGE_GravshipArtilleryInvalidFiringMode>Artillery cannot fire in this direction.</VGE_GravshipArtilleryInvalidFiringMode>
+    <VGE_GravshipArtilleryInvalidGroundToSpace>Artillery cannot fire from planet to space.</VGE_GravshipArtilleryInvalidGroundToSpace>
+    <VGE_GravshipArtilleryInvalidSpaceToSpace>Artillery cannot fire from space to space.</VGE_GravshipArtilleryInvalidSpaceToSpace>
+    <VGE_GravshipArtilleryInvalidSpaceToGround>Artillery cannot fire from space to ground.</VGE_GravshipArtilleryInvalidSpaceToGround>
+    <VGE_GravshipArtilleryInvalidGroundToGround>Artillery cannot fire from ground to ground</VGE_GravshipArtilleryInvalidGroundToGround>
+    <VGE_ConfirmCrashLanding>Landing on this location will be considered a crash. Any highlighted structures underneath the gravship will damage any structures on the gravship in corresponding locations.\n\nThe substructure may also become damaged and will need replacing before the next launch.\n\nSome indestructible objects underneath may completely destroy the substructure and any objects on it.\n\nConsider picking a different landing zone.</VGE_ConfirmCrashLanding>
+    <VGE_CrashLandingWarning>Landing on this location will be considered a crash and will damage the gravship.</VGE_CrashLandingWarning>
+    <VGE_CannotLandIndestructibleObstacles>Can’t land here due to indestructible obstacles present. Choose another landing location.</VGE_CannotLandIndestructibleObstacles>
+
+    <!-- Vac checkpoints -->
+    <VGE_VacCheckpoint_SetVacuumResistance>Set desired vacuum resistance</VGE_VacCheckpoint_SetVacuumResistance>
+    <VGE_VacCheckpoint_SetVacuumResistanceDesc>Set the percentage of vacuum resistance required to cross through this checkpoint. Colonists without sufficient vacuum resistance will not naturally path through this checkpoint. Does not affect drafted colonists.</VGE_VacCheckpoint_SetVacuumResistanceDesc>
+    <VGE_VacCheckpoint_VacuumResistancePercent>Vacuum resistance: {0_percentage}</VGE_VacCheckpoint_VacuumResistancePercent>
+    <VGE_VacCheckpoint_MinimumVacuumResistance>Minimum vacuum resistance: {0_percentage}</VGE_VacCheckpoint_MinimumVacuumResistance>
+    <VGE_VacCheckpoint_AllowDrafted>Drafted colonists always allowed passage</VGE_VacCheckpoint_AllowDrafted>
+    <VGE_VacCheckpoint_DisallowDrafted>Drafted colonists check for vacuum resistance</VGE_VacCheckpoint_DisallowDrafted>
+    <VGE_VacCheckpoint_AllowDraftedCheckbox>Always allow drafted</VGE_VacCheckpoint_AllowDraftedCheckbox>
+
+    <!-- Oxygen packs -->
+    <VGE_OxygenPackInactive>inactive</VGE_OxygenPackInactive>
+    <VGE_OxygenUnits>oxygen u³</VGE_OxygenUnits>
+    <VGE_OxygenDrainIfActive>Oxygen drain per day (if active): {0} u³</VGE_OxygenDrainIfActive>
+    <VGE_OxygenReplenishAt>Replenish oxygen at: {0} u³</VGE_OxygenReplenishAt>
+    <VGE_OxygenReplenishDisabled>Automatic replenishment of oxygen disabled.</VGE_OxygenReplenishDisabled>
+    <VGE_OxygenReplenishOnOffDesc>This determines whether {PAWN_nameDef} will automatically replenish oxygen canisters when oxygen in {PAWN_possessive} equipment is below {MIN} u³.\n\nAutomatic oxygen replenishment is currently {ONOFF}.</VGE_OxygenReplenishOnOffDesc>
+    <VGE_OxygenReplenishOnOffNoWearerDesc>This determines whether the wearer will automatically replenish oxygen canisters when oxygen in their equipment is below {MIN} u³.\n\nAutomatic oxygen replenishment is currently {ONOFF}.</VGE_OxygenReplenishOnOffNoWearerDesc>
+    <VGE_IneffectiveOxygenPack>Ineffective oxygen pack</VGE_IneffectiveOxygenPack>
+    <VGE_IneffectiveOxygenPackDesc>Someone is wearing an oxygen pack without any vacuum-protective apparel. The oxygen pack will not work. Consider equipping other vacuum-resistant apparel.\n\nColonists without vacuum-protective apparel:</VGE_IneffectiveOxygenPackDesc>
+    <VGE_EquippingIneffectiveOxygenPack>{PAWN} is equipping an oxygen pack without wearing vacuum resistant gear. {APPAREL_labelNoParenthesis} will not work.</VGE_EquippingIneffectiveOxygenPack>
+    <VGE_EquippingOnOtherIneffectiveOxygenPack>{PAWN} is equipping an oxygen pack on {TARGET} without wearing vacuum resistant gear. {APPAREL_labelNoParenthesis} will not work.</VGE_EquippingOnOtherIneffectiveOxygenPack>
+    <VGE_Refill>Reload {GEAR_labelShort} with {AMMO_label}</VGE_Refill>
+    <VGE_RefillCannotCarryEnough>Cannot carry enough {AMMO_label} to refill 1 charge.</VGE_RefillCannotCarryEnough>
+
+    <!-- Low oxygen alerts -->
+    <VGE_Alert_LowOxygen>Low oxygen</VGE_Alert_LowOxygen>
+    <VGE_Alert_LowOxygenExplanation>You are dangerously low on oxygen.\n\n    Oxygen in storage: {0}u³\n    Colonists and prisoners breathing oxygen: {1}\n\nWhen oxygen runs out, the gravship will start filling with vacuum.</VGE_Alert_LowOxygenExplanation>
+
+    <!-- Death from vacuum exposure inspect string -->
+    <VGE_ResistantToVacuumExposure>resistant to vacuum</VGE_ResistantToVacuumExposure>
+    <VGE_TimeUntilVacuumExposureDeath>death from vacuum exposure in {0}</VGE_TimeUntilVacuumExposureDeath>
+
+    <VGE_HeatsinkHeatStored>{0} / {1} heat units</VGE_HeatsinkHeatStored>
+    <VGE_AbsorbGravheat>Absorb gravheat</VGE_AbsorbGravheat>
+    <VGE_AbsorbGravheatDesc>Flush any remaining structural heat from the grav engine onto this gravheat absorber, allowing for an immediate gravship launch. Gravheat absorber will enter a long cooldown period during which it can't absorb any more heat.</VGE_AbsorbGravheatDesc>
+    <VGE_NoGravEngine>No grav engine found</VGE_NoGravEngine>
+    <VGE_NoCooldownToAbsorb>No cooldown to absorb</VGE_NoCooldownToAbsorb>
+    <VGE_GravheatAbsorberCoolingDown>Gravheat absorber is cooling down. Available in: {0}</VGE_GravheatAbsorberCoolingDown>
+    <VGE_LaunchGravAnchorCooldownInfo>However, landing in a location containing a grav anchor will completely remove the launch cooldown.</VGE_LaunchGravAnchorCooldownInfo>
+    <VGE_LaunchHeatsinkCooldownInfo>The heatsinks will reduce the launch cooldown time by {0}.</VGE_LaunchHeatsinkCooldownInfo>
+    <VGE_LaunchFuelAndHeatUnitsInfo>This launch will use {0} astrofuel and generate about {0} heat units, raising the temperature across the gravship.</VGE_LaunchFuelAndHeatUnitsInfo>
+
+    <VGE_DesignatorRemoveSubstructure>Remove substructure</VGE_DesignatorRemoveSubstructure>
+    <VGE_DesignatorRemoveSubstructureDesc>Remove substructure from the gravship.</VGE_DesignatorRemoveSubstructureDesc>
+
+    <VGE_MapDecisionText>Your gravship has launched. You can now decide whether you want to keep the previous map around, or if you want to discard it.
+
+If you keep it around, it will still be present as a colony map until you abandon it.
+
+If you discard it, it may be replaced by an abandoned settlement, returned to its original owner, turned back into a special/quest location, or destroyed.
+Please note that keeping several maps open may affect your performance.</VGE_MapDecisionText>
+    <VGE_MapDecisionSettleText>Your gravship has launched. You can now decide whether you want to settle the previous map.
+
+If you settle it, it will still be present as a colony map until you abandon it.
+
+If you decide to not settle it, the map will still be kept around until it is discarded automatically. It is currently kept around due to you having colonists in there, a shuttle or drop pods travelling there, or some special building present on the map.
+Please note that keeping several maps open may affect your performance.</VGE_MapDecisionSettleText>
+    <VGE_KeepMap>Keep the map</VGE_KeepMap>
+    <VGE_DiscardMap>Discard the map</VGE_DiscardMap>
+    <VGE_SettleMap>Settle map</VGE_SettleMap>
+    <VGE_DontSettle>Don't settle</VGE_DontSettle>
+
+    <VGE_RapidlyDeterioratingInSpace>Rapidly deteriorating due to the vacuum of space.</VGE_RapidlyDeterioratingInSpace>
+    <ConfirmGravEngineLaunch>Are you sure you want to launch?\n\nYou will be given a choice to keep the current map as well as anything not on gravship substructure, but if you choose to discard it, it will be permanently lost.</ConfirmGravEngineLaunch>
+
+    <!-- Messages related to multiple gravships -->
+    <VGE_BuildSingleGravEngineOnly>You can't build {0} if you already have another grav engine.</VGE_BuildSingleGravEngineOnly>
+    <VGE_BuildSingleGravEngineBuildBlueprintOnly>You can't build {0} if you already have another grav engine under construction.</VGE_BuildSingleGravEngineBuildBlueprintOnly>
+    <VGE_InstallSingleGravEngineOnMap>You can't install {0} if there's another grav engine present nearby.</VGE_InstallSingleGravEngineOnMap>
+    <VGE_InstallSingleGravEngineBuildBlueprintOnly>You can't install {0} if you already have another grav engine under construction nearby.</VGE_InstallSingleGravEngineBuildBlueprintOnly>
+    <VGE_InstallSingleGravEngineInstallBlueprintOnly>You can't install {0} if there's another grav engine blueprint nearby.</VGE_InstallSingleGravEngineInstallBlueprintOnly>
+    <!-- For example: "Grav engine disabled: Multiple grav engines present" -->
+    <VGE_GravEngineDisabled>Grav engine disabled:</VGE_GravEngineDisabled>
+    <!-- Disabled message for gravship launch ritual when there's multiple gravship engines present. Should hopefully never happen. -->
+    <!-- Also used for grav engines tooltip when there's another one present. -->
+    <VGE_MultipleGravEnginesPresent>multiple grav engines present</VGE_MultipleGravEnginesPresent>
+    <!-- Disabled message for gravship launch ritual when there's a gravship currently travellingo on the world. Should hopefully never happen. -->
+    <VGE_GravshipCurrentlyActive>another gravship is currently active</VGE_GravshipCurrentlyActive>
+    <!-- Disabled message for gravship launch ritual when there's another gravship launch ritual active. Should hopefully never happen. -->
+    <VGE_GravshipLaunchCurrentlyActive>another gravship is currently preparing to launch</VGE_GravshipLaunchCurrentlyActive>
+
+    <!-- Mod options -->
+
+    <VGE_OrbitObjectsMultiplier>Orbital objects multiplier</VGE_OrbitObjectsMultiplier>
+    <VGE_OrbitObjectsMultiplierDesc>By default the game will try to keep 3,8,12 or 20 locations in orbit (depending on globe coverage of the planet). With this slider you can apply a multiplier to this number, making your planet orbits super sparse or very cluttered!</VGE_OrbitObjectsMultiplierDesc>
+    <VGE_Reset>Reset</VGE_Reset>
+    <VGE_More>More</VGE_More>
+
+    <!-- World objects -->
+
+    <VGE_SoildIceAsteroid>Solid ice with traces of {RESOURCE_label}</VGE_SoildIceAsteroid>
+
+    <!-- Map incidents -->
+
+    <VGE_CannotLaunchGravAnomaly>Can’t launch the gravship due to a gravitational anomaly</VGE_CannotLaunchGravAnomaly>
+
+    <!-- Maintenance -->
+
+    <VGE_Maintenance>Part maintenance: {0}</VGE_Maintenance>
+    <VGE_Maintain>Maintain part</VGE_Maintain>
+    <VGE_Alert_LowMaintenance>Gravship maintenance low</VGE_Alert_LowMaintenance>
+    <VGE_Alert_LowMaintenance_Desc>Some gravship components have low maintenance. This can result in negative launch outcomes and eventual break downs. Consider assigning a colonist to maintain them. Gravship components with low maintenance:\n\n {0}</VGE_Alert_LowMaintenance_Desc>
+    <VGE_StatsReport_GravEngineGlobalMaintenanceSensitivity>Global maintenance sensitivity</VGE_StatsReport_GravEngineGlobalMaintenanceSensitivity>
+
+    <VGE_SetDesiredMaintenance>Set desired maintenance</VGE_SetDesiredMaintenance>
+    <VGE_SetDesiredMaintenanceDesc>Set the desired maintenance for all gravship components on this gravship. Colonists assigned to construction will maintain the structures if they fall below the set level.</VGE_SetDesiredMaintenanceDesc>
+
+    <!-- Gravdata -->
+    <VGE_GravdataYieldInfo>Estimated gravdata yield: {0}</VGE_GravdataYieldInfo>
+    <VGE_NoGravtechProjectSelected>No gravtech research project selected. Launching will not yield any gravdata.</VGE_NoGravtechProjectSelected>
+    <VGE_LaunchBoonChanceInfo>With the current predictions, there is a {0}% chance for a positive boon to happen.</VGE_LaunchBoonChanceInfo>
+    <VGE_LaunchBoonOutcomeChanceLetterExtra>Based on the gravship's launch, there was a {0_percentage} chance of a positive outcome.</VGE_LaunchBoonOutcomeChanceLetterExtra>
+    <VGE_GravdataStored>Gravdata stored: {0}</VGE_GravdataStored>
+    <VGE_GravdataStoredInfo>Stored gravdata will automatically be applied to the selected gravtech research project on next landing.</VGE_GravdataStoredInfo>
+    <VGE_ConvertGravdata>Convert gravdata</VGE_ConvertGravdata>
+    <VGE_ConvertGravdataDesc>Convert stored gravdata into points towards the chosen non-gravtech research project. Conversion rate is one to one.</VGE_ConvertGravdataDesc>
+    <VGE_NoNonGravtechProjectSelected>No non-gravtech research project selected.</VGE_NoNonGravtechProjectSelected>
+    <VGE_ConvertedGravdataToResearch>Converted {0} gravdata to research points for {1}.</VGE_ConvertedGravdataToResearch>
+    <VGE_EscapePodCrash>Escape pod crash</VGE_EscapePodCrash>
+    <VGE_EscapePodCrashDesc>A damaged escape pod has crashed on the map. It can be hacked open to reveal what's inside.</VGE_EscapePodCrashDesc>
+
+    <!-- Gravlift -->
+    <VGE_LaunchToOrbit>Launch to orbit</VGE_LaunchToOrbit>
+    <VGE_LaunchToOrbitDesc>Launch the gravship directly upwards and stabilize it in orbit. This is still considered a gravship journey and the grav engine will enter cooldown, potentially leaving you stranded in orbit.</VGE_LaunchToOrbitDesc>
+    <VGE_CantLaunchAlreadyInOrbit>Can't use: already in orbit.</VGE_CantLaunchAlreadyInOrbit>
+
+    <VGE_MechanoidPodGestation>{0} pod gestation completes in: {1}.</VGE_MechanoidPodGestation>
+    <VGE_MechanoidPodsLeft>Remaining mechanoid pods to complete: {0}.</VGE_MechanoidPodsLeft>
+    <VGE_RemainingShieldTime>Remaining shield time: {0}</VGE_RemainingShieldTime>
+    <VGE_CooldownRemaining>Cooldown remaining: {0}</VGE_CooldownRemaining>
+    <VGE_ResourceProcessorInfo>{0} {1} production completes in: {2}\nRemaining production processes to complete: {3}</VGE_ResourceProcessorInfo>
+
+    <!-- Chemfuel to astrofuel replacements -->
+    <VGE_StoredAstrofuel>stored astrofuel</VGE_StoredAstrofuel>
+    <VGE_AstrofuelPerTile>{0} astrofuel per tile</VGE_AstrofuelPerTile>
+
+    <!-- Astrofire alert -->
+    <VGE_AstrofireInHomeArea>Astrofire!</VGE_AstrofireInHomeArea>
+    <VGE_AstrofireInHomeAreaDesc>There is an astrofire in the home area.</VGE_AstrofireInHomeAreaDesc>
+
+    <VGE_RequiresSubstructureOrScaffolding>Requires substructure or scaffold to be build on.</VGE_RequiresSubstructureOrScaffolding>
+
+    <!-- Odyssey architect tab -->
+    <VGE_NoAvailableDesignators>No available designators</VGE_NoAvailableDesignators>
+
+    <!-- Vac barrier color picker -->
+    <VGE_ColorPickerValue>brightness</VGE_ColorPickerValue>
+    <VGE_ColorPickerValueTooltip>Choose a color by setting the color brightness.\n\nBrightness refers to "value" from HSV color model - hue, saturation, and value/brightness.</VGE_ColorPickerValueTooltip>
+    <VGE_MustBePlacedInRangeOfGravSource>Must be placed in range of a grav engine or grav field amplifier.</VGE_MustBePlacedInRangeOfGravSource>
+    <!-- Vac barrier roof -->
+    <VGE_DesignatorAreaBuildVacBarrierRoofExpand>Build vac barrier roof area</VGE_DesignatorAreaBuildVacBarrierRoofExpand>
+    <VGE_DesignatorAreaBuildVacBarrierRoofExpandDesc>Colonists will build vac barrier roofs in this area.</VGE_DesignatorAreaBuildVacBarrierRoofExpandDesc>
+    <VGE_DesignatorAreaNoVacBarrierRoofExpand>Remove vac barrier roof area</VGE_DesignatorAreaNoVacBarrierRoofExpand>
+    <VGE_DesignatorAreaNoVacBarrierRoofExpandDesc>Colonists will remove vac barrier roofs in this area.</VGE_DesignatorAreaNoVacBarrierRoofExpandDesc>
+    <!-- Vac barrier roof recoloring designator -->
+    <VGE_DesignatorRecolorVacBarrierRoof>Recolor vac barrier roofs...</VGE_DesignatorRecolorVacBarrierRoof>
+    <VGE_DesignatorRecolorVacBarrierRoofDesc>Immediately recolor any vac barrier roofs.</VGE_DesignatorRecolorVacBarrierRoofDesc>
+    <VGE_ColorPickerMenu>Select any color using a color picker menu.</VGE_ColorPickerMenu>
+    <VGE_DesignatorEyeDropperDesc_Universal>Grab a color from an existing vac barrier roof, building, or a floor.</VGE_DesignatorEyeDropperDesc_Universal>
+    <VGE_GrabVacBarrierRoofColor>Grab vac barrier roof color</VGE_GrabVacBarrierRoofColor>
+    <VGE_GrabBuildingColor>Grab {BUILDING_labelNoParenthesis} color: {COLOR}</VGE_GrabBuildingColor>
+    <VGE_GrabFloorColor>Grab floor color: {COLOR}</VGE_GrabFloorColor>
+    <VGE_SelectColorFromTile>Select specific color from tile</VGE_SelectColorFromTile>
+
+    <!-- Grav engine inspection replacement text (overwrites Odyssey's) -->
+
+    <GravEngineInspectedLetterContents>Amongst the remnants of the crashed gravship, a still-intact gravjumper engine hums with energy.\n\nIt is possible to repair the substructure, but various components of the gravship are beyond saving. The engine pushes against gravity, levitating the ship and allowing long-distance travel. By travelling, you may unlock the technology that will give you an opportunity to rebuild these systems and more.\n\nLaunch a gravship by scaling it down, fixing damaged substructure and replacing damaged thrusters and astrofuel tanks. Refine more astrofuel in the biofuel refinery and select a gravtech research project to progress as you travel and stress the grav engine.\n\nLaunching a gravship will give you an option to abandon your current map.\n\n  - Research project completed: Basic gravtech\n  - Flooring unlocked: Gravship substructure\n  - Wall unlocked: Gravship hull\n  - Structures unlocked: Pilot cockpit, Gravjumper engine, Small thruster, Small astrofuel tank, Astrofuel pipe, Astrofuel valve, Astrofuel tap, Astrofuel drain, Grav field extender\n  - Recipe unlocked: Make astrofuel from chemfuel</GravEngineInspectedLetterContents>
+
+    <!-- Agrocell text -->
+    <VGE_AgrocellSunLampEnable>Turn sun lamp on</VGE_AgrocellSunLampEnable>
+    <VGE_AgrocellSunLampDisable>Turn sun lamp off</VGE_AgrocellSunLampDisable>
+    <VGE_AgrocellSunLampDesc>Keeping the sun lamp on will make the agrocell produce light during the day, increasing power usage and allowing most plants to grow. However, disabling it allows for plants that require darkness to grow while saving some power at the same time.</VGE_AgrocellSunLampDesc>
+
+    <!-- Role abilities -->
+
+    <VGE_MustTargetPilotConsole>This ability needs to target a pilot console.</VGE_MustTargetPilotConsole>
+    <VGE_RenameAsteroid>A new discovery!</VGE_RenameAsteroid>
+    <VGE_RenameAsteroidDesc>Since {0} was the first to discover the {1} nearby, they get to name it.</VGE_RenameAsteroidDesc>
+    <VGE_IsIncapableOfIntellectualLower>{1_labelShort} is incapable of intellectual work</VGE_IsIncapableOfIntellectualLower>
+
+    <!-- Replacements for PilotGravship key based on the console/engine -->
+    <VGE_PilotGravjumper>Launch gravjumper</VGE_PilotGravjumper>
+    <VGE_PilotGravhulk>Launch gravhulk</VGE_PilotGravhulk>
+    <VGE_GravtechNeedsGravdata>{0} needs gravdata to complete. Obtain gravdata by travelling with your gravship.</VGE_GravtechNeedsGravdata>
+
+    <!-- Replace pursuing mechanoids text with same but, but use the gravship itself as an argument. -->
+    <VGE_LetterTextMechanoidThreat>The mechhive's scanning process is close to determining your location. When it locates your {GRAVSHIP}, it will send a massive mechanoid force to kill you.\n\nGather your supplies, then flee the map by selecting the {CONSOLE}, and selecting launch.</VGE_LetterTextMechanoidThreat>
+
+    <!-- Simple "gravship" style text, without the engine part. -->
+    <!-- First, it's used for the {GRAVSHIP} argument text above. Second, it's used for replacing the "gravship" name of unnamed gravship world object. -->
+    <VGE_Gravjumper>gravjumper</VGE_Gravjumper>
+    <VGE_Gravship>gravship</VGE_Gravship>
+    <VGE_Gravhulk>gravhulk</VGE_Gravhulk>
+
+    <!-- Scanner cluster -->
+    <VGE_ScannerCluster_TunedToNothing>Nothing</VGE_ScannerCluster_TunedToNothing>
+    <VGE_ScannerCluster_RandomResource>Random deep resource</VGE_ScannerCluster_RandomResource>
+    <VGE_ScannerCluster_TunedToOrbitalScanning>Passive orbital scanning</VGE_ScannerCluster_TunedToOrbitalScanning>
+    <VGE_ScannerCluster_UndergroundResource>Deep {RESOURCE}</VGE_ScannerCluster_UndergroundResource>
+    <VGE_ScannerCluster_LongRangeResource>Long-range {RESOURCE}</VGE_ScannerCluster_LongRangeResource>
+    <VGE_ScannerCluster_MissingResearchPrerequisite>Missing {RESEARCH_label} research</VGE_ScannerCluster_MissingResearchPrerequisite>
+    <VGE_ProtectingFromSpaceSolarFlare>Protecting from space solar flare</VGE_ProtectingFromSpaceSolarFlare>
+    <VGE_GravcoreTax>gravcore tax</VGE_GravcoreTax>
+</LanguageData>
