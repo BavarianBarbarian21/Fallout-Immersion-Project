@@ -258,22 +258,31 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             case HHToolsFactionPoliticalSystem.Civilized:
                 foreach (HHToolsCivilizedPartyState partyState in state.civilizedParties)
                 {
-                    if (partyState.leaderPawn == null || partyState.leaderPawn.Discarded)
+                    if (NeedsRepresentative(partyState.leaderPawn))
                     {
                         partyState.leaderPawn = GenerateRepresentative(state.faction, representativePawnKind);
                     }
+
+                    EnsureRepresentativeOutfit(partyState.leaderPawn);
                 }
                 break;
             case HHToolsFactionPoliticalSystem.Authoritarian:
                 foreach (HHToolsCrimeBossState bossState in state.crimeBosses)
                 {
-                    if (bossState.leaderPawn == null || bossState.leaderPawn.Discarded)
+                    if (NeedsRepresentative(bossState.leaderPawn))
                     {
                         bossState.leaderPawn = GenerateRepresentative(state.faction, representativePawnKind);
                     }
+
+                    EnsureRepresentativeOutfit(bossState.leaderPawn);
                 }
                 break;
         }
+    }
+
+    private static bool NeedsRepresentative(Pawn pawn)
+    {
+        return pawn == null || pawn.Discarded || pawn.Name == null;
     }
 
     private static Pawn GenerateRepresentative(Faction faction, PawnKindDef pawnKind)
@@ -285,7 +294,55 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
         };
 
         Pawn pawn = PawnGenerator.GeneratePawn(request);
+        if (pawn?.Name == null)
+        {
+            pawn.Name = PawnBioAndNameGenerator.GeneratePawnName(pawn, NameStyle.Full)
+                ?? new NameSingle(faction?.Name ?? pawnKind.label?.CapitalizeFirst() ?? "Leader");
+        }
+
+        EnsureRepresentativeOutfit(pawn);
+
         Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.KeepForever);
         return pawn;
+    }
+
+    private static void EnsureRepresentativeOutfit(Pawn pawn)
+    {
+        if (pawn?.apparel == null)
+        {
+            return;
+        }
+
+        if (!HasOnSkinCoverage(pawn, BodyPartGroupDefOf.Legs))
+        {
+            TryWearRepresentativeApparel(pawn, "Apparel_Pants");
+        }
+
+        if (!HasOnSkinCoverage(pawn, BodyPartGroupDefOf.Torso))
+        {
+            TryWearRepresentativeApparel(pawn, "Apparel_CollarShirt");
+        }
+    }
+
+    private static bool HasOnSkinCoverage(Pawn pawn, BodyPartGroupDef bodyPartGroup)
+    {
+        return pawn.apparel.WornApparel.Any(apparel =>
+            apparel.def.apparel != null
+            && apparel.def.apparel.layers.Contains(ApparelLayerDefOf.OnSkin)
+            && apparel.def.apparel.bodyPartGroups.Contains(bodyPartGroup));
+    }
+
+    private static void TryWearRepresentativeApparel(Pawn pawn, string apparelDefName)
+    {
+        ThingDef apparelDef = DefDatabase<ThingDef>.GetNamedSilentFail(apparelDefName);
+        if (apparelDef == null)
+        {
+            return;
+        }
+
+        ThingDef stuffDef = GenStuff.DefaultStuffFor(apparelDef);
+        Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef, stuffDef);
+        PawnGenerator.PostProcessGeneratedGear(apparel, pawn);
+        pawn.apparel.Wear(apparel, dropReplacedApparel: false);
     }
 }

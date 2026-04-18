@@ -1,6 +1,7 @@
 param(
     [string]$SourceRoot = 'D:\Steam\steamapps\workshop\content\294100',
     [string]$DestinationRoot,
+    [string]$LanguageFolderName = 'German',
     [string[]]$LookupRoots,
     [switch]$Clean
 )
@@ -21,7 +22,7 @@ trap {
 }
 
 $translationModName = 'FIP-Translation Part 3'
-$languageFolderName = 'German'
+$languageFolderName = $LanguageFolderName
 $reportDirectory = Join-Path $PSScriptRoot 'Reports'
 $repositoryRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $script:XmlDocumentCache = @{}
@@ -56,6 +57,34 @@ function ConvertTo-SafeFileStem {
 
     $sanitized = [System.Text.RegularExpressions.Regex]::Replace($Value, '[^A-Za-z0-9]+', '_')
     return $sanitized.Trim('_')
+}
+
+function Get-MinimalRootSet {
+    param([string[]]$Roots)
+
+    $selected = New-Object 'System.Collections.Generic.List[string]'
+    $normalizedRoots = @(
+        $Roots |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) -and (Test-Path -LiteralPath $_) } |
+            ForEach-Object { (Resolve-Path -LiteralPath $_).Path.TrimEnd('\\') } |
+            Sort-Object Length, @{ Expression = { $_ } } -Unique
+    )
+
+    foreach ($root in $normalizedRoots) {
+        $isNested = $false
+        foreach ($selectedRoot in $selected) {
+            if ($root.StartsWith($selectedRoot + '\\', [System.StringComparison]::OrdinalIgnoreCase)) {
+                $isNested = $true
+                break
+            }
+        }
+
+        if (-not $isNested) {
+            $selected.Add($root)
+        }
+    }
+
+    return @($selected)
 }
 
 function Get-ElementChildren {
@@ -612,7 +641,7 @@ function Get-LoadRoots {
         }
     }
 
-    return @($roots | Select-Object -Unique)
+    return @(Get-MinimalRootSet -Roots $roots)
 }
 
 function Copy-KeyedFile {
@@ -686,7 +715,7 @@ if (-not $PSBoundParameters.ContainsKey('LookupRoots')) {
     }
 }
 
-$LookupRoots = @($LookupRoots | Where-Object { -not [string]::IsNullOrWhiteSpace($_) -and (Test-Path -LiteralPath $_) } | Select-Object -Unique)
+$LookupRoots = @(Get-MinimalRootSet -Roots $LookupRoots)
 
 $destinationModRoot = Join-Path $DestinationRoot $translationModName
 if (-not (Test-Path -LiteralPath $destinationModRoot)) {
@@ -920,7 +949,7 @@ $reportPath = Join-Path $reportDirectory 'generation-report.json'
 $report | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $reportPath -Encoding UTF8
 Add-Content -LiteralPath $script:ProgressPath -Value 'reportWritten'
 
-Write-Host "Generated German placeholder scaffold for $($targetMods.Count) workshop mods."
+Write-Host "Generated $languageFolderName placeholder scaffold for $($targetMods.Count) workshop mods."
 Write-Host "Copied Keyed files: $($copiedKeyedFiles.Count)"
 Write-Host "Resolved DefInjected entries: $(@($resolvedEntries).Count)"
 Write-Host "Unsupported patch targets: $($unsupportedPatchTargets.Count)"

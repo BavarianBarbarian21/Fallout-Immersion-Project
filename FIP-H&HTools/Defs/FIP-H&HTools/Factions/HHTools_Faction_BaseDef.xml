@@ -157,9 +157,10 @@
   <!--Rough/Despotic-->
   <FactionDef ParentName="HHTools_Settler_Democratic" Name="HHTools_Settler_Despotic" Abstract="True">
     <defName>HHTools_Settler_Despotic</defName>
-    <modExtensions>
+    <modExtensions Inherit="False">
       <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
         <system>Authoritarian</system>
+        <representativePawnKind>HHTools_Settlement_Leader</representativePawnKind>
       </li>
     </modExtensions>
     <factionNameMaker>HHTools_FactionNameMaker_Despotic</factionNameMaker>

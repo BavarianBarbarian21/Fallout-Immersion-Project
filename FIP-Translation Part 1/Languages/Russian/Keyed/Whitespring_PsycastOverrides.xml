@@ -1,64 +1,64 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
   <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
-  <LetterLabelPsylinkLevelGained>Cryptid insight gained</LetterLabelPsylinkLevelGained>
-  <LetterPsylinkLevelGained_First>{USER_labelShort} has gained {USER_possessive} first level of cryptid insight! {USER_pronoun} is now an occultist.
-{USER_labelShort} must build up cryptid focus through meditation. The effectiveness of this meditation is increased if the person can focus on a specific object while meditating.
+  <LetterLabelPsylinkLevelGained>Получено криптическое озарение</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} получил(а) первый уровень криптического озарения! Теперь это оккультист.
+{USER_labelShort} должен накапливать криптический фокус через медитацию. Эффективность медитации повышается, если человек может сосредоточиться на определённом объекте.
 
-Different people are able to focus on different objects. This depends on the person's backstories, traits, and ranks. For example:
+Разные люди способны сосредоточиться на разных объектах. Это зависит от предысторий, черт и рангов персонажа. Например:
 
-- Occultists with enclave ranks meditate on their assigned posts.
-- Occultists with tribal childhoods meditate to cryptic shrines and totems.
-- Ascetic occultists meditate to blank walls.
-- Psychopathic occultists meditate to graves, ideally with a loved one inside.
+- Оккультисты с рангами Анклава медитируют у назначенных постов.
+- Оккультисты с племенным детством медитируют у криптических святынь и тотемов.
+- Аскетичные оккультисты медитируют на пустые стены.
+- Оккультисты-психопаты медитируют у могил, желательно с близким человеком внутри.
 
-You can see someone's meditation focus types by looking at their info card with the 'i' button.</LetterPsylinkLevelGained_First>
+Типы объектов для медитации можно увидеть на карточке информации персонажа, нажав кнопку «i».</LetterPsylinkLevelGained_First>
 
-  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} has gained a new level of cryptid insight! {USER_pronoun} can now use cryptic revelations of that higher level, but {USER_pronoun} needs to learn them first.</LetterPsylinkLevelGained_NotFirst>
-  <LetterPsylinkLevelGained_PsycastLearned>Upon gaining the new cryptid insight level, {USER_labelShort} automatically learned these revelations: {2}</LetterPsylinkLevelGained_PsycastLearned>
+  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} получил(а) новый уровень криптического озарения! Теперь доступны криптические откровения более высокого уровня, но их нужно сначала изучить.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>При получении нового уровня криптического озарения {USER_labelShort} автоматически изучил(а) эти откровения: {2}</LetterPsylinkLevelGained_PsycastLearned>
 
   <!-- Neurotrainers / Psylink -> Cryptid Insight -->
-  <PsycastNeurotrainerLabel>cryptid essence ({0})</PsycastNeurotrainerLabel>
-  <PsycastNeurotrainerUseLabel>Use cryptid essence to learn {0} revelation</PsycastNeurotrainerUseLabel>
-  <PsycastNeurotrainerDescription>A one-use neural inoculation which trains a specific cryptic revelation.
+  <PsycastNeurotrainerLabel>криптическая эссенция ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Использовать криптическую эссенцию для изучения откровения {0}</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Одноразовая нейронная инокуляция, обучающая конкретному криптическому откровению.
 
-The dose is administered through a specialized implant point. Once released into the brain, the mechanism forms knowledge of a specific revelation, transmuting itself into neural tissue as needed.
+Доза вводится через специализированный имплантационный порт. После попадания в мозг механизм формирует знание конкретного откровения, преобразуясь в нервную ткань по мере необходимости.
 
 {PSYCAST_label}
 
 {PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
-  <PsycastNeurotrainerNoPsylink>requires cryptid insight</PsycastNeurotrainerNoPsylink>
+  <PsycastNeurotrainerNoPsylink>требуется криптическое озарение</PsycastNeurotrainerNoPsylink>
 
-  <Psyfocus>Cryptid focus</Psyfocus>
-  <PsyfocusLabelGizmo>Cryptid focus</PsyfocusLabelGizmo>
-  <PsyfocusDesc>Cryptid focus is a special type of mental structuring required to use cryptic revelations. Cryptid focus dissipates over time and must be built by regular meditation. Losing all cryptid focus makes someone unable to use revelations.
+  <Psyfocus>Криптический фокус</Psyfocus>
+  <PsyfocusLabelGizmo>Криптический фокус</PsyfocusLabelGizmo>
+  <PsyfocusDesc>Криптический фокус — особый тип ментальной структуры, необходимый для использования криптических откровений. Криптический фокус рассеивается со временем и должен восполняться регулярной медитацией. Потеря всего криптического фокуса лишает возможности использовать откровения.
 
-Higher cryptid focus permits higher-level revelations, but also increases the rate of focus dissipation.</PsyfocusDesc>
+Более высокий криптический фокус позволяет использовать откровения более высокого уровня, но также увеличивает скорость рассеивания.</PsyfocusDesc>
   <PsyfocusLevelInfoRange>{0}-{1}%</PsyfocusLevelInfoRange>
-  <PsyfocusLevelInfoPsycasts>Up to level {0} revelations.</PsyfocusLevelInfoPsycasts>
-  <PsyfocusLevelInfoFallRate>Cryptid focus falls at {0} per day.</PsyfocusLevelInfoFallRate>
-  <PsyfocusPerDayOfMeditation>Cryptid focus gain rate: {0}/d</PsyfocusPerDayOfMeditation>
-  <BeginLinkingRitualNeedPsylink>Need {0} cryptid insight focus type</BeginLinkingRitualNeedPsylink>
-  <BeginLinkingRitualMaxPsylinkLevel>Max cryptid insight level</BeginLinkingRitualMaxPsylinkLevel>
-  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} has completed the linking ritual with {LINKABLE_labelShort}.
+  <PsyfocusLevelInfoPsycasts>Откровения до уровня {0}.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>Криптический фокус падает на {0} в день.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Скорость накопления криптического фокуса: {0}/д</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualNeedPsylink>Необходим тип фокуса криптического озарения {0}</BeginLinkingRitualNeedPsylink>
+  <BeginLinkingRitualMaxPsylinkLevel>Максимальный уровень криптического озарения</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} завершил(а) ритуал связи с {LINKABLE_labelShort}.
 
-{PAWN_pronoun} now has an upgraded cryptid insight, permitting the use of new revelations.</LetterTextLinkingRitualCompleted>
+Криптическое озарение усилено, открывая доступ к новым откровениям.</LetterTextLinkingRitualCompleted>
 
   <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
-  <RitualTargetAnimaTreeInfo>a Mothman Totem</RitualTargetAnimaTreeInfo>
-  <RitualTargetAnimaTreeNoPawnsToLink>No colonists that can link with the Mothman Totem right now.</RitualTargetAnimaTreeNoPawnsToLink>
-  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>No colonists with the natural meditation focus type.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
-  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Need at least {0} Mothman eggs.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
-  <RitualTargetAnimaTreeMustBeCapableOfNature>Must be a colonist with the natural meditation focus type who is below maximum cryptid insight level.</RitualTargetAnimaTreeMustBeCapableOfNature>
-  <RitualTargetAnimaTreeMustBePsychicallySensitive>Must not be cryptid-insensitive.</RitualTargetAnimaTreeMustBePsychicallySensitive>
-  <AnimaLinkingExplanationBase>The linking ceremony is more powerful with more participants. The more people participate, the less time the ceremony takes, and the more Mothman eggs will be restored.
+  <RitualTargetAnimaTreeInfo>тотем Mothman</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>Сейчас нет колонистов, способных установить связь с тотемом Mothman.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>Нет колонистов с природным типом медитативного фокуса.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Необходимо не менее {0} яиц Mothman.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Должен быть колонист с природным типом медитативного фокуса, чей уровень криптического озарения ниже максимального.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Не должен быть нечувствителен к криптидам.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>Церемония связи усиливается с ростом числа участников. Чем больше людей участвует, тем меньше времени занимает церемония и тем больше яиц Mothman будет восстановлено.
 
-With {0} additional participants, {1} Mothman eggs will be restored at the end of the ceremony.</AnimaLinkingExplanationBase>
+При {0} дополнительных участниках {1} яиц Mothman будет восстановлено по окончании церемонии.</AnimaLinkingExplanationBase>
 
   <!-- ROYALTY / ANIMA (Anima tree -> Mothman Totem) -->
-  <AnimaTree_AboutLetterLabel>Mothman Totem</AnimaTree_AboutLetterLabel>
-  <AnimaTree_AboutLetterText>The Mothman totem now has {0} eggs around it. This is enough for an enlightened person to begin their first linking ritual!\n\nThe linking ritual gives a level of cryptid insight and the ability to use cryptid powers.</AnimaTree_AboutLetterText>
+  <AnimaTree_AboutLetterLabel>Тотем Mothman</AnimaTree_AboutLetterLabel>
+  <AnimaTree_AboutLetterText>Вокруг тотема Mothman теперь {0} яиц. Этого достаточно, чтобы просветлённый человек мог начать свой первый ритуал связи!\n\nРитуал связи даёт уровень криптического озарения и способность использовать криптические силы.</AnimaTree_AboutLetterText>
 
 
 </LanguageData>

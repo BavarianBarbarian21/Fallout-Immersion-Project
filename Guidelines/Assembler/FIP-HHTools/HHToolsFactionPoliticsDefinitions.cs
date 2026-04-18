@@ -45,10 +45,25 @@ public static class HHToolsFactionPoliticsUtility
 
     public static readonly Dictionary<HHToolsCrimeBoss, string> CrimeBossTitles = new()
     {
-        { HHToolsCrimeBoss.Slaves, "Slave Trader" },
+        { HHToolsCrimeBoss.Slaves, "Slave Master" },
         { HHToolsCrimeBoss.Drugs, "Saloon Owner" },
         { HHToolsCrimeBoss.Arena, "Arena Champion" },
         { HHToolsCrimeBoss.Weapons, "Gun Runner" }
+    };
+
+    public static readonly Dictionary<HHToolsCivilizedParty, string> CivilizedLeaderFallbackNames = new()
+    {
+        { HHToolsCivilizedParty.BrahminBarons, "Baron Regent" },
+        { HHToolsCivilizedParty.DesertRangers, "Chief Ranger" },
+        { HHToolsCivilizedParty.Caravans, "Caravan Speaker" }
+    };
+
+    public static readonly Dictionary<HHToolsCrimeBoss, string> CrimeBossLeaderFallbackNames = new()
+    {
+        { HHToolsCrimeBoss.Weapons, "Gun Runner Boss" },
+        { HHToolsCrimeBoss.Arena, "Arena Champion" },
+        { HHToolsCrimeBoss.Drugs, "Saloon Owner" },
+        { HHToolsCrimeBoss.Slaves, "Slave Master" }
     };
 
     public static HHToolsFactionPoliticsExtension GetPoliticsExtension(this Faction faction)
@@ -90,5 +105,15 @@ public static class HHToolsFactionPoliticsUtility
     public static string GetBossTitle(HHToolsCrimeBoss boss)
     {
         return CrimeBossTitles[boss];
+    }
+
+    public static string GetFallbackLeaderName(HHToolsCivilizedParty party)
+    {
+        return CivilizedLeaderFallbackNames[party];
+    }
+
+    public static string GetFallbackLeaderName(HHToolsCrimeBoss boss)
+    {
+        return CrimeBossLeaderFallbackNames[boss];
     }
 }

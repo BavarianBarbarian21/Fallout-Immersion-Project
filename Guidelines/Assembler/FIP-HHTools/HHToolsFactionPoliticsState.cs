@@ -88,7 +88,7 @@ public class HHToolsFactionPoliticalState : IExposable
             case HHToolsFactionPoliticalSystem.Civilized:
                 civilizedParties =
                 [
-                    new HHToolsCivilizedPartyState(HHToolsCivilizedParty.BrahminBarons, 33),
+                    new HHToolsCivilizedPartyState(HHToolsCivilizedParty.BrahminBarons, 34),
                     new HHToolsCivilizedPartyState(HHToolsCivilizedParty.DesertRangers, 33),
                     new HHToolsCivilizedPartyState(HHToolsCivilizedParty.Caravans, 33)
                 ];

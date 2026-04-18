@@ -1,6 +1,7 @@
 param(
     [string]$SourceRoot,
     [string]$DestinationRoot,
+    [string]$LanguageFolderName = 'English',
     [string[]]$LookupRoots,
     [switch]$Clean
 )
@@ -9,7 +10,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $translationModName = 'FIP-Translation Part 2'
-$languageFolderName = 'English'
+$languageFolderName = $LanguageFolderName
 $reportDirectory = Join-Path $PSScriptRoot 'Reports'
 $repositoryRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $script:XmlDocumentCache = @{}
@@ -59,6 +60,34 @@ function ConvertTo-SafeFileStem {
 
     $sanitized = [System.Text.RegularExpressions.Regex]::Replace($Value, '[^A-Za-z0-9]+', '_')
     return $sanitized.Trim('_')
+}
+
+function Get-MinimalRootSet {
+    param([string[]]$Roots)
+
+    $selected = New-Object 'System.Collections.Generic.List[string]'
+    $normalizedRoots = @(
+        $Roots |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) -and (Test-Path -LiteralPath $_) } |
+            ForEach-Object { (Resolve-Path -LiteralPath $_).Path.TrimEnd('\\') } |
+            Sort-Object Length, @{ Expression = { $_ } } -Unique
+    )
+
+    foreach ($root in $normalizedRoots) {
+        $isNested = $false
+        foreach ($selectedRoot in $selected) {
+            if ($root.StartsWith($selectedRoot + '\\', [System.StringComparison]::OrdinalIgnoreCase)) {
+                $isNested = $true
+                break
+            }
+        }
+
+        if (-not $isNested) {
+            $selected.Add($root)
+        }
+    }
+
+    return @($selected)
 }
 
 function Get-ElementChildren {
@@ -319,37 +348,44 @@ function Add-DefIndexEntry {
 function Build-DefIndex {
     param([string[]]$Roots)
 
+    $seenFiles = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
     foreach ($root in $Roots) {
-        foreach ($file in Get-ChildItem -LiteralPath $root -Filter '*.xml' -File -Recurse -ErrorAction SilentlyContinue) {
-            try {
-                $document = Get-CachedXmlDocument -FilePath $file.FullName
-                $defsRoot = $document.SelectSingleNode('/Defs')
-                if ($null -eq $defsRoot) {
+        foreach ($defsDirectory in Get-ChildItem -LiteralPath $root -Directory -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Name -eq 'Defs' }) {
+            foreach ($file in Get-ChildItem -LiteralPath $defsDirectory.FullName -Filter '*.xml' -File -Recurse -ErrorAction SilentlyContinue) {
+                if (-not $seenFiles.Add($file.FullName)) {
                     continue
                 }
 
-                foreach ($defNode in @(Get-ElementChildren -Node $defsRoot)) {
-                    $defType = $defNode.LocalName
-                    $defNameNode = Get-DirectChildElement -Node $defNode -LocalName 'defName'
-                    $nameAttribute = $defNode.Attributes['Name']
-
-                    if ($null -eq $defNameNode -and $null -eq $nameAttribute) {
+                try {
+                    $document = Get-CachedXmlDocument -FilePath $file.FullName
+                    $defsRoot = $document.SelectSingleNode('/Defs')
+                    if ($null -eq $defsRoot) {
                         continue
                     }
 
-                    $record = [pscustomobject]@{
-                        DefType  = $defType
-                        FilePath = $file.FullName
-                        DefName  = if ($null -ne $defNameNode) { $defNameNode.InnerText.Trim() } else { $null }
-                        NameAttr = if ($null -ne $nameAttribute) { $nameAttribute.Value.Trim() } else { $null }
-                    }
+                    foreach ($defNode in @(Get-ElementChildren -Node $defsRoot)) {
+                        $defType = $defNode.LocalName
+                        $defNameNode = Get-DirectChildElement -Node $defNode -LocalName 'defName'
+                        $nameAttribute = $defNode.Attributes['Name']
 
-                    Add-DefIndexEntry -Index $script:DefNameIndex -Key $record.DefName -Record $record
-                    Add-DefIndexEntry -Index $script:NameAttributeIndex -Key $record.NameAttr -Record $record
+                        if ($null -eq $defNameNode -and $null -eq $nameAttribute) {
+                            continue
+                        }
+
+                        $record = [pscustomobject]@{
+                            DefType  = $defType
+                            FilePath = $file.FullName
+                            DefName  = if ($null -ne $defNameNode) { $defNameNode.InnerText.Trim() } else { $null }
+                            NameAttr = if ($null -ne $nameAttribute) { $nameAttribute.Value.Trim() } else { $null }
+                        }
+
+                        Add-DefIndexEntry -Index $script:DefNameIndex -Key $record.DefName -Record $record
+                        Add-DefIndexEntry -Index $script:NameAttributeIndex -Key $record.NameAttr -Record $record
+                    }
                 }
-            }
-            catch {
-                continue
+                catch {
+                    continue
+                }
             }
         }
     }
@@ -596,7 +632,7 @@ function Get-RepoLoadRoots {
         }
     }
 
-    return @($roots)
+    return @(Get-MinimalRootSet -Roots $roots)
 }
 
 $repos = Get-ChildItem -LiteralPath $SourceRoot -Directory |
@@ -615,7 +651,7 @@ if (-not $PSBoundParameters.ContainsKey('LookupRoots')) {
     }
 }
 
-$LookupRoots = @($LookupRoots | Where-Object { -not [string]::IsNullOrWhiteSpace($_) -and (Test-Path -LiteralPath $_) } | Select-Object -Unique)
+$LookupRoots = @(Get-MinimalRootSet -Roots $LookupRoots)
 
 $destinationModRoot = Join-Path $DestinationRoot $translationModName
 if (-not (Test-Path -LiteralPath $destinationModRoot)) {
@@ -854,7 +890,7 @@ $report = [pscustomobject]@{
 $reportPath = Join-Path $reportDirectory 'generation-report.json'
 $report | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $reportPath -Encoding UTF8
 
-Write-Host "Generated English placeholder scaffold for $($repoSummaries.Count) repositories."
+Write-Host "Generated $languageFolderName placeholder scaffold for $($repoSummaries.Count) repositories."
 Write-Host "Copied Keyed files: $keyedFileCount"
 Write-Host "Copied Names files: $nameFileCount"
 Write-Host "Resolved DefInjected entries: $resolvedEntryCount"

@@ -1,59 +1,59 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
   <!-- Psylink -> Cryptid Insight / Psycaster -> Occultist -->
-  <LetterLabelPsylinkLevelGained>Cryptid insight gained</LetterLabelPsylinkLevelGained>
-  <LetterPsylinkLevelGained_First>{USER_labelShort} has gained {USER_possessive} first level of cryptid insight! {USER_pronoun} is now an occultist.
-{USER_labelShort} must build up cryptid focus through meditation. The effectiveness of this meditation is increased if the person can focus on a specific object while meditating.
+  <LetterLabelPsylinkLevelGained>Perception cryptide acquise</LetterLabelPsylinkLevelGained>
+  <LetterPsylinkLevelGained_First>{USER_labelShort} a acquis son premier niveau de perception cryptide ! {USER_pronoun} est désormais un(e) occultiste.
+{USER_labelShort} doit accumuler de la focalisation cryptide par la méditation. L'efficacité de cette méditation augmente si la personne peut se concentrer sur un objet spécifique pendant la méditation.
 
-Different people are able to focus on different objects. This depends on the person's backstories, traits, and ranks. For example:
+Différentes personnes sont capables de se concentrer sur différents objets. Cela dépend du passé, des traits et des rangs de la personne. Par exemple :
 
-- Occultists with enclave ranks meditate on their assigned posts.
-- Occultists with tribal childhoods meditate to cryptic shrines and totems.
-- Ascetic occultists meditate to blank walls.
-- Psychopathic occultists meditate to graves, ideally with a loved one inside.
+- Les occultistes avec des rangs de l'Enclave méditent sur leurs postes assignés.
+- Les occultistes avec une enfance tribale méditent devant des sanctuaires et des totems cryptiques.
+- Les occultistes ascétiques méditent face à des murs nus.
+- Les occultistes psychopathes méditent devant des tombes, idéalement avec un être cher à l'intérieur.
 
-You can see someone's meditation focus types by looking at their info card with the 'i' button.</LetterPsylinkLevelGained_First>
+Vous pouvez consulter les types de focalisation de méditation d'une personne en regardant sa fiche d'information avec le bouton « i ».</LetterPsylinkLevelGained_First>
 
-  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} has gained a new level of cryptid insight! {USER_pronoun} can now use cryptic revelations of that higher level, but {USER_pronoun} needs to learn them first.</LetterPsylinkLevelGained_NotFirst>
-  <LetterPsylinkLevelGained_PsycastLearned>Upon gaining the new cryptid insight level, {USER_labelShort} automatically learned these revelations: {2}</LetterPsylinkLevelGained_PsycastLearned>
+  <LetterPsylinkLevelGained_NotFirst>{USER_labelShort} a acquis un nouveau niveau de perception cryptide ! {USER_pronoun} peut désormais utiliser des révélations cryptiques de ce niveau supérieur, mais {USER_pronoun} doit d'abord les apprendre.</LetterPsylinkLevelGained_NotFirst>
+  <LetterPsylinkLevelGained_PsycastLearned>En acquérant le nouveau niveau de perception cryptide, {USER_labelShort} a automatiquement appris ces révélations : {2}</LetterPsylinkLevelGained_PsycastLearned>
 
   <!-- Neurotrainers / Psylink -> Cryptid Insight -->
-  <PsycastNeurotrainerLabel>cryptid essence ({0})</PsycastNeurotrainerLabel>
-  <PsycastNeurotrainerUseLabel>Use cryptid essence to learn {0} revelation</PsycastNeurotrainerUseLabel>
-  <PsycastNeurotrainerDescription>A one-use neural inoculation which trains a specific cryptic revelation.
+  <PsycastNeurotrainerLabel>essence cryptide ({0})</PsycastNeurotrainerLabel>
+  <PsycastNeurotrainerUseLabel>Utiliser l'essence cryptide pour apprendre la révélation {0}</PsycastNeurotrainerUseLabel>
+  <PsycastNeurotrainerDescription>Une inoculation neurale à usage unique qui enseigne une révélation cryptique spécifique.
 
-The dose is administered through a specialized implant point. Once released into the brain, the mechanism forms knowledge of a specific revelation, transmuting itself into neural tissue as needed.
+La dose est administrée par un point d'implant spécialisé. Une fois libéré dans le cerveau, le mécanisme forme la connaissance d'une révélation spécifique, se transmutant en tissu neural selon les besoins.
 
 {PSYCAST_label}
 
 {PSYCASTDESCRIPTION}</PsycastNeurotrainerDescription>
-  <PsycastNeurotrainerNoPsylink>requires cryptid insight</PsycastNeurotrainerNoPsylink>
+  <PsycastNeurotrainerNoPsylink>nécessite une perception cryptide</PsycastNeurotrainerNoPsylink>
 
-  <Psyfocus>Cryptid focus</Psyfocus>
-  <PsyfocusLabelGizmo>Cryptid focus</PsyfocusLabelGizmo>
-  <PsyfocusDesc>Cryptid focus is a special type of mental structuring required to use cryptic revelations. Cryptid focus dissipates over time and must be built by regular meditation. Losing all cryptid focus makes someone unable to use revelations.
+  <Psyfocus>Focalisation cryptide</Psyfocus>
+  <PsyfocusLabelGizmo>Focalisation cryptide</PsyfocusLabelGizmo>
+  <PsyfocusDesc>La focalisation cryptide est un type spécial de structuration mentale nécessaire pour utiliser des révélations cryptiques. La focalisation cryptide se dissipe au fil du temps et doit être reconstituée par une méditation régulière. Perdre toute focalisation cryptide rend une personne incapable d'utiliser des révélations.
 
-Higher cryptid focus permits higher-level revelations, but also increases the rate of focus dissipation.</PsyfocusDesc>
-  <PsyfocusLevelInfoRange>{0}-{1}%</PsyfocusLevelInfoRange>
-  <PsyfocusLevelInfoPsycasts>Up to level {0} revelations.</PsyfocusLevelInfoPsycasts>
-  <PsyfocusLevelInfoFallRate>Cryptid focus falls at {0} per day.</PsyfocusLevelInfoFallRate>
-  <PsyfocusPerDayOfMeditation>Cryptid focus gain rate: {0}/d</PsyfocusPerDayOfMeditation>
-  <BeginLinkingRitualMaxPsylinkLevel>Max cryptid insight level</BeginLinkingRitualMaxPsylinkLevel>
-  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} has completed the linking ritual with {LINKABLE_labelShort}.
+Une focalisation cryptide plus élevée permet des révélations de niveau supérieur, mais augmente aussi le taux de dissipation.</PsyfocusDesc>
+  <PsyfocusLevelInfoRange>{0}-{1} %</PsyfocusLevelInfoRange>
+  <PsyfocusLevelInfoPsycasts>Révélations jusqu'au niveau {0}.</PsyfocusLevelInfoPsycasts>
+  <PsyfocusLevelInfoFallRate>La focalisation cryptide diminue de {0} par jour.</PsyfocusLevelInfoFallRate>
+  <PsyfocusPerDayOfMeditation>Gain de focalisation cryptide : {0}/j</PsyfocusPerDayOfMeditation>
+  <BeginLinkingRitualMaxPsylinkLevel>Niveau max. de perception cryptide</BeginLinkingRitualMaxPsylinkLevel>
+  <LetterTextLinkingRitualCompleted>{PAWN_labelShort} a terminé le rituel de liaison avec {LINKABLE_labelShort}.
 
-{PAWN_pronoun} now has an upgraded cryptid insight, permitting the use of new revelations.</LetterTextLinkingRitualCompleted>
+{PAWN_pronoun} possède désormais une perception cryptide améliorée, permettant l'utilisation de nouvelles révélations.</LetterTextLinkingRitualCompleted>
 
   <!-- Anima -> Mothman Totem / Anima grass -> Mothman eggs -->
-  <RitualTargetAnimaTreeInfo>a Mothman Totem</RitualTargetAnimaTreeInfo>
-  <RitualTargetAnimaTreeNoPawnsToLink>No colonists that can link with the Mothman Totem right now.</RitualTargetAnimaTreeNoPawnsToLink>
-  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>No colonists with the natural meditation focus type.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
-  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Need at least {0} Mothman eggs.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
-  <RitualTargetAnimaTreeMustBeCapableOfNature>Must be a colonist with the natural meditation focus type who is below maximum cryptid insight level.</RitualTargetAnimaTreeMustBeCapableOfNature>
-  <RitualTargetAnimaTreeMustBePsychicallySensitive>Must not be cryptid-insensitive.</RitualTargetAnimaTreeMustBePsychicallySensitive>
-  <AnimaLinkingExplanationBase>The linking ceremony is more powerful with more participants. The more people participate, the less time the ceremony takes, and the more Mothman eggs will be restored.
+  <RitualTargetAnimaTreeInfo>un Totem du Mothman</RitualTargetAnimaTreeInfo>
+  <RitualTargetAnimaTreeNoPawnsToLink>Aucun colon ne peut se lier au Totem du Mothman pour le moment.</RitualTargetAnimaTreeNoPawnsToLink>
+  <RitualTargetAnimaTreeNoPawnsWithNatureFocus>Aucun colon avec le type de focalisation de méditation naturelle.</RitualTargetAnimaTreeNoPawnsWithNatureFocus>
+  <RitualTargetAnimaTreeNotEnoughAnimaGrass>Il faut au moins {0} œufs de Mothman.</RitualTargetAnimaTreeNotEnoughAnimaGrass>
+  <RitualTargetAnimaTreeMustBeCapableOfNature>Doit être un colon avec le type de focalisation de méditation naturelle en dessous du niveau maximum de perception cryptide.</RitualTargetAnimaTreeMustBeCapableOfNature>
+  <RitualTargetAnimaTreeMustBePsychicallySensitive>Ne doit pas être insensible aux cryptides.</RitualTargetAnimaTreeMustBePsychicallySensitive>
+  <AnimaLinkingExplanationBase>La cérémonie de liaison est plus puissante avec plus de participants. Plus il y a de participants, moins la cérémonie prend de temps et plus d'œufs de Mothman seront restaurés.
 
-With {0} additional participants, {1} Mothman eggs will be restored at the end of the ceremony.</AnimaLinkingExplanationBase>
+Avec {0} participants supplémentaires, {1} œufs de Mothman seront restaurés à la fin de la cérémonie.</AnimaLinkingExplanationBase>
 
 
 </LanguageData>

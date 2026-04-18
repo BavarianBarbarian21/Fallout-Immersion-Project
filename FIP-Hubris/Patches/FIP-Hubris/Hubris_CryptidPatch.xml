@@ -58,9 +58,33 @@
   <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/graphicData/texPath</xpath>
         <value>
-      <texPath>FIP-Hubris/Totem</texPath>
+      <texPath>FIP-Hubris/Totem/Hubris_MothmanTree</texPath>
         </value>
     </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/graphicData/graphicClass</xpath>
+    <value>
+      <graphicClass>Graphic_Single</graphicClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/immatureGraphicPath</xpath>
+    <value>
+      <immatureGraphicPath>FIP-Hubris/Totem/Hubris_MothmanTree</immatureGraphicPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/snowOverlayGraphicPath</xpath>
+    <value>
+      <snowOverlayGraphicPath>FIP-Hubris/Totem/Hubris_MothmanTree</snowOverlayGraphicPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/immatureSnowOverlayGraphicPath</xpath>
+    <value>
+      <immatureSnowOverlayGraphicPath>FIP-Hubris/Totem/Hubris_MothmanTree</immatureSnowOverlayGraphicPath>
+    </value>
+  </Operation>
 
     <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="ChoppedStump_Anima"]/label</xpath>

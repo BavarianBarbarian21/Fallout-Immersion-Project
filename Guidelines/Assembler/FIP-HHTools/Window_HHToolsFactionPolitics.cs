@@ -12,7 +12,7 @@ public class Window_HHToolsFactionPolitics : Window
     private readonly Settlement settlement;
     private readonly HHToolsFactionPoliticalState state;
 
-    public override Vector2 InitialSize => new(1120f, 720f);
+    public override Vector2 InitialSize => new(1440f, 720f);
 
     public Window_HHToolsFactionPolitics(Settlement settlement)
     {
@@ -39,7 +39,7 @@ public class Window_HHToolsFactionPolitics : Window
         Text.Font = GameFont.Medium;
         Widgets.Label(headerRect.TopHalf(), settlement.LabelCap);
         Text.Font = GameFont.Small;
-        Widgets.Label(headerRect.BottomHalf(), state.system == HHToolsFactionPoliticalSystem.Civilized ? "Civic Power Bloc" : "Criminal Power Bloc");
+        Widgets.Label(headerRect.BottomHalf(), state.system == HHToolsFactionPoliticalSystem.Civilized ? "Parliament of Three Powers" : "Boss Network");
         Text.Anchor = TextAnchor.UpperLeft;
 
         Rect contentRect = new(inRect.x, headerRect.yMax + 12f, inRect.width, inRect.height - headerRect.height - 12f);
@@ -70,7 +70,7 @@ public class Window_HHToolsFactionPolitics : Window
             DrawLeaderSection(
                 cardRect,
                 partyState.leaderPawn,
-                partyState.leaderPawn?.Name?.ToStringFull ?? "Unknown Leader",
+                partyState.leaderPawn?.Name?.ToStringFull ?? HHToolsFactionPoliticsUtility.GetFallbackLeaderName(partyState.party),
                 HHToolsFactionPoliticsUtility.GetGroupLabel(partyState.party),
                 GetCivilizedStatusLabel(partyState),
                 GetCivilizedStatusColor(partyState));
@@ -81,14 +81,11 @@ public class Window_HHToolsFactionPolitics : Window
     {
         List<HHToolsCrimeBossState> bosses = state.crimeBosses.OrderBy(entry => entry.boss).ToList();
         int totalFavors = HHToolsFactionPoliticsTracker.Instance?.TotalFavors(state) ?? 0;
-        float cardWidth = (rect.width - 12f) / 2f;
-        float cardHeight = (rect.height - 12f) / 2f;
+        float cardWidth = (rect.width - 36f) / 4f;
 
         for (int index = 0; index < bosses.Count; index += 1)
         {
-            int row = index / 2;
-            int column = index % 2;
-            Rect cardRect = new(rect.x + column * (cardWidth + 12f), rect.y + row * (cardHeight + 12f), cardWidth, cardHeight);
+            Rect cardRect = new(rect.x + index * (cardWidth + 12f), rect.y, cardWidth, rect.height);
             DrawCardBackground(cardRect);
 
             HHToolsCrimeBossState bossState = bosses[index];
@@ -98,7 +95,7 @@ public class Window_HHToolsFactionPolitics : Window
             DrawLeaderSection(
                 cardRect,
                 bossState.leaderPawn,
-                bossState.leaderPawn?.Name?.ToStringFull ?? "Unknown Boss",
+                bossState.leaderPawn?.Name?.ToStringFull ?? HHToolsFactionPoliticsUtility.GetFallbackLeaderName(bossState.boss),
                 HHToolsFactionPoliticsUtility.GetBossTitle(bossState.boss),
                 statusText,
                 statusColor);
@@ -157,10 +154,10 @@ public class Window_HHToolsFactionPolitics : Window
     {
         if (state.civilizedControlLocked)
         {
-            return state.civilizedController == partyState.party ? "Ruling Party" : "Minor";
+            return state.civilizedController == partyState.party ? "Ruling Party" : "Opposition";
         }
 
-        return $"{partyState.influence} Seats";
+        return $"{partyState.influence}% Seats";
     }
 
     private Color GetCivilizedStatusColor(HHToolsCivilizedPartyState partyState)
@@ -175,31 +172,51 @@ public class Window_HHToolsFactionPolitics : Window
             : new Color(0.45f, 0.18f, 0.18f, 0.95f);
     }
 
-    private static string GetBossStatusLabel(HHToolsCrimeBossState bossState, int totalFavors)
+    private string GetBossStatusLabel(HHToolsCrimeBossState bossState, int totalFavors)
     {
         if (bossState.eliminated)
         {
-            return "New Management";
+            return "Eliminated";
         }
 
-        if (totalFavors >= 4)
+        if (state.authoritarianControlLocked && state.authoritarianController == bossState.boss)
+        {
+            return "Absolute Control";
+        }
+
+        if (state.friendOfTheFamilies && totalFavors >= 4)
         {
             return "Family Friend";
         }
 
-        return $"Favors {totalFavors}/4";
+        if (bossState.favorGranted)
+        {
+            return "Favor Secured";
+        }
+
+        return $"Favor {bossState.completedMissions}/5";
     }
 
-    private static Color GetBossStatusColor(HHToolsCrimeBossState bossState, int totalFavors)
+    private Color GetBossStatusColor(HHToolsCrimeBossState bossState, int totalFavors)
     {
         if (bossState.eliminated)
         {
             return new Color(0.45f, 0.18f, 0.18f, 0.95f);
         }
 
-        if (totalFavors >= 4)
+        if (state.authoritarianControlLocked && state.authoritarianController == bossState.boss)
+        {
+            return new Color(0.55f, 0.4f, 0.12f, 0.95f);
+        }
+
+        if (state.friendOfTheFamilies && totalFavors >= 4)
         {
             return new Color(0.2f, 0.45f, 0.2f, 0.95f);
+        }
+
+        if (bossState.favorGranted)
+        {
+            return new Color(0.18f, 0.35f, 0.2f, 0.95f);
         }
 
         return new Color(0.32f, 0.22f, 0.12f, 0.95f);

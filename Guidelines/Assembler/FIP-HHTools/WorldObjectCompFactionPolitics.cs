@@ -16,18 +16,41 @@ public class WorldObjectCompProperties_FactionPolitics : WorldObjectCompProperti
 
 public class WorldObjectCompFactionPolitics : WorldObjectComp
 {
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        Command_Action command = CreatePoliticsCommand();
+        if (command != null)
+        {
+            yield return command;
+        }
+    }
+
     public override IEnumerable<Gizmo> GetCaravanGizmos(Caravan caravan)
     {
-        Faction faction = parent?.Faction;
-        if (caravan == null || faction == null)
+        if (caravan == null)
         {
             yield break;
+        }
+
+        Command_Action command = CreatePoliticsCommand();
+        if (command != null)
+        {
+            yield return command;
+        }
+    }
+
+    private Command_Action CreatePoliticsCommand()
+    {
+        Faction faction = parent?.Faction;
+        if (faction == null || parent is not Settlement settlement)
+        {
+            return null;
         }
 
         HHToolsFactionPoliticsExtension extension = faction.GetPoliticsExtension();
         if (extension == null || (extension.system != HHToolsFactionPoliticalSystem.Civilized && extension.system != HHToolsFactionPoliticalSystem.Authoritarian))
         {
-            yield break;
+            return null;
         }
 
         Texture2D icon = null;
@@ -36,12 +59,12 @@ public class WorldObjectCompFactionPolitics : WorldObjectComp
             icon = ContentFinder<Texture2D>.Get(faction.def.factionIconPath, false);
         }
 
-        yield return new Command_Action
+        return new Command_Action
         {
             defaultLabel = "Open politics",
             defaultDesc = "View the internal power structure of this faction.",
             icon = icon,
-            action = () => Find.WindowStack.Add(new Window_HHToolsFactionPolitics((Settlement)parent))
+            action = () => Find.WindowStack.Add(new Window_HHToolsFactionPolitics(settlement))
         };
     }
 }

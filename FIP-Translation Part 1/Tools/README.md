@@ -4,7 +4,10 @@ Run the generator from this folder:
 
 ```powershell
 .\Generate-GermanLocale.ps1 -Clean
+.\Generate-GermanLocale.ps1 -LanguageFolderName French -Clean
 ```
+
+The script name is historical. Use `-LanguageFolderName` to target any RimWorld locale folder, including `French`.
 
 What it does:
 
