@@ -24,15 +24,63 @@
 
   </FactionDef>
 
+  <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Greenway_IdeoBase" Abstract="True">
+    <defName>HHTools_Greenway_IdeoBase</defName>
+    <classicIdeo>false</classicIdeo>
+    <allowedMemes>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Democratic</li>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Despotic</li>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Raider</li>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Tribal</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_ChildrenOfAtom</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_ChildrenOfTheCathedral</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_ChildrenOfKrvibi</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_Hubology</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_FollowerOfTheApocalypse</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_CanaaniteChurch</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_AbbeyOfTheRoad</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_OrderOfOurLadyOfTheWaters</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_Syncretic</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_Karma</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_Native</li>
+      <li MayRequire="FIP.Greenway">Greenway_Religion_Shi</li>
+      <li MayRequire="FIP.Greenway">Greenway_WorkingCamps</li>
+      <li MayRequire="FIP.Greenway">Greenway_ViceCity</li>
+      <li MayRequire="FIP.Greenway">Greenway_IndenturedServitude</li>
+      <li MayRequire="FIP.Greenway">Greenway_MutantSlaves</li>
+      <li MayRequire="FIP.Greenway">Greenway_SecondClassMutants</li>
+      <li MayRequire="FIP.Greenway">Greenway_DesertRanger</li>
+      <li MayRequire="FIP.Greenway">Greenway_Railroad</li>
+      <li MayRequire="FIP.Greenway">Greenway_Greaser</li>
+      <li MayRequire="FIP.Greenway">Greenway_MutantCitizenship</li>
+      <li MayRequire="FIP.Greenway">Greenway_MutantMasters</li>
+      <li MayRequire="FIP.Greenway">Greenway_MutantPurge</li>
+      <li MayRequire="FIP.Greenway">Greenway_Utobitha</li>
+      <li MayRequire="FIP.Greenway">Greenway_FollowerSupport</li>
+      <li MayRequire="FIP.Greenway">Greenway_JetRoad</li>
+      <li MayRequire="FIP.Greenway">Greenway_EnclaveScientistsInExile</li>
+      <li MayRequire="FIP.Greenway">Greenway_BookBurning</li>
+      <li MayRequire="FIP.Greenway">Greenway_ChemTrade</li>
+      <li MayRequire="FIP.Greenway">Greenway_BrahminBarons</li>
+      <li MayRequire="FIP.Greenway">Greenway_PurityLaw</li>
+      <li MayRequire="FIP.Greenway">Greenway_CannibalistFamilies</li>
+      <li MayRequire="FIP.Greenway">Greenway_SurvivalistLifestyle</li>
+      <li MayRequire="FIP.Greenway">Greenway_CloudResidue</li>
+    </allowedMemes>
+  </FactionDef>
+
 
   <!-- Democratic/Despotic -->
-  <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Settler_Democratic" Abstract="True">
+  <FactionDef ParentName="HHTools_Greenway_IdeoBase" Name="HHTools_Settler_Democratic" Abstract="True">
     <defName>HHTools_Settler_Democratic</defName>
     <modExtensions>
       <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
         <system>Civilized</system>
       </li>
     </modExtensions>
+    <requiredMemes>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Democratic</li>
+    </requiredMemes>
     <pawnSingular>settler</pawnSingular>
     <pawnsPlural>settlers</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
@@ -146,7 +194,6 @@
     </pawnGroupMakers>
     <!--Gentile/Democratic-->
     <factionNameMaker>HHTools_FactionNameMaker_Democratic</factionNameMaker>
-    <classicIdeo>true</classicIdeo>
     <colorSpectrum>
       <li>(0.35, 0.30, 0.60)</li>
       <li>(0.45, 0.40, 0.90)</li>
@@ -163,8 +210,10 @@
         <representativePawnKind>HHTools_Settlement_Leader</representativePawnKind>
       </li>
     </modExtensions>
+    <requiredMemes Inherit="False">
+      <li MayRequire="FIP.Greenway">Greenway_Government_Despotic</li>
+    </requiredMemes>
     <factionNameMaker>HHTools_FactionNameMaker_Despotic</factionNameMaker>
-    <classicIdeo>true</classicIdeo>
     <naturalEnemy>true</naturalEnemy>
     <colorSpectrum Inherit="False">
       <li>(0.8, 0.6, 0.05)</li>
@@ -186,7 +235,7 @@
   </FactionDef>
 
   <!-- Raider -->
-  <FactionDef ParentName="HHTools_Factionbase" Name="HHTools_Raider" Abstract="True">
+  <FactionDef ParentName="HHTools_Greenway_IdeoBase" Name="HHTools_Raider" Abstract="True">
     <defName>HHTools_Raider</defName>
     <modExtensions>
       <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
@@ -201,8 +250,8 @@
     <factionIconPath>FIP-H&amp;HTools/HHTools_Raider</factionIconPath>
     <factionNameMaker>HHTools_FactionNameMaker_Raider</factionNameMaker>
     <permanentEnemy>true</permanentEnemy>
-    <requiredMemes>
-      <li MayRequire="FIP.Greenway">Raider</li>
+    <requiredMemes Inherit="False">
+      <li MayRequire="FIP.Greenway">Greenway_Government_Raider</li>
     </requiredMemes>
     <structureMemeWeights>
       <Greenway_Religion_ChildrenOfAtom MayRequire="FIP.Greenway">4</Greenway_Religion_ChildrenOfAtom>
@@ -294,7 +343,7 @@
   </FactionDef>
 
   <!-- Tribal -->
-  <FactionDef ParentName="HHTools_Factionbase" Name="FalloutTribalClan" Abstract="True">
+  <FactionDef ParentName="HHTools_Greenway_IdeoBase" Name="FalloutTribalClan" Abstract="True">
     <defName>FalloutTribalClan</defName>
     <modExtensions>
       <li Class="FIP.HHTools.HHToolsFactionPoliticsExtension">
@@ -302,6 +351,9 @@
         <representativePawnKind>HHTools_TribalChiefRanged</representativePawnKind>
       </li>
     </modExtensions>
+    <requiredMemes>
+      <li MayRequire="FIP.Greenway">Greenway_Government_Tribal</li>
+    </requiredMemes>
     <pawnSingular>tribal</pawnSingular>
     <pawnsPlural>tribals</pawnsPlural>
     <categoryTag>Tribal</categoryTag>

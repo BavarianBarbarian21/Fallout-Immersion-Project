@@ -132,7 +132,7 @@ public class RobCoCourierCamp : Camp
 
         succeeded = true;
         IntVec3 rewardCell = target?.PositionHeld.IsValid == true ? target.PositionHeld : map.Center;
-        Thing chip = ThingMaker.MakeThing(RobCoQuestDefOf.PlatinumChip);
+        Thing chip = ThingMaker.MakeThing(RobCoQuestDefOf.RobCo_PlatinumChip);
         GenPlace.TryPlaceThing(chip, rewardCell, map, ThingPlaceMode.Near);
         Faction?.TryAffectGoodwillWith(Faction.OfPlayer, -100);
         if (Branch != null)
