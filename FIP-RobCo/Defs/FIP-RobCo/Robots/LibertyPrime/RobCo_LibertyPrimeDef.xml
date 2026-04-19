@@ -50,7 +50,7 @@
 	</ThingDef>
 	<RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>25</gestationCycles>
-		<researchPrerequisite>UltraMechtech</researchPrerequisite>
+		<researchPrerequisite>RobCo_OS</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>
@@ -95,10 +95,18 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreSuperior</li>
+						<li>RobCo_PlatinumChip</li>
 					</thingDefs>
 				</filter>
 				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_RobCo_LibertyPrime</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<displayPriority>600</displayPriority>
@@ -137,8 +145,8 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_LibertyPrimeBase_Recipe">
 		<defName>RobCo_LibertyPrime_Recipe</defName>
-		<label>craft Liberty Prime</label>
-		<description>Craft a Liberty Prime. This is an incredibly rare and expensive unit.</description>
+		<label>restore Liberty Prime</label>
+		<description>Restore Liberty Prime.</description>
 		<products>
 			<RobCo_LibertyPrime>1</RobCo_LibertyPrime>
 		</products>

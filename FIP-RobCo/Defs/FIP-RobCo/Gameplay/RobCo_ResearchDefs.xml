@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>RobCo_OS</defName>
+		<label>RobCo OS</label>
+		<description>Reverse-engineer the recovered RobCo operating system and adapt it for use in a modern mechanitor network. This is required to deploy RobCo's securitron line and the heaviest RobCo war machines.</description>
+		<baseCost>6500</baseCost>
+		<techLevel>Ultra</techLevel>
+		<requiresMechanitor>true</requiresMechanitor>
+		<researchViewX>19.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+		<prerequisites>
+			<li>UltraMechtech</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<requiredAnalyzed>
+			<li>RobCo_PlatinumChip</li>
+		</requiredAnalyzed>
+	</ResearchProjectDef>
+</Defs>

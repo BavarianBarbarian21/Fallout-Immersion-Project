@@ -49,7 +49,7 @@
 	</ThingDef>
 	<RecipeDef Name="RobCo_WarMachineBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>20</gestationCycles>
-		<researchPrerequisite>UltraMechtech</researchPrerequisite>
+		<researchPrerequisite>RobCo_OS</researchPrerequisite>
 		<ingredients>
 			<li>
 				<filter>
@@ -86,10 +86,18 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>SubcoreSuperior</li>
+						<li>RobCo_PlatinumChip</li>
 					</thingDefs>
 				</filter>
 				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_RobCo_WarMachine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<displayPriority>500</displayPriority>
@@ -144,8 +152,8 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_WarMachineBase_Recipe">
 		<defName>RobCo_WarMachine_Recipe</defName>
-		<label>craft War Machine</label>
-		<description>Craft a War Machine.</description>
+		<label>restore War Machine</label>
+		<description>Restore a War Machine.</description>
 		<products>
 			<RobCo_WarMachine>1</RobCo_WarMachine>
 		</products>

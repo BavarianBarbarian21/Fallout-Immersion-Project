@@ -72,9 +72,7 @@ internal static class RobCoDefSettingsApplier
         "RobCo_Utilitron_Recipe",
         "RobCo_Collectron_Recipe",
         "RobCo_Protectron_Recipe",
-        "RobCo_Liberator_Recipe",
-        "RobCo_SecuritronMkI_Recipe",
-        "RobCo_SecuritronMkII_Recipe"
+        "RobCo_Liberator_Recipe"
     };
 
     private static readonly string[] MilitaryWorkbenchRecipeDefNames =
@@ -89,6 +87,8 @@ internal static class RobCoDefSettingsApplier
         "RobCo_Assaultron_Recipe",
         "RobCo_Cyberdog_Recipe",
         "RobCo_Robobrain_Recipe",
+        "RobCo_SecuritronMkI_Recipe",
+        "RobCo_SecuritronMkII_Recipe",
         "RobCo_SentrybotSiegebreaker_Recipe",
         "RobCo_SentrybotPestcontrol_Recipe",
         "RobCo_SentrybotAnnihilator_Recipe",

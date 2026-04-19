@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Platinum chip -->
+	<ThingDef ParentName="SubcoreBase">
+		<defName>RobCo_PlatinumChip</defName>
+		<label>platinum chip</label>
+		<description>A platinum data storage chip recovered from a sealed RobCo management vault. It contains a pre-war RobCo operating system package and is valuable far beyond its weight in metal.</description>
+		<graphicData>
+			<texPath>FIP-RobCo/Misc/RobCo_PlatinumChip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<MarketValue>10000</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202601</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1.5</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Platinum chip studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying the platinum chip, {PAWN_labelShort} has recovered the insight needed for the research project(s) {RESEARCH}.
+
+Your researchers can now begin adapting the recovered RobCo operating system for colonial use.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the platinum chip.</activateDescString>
+				<jobString>Analyze platinum chip</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a mechanitor.</inspectString>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
