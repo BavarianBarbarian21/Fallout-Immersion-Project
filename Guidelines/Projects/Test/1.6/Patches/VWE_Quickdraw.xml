@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Weapons Expanded - Quickdraw</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_PDW" and not(weaponTags)]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_PDW"]</xpath>
+						<value>
+							<weaponTags>
+								<li>SEX_GendarmerieWeapons</li>
+							</weaponTags>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_PDW" and not(weaponTags)]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_PDW"]/weaponTags</xpath>
+						<value>
+							<li>SEX_GendarmerieWeapons</li>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_BullpupRifle" and not(weaponTags)]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_BullpupRifle"]</xpath>
+						<value>
+							<weaponTags>
+								<li>SEX_GendarmerieWeapons</li>
+							</weaponTags>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_BullpupRifle" and not(weaponTags)]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_BullpupRifle"]/weaponTags</xpath>
+						<value>
+							<li>SEX_GendarmerieWeapons</li>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

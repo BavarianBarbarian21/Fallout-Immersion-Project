@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_LightMerc">
+		<defName>SEX_LightMerc</defName>
+		<label>light mercenary</label>
+		<combatPower>60</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistMercenary</li>
+					<li>SEX_MachinistCommonBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags Inherit="False">
+			<li>SEX_LightMercWeapons</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<weaponMoney>320~500</weaponMoney>
+		<apparelTags>
+			<li>SEX_LightMercApparel</li>
+			<li>SEX_Webbing</li>
+		</apparelTags>
+		<apparelMoney>900~1600</apparelMoney>
+		<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_LightMercHats</requiredTag>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierArmor</requiredTag>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>10</weight>
+							<only>(130,130,130)</only>
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(115,42,42)</only>
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(107,150,179)</only>
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(181,163,112)</only>
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierShoes</requiredTag>
+			</li>
+		</specificApparelRequirements>
+		<apparelAllowHeadgearChance>0.92</apparelAllowHeadgearChance>
+		<gearHealthRange>0.7~3.2</gearHealthRange>
+		<techHediffsChance>0.08</techHediffsChance>
+		<techHediffsMoney>400~800</techHediffsMoney>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>3~6</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.04</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.05</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+			</xenotypeChances>
+		</xenotypeSet>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>3~9</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Hireable -->
+	<PawnKindDef ParentName="SEX_LightMerc" Name="SEX_LightMercHireable">
+		<defName>SEX_LightMercHireable</defName>
+		<label>light mercenary</label>
+		<combatPower Inherit="False">60</combatPower>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+		<weaponMoney Inherit="False">400~600</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>SEX_SoldierWeapons</li>
+		</weaponTags>
+	</PawnKindDef>
+	<!-- Same pawn but only 3 per group -->
+	<PawnKindDef ParentName="SEX_LightMerc" Name="SEX_LightMercLimited">
+		<defName>SEX_LightMercLimited</defName>
+		<maxPerGroup>3</maxPerGroup>
+	</PawnKindDef>
+	<!-- Workaround for vanilla issue, special pawndef just for caravans -->
+	<PawnKindDef ParentName="SEX_LightMerc" Name="SEX_LightMercCaravan">
+		<defName>SEX_LightMercCaravan</defName>
+		<label>merchant mercenary</label>
+		<combatPower Inherit="False">60</combatPower>
+	</PawnKindDef>
+	<!-- Marksman -->
+	<PawnKindDef ParentName="SEX_LightMerc" Name="SEX_LightMercMarksman">
+		<defName>SEX_LightMercMarksman</defName>
+		<label>mercenary marksman</label>
+		<weaponMoney>545~900</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>SEX_MarksmanWeapons</li>
+		</weaponTags>
+	</PawnKindDef>
+	<!-- Hireable marksman -->
+	<PawnKindDef ParentName="SEX_LightMercMarksman" Name="SEX_LightMercMarksmanHireable">
+		<defName>SEX_LightMercMarksmanHireable</defName>
+		<label>mercenary marksman</label>
+		<combatPower Inherit="False">90</combatPower>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+</Defs>

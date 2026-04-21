@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Weapons Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/weaponTags/li[text()="SEX_FlamerWeapons"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags/li[text()="SEX_SoldierWeapons"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]</xpath>
+					<value>
+						<weaponTags>
+							<li>SEX_SoldierWeapons</li>
+						</weaponTags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieSidearm</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HeavyInfantryWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_SoldierWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_SawedOffShotgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_LightSMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Baton"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_CombatKnife"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_Carbine"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_BattleRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+						<li>SEX_HeavyInfantryWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+						<li>SEX_HeavyInfantryWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MarksmanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_BreacherSidearm</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_CombatHandgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_LightSMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_SawedOffShotgun"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Hammer"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HammerTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/weaponTags</xpath>
+					<value>
+						<li>SEX_ShovelTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]/weaponTags</xpath>
+					<value>
+						<li>SEX_BreacherWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_Flamethrower" and not(weaponTags)]</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_Flamethrower"]</xpath>
+						<value>
+							<weaponTags>
+								<li>SEX_FlamerWeapons</li>
+							</weaponTags>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_Flamethrower" and not(weaponTags)]</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VWE_Gun_Flamethrower"]/weaponTags</xpath>
+						<value>
+							<li>SEX_FlamerWeapons</li>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_SMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_BattleRifle"]/weaponTags</xpath>
+					<value>
+						<li>SEX_CommanderWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_Gun_HMG"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MachineGunnerWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Shovel"]/weaponTags</xpath>
+					<value>
+						<li>SEX_ShovelTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Hammer"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HammerTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VWE_MeleeWeapon_Axe"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HatchetTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Civilian_LaborerHireable"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>SEX_ShovelTag</li>
+							<li>SEX_HammerTag</li>
+						</weaponTags>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Civilian_FarmhandHireable"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>SEX_ShovelTag</li>
+							<li>SEX_HatchetTag</li>
+						</weaponTags>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Civilian_EngineerHireable"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>SEX_HammerTag</li>
+						</weaponTags>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags/li[text()="SEX_CommanderWeapons"]</xpath>
+							</li>
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

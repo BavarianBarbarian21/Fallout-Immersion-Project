@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="FactionBase" Name="MachinistFactionBase" Abstract="True">
+		<pawnSingular>national</pawnSingular>
+		<pawnsPlural>nationals</pawnsPlural>
+		<categoryTag>Machinist</categoryTag>
+		<listOrderPriority>28</listOrderPriority>
+		<settlementGenerationWeight>0.4</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>minister</leaderTitle>
+		<allowedCultures>
+			<li>Rustican</li>
+		</allowedCultures>
+		<factionIconPath>World/WorldObjects/SEX_Machinists_FactionIcon</factionIconPath>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionMachinist</factionNameMaker>
+		<settlementNameMaker>NamerSettlementMachinist</settlementNameMaker>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		</disallowedPrecepts>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.20</Hussar>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.04</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.05</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0.06</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Cloth</li>
+				<li>WoolMuffalo</li>
+				<li>WoolAlpaca</li>
+				<li>Leather_Plain</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>SEX_MachinistBackstories</li>
+				</categories>
+				<commonality>1</commonality>
+			</li>
+		</backstoryFilters>
+		<caravanTraderKinds>
+			<li>SEX_Caravan_Combat</li>
+			<li>SEX_Caravan_Academic</li>
+			<li>SEX_Caravan_BulkGoods</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>SEX_Machinist_Visitors</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>SEX_Machinist_Base</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>-30~45</allowedArrivalTemperatureRange>
+		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,15)</li>
+				<li>(70, 40)</li>
+				<li>(700, 80)</li>
+				<li>(1300, 120)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<!-- Beginner fights, low threat -->
+				<kindDef>Combat</kindDef>
+				<commonality>999999</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<maxTotalPoints>450</maxTotalPoints>
+				<options>
+					<SEX_Minutemen>10</SEX_Minutemen>
+					<SEX_LightMerc>10</SEX_LightMerc>
+				</options>
+			</li>
+			<li>
+				<!-- Beginner fights, standard mix -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<SEX_Soldier>100</SEX_Soldier>
+					<SEX_HeavyInfantry>100</SEX_HeavyInfantry>
+					<SEX_MachineGunner>100</SEX_MachineGunner>
+					<SEX_Medic>20</SEX_Medic>
+					<SEX_LightMerc>10</SEX_LightMerc>
+					<SEX_EliteMerc MayRequire="CETeam.CombatExtended">5</SEX_EliteMerc>
+					<SEX_Breacher>8</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+					<SEX_Flamer>8</SEX_Flamer>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, mostly soldiers -->
+				<kindDef>Combat</kindDef>
+				<commonality>80</commonality>
+				<options>
+					<SEX_Soldier>100</SEX_Soldier>
+					<SEX_HeavyInfantry>100</SEX_HeavyInfantry>
+					<SEX_Medic>20</SEX_Medic>
+					<SEX_Breacher>10</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, plus marksman -->
+				<kindDef>Combat</kindDef>
+				<commonality>80</commonality>
+				<options>
+					<SEX_Soldier>100</SEX_Soldier>
+					<SEX_HeavyInfantry>100</SEX_HeavyInfantry>
+					<SEX_MachineGunnerLimited>100</SEX_MachineGunnerLimited>
+					<SEX_Marksman>25</SEX_Marksman>
+					<SEX_Medic>20</SEX_Medic>
+					<SEX_Breacher>10</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+					<SEX_Commander>20</SEX_Commander>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, alternative -->
+				<kindDef>Combat</kindDef>
+				<commonality>20</commonality>
+				<options>
+					<SEX_Commander>20</SEX_Commander>
+					<SEX_GendarmerieLimited>20</SEX_GendarmerieLimited>
+					<SEX_Soldier>100</SEX_Soldier>
+					<SEX_HeavyInfantry>100</SEX_HeavyInfantry>
+					<SEX_MachineGunnerLimited>100</SEX_MachineGunnerLimited>
+					<SEX_LightMercLimited>50</SEX_LightMercLimited>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, strike group -->
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<options>
+					<SEX_SoldierLimited>100</SEX_SoldierLimited>
+					<SEX_HeavyInfantry>100</SEX_HeavyInfantry>
+					<SEX_Marksman>20</SEX_Marksman>
+					<SEX_Gendarmerie>20</SEX_Gendarmerie>
+					<SEX_GendarmerieShield MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieShield>
+					<SEX_GendarmerieGrenade MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieGrenade>
+					<SEX_Breacher>8</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+				</options>
+			</li>
+			<li>
+				<!-- Strike group with leader -->
+				<kindDef>Combat</kindDef>
+				<commonality>50</commonality>
+				<options>
+					<SEX_SoldierLimited>80</SEX_SoldierLimited>
+					<SEX_Medic>100</SEX_Medic>
+					<SEX_Gendarmerie>20</SEX_Gendarmerie>
+					<SEX_Marksman>10</SEX_Marksman>
+					<SEX_GendarmerieShield MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieShield>
+					<SEX_GendarmerieGrenade MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieGrenade>
+					<SEX_Breacher>8</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+					<SEX_Commander>100</SEX_Commander>
+				</options>
+			</li>
+			<li>
+				<!-- Strike group with alternative leader -->
+				<kindDef>Combat</kindDef>
+				<commonality>60</commonality>
+				<options>
+					<SEX_SoldierLimited>80</SEX_SoldierLimited>
+					<SEX_Medic>100</SEX_Medic>
+					<SEX_Gendarmerie>20</SEX_Gendarmerie>
+					<SEX_Marksman>10</SEX_Marksman>
+					<SEX_GendarmerieShield MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieShield>
+					<SEX_GendarmerieGrenade MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieGrenade>
+					<SEX_Breacher>8</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+					<SEX_Juggernaut>100</SEX_Juggernaut>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, mostly flamers -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<SEX_Flamer>100</SEX_Flamer>
+					<SEX_Breacher>5</SEX_Breacher>
+					<SEX_BreacherRocket MayRequire="CETeam.CombatExtendedGuns">4</SEX_BreacherRocket>
+					<SEX_SoldierLimited>10</SEX_SoldierLimited>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, gendarmerie incursion -->
+				<kindDef>Combat</kindDef>
+				<commonality>60</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<SEX_Gendarmerie>60</SEX_Gendarmerie>
+					<SEX_GendarmerieShield MayRequire="CETeam.CombatExtended">20</SEX_GendarmerieShield>
+					<SEX_GendarmerieGrenade MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieGrenade>
+					<SEX_Medic>100</SEX_Medic>
+					<SEX_MarksmanLimited>100</SEX_MarksmanLimited>
+					<SEX_Commander>50</SEX_Commander>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SEX_Civilian_Laborer>20</SEX_Civilian_Laborer>
+					<SEX_Civilian_Farmhand>10</SEX_Civilian_Farmhand>
+					<SEX_Civilian_Engineer>10</SEX_Civilian_Engineer>
+					<SEX_Civilian_Apprentice>10</SEX_Civilian_Apprentice>
+					<SEX_LightMerc>10</SEX_LightMerc>
+					<SEX_Minutemen>10</SEX_Minutemen>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SEX_Civilian_Merchant>1</SEX_Civilian_Merchant>
+				</traders>
+				<carriers>
+					<Bison>48</Bison>
+					<Dromedary>24</Dromedary>
+				</carriers>
+				<guards>
+					<SEX_SoldierCaravan>10</SEX_SoldierCaravan>
+					<SEX_LightMercCaravan>8</SEX_LightMercCaravan>
+					<SEX_Civilian_LaborerCaravan>6</SEX_Civilian_LaborerCaravan>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<SEX_Civilian_Laborer>2</SEX_Civilian_Laborer>
+					<SEX_Civilian_Farmhand>2</SEX_Civilian_Farmhand>
+					<SEX_Civilian_Doctor>2</SEX_Civilian_Doctor>
+					<SEX_Civilian_Engineer>2</SEX_Civilian_Engineer>
+					<SEX_Soldier>40</SEX_Soldier>
+					<SEX_HeavyInfantry>40</SEX_HeavyInfantry>
+					<SEX_Marksman>10</SEX_Marksman>
+					<SEX_Gendarmerie>15</SEX_Gendarmerie>
+					<SEX_GendarmerieShield MayRequire="CETeam.CombatExtended">5</SEX_GendarmerieShield>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<SEX_Civilian_LaborerCaravan>1</SEX_Civilian_LaborerCaravan>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<SEX_Civilian_FarmhandCaravan>1</SEX_Civilian_FarmhandCaravan>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<SEX_Civilian_FarmhandCaravan>1</SEX_Civilian_FarmhandCaravan>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	</FactionDef>
+	<FactionDef ParentName="MachinistFactionBase">
+		<defName>SEX_Machinists</defName>
+		<label>sovereign city states</label>
+		<description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They operate factories, mines and research facilities.\n\nPeacekeepers and soldiers defend their cities from raiders and bandits.\n\nOrganized into city states, nationals are generally hostile to outsiders, though they are not entirely uncivil. They view outsiders as a source of potential wealth and a threat to their security.</description>
+		<colorSpectrum>
+			<li>(0.60, 0.30, 0.35)</li>
+			<li>(0.90, 0.40, 0.45)</li>
+		</colorSpectrum>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>10</configurationListOrderPriority>
+		<modExtensions>
+			<li Class="KCSG.CustomGenOption">
+				<chooseFromSettlements>
+					<li>Sex_IndustrialTown</li>
+				</chooseFromSettlements>
+				<preventBridgeable>true</preventBridgeable>
+			</li>
+			<li Class="VEF.Factions.FactionDefExtension">
+				<requiredHillLevels>
+					<li>Flat</li>
+					<li>SmallHills</li>
+				</requiredHillLevels>
+			</li>
+		</modExtensions>
+		<naturalEnemy>false</naturalEnemy>
+		<allowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Nationalist</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Trader</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_CityBuilders</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_HardcoreIndustrialism</li>
+		</allowedMemes>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+		</requiredMemes>
+	</FactionDef>
+</Defs>

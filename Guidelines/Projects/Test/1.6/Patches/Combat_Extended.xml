@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_BallisticShield"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_MachinistsShield</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_DisposableRocketLauncher"]/weaponTags</xpath>
+					<value>
+						<li>SEX_BreacherWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_EliteMerc">
+							<defName>SEX_EliteMerc</defName>
+							<label>elite mercenary</label>
+							<combatPower>90</combatPower>
+							<maxPerGroup>3</maxPerGroup>
+							<weaponTags Inherit="False">
+								<li>SEX_CommanderWeapons</li>
+							</weaponTags>
+							<weaponMoney>500~900</weaponMoney>
+							<apparelTags>
+								<li>SEX_LightMercApparel</li>
+							</apparelTags>
+							<apparelMoney>1200~1900</apparelMoney>
+							<specificApparelRequirements>
+								<li>
+									<bodyPartGroup>UpperHead</bodyPartGroup>
+									<apparelLayer>Overhead</apparelLayer>
+									<requiredTag>SEX_AdvancedHelmetTag</requiredTag>
+									<colorGenerator Class="ColorGenerator_Options">
+										<options>
+											<li>
+												<weight>20</weight>
+												<only>(220,220,220)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(150,60,60)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(56,85,60)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(181,163,112)</only>
+											</li>
+										</options>
+									</colorGenerator>
+								</li>
+								<li>
+									<bodyPartGroup>FullHead</bodyPartGroup>
+									<apparelLayer>StrappedHead</apparelLayer>
+									<requiredTag>SEX_VisageMaskTag</requiredTag>
+									<color>(60,60,60)</color>
+								</li>
+								<li>
+									<bodyPartGroup>Torso</bodyPartGroup>
+									<apparelLayer>Middle</apparelLayer>
+									<requiredTag>SEX_SoldierArmor</requiredTag>
+									<colorGenerator Class="ColorGenerator_Options">
+										<options>
+											<li>
+												<weight>10</weight>
+												<only>(130,130,130)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(115,42,42)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(107,150,179)</only>
+											</li>
+											<li>
+												<weight>10</weight>
+												<only>(181,163,112)</only>
+											</li>
+										</options>
+									</colorGenerator>
+								</li>
+								<li>
+									<bodyPartGroup>Torso</bodyPartGroup>
+									<apparelLayer>Shell</apparelLayer>
+									<requiredTag>SEX_GendarmerieApparel</requiredTag>
+								</li>
+								<li>
+									<bodyPartGroup>Legs</bodyPartGroup>
+									<requiredTag>SEX_FlakPantsTag</requiredTag>
+								</li>
+								<li>
+									<bodyPartGroup>Feet</bodyPartGroup>
+									<apparelLayer>Middle</apparelLayer>
+									<requiredTag>SEX_SoldierShoes</requiredTag>
+								</li>
+							</specificApparelRequirements>
+							<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+							<gearHealthRange>0.7~3.2</gearHealthRange>
+							<techHediffsChance>0.08</techHediffsChance>
+							<techHediffsMoney>400~800</techHediffsMoney>
+							<techHediffsDisallowTags>
+								<li>PainCauser</li>
+							</techHediffsDisallowTags>
+							<techHediffsTags>
+								<li>Advanced</li>
+								<li>ImplantEmpireCommon</li>
+							</techHediffsTags>
+							<initialWillRange>3~6</initialWillRange>
+							<initialResistanceRange>15~24</initialResistanceRange>
+							<chemicalAddictionChance>0.1</chemicalAddictionChance>
+							<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+							<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+							<requiredWorkTags>
+								<li>Violent</li>
+							</requiredWorkTags>
+							<skills>
+								<li>
+									<skill>Shooting</skill>
+									<range>4~10</range>
+								</li>
+							</skills>
+						</PawnKindDef>
+						<PawnKindDef ParentName="SEX_EliteMerc" Name="SEX_EliteMercHireable">
+							<defName>SEX_EliteMercHireable</defName>
+							<label>elite mercenary</label>
+							<combatPower Inherit="False">120</combatPower>
+							<inventoryOptions Inherit="False" IsNull="True"/>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_EliteMerc"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>6</max>
+								</primaryMagazineCount>
+								<sidearms>
+									<li>
+										<generateChance>0.45</generateChance>
+										<sidearmMoney>
+											<min>40</min>
+											<max>130</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierSidearm</li>
+										</weaponTags>
+									</li>
+								</sidearms>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_EliteMerc"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(158,52,52)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(230,230,230)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]/weaponTags</xpath>
+					<value>
+						<weaponTags Inherit="False">
+							<li>SEX_GendarmerieSidearm</li>
+						</weaponTags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]/apparelTags</xpath>
+					<value>
+						<li>SEX_MachinistsShield</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>6</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>ArmorPiercing</forcedAmmoCategory>
+								<shieldTags>
+									<li>SEX_MachinistsShield</li>
+								</shieldTags>
+								<shieldMoney>
+									<min>9999</min>
+									<max>9999</max>
+								</shieldMoney>
+								<shieldChance>1</shieldChance>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="Sex_Soldier" Name="Sex_SoldierGrenade">
+							<defName>Sex_SoldierGrenade</defName>
+							<maxPerGroup>2</maxPerGroup>
+							<weaponTags Inherit="False">
+								<li>GrenadeDestructive</li>
+							</weaponTags>
+							<modExtensions Inherit="False">
+								<li Class="CombatExtended.LoadoutPropertiesExtension">
+									<primaryMagazineCount>
+										<min>0</min>
+										<max>0</max>
+									</primaryMagazineCount>
+									<forcedSidearm>
+										<sidearmMoney>
+											<min>265</min>
+											<max>850</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierWeapons</li>
+										</weaponTags>
+										<magazineCount>
+											<min>4</min>
+											<max>7</max>
+										</magazineCount>
+									</forcedSidearm>
+								</li>
+							</modExtensions>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="SEX_Gendarmerie" Name="SEX_GendarmerieGrenade">
+							<defName>SEX_GendarmerieGrenade</defName>
+							<maxPerGroup>1</maxPerGroup>
+							<weaponTags Inherit="False">
+								<li>GrenadeDestructive</li>
+							</weaponTags>
+							<modExtensions Inherit="False">
+								<li Class="CombatExtended.LoadoutPropertiesExtension">
+									<primaryMagazineCount>
+										<min>0</min>
+										<max>0</max>
+									</primaryMagazineCount>
+									<forcedSidearm>
+										<sidearmMoney>
+											<min>450</min>
+											<max>1000</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_GendarmerieWeapons</li>
+										</weaponTags>
+										<magazineCount>
+											<min>4</min>
+											<max>7</max>
+										</magazineCount>
+									</forcedSidearm>
+								</li>
+							</modExtensions>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="SEX_Gendarmerie" Name="SEX_GendarmerieShield">
+							<defName>SEX_GendarmerieShield</defName>
+							<label>gendarmerie</label>
+							<combatPower>200</combatPower>
+							<apparelTags>
+								<li>SEX_MachinistsShield</li>
+							</apparelTags>
+							<weaponTags Inherit="False">
+								<li>SEX_GendarmerieSidearm</li>
+							</weaponTags>
+							<modExtensions Inherit="False">
+								<li Class="CombatExtended.LoadoutPropertiesExtension">
+									<primaryMagazineCount>
+										<min>4</min>
+										<max>7</max>
+									</primaryMagazineCount>
+									<forcedAmmoCategory>ArmorPiercing</forcedAmmoCategory>
+									<shieldTags>
+										<li>SEX_MachinistsShield</li>
+									</shieldTags>
+									<shieldMoney>
+										<min>9999</min>
+										<max>9999</max>
+									</shieldMoney>
+									<shieldChance>1</shieldChance>
+								</li>
+							</modExtensions>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_Backpack"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_MachinistsBackpackTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_Backpack"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_MinutemenApparel</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_SimpleNightVision"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_SimpleNightVisTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_SimpleNightVision"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_CE_EyewearTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_AdvancedNightVision"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_AdvancedNightVisTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_Backpack"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_MachinistsNormalBackpackTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended Armors</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Armor_LargeBackpack"]/apparel/tags</xpath>
+								<value>
+									<li>SEX_MachinistsBackpackTag</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Armor_BallisticGoggles"]/apparel/tags</xpath>
+								<value>
+									<li>SEX_CE_EyewearTag</li>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Soldier"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>(138, 208, 255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(210, 210, 210)</only>
+									</li>
+									<li>
+										<weight>6</weight>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>(138, 208, 255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(210, 210, 210)</only>
+									</li>
+									<li>
+										<weight>6</weight>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60,60,60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+						<li>
+							<bodyPartGroup>Eyes</bodyPartGroup>
+							<apparelLayer>StrappedHead</apparelLayer>
+							<color>(255,255,255)</color>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_SimpleNightVisTag</tag>
+									<chance>0.25</chance>
+								</li>
+								<li MayRequire="CETeam.CombatExtendedArmors">
+									<tag>SEX_CE_EyewearTag</tag>
+									<chance>0.25</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Marksman"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsBackpackTag</requiredTag>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(78,94,69)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Webbing</apparelLayer>
+							<requiredTag>SEX_Webbing</requiredTag>
+							<color>(78,94,69)</color>
+						</li>
+						<li>
+							<bodyPartGroup>Eyes</bodyPartGroup>
+							<apparelLayer>StrappedHead</apparelLayer>
+							<color>(255,255,255)</color>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_SimpleNightVisTag</tag>
+									<chance>0.5</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_LightMerc"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Eyes</bodyPartGroup>
+							<apparelLayer>StrappedHead</apparelLayer>
+							<color>(255,255,255)</color>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_CE_EyewearTag</tag>
+									<chance>0.06</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_Backpack"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_LightMercApparel</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Apparel_TacVest"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_Webbing</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Torso</bodyPartGroup>
+							<apparelLayer>Shell</apparelLayer>
+							<requiredTag>SEX_FlakJacketTag</requiredTag>
+							<stuff>DevilstrandCloth</stuff>
+							<color>(210,170,50)</color>
+						</li>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Middle" and requiredTag="SEX_BreacherApparel"]</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Torso</bodyPartGroup>
+							<apparelLayer>Middle</apparelLayer>
+							<requiredTag>SEX_SoldierArmor</requiredTag>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>5</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>GrenadeHE</forcedAmmoCategory>
+								<forcedSidearm>
+									<sidearmMoney>
+										<min>350</min>
+										<max>700</max>
+									</sidearmMoney>
+									<weaponTags>
+										<li>SEX_BreacherSidearm</li>
+									</weaponTags>
+									<magazineCount>
+										<min>1</min>
+										<max>1</max>
+									</magazineCount>
+								</forcedSidearm>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Flamer"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Webbing</apparelLayer>
+							<stuff>Cloth</stuff>
+							<requiredTag>SEX_Webbing</requiredTag>
+							<color>(60,60,60)</color>
+						</li>
+						<li>
+							<bodyPartGroup>Torso</bodyPartGroup>
+							<apparelLayer>Shell</apparelLayer>
+							<stuff>Cloth</stuff>
+							<requiredTag>SEX_FlakJacketTag</requiredTag>
+							<color>(130,35,35)</color>
+						</li>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Flamer"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Middle" and requiredTag="SEX_BreacherApparel"]</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Torso</bodyPartGroup>
+							<apparelLayer>Middle</apparelLayer>
+							<requiredTag>SEX_SoldierArmor</requiredTag>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Flamer"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>4</min>
+									<max>6</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>JelliedPrometheumFuel</forcedAmmoCategory>
+								<forcedSidearm>
+									<sidearmMoney>
+										<min>350</min>
+										<max>700</max>
+									</sidearmMoney>
+									<weaponTags>
+										<li>SEX_BreacherSidearm</li>
+									</weaponTags>
+									<magazineCount>
+										<min>1</min>
+										<max>2</max>
+									</magazineCount>
+								</forcedSidearm>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Soldier"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>4</min>
+									<max>6</max>
+								</primaryMagazineCount>
+								<sidearms>
+									<li>
+										<generateChance>0.45</generateChance>
+										<sidearmMoney>
+											<min>40</min>
+											<max>130</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierSidearm</li>
+										</weaponTags>
+									</li>
+								</sidearms>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>4</min>
+									<max>6</max>
+								</primaryMagazineCount>
+								<sidearms>
+									<li>
+										<generateChance>0.45</generateChance>
+										<sidearmMoney>
+											<min>40</min>
+											<max>130</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierSidearm</li>
+										</weaponTags>
+									</li>
+								</sidearms>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_LightMerc"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>4</min>
+									<max>7</max>
+								</primaryMagazineCount>
+								<sidearms>
+									<li>
+										<generateChance>0.45</generateChance>
+										<sidearmMoney>
+											<min>40</min>
+											<max>130</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierSidearm</li>
+										</weaponTags>
+									</li>
+								</sidearms>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Minutemen"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>5</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Civilian_Merchant"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>2</min>
+									<max>3</max>
+								</primaryMagazineCount>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Marksman"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>6</max>
+								</primaryMagazineCount>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>4</min>
+									<max>7</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>ArmorPiercing</forcedAmmoCategory>
+								<forcedSidearm>
+									<sidearmMoney>
+										<min>350</min>
+										<max>700</max>
+									</sidearmMoney>
+									<weaponTags>
+										<li>SEX_GendarmerieSidearm</li>
+									</weaponTags>
+									<magazineCount>
+										<min>1</min>
+										<max>3</max>
+									</magazineCount>
+								</forcedSidearm>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>6</min>
+									<max>8</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>ArmorPiercing</forcedAmmoCategory>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60,60,60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+						<li>
+							<bodyPartGroup>Eyes</bodyPartGroup>
+							<apparelLayer>StrappedHead</apparelLayer>
+							<requiredTag>SEX_AdvancedNightVisTag</requiredTag>
+							<color>(255,255,255)</color>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_SimpleNightVisTag</tag>
+									<chance>0.4</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="SEX_Machinist_Base"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>FSX</thingDef>
+							<countRange>
+								<min>25</min>
+								<max>50</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Prometheum</thingDef>
+							<countRange>
+								<min>30</min>
+								<max>60</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_Ammo</tradeTag>
+							<countRange>
+								<min>600</min>
+								<max>1000</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>3</min>
+								<max>8</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_MediumAmmo</tradeTag>
+							<countRange>
+								<min>30</min>
+								<max>60</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>3</min>
+								<max>6</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_HeavyAmmo</tradeTag>
+							<countRange>
+								<min>10</min>
+								<max>15</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>4</min>
+								<max>6</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Ammo</categoryDef>
+							<thingDefCountRange>
+								<min>0</min>
+								<max>0</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_Turret</tradeTag>
+							<thingDefCountRange>
+								<min>2</min>
+								<max>3</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>1</min>
+								<max>1</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>WeaponsTurrets</categoryDef>
+							<thingDefCountRange>
+								<min>0</min>
+								<max>0</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Animals">
+							<tradeTagsSell>
+								<li>CE_AnimalBoom</li>
+							</tradeTagsSell>
+							<tradeTagsBuy>
+								<li>CE_AnimalBoom</li>
+							</tradeTagsBuy>
+							<kindCountRange>
+								<min>1</min>
+								<max>1</max>
+							</kindCountRange>
+							<countRange>
+								<min>-1</min>
+								<max>2</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="SEX_Caravan_Combat"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>FSX</thingDef>
+							<countRange>
+								<min>25</min>
+								<max>50</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Prometheum</thingDef>
+							<countRange>
+								<min>30</min>
+								<max>60</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_Ammo</tradeTag>
+							<countRange>
+								<min>600</min>
+								<max>1000</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>3</min>
+								<max>8</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_MediumAmmo</tradeTag>
+							<countRange>
+								<min>30</min>
+								<max>60</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>3</min>
+								<max>6</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_HeavyAmmo</tradeTag>
+							<countRange>
+								<min>10</min>
+								<max>15</max>
+							</countRange>
+							<price>Cheap</price>
+							<thingDefCountRange>
+								<min>4</min>
+								<max>6</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Ammo</categoryDef>
+							<thingDefCountRange>
+								<min>0</min>
+								<max>0</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_Turret</tradeTag>
+							<thingDefCountRange>
+								<min>2</min>
+								<max>3</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>1</min>
+								<max>1</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>WeaponsTurrets</categoryDef>
+							<thingDefCountRange>
+								<min>0</min>
+								<max>0</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Animals">
+							<tradeTagsSell>
+								<li>CE_AnimalBoom</li>
+							</tradeTagsSell>
+							<tradeTagsBuy>
+								<li>CE_AnimalBoom</li>
+							</tradeTagsBuy>
+							<kindCountRange>
+								<min>1</min>
+								<max>1</max>
+							</kindCountRange>
+							<countRange>
+								<min>-1</min>
+								<max>2</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TraderKindDef[defName="SEX_Caravan_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>FSX</thingDef>
+							<price>Expensive</price>
+							<countRange>
+								<min>100</min>
+								<max>200</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Prometheum</thingDef>
+							<countRange>
+								<min>50</min>
+								<max>100</max>
+							</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>CE_Ammo</tradeTag>
+							<countRange>
+								<min>400</min>
+								<max>800</max>
+							</countRange>
+							<price>VeryCheap</price>
+							<thingDefCountRange>
+								<min>2</min>
+								<max>3</max>
+							</thingDefCountRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Ammo</categoryDef>
+							<thingDefCountRange>
+								<min>0</min>
+								<max>0</max>
+							</thingDefCountRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Civilian_Laborer"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>2</min>
+									<max>4</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Medic"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]/stuff</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]/stuff</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Shell" and requiredTag="SEX_GendarmerieApparel"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]/stuff</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Shell" and requiredTag="SEX_CommanderApparel"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Commander"]/specificApparelRequirements/li[bodyPartGroup="UpperHead" and apparelLayer="Overhead" and requiredTag="SEX_BeretTag"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Shell" and requiredTag="SEX_GendarmerieApparel"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Middle" and requiredTag="SEX_SoldierArmor"]</xpath>
+					<value>
+						<stuff>Steel</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsNormalBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<only>(138, 208, 255)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>(210, 210, 210)</only>
+									</li>
+									<li>
+										<weight>6</weight>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>3</min>
+									<max>5</max>
+								</primaryMagazineCount>
+								<sidearms>
+									<li>
+										<generateChance>0.45</generateChance>
+										<sidearmMoney>
+											<min>40</min>
+											<max>130</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_SoldierSidearm</li>
+										</weaponTags>
+									</li>
+								</sidearms>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Shell" and requiredTag="SEX_GendarmerieApparel"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Shoulders</bodyPartGroup>
+							<apparelLayer>Backpack</apparelLayer>
+							<requiredTag>SEX_MachinistsBackpackTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60,60,60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]</xpath>
+					<value>
+						<modExtensions Inherit="False">
+							<li Class="CombatExtended.LoadoutPropertiesExtension">
+								<primaryMagazineCount>
+									<min>2</min>
+									<max>2</max>
+								</primaryMagazineCount>
+								<forcedAmmoCategory>ExplosiveAP</forcedAmmoCategory>
+							</li>
+						</modExtensions>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]</xpath>
+					<value>
+						<ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="Shell" and requiredTag="SEX_GendarmerieApparel"]</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]/specificApparelRequirements/li[bodyPartGroup="Torso" and apparelLayer="OnSkin" and requiredTag="SEX_SoldierUniform"]/stuff</xpath>
+					<value>
+						<stuff>DevilstrandCloth</stuff>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Soldier"]/inventoryOptions/subOptionsChooseOne</xpath>
+					<value>
+						<li>
+							<thingDef>CE_Weapon_GrenadeSmoke</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+						<li>
+							<thingDef>Weapon_GrenadeFrag</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/inventoryOptions/subOptionsChooseOne</xpath>
+					<value>
+						<li>
+							<thingDef>CE_Weapon_GrenadeSmoke</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+						<li>
+							<thingDef>Weapon_GrenadeFrag</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/inventoryOptions/subOptionsChooseOne</xpath>
+					<value>
+						<li>
+							<thingDef>CE_Weapon_GrenadeSmoke</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+						<li>
+							<thingDef>Weapon_GrenadeFrag</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/inventoryOptions/subOptionsChooseOne</xpath>
+					<value>
+						<li>
+							<thingDef>CE_Weapon_GrenadeSmoke</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+						<li>
+							<thingDef>Weapon_GrenadeFrag</thingDef>
+							<countRange>1~1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

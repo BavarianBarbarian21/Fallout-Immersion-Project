@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_Flamer">
+		<defName>SEX_Flamer</defName>
+		<label>flamer</label>
+		<combatPower>80</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistSoldier</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<canBeSapper>true</canBeSapper>
+		<weaponTags>
+			<li>SEX_FlamerWeapons</li>
+		</weaponTags>
+		<weaponMoney>900~1600</weaponMoney>
+		<gearHealthRange>0.8~1.0</gearHealthRange>
+		<apparelColor>(60,60,60)</apparelColor>
+		<apparelTags>
+			<li>SEX_BreacherApparel</li>
+			<li>SEX_BreacherShoes</li>
+			<li>Apparel_SmokepopBelt</li>
+		</apparelTags>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_FlamerApparel</requiredTag>
+				<color>(222,222,222)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<requiredTag>SEX_SoldierUniform</requiredTag>
+				<color>(130,35,35)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_BreacherShoes</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_BreacherApparel</requiredTag>
+				<stuff>WoolMuffalo</stuff>
+				<color>(60,60,60)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelMoney>1200~2000</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<techHediffsChance>0.1</techHediffsChance>
+		<techHediffsMoney>800~1200</techHediffsMoney>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<startingHediffs>
+			<li>
+				<def>GoJuiceHigh</def>
+			</li>
+		</startingHediffs>
+		<initialWillRange>2~5</initialWillRange>
+		<initialResistanceRange>26~36</initialResistanceRange>
+		<minGenerationAge>32</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances Inherit="False">
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.05</Baseliner>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.9</Impid>
+			</xenotypeChances>
+		</xenotypeSet>
+		<biocodeWeaponChance>0.4</biocodeWeaponChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>9~12</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+</Defs>

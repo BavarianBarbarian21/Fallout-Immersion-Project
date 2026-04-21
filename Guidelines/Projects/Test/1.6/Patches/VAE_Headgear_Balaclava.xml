@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Tiny Tweaks Collection</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VAE_Headgear_Balaclava"]/apparel/bodyPartGroups</xpath>
+					<value>
+						<bodyPartGroups>
+							<li>Neck</li>
+						</bodyPartGroups>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VAE_Headgear_Balaclava"]/apparel</xpath>
+					<value>
+						<renderSkipFlags>
+							<li>Hair</li>
+							<li>Beard</li>
+						</renderSkipFlags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VAE_Headgear_Balaclava"]/apparel</xpath>
+					<value>
+						<drawData>
+							<defaultData>
+								<layer>58</layer>
+							</defaultData>
+						</drawData>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>

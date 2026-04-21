@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="SEX_SoldierBase" Abstract="True">
+		<race>Human</race>
+		<isFighter>true</isFighter>
+		<defaultFactionType>SEX_Machinists</defaultFactionType>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+		<invNutrition>2.55</invNutrition>
+		<gearHealthRange>0.66~1.0</gearHealthRange>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.24</Hussar>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.04</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.05</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="Sex_Soldier">
+		<defName>SEX_Soldier</defName>
+		<label>infantry</label>
+		<combatPower>100</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistSoldier</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>SEX_SoldierWeapons</li>
+		</weaponTags>
+		<weaponMoney>265~850</weaponMoney>
+		<apparelTags>
+			<li>SEX_SoldierApparel</li>
+			<li>SEX_SoldierShoes</li>
+		</apparelTags>
+		<apparelColor>(100,120,60)</apparelColor>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierArmor</requiredTag>
+				<color>(120,185,225)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<requiredTag>SEX_SoldierUniform</requiredTag>
+				<stuff>Cloth</stuff>
+				<color>(100,120,60)</color>
+			</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_SoldierApparel</requiredTag>
+				<color>(120,185,225)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierShoes</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelMoney>150~420</apparelMoney>
+		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>22~28</initialResistanceRange>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<biocodeWeaponChance>0.2</biocodeWeaponChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~9</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>3~8</countRange>
+				</li>
+				<li>
+					<thingDef>Beer</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	<!-- Workaround for vanilla issue, special pawndef just for caravans -->
+	<PawnKindDef ParentName="Sex_Soldier" Name="Sex_SoldierCaravan">
+		<defName>SEX_SoldierCaravan</defName>
+		<label>merchant soldier</label>
+		<combatPower Inherit="False">60</combatPower>
+	</PawnKindDef>
+	<!-- Same pawn but only 5 per group -->
+	<PawnKindDef ParentName="Sex_Soldier" Name="Sex_SoldierLimited">
+		<defName>SEX_SoldierLimited</defName>
+		<maxPerGroup>5</maxPerGroup>
+	</PawnKindDef>
+	<!-- Hireable -->
+	<PawnKindDef ParentName="Sex_Soldier" Name="SEX_SoldierHireable">
+		<defName>SEX_SoldierHireable</defName>
+		<label>mercenary soldier</label>
+		<combatPower Inherit="False">80</combatPower>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+</Defs>

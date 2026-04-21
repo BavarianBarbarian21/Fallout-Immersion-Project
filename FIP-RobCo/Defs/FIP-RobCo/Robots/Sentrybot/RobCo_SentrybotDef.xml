@@ -97,7 +97,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotSiegebreaker</defName>
 		<label>Siegebreaker Sentrybot</label>
-		<description>A heavy-duty yard guardian for when â€œkeep outâ€ signs just arenâ€™t enough. Its breaching rockets turn raider coverâ€”and the occasional garden shedâ€”into decorative rubble.</description>
+		<description>A sentry bot variant configured for fortification assault and anti-armor operations. Its primary weapon system is a rack of high-yield rocket launchers suited to demolishing reinforced structures. It rides on a mecanum wheel base that allows movement across most terrain. Standard sentry bot armor and combat protocols are retained.</description>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -114,6 +114,7 @@
 	<PawnKindDef ParentName="RobCo_LargeRobotKind">
 		<defName>RobCo_SentrybotSiegebreaker</defName>
 		<label>Siegebreaker Sentrybot</label>
+		<pawnDesc>A RobCo Industries sentry bot configured for fortification assault and anti-armor operations. The Siegebreaker variant sacrifices the anti-personnel flexibility of other sentry bot loadouts in favor of heavy explosive ordnance — its primary weapon system is a rack of high-yield rocket launchers capable of demolishing reinforced structures in seconds. Originally deployed to breach enemy fortifications during pre-war military operations, surviving Siegebreakers continue to treat every solid structure as a valid target. Its armored body and mecanum wheel base allow it to navigate most terrain while sustaining heavy return fire.</pawnDesc>
 		<race>RobCo_SentrybotSiegebreaker</race>
 		<combatPower>600</combatPower>
 		<lifeStages>
@@ -162,7 +163,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotPestcontrol</defName>
 		<label>Pestcontrol Sentrybot</label>
-		<description>Your all-purpose household critter remover. It fogs the area with toxic gas and tidies up stubborn pests with a warm, cleansing burst of flame.</description>
+		<description>A sentry bot variant equipped with an industrial flamethrower system and a reloadable fuel canister for extended operations. Originally designed for large-scale pest eradication and area denial, it is capable of sustained incendiary fire across a wide area. The Pestcontrol variant was marketed to agricultural and government clients before the war.</description>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -182,6 +183,7 @@
 	<PawnKindDef ParentName="RobCo_LargeRobotKind">
 		<defName>RobCo_SentrybotPestcontrol</defName>
 		<label>Pestcontrol Sentrybot</label>
+		<pawnDesc>A sentry bot variant originally designed for large-scale pest eradication and area denial, equipped with an industrial flamethrower system capable of sustained area-of-effect fire. The Pestcontrol was marketed to agricultural corporations and pre-war government agencies dealing with mutant insect infestations. Its fuel reserves are loaded into a reloadable canister system for extended operations. In the post-war wasteland, "pests" is a category that has expanded considerably in scope, and these units now apply their area suppression capabilities to anything that moves into their operational zone.</pawnDesc>
 		<race>RobCo_SentrybotPestcontrol</race>
 		<combatPower>600</combatPower>
 		<lifeStages>
@@ -233,7 +235,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotAnnihilator</defName>
 		<label>Annihilator Sentrybot</label>
-		<description>For homeowners who prefer overwhelming hospitality. Its laser minigun sweeps intruders with steady suppressive beams, keeping the neighborhood impressively quiet.</description>
+		<description>A RobCo Industries sentry bot armed with a tri-barrel minigun and Gatling laser, designed for sustained suppression of infantry and lightly armored targets. The sentry bot is RobCo's dedicated combat platform, built around a simple synthetic personality chip containing only combat routines. The Annihilator is the standard production variant of this line.</description>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -250,6 +252,7 @@
 	<PawnKindDef ParentName="RobCo_LargeRobotKind">
 		<defName>RobCo_SentrybotAnnihilator</defName>
 		<label>Annihilator Sentrybot</label>
+		<pawnDesc>RobCo's standard line of Sentry Bot, and arguably the finest all-purpose combat robot ever mass-produced. The Annihilator mounts a tri-barrel minigun capable of laying down withering sustained fire against infantry and lightly armored vehicles, paired with a Gatling laser for precision target elimination at range. Its singular purpose, as RobCo proudly advertised, is security through overwhelming firepower. The sentry bot's simple synthetic personality chip contains only combat routines — no work protocols, no social responses, no capacity for negotiation. It exists only to fight, and it is exceptionally good at it.</pawnDesc>
 		<race>RobCo_SentrybotAnnihilator</race>
 		<combatPower>600</combatPower>
 		<lifeStages>
@@ -298,7 +301,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotDeathbot</defName>
 		<label>Deathbot</label>
-		<description>It's a robot, it will be your death, it's a Deathbot, no more questions.</description>
+		<description>A sentry bot carrying a combined full weapons suite: minigun, rocket launcher, flamethrower, and cluster grenade launchers. It is one of the most heavily armed autonomous units encountered in the wasteland. Its central processor contains a NanostructuringChip, suggesting it was used as a testbed for advanced nanotechnology programs before or after the war.</description>
 		<race>
 			<body>RobCo_Sentrybot</body>
 			<intelligence>ToolUser</intelligence>
@@ -314,6 +317,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_SentrybotDeathbot</defName>
 		<label>Deathbot</label>
+		<pawnDesc>The most devastatingly armed sentry bot variant ever deployed, the Deathbot carries the full combined weapons suite: minigun, rocket launcher, flamethrower, and cluster grenade launchers mounted across its oversized chassis. No known pre-war military designation exists for this loadout — the name "Deathbot" is a post-war appellation, coined by wastelanders who survived encounters long enough to name it. Destroying one of these units releases a NanostructuringChip from its central processor, suggesting it was used as a testbed for advanced nanotechnology programs. Approach with extreme prejudice, or preferably, do not approach at all.</pawnDesc>
 		<race>RobCo_SentrybotDeathbot</race>
 		<combatPower>600</combatPower>
 		<lifeStages>

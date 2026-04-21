@@ -3,7 +3,7 @@
 	<AbilityDef>
 		<defName>RobCo_LightFlamer</defName>
 		<label>light flamer</label>
-		<description>Expends a chemfuel charge to spray a close-range incendiary burst.</description>
+		<description>Expends a napalm charge to spray a close-range incendiary burst.</description>
 		<iconPath>UI/Abilities/FireSpew</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<ai_IsIncendiary>true</ai_IsIncendiary>
@@ -53,7 +53,7 @@
 	<AbilityDef>
 		<defName>RobCo_HeavyFlamer</defName>
 		<label>heavy flamer</label>
-		<description>Expends stored chemfuel to project a longer, hotter incendiary burst.</description>
+		<description>Expends stored napalm to project a longer, hotter incendiary burst.</description>
 		<iconPath>UI/Abilities/FireSpew</iconPath>
 		<aiCanUse>true</aiCanUse>
 		<ai_IsIncendiary>true</ai_IsIncendiary>
@@ -174,6 +174,22 @@
 					<MeleeDamageFactor>1</MeleeDamageFactor>
 					<RangedCooldownFactor>-0.5</RangedCooldownFactor>
 					<IncomingDamageFactor>-0.5</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>RobCo_EyebotTargetingUplink</defName>
+		<label>eyebot targeting uplink</label>
+		<description>Receives targeting data from a nearby Eyebot.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<label>eyebot targeting uplink</label>
+				<statOffsets>
+					<ShootingAccuracyPawn>5</ShootingAccuracyPawn>
 				</statOffsets>
 			</li>
 		</stages>

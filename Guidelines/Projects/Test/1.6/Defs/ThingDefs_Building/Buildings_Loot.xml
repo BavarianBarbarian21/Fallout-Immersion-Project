@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Name="SEX_PortalBase" Abstract="True">
+		<altitudeLayer>Building</altitudeLayer>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<useHitPoints>false</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<category>Building</category>
+		<receivesSignals>true</receivesSignals>
+		<rotatable>false</rotatable>
+		<building>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<expandHomeArea>false</expandHomeArea>
+			<alwaysDeconstructible>false</alwaysDeconstructible>
+		</building>
+		<pathCost>50</pathCost>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase" Name="SEX_PortalBase_SalvagePoint" Abstract="True">
+		<category>Building</category>
+		<thingClass>SEX_Machinists.Lootbox</thingClass>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+		</statBases>
+		<pathCost>40</pathCost>
+		<fillPercent>0.40</fillPercent>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint" Name="SEX_PortalBase_SalvagePoint_Unloadable" Abstract="True">
+		<minifiedDef IsNull="True"/>
+		<building>
+			<deconstructible>true</deconstructible>
+			<claimable>false</claimable>
+		</building>
+		<pathCost>20</pathCost>
+		<fillPercent>0.20</fillPercent>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>35</Mass>
+			<MarketValue>10</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>SEX_SalvagePoint</li>
+		</tradeTags>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable" Name="SEX_Case" Abstract="True">
+		<tradeTags>
+			<li>SEX_SalvageCase</li>
+		</tradeTags>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_WeaponCrateVertical</defName>
+		<label>military crate</label>
+		<description>A military crate for storing equipment. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_GunCrateVertical</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<size>(1,2)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_GunCrateVerticalOpen</texPath>
+					<drawSize>(1,2)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Weapons</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_WeaponCrateHorizontal</defName>
+		<label>military crate</label>
+		<description>A military crate for storing weapons. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_GunCrateHorizontal</texPath>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_GunCrateHorizontalOpen</texPath>
+					<drawSize>(2,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Weapons</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ArmoryCrateVertical</defName>
+		<label>armory crate</label>
+		<description>A military crate for storing weapons. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ArmoryCrateVertical</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<size>(1,2)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ArmoryCrateVerticalOpen</texPath>
+					<drawSize>(1,2)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Armory</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ArmoryCrateHorizontal</defName>
+		<label>armory crate</label>
+		<description>A military crate for storing equipment. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ArmoryCrateHorizontal</texPath>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ArmoryCrateHorizontalOpen</texPath>
+					<drawSize>(2,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Armory</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_MedicalCrate</defName>
+		<label>medical crate</label>
+		<description>A sterile crate containing medical supplies. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_MedicalCrate</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_MedicalCrateOpen</texPath>
+					<drawSize>(1,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Medical</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ResourceCrateVertical</defName>
+		<label>warehouse crate</label>
+		<description>A sturdy warehouse crate. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ResourceCrateVertical</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<size>(1,2)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ResourceCrateVerticalOpen</texPath>
+					<drawSize>(1,2)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Resources</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ResourceCrateHorizontal</defName>
+		<label>warehouse crate</label>
+		<description>A sturdy warehouse crate. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ResourceCrateHorizontal</texPath>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ResourceCrateHorizontalOpen</texPath>
+					<drawSize>(2,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Resources</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ResourceCrateSmall</defName>
+		<label>warehouse crate</label>
+		<description>A small and sturdy warehouse crate. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ResourceCrateSmall</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ResourceCrateSmallOpen</texPath>
+					<drawSize>(1,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Resources</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_FuelCrate</defName>
+		<label>fuel crate</label>
+		<description>A sturdy crate for storing barrels of chemfuel. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_FuelCrate</texPath>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_FuelCrateOpen</texPath>
+					<drawSize>(2,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Chemfuel</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ComponentCrate</defName>
+		<label>hardware crate</label>
+		<description>A small and sturdy crate designed to store components. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ComponentCrate</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ComponentCrateOpen</texPath>
+					<drawSize>(1,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Components</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_ProduceCrate</defName>
+		<label>produce crate</label>
+		<description>A small crate for storing produce and poultry products. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_ProduceCrate</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_ProduceCrateOpen</texPath>
+					<drawSize>(1,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Produce</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_AnimalProduceCrate</defName>
+		<label>ranch crate</label>
+		<description>A small crate for storing ranching supplies. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_AnimalProduceCrate</texPath>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_AnimalProduceCrateOpen</texPath>
+					<drawSize>(1,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_AnimalProduce</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_TreasureCrateVertical</defName>
+		<label>locked crate</label>
+		<description>A locked crate for high value items. Can be cracked open to reveal the loot inside</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_TreasureCrateVertical</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<size>(1,2)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_TreasureCrateVerticalOpen</texPath>
+					<drawSize>(1,2)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Treasure</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="SEX_PortalBase_SalvagePoint_Unloadable">
+		<defName>SEX_TreasureCrateHorizontal</defName>
+		<label>locked crate</label>
+		<description>A locked crate for high value items. Can be cracked open to reveal the loot inside.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Buildings/Lootable/SEX_TreasureCrateHorizontal</texPath>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<size>(2,1)</size>
+		<modExtensions>
+			<li Class="SEX_Machinists.SEX_LootableBuildings">
+				<sound>AncientCommsConsoleActivated</sound>
+				<openedGraphicdata>
+					<graphicClass>Graphic_Random</graphicClass>
+					<texPath>Things/Buildings/Lootable/SEX_TreasureCrateHorizontalOpen</texPath>
+					<drawSize>(2,1)</drawSize>
+				</openedGraphicdata>
+				<loots>
+					<li>SEX_Treasure</li>
+				</loots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

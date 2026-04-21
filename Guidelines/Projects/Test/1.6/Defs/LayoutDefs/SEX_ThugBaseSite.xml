@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<SitePartDef>
+		<defName>SEX_ThugBaseSite</defName>
+		<label>thug hideout</label>
+		<description>A recently-discovered thug hideout.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/Ambush</expandingIconTexture>
+		<requiresFaction>true</requiresFaction>
+		<tags>
+			<li>SEX_ThugBase</li>
+		</tags>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>SEX_ThugBaseSite</defName>
+		<linkWithSite>SEX_ThugBaseSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="KCSG.GenStep_CustomStructureGen">
+			<structureLayoutDefs>
+				<li>SEX_ThugBaseOne</li>
+				<li>SEX_ThugBaseTwo</li>
+			</structureLayoutDefs>
+			<filthTypes>
+				<li>Filth_Dirt</li>
+				<li>Filth_Trash</li>
+				<li>Filth_RubbleBuilding</li>
+			</filthTypes>
+		</genStep>
+	</GenStepDef>
+</Defs>

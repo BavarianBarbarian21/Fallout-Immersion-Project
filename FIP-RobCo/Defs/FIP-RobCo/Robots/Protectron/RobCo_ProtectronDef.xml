@@ -78,7 +78,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Constructron</defName>
 		<label>Constructron</label>
-		<description>Industrial-grade version, all welders and rivet guns. Once meant for building cities of old.</description>
+		<description>A Protectron unit configured for construction and infrastructure work. It carries welding and assembly tool attachments in place of standard hand lasers and was deployed at pre-war building sites and industrial facilities. Standard threat response protocols remain active.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Construction</li>
@@ -88,6 +88,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Constructron</defName>
 		<label>Constructron</label>
+		<pawnDesc>A Protectron unit retooled for construction and infrastructure work. The Constructron carries specialized tool attachments for welding, drilling, and assembly tasks, and was a common sight on pre-war building sites and industrial facilities. Its programming prioritizes structural tasks but includes standard threat response routines — after decades without maintenance, many Constructrons have decided that every approaching human is a worksite safety hazard requiring immediate removal.</pawnDesc>
 		<race>RobCo_Constructron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -123,7 +124,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Factotron</defName>
 		<label>Factotron</label>
-		<description>Rare factory-automation unit, built to oversee entire assembly lines with chilling efficiency. A walking production floor.</description>
+		<description>A Protectron variant programmed for factory and manufacturing tasks. It was designed to operate on assembly lines and production floors, performing a wide range of manufacturing sub-tasks with precision. Factotrons are among the less commonly encountered Protectron variants in the post-war wasteland.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Crafting</li>
@@ -135,6 +136,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Factotron</defName>
 		<label>Factotron</label>
+		<pawnDesc>A Protectron variant configured for general factory and manufacturing work. The Factotron was designed to perform repetitive industrial tasks with precision and tirelessness, operating alongside human workers on assembly lines and production floors. Its programming covers a broad range of manufacturing sub-tasks, making it more versatile than single-purpose industrial robots. Most surviving Factotrons still attempt to complete their last assigned production cycle, regardless of how irrelevant their manufactured product is to the post-war world.</pawnDesc>
 		<race>RobCo_Factotron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -170,7 +172,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Utilitron</defName>
 		<label>Utilitron</label>
-		<description>A stripped-down Protectron model built for labor and logistics. Cheap, sturdy, and great for mining.</description>
+		<description>A Protectron unit fitted with a heavy drill attachment in place of a standard hand laser, intended for mining and excavation work. It was contracted to pre-war mining operations for subterranean resource extraction. The drill arm makes it slower than a standard Protectron but gives it significant close-quarters capability.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Mining</li>
@@ -192,6 +194,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Utilitron</defName>
 		<label>Utilitron</label>
+		<pawnDesc>A Protectron unit outfitted with a heavy-duty drill appendage in place of a standard hand laser, intended for mining, excavation, and utility tunneling operations. The Utilitron’s reinforced arm makes it slower than standard Protectron variants but gives it formidable close-quarters capability. Pre-war mining companies contracted these units extensively for subterranean resource extraction. Those still active in collapsed mines and cave networks are among the more dangerous Protectron encounters a wasteland traveler is likely to face.</pawnDesc>
 		<race>RobCo_Utilitron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -227,7 +230,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Collectron</defName>
 		<label>Collectron</label>
-		<description>A scavenger drone, endlessly trundling after cans, junk, or â€œvaluable resources.â€ Programmed to hoard like a metallic raccoon.</description>
+		<description>A Protectron variant reprogrammed for resource collection and salvage. It was adopted by various post-war factions to automate the gathering of specific materials. The Collectron operates autonomously within a defined area and will defend its collection zone against interference.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Hauling</li>
@@ -238,6 +241,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Collectron</defName>
 		<label>Collectron</label>
+		<pawnDesc>A Protectron unit reprogrammed for resource gathering and salvage collection. The Collectron was one of the few Protectron variants widely adopted in the post-war period, with various factions programming them to gather specific materials automatically from the surrounding environment. Its compact frame and methodical programming make it reliable for sustained scavenging operations, though it will turn its collection tools against any perceived threat to its assigned gathering area.</pawnDesc>
 		<race>RobCo_Collectron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -273,7 +277,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Protectron</defName>
 		<label>Protectron</label>
-		<description>The workhorse of RobCo: boxy, slow, and unnervingly polite. Equally ready to hand out library fines or lethal force.</description>
+		<description>A widely deployed pre-war utility and security robot manufactured by RobCo Industries. It features a large domed head with three optical sensors, dual hand-mounted laser emitters, and a head laser. Powered by a fission battery, the Protectron was used across offices, hospitals, and public facilities throughout the United States. It is slow and less capable in direct combat than dedicated military robots.</description>
 		<race>
 			<baseHealthScale>2.0</baseHealthScale>
 			<lifeStageAges>
@@ -291,6 +295,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Protectron</defName>
 		<label>Protectron</label>
+		<pawnDesc>One of RobCo Industries' most commercially successful pre-war robots, the Protectron was an inexpensive, bipedal utility and security droid deployed across offices, hospitals, police stations, and public infrastructure throughout the United States. Powered by a fission battery, the Protectron features a large domed head with three optical sensors, dual hand-mounted laser emitters, and a head laser for threat suppression. Slow and relatively weak compared to dedicated combat robots, it compensates through ubiquity — pre-war buildings rarely had fewer than several on standby. Its vintage 1950s aesthetic made it a recognizable symbol of corporate-era optimism.</pawnDesc>
 		<race>RobCo_Protectron</race>
 		<combatPower>100</combatPower>
 		<lifeStages>

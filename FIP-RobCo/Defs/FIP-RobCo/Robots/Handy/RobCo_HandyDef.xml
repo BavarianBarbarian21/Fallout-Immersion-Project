@@ -178,7 +178,7 @@
 	<ThingDef ParentName="RobCo_HandyBase">
 		<defName>RobCo_MisterFarmhand</defName>
 		<label>Mister Farmhand</label>
-		<description>Agricultural Handy variant with crop sensors, pesticide sprayers, and tireless cheer for "the simple country life."</description>
+		<description>A Mister Handy unit reconfigured for agricultural work. It is equipped with tool arms suited to planting, harvesting, and field maintenance, along with crop monitoring sensors. Sold to pre-war farming operations, the Mister Farmhand retains a laser arm for worksite defense.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Growing</li>
@@ -193,6 +193,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_MisterFarmhand</defName>
 		<label>Mister Farmhand</label>
+		<pawnDesc>A Mister Handy unit reconfigured for agricultural work. Equipped with specialized tool attachments optimized for tilling, planting, and harvesting, the Mister Farmhand was sold to pre-war farming operations and rural homesteads. Its three articulated arms can operate independently, allowing it to multitask efficiently across a wide range of labor duties. Despite the pastoral role, its laser cutter arm remains functional and it will defend its workplace if threatened.</pawnDesc>
 		<race>RobCo_MisterFarmhand</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -228,7 +229,7 @@
 	<ThingDef ParentName="RobCo_HandyBase">
 		<defName>RobCo_MisterHandy</defName>
 		<label>Mister Handy</label>
-		<description>Floating domestic butler, cheerfully armed with buzz saw, flamethrower, and endless commentary. RobCo's most iconic host.</description>
+		<description>A hovering domestic servant robot produced by General Atomics International in partnership with RobCo Industries. It is equipped with three articulated arms that accept tool attachments including a buzzsaw, laser cutter, and flamethrower, along with three optical stalks. Its neural network allows near-sentient conversation, and a well-maintained unit is capable of autonomous operation for centuries.</description>
 		<statBases>
 			<FoodPoisonChance>0.001</FoodPoisonChance>
 		</statBases>
@@ -245,6 +246,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_MisterHandy</defName>
 		<label>Mister Handy</label>
+		<pawnDesc>A General Atomics International domestic servant robot, produced in partnership with RobCo Industries. The Mister Handy hovers via a central thrust unit and operates three fully articulated arms equipped with interchangeable tool heads, including a buzzsaw, laser cutter, and plasma blaster. Its neural network allows near-sentient social interaction, and many units developed distinct personalities through decades of unsupervised operation. Weighing approximately 450 kilograms and capable of self-maintenance, a well-kept Mister Handy can operate for centuries without external support.</pawnDesc>
 		<race>RobCo_MisterHandy</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -280,7 +282,7 @@
 	<ThingDef ParentName="RobCo_NannyBase">
 		<defName>RobCo_MissNanny</defName>
 		<label>Miss Nanny</label>
-		<description>The Handy's daintier sister, fitted with programming in etiquette, childcare, and needlework. Less combat, more compassion.</description>
+		<description>A Mister Handy variant designed for childcare and domestic supervision. It is programmed with an extensive behavioral package covering infant care, hazard detection, etiquette, and disciplinary protocols. The Miss Nanny retains a laser arm for household defense and was marketed to pre-war families as a dedicated childcare solution.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Doctor</li>
@@ -294,6 +296,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_MissNanny</defName>
 		<label>Miss Nanny</label>
+		<pawnDesc>A Mister Handy variant designed specifically for child supervision and domestic caregiving. The Miss Nanny is programmed with an extensive childcare behavioral matrix, including vocal tonality analysis to detect infant distress, hazard detection protocols, and a strict but nurturing "corporal punishment" mode for behavioral correction. Its feminine voice module and pastel color scheme were market-tested for parental trust. While it carries the standard laser arm for household defense, its primary directive is always the safety and upbringing of children in its care.</pawnDesc>
 		<race>RobCo_MissNanny</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -329,7 +332,7 @@
 	<ThingDef ParentName="RobCo_GutsyBase">
 		<defName>RobCo_MisterGutsy</defName>
 		<label>Mister Gutsy</label>
-		<description>Military-grade Handy,  and merciless, with  and a drill-sergeant personality.</description>
+		<description>A militarized variant of the Mister Handy platform, commissioned by the United States Army. It replaces civilian tool arms with a plasma caster and flamethrower, and runs the Sergeant Major v1.0 personality package. The Mister Gutsy features heavier armor than a standard Handy and was deployed in combat zones including the Anchorage front.</description>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -349,6 +352,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_MisterGutsy</defName>
 		<label>Mister Gutsy Gunner</label>
+		<pawnDesc>A heavily militarized variant of the Mister Handy platform, commissioned by the United States Army for frontline deployment during the Anchorage Reclamation campaign. The Mister Gutsy replaces civilian tool arms with a plasma caster and flamethrower, and runs the Sergeant Major v1.0 military personality package — aggressive, profane, and relentlessly mission-focused. Reinforced armor plating and combat-optimized targeting systems make it a far deadlier unit than its domestic counterpart. Its battlefield bravado is matched only by its genuine tactical effectiveness.</pawnDesc>
 		<race>RobCo_MisterGutsy</race>
 		<combatPower>150</combatPower>
 		<lifeStages>
@@ -400,7 +404,7 @@
 	<ThingDef ParentName="RobCo_GutsyBase">
 		<defName>RobCo_GutsyHydra</defName>
 		<label>Hydra</label>
-		<description>This is the Hydra, a dangerous foe of many wasteland legends. They say when you slice off one of its eyes two more grow back.</description>
+		<description>A heavily modified Mister Gutsy-based platform designed to function as a drone command hub. The Hydra carries an integrated system for deploying and coordinating Eye of Hydra units, whose combat effectiveness is enhanced by a tactical aura broadcast from the central platform. Its own weapon array is substantial, and destroying it disrupts any drones it has deployed.</description>
 		<race>
 			<body>RobCo_Handy</body>
 			<intelligence>ToolUser</intelligence>
@@ -430,6 +434,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_GutsyHydra</defName>
 		<label>Hydra</label>
+		<pawnDesc>An experimental multi-unit combat platform based on the Mister Gutsy chassis, engineered to operate as a coordinated swarm system. The Hydra designation refers to its ability to spawn and coordinate smaller drone units — each a functional Eye of Hydra — to overwhelm targets from multiple angles simultaneously. Whether this configuration emerged from pre-war military R&D or post-war tinkering is unclear, but its tactical effectiveness is undeniable. Destroying the central Hydra unit severs the command link to its subordinate drones.</pawnDesc>
 		<race>RobCo_GutsyHydra</race>
 		<combatPower>500</combatPower>
 		<lifeStages>
@@ -457,7 +462,7 @@
 	<ThingDef ParentName="RobCo_HandyBase">
 		<defName>RobCo_EyeOfHydra</defName>
 		<label>Eye of Hydra</label>
-		<description>This is one of many eyes of the Hydra.</description>
+		<description>A compact drone unit spawned and directed by the Hydra command platform. It carries a focused energy blaster and operates under slaved coordination from its parent unit. Individual Eye of Hydra units are lightly armored but attack in numbers from multiple angles simultaneously. Destroying the parent Hydra reverts them to basic autonomous attack protocols.</description>
 		<race>
 			<body>RobCo_Handy</body>
 			<intelligence>ToolUser</intelligence>
@@ -470,6 +475,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_EyeOfHydra</defName>
 		<label>Eye of Hydra</label>
+		<pawnDesc>A compact drone unit spawned and directed by the Hydra central command platform. Each Eye of Hydra is essentially a stripped-down hovering weapon mount, carrying a focused energy blaster and operating under direct slaved control from its parent unit. Individually they are not especially durable, but in numbers — and directed by the Hydra’s tactical matrix — they present a serious multi-vector threat. Neutralizing the parent Hydra causes Eye of Hydra units to revert to basic autonomous attack protocols.</pawnDesc>
 		<race>RobCo_EyeOfHydra</race>
 		<lifeStages>
 			<li>

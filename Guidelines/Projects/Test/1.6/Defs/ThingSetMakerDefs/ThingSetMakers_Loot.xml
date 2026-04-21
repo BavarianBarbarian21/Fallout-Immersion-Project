@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingSetMakerDef>
+		<defName>SEX_Weapons</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Gun_Autopistol</li>
+									<li>Gun_MachinePistol</li>
+									<li>Gun_IncendiaryLauncher</li>
+									<li>Gun_BoltActionRifle</li>
+									<li>Gun_PumpShotgun</li>
+									<li>Gun_ChainShotgun</li>
+									<li>Gun_HeavySMG</li>
+									<li>Gun_LMG</li>
+									<li>Gun_AssaultRifle</li>
+									<li>Gun_SniperRifle</li>
+									<li>Gun_Minigun</li>
+									<li>Gun_TripleRocket</li>
+									<li>MeleeWeapon_BreachAxe</li>
+									<li>MeleeWeapon_Mace</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_MeleeWeapon_Baton</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_MeleeWeapon_CombatKnife</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_HandCannon</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_CombatHandgun</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_SawedOffShotgun</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_GrenadeLauncher</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_Flamethrower</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_SemiAutomaticRifle</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_LeverActionRifle</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_SMG</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_HMG</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_ServiceRifle</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_BattleRifle</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_MarksmanRifle</li>
+									<li MayRequire="VanillaExpanded.VWE">VWE_Gun_AntiMaterialRifle</li>
+								</thingDefs>
+							</filter>
+							<countRange>1~2</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Medical</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>MedicineUltratech</li>
+									<li>MedicineIndustrial</li>
+									<li>MedicineHerbal</li>
+									<li>Neutroamine</li>
+									<li>WakeUp</li>
+									<li>Penoxycyline</li>
+									<li>GoJuice</li>
+								</thingDefs>
+							</filter>
+							<countRange>3~18</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Resources</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Uranium</li>
+									<li>Plasteel</li>
+									<li>Steel</li>
+									<li>WoodLog</li>
+									<li>Cloth</li>
+									<li>DevilstrandCloth</li>
+								</thingDefs>
+							</filter>
+							<countRange>12~75</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Chemfuel</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Chemfuel</li>
+								</thingDefs>
+							</filter>
+							<countRange>25~150</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Armory</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Apparel_FlakJacket</li>
+									<li>Apparel_FlakPants</li>
+									<li>VAE_Footwear_Boots</li>
+									<li>VAE_Apparel_MilitaryUniform</li>
+									<li>Apparel_FlakVest</li>
+									<li>Apparel_SimpleHelmet</li>
+									<li>Apparel_AdvancedHelmet</li>
+									<li>VAE_Apparel_TrooperArmor</li>
+									<li>Apparel_SmokepopBelt</li>
+									<li>Apparel_BasicShirt</li>
+									<li>VAE_Headgear_Beret</li>
+									<li MayRequire="CETeam.CombatExtendedArmors">CE_Armor_LargeBackpack</li>
+									<li MayRequire="CETeam.CombatExtendedArmors">CE_Armor_BallisticGoggles</li>
+									<li MayRequire="CETeam.CombatExtendedArmors">CE_Armor_Balaclava</li>
+									<li MayRequire="CETeam.CombatExtended">CE_Apparel_SimpleNightVision</li>
+									<li MayRequire="CETeam.CombatExtended">CE_Apparel_TacVest</li>
+									<li MayRequire="CETeam.CombatExtended">CE_Apparel_Backpack</li>
+									<li MayRequire="CETeam.CombatExtended">CE_Apparel_RadioPack</li>
+								</thingDefs>
+							</filter>
+							<countRange>1~2</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Produce</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>RawCorn</li>
+									<li>RawRice</li>
+									<li>RawPotatoes</li>
+									<li>Cloth</li>
+									<li>Hay</li>
+									<li>PsychoidLeaves</li>
+								</thingDefs>
+							</filter>
+							<countRange>40~75</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_AnimalProduce</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>EggChickenUnfertilized</li>
+									<li>Milk</li>
+									<li>WoolSheep</li>
+									<li>Kibble</li>
+								</thingDefs>
+							</filter>
+							<countRange>40~75</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Components</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>0.6</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+							</filter>
+							<countRange>2~8</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.4</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ComponentSpacer</li>
+								</thingDefs>
+							</filter>
+							<countRange>1~6</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	<ThingSetMakerDef>
+		<defName>SEX_Treasure</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>0.1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Yayo</li>
+								</thingDefs>
+							</filter>
+							<countRange>30~120</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReinforcedBarrel</li>
+									<li>Shell_AntigrainWarhead</li>
+								</thingDefs>
+							</filter>
+							<countRange>1~3</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.4</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Gold</li>
+								</thingDefs>
+							</filter>
+							<countRange>30~180</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.4</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Silver</li>
+								</thingDefs>
+							</filter>
+							<countRange>90~500</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+</Defs>

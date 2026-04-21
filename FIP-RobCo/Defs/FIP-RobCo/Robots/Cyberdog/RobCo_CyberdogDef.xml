@@ -135,7 +135,13 @@
 	<ThingDef ParentName="RobCo_CyberdogBase">
 		<defName>RobCo_Cyberdog</defName>
 		<label>Cyberdog</label>
-		<description>Half hound, half machine, all loyalty. Cybernetics enhance speed, smell, and bite, but the heart remains canine.</description>
+		<description>A military robotic canine developed by RobCo Industries for the United States Army. It combines a preserved dog brain with a mechanical body, granting it canine instincts and a sonic bark weapon for ranged combat. Cyberdogs were deployed as scouts, guard animals, and combat companions alongside military personnel.</description>
+		<comps>
+			<li Class="FIP_RobCo.CompProperties_PawnNuzzler">
+				<nuzzleMtbHours>12</nuzzleMtbHours>
+				<radius>18</radius>
+			</li>
+		</comps>
 		<race>
 			<body>RobCo_Cyberdog</body>
 			<mechEnabledWorkTypes>
@@ -149,6 +155,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Cyberdog</defName>
 		<label>Cyberdog</label>
+		<pawnDesc>A military-grade robotic canine developed by RobCo Industries for the United States Army. The cyberdog combines an organic dog brain preserved in biomedical gel with a powerful mechanical body, granting it the loyal instincts of a trained animal and the durability of a machine. Armed with a sonic bark weapon capable of stunning targets at range, cyberdogs excel as scouts, guard units, and frontline combat companions. Their hybrid nature makes them unusually responsive to human handlers compared to purely synthetic mechanoids.</pawnDesc>
 		<race>RobCo_Cyberdog</race>
 		<combatPower>200</combatPower>
 		<alternateGraphicChance>0.25</alternateGraphicChance>

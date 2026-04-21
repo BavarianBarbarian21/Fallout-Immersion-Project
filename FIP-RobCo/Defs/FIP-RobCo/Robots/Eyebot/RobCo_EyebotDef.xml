@@ -79,7 +79,15 @@
 	<ThingDef ParentName="RobCo_EyebotBase">
 		<defName>RobCo_Eyebot</defName>
 		<label>Eyebot</label>
-		<description>A floating loudspeaker with a mind of its own, tirelessly blaring propaganda and tunes while sweeping the wastes with its mounted energy weapon.</description>
+		<description>A small hovering surveillance and broadcast drone manufactured by RobCo Industries. It uses whip antennas and integrated loudspeakers to transmit radio signals and pre-recorded broadcasts, and is equipped with advanced facial recognition systems. The Eyebot carries a light laser weapon for self-defense. Widely deployed by the Enclave for propaganda and reconnaissance, it is fast and elusive but extremely fragile in direct combat.</description>
+		<comps>
+			<li Class="FIP_RobCo.CompProperties_NonHostilePawnAura">
+				<radius>12</radius>
+				<refreshTicks>30</refreshTicks>
+				<hediffDef>RobCo_EyebotTargetingUplink</hediffDef>
+				<toolUserOnly>true</toolUserOnly>
+			</li>
+		</comps>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -96,6 +104,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Eyebot</defName>
 		<label>Eyebot</label>
+		<pawnDesc>A small, spherical hovering drone manufactured by RobCo Industries. Originally designed for surveillance, propaganda broadcast, and reconnaissance, the Eyebot is equipped with advanced facial recognition systems, loudspeakers, and a weak laser weapon for self-defense. Often deployed by the Enclave to transmit radio signals and news feeds across the wasteland, Eyebots are fast and elusive but extremely fragile when engaged in direct combat. Their whip antennas and tinny broadcasts make them an iconic — if irritating — sight in the post-war world.</pawnDesc>
 		<race>RobCo_Eyebot</race>
 		<combatPower>50</combatPower>
 		<lifeStages>
@@ -144,7 +153,19 @@
 	<ThingDef ParentName="RobCo_EyebotBase">
 		<defName>RobCo_EyebotDuraframe</defName>
 		<label>Eyebot Duraframe</label>
-		<description>A hardened military variant of the Eyebot: thicker armor, heavier gun, and advanced comms gear.</description>
+		<description>An enhanced Eyebot built on the experimental Duraframe chassis. It features reinforced internal components for greater durability than a standard unit and carries a more powerful energy weapon. The most documented Duraframe unit, designated ED-E, was fitted with a Tesla cannon and carried sensitive Enclave research data across the wasteland for decades before being recovered.</description>
+		<comps>
+			<li Class="FIP_RobCo.CompProperties_NonHostilePawnAura">
+				<radius>12</radius>
+				<refreshTicks>30</refreshTicks>
+				<hediffDef>RobCo_EyebotTargetingUplink</hediffDef>
+				<toolUserOnly>true</toolUserOnly>
+			</li>
+			<li Class="FIP_RobCo.CompProperties_PawnNuzzler">
+				<nuzzleMtbHours>12</nuzzleMtbHours>
+				<radius>18</radius>
+			</li>
+		</comps>
 		<race>
 			<baseHealthScale>1.0</baseHealthScale>
 			<mechEnabledWorkTypes>
@@ -158,6 +179,7 @@
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_EyebotDuraframe</defName>
 		<label>Eyebot Duraframe</label>
+		<pawnDesc>An enhanced prototype Eyebot built on the experimental Duraframe chassis. Where standard Eyebots are notoriously fragile, the Duraframe design uses reinforced internal components to dramatically increase survivability. This variant also mounts a significantly more powerful energy weapon system, making it a genuine combat threat rather than a nuisance. The most notable Duraframe unit, ED-E, was fitted with a Tesla cannon and carried critical Enclave data across the wasteland for years.</pawnDesc>
 		<race>RobCo_EyebotDuraframe</race>
 		<combatPower>50</combatPower>
 		<lifeStages>
@@ -193,7 +215,7 @@
 	<ThingDef ParentName="RobCo_EyebotBase">
 		<defName>RobCo_EyebotCrashed</defName>
 		<label>Crashed Vertibot Robot</label>
-		<description>This is a strange Robot, it seems to collect data and send them... somewhere.</description>
+		<description>The remains of a Vertibot — a pre-war military VTOL drone — brought down and no longer capable of flight. Despite its condition, onboard weapon systems and automated defense protocols remain partially active. It will engage anything that enters its perimeter.</description>
 		<race>
 			<body>RobCo_Eyebot</body>
 			<intelligence>ToolUser</intelligence>
@@ -210,6 +232,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_EyebotCrashed</defName>
 		<label>Crashed Vertibot Robot</label>
+		<pawnDesc>The wrecked remains of a pre-war Vertibot — a large military VTOL drone — repurposed or reactivated after years of decay. Though no longer airworthy, the surviving systems of this crashed machine still pose a serious threat to anyone who approaches. Its weapons and sensors remain partially functional, controlled by damaged but tenacious automated defense protocols.</pawnDesc>
 		<race>RobCo_EyebotCrashed</race>
 		<combatPower>300</combatPower>
 		<lifeStages>
