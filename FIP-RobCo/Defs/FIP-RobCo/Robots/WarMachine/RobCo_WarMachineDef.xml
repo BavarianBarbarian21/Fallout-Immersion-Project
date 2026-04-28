@@ -106,7 +106,7 @@
 	<ThingDef ParentName="RobCo_WarMachineBase">
 		<defName>RobCo_WarMachine</defName>
 		<label>War Machine</label>
-		<description>A colossal humanoid war engine. Can throw mini-nuke projectiles and spawn Liberators to aid in combat. Weighs several tons and packs enough firepower to level buildings. A walking WMD.</description>
+		<description>A massive autonomous combat platform combining heavy sentry bot firepower with an integrated mechanoid carrier system for deploying Liberator drones. The War Machine broadcasts a tactical coordination signal that enhances the combat effectiveness of nearby Liberator units. It is armed with a multi-burst pulse battery and reinforced war gauntlets for close-range engagement.</description>
 		<comps>
 			<li Class="CompProperties_MechCarrier">
 				<spawnPawnKind>RobCo_Liberator</spawnPawnKind>
@@ -130,6 +130,7 @@
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_WarMachine</defName>
 		<label>War Machine</label>
+		<pawnDesc>A massive autonomous combat platform of unknown origin, combining the chassis scale of a heavy sentry bot with a built-in mechanoid carrier system capable of deploying and directing a squad of Liberator drones. The War Machine functions as a mobile command hub — its Liberator Aura broadcasts a tactical coordination signal that enhances the combat performance of nearby Liberator units. Its own weapons are substantial: a multi-burst pulse battery for sustained fire and reinforced war gauntlets for close-quarters devastation. Whether this platform was ever part of a formal military program or represents post-war improvisation on a massive scale is unclear. Regardless, it is one of the most dangerous autonomous units likely to be encountered in the field.</pawnDesc>
 		<race>RobCo_WarMachine</race>
 		<combatPower>800</combatPower>
 		<lifeStages>

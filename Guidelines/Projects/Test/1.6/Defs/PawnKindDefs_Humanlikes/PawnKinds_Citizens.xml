@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Base laborer -->
+	<PawnKindDef Name="SEX_Civilian_Laborer">
+		<defName>SEX_Civilian_Laborer</defName>
+		<label>laborer</label>
+		<race>Human</race>
+		<defaultFactionType>SEX_Machinists</defaultFactionType>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<combatPower>20</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistLaborerBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelRequired>
+			<li>VAE_Apparel_Jumpsuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierShoes</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelTags>
+			<li>SEX_LaborerApparel</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>SEX_ShovelTag</li>
+			<li>SEX_HammerTag</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<weaponMoney>200~250</weaponMoney>
+		<backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>false</isFighter>
+		<requiredWorkTags>
+			<li>ManualDumb</li>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+			<li>Mining</li>
+			<li>Firefighting</li>
+		</requiredWorkTags>
+		<apparelMoney>200~1000</apparelMoney>
+		<gearHealthRange>1~1</gearHealthRange>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.08</techHediffsChance>
+		<apparelDisallowTags>
+			<li>Western</li>
+		</apparelDisallowTags>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>
+		<initialWillRange>2~3</initialWillRange>
+		<initialResistanceRange>12~18</initialResistanceRange>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.02</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.24</Neanderthal>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0.08</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+	<!-- Same pawn but no highmates, for caravans -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_LaborerCaravan">
+		<defName>SEX_Civilian_LaborerCaravan</defName>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.02</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.24</Neanderthal>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+	<!-- Apprentices -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_Apprentice">
+		<defName>SEX_Civilian_Apprentice</defName>
+		<label>apprentice</label>
+		<minGenerationAge>14</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge>
+	</PawnKindDef>
+	<!-- Engineers -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_Engineer">
+		<defName>SEX_Civilian_Engineer</defName>
+		<label>engineer</label>
+		<apparelRequired>
+			<li>VAE_Headgear_Hardhat</li>
+			<li>VAE_Apparel_BuildersJacket</li>
+			<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_ToolBelt</li>
+		</apparelRequired>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistLaborerBackstories</li>
+					<li>SEX_MachinistEngineerBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<requiredWorkTags>
+			<li>Constructing</li>
+		</requiredWorkTags>
+		<skills>
+			<li>
+				<skill>Construction</skill>
+				<range>7~10</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>5~9</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Doctors -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_Doctor">
+		<defName>SEX_Civilian_Doctor</defName>
+		<label>physician</label>
+		<apparelRequired Inherit="False">
+			<li>VAE_Headgear_SurgicalMask</li>
+			<li>VAE_Apparel_DoctorScrubs</li>
+			<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_MedicBag</li>
+		</apparelRequired>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistDoctorBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<skills>
+			<li>
+				<skill>Medicine</skill>
+				<range>7~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>5~9</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Farmhand -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_Farmhand">
+		<defName>SEX_Civilian_Farmhand</defName>
+		<label>farmhand</label>
+		<apparelRequired>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Flophat</li>
+			<li>VAE_Apparel_Overalls</li>
+			<li>VAE_Footwear_Boots</li>
+		</apparelRequired>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistFarmerBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<requiredWorkTags>
+			<li>PlantWork</li>
+		</requiredWorkTags>
+		<skills>
+			<li>
+				<skill>Plants</skill>
+				<range>7~10</range>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<range>5~9</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Same pawn but no highmates, for caravans -->
+	<PawnKindDef ParentName="SEX_Civilian_Farmhand" Name="SEX_Civilian_FarmhandCaravan">
+		<defName>SEX_Civilian_FarmhandCaravan</defName>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.02</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.24</Neanderthal>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+	<!-- Hireables -->
+	<PawnKindDef ParentName="SEX_Civilian_Laborer" Name="SEX_Civilian_LaborerHireable">
+		<defName>SEX_Civilian_LaborerHireable</defName>
+		<label>laborer</label>
+		<combatPower>40</combatPower>
+		<weaponTags Inherit="False">
+			<li>SEX_SoldierSidearm</li>
+		</weaponTags>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SEX_Civilian_Farmhand" Name="SEX_Civilian_FarmhandHireable">
+		<defName>SEX_Civilian_FarmhandHireable</defName>
+		<label>farmhand</label>
+		<combatPower>120</combatPower>
+		<weaponTags Inherit="False">
+			<li>SEX_SoldierSidearm</li>
+		</weaponTags>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SEX_Civilian_Doctor" Name="SEX_Civilian_DoctorHireable">
+		<defName>SEX_Civilian_DoctorHireable</defName>
+		<label>physician</label>
+		<combatPower>240</combatPower>
+		<weaponTags Inherit="False">
+			<li>SEX_SoldierSidearm</li>
+		</weaponTags>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SEX_Civilian_Engineer" Name="SEX_Civilian_EngineerHireable">
+		<defName>SEX_Civilian_EngineerHireable</defName>
+		<label>engineer</label>
+		<combatPower>200</combatPower>
+		<weaponTags Inherit="False">
+			<li>SEX_SoldierSidearm</li>
+		</weaponTags>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>The Generic Ammo Experience for Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VAE_Apparel_TrooperArmor"]/apparel/bodyPartGroups/li[text()="Feet"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VAE_Apparel_TrooperArmor"]/apparel/bodyPartGroups/li[text()="Feet"]</xpath>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThingDef[defName="VAE_Apparel_RoyalTrooperArmor"]/apparel/bodyPartGroups/li[text()="Feet"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>Defs/ThingDef[defName="VAE_Apparel_RoyalTrooperArmor"]/apparel/bodyPartGroups/li[text()="Feet"]</xpath>
+					</match>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>

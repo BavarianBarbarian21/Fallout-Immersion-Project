@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<KCSG.SettlementLayoutDef Abstract="True" Name="SEX_BaseMachinist">
+		<settlementSize>100,100</settlementSize>
+		<centerBuildings>
+			<centerSize>100,100</centerSize>
+			<allowedStructures>
+				<li>
+					<count>1</count>
+					<tag>sex_city</tag>
+				</li>
+			</allowedStructures>
+		</centerBuildings>
+		<roadOptions>
+			<addLinkRoad>false</addLinkRoad>
+			<linkRoadDef>Concrete</linkRoadDef>
+		</roadOptions>
+		<defenseOptions>
+			<addEdgeDefense>false</addEdgeDefense>
+			<addSandbags>false</addSandbags>
+			<addTurrets>false</addTurrets>
+			<addMortars>false</addMortars>
+			<allowedMortarsDefs>
+				<li>Turret_Mortar</li>
+			</allowedMortarsDefs>
+			<cellsPerMortar>60</cellsPerMortar>
+			<pawnGroupMultiplier>0.22</pawnGroupMultiplier>
+		</defenseOptions>
+		<stockpileOptions>
+			<stockpileValueMultiplier>2.0</stockpileValueMultiplier>
+		</stockpileOptions>
+	</KCSG.SettlementLayoutDef>
+	<KCSG.SettlementLayoutDef ParentName="SEX_BaseMachinist">
+		<defName>Sex_IndustrialTown</defName>
+		<centerBuildings>
+			<centralBuildingTags>
+				<li>sex_city</li>
+			</centralBuildingTags>
+		</centerBuildings>
+		<stockpileOptions>
+			<fillStorageBuildings>False</fillStorageBuildings>
+			<fillWithDefs>
+				<li>MedicineIndustrial</li>
+				<li>ComponentIndustrial</li>
+				<li>Neutroamine</li>
+				<li>Chemfuel</li>
+				<li>Hyperweave</li>
+				<li>Penoxycyline</li>
+				<li>Beer</li>
+				<li>PsychiteTea</li>
+				<li>WakeUp</li>
+				<li>ReinforcedBarrel</li>
+				<li>Steel</li>
+				<li>MechSerumHealer</li>
+				<li>Silver</li>
+				<li>Apparel_PowerArmor</li>
+				<li>MechSerumResurrector</li>
+			</fillWithDefs>
+		</stockpileOptions>
+	</KCSG.SettlementLayoutDef>
+</Defs>

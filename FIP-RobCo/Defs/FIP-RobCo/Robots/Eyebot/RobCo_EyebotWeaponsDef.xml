@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef Name="RobCo_EyebotSharpshooterBase" ParentName="RobCo_BaseGun" Abstract="True"><label>RobCo Sharpshooter Blaster</label><description>A precision variant of the standard RobCo blaster. Its focusing hardware is tuned for accurate fire at longer ranges, at the cost of a slower firing cycle.</description><statBases><MarketValue>900</MarketValue><Mass>3</Mass><AccuracyTouch>0.90</AccuracyTouch><AccuracyShort>0.85</AccuracyShort><AccuracyMedium>0.75</AccuracyMedium><AccuracyLong>0.65</AccuracyLong><RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown></statBases><verbs><li><verbClass>Verb_Shoot</verbClass><range>30</range><warmupTime>1.2</warmupTime><defaultProjectile>RobCo_Bullet_LaserLow</defaultProjectile><burstShotCount>1</burstShotCount></li></verbs></ThingDef>
-	<ThingDef Name="RobCo_EyebotSniperBase" ParentName="RobCo_BaseGun" Abstract="True"><label>RobCo Sniper Blaster</label><description>A long-range precision blaster configured for deliberate, accurate fire. It uses high-beam laser cartridges and is intended for robotic marksman and patrol roles.</description><statBases><MarketValue>1600</MarketValue><Mass>4</Mass><AccuracyTouch>0.98</AccuracyTouch><AccuracyShort>0.95</AccuracyShort><AccuracyMedium>0.90</AccuracyMedium><AccuracyLong>0.90</AccuracyLong><RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown></statBases><verbs><li><verbClass>Verb_Shoot</verbClass><range>35</range><warmupTime>1.8</warmupTime><defaultProjectile>RobCo_Bullet_LaserHigh</defaultProjectile><burstShotCount>1</burstShotCount></li></verbs></ThingDef>
-	<ThingDef ParentName="RobCo_EyebotSharpshooterBase"><defName>RobCo_EyebotBlaster</defName><weaponTags><li>RobCo_EyebotBlaster</li></weaponTags></ThingDef>
-	<ThingDef ParentName="RobCo_EyebotSniperBase"><defName>RobCo_EyebotDuraframeBlaster</defName><weaponTags><li>RobCo_EyebotDuraframeBlaster</li></weaponTags></ThingDef>
-	<ThingDef ParentName="RobCo_EyebotSniperBase"><defName>RobCo_EyebotCrashedBlaster</defName><weaponTags><li>RobCo_EyebotCrashedBlaster</li></weaponTags></ThingDef>
+	<ThingDef Name="RobCo_EyebotSharpshooterBase" ParentName="RobCo_BaseGun" Abstract="True">
+		<label>RobCo Sharpshooter Blaster</label>
+		<description>A precision variant of the standard RobCo blaster. Its focusing hardware is tuned for accurate fire at longer ranges, at the cost of a slower firing cycle.</description>
+		<statBases>
+			<MarketValue>900</MarketValue>
+			<Mass>3</Mass>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<range>30</range>
+				<warmupTime>1.2</warmupTime>
+				<defaultProjectile>RobCo_Bullet_LaserLow</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef Name="RobCo_EyebotSniperBase" ParentName="RobCo_BaseGun" Abstract="True">
+		<label>RobCo Sniper Blaster</label>
+		<description>A long-range precision blaster configured for deliberate, accurate fire. It uses high-beam laser cartridges and is intended for robotic marksman and patrol roles.</description>
+		<statBases>
+			<MarketValue>1600</MarketValue>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.98</AccuracyTouch>
+			<AccuracyShort>0.95</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.90</AccuracyLong>
+			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<range>35</range>
+				<warmupTime>1.8</warmupTime>
+				<defaultProjectile>RobCo_Bullet_LaserHigh</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="RobCo_EyebotSharpshooterBase">
+		<defName>RobCo_EyebotBlaster</defName>
+		<weaponTags>
+			<li>RobCo_EyebotBlaster</li>
+		</weaponTags>
+	</ThingDef>
+	<ThingDef ParentName="RobCo_EyebotSniperBase">
+		<defName>RobCo_EyebotDuraframeBlaster</defName>
+		<weaponTags>
+			<li>RobCo_EyebotDuraframeBlaster</li>
+		</weaponTags>
+	</ThingDef>
+	<ThingDef ParentName="RobCo_EyebotSniperBase">
+		<defName>RobCo_EyebotCrashedBlaster</defName>
+		<weaponTags>
+			<li>RobCo_EyebotCrashedBlaster</li>
+		</weaponTags>
+	</ThingDef>
 </Defs>

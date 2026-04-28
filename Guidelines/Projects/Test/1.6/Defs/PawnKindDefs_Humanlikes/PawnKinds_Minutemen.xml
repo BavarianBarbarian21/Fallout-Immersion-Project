@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_Minutemen">
+		<defName>SEX_Minutemen</defName>
+		<label>minuteman</label>
+		<combatPower>40</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistCommonBackstories</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>SEX_MinutemanWeapons</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+		<weaponMoney>320~500</weaponMoney>
+		<apparelTags>
+			<li>SEX_MinutemenApparel</li>
+			<li>SEX_LaborerApparel</li>
+			<li>SEX_SoldierShoes</li>
+		</apparelTags>
+		<apparelMoney>200~500</apparelMoney>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Legs</bodyPartGroup>
+				<requiredTag>SEX_MinutemenPants</requiredTag>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_FlakPantsTag</tag>
+						<chance>0.25</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_SimpleHelmetTag</tag>
+						<chance>0.25</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>10</weight>
+							<only>(230, 230, 230)</only>
+						</li>
+						<li>
+							<weight>15</weight>
+							<only>(107,150,179)</only>
+						</li>
+					</options>
+				</colorGenerator>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_SoldierArmor</tag>
+						<chance>0.3</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierShoes</requiredTag>
+			</li>
+		</specificApparelRequirements>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>15~24</initialResistanceRange>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<disallowedTraits Inherit="False" IsNull="True"/>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.20</Hussar>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.04</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.05</Genie>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.12</Impid>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+			</xenotypeChances>
+		</xenotypeSet>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>1~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.7</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineHerbal</thingDef>
+					<countRange>1</countRange>
+				</li>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>5~25</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+</Defs>

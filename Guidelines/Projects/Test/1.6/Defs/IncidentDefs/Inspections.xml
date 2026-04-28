@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>SEX_Inspection</defName>
+		<label>inspection</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>SEX_Machinists.IncidentWorker_MachinistInspection</workerClass>
+		<category>FactionArrival</category>
+		<baseChance>0</baseChance>
+		<pointsScaleable>true</pointsScaleable>
+		<requireColonistsPresent>True</requireColonistsPresent>
+	</IncidentDef>
+	<IncidentDef>
+		<defName>SEX_Envoy</defName>
+		<label>envoy</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>SEX_Machinists.IncidentWorker_MachinistEnvoy</workerClass>
+		<category>FactionArrival</category>
+		<baseChance>0</baseChance>
+		<pointsScaleable>true</pointsScaleable>
+		<requireColonistsPresent>True</requireColonistsPresent>
+	</IncidentDef>
+	<IncidentDef>
+		<defName>SEX_Patrol</defName>
+		<label>patrol</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>SEX_Machinists.IncidentWorker_Patrol</workerClass>
+		<category>FactionArrival</category>
+		<baseChance>0</baseChance>
+		<pointsScaleable>true</pointsScaleable>
+		<requireColonistsPresent>True</requireColonistsPresent>
+	</IncidentDef>
+</Defs>

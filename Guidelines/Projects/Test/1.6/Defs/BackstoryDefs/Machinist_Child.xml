@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- yes, I'm not using my usual modder prefix here -->
+	<!-- just didn't feel right -->
+	<BackstoryDef>
+		<defName>MACHINIST_Bookworm</defName>
+		<title>bookworm</title>
+		<titleShort>bookworm</titleShort>
+		<description>Rather than socialize with the other children, [PAWN_nameDef] preferred to get lost in literature. [PAWN_pronoun] taught [PAWN_objective]self to read at an early age with the many books printed in the city states.</description>
+		<slot>Childhood</slot>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+		<skillGains>
+			<Intellectual>6</Intellectual>
+			<Artistic>2</Artistic>
+			<Social>-3</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+		<possessions>
+			<Novel>1</Novel>
+		</possessions>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_WarRefugee</defName>
+		<title>war refugee</title>
+		<titleShort>refugee</titleShort>
+		<description>War broke out in [PAWN_nameDef]'s home when [PAWN_pronoun] was a baby. [PAWN_possessive] parents fled with [PAWN_objective], seeking safety wherever they could find it. [PAWN_nameDef]'s earliest memories are of being taught how to defend [PAWN_objective]self.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Social>-2</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_MinerKid</defName>
+		<title>miner</title>
+		<titleShort>miner</titleShort>
+		<description>[PAWN_nameDef] was born into a poor family. Unable to afford school education, [PAWN_pronoun] family sent [PAWN_nameDef] to work for a mining company.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Construction>1</Construction>
+			<Mining>5</Mining>
+			<Intellectual>-2</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_Brat</defName>
+		<title>spoiled brat</title>
+		<titleShort>brat</titleShort>
+		<description>[PAWN_nameDef] was born into a wealthy family of old-money merchants. [PAWN_pronoun] rejected the many attemps [PAWN_possessive] parents made to educate [PAWN_possessive] and instead spent most of [PAWN_possessive] days doing whatever [PAWN_pronoun] wished.</description>
+		<slot>Childhood</slot>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+		<skillGains>
+			<Social>1</Social>
+			<Artistic>5</Artistic>
+			<Intellectual>-1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_DoctorsAid</defName>
+		<title>doctor's aid</title>
+		<titleShort>doctor's aid</titleShort>
+		<description>[PAWN_nameDef] was born during a catastrophic war. [PAWN_pronoun] grew up helping [PAWN_possessive] parents in an infirmary, treating the cascade of horrific burns from the battlefields. [PAWN_pronoun] was left with a lifelong fear of fire.</description>
+		<slot>Childhood</slot>
+		<workDisables>
+			<li>Firefighting</li>
+		</workDisables>
+		<disallowedTraits>
+			<Pyromaniac/>
+		</disallowedTraits>
+		<skillGains>
+			<Medicine>3</Medicine>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_Tinker</defName>
+		<title>tinker</title>
+		<titleShort>tinker</titleShort>
+		<description>[PAWN_nameDef] was born into a family of craftsmen and spent most of [PAWN_possessive] youth tinkering with whatever [PAWN_pronoun] could get her hands on.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Crafting>3</Crafting>
+			<Intellectual>1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_RepairKid</defName>
+		<title>garage kid</title>
+		<titleShort>garage kid</titleShort>
+		<description>[PAWN_nameDef] helped out in [PAWN_possessive] family's repair garage. [PAWN_pronoun] spent most of [PAWN_possessive] days tinkering with vehicles.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Crafting>5</Crafting>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_ConvoyKid</defName>
+		<title>convoy kid</title>
+		<titleShort>convoy kid</titleShort>
+		<description>[PAWN_nameDef] was born into a family of traveling merchants. [PAWN_pronoun] quickly learned the ins and outs of the trade and was soon helping run the family business. [PAWN_pronoun] also learned a thing or two about machinery thanks to the many aging vehicles [PAWN_possessive] family owned.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>3</Social>
+			<Intellectual>1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_StreetRat</defName>
+		<title>street rat</title>
+		<titleShort>street rat</titleShort>
+		<description>[PAWN_nameDef] was left orphaned at a young age. With no family to take care of [PAWN_possessive], [PAWN_pronoun] turned to crime.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>3</Melee>
+			<Shooting>1</Shooting>
+			<Intellectual>-2</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_TimidKid</defName>
+		<title>timid kid</title>
+		<titleShort>timid kid</titleShort>
+		<description>[PAWN_nameDef] was the victim of an unspeakable crime. As a result, [PAWN_pronoun] grew up with a deep distrust of the outside world.</description>
+		<slot>Childhood</slot>
+		<forcedTraits>
+			<Recluse>0</Recluse>
+			<Asexual/>
+		</forcedTraits>
+		<skillGains>
+			<Social>-4</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_Delinquent</defName>
+		<title>delinquent</title>
+		<titleShort>delinquent</titleShort>
+		<description>[PAWN_nameDef] was a bit of a delinquent. [PAWN_pronoun] often ran with the wrong crowd and got into trouble with the law.</description>
+		<forcedTraits>
+			<Brawler>0</Brawler>
+		</forcedTraits>
+		<skillGains>
+			<Melee>4</Melee>
+			<Social>-1</Social>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_ScoutKid</defName>
+		<title>scout</title>
+		<titleShort>scout</titleShort>
+		<description>Born to the administrators of an industrial city state, [PAWN_nameDef] was enrolled in a youth program that taught military scouting skills.\n\n[PAWN_pronoun] learned to survive in the wilderness, to obey, and not to ask questions.</description>
+		<slot>Childhood</slot>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Crafting>2</Crafting>
+			<Construction>1</Construction>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_Cader</defName>
+		<title>military cadet</title>
+		<titleShort>cadet</titleShort>
+		<description>[PAWN_nameDef] ran away from [PAWN_possessive] family at a young age to become a soldier. [PAWN_pronoun] lived in barracks with soldiers, learning about duty, weapons, pain, and victory.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>3</Melee>
+		</skillGains>
+		<workDisables>
+			<li>Animals</li>
+			<li>PlantWork</li>
+		</workDisables>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_RanchKid</defName>
+		<title>ranch kid</title>
+		<titleShort>ranch kid</titleShort>
+		<description>[PAWN_nameDef] was born and raised on a farm not far from a city. [PAWN_pronoun] helped [PAWN_possessive] parents work the land and raise animals.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>1</Shooting>
+			<Animals>5</Animals>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_MercenaryKid</defName>
+		<title>mercenary kid</title>
+		<titleShort>mercenary kid</titleShort>
+		<description>Descended from a long line of mercenaries, [PAWN_nameDef] picked up the family trade. [PAWN_pronoun] was a skilled marksman and knew how to handle [PAWN_possessive]self in a fight.</description>
+		<slot>Childhood</slot>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>MACHINIST_ShopKid</defName>
+		<title>shop kid</title>
+		<titleShort>shopkid</titleShort>
+		<description>[PAWN_nameDef]'s mother was often ill, and it fell to [PAWN_objective] to run the store which was their only source of income. [PAWN_pronoun] learned a little about the exotic artifacts which [PAWN_pronoun] sold, and a lot about the art of the deal.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>4</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>SEX_MachinistBackstories</li>
+			<li>MACHINIST_MachinistChildBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

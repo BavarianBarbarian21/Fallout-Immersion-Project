@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef>
+		<defName>SEX_CombatMedic</defName>
+		<title>combat medic</title>
+		<titleShort>medic</titleShort>
+		<description>[PAWN_nameDef] graduted from a medical school and became a combat medic. Tending to wounded soldiers was difficult, but [PAWN_pronoun] took pride in [PAWN_possessive] ability to save lives.\n\nIt was a hard job and constant stress left [PAWN_objective] traumatized.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Shooting>2</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<workDisables>
+			<li>Social</li>
+			<li>Artistic</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SEX_MachinistMedic</li>
+			<li>SEX_MachinistBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>SEX_CombatNurse</defName>
+		<title>combat nurse</title>
+		<titleShort>nurse</titleShort>
+		<description>[PAWN_nameDef] barely managed to pass medical school and was immediately shipped off to the frontlines as a combat nurse. [PAWN_pronoun] saved many lives, though [PAWN_possessive] poor social skills often alienated [PAWN_objective] from [PAWN_possessive] comrades.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Medicine>3</Medicine>
+			<Social>-4</Social>
+			<Shooting>3</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SEX_MachinistMedic</li>
+			<li>SEX_MachinistBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>SEX_PsychoMedic</defName>
+		<title>mad paramedic</title>
+		<titleShort>paramedic</titleShort>
+		<description>Years of some unspoken abuse broke [PAWN_nameDef]. A shell of [PAWN_possessive] former self, [PAWN_pronoun] excelled in [PAWN_possessive] job as a medic but struggled to even interact with others, let alone do any other work. Even the simplest of tasks became an impossible burden for [PAWN_objective].</description>
+		<slot>Adulthood</slot>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Social</li>
+			<li>PlantWork</li>
+			<li>ManualDumb</li>
+			<li>Intellectual</li>
+			<li>Crafting</li>
+			<li>Cooking</li>
+			<li>ManualSkilled</li>
+		</workDisables>
+		<forcedTraits>
+			<Neurotic>2</Neurotic>
+		</forcedTraits>
+		<skillGains>
+			<Medicine>6</Medicine>
+			<Shooting>2</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SEX_MachinistMedic</li>
+			<li>SEX_MachinistBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>SEX_SicklyMedic</defName>
+		<title>sickly surgeon</title>
+		<titleShort>surgeon</titleShort>
+		<description>[PAWN_nameDef] studied medicine at a local university. [PAWN_pronoun] barely managed to pass her exams as [PAWN_pronoun] constantly got sick. The irony was not lost on [PAWN_objective].</description>
+		<slot>Adulthood</slot>
+		<forcedTraits>
+			<Immunity>-1</Immunity>
+		</forcedTraits>
+		<skillGains>
+			<Medicine>3</Medicine>
+			<Shooting>1</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<workDisables>
+			<li>Social</li>
+			<li>Artistic</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SEX_MachinistMedic</li>
+			<li>SEX_MachinistBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef>
+		<defName>SEX_UnethicalDoctor</defName>
+		<title>combat medic</title>
+		<titleShort>medic</titleShort>
+		<description>[PAWN_nameDef] became a doctor to save lives and research medicine. [PAWN_pronoun] soon realized the only way to make progress on [PAWN_possessive] research was to perform experiments on human patients.\n\n[PAWN_pronoun] often used patients for [PAWN_possessive] experiments - whether they were willing or not.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Shooting>1</Shooting>
+			<Melee>1</Melee>
+		</skillGains>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>Social</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SEX_MachinistMedic</li>
+			<li>SEX_MachinistBackstories</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

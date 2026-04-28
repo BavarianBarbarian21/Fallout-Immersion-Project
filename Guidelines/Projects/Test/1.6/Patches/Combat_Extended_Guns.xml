@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended Guns</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FNFAL"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HeavyInfantryWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_AKMSU"]/weaponTags</xpath>
+					<value>
+						<li>SEX_SoldierWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_MiniFourteen"]/weaponTags</xpath>
+					<value>
+						<li>SEX_SoldierWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_SKS"]/weaponTags</xpath>
+					<value>
+						<li>SEX_SoldierWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
+					<value>
+						<li>SEX_HeavyInfantryWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_SWGovernor"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MinutemanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_HecateTwo"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MarksmanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_PTRS"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MarksmanWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FNFAL"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_SigMCX"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_ChargePistol"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_USASTwelve"]/weaponTags</xpath>
+					<value>
+						<li>SEX_LightMercWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_RPGSeven"]/weaponTags</xpath>
+					<value>
+						<li>SEX_BreacherAltWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="Sex_Breacher" Name="SEX_BreacherRocket">
+							<defName>SEX_BreacherRocket</defName>
+							<weaponTags Inherit="False">
+								<li>SEX_BreacherAltWeapons</li>
+							</weaponTags>
+							<invNutrition Inherit="False">0</invNutrition>
+							<modExtensions Inherit="False">
+								<li Class="CombatExtended.LoadoutPropertiesExtension">
+									<primaryMagazineCount>
+										<min>2</min>
+										<max>3</max>
+									</primaryMagazineCount>
+									<forcedAmmoCategory>RocketHEAT</forcedAmmoCategory>
+									<forcedSidearm>
+										<sidearmMoney>
+											<min>350</min>
+											<max>700</max>
+										</sidearmMoney>
+										<weaponTags>
+											<li>SEX_BreacherSidearm</li>
+										</weaponTags>
+										<magazineCount>
+											<min>1</min>
+											<max>2</max>
+										</magazineCount>
+									</forcedSidearm>
+								</li>
+							</modExtensions>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_MilkorMGL"]/weaponTags</xpath>
+					<value>
+						<li>SEX_BreacherWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_Flamethrower"]/weaponTags</xpath>
+					<value>
+						<li>SEX_FlamerWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_SigMCX"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_USASTwelve"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FNFAL"]/weaponTags</xpath>
+					<value>
+						<li>SEX_GendarmerieWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FNFAL"]/weaponTags</xpath>
+					<value>
+						<li>SEX_CommanderWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_RPD"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MachineGunnerWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_MSixty"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MachineGunnerWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_MTwoFourNine"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MachineGunnerWeapons</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_PKM"]/weaponTags</xpath>
+					<value>
+						<li>SEX_MachineGunnerWeapons</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

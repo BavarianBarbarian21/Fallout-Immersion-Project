@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_Marksman">
+		<defName>SEX_Marksman</defName>
+		<label>marksman</label>
+		<combatPower>110</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistSoldier</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>SEX_MarksmanWeapons</li>
+		</weaponTags>
+		<weaponMoney>900~1400</weaponMoney>
+		<apparelColor>(95,107,76)</apparelColor>
+		<apparelTags>
+			<li>SEX_MarksmanApparel</li>
+			<li>SEX_SoldierShoes</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_FlakPants</li>
+			<li>Apparel_BasicShirt</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_MarksmanHelmet</requiredTag>
+				<color>(95,107,76)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_MarksmanApparel</requiredTag>
+				<color>(95,107,76)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_MarksmanShoes</requiredTag>
+				<color>(95,107,76)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<requiredTag>SEX_MarksmanApparel</requiredTag>
+				<color>(255,255,255)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelMoney>200~600</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>2~5</initialWillRange>
+		<initialResistanceRange>22~36</initialResistanceRange>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<biocodeWeaponChance>0.2</biocodeWeaponChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>7~11</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Hireable -->
+	<PawnKindDef ParentName="SEX_Marksman" Name="SEX_MarksmanHireable">
+		<defName>Sex_MarksmanHireable</defName>
+		<label>mercenary marksman</label>
+		<combatPower Inherit="False">140</combatPower>
+		<inventoryOptions Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+		<!-- Same pawn but only 3 per group -->
+	<PawnKindDef ParentName="SEX_Marksman" Name="SEX_MarksmanLimited">
+		<defName>SEX_MarksmanLimited</defName>
+		<maxPerGroup>3</maxPerGroup>
+	</PawnKindDef>
+</Defs>

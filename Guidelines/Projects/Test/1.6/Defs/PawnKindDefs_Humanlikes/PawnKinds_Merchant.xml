@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="SEX_Merchant">
+		<defName>SEX_Civilian_Merchant</defName>
+		<label>merchant</label>
+		<race>Human</race>
+		<combatPower>5</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistMerchant</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>32</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<trader>true</trader>
+		<isFighter>false</isFighter>
+		<apparelMoney>9999~9999</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelColor>(60,60,60)</apparelColor>
+		<apparelTags>
+			<li>SEX_MerchantApparel</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Apparel_Pants</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Eyes</bodyPartGroup>
+				<color>(255,255,255)</color>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_MerchantApparel</tag>
+						<chance>0.4</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_MerchantApparel</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<requiredTag>SEX_MerchantApparel</requiredTag>
+				<color>(233,233,233)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<requiredTag>SEX_MerchantApparel</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_SoldierShoes</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>1000~1200</weaponMoney>
+		<weaponTags>
+			<li>SEX_GendarmerieSidearm</li>
+		</weaponTags>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances Inherit="False">
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.3</Baseliner>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0.5</Highmate>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0.2</Genie>
+			</xenotypeChances>
+		</xenotypeSet>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>0~2</initialResistanceRange>
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>8~12</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>80~120</countRange>
+				</li>
+				<li>
+					<thingDef>Gold</thingDef>
+					<countRange>20~40</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	<!-- Same pawn but different title -->
+	<PawnKindDef ParentName="SEX_Merchant" Name="SEX_Envoy">
+		<label>envoy</label>
+		<defName>SEX_Envoy</defName>
+	</PawnKindDef>
+</Defs>

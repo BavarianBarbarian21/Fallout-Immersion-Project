@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="FactionBase" Abstract="True" Name="SEX_FacelessThugsBase">
+		<pawnSingular>faceless thug</pawnSingular>
+		<pawnsPlural>faceless thugs</pawnsPlural>
+		<categoryTag>SEX_FacelessGoons</categoryTag>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<colorSpectrum>
+			<li>(0.85, 0.85, 0)</li>
+			<li>(0.85, 0.85, 0.2)</li>
+		</colorSpectrum>
+		<configurationListOrderPriority>2000</configurationListOrderPriority>
+		<displayInFactionSelection>false</displayInFactionSelection>
+		<fixedName>faceless thugs</fixedName>
+		<factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+		<techLevel>Spacer</techLevel>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<hidden>true</hidden>
+		<rescueesCanJoin>false</rescueesCanJoin>
+		<autoFlee>false</autoFlee>
+		<allowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Archist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+		</allowedMemes>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Archist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+		</requiredMemes>
+	</FactionDef>
+	<FactionDef ParentName="SEX_FacelessThugsBase">
+		<defName>SEX_FacelessThugs</defName>
+		<label>faceless thugs</label>
+		<pawnSingular>faceless thug</pawnSingular>
+		<pawnsPlural>faceless thugs</pawnsPlural>
+		<fixedName>faceless thug</fixedName>
+		<permanentEnemy>true</permanentEnemy>
+	</FactionDef>
+</Defs>

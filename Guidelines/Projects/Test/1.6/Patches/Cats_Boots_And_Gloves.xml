@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Cat's Boots and Gloves</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_FlakGloves"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_FlakGlovesTag</li>
+						<li>SEX_LightMercApparel</li>
+						<li>SEX_MedicApparel</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CAT_Footwear_FlakBoots"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_FlakBootsTag</li>
+						<li>SEX_LightMercApparel</li>
+						<li>SEX_MedicApparel</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CAT_Handwear_RiotGloves"]/apparel</xpath>
+					<value>
+						<tags>
+							<li>SEX_RiotGlovesTag</li>
+						</tags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CAT_Footwear_RiotBoots"]/apparel</xpath>
+					<value>
+						<tags>
+							<li>SEX_RiotBootsTags</li>
+						</tags>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements/li[requiredTag="SEX_SoldierShoes"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_HeavyInfantry"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Hands</bodyPartGroup>
+							<requiredTag>SEX_FlakGlovesTag</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Feet</bodyPartGroup>
+							<requiredTag>SEX_FlakBootsTag</requiredTag>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/specificApparelRequirements/li[requiredTag="SEX_SoldierShoes"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Hands</bodyPartGroup>
+							<requiredTag>SEX_FlakGlovesTag</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Feet</bodyPartGroup>
+							<requiredTag>SEX_FlakBootsTag</requiredTag>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_MachineGunner"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Hands</bodyPartGroup>
+							<requiredTag>SEX_FlakGlovesTag</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Feet</bodyPartGroup>
+							<requiredTag>SEX_FlakBootsTag</requiredTag>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements/li[requiredTag="SEX_GendarmerieShoes"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Hands</bodyPartGroup>
+							<requiredTag>SEX_RiotGlovesTag</requiredTag>
+						</li>
+						<li>
+							<bodyPartGroup>Feet</bodyPartGroup>
+							<requiredTag>SEX_RiotBootsTags</requiredTag>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

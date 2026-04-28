@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef ParentName="SEX_SoldierBase" Name="SEX_Gendarmerie">
+		<defName>SEX_Gendarmerie</defName>
+		<label>gendarmerie</label>
+		<combatPower>200</combatPower>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SEX_MachinistSoldier</li>
+					<li>MACHINIST_MachinistChildBackstories</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponTags>
+			<li>SEX_GendarmerieWeapons</li>
+		</weaponTags>
+		<weaponMoney>450~1000</weaponMoney>
+		<gearHealthRange>0.8~1.0</gearHealthRange>
+		<apparelColor>(255,255,255)</apparelColor>
+		<apparelTags>
+			<li>SEX_GendarmerieApparel</li>
+		</apparelTags>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>UpperHead</bodyPartGroup>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>SEX_GendarmerieApparel</requiredTag>
+				<color>(60,60,60)</color>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_BeretTag</tag>
+						<chance>0.15</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<requiredTag>SEX_SoldierUniform</requiredTag>
+				<stuff>Cloth</stuff>
+				<color>(60,60,60)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_GendarmerieApparel</requiredTag>
+				<color>(255,255,255)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<requiredTag>SEX_GendarmerieApparel</requiredTag>
+				<color>(60,60,60)</color>
+				<alternateTagChoices>
+					<li>
+						<tag>SEX_SuitTag</tag>
+						<chance>0.1</chance>
+					</li>
+				</alternateTagChoices>
+			</li>
+			<li>
+				<bodyPartGroup>Feet</bodyPartGroup>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>SEX_GendarmerieShoes</requiredTag>
+				<color>(60,60,60)</color>
+			</li>
+		</specificApparelRequirements>
+		<apparelMoney>1200~3000</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<techHediffsChance>0.12</techHediffsChance>
+		<techHediffsMoney>800~1200</techHediffsMoney>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<startingHediffs>
+			<li>
+				<def>GoJuiceHigh</def>
+			</li>
+		</startingHediffs>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>3~8</countRange>
+				</li>
+				<li>
+					<thingDef>GoJuice</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<initialWillRange>5~7</initialWillRange>
+		<initialResistanceRange>17~26</initialResistanceRange>
+		<minGenerationAge>32</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances Inherit="False">
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.5</Hussar>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.3</Baseliner>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0.2</Impid>
+			</xenotypeChances>
+		</xenotypeSet>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<biocodeWeaponChance>0.4</biocodeWeaponChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>9~12</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	<!-- Same pawn but only 3 per group -->
+	<PawnKindDef ParentName="SEX_Gendarmerie" Name="SEX_GendarmerieLimited">
+		<defName>SEX_GendarmerieLimited</defName>
+		<maxPerGroup>3</maxPerGroup>
+	</PawnKindDef>
+	<!-- Same pawn but for patrol reinforcements -->
+	<PawnKindDef ParentName="SEX_Gendarmerie" Name="SEX_GendarmeriePatrol">
+		<defName>SEX_GendarmeriePatrol</defName>
+		<startingHediffs Inherit="False" IsNull="True"/>
+	</PawnKindDef>
+</Defs>

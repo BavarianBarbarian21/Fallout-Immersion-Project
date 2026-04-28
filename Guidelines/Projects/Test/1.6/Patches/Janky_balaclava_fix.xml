@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended Armors</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Armor_Balaclava"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_BalaclavaTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>DevilstrandCloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Flamer"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Marksman"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(95,107,76)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_EliteMerc"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_BalaclavaTag</tag>
+									<chance>0.75</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_BalaclavaTag</tag>
+									<chance>0.75</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_LightMerc"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>UpperHead</bodyPartGroup>
+							<apparelLayer>OnHead</apparelLayer>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_BalaclavaTag</tag>
+									<chance>0.33</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended Armors</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VAE_Headgear_Balaclava"]/apparel/tags</xpath>
+					<value>
+						<li>SEX_BalaclavaTag</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Breacher"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Juggernaut"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>DevilstrandCloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Flamer"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(60,60,60)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Marksman"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<requiredTag>SEX_BalaclavaTag</requiredTag>
+							<stuff>Cloth</stuff>
+							<color>(95,107,76)</color>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_Gendarmerie"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<stuff>Cloth</stuff>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_BalaclavaTag</tag>
+									<chance>0.75</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="SEX_LightMerc"]/specificApparelRequirements</xpath>
+					<value>
+						<li>
+							<bodyPartGroup>Neck</bodyPartGroup>
+							<apparelLayer>Overhead</apparelLayer>
+							<colorGenerator Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<only>(60, 60, 60)</only>
+									</li>
+								</options>
+							</colorGenerator>
+							<alternateTagChoices>
+								<li>
+									<tag>SEX_BalaclavaTag</tag>
+									<chance>0.33</chance>
+								</li>
+							</alternateTagChoices>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>

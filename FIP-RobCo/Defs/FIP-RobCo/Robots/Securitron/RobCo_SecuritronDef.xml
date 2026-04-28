@@ -79,11 +79,12 @@
 	<ThingDef ParentName="RobCo_SecuritronBase">
 		<defName>RobCo_SecuritronMkI</defName>
 		<label>Securitron Mark I</label>
-		<description>A classic Securitron Mark I security robot. Equipped with an integrated laser cannon for lethal enforcement. Reliable and deadly.</description>
+		<description>A RobCo Industries PDQ-88b security robot built on a single heavy monowheel chassis. The Mark I carries a 9mm submachine gun in its right arm and displays a pre-war police officer image on its CRT screen face. It features a titanium alloy body and integrated auto-repair systems. Mark I units run basic combat software and are less effective in complex engagements than the upgraded Mark II variant.</description>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_SecuritronMkI</defName>
 		<label>Securitron Mark I</label>
+		<pawnDesc>A RobCo Industries PDQ-88b security robot, model year 2060-B, developed with assistance from H&H Tools Company and deployed heavily across the Mojave by Robert House's Securitron army. The Mark I rides a single heavy monowheel and carries a 9mm submachine gun integrated into its right arm. Its CRT screen face displays the image of a pre-war police officer, and its voice module delivers scripted legal warnings before engaging threats. Built from titanium alloy with integrated auto-repair systems, it is considerably more durable than its appearance suggests. Mark I units are limited by their basic combat software, making them less effective in complex engagements than their Mark II counterparts.</pawnDesc>
 		<race>RobCo_SecuritronMkI</race>
 		<combatPower>200</combatPower>
 		<lifeStages>
@@ -162,11 +163,12 @@
 	<ThingDef ParentName="RobCo_SecuritronMkIIBase">
 		<defName>RobCo_SecuritronMkII</defName>
 		<label>Securitron Mark II</label>
-		<description>An improved Securitron Mark II with non-lethal electroshock capability. Preferred by law enforcement for control and containment of dangerous individuals.</description>
+		<description>A PDQ-88b Securitron running the Mark II software package, which brings its full weapons loadout online: X-25 Gatling laser, M-235 rocket launchers, and G-28 grenade launchers. Its CRT screen displays a soldier rather than a police officer. The Mark II was Robert House's intended combat-ready force for the defense of New Vegas and the Mojave.</description>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_SecuritronMkII</defName>
 		<label>Securitron Mark II</label>
+		<pawnDesc>The fully upgraded version of the PDQ-88b Securitron, running the Mark II combat software package unlocked by the Platinum Chip. Where the Mark I is a capable but limited security drone, the Mark II is a battlefield-grade war machine. Its screen displays the face of a soldier rather than a police officer, and its full weapons loadout is brought online: X-25 Gatling laser, M-235 rocket launchers, and G-28 grenade launchers. The upgraded neuro-computational matrix allows sophisticated tactical decision-making. Robert House kept thousands of these units dormant beneath Hoover Dam, intending to deploy them at the moment of his choosing.</pawnDesc>
 		<race>RobCo_SecuritronMkII</race>
 		<combatPower>220</combatPower>
 		<lifeStages>
@@ -205,11 +207,12 @@
 	<ThingDef ParentName="RobCo_SecuritronMkIIBase">
 		<defName>RobCo_BerserkSecuritron</defName>
 		<label>Berserk Securitron</label>
-		<description>A feral Securitron running a corrupted RobCo combat kernel. It has no restraint protocols left and treats every moving thing as a target.</description>
+		<description>A Securitron unit whose behavioral limiters have failed, leaving it in a state of indiscriminate aggression. It retains full Mark II combat capability — Gatling laser, rocket launchers, and electroshock weapons — but without faction recognition, threat assessment, or de-escalation protocols. It attacks all targets within range without distinction.</description>
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_BerserkSecuritron</defName>
 		<label>Berserk Securitron</label>
+		<pawnDesc>A Securitron unit whose behavioral limiters have failed or been deliberately removed, leaving it in a state of unrestrained aggression. A berserk Securitron retains the full combat capability of a Mark II unit — Gatling laser, rocket launchers, electroshock weapons — but applies them without the faction recognition, threat assessment, or de-escalation protocols that normally govern Securitron behavior. It attacks anything within range indiscriminately. These units are considered irreparably compromised by Robert House's network and are flagged for termination by functional Securitrons on sight.</pawnDesc>
 		<race>RobCo_BerserkSecuritron</race>
 		<combatPower>260</combatPower>
 		<lifeStages>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>SEX_PolicyCharter</defName>
+		<label>polity charter</label>
+		<description>A book containing a set of rules that the sovereignty expects all independent polities to follow. The text is mostly legalese but the most important section describes some terms and conditions that have to be met in order to avoid hostilities with the city states.</description>
+		<graphicData>
+			<texPath>Things/Items/SEX_CharterBook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>24</MarketValue>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<comps>
+			<li Class="SEX_Machinists.CompProperties_MachinistCharter"/>
+		</comps>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>None</tradeability>
+		<techLevel>Industrial</techLevel>
+		<tradeTags>
+			<li>SEX_RulesBook</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>
