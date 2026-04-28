@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>WestTek_NightkinInvisibility</defName>
+    <label>nightkin invisibility</label>
+    <description>Trigger a Nightkin stealth field and briefly vanish from sight. This uses the Anomaly invisibility implementation as a scaffold fallback; a non-Anomaly version would need custom code.</description>
+    <iconPath>UI/Abilities/RevenantInvisibility</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <writeCombatLog>True</writeCombatLog>
+    <targetRequired>false</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>15</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>1</warmupTime>
+      <range>19.9</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>PsychicInvisibility</hediffDef>
+        <psychic>True</psychic>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

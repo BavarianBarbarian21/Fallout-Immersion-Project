@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="Apparel_ArmorVest">
+    <defName>WestTek_Apparel_GruntArmor</defName>
+    <label>grunt armor</label>
+    <description>Crude field armor assembled for ordinary super mutant shock troops.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_GruntArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>90</Steel>
+      <Uranium>20</Uranium>
+    </costList>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>8</Mass>
+      <MarketValue>240</MarketValue>
+      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.24</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.1</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <wornGraphicPath>FIP-WestTek/Muties/Misc/WestTek_GruntArmor</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="Apparel_ArmorVest">
+    <defName>WestTek_Apparel_BrutaArmor</defName>
+    <label>bruta armor</label>
+    <description>Heavier scavenged plating intended for large mutant bruisers expected to absorb return fire.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_BrutaArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>130</Steel>
+      <Uranium>45</Uranium>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>4200</WorkToMake>
+      <MaxHitPoints>190</MaxHitPoints>
+      <Mass>11</Mass>
+      <MarketValue>360</MarketValue>
+      <ArmorRating_Sharp>0.56</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <wornGraphicPath>FIP-WestTek/Muties/Misc/WestTek_BrutaArmor</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="Apparel_ArmorVest">
+    <defName>WestTek_Apparel_MasterArmor</defName>
+    <label>master armor</label>
+    <description>Command armor reserved for high-value mutant leaders and vat-born enforcers.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_MasterArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV3</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>160</Steel>
+      <Uranium>80</Uranium>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>5200</WorkToMake>
+      <MaxHitPoints>230</MaxHitPoints>
+      <Mass>13</Mass>
+      <MarketValue>520</MarketValue>
+      <ArmorRating_Sharp>0.68</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.24</ArmorRating_Heat>
+    </statBases>
+    <apparel>
+      <wornGraphicPath>FIP-WestTek/Muties/Misc/WestTek_MasterArmor</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+</Defs>

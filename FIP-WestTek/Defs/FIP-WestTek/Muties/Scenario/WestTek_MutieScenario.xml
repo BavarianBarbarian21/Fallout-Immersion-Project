@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>WestTek_ForcedEvolutionSurvivors</defName>
+    <label>Forced Evolution Survivors</label>
+    <description>A West Tek cell escaped containment with three viable mutie survivors, a crate of refined dosages, and just enough research to begin reproducing the process. One subject is an older first-generation giant. The other two are later-generation super mutants stable enough to build a colony around.</description>
+    <scenario>
+      <summary>One first-generation super mutant, two second-generation super mutants, and the first FEV protocol.</summary>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <customSummary>Start with one first-generation super mutant and two second-generation super mutants.</customSummary>
+          <xenotypeCounts>
+            <li>
+              <xenotype>WestTek_Xenotype_SuperMutant_2</xenotype>
+              <count>1</count>
+              <description>first-generation super mutant</description>
+              <requiredAtStart>true</requiredAtStart>
+              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+            </li>
+            <li>
+              <xenotype>WestTek_Xenotype_SuperMutant_1</xenotype>
+              <count>2</count>
+              <description>second-generation super mutant</description>
+              <requiredAtStart>true</requiredAtStart>
+              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+            </li>
+          </xenotypeCounts>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <visible>false</visible>
+          <method>DropPods</method>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>The facility burned long before you escaped it. What remained were ruined vats, sealed notes, and three living proofs that West Tek got further than anyone should have allowed.
+
+Now the old bunker is gone, the handlers are dead, and your little mutie cadre is alone on a rimworld with ten refined dosages and just enough knowledge to restart the work. Whether that becomes a refuge, an army, or another atrocity is up to you.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>WestTek_FEV1</project>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WestTek_RefinedFEVDosage</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>15</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>45</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>300</count>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

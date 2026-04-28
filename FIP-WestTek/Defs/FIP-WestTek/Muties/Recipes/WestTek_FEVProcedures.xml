@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerUnrefinedFEVDosage</defName>
+    <label>administer unrefined FEV dosage</label>
+    <description>Inject an unstable Forced Evolutionary Virus dose into a colony prisoner. Outcomes are evenly split between centaur conversion, super mutant conversion, and catastrophic tissue collapse.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerUnrefinedFEVDosage</workerClass>
+    <jobString>Administering unrefined FEV dosage to TargetA.</jobString>
+    <workAmount>1600</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <deathOnFailedSurgeryChance>0.12</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV1</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_UnrefinedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_UnrefinedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_UnrefinedFEVDosage</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerRefinedFEVDosage</defName>
+    <label>administer refined FEV dosage</label>
+    <description>Inject a refined Forced Evolutionary Virus dose into a colonist or colony prisoner. Outcomes split evenly between centaur conversion and super mutant conversion.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerRefinedFEVDosage</workerClass>
+    <jobString>Administering refined FEV dosage to TargetA.</jobString>
+    <workAmount>1800</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <deathOnFailedSurgeryChance>0.08</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV2</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_RefinedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_RefinedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_RefinedFEVDosage</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerIsolatedFEVDosage</defName>
+    <label>administer isolated FEV dosage</label>
+    <description>Inject an isolated Forced Evolutionary Virus dose into a colonist. This produces a guaranteed super mutant transformation, using first-generation results for pure humans and vault dwellers and second-generation results otherwise.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerIsolatedFEVDosage</workerClass>
+    <jobString>Administering isolated FEV dosage to TargetA.</jobString>
+    <workAmount>2200</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>false</isViolation>
+    <deathOnFailedSurgeryChance>0.03</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>9</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV3</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_IsolatedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_IsolatedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_IsolatedFEVDosage</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>

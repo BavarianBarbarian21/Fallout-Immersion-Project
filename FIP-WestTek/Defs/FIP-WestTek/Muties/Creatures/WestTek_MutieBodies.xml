@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyDef>
+    <defName>WestTek_Centaur</defName>
+    <label>centaur</label>
+    <corePart>
+      <def>Torso</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>Neck</def>
+          <coverage>0.08</coverage>
+          <height>Top</height>
+          <parts>
+            <li>
+              <def>Head</def>
+              <coverage>0.14</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>left eye</customLabel>
+                  <coverage>0.08</coverage>
+                </li>
+                <li>
+                  <def>Eye</def>
+                  <customLabel>right eye</customLabel>
+                  <coverage>0.08</coverage>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>left ear</customLabel>
+                  <coverage>0.04</coverage>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>right ear</customLabel>
+                  <coverage>0.04</coverage>
+                </li>
+                <li>
+                  <def>Nose</def>
+                  <coverage>0.04</coverage>
+                </li>
+                <li>
+                  <def>Jaw</def>
+                  <coverage>0.12</coverage>
+                  <parts>
+                    <li>
+                      <def>Teeth</def>
+                      <coverage>0.2</coverage>
+                      <groups>
+                        <li>Teeth</li>
+                      </groups>
+                    </li>
+                  </parts>
+                </li>
+                <li>
+                  <def>Arm</def>
+                  <customLabel>left tentacle</customLabel>
+                  <coverage>0.14</coverage>
+                  <depth>Outside</depth>
+                  <groups>
+                    <li>TentacleAttack</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>Hand</def>
+                      <customLabel>left manipulator tendril</customLabel>
+                      <coverage>0.35</coverage>
+                    </li>
+                  </parts>
+                </li>
+                <li>
+                  <def>Arm</def>
+                  <customLabel>right tentacle</customLabel>
+                  <coverage>0.14</coverage>
+                  <depth>Outside</depth>
+                  <groups>
+                    <li>TentacleAttack</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>Hand</def>
+                      <customLabel>right manipulator tendril</customLabel>
+                      <coverage>0.35</coverage>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Arm</def>
+          <customLabel>front left leg-arm</customLabel>
+          <coverage>0.14</coverage>
+          <groups>
+            <li>FrontLeftLegArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <customLabel>front left hand</customLabel>
+              <coverage>0.35</coverage>
+              <parts>
+                <li>
+                  <def>Finger</def>
+                  <customLabel>front left finger</customLabel>
+                  <coverage>0.12</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Arm</def>
+          <customLabel>front right leg-arm</customLabel>
+          <coverage>0.14</coverage>
+          <groups>
+            <li>FrontRightLegArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <customLabel>front right hand</customLabel>
+              <coverage>0.35</coverage>
+              <parts>
+                <li>
+                  <def>Finger</def>
+                  <customLabel>front right finger</customLabel>
+                  <coverage>0.12</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Arm</def>
+          <customLabel>rear left leg-arm</customLabel>
+          <coverage>0.14</coverage>
+          <groups>
+            <li>RearLeftLegArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <customLabel>rear left hand</customLabel>
+              <coverage>0.35</coverage>
+              <parts>
+                <li>
+                  <def>Finger</def>
+                  <customLabel>rear left finger</customLabel>
+                  <coverage>0.12</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Arm</def>
+          <customLabel>rear right leg-arm</customLabel>
+          <coverage>0.14</coverage>
+          <groups>
+            <li>RearRightLegArm</li>
+          </groups>
+          <parts>
+            <li>
+              <def>Hand</def>
+              <customLabel>rear right hand</customLabel>
+              <coverage>0.35</coverage>
+              <parts>
+                <li>
+                  <def>Finger</def>
+                  <customLabel>rear right finger</customLabel>
+                  <coverage>0.12</coverage>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+</Defs>

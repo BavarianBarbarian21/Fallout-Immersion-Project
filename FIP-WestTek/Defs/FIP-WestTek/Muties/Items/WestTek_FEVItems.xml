@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVProbe</defName>
+    <label>FEV probe</label>
+    <description>A crude pre-refinement sample of Forced Evolutionary Virus growth medium. It is unstable, dangerous, and only useful in aggregate.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVProbe</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.03</Mass>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVSample</defName>
+    <label>FEV sample</label>
+    <description>A concentrated viral sample suitable for controlled testing and mid-tier dosage preparation.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVSample</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVProbe>10</WestTek_FEVProbe>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2200</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVCulture</defName>
+    <label>FEV culture</label>
+    <description>A stabilized culture kept alive for higher-order Forced Evolutionary Virus work. This scaffold recipe exists so FEV-3 has a concrete item to target.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVCulture</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>260</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVSample>1</WestTek_FEVSample>
+      <Uranium>50</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2210</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_UnrefinedFEVDosage</defName>
+    <label>unrefined FEV dosage</label>
+    <description>An unstable Forced Evolutionary Virus dose intended for crude prisoner trials. The actual transformation logic still needs a custom recipe worker.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_UnrefinedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>180</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVProbe>1</WestTek_FEVProbe>
+      <Uranium>100</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2220</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_RefinedFEVDosage</defName>
+    <label>refined FEV dosage</label>
+    <description>A cleaner Forced Evolutionary Virus dose suitable for more controlled medical trials. This recipe outputs two doses from one sample as requested.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_RefinedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>260</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVSample>1</WestTek_FEVSample>
+      <Uranium>200</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <bulkRecipeCount>2</bulkRecipeCount>
+      <displayPriority>2230</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_IsolatedFEVDosage</defName>
+    <label>isolated FEV dosage</label>
+    <description>A highly stabilized Forced Evolutionary Virus dose reserved for colonist-directed procedures. The guaranteed transformation result still needs a custom recipe worker.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_IsolatedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>420</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVCulture>1</WestTek_FEVCulture>
+      <Uranium>300</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV3</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2240</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_NightkinMutagen</defName>
+    <label>nightkin mutagen</label>
+    <description>A concentrated violet mutagen derived from refined FEV work. When consumed, it forces a Nightkin transition, adding the Nightkin mutation, the associated schizophrenia trait, and the stealth ability if that ability is available.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_NightkinMutagen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>Drug</li>
+      <li>Serum</li>
+    </tradeTags>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>520</MarketValue>
+      <Mass>0.08</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <ingestible>
+      <preferability>Drug</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>100</baseIngestTicks>
+      <humanlikeOnly>true</humanlikeOnly>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Consume {0}</ingestCommandString>
+      <ingestReportString>Consuming {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1220</listOrder>
+        <teetotalerCanConsume>true</teetotalerCanConsume>
+      </li>
+      <li Class="FIP.WestTek.CompProperties_UseEffectNightkinMutagen" />
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <costList>
+      <Uranium>400</Uranium>
+    </costList>
+    <recipeMaker>
+      <workAmount>1600</workAmount>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2250</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+</Defs>
