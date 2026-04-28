@@ -3,10 +3,30 @@
 	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VPE.Puppeteer">
 		<success>Always</success>
 		<operations>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEP_Puppeteer"]/label</xpath><value><label>idol puppeteer</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEP_Puppeteer"]/description</xpath><value><description>Idol puppeteer revelations break minds, enslave wills, and turn hollowed victims into extensions of the occultist.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEP_Puppeteer"]/tooltip</xpath><value><tooltip>Idol puppeteers are masters of possession and psychic domination. They hollow targets out, wear puppets like masks, and cling to life by pouring themselves into disposable thralls.</tooltip></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPEP_Puppeteer"]/lockedReason</xpath><value><lockedReason>Empire-born occultists only</lockedReason></value></li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPEP_Puppeteer"]/label</xpath>
+				<value>
+					<label>idol puppeteer</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPEP_Puppeteer"]/description</xpath>
+				<value>
+					<description>Idol puppeteer revelations break minds, enslave wills, and turn hollowed victims into extensions of the occultist.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPEP_Puppeteer"]/tooltip</xpath>
+				<value>
+					<tooltip>Idol puppeteers are masters of possession and psychic domination. They hollow targets out, wear puppets like masks, and cling to life by pouring themselves into disposable thralls.</tooltip>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPEP_Puppeteer"]/lockedReason</xpath>
+				<value>
+					<lockedReason>Empire-born occultists only</lockedReason>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

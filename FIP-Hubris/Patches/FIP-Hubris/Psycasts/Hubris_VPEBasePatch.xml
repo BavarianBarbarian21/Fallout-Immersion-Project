@@ -3,40 +3,210 @@
 	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VPsycastsE">
 		<success>Always</success>
 		<operations>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Empath"]/label</xpath><value><label>mesmerist</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Empath"]/description</xpath><value><description>Mesmerist revelations soothe minds, break panic, and flood nearby followers with unnatural calm.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Skipmaster"]/label</xpath><value><label>gatewalker</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Skipmaster"]/description</xpath><value><description>Gatewalker revelations tear short-lived holes through space, moving people and objects by occult shortcut.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Conflagrator"]/label</xpath><value><label>ashcaller</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Conflagrator"]/description</xpath><value><description>Ashcaller revelations weaponize fire, heat, and raw destructive energy in spectacular rituals.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Protector"]/label</xpath><value><label>wardkeeper</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Protector"]/description</xpath><value><description>Wardkeeper revelations shield allies, reinforce flesh, and drag researchers out of fatal danger.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Warlord"]/label</xpath><value><label>battle medium</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Warlord"]/description</xpath><value><description>Battle medium revelations are selfish war rites that sharpen reflexes, speed, and killing instinct.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Chronopath"]/label</xpath><value><label>doomwatcher</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Chronopath"]/description</xpath><value><description>Doomwatcher revelations distort age, growth, and duration by clawing at the edges of time.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Archotechist"]/label</xpath><value><label>blacksite savant</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Archotechist"]/description</xpath><value><description>Blacksite savant revelations channel forbidden machine-thought, insanity, and weaponized neural overload.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Necropath"]/label</xpath><value><label>gravecaller</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Necropath"]/description</xpath><value><description>Gravecaller revelations spread dread, exploit corpses, and drag the dead back into service.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Staticlord"]/label</xpath><value><label>stormcaller</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Staticlord"]/description</xpath><value><description>Stormcaller revelations command lightning, blackout machinery, and turn weather into a weapon.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Archon"]/label</xpath><value><label>high priest</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Archon"]/description</xpath><value><description>High priest revelations enthrone a leader who binds followers, drains rivals, and rules through presence and pain.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Frostshaper"]/label</xpath><value><label>rimebinder</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Frostshaper"]/description</xpath><value><description>Rimebinder revelations shape cold, ice, and entropy into barriers, traps, and killing frost.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Wildspeaker"]/label</xpath><value><label>totem speaker</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Wildspeaker"]/description</xpath><value><description>Totem speaker revelations call on beasts, brambles, and shrine-bound wilderness spirits for survival and defense.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Harmonist"]/label</xpath><value><label>omenweaver</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Harmonist"]/description</xpath><value><description>Omenweaver revelations trade fortune for misfortune, tilting the balance of events through ritual gamble.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Technomancer"]/label</xpath><value><label>relic engineer</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Technomancer"]/description</xpath><value><description>Relic engineer revelations wake dead circuitry, empower scavenged technology, and stitch occult insight into hardware.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Nightstalker"]/label</xpath><value><label>nightstalker</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/*[defName="VPE_Nightstalker"]/description</xpath><value><description>Nightstalker revelations reward ambush, darkness, and silent execution under a veil of unnatural shadow.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/ResearchProjectDef[defName="VPE_CasterGear"]/label</xpath><value><label>occult regalia</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/ResearchProjectDef[defName="VPE_CasterGear"]/description</xpath><value><description>Craft ritual clothing, armor, and focus gear suited to occultists and their cryptic revelations.</description></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/ResearchProjectDef[defName="VPE_EltexGear"]/label</xpath><value><label>relic regalia</label></value></li>
-			<li Class="PatchOperationReplace"><xpath>/Defs/ResearchProjectDef[defName="VPE_EltexGear"]/description</xpath><value><description>Recover and tailor advanced relic-woven apparel, staves, and focus gear that amplify cryptid insight.</description></value></li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Empath"]/label</xpath>
+				<value>
+					<label>mesmerist</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Empath"]/description</xpath>
+				<value>
+					<description>Mesmerist revelations soothe minds, break panic, and flood nearby followers with unnatural calm.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Skipmaster"]/label</xpath>
+				<value>
+					<label>gatewalker</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Skipmaster"]/description</xpath>
+				<value>
+					<description>Gatewalker revelations tear short-lived holes through space, moving people and objects by occult shortcut.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Conflagrator"]/label</xpath>
+				<value>
+					<label>ashcaller</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Conflagrator"]/description</xpath>
+				<value>
+					<description>Ashcaller revelations weaponize fire, heat, and raw destructive energy in spectacular rituals.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Protector"]/label</xpath>
+				<value>
+					<label>wardkeeper</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Protector"]/description</xpath>
+				<value>
+					<description>Wardkeeper revelations shield allies, reinforce flesh, and drag researchers out of fatal danger.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Warlord"]/label</xpath>
+				<value>
+					<label>battle medium</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Warlord"]/description</xpath>
+				<value>
+					<description>Battle medium revelations are selfish war rites that sharpen reflexes, speed, and killing instinct.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Chronopath"]/label</xpath>
+				<value>
+					<label>doomwatcher</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Chronopath"]/description</xpath>
+				<value>
+					<description>Doomwatcher revelations distort age, growth, and duration by clawing at the edges of time.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Archotechist"]/label</xpath>
+				<value>
+					<label>blacksite savant</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Archotechist"]/description</xpath>
+				<value>
+					<description>Blacksite savant revelations channel forbidden machine-thought, insanity, and weaponized neural overload.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Necropath"]/label</xpath>
+				<value>
+					<label>gravecaller</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Necropath"]/description</xpath>
+				<value>
+					<description>Gravecaller revelations spread dread, exploit corpses, and drag the dead back into service.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Staticlord"]/label</xpath>
+				<value>
+					<label>stormcaller</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Staticlord"]/description</xpath>
+				<value>
+					<description>Stormcaller revelations command lightning, blackout machinery, and turn weather into a weapon.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Archon"]/label</xpath>
+				<value>
+					<label>high priest</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Archon"]/description</xpath>
+				<value>
+					<description>High priest revelations enthrone a leader who binds followers, drains rivals, and rules through presence and pain.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Frostshaper"]/label</xpath>
+				<value>
+					<label>rimebinder</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Frostshaper"]/description</xpath>
+				<value>
+					<description>Rimebinder revelations shape cold, ice, and entropy into barriers, traps, and killing frost.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Wildspeaker"]/label</xpath>
+				<value>
+					<label>totem speaker</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Wildspeaker"]/description</xpath>
+				<value>
+					<description>Totem speaker revelations call on beasts, brambles, and shrine-bound wilderness spirits for survival and defense.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Harmonist"]/label</xpath>
+				<value>
+					<label>omenweaver</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Harmonist"]/description</xpath>
+				<value>
+					<description>Omenweaver revelations trade fortune for misfortune, tilting the balance of events through ritual gamble.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Technomancer"]/label</xpath>
+				<value>
+					<label>relic engineer</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Technomancer"]/description</xpath>
+				<value>
+					<description>Relic engineer revelations wake dead circuitry, empower scavenged technology, and stitch occult insight into hardware.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Nightstalker"]/label</xpath>
+				<value>
+					<label>nightstalker</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/*[defName="VPE_Nightstalker"]/description</xpath>
+				<value>
+					<description>Nightstalker revelations reward ambush, darkness, and silent execution under a veil of unnatural shadow.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VPE_CasterGear"]/label</xpath>
+				<value>
+					<label>occult regalia</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VPE_CasterGear"]/description</xpath>
+				<value>
+					<description>Craft ritual clothing, armor, and focus gear suited to occultists and their cryptic revelations.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VPE_EltexGear"]/label</xpath>
+				<value>
+					<label>relic regalia</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="VPE_EltexGear"]/description</xpath>
+				<value>
+					<description>Recover and tailor advanced relic-woven apparel, staves, and focus gear that amplify cryptid insight.</description>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
