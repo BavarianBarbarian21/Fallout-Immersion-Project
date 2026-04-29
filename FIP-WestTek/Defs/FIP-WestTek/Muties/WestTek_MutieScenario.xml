@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!--Forced Evolution Scenario-->
   <ScenarioDef ParentName="ScenarioBase">
-    <defName>WestTek_ForcedEvolutionSurvivors</defName>
-    <label>Forced Evolution Survivors</label>
-    <description>A West Tek cell escaped containment with three viable mutie survivors, a crate of refined dosages, and just enough research to begin reproducing the process. One subject is an older first-generation giant. The other two are later-generation super mutants stable enough to build a colony around.</description>
+    <defName>WestTek_ForcedEvolution</defName>
+    <label>Forced Evolution</label>
+    <description>A wandering band of super mutants has broken from the chaos of the wasteland, bringing with them three survivors, a cache of refined FEV doses, and just enough salvaged knowledge to attempt recreating the transformation process.</description>
     <scenario>
-      <summary>One first-generation super mutant, two second-generation super mutants, and the first FEV protocol.</summary>
+      <summary>One first-generation super mutant, two second-generation super mutants, and some FEV.</summary>
       <parts>
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
           <def>ConfigurePawnsXenotypes</def>
@@ -37,7 +38,7 @@
           <def>GameStartDialog</def>
           <text>The facility burned long before you escaped it. What remained were ruined vats, sealed notes, and three living proofs that West Tek got further than anyone should have allowed.
 
-Now the old bunker is gone, the handlers are dead, and your little mutie cadre is alone on a rimworld with ten refined dosages and just enough knowledge to restart the work. Whether that becomes a refuge, an army, or another atrocity is up to you.</text>
+Now the old bunker is gone, the masters are dead, and your little mutie cadre is alone in the wasteland with a little FEV and just enough knowledge to restart the work. Whether that becomes a refuge, an army, or another atrocity is up to you.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
         <li Class="ScenPart_StartingResearch">

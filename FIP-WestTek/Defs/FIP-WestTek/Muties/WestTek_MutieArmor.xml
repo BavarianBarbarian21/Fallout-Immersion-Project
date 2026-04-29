@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!--Tier 1 Armor-->
   <ThingDef ParentName="Apparel_ArmorVest">
     <defName>WestTek_Apparel_GruntArmor</defName>
     <label>grunt armor</label>
@@ -32,12 +33,13 @@
     </apparel>
   </ThingDef>
 
+  <!--Tier 2 Armor-->
   <ThingDef ParentName="Apparel_ArmorVest">
-    <defName>WestTek_Apparel_BrutaArmor</defName>
-    <label>bruta armor</label>
+    <defName>WestTek_Apparel_BruteArmor</defName>
+    <label>brute armor</label>
     <description>Heavier scavenged plating intended for large mutant bruisers expected to absorb return fire.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_BrutaArmor</texPath>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_BruteArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <recipeMaker>
@@ -61,10 +63,11 @@
       <ArmorRating_Heat>0.16</ArmorRating_Heat>
     </statBases>
     <apparel>
-      <wornGraphicPath>FIP-WestTek/Muties/Misc/WestTek_BrutaArmor</wornGraphicPath>
+      <wornGraphicPath>FIP-WestTek/Muties/Misc/WestTek_BruteArmor</wornGraphicPath>
     </apparel>
   </ThingDef>
 
+  <!--Tier 3 Armor-->
   <ThingDef ParentName="Apparel_ArmorVest">
     <defName>WestTek_Apparel_MasterArmor</defName>
     <label>master armor</label>
