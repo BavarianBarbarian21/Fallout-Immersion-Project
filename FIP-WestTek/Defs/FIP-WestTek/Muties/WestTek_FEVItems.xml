@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_FEVProbe</defName>
     <label>FEV probe</label>
-    <description>A crude pre-refinement sample of Forced Evolutionary Virus growth medium. It is unstable, dangerous, and only useful in aggregate.</description>
+    <description>A crude pre-refinement sample of Forced Evolutionary Virus growth medium. It is unstable and difficult to handle safely.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVProbe</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -20,7 +20,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_FEVSample</defName>
     <label>FEV sample</label>
-    <description>A concentrated viral sample suitable for controlled testing and mid-tier dosage preparation.</description>
+    <description>A concentrated viral sample suitable for controlled testing. More stable than raw probe material.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVSample</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -48,7 +48,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_FEVCulture</defName>
     <label>FEV culture</label>
-    <description>A stabilized culture kept alive for higher-order Forced Evolutionary Virus work. This scaffold recipe exists so FEV-3 has a concrete item to target.</description>
+    <description>A stabilized culture kept alive for higher-order Forced Evolutionary Virus work. Guaranteed transformation results when used in procedures.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVCulture</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -77,7 +77,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_UnrefinedFEVDosage</defName>
     <label>unrefined FEV dosage</label>
-    <description>An unstable Forced Evolutionary Virus dose. The actual transformation logic still needs a custom recipe worker.</description>
+    <description>An unstable Forced Evolutionary Virus dose. The virus is not yet controlled enough to produce consistent results.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_UnrefinedFEVDosage</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -106,7 +106,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_RefinedFEVDosage</defName>
     <label>refined FEV dosage</label>
-    <description>A cleaner Forced Evolutionary Virus dose suitable for more controlled medical trials. This recipe outputs two doses from one sample as requested.</description>
+    <description>A cleaner Forced Evolutionary Virus dose suitable for more controlled procedures. Lethality is reduced compared to wild samples.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_RefinedFEVDosage</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -136,7 +136,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_IsolatedFEVDosage</defName>
     <label>isolated FEV dosage</label>
-    <description>A highly stabilized Forced Evolutionary Virus dose reserved for colonist-directed procedures. The guaranteed transformation result still needs a custom recipe worker.</description>
+    <description>A highly stabilized Forced Evolutionary Virus dose reserved for colonist-directed procedures. Guaranteed transformation results when used in procedures.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_IsolatedFEVDosage</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -165,7 +165,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>WestTek_NightkinMutagen</defName>
     <label>nightkin mutagen</label>
-    <description>A concentrated violet mutagen derived from refined FEV work. When consumed, it forces a Nightkin transition, adding the Nightkin mutation, the associated schizophrenia trait, and the stealth ability if that ability is available.</description>
+    <description>A concentrated violet mutagen derived from refined FEV work. When consumed, it forces a Nightkin transition — the deep pigmentation, the paranoia, and the instinctive relationship with stealth technology that defines the strain.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Misc/WestTek_NightkinMutagen</texPath>
       <graphicClass>Graphic_Single</graphicClass>
