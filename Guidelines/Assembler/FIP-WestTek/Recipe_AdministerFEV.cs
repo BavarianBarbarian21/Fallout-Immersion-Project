@@ -17,6 +17,8 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
 
     protected abstract bool AllowsPrisoners { get; }
 
+    protected abstract bool AllowsSlaves { get; }
+
     protected abstract FEVMutationOutcome RollOutcome();
 
     public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
@@ -36,10 +38,16 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
             return false;
         }
 
+        if (WestTekMutationUtility.IsMutationBlockedXenotype(pawn))
+        {
+            return false;
+        }
+
         bool colonist = pawn.IsFreeColonist;
         bool prisoner = pawn.IsPrisonerOfColony;
+        bool slave = pawn.IsSlaveOfColony;
 
-        return (colonist && AllowsColonists) || (prisoner && AllowsPrisoners);
+        return (colonist && AllowsColonists) || (prisoner && AllowsPrisoners) || (slave && AllowsSlaves);
     }
 
     public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
@@ -65,12 +73,13 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
 
     private static void TransformIntoSuperMutant(Pawn pawn)
     {
-        if (!ModsConfig.BiotechActive || pawn.genes == null)
+        bool shouldBecomeNightkin = ShouldBecomeNightkin(pawn);
+        pawn.genes.SetXenotype(ChooseSuperMutantXenotype(pawn));
+        if (shouldBecomeNightkin)
         {
-            return;
+            WestTekMutationUtility.ApplyNightkinGene(pawn);
         }
 
-        pawn.genes.SetXenotype(ChooseSuperMutantXenotype(pawn));
         pawn.Drawer?.renderer?.SetAllGraphicsDirty();
         PortraitsCache.SetDirty(pawn);
     }
@@ -140,10 +149,16 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
         XenotypeDef xenotype = pawn.genes.Xenotype;
         if (xenotype == WestTekDefOf.WestTek_Xenotype_PureHumans || xenotype == WestTekDefOf.WestTek_Xenotype_VaultDweller)
         {
-            return WestTekDefOf.WestTek_Xenotype_SuperMutant_2;
+            return WestTekDefOf.WestTek_Xenotype_SuperMutantFirst;
         }
 
-        return WestTekDefOf.WestTek_Xenotype_SuperMutant_1;
+        return WestTekDefOf.WestTek_Xenotype_SuperMutantSecond;
+    }
+
+    private static bool ShouldBecomeNightkin(Pawn pawn)
+    {
+        XenotypeDef xenotype = pawn.genes?.Xenotype;
+        return xenotype != null && xenotype.defName is "Hussar" or "Waster";
     }
 }
 
@@ -152,6 +167,8 @@ public sealed class Recipe_AdministerUnrefinedFEVDosage : Recipe_AdministerFEVBa
     protected override bool AllowsColonists => false;
 
     protected override bool AllowsPrisoners => true;
+
+    protected override bool AllowsSlaves => true;
 
     protected override FEVMutationOutcome RollOutcome()
     {
@@ -165,6 +182,8 @@ public sealed class Recipe_AdministerRefinedFEVDosage : Recipe_AdministerFEVBase
 
     protected override bool AllowsPrisoners => true;
 
+    protected override bool AllowsSlaves => true;
+
     protected override FEVMutationOutcome RollOutcome()
     {
         return Rand.Chance(0.5f) ? FEVMutationOutcome.Centaur : FEVMutationOutcome.SuperMutant;
@@ -176,6 +195,8 @@ public sealed class Recipe_AdministerIsolatedFEVDosage : Recipe_AdministerFEVBas
     protected override bool AllowsColonists => true;
 
     protected override bool AllowsPrisoners => false;
+
+    protected override bool AllowsSlaves => true;
 
     protected override FEVMutationOutcome RollOutcome()
     {

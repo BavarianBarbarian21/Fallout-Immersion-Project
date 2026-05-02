@@ -12,12 +12,13 @@ internal static class WestTekDefOf
     }
 
     public static PawnKindDef WestTek_Centaur = null;
-    public static HediffDef WestTek_Nightkin = null;
-    public static TraitDef WestTek_NightkinSchizophrenia = null;
-    public static AbilityDef WestTek_NightkinInvisibility = null;
+    public static GeneDef WestTek_Gene_Nightkin = null;
     public static XenotypeDef WestTek_Xenotype_PureHumans = null;
-    public static XenotypeDef WestTek_Xenotype_SuperMutant_1 = null;
-    public static XenotypeDef WestTek_Xenotype_SuperMutant_2 = null;
+    public static XenotypeDef WestTek_Xenotype_SuperMutantSecond = null;
+    public static XenotypeDef WestTek_Xenotype_SuperMutantFirst = null;
+    public static TraitDef WestTek_NightkinSchizophrenia = null;
     public static XenotypeDef WestTek_Xenotype_VaultDweller = null;
     public static ThingDef WestTek_FEVProbe = null;
+    public static ThingDef WestTek_UnrefinedFEVDosage = null;
+    public static PawnKindDef WestTek_TameBehemoth = null;
 }

@@ -4,18 +4,21 @@
   <ResearchProjectDef>
     <defName>WestTek_FEV1</defName>
     <label>FEV-1</label>
-    <description>Catalog the first stable Forced Evolutionary Virus handling process. In play this is meant to follow analysis of an FEV probe; in this scaffold the item dependency is documented but not mechanically enforced.</description>
+    <description>Catalog the first stable Forced Evolutionary Virus handling process. This research only becomes available after a colonist analyzes an FEV probe.</description>
     <baseCost>1200</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>9</researchViewX>
     <researchViewY>2.8</researchViewY>
+    <requiredAnalyzed>
+      <li>WestTek_FEVProbe</li>
+    </requiredAnalyzed>
   </ResearchProjectDef>
 
   <!--Tier 2 Research-->
   <ResearchProjectDef>
     <defName>WestTek_FEV2</defName>
     <label>FEV-2</label>
-    <description>Refine the first-generation process into reliable sample handling and cleaner dosage production. Intended to follow analysis of an FEV sample.</description>
+    <description>Refine the first-generation process into reliable sample handling and cleaner dosage production. This research only becomes available after a colonist analyzes an FEV sample.</description>
     <baseCost>1800</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -23,13 +26,16 @@
     </prerequisites>
     <researchViewX>10.5</researchViewX>
     <researchViewY>2.8</researchViewY>
+    <requiredAnalyzed>
+      <li>WestTek_FEVSample</li>
+    </requiredAnalyzed>
   </ResearchProjectDef>
 
   <!--Tier 3 Research-->
   <ResearchProjectDef>
     <defName>WestTek_FEV3</defName>
     <label>FEV-3</label>
-    <description>Stabilize isolated Forced Evolutionary Virus cultures for controlled colonist-facing procedures. Intended to follow analysis of an FEV culture.</description>
+    <description>Stabilize isolated Forced Evolutionary Virus cultures for controlled colonist-facing procedures. This research only becomes available after a colonist analyzes an FEV culture.</description>
     <baseCost>2600</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -37,5 +43,8 @@
     </prerequisites>
     <researchViewX>12</researchViewX>
     <researchViewY>2.8</researchViewY>
+    <requiredAnalyzed>
+      <li>WestTek_FEVCulture</li>
+    </requiredAnalyzed>
   </ResearchProjectDef>
 </Defs>

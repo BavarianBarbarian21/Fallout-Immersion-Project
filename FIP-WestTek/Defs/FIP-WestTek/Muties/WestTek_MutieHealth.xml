@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>WestTek_FEVMutationPending_1</defName>
     <label>unstable FEV exposure</label>
-    <description>PLACEHOLDER</description>
+    <description>An unrefined FEV dosage is tearing through this subject's body in violent, uneven waves. Their metabolism surges, tissues misfire, and the mind slips toward paranoia and collapse while the mutation struggles to take hold.</description>
     <isBad>true</isBad>
     <stages>
       <li>
@@ -17,7 +17,7 @@
   <HediffDef>
     <defName>WestTek_FEVMutationPending_2</defName>
     <label>refined FEV exposure</label>
-    <description>PLACEHOLDER</description>
+    <description>A refined FEV strain is restructuring this subject with far more control, but the process is still brutal. Violent mood swings, intrusive aggression, and bouts of instability are common until the body either stabilizes or fails.</description>
     <isBad>true</isBad>
     <stages>
       <li>
@@ -30,7 +30,7 @@
   <HediffDef>
     <defName>WestTek_FEVMutationPending_3</defName>
     <label>isolated FEV exposure</label>
-    <description>PLACEHOLDER</description>
+    <description>An isolated FEV culture is remaking this subject at the deepest biological level. The transformation is faster and cleaner than lesser strains, but the nervous system remains under immense pressure until the final mutation locks into place.</description>
     <isBad>true</isBad>
     <stages>
       <li>
@@ -39,50 +39,16 @@
     </stages>
   </HediffDef>
 
-  <!--Nightkin Effect-->
-  <HediffDef>
-    <defName>WestTek_Nightkin</defName>
-    <label>nightkin</label>
-    <description>A heavy FEV mutation that darkens the subject and pushes their mind toward violent instability. This scaffold includes the mental-break pressure and an example body overlay path, but automatic invisibility-gizmo wiring still needs a custom hook if Anomaly is not required.</description>
+  <ThoughtDef>
+    <defName>WestTek_MastersArmy</defName>
+    <workerClass>FIP.WestTek.ThoughtWorker_WestTek_MastersArmy</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <mentalBreakMtbDays>2.5</mentalBreakMtbDays>
-        <allowedMentalBreakIntensities>
-          <li>Minor</li>
-          <li>Major</li>
-        </allowedMentalBreakIntensities>
-        <statOffsets>
-          <MoveSpeed>0.1</MoveSpeed>
-          <MeleeHitChance>0.05</MeleeHitChance>
-        </statOffsets>
+        <label>Master's Army</label>
+        <description>This super mutant slave exists to serve in the Master's Army, and takes grim pride in that purpose.</description>
+        <baseMoodEffect>20</baseMoodEffect>
       </li>
     </stages>
-    <renderNodeProperties>
-      <li>
-        <debugLabel>Nightkin overlay</debugLabel>
-        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-        <texPaths>
-          <li>FIP-WestTek/Muties/Nightkin/WestTek_Nightkin_Overlay_A</li>
-        </texPaths>
-        <baseLayer>65</baseLayer>
-      </li>
-    </renderNodeProperties>
-  </HediffDef>
-
-  <!--Nightkin Trait-->
-  <TraitDef>
-    <defName>WestTek_NightkinSchizophrenia</defName>
-    <description>Violent hallucinations and dissociation associated with advanced Nightkin instability.</description>
-    <commonality>0</commonality>
-    <degreeDatas>
-      <li>
-        <label>nightkin schizophrenia</label>
-        <description>This pawn is prone to volatile dissociation, extended wandering, and aggressive mental collapse.</description>
-        <statOffsets>
-          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
-          <SocialImpact>-0.1</SocialImpact>
-        </statOffsets>
-      </li>
-    </degreeDatas>
-  </TraitDef>
+  </ThoughtDef>
 </Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/StructureLayoutDef[defName="AncientLaunchSite"]/junkScaterrers</xpath>
+        <value>
+          <WestTek_FEVProbe>
+            <groupsPerHundredCells>0~1</groupsPerHundredCells>
+            <itemsPerGroup>1~1</itemsPerGroup>
+            <groupDistRange>2~4</groupDistRange>
+          </WestTek_FEVProbe>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/StructureLayoutDef[defName="AncientGarrison"]/junkScaterrers</xpath>
+        <value>
+          <WestTek_FEVProbe>
+            <groupsPerHundredCells>0~1</groupsPerHundredCells>
+            <itemsPerGroup>1~1</itemsPerGroup>
+            <groupDistRange>2~4</groupDistRange>
+          </WestTek_FEVProbe>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

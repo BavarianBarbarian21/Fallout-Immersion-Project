@@ -1,121 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!--Behemoth Animal-->
-  <ThingDef ParentName="AnimalThingBase">
-    <defName>WestTek_SuperMutantBehemoth</defName>
-    <label>super mutant behemoth</label>
-    <description>A catastrophic Forced Evolutionary Virus brute. A behemoth still carries a humanoid silhouette, but every proportion is wrong: too large, too dense, and too violent. Its scavenged bumper sword hits with ruinous force.</description>
-    <graphicData>
-      <texPath>FIP-WestTek/Muties/Behemoth/WestTek_Behemoth</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-    </graphicData>
-    <statBases>
-      <MoveSpeed>3.2</MoveSpeed>
-      <MarketValue>2600</MarketValue>
-      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
-      <ComfyTemperatureMax>65</ComfyTemperatureMax>
-      <Wildness>1</Wildness>
-      <ArmorRating_Blunt>0.28</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
-      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
-      <ToxicResistance>1</ToxicResistance>
-    </statBases>
-    <uiIconScale>1.4</uiIconScale>
-    <race>
-      <body>Human</body>
-      <animalType>Predator</animalType>
-      <predator>true</predator>
-      <maxPreyBodySize>2.5</maxPreyBodySize>
-      <petness>0</petness>
-      <baseBodySize>4.8</baseBodySize>
-      <baseHungerRate>0.65</baseHungerRate>
-      <baseHealthScale>8.0</baseHealthScale>
-      <foodType>OmnivoreAnimal</foodType>
-      <gestationPeriodDays>18</gestationPeriodDays>
-      <nameOnTameChance>1</nameOnTameChance>
-      <trainability>None</trainability>
-      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>0.6</manhunterOnDamageChance>
-      <lifeExpectancy>80</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Warg_Wounded</soundWounded>
-          <soundDeath>Pawn_Warg_Death</soundDeath>
-          <soundCall>Pawn_Warg_Call</soundCall>
-          <soundAngry>Pawn_Warg_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-    </race>
-    <tools>
-      <li>
-        <label>bumper sword</label>
-        <capacities>
-          <li>Cut</li>
-          <li>Blunt</li>
-        </capacities>
-        <power>55</power>
-        <cooldownTime>2.8</cooldownTime>
-        <chanceFactor>0.85</chanceFactor>
-      </li>
-      <li>
-        <label>fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>18</power>
-        <cooldownTime>2.1</cooldownTime>
-        <chanceFactor>0.25</chanceFactor>
-      </li>
-    </tools>
-    <tradeTags>
-      <li>AnimalRare</li>
-    </tradeTags>
-  </ThingDef>
-
-  <PawnKindDef ParentName="AnimalKindBase">
-    <defName>WestTek_SuperMutantBehemoth</defName>
-    <label>super mutant behemoth</label>
-    <race>WestTek_SuperMutantBehemoth</race>
-    <combatPower>550</combatPower>
-    <wildGroupSize>1~1</wildGroupSize>
-    <ecoSystemWeight>0.02</ecoSystemWeight>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>FIP-WestTek/Muties/Behemoth/WestTek_Behemoth</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.2</drawSize>
-          <shadowData>
-            <volume>(0.9, 1.1, 0.9)</volume>
-            <offset>(0,0,-0.3)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
-
-  <!--Centaur Animal-->
+  <!--Centaur-->
   <ThingDef ParentName="AnimalThingBase">
     <defName>WestTek_Centaur</defName>
     <label>centaur</label>
-    <description>A failed Forced Evolutionary Virus subject twisted into a low-slung, many-limbed pack predator. Its four leg-arms end in crude hand-like pads, while tentacles hanging from its head let it drag prey toward mouths distributed across a body that never settled on a final shape.</description>
+    <description>Centaurs are hostile FEV predators built from failed human stock and finished into hunting beasts. West Tek's field strain keeps the low-slung, many-limbed silhouette but now uses the tougher Wasteland Compendium combat profile instead of the earlier lightweight animal tuning.</description>
     <graphicData>
       <texPath>FIP-WestTek/Muties/Centaur/WestTek_Centaur</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <statBases>
-      <MoveSpeed>4.4</MoveSpeed>
-      <MarketValue>450</MarketValue>
-      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <MoveSpeed>2.8</MoveSpeed>
+      <MarketValue>600</MarketValue>
+      <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>55</ComfyTemperatureMax>
-      <Wildness>0.65</Wildness>
-      <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+      <Wildness>0.8</Wildness>
+      <ArmorRating_Blunt>1.14</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Flammability>1</Flammability>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <ToxicResistance>1</ToxicResistance>
     </statBases>
@@ -124,11 +27,12 @@
       <animalType>Predator</animalType>
       <body>WestTek_Centaur</body>
       <predator>true</predator>
-      <maxPreyBodySize>0.9</maxPreyBodySize>
+      <maxPreyBodySize>1.2</maxPreyBodySize>
       <petness>0.35</petness>
-      <baseBodySize>1.45</baseBodySize>
+      <baseBodySize>2.0</baseBodySize>
       <baseHungerRate>0.32</baseHungerRate>
-      <baseHealthScale>1.7</baseHealthScale>
+      <baseHealthScale>2.5</baseHealthScale>
+      <leatherDef>WestTek_Leather_FEVMutant</leatherDef>
       <foodType>OmnivoreAnimal, Corpse</foodType>
       <gestationPeriodDays>9</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
@@ -149,9 +53,9 @@
           <soundAngry>Pawn_Warg_Angry</soundAngry>
         </li>
       </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+        <soundMeleeHitPawn>WestTek_AbominationHit</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <tools>
       <li>
@@ -159,7 +63,7 @@
         <capacities>
           <li>Scratch</li>
         </capacities>
-        <power>10.5</power>
+        <power>12</power>
         <cooldownTime>2.0</cooldownTime>
         <linkedBodyPartsGroup>TentacleAttack</linkedBodyPartsGroup>
       </li>
@@ -168,10 +72,10 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>9</power>
-        <cooldownTime>2.4</cooldownTime>
+        <power>15</power>
+        <cooldownTime>1.7</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.45</chanceFactor>
+        <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
     <tradeTags>
@@ -200,4 +104,281 @@
       </li>
     </lifeStages>
   </PawnKindDef>
+
+ <SoundDef>
+    <defName>WestTek_AbominationHit</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>WestTek_Abomination</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <!--Floater-->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>WestTek_Floater</defName>
+    <label>floater</label>
+    <description>Floaters are fast, flammable FEV horrors that drift on their own gas bladders and crowd prey in packs.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Floater/WestTek_Floater</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>350</MarketValue>
+      <ComfyTemperatureMin>-55</ComfyTemperatureMin>
+      <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <Wildness>0.8</Wildness>
+      <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Flammability>2</Flammability>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <race>
+      <animalType>Predator</animalType>
+      <body>WestTek_FloaterBody</body>
+      <predator>true</predator>
+      <maxPreyBodySize>0.8</maxPreyBodySize>
+      <petness>0</petness>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHungerRate>0.22</baseHungerRate>
+      <baseHealthScale>2.5</baseHealthScale>
+      <leatherDef>WestTek_Leather_FEVMutant</leatherDef>
+      <foodType>None</foodType>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>None</trainability>
+      <lifeExpectancy>400</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.1</minAge>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>WestTek_AbominationHit</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tools>
+      <li>
+        <label>fore mouth</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>ovipositor</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>WestTek_Floater</defName>
+    <label>floater</label>
+    <race>WestTek_Floater</race>
+    <combatPower>70</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-WestTek/Muties/Floater/WestTek_Floater</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.35</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <apparelMoney>
+      <min>-10</min>
+      <max>-10</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+  <!--Behemoth-->
+  <ThingDef ParentName="BasePawn">
+    <defName>WestTek_SuperMutantBehemoth</defName>
+    <label>super mutant behemoth</label>
+    <description>An ancient FEV giant restored to West Tek's mutant catalogue.</description>
+    <statBases>
+      <PsychicSensitivity>50</PsychicSensitivity>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <Wildness>0.8</Wildness>
+      <MoveSpeed>2.4</MoveSpeed>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.9</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <needsRest>true</needsRest>
+      <hasGenders>true</hasGenders>
+      <foodType>OmnivoreHuman</foodType>
+      <lifeExpectancy>400</lifeExpectancy>
+      <trainability>Advanced</trainability>
+      <leatherDef>WestTek_Leather_FEVMutant</leatherDef>
+      <intelligence>ToolUser</intelligence>
+      <humanlike>true</humanlike>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <body>Human</body>
+      <baseBodySize>5.2</baseBodySize>
+      <baseHealthScale>12</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.1</minAge>
+          <soundDeath>WestTek_SuperMutantDeath</soundDeath>
+          <soundCall>WestTek_SuperMutantFollow</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef Name="WestTek_BaseMutantKind" Abstract="True">
+    <apparelMoney>
+      <min>-10</min>
+      <max>-10</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="WestTek_BaseMutantKind">
+    <defName>WestTek_SuperMutantBehemoth</defName>
+    <label>super mutant behemoth</label>
+    <race>WestTek_SuperMutantBehemoth</race>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <combatPower>290</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-WestTek/Muties/Behemoth/WestTek_Behemoth</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>5.5</drawSize>
+          <shadowData>
+            <volume>(1, 1, 1)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>550</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>WestTek_BehemothWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <SoundDef>
+    <defName>WestTek_SuperMutantDeath</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>WestTek_SuperMutantDeath</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>WestTek_SuperMutantFollow</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>WestTek_SuperMutantFollow</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>
