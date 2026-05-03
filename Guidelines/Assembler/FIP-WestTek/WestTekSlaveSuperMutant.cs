@@ -7,6 +7,9 @@ namespace FIP.WestTek;
 
 internal static class WestTekMutationUtility
 {
+    public const float SlanterRenderScale = 0.5f;
+    public const float SuperMutantRenderScale = 1.2f;
+
     public static bool IsMutationBlockedXenotype(Pawn pawn)
     {
         XenotypeDef xenotype = pawn.genes.Xenotype;
@@ -73,6 +76,22 @@ internal static class WestTekMutationUtility
     {
         return pawn.IsSlaveOfColony && IsSuperMutant(pawn);
     }
+
+    public static float GetRenderScale(Pawn pawn)
+    {
+        XenotypeDef xenotype = pawn?.genes?.Xenotype;
+        if (xenotype == null)
+        {
+            return 1f;
+        }
+
+        if (xenotype.defName == "WestTek_Xenotype_SLanter")
+        {
+            return SlanterRenderScale;
+        }
+
+        return IsSuperMutantXenotype(xenotype) ? SuperMutantRenderScale : 1f;
+    }
 }
 
 [StaticConstructorOnStartup]
@@ -93,6 +112,21 @@ internal static class Patch_SlaveRebellionUtility_CanParticipateInSlaveRebellion
         {
             __result = false;
         }
+    }
+}
+
+[HarmonyPatch(typeof(Verse.PawnRenderTree), "ComputeMatrix")]
+internal static class Patch_PawnRenderTree_ComputeMatrix
+{
+    private static void Prefix(Verse.PawnRenderTree __instance, ref UnityEngine.Vector3 scale)
+    {
+        float renderScale = WestTekMutationUtility.GetRenderScale(__instance?.pawn);
+        if (renderScale == 1f)
+        {
+            return;
+        }
+
+        scale *= renderScale;
     }
 }
 

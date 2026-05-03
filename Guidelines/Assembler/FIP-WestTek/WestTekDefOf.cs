@@ -20,5 +20,6 @@ internal static class WestTekDefOf
     public static XenotypeDef WestTek_Xenotype_VaultDweller = null;
     public static ThingDef WestTek_FEVProbe = null;
     public static ThingDef WestTek_UnrefinedFEVDosage = null;
+    public static PawnKindDef WestTek_Floater = null;
     public static PawnKindDef WestTek_TameBehemoth = null;
 }
