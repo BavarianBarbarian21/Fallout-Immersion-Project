@@ -8,8 +8,8 @@
 
 A colonist can analyze this probe to unlock FEV-1 research.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVProbe</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>75</stackLimit>
     <statBases>
@@ -51,8 +51,8 @@ Your researchers can now begin formal work on first-generation FEV handling.</co
 
 A colonist can analyze this sample to unlock FEV-2 research.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVSample</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>25</stackLimit>
     <statBases>
@@ -106,8 +106,8 @@ Your researchers can now begin work on second-generation FEV refinement.</comple
 
 A colonist can analyze this culture to unlock FEV-3 research.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVCulture</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>10</stackLimit>
     <statBases>
@@ -161,8 +161,8 @@ Your researchers can now begin work on high-order FEV stabilization.</completedL
     <label>unrefined FEV dosage</label>
     <description>An unstable Forced Evolutionary Virus dose. The virus is not yet controlled enough to produce consistent results.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_UnrefinedFEVDosage</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>25</stackLimit>
     <statBases>
@@ -189,8 +189,8 @@ Your researchers can now begin work on high-order FEV stabilization.</completedL
     <label>refined FEV dosage</label>
     <description>A cleaner Forced Evolutionary Virus dose suitable for more controlled procedures. Lethality is reduced compared to wild samples.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_RefinedFEVDosage</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>25</stackLimit>
     <statBases>
@@ -218,8 +218,8 @@ Your researchers can now begin work on high-order FEV stabilization.</completedL
     <label>isolated FEV dosage</label>
     <description>A highly stabilized Forced Evolutionary Virus dose reserved for colonist-directed procedures. Guaranteed transformation results when used in procedures.</description>
     <graphicData>
-      <texPath>FIP-WestTek/Muties/Misc/WestTek_IsolatedFEVDosage</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>25</stackLimit>
     <statBases>
@@ -264,7 +264,7 @@ Your researchers can now begin work on high-order FEV stabilization.</completedL
       <MaxHitPoints>60</MaxHitPoints>
     </statBases>
     <ingestible>
-      <preferability>DesperateOnly</preferability>
+      <preferability>NeverForNutrition</preferability>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
       <drugCategory>Medical</drugCategory>
@@ -326,10 +326,11 @@ Your researchers can now begin work on high-order FEV stabilization.</completedL
       <Flammability>0.4</Flammability>
     </statBases>
     <ingestible>
-      <preferability>DesperateOnly</preferability>
+      <preferability>NeverForNutrition</preferability>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
       <drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
       <ingestCommandString>Inject mutagen</ingestCommandString>
       <ingestReportString>{0} injects a behemoth mutagen.</ingestReportString>
       <outcomeDoers>
