@@ -337,11 +337,11 @@
 						</operations>
 					</li>
 
-					<li Class="PatchOperationFindMod">
+					<li Class="PatchOperationFindMod" MayRequire="Rick.FCP.Plants">
 						<mods>
 							<li>Vanilla Plants Expanded</li>
 						</mods>
-						<match Class="PatchOperationSequence">
+						<match Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
 							<success>Always</success>
 							<operations>
 								<li Class="PatchOperationAdd">
