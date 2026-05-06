@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <!-- Royalty apparel retextured with Enclave equivalents when FCP-Enclave is present. -->
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_RobeRoyal"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_RobeRoyal"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_Coronet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Headgear/Troopers/FCP_Enclave_Trooper_Cap</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_Coronet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Headgear/Troopers/FCP_Enclave_Trooper_Cap</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_Crown"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Headgear/Officers/FCP_Enclave_Officer_Cap</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_Crown"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Headgear/Officers/FCP_Enclave_Officer_Cap</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_PsyfocusHelmet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Headgear/Scientists/FCP_Scientist_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_PsyfocusHelmet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Headgear/Scientists/FCP_Scientist_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_PsyfocusRobe"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_PsyfocusRobe"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarinePrestige"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarinePrestige"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarineHelmetPrestige"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarineHelmetPrestige"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorCataphract"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorCataphract"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorCataphractPrestige"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorHelmetCataphractPrestige"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorHelmetCataphractPrestige"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarineGrenadier"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="Apparel_ArmorMarineGrenadier"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+
+      <!-- VFE Empire and Deserters apparel already rethemed by Whitespring. -->
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_TechfriarCrown"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Headgear/Scientists/FCP_Scientist_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_TechfriarCrown"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Headgear/Scientists/FCP_Scientist_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_AbsolverHelmet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_AbsolverHelmet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryHelmet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryHelmet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Helmet</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFE_Apparel_StellicRobe"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Apparel/Officers_Coat/FCP_Enclave_Officer_Coat</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorAbsolver"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorAbsolver"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryCuirass"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.Enclave">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_JanissaryCuirass"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/Enclave_Armor/Enclave_Combat_Armor/FCP_Enclave_Combat_Armor</wornGraphicPath>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

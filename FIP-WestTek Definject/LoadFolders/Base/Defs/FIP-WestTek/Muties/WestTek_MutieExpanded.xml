@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>WestTek_TameBehemoth</defName>
+    <label>tame behemoth</label>
+    <description>A stabilized behemoth strain conditioned to obey West Tek handlers.</description>
+    <statBases>
+      <MoveSpeed>2.7</MoveSpeed>
+      <MarketValue>1800</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <Wildness>0.15</Wildness>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <animalType>Predator</animalType>
+      <body>Human</body>
+      <predator>true</predator>
+      <maxPreyBodySize>2.2</maxPreyBodySize>
+      <petness>1</petness>
+      <baseBodySize>5.2</baseBodySize>
+      <baseHungerRate>0.85</baseHungerRate>
+      <baseHealthScale>12</baseHealthScale>
+      <leatherDef>WestTek_Leather_FEVMutant</leatherDef>
+      <foodType>OmnivoreAnimal</foodType>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <lifeExpectancy>400</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.1</minAge>
+          <soundDeath>WestTek_SuperMutantDeath</soundDeath>
+          <soundCall>WestTek_SuperMutantFollow</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.9</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>WestTek_TameBehemoth</defName>
+    <label>tame behemoth</label>
+    <race>WestTek_TameBehemoth</race>
+    <combatPower>280</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-WestTek/Muties/Behemoth/WestTek_Behemoth</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>5.5</drawSize>
+          <shadowData>
+            <volume>(1, 1, 1)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <apparelMoney>
+      <min>-10</min>
+      <max>-10</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--  War Machine Base  -->
+	<ThingDef Name="RobCo_WarMachineBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>5000</MarketValue>
+			<MoveSpeed>2.5</MoveSpeed>
+			<ControlTakingTime>45</ControlTakingTime>
+			<BandwidthCost>8</BandwidthCost>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<PsychicSensitivity>0.80</PsychicSensitivity>
+			<MechEnergyLossPerHP>0.20</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<baseBodySize>2.5</baseBodySize>
+			<baseHealthScale>8.0</baseHealthScale>
+			<mechWeightClass>Heavy</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>RobCo_WarMachine_Wounded</soundWounded>
+					<soundDeath>RobCo_WarMachine_Death</soundDeath>
+					<soundCall>RobCo_WarMachine_Call</soundCall>
+					<soundAngry>RobCo_WarMachine_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>50</Steel>
+			<Plasteel>25</Plasteel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>fists</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+	<RecipeDef Name="RobCo_WarMachineBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<gestationCycles>20</gestationCycles>
+		<researchPrerequisite>RobCo_OS</researchPrerequisite>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>400</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>300</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RobCo_PlatinumChip</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_RobCo_WarMachine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>500</displayPriority>
+	</RecipeDef>
+	<!--  War Machine  -->
+	<ThingDef ParentName="RobCo_WarMachineBase">
+		<defName>RobCo_WarMachine</defName>
+		<label>War Machine</label>
+		<description>A massive autonomous combat platform combining heavy sentry bot firepower with an integrated mechanoid carrier system for deploying Liberator drones. The War Machine broadcasts a tactical coordination signal that enhances the combat effectiveness of nearby Liberator units. It is armed with a multi-burst pulse battery and reinforced war gauntlets for close-range engagement.</description>
+		<comps>
+			<li Class="CompProperties_MechCarrier">
+				<spawnPawnKind>RobCo_Liberator</spawnPawnKind>
+				<fixedIngredient>Steel</fixedIngredient>
+				<costPerPawn>40</costPerPawn>
+				<startingIngredientCount>600</startingIngredientCount>
+				<maxIngredientCount>600</maxIngredientCount>
+				<spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+				<spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+				<attachSpawnedEffecter>true</attachSpawnedEffecter>
+				<attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+			</li>
+			<li Class="FIP_RobCo.CompProperties_WarMachineLiberatorAura">
+				<radius>10</radius>
+				<refreshTicks>30</refreshTicks>
+				<targetThingDefName>RobCo_Liberator</targetThingDefName>
+				<hediffDef>RobCo_WarMachineLiberatorUplink</hediffDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_HugeRobotKind">
+		<defName>RobCo_WarMachine</defName>
+		<label>War Machine</label>
+		<pawnDesc>A massive autonomous combat platform of unknown origin, combining the chassis scale of a heavy sentry bot with a built-in mechanoid carrier system capable of deploying and directing a squad of Liberator drones. The War Machine functions as a mobile command hub — its Liberator Aura broadcasts a tactical coordination signal that enhances the combat performance of nearby Liberator units. Its own weapons are substantial: a multi-burst pulse battery for sustained fire and reinforced war gauntlets for close-quarters devastation. Whether this platform was ever part of a formal military program or represents post-war improvisation on a massive scale is unclear. Regardless, it is one of the most dangerous autonomous units likely to be encountered in the field.</pawnDesc>
+		<race>RobCo_WarMachine</race>
+		<combatPower>800</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>FIP-RobCo/Robots/WarMachine/WarMachine/WarMachine</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.8, 0.8)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_WarMachineMiniNukeLauncher</li>
+		</weaponTags>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_WarMachineBase_Recipe">
+		<defName>RobCo_WarMachine_Recipe</defName>
+		<label>restore War Machine</label>
+		<description>Restore a War Machine.</description>
+		<products>
+			<RobCo_WarMachine>1</RobCo_WarMachine>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_WarMachine</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
+</Defs>

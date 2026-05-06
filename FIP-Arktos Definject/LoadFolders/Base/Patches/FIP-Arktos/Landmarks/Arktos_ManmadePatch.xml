@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Update Manmade Landmarks-->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[defName="AncientRuins"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[defName="AncientRuins_Frozen"]/biomeWhitelist</xpath>
+        <value>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[@Name="AbandonedColonyMutatorBase"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_Crater</li>
+          <li>Arktos_Ruin</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[defName="Harbor"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[defName="Stockpile"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+        <xpath>/Defs/TileMutatorDef[@Name="AncientStructureMutBase"]/biomeWhitelist</xpath>
+        <value>
+          <li>Arktos_GlacialPlain</li>
+          <li>Arktos_Tundra</li>
+          <li>Arktos_Preserve</li>
+          <li>Arktos_Ceek</li>
+          <li>Arktos_CentralValley</li>
+          <li>Arktos_BrahminWoods</li>
+          <li>Arktos_Aqueduct</li>
+          <li>Arktos_Floodplains</li>
+          <li>Arktos_Mojave</li>
+          <li>Arktos_Canyon</li>
+          <li>Arktos_Marina</li>
+          <li>Arktos_Redwood</li>
+          <li>Arktos_Sequoia</li>
+          <li>Arktos_Divide</li>
+          <li>Arktos_Mesa</li>
+          <li>Arktos_Crater</li>
+          <li>Arktos_Ruin</li>
+          <li>Arktos_Wasteland</li>
+          <li>Arktos_Malpais</li>
+          <li>Arktos_CranberryBog</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

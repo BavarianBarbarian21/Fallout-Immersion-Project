@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rick.FCP.Animals</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>FCP_Animal_Brahmin</li>
+        </allowedPackAnimals>
+      </value>
+    </match>
+  </Operation>
+</Patch>

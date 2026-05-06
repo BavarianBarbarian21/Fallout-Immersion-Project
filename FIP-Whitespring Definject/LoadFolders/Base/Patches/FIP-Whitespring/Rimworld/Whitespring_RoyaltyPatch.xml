@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><Patch><!-- Replace Royalty-specific throne/throneroom references with presidential equivalents --><Operation Class="PatchOperationReplace"><xpath>Defs/RitualBehaviorDef[defName="ThroneSpeech"]/letterTitle</xpath><value><letterTitle>Presidential address</letterTitle></value></Operation><!-- Thought stages for reigned in throneroom -> presided in presidential suite --><!-- Replace assignable description and throne-specific text, does not work because it's abstract 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Throne"]/comps/li[Class="CompProperties_AssignableToPawn"]/noAssignablePawnsDesc</xpath>
+        <value><noAssignablePawnsDesc>Presidential chair ownership requires a person with a presidential title.</noAssignablePawnsDesc></value>
+    </Operation>--><!-- Replace Precept labels/descriptions referencing grand throne --><!-- Replace Precept labels/descriptions referencing throne speech --><!-- Thought labels/descriptions for bestowing ceremony -> inauguration --></Patch>

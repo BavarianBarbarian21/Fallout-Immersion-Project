@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_SunnyDescriptorSharedHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>descriptor->sunlit</li>
+        <li>descriptor->golden</li>
+        <li>descriptor->bright</li>
+        <li>descriptor->clear-sky</li>
+        <li>descriptor->warmwind</li>
+        <li>descriptor->sea-breezed</li>
+        <li>descriptor->sun-washed</li>
+        <li>descriptor->glittering</li>
+        <li>descriptor->blooming</li>
+        <li>descriptor->honey-lit</li>
+        <li>descriptor->radiant</li>
+        <li>descriptor->summer-bright</li>
+        <li>descriptor->open-sky</li>
+        <li>descriptor->dawnlit</li>
+        <li>descriptor->blue-sky</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_FeatureDescriptorHelper</defName>
+    <include>
+      <li>HHTools_Arktos_SunnyDescriptorSharedHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>descriptor->sunny</li>
+        <li>descriptor->coast-bright</li>
+        <li>descriptor->chaparral-sweet</li>
+        <li>descriptor->citrus-gold</li>
+        <li>descriptor->valley-green</li>
+        <li>descriptor->sunset-warm</li>
+        <li>descriptor->salt-air</li>
+        <li>descriptor->poppy-bright</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_LandmarkDescriptorHelper</defName>
+    <include>
+      <li>HHTools_Arktos_SunnyDescriptorSharedHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>descriptor->landmark-bright</li>
+        <li>descriptor->sun-gold</li>
+        <li>descriptor->clearwater</li>
+        <li>descriptor->ocean-breezed</li>
+        <li>descriptor->harbor-bright</li>
+        <li>descriptor->gardenlit</li>
+        <li>descriptor->orchard-sweet</li>
+        <li>descriptor->spring-fed</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_WorldFeatureNamerCommon</defName>
+    <include>
+      <li>HHTools_Arktos_FeatureDescriptorHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[regional_root] [terrain_word]</li>
+        <li>r_name(p=0.08)->the [descriptor] [terrain_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_LandmarkNamerCommon</defName>
+    <include>
+      <li>HHTools_Arktos_LandmarkDescriptorHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[regional_root] [terrain_word]</li>
+        <li>r_name(p=0.08)->the [descriptor] [terrain_word]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanFaunaStemHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>urban_fauna_stem->Condor</li>
+        <li>urban_fauna_stem->Coyote</li>
+        <li>urban_fauna_stem->Gull</li>
+        <li>urban_fauna_stem->Heron</li>
+        <li>urban_fauna_stem->Pelican</li>
+        <li>urban_fauna_stem->Quail</li>
+        <li>urban_fauna_stem->Raven</li>
+        <li>urban_fauna_stem->Roadrunner</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanFeatureStemHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>urban_feature_stem->Arroyo</li>
+        <li>urban_feature_stem->Beacon</li>
+        <li>urban_feature_stem->Corona</li>
+        <li>urban_feature_stem->Del</li>
+        <li>urban_feature_stem->Golden</li>
+        <li>urban_feature_stem->Luna</li>
+        <li>urban_feature_stem->Mira</li>
+        <li>urban_feature_stem->Nova</li>
+        <li>urban_feature_stem->Oro</li>
+        <li>urban_feature_stem->Rancho</li>
+        <li>urban_feature_stem->Sol</li>
+        <li>urban_feature_stem->Tide</li>
+        <li>urban_feature_stem->Val</li>
+        <li>urban_feature_stem->Vent</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanCitySuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>city_suffix->City</li>
+        <li>city_suffix->Heights</li>
+        <li>city_suffix->Junction</li>
+        <li>city_suffix->Point</li>
+        <li>city_suffix->Springs</li>
+        <li>city_suffix->Station</li>
+        <li>city_suffix->Town</li>
+        <li>city_suffix->Valley</li>
+        <li>city_suffix->Vista</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanEnglishPrefixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>english_city_prefix->Fort</li>
+        <li>english_city_prefix->Lake</li>
+        <li>english_city_prefix->New</li>
+        <li>english_city_prefix->Port</li>
+        <li>english_city_prefix->South</li>
+        <li>english_city_prefix->Union</li>
+        <li>english_city_prefix->West</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanEnglishPlaceWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>english_place_word->Bay</li>
+        <li>english_place_word->Bluffs</li>
+        <li>english_place_word->Creek</li>
+        <li>english_place_word->Grove</li>
+        <li>english_place_word->Hollow</li>
+        <li>english_place_word->Point</li>
+        <li>english_place_word->Springs</li>
+        <li>english_place_word->Vale</li>
+        <li>english_place_word->View</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanEnglishSaintHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>english_saint->Anne</li>
+        <li>english_saint->Catherine</li>
+        <li>english_saint->Clare</li>
+        <li>english_saint->George</li>
+        <li>english_saint->Helen</li>
+        <li>english_saint->James</li>
+        <li>english_saint->John</li>
+        <li>english_saint->Joseph</li>
+        <li>english_saint->Luke</li>
+        <li>english_saint->Mary</li>
+        <li>english_saint->Peter</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishFemininePluralHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_feminine_plural->Brisas</li>
+        <li>spanish_feminine_plural->Flores</li>
+        <li>spanish_feminine_plural->Palmas</li>
+        <li>spanish_feminine_plural->Rosas</li>
+        <li>spanish_feminine_plural->Torres</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishMasculinePluralHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_masculine_plural->Alisos</li>
+        <li>spanish_masculine_plural->Olivos</li>
+        <li>spanish_masculine_plural->Robles</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishFemaleSaintHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_female_saint->Clara</li>
+        <li>spanish_female_saint->Elena</li>
+        <li>spanish_female_saint->Ines</li>
+        <li>spanish_female_saint->Isabel</li>
+        <li>spanish_female_saint->Lucia</li>
+        <li>spanish_female_saint->Marta</li>
+        <li>spanish_female_saint->Rosa</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishMaleSaintHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_male_saint->Diego</li>
+        <li>spanish_male_saint->Felipe</li>
+        <li>spanish_male_saint->Gabriel</li>
+        <li>spanish_male_saint->Joaquin</li>
+        <li>spanish_male_saint->Jose</li>
+        <li>spanish_male_saint->Juan</li>
+        <li>spanish_male_saint->Miguel</li>
+        <li>spanish_male_saint->Rafael</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishRootHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_root->Arroyo</li>
+        <li>spanish_root->Cielo</li>
+        <li>spanish_root->Loma</li>
+        <li>spanish_root->Monte</li>
+        <li>spanish_root->Oro</li>
+        <li>spanish_root->Prado</li>
+        <li>spanish_root->Sierra</li>
+        <li>spanish_root->Valle</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishConnectorHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_connector->de la</li>
+        <li>spanish_connector->del</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishTailHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_tail->Bahia</li>
+        <li>spanish_tail->Brisa</li>
+        <li>spanish_tail->Mar</li>
+        <li>spanish_tail->Mesa</li>
+        <li>spanish_tail->Oro</li>
+        <li>spanish_tail->Sierra</li>
+        <li>spanish_tail->Sol</li>
+        <li>spanish_tail->Vista</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanSpanishDescriptorHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>spanish_descriptor->Alta</li>
+        <li>spanish_descriptor->Azul</li>
+        <li>spanish_descriptor->Blanca</li>
+        <li>spanish_descriptor->Dorada</li>
+        <li>spanish_descriptor->Grande</li>
+        <li>spanish_descriptor->Roja</li>
+        <li>spanish_descriptor->Verde</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanCityHelper</defName>
+    <include>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_FlowerRootHelper</li>
+      <li>HHTools_Arktos_UrbanFaunaStemHelper</li>
+      <li>HHTools_Arktos_UrbanFeatureStemHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_UrbanCitySuffixHelper</li>
+      <li>HHTools_Arktos_UrbanEnglishPrefixHelper</li>
+      <li>HHTools_Arktos_UrbanEnglishPlaceWordHelper</li>
+      <li>HHTools_Arktos_UrbanEnglishSaintHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishFemininePluralHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishMasculinePluralHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishFemaleSaintHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishMaleSaintHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishRootHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishConnectorHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishTailHelper</li>
+      <li>HHTools_Arktos_UrbanSpanishDescriptorHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>city_name(p=0.48)->[english_city_name]</li>
+        <li>city_name(p=0.44)->[spanish_city_name]</li>
+        <li>city_name(p=0.08)->[california_city_name]</li>
+        <li>english_city_name(p=0.34)->[english_city_core] [city_suffix]</li>
+        <li>english_city_name(p=0.30)->[english_city_prefix] [english_city_core]</li>
+        <li>english_city_name(p=0.18)->[english_city_prefix] [english_city_core] [english_place_word]</li>
+        <li>english_city_name(p=0.14)->[english_city_core] [english_place_word]</li>
+        <li>english_city_name(p=0.04)->Saint [english_saint]</li>
+        <li>english_city_core->[tree_root]</li>
+        <li>english_city_core->[flower_root]</li>
+        <li>english_city_core->[urban_feature_stem]</li>
+        <li>english_city_core->[urban_fauna_stem]</li>
+        <li>spanish_city_name(p=0.34)->Las [spanish_feminine_plural]</li>
+        <li>spanish_city_name(p=0.34)->Los [spanish_masculine_plural]</li>
+        <li>spanish_city_name(p=0.08)->Santa [spanish_female_saint]</li>
+        <li>spanish_city_name(p=0.08)->San [spanish_male_saint]</li>
+        <li>spanish_city_name(p=0.10)->[spanish_root] [spanish_descriptor]</li>
+        <li>spanish_city_name(p=0.06)->[spanish_root] [spanish_connector] [spanish_tail]</li>
+        <li>california_city_name->[place_fragment] [city_suffix]</li>
+        <li>california_city_name->[place_fragment] [english_place_word]</li>
+        <li>urban_region_word->Basin</li>
+        <li>urban_region_word->County</li>
+        <li>urban_region_word->Heights</li>
+        <li>urban_region_word->Metro</li>
+        <li>urban_region_word->Valley</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanDistrictPrefixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>district_prefix->Old</li>
+        <li>district_prefix->New</li>
+        <li>district_prefix->North</li>
+        <li>district_prefix->South</li>
+        <li>district_prefix->East</li>
+        <li>district_prefix->West</li>
+        <li>district_prefix->Upper</li>
+        <li>district_prefix->Lower</li>
+        <li>district_prefix->Outer</li>
+        <li>district_prefix->Inner</li>
+        <li>district_prefix->Little</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_MesaColorEnglishHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>mesa_color_en->Black</li>
+        <li>mesa_color_en->Blue</li>
+        <li>mesa_color_en->Gold</li>
+        <li>mesa_color_en->Red</li>
+        <li>mesa_color_en->Silver</li>
+        <li>mesa_color_en->White</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_MesaColorSpanishHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>mesa_color_es->Azul</li>
+        <li>mesa_color_es->Blanca</li>
+        <li>mesa_color_es->Dorada</li>
+        <li>mesa_color_es->Negra</li>
+        <li>mesa_color_es->Roja</li>
+        <li>mesa_color_es->Verde</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_MesaRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_MesaColorEnglishHelper</li>
+      <li>HHTools_Arktos_MesaColorSpanishHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>mesa_root->[mesa_color_en] Mesa</li>
+        <li>mesa_root->Mesa [mesa_color_es]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_TownPrefixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>town_prefix->German</li>
+        <li>town_prefix->Monty</li>
+        <li>town_prefix->Mission</li>
+        <li>town_prefix->Mojave</li>
+        <li>town_prefix->Prospect</li>
+        <li>town_prefix->Rancho</li>
+        <li>town_prefix->Sierra</li>
+        <li>town_prefix->Silver</li>
+        <li>town_prefix->Sunset</li>
+        <li>town_prefix->Willow</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_TownCompactSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>town_compact_suffix->town</li>
+        <li>town_compact_suffix->crest</li>
+        <li>town_compact_suffix->view</li>
+        <li>town_compact_suffix->gate</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_TownOpenSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>town_open_suffix->Crossing</li>
+        <li>town_open_suffix->Heights</li>
+        <li>town_open_suffix->Hollow</li>
+        <li>town_open_suffix->Junction</li>
+        <li>town_open_suffix->Springs</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_BrushPrefixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>brush_prefix->Dust</li>
+        <li>brush_prefix->Dry</li>
+        <li>brush_prefix->Sage</li>
+        <li>brush_prefix->Salt</li>
+        <li>brush_prefix->Sand</li>
+        <li>brush_prefix->Silver</li>
+        <li>brush_prefix->Sun</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_BrushRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_BrushPrefixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>brush_root->[brush_prefix]brush</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanDistrictRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_FlowerRootHelper</li>
+      <li>HHTools_Arktos_AnimalRootHelper</li>
+      <li>HHTools_Arktos_UrbanFeatureStemHelper</li>
+      <li>HHTools_Arktos_TownPrefixHelper</li>
+      <li>HHTools_Arktos_TownCompactSuffixHelper</li>
+      <li>HHTools_Arktos_TownOpenSuffixHelper</li>
+      <li>HHTools_Arktos_MesaRootHelper</li>
+      <li>HHTools_Arktos_BrushRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>district_root->[tree_root]</li>
+        <li>district_root->[flower_root]</li>
+        <li>district_root->[animal_root]</li>
+        <li>district_root->[urban_feature_stem]</li>
+        <li>district_root->[mesa_root]</li>
+        <li>district_root->[brush_root]</li>
+        <li>district_root->[town_prefix][town_compact_suffix]</li>
+        <li>district_root->[town_prefix] [town_open_suffix]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanDistrictTypeHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>district_type->Heights</li>
+        <li>district_type->Terrace</li>
+        <li>district_type->Gardens</li>
+        <li>district_type->Park</li>
+        <li>district_type->Estates</li>
+        <li>district_type->Junction</li>
+        <li>district_type->Row</li>
+        <li>district_type->Commons</li>
+        <li>district_type->Hollow</li>
+        <li>district_type->Market</li>
+        <li>district_type->Barrio</li>
+        <li>district_type->Chinatown</li>
+        <li>district_type->Quarter</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_StreetRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_FlowerRootHelper</li>
+      <li>HHTools_Arktos_UrbanFeatureStemHelper</li>
+      <li>HHTools_Arktos_MesaRootHelper</li>
+      <li>HHTools_Arktos_BrushRootHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>street_root->[tree_root]</li>
+        <li>street_root->[flower_root]</li>
+        <li>street_root->[urban_feature_stem]</li>
+        <li>street_root->[mesa_root]</li>
+        <li>street_root->[brush_root]</li>
+        <li>street_root->Fremont</li>
+        <li>street_root->Lantern</li>
+        <li>street_root->Mercury</li>
+        <li>street_root->Mission</li>
+        <li>street_root->Mojave</li>
+        <li>street_root->Prospect</li>
+        <li>street_root->Sundown</li>
+        <li>street_root->Tideview</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_StreetTypeHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>street_type->Street</li>
+        <li>street_type->Avenue</li>
+        <li>street_type->Road</li>
+        <li>street_type->Drive</li>
+        <li>street_type->Boulevard</li>
+        <li>street_type->Lane</li>
+        <li>street_type->Way</li>
+        <li>street_type->Parkway</li>
+        <li>street_type->Terrace</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_UrbanNeighborhoodHelper</defName>
+    <include>
+      <li>HHTools_Arktos_UrbanDistrictPrefixHelper</li>
+      <li>HHTools_Arktos_UrbanDistrictRootHelper</li>
+      <li>HHTools_Arktos_UrbanDistrictTypeHelper</li>
+      <li>HHTools_Arktos_StreetRootHelper</li>
+      <li>HHTools_Arktos_StreetTypeHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>suburb_name->[district_root]</li>
+        <li>suburb_name->[district_root] [district_type]</li>
+        <li>suburb_name->[district_prefix] [district_root]</li>
+        <li>suburb_name->[district_prefix] [district_root] [district_type]</li>
+        <li>street_name->[street_root] [street_type]</li>
+        <li>street_name->[district_prefix] [street_root] [street_type]</li>
+        <li>street_name->[district_root] [street_type]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_FortRootHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>fort_root->Abercrombie</li>
+        <li>fort_root->Bowie</li>
+        <li>fort_root->Canby</li>
+        <li>fort_root->Defiance</li>
+        <li>fort_root->Egbert</li>
+        <li>fort_root->Fremont</li>
+        <li>fort_root->Greely</li>
+        <li>fort_root->Huachuca</li>
+        <li>fort_root->Independence</li>
+        <li>fort_root->Jackson</li>
+        <li>fort_root->Kearny</li>
+        <li>fort_root->Larned</li>
+        <li>fort_root->Mojave</li>
+        <li>fort_root->Niagara</li>
+        <li>fort_root->Ontario</li>
+        <li>fort_root->Pulaski</li>
+        <li>fort_root->Queens</li>
+        <li>fort_root->Reno</li>
+        <li>fort_root->Sumter</li>
+        <li>fort_root->Totten</li>
+        <li>fort_root->Union</li>
+        <li>fort_root->Vancouver</li>
+        <li>fort_root->Wainwright</li>
+        <li>fort_root->Xavier</li>
+        <li>fort_root->Yamhill</li>
+        <li>fort_root->Zarah</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_GreekLetterHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>greek_letter->Alpha</li>
+        <li>greek_letter->Beta</li>
+        <li>greek_letter->Gamma</li>
+        <li>greek_letter->Delta</li>
+        <li>greek_letter->Epsilon</li>
+        <li>greek_letter->Zeta</li>
+        <li>greek_letter->Eta</li>
+        <li>greek_letter->Theta</li>
+        <li>greek_letter->Iota</li>
+        <li>greek_letter->Kappa</li>
+        <li>greek_letter->Lambda</li>
+        <li>greek_letter->Mu</li>
+        <li>greek_letter->Nu</li>
+        <li>greek_letter->Xi</li>
+        <li>greek_letter->Omicron</li>
+        <li>greek_letter->Pi</li>
+        <li>greek_letter->Rho</li>
+        <li>greek_letter->Sigma</li>
+        <li>greek_letter->Tau</li>
+        <li>greek_letter->Upsilon</li>
+        <li>greek_letter->Phi</li>
+        <li>greek_letter->Chi</li>
+        <li>greek_letter->Psi</li>
+        <li>greek_letter->Omega</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_CompanyHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>company_name->Abraxodyne Chemical</li>
+        <li>company_name->ArcJet Systems</li>
+        <li>company_name->Atomic Mining Services</li>
+        <li>company_name->BlamCo Foodstuffs</li>
+        <li>company_name->Chryslus Motors</li>
+        <li>company_name->Dunwich Borers</li>
+        <li>company_name->Future-Tec</li>
+        <li>company_name->Garrahan Mining</li>
+        <li>company_name->GDA Fusion</li>
+        <li>company_name->General Atomics</li>
+        <li>company_name->HalluciGen</li>
+        <li>company_name->H&amp;H Tools</li>
+        <li>company_name->Hornwright Industrial</li>
+        <li>company_name->Hubris Publishing</li>
+        <li>company_name->LightLife</li>
+        <li>company_name->Mass Fusion</li>
+        <li>company_name->Med-Tek</li>
+        <li>company_name->National Electric</li>
+        <li>company_name->Nuka-Cola</li>
+        <li>company_name->Pep Gas</li>
+        <li>company_name->Petro-Chico</li>
+        <li>company_name->Poseidon Energy</li>
+        <li>company_name->Pulowski</li>
+        <li>company_name->Radiation King</li>
+        <li>company_name->REPCONN</li>
+        <li>company_name->Red Rocket</li>
+        <li>company_name->RobCo</li>
+        <li>company_name->Schoelt</li>
+        <li>company_name->Snap-Off</li>
+        <li>company_name->Stenley</li>
+        <li>company_name->Sunset Sarsaparilla</li>
+        <li>company_name->Vault-Tec</li>
+        <li>company_name->Versicorps</li>
+        <li>company_name->Wattz Electronics</li>
+        <li>company_name->West Tek</li>
+        <li>company_name->Wilson Automatoys</li>
+        <li>company_name->Yuma Energy</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_FuelCompanyHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>fuel_company->Pep Gas</li>
+        <li>fuel_company->Petro-Chico</li>
+        <li>fuel_company->Poseidon</li>
+        <li>fuel_company->Red Rocket</li>
+        <li>fuel_company->Solitare</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_WarehouseWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>warehouse_word->warehouse</li>
+        <li>warehouse_word->storage depot</li>
+        <li>warehouse_word->logistics center</li>
+        <li>warehouse_word->freight yard</li>
+        <li>warehouse_word->distribution hub</li>
+        <li>warehouse_word->stock depot</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_RetailBrandHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>store_brand->Super-Duper Mart</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_RefineryWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>refinery_word->processing plant</li>
+        <li>refinery_word->refinery</li>
+        <li>refinery_word->fuel depot</li>
+        <li>refinery_word->fuel works</li>
+        <li>refinery_word->distillery</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ConstructionSiteWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>construction_site_word->build site</li>
+        <li>construction_site_word->construction yard</li>
+        <li>construction_site_word->excavation site</li>
+        <li>construction_site_word->works site</li>
+        <li>construction_site_word->worksite</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ConstructionCampWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>construction_camp_word->contractor camp</li>
+        <li>construction_camp_word->engineer camp</li>
+        <li>construction_camp_word->site camp</li>
+        <li>construction_camp_word->staging camp</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ConstructionProjectWordHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>construction_project_word->civil works</li>
+        <li>construction_project_word->grade works</li>
+        <li>construction_project_word->public works</li>
+        <li>construction_project_word->site works</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ConstructionSiteNumberHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>construction_site_number->1</li>
+        <li>construction_site_number->2</li>
+        <li>construction_site_number->3</li>
+        <li>construction_site_number->4</li>
+        <li>construction_site_number->5</li>
+        <li>construction_site_number->7</li>
+        <li>construction_site_number->9</li>
+        <li>construction_site_number->12</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_NaturalPrefixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>natural_prefix->East</li>
+        <li>natural_prefix->North</li>
+        <li>natural_prefix->Central</li>
+        <li>natural_prefix->South</li>
+        <li>natural_prefix->West</li>
+        <li>natural_prefix->Upper</li>
+        <li>natural_prefix->Lower</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_CaliforniaPlaceFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>place_fragment->Amador</li>
+        <li>place_fragment->Anacapa</li>
+        <li>place_fragment->Calaveras</li>
+        <li>place_fragment->Chalone</li>
+        <li>place_fragment->Colusa</li>
+        <li>place_fragment->Del Norte</li>
+        <li>place_fragment->Gabilan</li>
+        <li>place_fragment->Inyo</li>
+        <li>place_fragment->Kern</li>
+        <li>place_fragment->Lassen</li>
+        <li>place_fragment->Mariposa</li>
+        <li>place_fragment->Mendocino</li>
+        <li>place_fragment->Modoc</li>
+        <li>place_fragment->Mono</li>
+        <li>place_fragment->Panamint</li>
+        <li>place_fragment->Saline</li>
+        <li>place_fragment->Shasta</li>
+        <li>place_fragment->Siskiyou</li>
+        <li>place_fragment->Sonoma</li>
+        <li>place_fragment->Tehama</li>
+        <li>place_fragment->Trinity</li>
+        <li>place_fragment->Tulare</li>
+        <li>place_fragment->Tuolumne</li>
+        <li>place_fragment->Ventura</li>
+        <li>place_fragment->Yolo</li>
+        <li>place_fragment->Yuba</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_TreeRootHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>tree_root->Alder</li>
+        <li>tree_root->Bay</li>
+        <li>tree_root->Buckeye</li>
+        <li>tree_root->Cedar</li>
+        <li>tree_root->Cottonwood</li>
+        <li>tree_root->Cypress</li>
+        <li>tree_root->Juniper</li>
+        <li>tree_root->Joshua</li>
+        <li>tree_root->Madrone</li>
+        <li>tree_root->Mesquite</li>
+        <li>tree_root->Oak</li>
+        <li>tree_root->Pinyon</li>
+        <li>tree_root->Redwood</li>
+        <li>tree_root->Sequoia</li>
+        <li>tree_root->Sycamore</li>
+        <li>tree_root->Tule</li>
+        <li>tree_root->Willow</li>
+        <li>tree_root->Yucca</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_FlowerRootHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>flower_root->Aster</li>
+        <li>flower_root->Buckwheat</li>
+        <li>flower_root->Lupine</li>
+        <li>flower_root->Mariposa</li>
+        <li>flower_root->Poppy</li>
+        <li>flower_root->Primrose</li>
+        <li>flower_root->Sage</li>
+        <li>flower_root->Sundrop</li>
+        <li>flower_root->Verbena</li>
+        <li>flower_root->Yarrow</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_AnimalRootHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>animal_root->Badger</li>
+        <li>animal_root->Bighorn</li>
+        <li>animal_root->Bobcat</li>
+        <li>animal_root->Burro</li>
+        <li>animal_root->Condor</li>
+        <li>animal_root->Coyote</li>
+        <li>animal_root->Desert Tortoise</li>
+        <li>animal_root->Elk</li>
+        <li>animal_root->Fox</li>
+        <li>animal_root->Gull</li>
+        <li>animal_root->Heron</li>
+        <li>animal_root->Jackrabbit</li>
+        <li>animal_root->Kit Fox</li>
+        <li>animal_root->Mountain Lion</li>
+        <li>animal_root->Mule Deer</li>
+        <li>animal_root->Pelican</li>
+        <li>animal_root->Pronghorn</li>
+        <li>animal_root->Quail</li>
+        <li>animal_root->Rattlesnake</li>
+        <li>animal_root->Raven</li>
+        <li>animal_root->Roadrunner</li>
+        <li>animal_root->Vulture</li>
+        <li>animal_root->Wren</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_HighlandFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>highland_fragment->Granite</li>
+        <li>highland_fragment->Iron</li>
+        <li>highland_fragment->Needle</li>
+        <li>highland_fragment->Redrock</li>
+        <li>highland_fragment->Shale</li>
+        <li>highland_fragment->Sierra</li>
+        <li>highland_fragment->Stone</li>
+        <li>highland_fragment->Timber</li>
+        <li>highland_fragment->Crown</li>
+        <li>highland_fragment->Summit</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_CoastalFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>coastal_fragment->Abalone</li>
+        <li>coastal_fragment->Anacapa</li>
+        <li>coastal_fragment->Breaker</li>
+        <li>coastal_fragment->Channel</li>
+        <li>coastal_fragment->Cormorant</li>
+        <li>coastal_fragment->Drift</li>
+        <li>coastal_fragment->Gaviota</li>
+        <li>coastal_fragment->Gull</li>
+        <li>coastal_fragment->Kelp</li>
+        <li>coastal_fragment->Pelican</li>
+        <li>coastal_fragment->Saltwind</li>
+        <li>coastal_fragment->Shoal</li>
+        <li>coastal_fragment->Tide</li>
+        <li>coastal_fragment->Weststrand</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_WaterFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>water_fragment->Blueglass</li>
+        <li>water_fragment->Clear</li>
+        <li>water_fragment->Kings</li>
+        <li>water_fragment->Mariposa</li>
+        <li>water_fragment->Mirror</li>
+        <li>water_fragment->Reed</li>
+        <li>water_fragment->Rush</li>
+        <li>water_fragment->Saline</li>
+        <li>water_fragment->Silver</li>
+        <li>water_fragment->Still</li>
+        <li>water_fragment->Tule</li>
+        <li>water_fragment->Tuolumne</li>
+        <li>water_fragment->Willow</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_HazardFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>hazard_fragment->Ash</li>
+        <li>hazard_fragment->Blackglass</li>
+        <li>hazard_fragment->Blast</li>
+        <li>hazard_fragment->Brim</li>
+        <li>hazard_fragment->Burn</li>
+        <li>hazard_fragment->Chem</li>
+        <li>hazard_fragment->Cinder</li>
+        <li>hazard_fragment->Fallout</li>
+        <li>hazard_fragment->Furnace</li>
+        <li>hazard_fragment->Glow</li>
+        <li>hazard_fragment->Ground Zero</li>
+        <li>hazard_fragment->Haze</li>
+        <li>hazard_fragment->Rad</li>
+        <li>hazard_fragment->Shatter</li>
+        <li>hazard_fragment->Spill</li>
+        <li>hazard_fragment->Static</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_SettlementFragmentHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>settlement_fragment->Bitterfield</li>
+        <li>settlement_fragment->Drift</li>
+        <li>settlement_fragment->Dry Harbor</li>
+        <li>settlement_fragment->Dust</li>
+        <li>settlement_fragment->Iron</li>
+        <li>settlement_fragment->Lantern</li>
+        <li>settlement_fragment->Orchard</li>
+        <li>settlement_fragment->Prospect</li>
+        <li>settlement_fragment->Red Hollow</li>
+        <li>settlement_fragment->Rusted Orchard</li>
+        <li>settlement_fragment->Sage</li>
+        <li>settlement_fragment->Stillfire</li>
+        <li>settlement_fragment->Sunrest</li>
+        <li>settlement_fragment->Westgate</li>
+        <li>settlement_fragment->Willow</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_PreserveSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>preserve_suffix->Grove</li>
+        <li>preserve_suffix->Preserve</li>
+        <li>preserve_suffix->Run</li>
+        <li>preserve_suffix->Sanctuary</li>
+        <li>preserve_suffix->Reserve</li>
+        <li>preserve_suffix->Wilds</li>
+        <li>preserve_suffix->Canopy</li>
+        <li>preserve_suffix->Thicket</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_MountainSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>mountain_suffix->Ridge</li>
+        <li>mountain_suffix->Heights</li>
+        <li>mountain_suffix->Crown</li>
+        <li>mountain_suffix->Peak</li>
+        <li>mountain_suffix->Range</li>
+        <li>mountain_suffix->Divide</li>
+        <li>mountain_suffix->Timberline</li>
+        <li>mountain_suffix->Watch</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_DesertSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>desert_suffix->Wash</li>
+        <li>desert_suffix->Draw</li>
+        <li>desert_suffix->Mesa</li>
+        <li>desert_suffix->Flats</li>
+        <li>desert_suffix->Arroyo</li>
+        <li>desert_suffix->Barrens</li>
+        <li>desert_suffix->Dunes</li>
+        <li>desert_suffix->Reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ArcticSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>arctic_suffix->Reach</li>
+        <li>arctic_suffix->Expanse</li>
+        <li>arctic_suffix->Basin</li>
+        <li>arctic_suffix->Field</li>
+        <li>arctic_suffix->Crown</li>
+        <li>arctic_suffix->Divide</li>
+        <li>arctic_suffix->Wash</li>
+        <li>arctic_suffix->Fall</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_CoastalSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>coastal_suffix->Point</li>
+        <li>coastal_suffix->Reach</li>
+        <li>coastal_suffix->Strand</li>
+        <li>coastal_suffix->Shoal</li>
+        <li>coastal_suffix->Cove</li>
+        <li>coastal_suffix->Head</li>
+        <li>coastal_suffix->Bight</li>
+        <li>coastal_suffix->Inlet</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_WaterSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>water_suffix->Basin</li>
+        <li>water_suffix->Sink</li>
+        <li>water_suffix->Slough</li>
+        <li>water_suffix->Mere</li>
+        <li>water_suffix->Pool</li>
+        <li>water_suffix->Backwater</li>
+        <li>water_suffix->Reach</li>
+        <li>water_suffix->Springs</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_HazardSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>hazard_suffix->Scar</li>
+        <li>hazard_suffix->Breach</li>
+        <li>hazard_suffix->Burn</li>
+        <li>hazard_suffix->Reach</li>
+        <li>hazard_suffix->Glass</li>
+        <li>hazard_suffix->Pit</li>
+        <li>hazard_suffix->Waste</li>
+        <li>hazard_suffix->Wash</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_SettlementSuffixHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>settlement_suffix->Hold</li>
+        <li>settlement_suffix->Gate</li>
+        <li>settlement_suffix->Crossing</li>
+        <li>settlement_suffix->Camp</li>
+        <li>settlement_suffix->Orchard</li>
+        <li>settlement_suffix->Station</li>
+        <li>settlement_suffix->Harbor</li>
+        <li>settlement_suffix->Yard</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_RadioBrandHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>station_brand(p=3)->Galaxy News Radio</li>
+        <li>station_brand(p=3)->Mojave Music Radio</li>
+        <li>station_brand(p=3)->Pirate Radio</li>
+        <li>station_brand->Atomic News Radio</li>
+        <li>station_brand->Republic Radio Network</li>
+        <li>station_brand->Sunset Airwaves</li>
+        <li>station_brand->Vault-Tec Public Radio</li>
+        <li>station_brand->Silver Signal Radio</li>
+        <li>station_brand->Poseidon Weather Radio</li>
+        <li>station_brand->Sierra State Radio</li>
+        <li>station_brand->REPCONN News Radio</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_RadioNetworkHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>station_network->California Republic Radio</li>
+        <li>station_network->Desert Voice Network</li>
+        <li>station_network->Golden State Broadcasting</li>
+        <li>station_network->Mojave Civic Radio</li>
+        <li>station_network->Pacific Breeze Network</li>
+        <li>station_network->Sierra Signal Network</li>
+        <li>station_network->Sunset State Radio</li>
+        <li>station_network->Vault-Tec Civil Defense Radio</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_RadioFormatHelper</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>station_format->Radio</li>
+        <li>station_format->News Radio</li>
+        <li>station_format->Public Radio</li>
+        <li>station_format->Music Radio</li>
+        <li>station_format->Broadcasting</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ValleyRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_WaterFragmentHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[place_fragment]</li>
+        <li>regional_root->[tree_root] Bend</li>
+        <li>regional_root->[water_fragment] Bend</li>
+        <li>regional_root->[natural_prefix] [place_fragment]</li>
+        <li>regional_root->[tree_root] Crossing</li>
+        <li>regional_root->[place_fragment] Crossing</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_PreserveRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_FlowerRootHelper</li>
+      <li>HHTools_Arktos_AnimalRootHelper</li>
+      <li>HHTools_Arktos_PreserveSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[tree_root] [preserve_suffix]</li>
+        <li>regional_root->[flower_root] [preserve_suffix]</li>
+        <li>regional_root->[animal_root] [preserve_suffix]</li>
+        <li>regional_root->[natural_prefix] [tree_root]</li>
+        <li>regional_root->[place_fragment] [preserve_suffix]</li>
+        <li>regional_root->[natural_prefix] [place_fragment]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_MountainRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_AnimalRootHelper</li>
+      <li>HHTools_Arktos_HighlandFragmentHelper</li>
+      <li>HHTools_Arktos_MountainSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[tree_root] [mountain_suffix]</li>
+        <li>regional_root->[animal_root] [mountain_suffix]</li>
+        <li>regional_root->[place_fragment] [mountain_suffix]</li>
+        <li>regional_root->[highland_fragment] [mountain_suffix]</li>
+        <li>regional_root->[natural_prefix] [place_fragment]</li>
+        <li>regional_root->[natural_prefix] [tree_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_DesertRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_AnimalRootHelper</li>
+      <li>HHTools_Arktos_HighlandFragmentHelper</li>
+      <li>HHTools_Arktos_DesertSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[place_fragment] [desert_suffix]</li>
+        <li>regional_root->[tree_root] [desert_suffix]</li>
+        <li>regional_root->[animal_root] [desert_suffix]</li>
+        <li>regional_root->[highland_fragment] [desert_suffix]</li>
+        <li>regional_root->[natural_prefix] [place_fragment]</li>
+        <li>regional_root->[natural_prefix] [tree_root]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_ArcticRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_HighlandFragmentHelper</li>
+      <li>HHTools_Arktos_ArcticSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->Bleak [arctic_suffix]</li>
+        <li>regional_root->Coldlight [arctic_suffix]</li>
+        <li>regional_root->Frost [arctic_suffix]</li>
+        <li>regional_root->Icewind [arctic_suffix]</li>
+        <li>regional_root->Northglass [arctic_suffix]</li>
+        <li>regional_root->[natural_prefix] [highland_fragment]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_CoastalRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_CoastalFragmentHelper</li>
+      <li>HHTools_Arktos_CoastalSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[coastal_fragment] [coastal_suffix]</li>
+        <li>regional_root->[natural_prefix] [coastal_fragment]</li>
+        <li>regional_root->[place_fragment] [coastal_suffix]</li>
+        <li>regional_root->[coastal_fragment] Strand</li>
+        <li>regional_root->[coastal_fragment] Reach</li>
+        <li>regional_root->[place_fragment] Strand</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_WaterRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_WaterFragmentHelper</li>
+      <li>HHTools_Arktos_WaterSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[water_fragment] [water_suffix]</li>
+        <li>regional_root->[tree_root] [water_suffix]</li>
+        <li>regional_root->[place_fragment] [water_suffix]</li>
+        <li>regional_root->[natural_prefix] [water_fragment]</li>
+        <li>regional_root->[tree_root] Crossing</li>
+        <li>regional_root->[place_fragment] Springs</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_HazardRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_HighlandFragmentHelper</li>
+      <li>HHTools_Arktos_HazardFragmentHelper</li>
+      <li>HHTools_Arktos_HazardSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[hazard_fragment] [hazard_suffix]</li>
+        <li>regional_root->[natural_prefix] [hazard_fragment]</li>
+        <li>regional_root->[place_fragment] [hazard_suffix]</li>
+        <li>regional_root->[highland_fragment] [hazard_suffix]</li>
+        <li>regional_root->Ground Zero</li>
+        <li>regional_root->[hazard_fragment] Reach</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>HHTools_Arktos_SettlementRootHelper</defName>
+    <include>
+      <li>HHTools_Arktos_NaturalPrefixHelper</li>
+      <li>HHTools_Arktos_CaliforniaPlaceFragmentHelper</li>
+      <li>HHTools_Arktos_TreeRootHelper</li>
+      <li>HHTools_Arktos_SettlementFragmentHelper</li>
+      <li>HHTools_Arktos_SettlementSuffixHelper</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>regional_root->[settlement_fragment] [settlement_suffix]</li>
+        <li>regional_root->[natural_prefix] [settlement_fragment]</li>
+        <li>regional_root->[place_fragment] [settlement_suffix]</li>
+        <li>regional_root->[tree_root] [settlement_suffix]</li>
+        <li>regional_root->[settlement_fragment] Crossing</li>
+        <li>regional_root->[place_fragment] Gate</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

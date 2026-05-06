@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Tier 1 Resource-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVProbe</defName>
+    <label>FEV probe</label>
+    <description>A crude pre-refinement sample of Forced Evolutionary Virus growth medium. It is unstable and difficult to handle safely.
+
+A colonist can analyze this probe to unlock FEV-1 research.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVProbe</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.03</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>410100001</analysisID>
+        <requiresMechanitor>false</requiresMechanitor>
+        <analysisDurationHours>0.6</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>FEV probe analyzed: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By analyzing the FEV probe, {PAWN_labelShort} has recovered the baseline insight needed for the research project(s) {RESEARCH}.
+
+Your researchers can now begin formal work on first-generation FEV handling.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the FEV probe.</activateDescString>
+        <jobString>Analyze FEV probe</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--Tier 2 Resource-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVSample</defName>
+    <label>FEV sample</label>
+    <description>A concentrated viral sample suitable for controlled testing. More stable than raw probe material.
+
+A colonist can analyze this sample to unlock FEV-2 research.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVSample</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <WestTek_FEVProbe>10</WestTek_FEVProbe>
+    </costList>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>410100002</analysisID>
+        <requiresMechanitor>false</requiresMechanitor>
+        <analysisDurationHours>0.8</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>FEV sample analyzed: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By analyzing the FEV sample, {PAWN_labelShort} has recovered the insight needed for the research project(s) {RESEARCH}.
+
+Your researchers can now begin work on second-generation FEV refinement.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the FEV sample.</activateDescString>
+        <jobString>Analyze FEV sample</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2200</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--Tier 3 Resource-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_FEVCulture</defName>
+    <label>FEV culture</label>
+    <description>A stabilized culture kept alive for higher-order Forced Evolutionary Virus work. Guaranteed transformation results when used in procedures.
+
+A colonist can analyze this culture to unlock FEV-3 research.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_FEVCulture</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>260</MarketValue>
+      <Mass>0.1</Mass>
+    </statBases>
+    <costList>
+      <WestTek_RefinedFEVDosage>10</WestTek_RefinedFEVDosage>
+      <Uranium>100</Uranium>
+    </costList>
+    <comps>
+      <li Class="CompProperties_CompAnalyzableUnlockResearch">
+        <analysisID>410100003</analysisID>
+        <requiresMechanitor>false</requiresMechanitor>
+        <analysisDurationHours>1.2</analysisDurationHours>
+        <destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+        <completedLetterLabel>FEV culture analyzed: {RESEARCH} unlocked</completedLetterLabel>
+        <completedLetter>By analyzing the FEV culture, {PAWN_labelShort} has recovered the insight needed for the research project(s) {RESEARCH}.
+
+Your researchers can now begin work on high-order FEV stabilization.</completedLetter>
+        <completedLetterDef>PositiveEvent</completedLetterDef>
+        <activateTexPath>UI/Icons/Study</activateTexPath>
+        <activateLabelString>Analyze...</activateLabelString>
+        <activateDescString>Analyze the FEV culture.</activateDescString>
+        <jobString>Analyze FEV culture</jobString>
+        <guiLabelString>Choose who should analyze this</guiLabelString>
+        <inspectString>Can be analyzed by a colonist.</inspectString>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <workAmount>12000</workAmount>
+      <displayPriority>2210</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--Tier 1 Item-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_UnrefinedFEVDosage</defName>
+    <label>unrefined FEV dosage</label>
+    <description>An unstable Forced Evolutionary Virus dose. The virus is not yet controlled enough to produce consistent results.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_UnrefinedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>180</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <Uranium>100</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2220</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--Tier 2 Item-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_RefinedFEVDosage</defName>
+    <label>refined FEV dosage</label>
+    <description>A cleaner Forced Evolutionary Virus dose suitable for more controlled procedures. Lethality is reduced compared to wild samples.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_RefinedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>260</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <Uranium>200</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <bulkRecipeCount>2</bulkRecipeCount>
+      <displayPriority>2230</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--Tier 3 Item-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_IsolatedFEVDosage</defName>
+    <label>isolated FEV dosage</label>
+    <description>A highly stabilized Forced Evolutionary Virus dose reserved for colonist-directed procedures. Guaranteed transformation results when used in procedures.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Muties/Misc/WestTek_IsolatedFEVDosage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>420</MarketValue>
+      <Mass>0.08</Mass>
+    </statBases>
+    <costList>
+      <Uranium>300</Uranium>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV3</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2240</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_NightkinMutagen</defName>
+    <label>nightkin mutagen</label>
+    <description>A specialized FEV mutagenic package that stabilizes a Nightkin stealth field in an existing WestTek super mutant. Only first- and second-generation WestTek super mutants can survive the implantation.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Misc/WestTek_NightkinXenogerm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>GeneticItem</li>
+      <li>Serum</li>
+    </tradeTags>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>520</MarketValue>
+      <Mass>0.08</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>100</baseIngestTicks>
+      <humanlikeOnly>true</humanlikeOnly>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Consume {0}</ingestCommandString>
+      <ingestReportString>Consuming {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1220</listOrder>
+        <teetotalerCanConsume>true</teetotalerCanConsume>
+      </li>
+      <li Class="FIP.WestTek.CompProperties_UseEffectNightkinMutagen" />
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <costList>
+      <WestTek_FEVSample>1</WestTek_FEVSample>
+      <Uranium>250</Uranium>
+    </costList>
+    <recipeMaker>
+      <workAmount>1600</workAmount>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2245</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>WestTek_BehemothMutagen</defName>
+    <label>behemoth mutagen</label>
+    <description>A brutal FEV-3 mutagenic package that collapses a super mutant subject into a gigantic, tame behemoth war-beast. Only first- and second-generation super mutants survive the process.</description>
+    <graphicData>
+      <texPath>FIP-WestTek/Misc/WestTek_NightkinXenogerm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <stackLimit>5</stackLimit>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <drugCategory>Medical</drugCategory>
+      <ingestCommandString>Inject mutagen</ingestCommandString>
+      <ingestReportString>{0} injects a behemoth mutagen.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <severity>0.01</severity>
+          <hediffDef>Hangover</hediffDef>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <costList>
+      <WestTek_FEVCulture>1</WestTek_FEVCulture>
+      <Uranium>500</Uranium>
+    </costList>
+    <recipeMaker>
+      <workAmount>2600</workAmount>
+      <researchPrerequisite>WestTek_FEV3</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <displayPriority>2250</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="FIP.WestTek.CompProperties_UseEffectBehemothMutagen" />
+    </comps>
+  </ThingDef>
+
+</Defs>

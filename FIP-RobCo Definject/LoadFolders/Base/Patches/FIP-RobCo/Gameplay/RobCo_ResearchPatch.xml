@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><Patch><!-- Patch labels and descriptions for RobCo theme --><Operation Class="PatchOperationAdd"><xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]</xpath><value><requiredAnalyzed><li>RobCo_BrokenEyebotFrame</li></requiredAnalyzed></value></Operation><!-- Researching Basic Mechtech without Comms Console is possible, so adding this is just railroading players.
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ResearchProjectDef[defName="BasicMechtech"]/prerequisites</xpath>
+        <value>
+            <li>MicroelectronicsBasics</li>
+        </value>
+    </Operation>
+    --></Patch>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Forced Evolution Scenario-->
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>WestTek_ForcedEvolution</defName>
+    <label>Forced Evolution</label>
+    <description>A wandering band of super mutants has broken from the chaos of the wasteland, bringing with them a cache of refined FEV doses, and just enough salvaged knowledge to attempt recreating the transformation process.</description>
+    <scenario>
+      <summary>One first-generation super mutant, two second-generation super mutants, and some FEV.</summary>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+          <def>ConfigurePawnsXenotypes</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <customSummary>Start with one first-generation super mutant and two second-generation super mutants.</customSummary>
+          <xenotypeCounts>
+            <li>
+              <xenotype>WestTek_Xenotype_SuperMutantFirst</xenotype>
+              <count>1</count>
+              <description>first-generation super mutant</description>
+              <requiredAtStart>true</requiredAtStart>
+              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+            </li>
+            <li>
+              <xenotype>WestTek_Xenotype_SuperMutantSecond</xenotype>
+              <count>2</count>
+              <description>second-generation super mutant</description>
+              <requiredAtStart>true</requiredAtStart>
+              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+            </li>
+          </xenotypeCounts>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <visible>false</visible>
+          <method>DropPods</method>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>The facility burned long before you escaped it. What remained were ruined vats, sealed notes, and three living proofs that West Tek got further than anyone should have allowed.
+
+Now the old bunker is gone, the masters are dead, and your little mutie cadre is alone in the wasteland with a little FEV and just enough knowledge to restart the work. Whether that becomes a refuge, an army, or another atrocity is up to you.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>WestTek_FEV1</project>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WestTek_RefinedFEVDosage</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>15</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>45</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>300</count>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

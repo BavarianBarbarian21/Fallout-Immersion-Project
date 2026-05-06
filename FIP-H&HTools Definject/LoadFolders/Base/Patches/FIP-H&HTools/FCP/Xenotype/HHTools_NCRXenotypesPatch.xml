@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.NCR">
+        <xpath>Defs/FactionDef[defName="FCP_Faction_NCR"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_TwoCalifornia MayRequire="FIP.WestTek">0.75</WestTek_Xenotype_TwoCalifornia>
+              <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.1</WestTek_Xenotype_NatL>
+              <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.15</Baseliner>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.NCR">
+        <xpath>Defs/FactionDef[defName="FCP_Faction_NCR_Deserters"]/xenotypeSet</xpath>
+        <value>
+          <xenotypeSet>
+            <xenotypeChances>
+              <WestTek_Xenotype_TwoCalifornia MayRequire="FIP.WestTek">0.55</WestTek_Xenotype_TwoCalifornia>
+              <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.15</WestTek_Xenotype_NatL>
+              <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.3</Baseliner>
+            </xenotypeChances>
+          </xenotypeSet>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

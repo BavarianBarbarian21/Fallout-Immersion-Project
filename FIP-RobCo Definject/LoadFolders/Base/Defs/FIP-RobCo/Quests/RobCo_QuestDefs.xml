@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<LetterDef ParentName="CustomChoiceLetterBase">
+		<defName>RobCo_PlatinumChipOpportunity</defName>
+		<letterClass>FIP_RobCo.ChoiceLetter_RobCoPlatinumChipOpportunity</letterClass>
+	</LetterDef>
+
+	<WorldObjectDef>
+		<defName>RobCo_CourierCamp</defName>
+		<label>courier trail</label>
+		<description>A temporary courier camp tied to a RobCo platinum chip transaction.</description>
+		<worldObjectClass>FIP_RobCo.RobCoCourierCamp</worldObjectClass>
+		<texture>World/WorldObjects/Camp</texture>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconTexture>World/WorldObjects/Expanding/Camp</expandingIconTexture>
+		<expandingIconPriority>80</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<isTempIncidentMapOwner>true</isTempIncidentMapOwner>
+		<overrideMapSize>(200, 1, 200)</overrideMapSize>
+		<IncidentTargetTags>
+			<li>Map_TempIncident</li>
+		</IncidentTargetTags>
+		<comps>
+			<li Class="WorldObjectCompProperties_FormCaravan" />
+			<li Class="WorldObjectCompProperties_TimedDetectionRaids" />
+		</comps>
+	</WorldObjectDef>
+
+	<WorldObjectDef ParentName="Site">
+		<defName>RobCo_VaultSite</defName>
+		<label>RobCo vault site</label>
+		<description>A sealed RobCo vault or management annex tied to a platinum chip courier route.</description>
+		<worldObjectClass>FIP_RobCo.RobCoVaultSite</worldObjectClass>
+		<texture>World/WorldObjects/Sites/GenericSite</texture>
+	</WorldObjectDef>
+
+	<SitePartDef>
+		<defName>RobCo_AncientVault</defName>
+		<label>RobCo vault</label>
+		<description>An old RobCo vault facility whose internal defenses are still active.</description>
+		<workerClass>SitePartWorker_AncientComplex</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientMechanitorComplex</expandingIconTexture>
+		<approachOrderString>Investigate {0}</approachOrderString>
+		<approachingReportString>Investigating {0}.</approachingReportString>
+		<considerEnteringAsAttack>false</considerEnteringAsAttack>
+		<arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<tags>
+			<li>RobCo_AncientVault</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RobCo_AncientVaultThreats</defName>
+		<linkWithSite>RobCo_AncientVault</linkWithSite>
+		<order>471</order>
+		<genStep Class="FIP_RobCo.GenStep_RobCoVaultThreats" />
+	</GenStepDef>
+
+	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+		<defName>RobCo_PlatinumBranch_CEO</defName>
+		<label>CEO branch</label>
+		<courierNumber>2</courierNumber>
+		<chipTitle>the CEO</chipTitle>
+		<stage2EnemyPawnKind>RobCo_BerserkSecuritron</stage2EnemyPawnKind>
+		<stage2CorpsePawnKind>RobCo_LibertyPrime</stage2CorpsePawnKind>
+		<stage1TargetPoints>700</stage1TargetPoints>
+		<stage2ThreatPoints>3200</stage2ThreatPoints>
+		<stage2LetterLabel>RobCo vault location recovered</stage2LetterLabel>
+		<stage2LetterText>The dead courier carried access fragments tied to a RobCo executive archive. They point to a distant vault complex still crawling with corrupted Securitrons. Somewhere inside lies the wreck of Liberty Prime.</stage2LetterText>
+	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+
+	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+		<defName>RobCo_PlatinumBranch_PRC</defName>
+		<label>People's Republic branch</label>
+		<courierNumber>5</courierNumber>
+		<chipTitle>the People's Republic</chipTitle>
+		<stage2EnemyPawnKind>RobCo_Liberator</stage2EnemyPawnKind>
+		<stage2CorpsePawnKind>RobCo_WarMachine</stage2CorpsePawnKind>
+		<stage1TargetPoints>700</stage1TargetPoints>
+		<stage2ThreatPoints>3600</stage2ThreatPoints>
+		<stage2LetterLabel>PRC cache coordinates acquired</stage2LetterLabel>
+		<stage2LetterText>The courier's route logs reveal a remote RobCo cache where Chinese Liberators were stockpiled in absurd numbers. The archive also indicates that a War Machine chassis was lost there during containment failure.</stage2LetterText>
+	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+</Defs>

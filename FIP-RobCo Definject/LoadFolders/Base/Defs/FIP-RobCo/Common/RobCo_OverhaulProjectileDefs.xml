@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="RobCo_BaseBullet">
+		<defName>RobCo_Bullet_LaserMedium</defName>
+		<label>medium-beam laser</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.42</armorPenetrationBase>
+			<speed>82</speed>
+			<stoppingPower>0.9</stoppingPower>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RobCo_Bullet_BallisticAuto</defName>
+		<label>ballistic auto burst</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationBase>0.18</armorPenetrationBase>
+			<speed>92</speed>
+			<stoppingPower>2.5</stoppingPower>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RobCo_Bullet_SecuritronRocket</defName>
+		<label>securitron rocket</label>
+		<graphicData>
+			<texPath>Things/Projectile/Rocket_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<explosionRadius>2.4</explosionRadius>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCo_BaseBullet">
+		<defName>RobCo_Bullet_LibertyPrimePulse</defName>
+		<label>liberty prime pulse</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationBase>0.7</armorPenetrationBase>
+			<speed>86</speed>
+			<stoppingPower>1.4</stoppingPower>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCo_BaseBullet">
+		<defName>RobCo_Bullet_WarMachinePulse</defName>
+		<label>war machine pulse</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationBase>0.6</armorPenetrationBase>
+			<speed>88</speed>
+			<stoppingPower>1.1</stoppingPower>
+		</projectile>
+	</ThingDef>
+</Defs>

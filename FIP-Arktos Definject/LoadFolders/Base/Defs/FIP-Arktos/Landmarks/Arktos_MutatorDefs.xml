@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Urban-->
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Suburb</defName>
+    <label>suburb</label>
+    <description>The scattered shell of a pre-war suburb.</description>
+    <workerClass>TileMutatorWorker_AncientRuins</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Store</defName>
+    <label>store</label>
+    <description>An abandoned pre-war store, still fenced and stocked with junk.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories>
+      <li>AncientStructure</li>
+    </categories>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientWarehouse</structureLayoutDef>
+      <structureSizeRange>45~65</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>1~1</countPer10kCellsRange>
+          <minSpacing>10</minSpacing>
+          <maxDistFromStructure>50</maxDistFromStructure>
+          <prefabs>
+            <Exterior_AncientContainerForklift>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>3</max>
+            </Exterior_AncientContainerForklift>
+            <Exterior_ContainerSite>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_ContainerSite>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterWallDef>AncientFence</perimeterWallDef>
+      <perimeterExpandBy>8</perimeterExpandBy>
+      <perimeterWallChance>0.95</perimeterWallChance>
+      <perimeterTerrainDef>AncientConcrete</perimeterTerrainDef>
+      <perimeterScatteredThings>
+        <AncientBarrel>8</AncientBarrel>
+        <AncientChemtruck>2</AncientChemtruck>
+        <AncientMediumContainer>6</AncientMediumContainer>
+        <AncientLargeContainer>4</AncientLargeContainer>
+        <AncientOpenContainer>6</AncientOpenContainer>
+        <ChunkSlagSteel>5</ChunkSlagSteel>
+        <AncientForklift>6</AncientForklift>
+        <AncientIndustrialTruck>4</AncientIndustrialTruck>
+        <Filth_OilSmear>2</Filth_OilSmear>
+      </perimeterScatteredThings>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Gasstation</defName>
+    <label>gas station</label>
+    <description>An abandoned fuel stop with rusting pumps and buried tanks.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories>
+      <li>AncientStructure</li>
+    </categories>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientChemfuelRefinery</structureLayoutDef>
+      <structureSizeRange>40~50</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>1~1</countPer10kCellsRange>
+          <minSpacing>10</minSpacing>
+          <maxDistFromStructure>50</maxDistFromStructure>
+          <prefabs>
+            <Exterior_ChemtruckParkingLot>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_OilSmear</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>1</max>
+            </Exterior_ChemtruckParkingLot>
+            <Exterior_ChemtruckParkingLot_Long>
+              <weight>2.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_OilSmear</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>2</max>
+            </Exterior_ChemtruckParkingLot_Long>
+            <Exterior_ChembarrelStorage>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_OilSmear</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_ChembarrelStorage>
+            <Exterior_ChembarrelStorageBuilding>
+              <weight>2.0</weight>
+              <indoorRuin>true</indoorRuin>
+              <filthDef>Filth_OilSmear</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>1</max>
+            </Exterior_ChembarrelStorageBuilding>
+            <Exterior_AncientContainerForklift>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_AncientContainerForklift>
+            <Exterior_ContainerSite>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_ContainerSite>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterWallDef>AncientFence</perimeterWallDef>
+      <perimeterExpandBy>3</perimeterExpandBy>
+      <perimeterWallChance>0.95</perimeterWallChance>
+      <perimeterTerrainDef>AncientTile</perimeterTerrainDef>
+      <perimeterScatteredThings>
+        <AncientChembarrel>20</AncientChembarrel>
+        <AncientChemtruck>1</AncientChemtruck>
+        <AncientIndustrialTruck>1</AncientIndustrialTruck>
+        <Filth_OilSmear>1</Filth_OilSmear>
+      </perimeterScatteredThings>
+      <perimeterScatterTerrain>
+        <AncientConcrete>
+          <groupsPerHundredCells>0~1</groupsPerHundredCells>
+          <itemsPerGroup>3~8</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </AncientConcrete>
+      </perimeterScatterTerrain>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_AncientQuarry</defName>
+    <label>ancient quarry</label>
+    <description>This area was once mined for its natural resources, and the remains of the ancient quarry are still here.</description>
+    <minHilliness>Mountainous</minHilliness>
+    <genOrder>-100</genOrder>
+    <workerClass>TileMutatorWorker_AncientQuarry</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <extraGenSteps>
+      <li>AncientMiningCharge</li>
+      <li>AncientExplosivesCrate</li>
+      <li>AncientExcavator</li>
+      <li>AncientDrillPlatform</li>
+      <li>AncientTuneller</li>
+    </extraGenSteps>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Harbor</defName>
+    <label>harbor</label>
+    <description>An abandoned coastal settlement.</description>
+    <workerClass>TileMutatorWorker_Harbor</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_InfestedSettlement</defName>
+    <label>infested settlement</label>
+    <description>A ruined suburb overrun by insects.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories Inherit="False" />
+    <requiresFactionOfDef>Insect</requiresFactionOfDef>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientInfestedSettlement</structureLayoutDef>
+      <structureSizeRange>36~44</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>0.2~0.4</countPer10kCellsRange>
+          <minSpacing>0</minSpacing>
+          <maxDistFromStructure>24</maxDistFromStructure>
+          <prefabs>
+            <Exterior_BurrowWallCluster_Medium>
+              <weight>2.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Medium>
+            <Exterior_BurrowWallCluster_Large>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Large>
+            <Exterior_BurrowWallGenerator>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallGenerator>
+            <Exterior_BurrowWallFarm>
+              <weight>0.5</weight>
+              <indoorRuin>true</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>1</max>
+            </Exterior_BurrowWallFarm>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterExpandBy>2</perimeterExpandBy>
+      <perimeterTerrainDef>AncientConcrete</perimeterTerrainDef>
+      <perimeterScatteredThings>
+        <GlowPod>1</GlowPod>
+        <AncientGenerator>3</AncientGenerator>
+        <AncientSecurityTurret>3</AncientSecurityTurret>
+        <Filth_BloodInsect>10</Filth_BloodInsect>
+      </perimeterScatteredThings>
+      <perimeterScatterTerrain>
+        <InsectSludge>
+          <groupsPerHundredCells>1~2</groupsPerHundredCells>
+          <itemsPerGroup>10~15</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </InsectSludge>
+      </perimeterScatterTerrain>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_FireInfestedSettlement</defName>
+    <label>fire ant-infested settlement</label>
+    <description>A ruined suburb overrun by fire ants.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories Inherit="False" />
+    <requiresFactionOfDef>Arktos_FireAnts</requiresFactionOfDef>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientInfestedSettlement</structureLayoutDef>
+      <structureSizeRange>36~44</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>0.2~0.4</countPer10kCellsRange>
+          <minSpacing>0</minSpacing>
+          <maxDistFromStructure>24</maxDistFromStructure>
+          <prefabs>
+            <Exterior_BurrowWallCluster_Medium>
+              <weight>2.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Medium>
+            <Exterior_BurrowWallCluster_Large>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallCluster_Large>
+            <Exterior_BurrowWallGenerator>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>3</max>
+            </Exterior_BurrowWallGenerator>
+            <Exterior_BurrowWallFarm>
+              <weight>0.5</weight>
+              <indoorRuin>true</indoorRuin>
+              <filthDef>Filth_BloodInsect</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>1</max>
+            </Exterior_BurrowWallFarm>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterExpandBy>2</perimeterExpandBy>
+      <perimeterTerrainDef>AncientConcrete</perimeterTerrainDef>
+      <perimeterScatteredThings>
+        <GlowPod>1</GlowPod>
+        <AncientGenerator>3</AncientGenerator>
+        <AncientSecurityTurret>3</AncientSecurityTurret>
+        <Filth_BloodInsect>10</Filth_BloodInsect>
+      </perimeterScatteredThings>
+      <perimeterScatterTerrain>
+        <InsectSludge>
+          <groupsPerHundredCells>1~2</groupsPerHundredCells>
+          <itemsPerGroup>10~15</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </InsectSludge>
+      </perimeterScatterTerrain>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Uplink</defName>
+    <label>uplink</label>
+    <description>An ancient comms uplink tied to old radio systems.</description>
+    <workerClass>TileMutatorWorker_AncientUplink</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Stockpile</defName>
+    <label>stockpile</label>
+    <description>An underground bunker full of old supplies.</description>
+    <workerClass>TileMutatorWorker_Stockpile</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Junkyard</defName>
+    <label>junkyard</label>
+    <description>An old dumping ground for various kinds of junk.</description>
+    <chanceOnNonLandmarkTile>0.01</chanceOnNonLandmarkTile>
+    <junkDensityFactor>15</junkDensityFactor>
+    <extraGenSteps>
+      <li>ScarlandsJunkClusters</li>
+      <li>ScarlandsJunkPrefabs</li>
+    </extraGenSteps>
+    <maxHilliness>SmallHills</maxHilliness>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <!--Military-->
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_LaunchSite</defName>
+    <label>launch site</label>
+    <description>An abandoned launch complex from the old world.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories>
+      <li>AncientStructure</li>
+    </categories>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <canSpawnOnRiver>false</canSpawnOnRiver>
+    <structureGenParms>
+      <structureLayoutDef>AncientLaunchSite</structureLayoutDef>
+      <structureSizeRange>35~55</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>1~1</countPer10kCellsRange>
+          <minSpacing>35</minSpacing>
+          <maxDistFromStructure>60</maxDistFromStructure>
+          <prefabs>
+            <Exterior_AncientLaunchSite_LaunchPad_Large>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_RubbleRock</filthDef>
+              <filthExpandBy>0</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>2</max>
+            </Exterior_AncientLaunchSite_LaunchPad_Large>
+            <Exterior_AncientLaunchSite_LaunchPad_Small>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_RubbleRock</filthDef>
+              <filthExpandBy>0</filthExpandBy>
+              <filthChance>0.05</filthChance>
+              <max>2</max>
+            </Exterior_AncientLaunchSite_LaunchPad_Small>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterExpandBy>2</perimeterExpandBy>
+      <perimeterWallDef>AncientFence</perimeterWallDef>
+      <perimeterWallChance>0.95</perimeterWallChance>
+      <perimeterScatteredThings>
+        <AncientChembarrel>20</AncientChembarrel>
+        <AncientChemtruck>1</AncientChemtruck>
+        <AncientIndustrialTruck>1</AncientIndustrialTruck>
+        <Filth_OilSmear>1</Filth_OilSmear>
+      </perimeterScatteredThings>
+      <perimeterScatterTerrain>
+        <AncientConcrete>
+          <groupsPerHundredCells>0~1</groupsPerHundredCells>
+          <itemsPerGroup>3~8</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </AncientConcrete>
+      </perimeterScatterTerrain>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_Garrison</defName>
+    <label>garrison</label>
+    <description>A military fortification left behind after the war.</description>
+    <workerClass>TileMutatorWorker_AncientStructure</workerClass>
+    <categories>
+      <li>AncientStructure</li>
+    </categories>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+    <structureGenParms>
+      <structureLayoutDef>AncientGarrison</structureLayoutDef>
+      <structureSizeRange>40~50</structureSizeRange>
+      <scatteredPrefabs>
+        <li>
+          <countPer10kCellsRange>1~1</countPer10kCellsRange>
+          <minSpacing>10</minSpacing>
+          <maxDistFromStructure>50</maxDistFromStructure>
+          <prefabs>
+            <Exterior_AncientBunker>
+              <weight>1.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_AncientBunker>
+            <Exterior_AncientTankTraps>
+              <weight>0.5</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_AncientTankTraps>
+            <Exterior_AncientTankBlockade>
+              <weight>0.5</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_AncientTankBlockade>
+            <Exterior_MilitaryBlockade>
+              <weight>0.5</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>2</max>
+            </Exterior_MilitaryBlockade>
+            <Exterior_AncientMegaCannonEmplacement>
+              <weight>3.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>4</max>
+            </Exterior_AncientMegaCannonEmplacement>
+            <Exterior_AncientTank_Cluster>
+              <weight>3.0</weight>
+              <indoorRuin>false</indoorRuin>
+              <filthDef>Filth_MachineBits</filthDef>
+              <filthExpandBy>1</filthExpandBy>
+              <filthChance>0.4</filthChance>
+              <max>1</max>
+            </Exterior_AncientTank_Cluster>
+          </prefabs>
+        </li>
+      </scatteredPrefabs>
+      <perimeterWallDef>AncientRazorWire</perimeterWallDef>
+      <perimeterExpandBy>5</perimeterExpandBy>
+      <perimeterWallChance>0.9</perimeterWallChance>
+      <perimeterTerrainDef>AncientConcrete</perimeterTerrainDef>
+      <perimeterScatterTerrain>
+        <Soil>
+          <groupsPerHundredCells>0~1</groupsPerHundredCells>
+          <itemsPerGroup>2~3</itemsPerGroup>
+          <groupDistRange>2~3</groupDistRange>
+        </Soil>
+      </perimeterScatterTerrain>
+      <perimeterScatteredThings>
+        <AncientMortar>3</AncientMortar>
+        <AncientBarrel>2</AncientBarrel>
+        <AncientMilitaryBarrier>3</AncientMilitaryBarrier>
+        <ChunkSlagSteel>5</ChunkSlagSteel>
+        <Filth_OilSmear>2</Filth_OilSmear>
+        <Filth_BlastMark>1</Filth_BlastMark>
+        <AncientTank>1</AncientTank>
+      </perimeterScatteredThings>
+    </structureGenParms>
+  </TileMutatorDef>
+
+  <!--Industry-->
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_AncientSmokeVent</defName>
+    <label>ancient smoke vent</label>
+    <description>This area has a number of massive exhaust vents. An ancient mechanism buried deep beneath the earth will occasionally vent large amounts of smoke, blocking out the sun for days at a time.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientSmokeVent</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_AncientToxVent</defName>
+    <label>ancient toxic vent</label>
+    <description>Massive toxic vents will regularly spew toxic fallout into the air. The vents connect to an ancient substructure buried deep beneath the earth.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientToxVent</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+  <TileMutatorDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>Arktos_Mutator_AncientHeatVent</defName>
+    <label>ancient heat vent</label>
+    <description>Ancient ducts will regularly vent heat from an underground megastructure, dramatically raising the temperature of the surrounding area.</description>
+    <categories>
+      <li>AncientVent</li>
+    </categories>
+    <workerClass>TileMutatorWorker_AncientHeatVent</workerClass>
+    <biomeWhitelist>
+      <li>Arktos_Wasteland</li>
+    </biomeWhitelist>
+  </TileMutatorDef>
+
+</Defs>

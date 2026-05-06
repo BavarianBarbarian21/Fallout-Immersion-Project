@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IssueDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Mutant</defName>
+    <label>mutant policy</label>
+  </IssueDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_MutantCitizenship</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>mutant citizenship</label>
+    <description>Mutants are accepted as full members of the community. Their altered bodies are no barrier to belonging so long as they stand with the colony.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>60</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_MutantCitizenship</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantCitizenship_ColonistPresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_SecondClassMutants</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>second class mutants</label>
+    <description>Mutants may remain inside society, but only in a lesser caste. They are useful when kept subordinate and put to work under firm supervision.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>50</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_SecondClassMutants</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_SecondClassMutants_MutantSlavePresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_MutantSlaves</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>mutant slaves</label>
+    <description>Mutants are valued primarily as a slave caste. They are strong, dangerous, and best kept in chains where their labor can be exploited safely.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>40</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_MutantSlaves</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantSlaves_SlaveStatus</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantSlaves_MutantColonistPresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_MutantPurge</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>mutant purge</label>
+    <description>Mutants are treated as a stain on civilization. Their presence in the colony is dangerous, degrading, and should be stamped out wherever possible.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>30</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_MutantPurge</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantPurge_MutantColonistPresent</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantPurge_MutantSlavePresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_MutantMasters</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>mutant masters</label>
+    <description>Mutants are seen as the natural overseers of the wastes. Their strength grants them the right to rule, especially over unmutated laborers kept beneath them.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_MutantMasters</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantMasters_MutantColonistPresent</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_MutantMasters_NonMutantSlavePresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Precept_Utobitha</defName>
+    <issue>Greenway_Mutant</issue>
+    <label>Utobitha</label>
+    <description>A true mutant homeland should be built by mutants and for mutants. Baseline wastelanders are tolerated only as a problem, never as rightful members of the order being created.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <associatedMemes>
+      <li>Greenway_Utobitha</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_Utobitha_MutantColonistPresent</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Greenway_Utobitha_NonMutantPresent</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantCitizenship_ColonistPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantColonistPresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutants among us</label>
+        <description>Mutants live beside us as fellow citizens. The colony is stronger for it.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_SecondClassMutants_MutantSlavePresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantSlavePresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutants kept in their place</label>
+        <description>The mutant stock is being used properly, beneath the colony's true citizens.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantSlaves_SlaveStatus</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantSlaveStatus</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutant slaves in chains</label>
+        <description>The colony has mutant slaves to exploit and control.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>no mutant slaves</label>
+        <description>There should be mutant labor in chains here, not wasted freedom.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantSlaves_MutantColonistPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantColonistPresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutant freed from chains</label>
+        <description>A mutant stands as a free colonist when it should be a slave.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantPurge_MutantColonistPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantColonistPresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutant contamination</label>
+        <description>Mutants are living freely inside the colony. This cannot stand.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantPurge_MutantSlavePresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantSlavePresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutants still tolerated</label>
+        <description>Even chained mutants remain an offense against the colony's purity.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantMasters_MutantColonistPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantColonistPresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>mutant leadership stock</label>
+        <description>The colony is guided by mutant strength, as it should be.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_MutantMasters_NonMutantSlavePresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_NonMutantSlavePresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>lesser stock in bondage</label>
+        <description>Unmutated labor serves beneath mutant authority.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Utobitha_MutantColonistPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_MutantColonistPresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>Utobitha lives</label>
+        <description>Mutants are here, building the future that belongs to them.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>Greenway_Utobitha_NonMutantPresent</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>FIP.Greenway.ThoughtWorker_Greenway_NonMutantColonistOrSlavePresent</workerClass>
+    <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+    <stages>
+      <li>
+        <label>outsiders in Utobitha</label>
+        <description>Non-mutants are still present in a homeland that should belong to mutant kind alone.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

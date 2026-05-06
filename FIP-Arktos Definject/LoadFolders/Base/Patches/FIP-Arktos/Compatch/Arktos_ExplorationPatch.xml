@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--Route Vanilla Landmarks content into curated Arktos biome pools.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VanillaExpanded.VExplorationE</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MeteorCrater"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MeteorCrater"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Divide</li>
+            <li>Arktos_Mesa</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ResurgentCaldera"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ResurgentCaldera"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Malpais</li>
+            <li>Arktos_Divide</li>
+            <li>Arktos_Mesa</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicCrater"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicCrater"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Malpais</li>
+            <li>Arktos_Divide</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_BombardedSurface"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Divide</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_MechanoidShipChunks"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_RotstinkVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_RotstinkVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Divide</li>
+            <li>Arktos_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ToxicVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Divide</li>
+            <li>Arktos_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SmokeVents"]/biomeBlacklist</xpath>
+        <value>
+          <li>Arktos_SeaIce</li>
+          <li>Arktos_IceSheet</li>
+          <li>Arktos_GlacialPlain</li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SmokeVents"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Wasteland</li>
+            <li>Arktos_Crater</li>
+            <li>Arktos_Ruin</li>
+            <li>Arktos_Divide</li>
+            <li>Arktos_Malpais</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SulfuricLake"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Marina</li>
+            <li>Arktos_Floodplains</li>
+            <li>Arktos_CranberryBog</li>
+            <li>Arktos_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_SulfuricRiver"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Aqueduct</li>
+            <li>Arktos_Floodplains</li>
+            <li>Arktos_CranberryBog</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedReservoir"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Aqueduct</li>
+            <li>Arktos_Floodplains</li>
+            <li>Arktos_CranberryBog</li>
+            <li>Arktos_Wasteland</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedRiver"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Aqueduct</li>
+            <li>Arktos_Floodplains</li>
+            <li>Arktos_CranberryBog</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_ContaminatedCoast"]</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_Marina</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/TileMutatorDef[defName="VEE_AbandonedFarmland"]/biomeWhitelist</xpath>
+        <value>
+          <biomeWhitelist>
+            <li>Arktos_CentralValley</li>
+            <li>Arktos_Floodplains</li>
+            <li>Arktos_Aqueduct</li>
+          </biomeWhitelist>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_MeteorCrater"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkImpactCrater</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ResurgentCaldera"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkResurgentCaldera</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ToxicCrater"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkToxicCrater</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_SulfuricLake"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkSulfuricLake</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_SulfuricRiver"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkSulfuricRiver</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedReservoir"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkContaminatedReservoir</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedRiver"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkContaminatedRiver</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_ContaminatedCoast"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkContaminatedCoast</nameMaker>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/LandmarkDef[defName="VEE_AbandonedFarmland"]/nameMaker</xpath>
+        <value>
+          <nameMaker>HHTools_Arktos_NamerLandmarkAbandonedFarmlands</nameMaker>
+        </value>
+      </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

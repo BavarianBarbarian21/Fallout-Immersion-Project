@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Civil-->
+  <FactionDef ParentName="HHTools_Arizona_Settler_Democratic">
+    <defName>HHTools_Arizona_Civil</defName>
+    <label>Civil Arizona Settlement</label>
+    <description>A democratic settlement in the Nova-Arizona desert, where the shadow of Caesar's Legion falls long across the land. The settlers here draw largely from the Nat'L people, whose roots lie in the national park communities that kept to the canyons and monument lands when civilization collapsed. Governance tends toward consensus and elected leadership, though staying small enough to avoid Legion interest is a practical concern.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">1</WestTek_Xenotype_NatL>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+  <!--Rough-->
+  <FactionDef ParentName="HHTools_Arizona_Settler_Despotic">
+    <defName>HHTools_Arizona_Rough</defName>
+    <label>Rough Arizona Settlement</label>
+    <description>An autocratic settlement carved out of the Nova-Arizona desert, run by a strongman, elder council, or local boss with no obligations to outside powers. The culture here reflects the deep heritage of the region — generations of hard wasteland survival in canyon country. The Legion is ever-present, but does not control everything.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">1</WestTek_Xenotype_NatL>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+  <!--Raider-->
+  <FactionDef ParentName="HHTools_Arizona_RaiderBase">
+    <defName>HHTools_Arizona_Raider</defName>
+    <label>Arizona Raider</label>
+    <description>A raider gang roaming the canyons and desert trails of Nova-Arizona. They prey on the trade routes that thread between Legion-controlled territories and independent settlements, targeting those too isolated for any patrol to reach in time. Their speech, dress, and customs carry the echo of the region's native heritage — the wasteland ground it down but never erased it.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">1</WestTek_Xenotype_NatL>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+  <!--Tribal-->
+  <FactionDef ParentName="HHTools_Arizona_TribalBase">
+    <defName>HHTools_Arizona_Tribal</defName>
+    <label>Arizona Tribe</label>
+    <description>One of the Nat'L tribal communities of Nova-Arizona, descended from the tourists who visited the national parks long before the war. They move with the seasons through canyon country, carrying oral histories and customs. The Legion considers them a resource to conscript or a nuisance to remove, depending on the tribe's size and location.</description>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">1</WestTek_Xenotype_NatL>
+      </xenotypeChances>
+    </xenotypeSet>
+  </FactionDef>
+
+</Defs>

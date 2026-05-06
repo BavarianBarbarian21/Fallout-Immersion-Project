@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?><Patch><!-- Vanilla Expanded Deserter patches --><Operation Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Deserters"><success>Always</success><operations><!-- DamageDefs/Damages_Ranged.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/DamageDef[defName="VFED_Fletchling"]/label</xpath>
+    <value>
+      <label>acid dart</label>
+    </value>
+  </Operation>
+  --><!-- FactionDefs/Factions_Player.xml --><!-- IncidentDefs/Incidents_Quests.xml --><!-- IncidentDefs/Incidents_Visibility.xml --><!-- Misc/DeserterTabs.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterTabDef[defName="VFED_Services"]/label</xpath>
+    <value>
+      <label>services</label>
+    </value>
+  </Operation>
+  --><!-- Misc/GameConditions.xml --><!-- Misc/Hediffs.xml --><!-- Misc/Misc.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/DesignationDef[defName="VFED_ExtractIntel"]/label</xpath>
+    <value>
+      <label>extract intel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/DesignationDef[defName="VFED_ExtractIntel"]/description</xpath>
+    <value>
+      <description>extract intel from something</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName="VFED_ExtractIntel"]/label</xpath>
+    <value>
+      <label>extract intel</label>
+    </value>
+  </Operation>
+  --><!-- Misc/MVCF.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MVCF.ModDef[defName="VFED_VFEDeserters"]/label</xpath>
+    <value>
+      <label>VFE - Deserters</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MVCF.ModDef[defName="VFED_VFEDeserters"]/description</xpath>
+    <value>
+      <description>Charge Cycler</description>
+    </value>
+  </Operation>
+  --><!-- Misc/ResponseTypes.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.ImperialResponseDef[defName="VFED_Patrol"]/label</xpath>
+    <value>
+      <label>patrol</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.ImperialResponseDef[defName="VFED_StrikeForce"]/label</xpath>
+    <value>
+      <label>strike force</label>
+    </value>
+  </Operation>
+  --><!-- Misc/Services.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_LowerVisibility"]/label</xpath>
+    <value>
+      <label>lower visibility</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_CallShuttle"]/label</xpath>
+    <value>
+      <label>call shuttle</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_IncreaseGoodwill"]/label</xpath>
+    <value>
+      <label>increase goodwill</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_DelayResponse"]/label</xpath>
+    <value>
+      <label>delay response</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_TauntImperials"]/label</xpath>
+    <value>
+      <label>taunt Whitespring forces</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_ChangeCritical"]/label</xpath>
+    <value>
+      <label>change critical intel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.DeserterServiceDef[defName="VFED_ChangeCritical"]/description</xpath>
+    <value>
+      <description>Trade critical intel for 10 standard intel.</description>
+    </value>
+  </Operation>
+  --><!-- Misc/Shuttle.xml --><!-- Misc/Storyteller.xml --><!-- Misc/Thoughts.xml --><!-- Misc/VisibilityLevelDefs.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_Hidden"]/label</xpath>
+    <value>
+      <label>hidden</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_Whispers"]/label</xpath>
+    <value>
+      <label>whispers</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_Rumors"]/label</xpath>
+    <value>
+      <label>rumors</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_Rumors"]/specialEffects/li[1]/label</xpath>
+    <value>
+      <label>Imperial patrol caravan event becomes active</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_Rumors"]/specialEffects/li[2]/label</xpath>
+    <value>
+      <label>All imperial armies on all quest locations where Empire would spawn are 20% bigger</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_News"]/label</xpath>
+    <value>
+      <label>news</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_News"]/specialEffects/li[1]/label</xpath>
+    <value>
+      <label>Raids from the Empire faction happen 2x as often</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_News"]/specialEffects/li[2]/label</xpath>
+    <value>
+      <label>All imperial armies on all quest locations where Empire would spawn are 50% bigger</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_News"]/specialEffects/li[3]/label</xpath>
+    <value>
+      <label>Imperial Propaganda can now drop</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_News"]/specialEffects/li[4]/label</xpath>
+    <value>
+      <label>Chased Deserter quest no longer occurs</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/label</xpath>
+    <value>
+      <label>public enemy</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/specialEffects/li[1]/label</xpath>
+    <value>
+      <label>Raids from the Empire faction happen 3x as often</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/specialEffects/li[2]/label</xpath>
+    <value>
+      <label>All imperial armies on all quest locations where Empire would spawn are 100% bigger</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/specialEffects/li[3]/label</xpath>
+    <value>
+      <label>Aerodrone bombardment event becomes available.</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/specialEffects/li[4]/label</xpath>
+    <value>
+      <label>Absolver Raid can now occur.</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_PublicEnemy"]/specialEffects/li[5]/label</xpath>
+    <value>
+      <label>Relations with a random faction drop by -10 once a day.</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/VFED.VisibilityLevelDef[defName="VFED_DivineInferno"]/specialEffects/li/label</xpath>
+    <value>
+      <label>As soon as player reaches 100 Visibility, Divine Inferno countdown triggers.</label>
+    </value>
+  </Operation>
+  --><!-- QuestScriptDefs/Base.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_DeserterQuestBase"]/root/nodes/li[21]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Quest expired: [resolvedQuestName]</label>
+    </value>
+  </Operation>
+  --><!-- QuestScriptDefs/DeadDrop.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_DeadDrop"]/root/nodes/li[4]/node/nodes/li[5]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Quest expired: [resolvedQuestName]</label>
+    </value>
+  </Operation>
+  --><!-- QuestScriptDefs/EmpireRuins.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_EmpireRuins"]/root/nodes/li[7]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Quest expired: [resolvedQuestName]</label>
+    </value>
+  </Operation>
+  --><!-- QuestScriptDefs/Endgame.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_DeserterEndgame"]/root/nodes/li[22]/label</xpath>
+    <value>
+      <label>Shuttle arrived</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_DeserterEndgame"]/root/nodes/li[23]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Shuttle destroyed</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="VFED_DeserterEndgame"]/root/nodes/li[37]/node/nodes/li[1]/label</xpath>
+    <value>
+      <label>Control station destroyed</label>
+    </value>
+  </Operation>
+  --><!-- ResearchProjectDefs/ResearchProjects_Various.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VFED_RemoteDemolition"]/description</xpath>
+    <value>
+      <description>Build advanced explosive traps with remote detonation mechanism.</description>
+    </value>
+  </Operation>
+  --><!-- ResearchProjectDefs/ResearchTabs.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchTabDef[defName="VanillaExpanded"]/label</xpath>
+    <value>
+      <label>Vanilla Expanded</label>
+    </value>
+  </Operation>
+  --><!-- Scenarios/Scenarios_Classic.xml --><li Class="PatchOperationReplace"><xpath>/Defs/ScenarioDef[defName="VFED_NewSafehaven"]/scenario/parts/li[def="GameStartDialog"]/text</xpath><value><text>Your Brotherhood expeditionary group has stumbled upon an old bunker, a potential haven. But with the valuable intelligence and votes you carry, the Whitespring Enclave's visibility on you is alarmingly high. Vertibots patrol the skies, and Whitespring raiding parties are closing in. Use your resources to unlock powerful tech and Brotherhood network services, aiding your ultimate mission: to eliminate key Whitespring officials. Survive the initial onslaught and lay low; over time, the Enclave's relentless search may wane. The choice is yours: fortify, adapt, or perish.</text></value></li><!-- Scenarios/ScenPartDefs.xml --><!-- SiteParts/AerodroneStation.xml --><!-- SiteParts/ControlStation.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/SitePartDef[defName="VFED_ControlStation"]/label</xpath>
+    <value>
+      <label>control station</label>
+    </value>
+  </Operation>
+  --><!-- SiteParts/DeadDrop.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/SitePartDef[defName="VFED_DeadDrop"]/label</xpath>
+    <value>
+      <label>dead drop</label>
+    </value>
+  </Operation>
+  --><!-- SiteParts/EmpireRuins.xml --><!-- SiteParts/ImperialConvoy.xml --><!-- SiteParts/PlotMission.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/SitePartDef[defName="VFED_PlotMission_Raid"]/description</xpath>
+    <value>
+      <description>An estate reserved for a senior Whitespring official.</description>
+    </value>
+  </Operation>
+  --><!-- SiteParts/ShuttleStagingPost.xml --><!-- SiteParts/SupplyDepot.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/SitePartDef[defName="VFED_SupplyDepot"]/label</xpath>
+    <value>
+      <label>supply depot</label>
+    </value>
+  </Operation>
+  --><!-- SiteParts/TechPrinter.xml --><!-- SiteParts/Underfarm.xml --><!-- SiteParts/ZeusCannonComplex.xml --><!-- ThingDefs_Buildings/Buildings_Exotic.xml --><!-- ThingDefs_Buildings/Buildings_Security.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_HighExplosive"]/label</xpath>
+    <value>
+      <label>remote charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_HighExplosive"]/description</xpath>
+    <value>
+      <description>A pair of high-explosive shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Incendiary"]/label</xpath>
+    <value>
+      <label>remote incendiary charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Incendiary"]/description</xpath>
+    <value>
+      <description>A pair of incendiary shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_EMP"]/label</xpath>
+    <value>
+      <label>remote EMP charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_EMP"]/description</xpath>
+    <value>
+      <description>A pair of EMP shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Smoke"]/label</xpath>
+    <value>
+      <label>remote smoke charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Smoke"]/description</xpath>
+    <value>
+      <description>A pair of smoke shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Firefoam"]/label</xpath>
+    <value>
+      <label>remote firefoam charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Firefoam"]/description</xpath>
+    <value>
+      <description>A pair of firefoam shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_AntigrainWarhead"]/label</xpath>
+    <value>
+      <label>remote antigrain charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_AntigrainWarhead"]/description</xpath>
+    <value>
+      <description>A pair of antigrain warheads connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_BombPack_Deployed"]/label</xpath>
+    <value>
+      <label>deployed bomb pack</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_BombPack_Deployed"]/description</xpath>
+    <value>
+      <description>A deployed bomb pack. It’s armed, and can be detonated with a press of a button.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_Shrapnel"]/label</xpath>
+    <value>
+      <label>IED shrapnel trap</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_Shrapnel"]/description</xpath>
+    <value>
+      <description>A pair of shrapnel shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_ArmorPiercing"]/label</xpath>
+    <value>
+      <label>IED armor-piercing trap</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_ArmorPiercing"]/description</xpath>
+    <value>
+      <description>A pair of armor-piercing shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_Cluster"]/label</xpath>
+    <value>
+      <label>IED cluster trap</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_TrapIED_Cluster"]/description</xpath>
+    <value>
+      <description>A pair of cluster shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Shrapnel"]/label</xpath>
+    <value>
+      <label>remote shrapnel charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Shrapnel"]/description</xpath>
+    <value>
+      <description>A pair of shrapnel shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_ArmorPiercing"]/label</xpath>
+    <value>
+      <label>remote armor-piercing charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_ArmorPiercing"]/description</xpath>
+    <value>
+      <description>A pair of armor-piercing shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Cluster"]/label</xpath>
+    <value>
+      <label>remote cluster charge</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_RemoteTrapIED_Cluster"]/description</xpath>
+    <value>
+      <description>A pair of cluster shells connected to a remote triggering mechanism. It can be detonated at will, but the fuse time might vary. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Buildings/Buildings_Security_Turrets.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Kontarion"]/label</xpath>
+    <value>
+      <label>kontarion</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Kontarion"]/description</xpath>
+    <value>
+      <description>A powerful, long-range weapon used by the Whitespring Enclave to take out enemy targets from afar. Kontarion turret fires ultra-dense uranium slugs at incredible speeds, penetrating even the heaviest armor. With its rapid-fire capabilities, tremendous accuracy and infinite range, it's a force to be reckoned with. It&apos;s more accurate at longer ranges, and can&apos;t fire at all close up. May explode when damaged.\n\nIt consumes a lot of ammunition, and requires an adjacent crate of uranium slug ammo in order to automatically reload. It cannot be reloaded by hand.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Kontarion"]/label</xpath>
+    <value>
+      <label>kontarion cannon</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Kontarion"]/description</xpath>
+    <value>
+      <description>A self-loading uranium slug cannon designed to attach to a turret.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Palintone"]/label</xpath>
+    <value>
+      <label>palintone</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Palintone"]/description</xpath>
+    <value>
+      <description>A powerful, anti-infantry weapon used by the Whitespring Enclave to defend unsafe outposts. Palintone turret fires large-caliber shells at incredible speeds, dealing heavy damage over significant ranges. It fires huge volleys of rounds that can provide suppressive fire and quickly shred lightly armored targets. With its devastating firepower, the Palintone turret is capable of keeping even the largest enemy forces at bay. May explode when damaged.\n\nIt consumes a lot of ammunition, and requires an adjacent crate of autocannon ammo in order to automatically reload. It cannot be reloaded by hand.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Palintone"]/label</xpath>
+    <value>
+      <label>palintone cannon</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Palintone"]/description</xpath>
+    <value>
+      <description>A self-loading cannon designed to attach to a turret.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Onager"]/label</xpath>
+    <value>
+      <label>onager</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_Onager"]/description</xpath>
+    <value>
+      <description>A powerful, anti-armored weapon used by the Whitespring Enclave to destroy heavily armored targets with ease. Capable of launching missiles in bursts of 6, the Onager can deal devastating damage to enemy forces in a short amount of time. The Onager turret is most effective at short range, where its missiles can be accurately targeted at enemy positions. However, it cannot fire at enemies that are too close, as the missiles require a certain distance to arm and track their targets. Additionally, due to the sheer number of missiles it fires, the Onager is not as accurate as other turrets, and can sometimes miss its targets. May explode when damaged.\n\nIt consumes a lot of ammunition, and requires an adjacent crate of missile ammo in order to automatically reload. It cannot be reloaded by hand.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Onager"]/label</xpath>
+    <value>
+      <label>onager cannon</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Onager"]/description</xpath>
+    <value>
+      <description>A self-loading rocket launcher designed to attach to a turret.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFFED_Bullet_Onager"]/label</xpath>
+    <value>
+      <label>onager</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_StrikerTurret"]/label</xpath>
+    <value>
+      <label>striker turret</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Turret_StrikerTurret"]/description</xpath>
+    <value>
+      <description>A stationary, powerful turret. Will self-destruct if it is sufficiently damaged.</description>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Buildings/Buildings_Special.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_UraniumSlug"]/label</xpath>
+    <value>
+      <label>uranium slug ammo box</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_UraniumSlug"]/description</xpath>
+    <value>
+      <description>A small-sized box containing uranium slug ammunition. Used by Kontarion turrets to reload. May explode when damaged.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_Autocannon"]/label</xpath>
+    <value>
+      <label>autocannon ammo box</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_Autocannon"]/description</xpath>
+    <value>
+      <description>A small-sized box containing autocannon ammunition. Used by Palintone turrets to reload. May explode when damaged.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_Missile"]/label</xpath>
+    <value>
+      <label>missile ammo box</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AmmoBox_Missile"]/description</xpath>
+    <value>
+      <description>A small-sized box containing missiles. Used by Onager turrets to reload. May explode when damaged.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_SupplyCrate"]/label</xpath>
+    <value>
+      <label>supply crate</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_BiosecuredCrate"]/label</xpath>
+    <value>
+      <label>biosecured crate</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_SurveillancePillar"]/label</xpath>
+    <value>
+      <label>surveillance pillar</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_StrikeBuoy"]/label</xpath>
+    <value>
+      <label>strike buoy</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_FuelTank"]/label</xpath>
+    <value>
+      <label>fuel tank</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_SurveillanceStation"]/label</xpath>
+    <value>
+      <label>surveillance console</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_SurveillanceStation"]/description</xpath>
+    <value>
+      <description>A large console designed to link to surrounding surveillance pillars. Provides users with all the necessary data related to enemy movements in a given sector.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_SurveillanceDisplayBank"]/label</xpath>
+    <value>
+      <label>surveillance display bank</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_WaterMain"]/label</xpath>
+    <value>
+      <label>water main</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_WaterMain"]/description</xpath>
+    <value>
+      <description>A large node connecting all the nearby water mains. Required for the underfarms to operate.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_ZeusCannonCapacitorBank"]/description</xpath>
+    <value>
+      <description>A capacitor bank that transforms electricity into raw energy for the Zeus cannon. Will release a large EMP shockwave when destroyed, potentially disabling the Zeus cannon itself.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_ZeusCannon"]/label</xpath>
+    <value>
+      <label>orbital cannon</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_ZeusCannon"]/description</xpath>
+    <value>
+      <description>A relic of ancient Sophiamundan technology, the Orbital Cannon is a closely guarded secret of the Whitespring Enclave. This formidable artillery piece has the unique ability to convert vast quantities of electricity into potent energy blasts. With unmatched range, it can pierce the atmosphere to target and obliterate objects in orbit. A testament to lost engineering brilliance, it stands as both a weapon and a symbol of the Whitespring Enclave&apos;s might.\n\nIt has a long charging cycle, after which it will aim at the target and release a devastating energy blast.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_BurnoutIntelScraper"]/label</xpath>
+    <value>
+      <label>burnout intel scraper</label>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Items/Items_Exotic.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Biodecoder"]/label</xpath>
+    <value>
+      <label>biodecoder</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Biodecoder"]/description</xpath>
+    <value>
+      <description>A biodecoder is a single-use ultratech device that is designed to strip biocoding off any item. It uses a complex process to unlatch the biocoding from the original item, which transfers the biocoding onto the biodecoder, breaking it in the process. Biodecoder can also be used on biosecured crate to open them. This device is often used in sensitive operations where the presence of biocoding could compromise the mission.</description>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Items/Items_Resource_Exotic.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Intel"]/label</xpath>
+    <value>
+      <label>intel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_CriticalIntel"]/label</xpath>
+    <value>
+      <label>critical intel</label>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Items/Items_Resource_Shell.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_Shrapnel"]/label</xpath>
+    <value>
+      <label>shrapnel shell</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_Shrapnel"]/description</xpath>
+    <value>
+      <description>Mortar shell that is designed to explode mid-air and release a large number of sharp projectiles. These projectiles are specifically designed to cut through light armored enemies, inflicting serious injuries or fatalities. Projectiles are ejected with the same vector as the mortar shell, and may be stopped by obstacles.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Bullet_Shell_Shrapnel"]/label</xpath>
+    <value>
+      <label>shrapnel shell</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Bullet_Shrapnel"]/label</xpath>
+    <value>
+      <label>shrapnel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_ArmorPiercing"]/label</xpath>
+    <value>
+      <label>armor-piercing shell</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_ArmorPiercing"]/description</xpath>
+    <value>
+      <description>Armor-piercing shells are designed to explode upon impact and destroy anything they hit, completely bypassing the armor of the target. Their explosion radius is almost non-existent, and armored targets need to be hit directly for the shell to destroy them. They are very accurate and travel at extreme speeds.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Bullet_Shell_ArmorPiercing"]/label</xpath>
+    <value>
+      <label>armor-piercing shell</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_Cluster"]/label</xpath>
+    <value>
+      <label>cluster shell</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Shell_Cluster"]/description</xpath>
+    <value>
+      <description>Mortar shell that is designed to split mid-air and release three high-explosive shells. Separated shells are ejected in random directions, following the same vector as the cluster shell. Explosions cover a high area but the accuracy of the shells leave a lot to be desired.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Bullet_Shell_Cluster"]/label</xpath>
+    <value>
+      <label>cluster shell</label>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Misc/Apparel_Belts.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Apparel_BombPack"]/label</xpath>
+    <value>
+      <label>bomb pack</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Apparel_BombPack"]/description</xpath>
+    <value>
+      <description>A single-use man-portable explosive device. Deployed on the ground, it becomes armed and can be detonated with a press of a button. It generates a big explosion thanks to a wired-in antigrain warhead, making it capable of destroying critical infrastructure and personnel alike.</description>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Misc/Filth.xml --><!-- ThingDefs_Misc/Projectiles.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_AerodroneStrikeIncoming"]/label</xpath>
+    <value>
+      <label>vertibot strike</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Spark"]/label</xpath>
+    <value>
+      <label>spark</label>
+    </value>
+  </Operation>
+  --><!-- ThingDefs_Misc/RangedSpacer.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/label</xpath>
+    <value>
+      <label>pulse cycler</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/description</xpath>
+    <value>
+      <description>A modified charged-shot revolver that incorporates mechanoid technology. Recovered thump cannons have been reversed engineered to allow for a powerful charge revolver with two shooting modes to be created. Charged shot mode will eliminate any close targets with a powerful, armor-piercing blast, whilst a Thump shot mode allows users to incapacitate enemies and break any defenses they might be hiding behind. Modes can be changed with a press of a button.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/verbs/li[1]/label</xpath>
+    <value>
+      <label>Single shot (Charged shot)</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/verbs/li[2]/label</xpath>
+    <value>
+      <label>Single shot (Thump shot)</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/tools/li[1]/label</xpath>
+    <value>
+      <label>handle</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/tools/li[2]/label</xpath>
+    <value>
+      <label>barrel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/comps/li/verbProps/li[1]/label</xpath>
+    <value>
+      <label>Single shot (Charged shot)</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_ChargeCycler"]/comps/li/verbProps/li[2]/label</xpath>
+    <value>
+      <label>Single shot (Thump shot)</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Bullet_ChargedShot"]/label</xpath>
+    <value>
+      <label>pulse shot</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bullet_ThumpShot"]/label</xpath>
+    <value>
+      <label>concussion shot</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Fletchling"]/label</xpath>
+    <value>
+      <label>acid scattergun</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Fletchling"]/description</xpath>
+    <value>
+      <description>A modification to the extremely rare fletcher rifle, fletchling is a shotgun commonly used by Whitespring Brotherhood expeditionaries. The mere possession of it can be seen as an act of war against the Shattered Whitespring Enclave. Each fletchling shot releases a number of small acidifier darts that may hit several targets, causing extreme amounts of pain and acid burns. Lethal to organics and almost useless against non-organics, such as mechanoids. \n\nTargets hit by these flechettes will be inflicted with an unstable variant of acidifier fluids, designed to dissolve the target from the inside rather than destroy their equipment. The acid will rampage through the target’s body and usually results in vital organs being dissolved, however lethality isn’t guaranteed.</description>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFED_Gun_Fletchling"]/tools/li/label</xpath>
+    <value>
+      <label>barrel</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VFEE_Bullet_FletchlingDart"]/label</xpath>
+    <value>
+      <label>fletcher dart</label>
+    </value>
+  </Operation>
+  --><!-- ThoughtDefs/Thoughts_Memory_Misc.xml --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFED_UsedDeclassifier"]/stages/li/label</xpath>
+    <value>
+      <label>used a declassifier</label>
+    </value>
+  </Operation>
+  --><!--
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThoughtDef[defName="VFED_UsedDeclassifier"]/stages/li/description</xpath>
+    <value>
+      <description>It was a necessary evil.</description>
+    </value>
+  </Operation>
+  --></operations></Operation></Patch>
