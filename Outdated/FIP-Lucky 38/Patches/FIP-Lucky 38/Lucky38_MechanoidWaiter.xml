@@ -25,7 +25,7 @@
 							<li>Hauling</li>
 						</value>
 					</li>
-					<li Class="PatchOperationAdd">
+					<li Class="PatchOperationAdd" MayRequire="Orion.Gastronomy">
 						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
 						<value>
 							<li>Gastronomy_Waiting</li>
@@ -36,17 +36,6 @@
 						<value>
 							<li>Storefront_Selling</li>
 						</value>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]</xpath>
-						<value>
-							<comps>
-								<li Class="MechanoidWaiter.CompProperties_EnsureSocialMechanoid" />
-							</comps>
-						</value>
-					</li>
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/RecipeDef[defName="Waiter"]</xpath>
 					</li>
 				</operations>
 			</li>
