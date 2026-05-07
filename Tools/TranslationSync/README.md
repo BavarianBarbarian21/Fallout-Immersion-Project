@@ -1,0 +1,86 @@
+# TranslationSync
+
+`Invoke-TranslationSync.ps1` is a part-driven translation sync tool for the four translation mods you described:
+
+- `part1` / `fip`: all `FIP-*` mods in this repository, excluding non-mod folders and translation folders.
+- `part2` / `fcp`: all matching repositories from the `FalloutCollaborationProject` GitHub organization.
+- `part3` / `compatible`: mods referenced from FIP `About.xml`, `LoadFolders.xml`, and XML patch metadata such as `MayRequire` and `IfModActive`, excluding DLC, FIP, and FCP package IDs.
+- `part4` / `playset-other`: mods in a user-provided playset folder that are not already included in the first three parts.
+
+## What it does
+
+- Refreshes plain text mod-name lists under `mod-lists/`.
+- Optionally fast-forwards the local FIP repository when you pass `-RefreshFipSource`.
+- Optionally clones or updates FCP repositories into the configured cache root when you pass `-RefreshFcpSources`.
+- Scans each source mod for:
+  - `Languages/English/Keyed/*.xml`
+  - `Languages/English/Strings/Names/*.txt`
+  - translatable leaf nodes inside any `Defs/**/*.xml`, emitted as `DefInjected`
+- Builds the XML leaf-name matcher from both the built-in fallback list and RimWorld source members marked with `MustTranslate` when `RimWorldRoot/Source` is available.
+- Writes an English dummy baseline for each output translation mod.
+- Updates every configured non-English locale so that:
+  - unchanged English source keeps the existing translation,
+  - new English entries are inserted as English fallback text,
+  - changed English entries reset to the new English fallback text.
+
+## Runtime behavior
+
+- Def XML parsing is incremental. The tool caches parsed `Defs` files using file length plus UTC write ticks.
+- English `Keyed` and `Names` files are copied directly from source mods.
+- Local FIP source refresh is optional and only happens when you pass `-RefreshFipSource`.
+- FCP source refresh is optional and only happens when you pass `-RefreshFcpSources`.
+- Part 3 currently means: external mods your FIP mods patch, depend on, or conditionally load against.
+
+## Configuration
+
+Edit `config.json` before first real use.
+
+- `paths.languageTemplateRoot`: folder whose subdirectories define the languages to maintain.
+- `paths.playsetModsRoot`: leave empty for now; set this later when you want the fourth category populated automatically.
+- `paths.fcpCacheRoot`: local folder where FCP repositories are cloned or updated.
+- `compatibility.additionalLookupRoots`: add extra mod library folders if compatibility targets are not under RimWorld or the FCP cache.
+
+## Usage
+
+Refresh the text lists only:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command refresh-lists
+```
+
+Refresh lists and update the local FCP cache:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command refresh-lists -RefreshFcpSources
+```
+
+Refresh lists and also fast-forward the local FIP repository:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command refresh-lists -RefreshFipSource -RefreshFcpSources
+```
+
+Sync one category:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command sync -Category part1 -RefreshLists
+```
+
+Sync everything:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command sync-all -RefreshLists
+```
+
+Limit sync to specific locales plus English:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command sync-all -Languages German,French
+```
+
+## Notes
+
+- The generated output mod folders default to `Translations/Generated/*` and are created on first sync.
+- `compatible-unresolved-packageIds.txt` is written when Part 3 can detect a referenced package ID but cannot map it to a local folder name.
+- Comma-separated package-id lists from `LoadFolders.xml` and patch metadata are split into individual package IDs.
+- Part 1 is configured to `loadAfter` all package IDs discovered across all category lists when you use `sync-all`, plus Parts 2-4.
