@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FIP - Big MT: Fleshbeast Patches
+  Rethemes all fleshbeast entities as FEV-mutated flesh horrors escaped from Big MT vats.
+
+  Fleshbeast family     → FEV beasts (general category)
+  FleshmassNucleus      → ZAX unit (the AI core directing the FEV mass)
+  Fleshmass codex entry → FEV mass
+  Individual species:
+    Bulbfreak           → FEV hulk    (slow, explodes into swarm)
+    Toughspike          → FEV soldier (ranged keratin spines)
+    Trispike            → FEV spiker  (fast, three-pronged)
+    Fingerspike         → FEV crawler (small, numerous)
+    Dreadmeld           → FEV amalgam (merged multi-entity horror)
+-->
+<Patch>
+
+  <!-- ==================== CATEGORY CODEX ENTRY ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/label</xpath>
+    <value><label>FEV beast</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/description</xpath>
+    <value><description>Creatures produced by runaway Forced Evolutionary Virus exposure in Big MT containment vats. FEV beasts are masses of cancerous, rapidly dividing flesh organized by a distributed nervous system. Some specimens contain multiple redundant neural cores, allowing them to split into smaller beasts on death. They are directed at a high level by a ZAX unit.</description></value>
+  </Operation>
+
+  <!-- ==================== FLESSMASS NUCLEUS → ZAX UNIT ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="FleshmassNucleus"]/label</xpath>
+    <value><label>ZAX unit</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="FleshmassNucleus"]/description</xpath>
+    <value><description>A ZAX supercomputer core that has become fused with Big MT's FEV mass containment vat. The ZAX unit continues to run its original research directives, directing FEV beast growth and coordinating experimental subjects. It is simultaneously the brain and the tumor of the entire FEV mass organism. Destroying it will collapse the FEV mass structure.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="FleshmassNucleus"]/label</xpath>
+    <value><label>ZAX unit</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/EntityCodexEntryDef[defName="FleshmassNucleus"]/label</xpath>
+    <value><label>ZAX unit</label></value>
+  </Operation>
+
+  <!-- ==================== BULBFREAK → FEV HULK ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Bulbfreak"]/label</xpath>
+    <value><label>FEV hulk</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Bulbfreak"]/description</xpath>
+    <value><description>A massive amalgamation of FEV-mutated flesh, all connected by a single distributed nervous system. Two enormous clawed limbs tear through anything in reach. FEV hulks are relatively slow but extremely durable, and the viral mass that composes them is unstable — when they die, the nervous system distributes command to smaller autonomous sub-units, which burst from the collapsing body as independent FEV beasts.\n\nThe smell of rancid bioma typically announces them before they're seen.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Bulbfreak"]/label</xpath>
+    <value><label>FEV hulk</label></value>
+  </Operation>
+
+  <!-- ==================== TOUGHSPIKE → FEV SOLDIER ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Toughspike"]/label</xpath>
+    <value><label>FEV soldier</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Toughspike"]/description</xpath>
+    <value><description>A FEV beast engineered — perhaps intentionally, perhaps by evolutionary drift — for anti-personnel capability. Two hardened keratin-spike limbs launch dense projectiles at range with surprising accuracy. An armored carapace provides the body with substantial protection against conventional arms.\n\nFEV soldier corpses degrade quickly into FEV slurry if not processed immediately.</description></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Toughspike"]/label</xpath>
+    <value><label>FEV soldier</label></value>
+  </Operation>
+
+  <!-- ==================== TRISPIKE → FEV SPIKER ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Trispike"]/label</xpath>
+    <value><label>FEV spiker</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Trispike"]/label</xpath>
+    <value><label>FEV spiker</label></value>
+  </Operation>
+
+  <!-- ==================== FINGERSPIKE → FEV CRAWLER ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Fingerspike"]/label</xpath>
+    <value><label>FEV crawler</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Fingerspike"]/label</xpath>
+    <value><label>FEV crawler</label></value>
+  </Operation>
+
+  <!-- ==================== DREADMELD → FEV AMALGAM ==================== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Dreadmeld"]/label</xpath>
+    <value><label>FEV amalgam</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Dreadmeld"]/label</xpath>
+    <value><label>FEV amalgam</label></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/label</xpath>
+    <value><label>FEV amalgam</label></value>
+  </Operation>
+
+</Patch>

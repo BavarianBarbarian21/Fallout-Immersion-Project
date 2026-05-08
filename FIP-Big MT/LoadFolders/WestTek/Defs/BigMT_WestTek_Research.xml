@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FIP - Big MT: WestTek Research Integration
+  Adds a West Tek research branch to the Anomaly knowledge tree.
+  These projects are unlocked by studying Crazed Super Mutants and Nightkin
+  on holding platforms, and they feed data back into FIP-WestTek's research system.
+
+  Research chain:
+    1. BigMT_FEVSuperMutantAnalysis  (Basic tier)   — Study a crazed super mutant
+    2. BigMT_NightkinContainment     (Advanced tier) — Contain a nightkin; unlock Stealth Boy research notes
+    3. BigMT_WestTekSynthesis        (Advanced tier) — Synthesize WestTek FEV variant from study data
+
+  These use Anomaly's KnowledgeCategoryDef system (Basic / Advanced).
+-->
+<Defs>
+
+  <ResearchTabDef>
+    <defName>BigMT_WestTek</defName>
+    <label>West Tek protocols</label>
+  </ResearchTabDef>
+
+  <!-- ==================== TIER 1: FEV SUPER MUTANT ANALYSIS ==================== -->
+
+  <ResearchProjectDef>
+    <defName>BigMT_FEVSuperMutantAnalysis</defName>
+    <label>FEV super mutant analysis</label>
+    <description>Study a captured crazed super mutant on a holding platform. Their FEV-mutated biology differs from standard FEV exposure chains — Big MT used a modified batch. Analyzing it will establish a baseline for the West Tek research protocol.</description>
+    <baseCost>1000</baseCost>
+    <tab>BigMT_WestTek</tab>
+    <techLevel>Industrial</techLevel>
+    <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+    <prerequisites>
+      <li>HoldingPlatform</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ==================== TIER 2: NIGHTKIN CONTAINMENT PROTOCOL ==================== -->
+
+  <ResearchProjectDef>
+    <defName>BigMT_NightkinContainment</defName>
+    <label>nightkin containment protocol</label>
+    <description>Develop containment procedures for nightkin — second-generation super mutants with integrated Stealth Boy technology. Their psychic instability makes standard containment unreliable. Successful study yields classified Big MT data on Stealth Boy neural integration and the advanced FEV batch used on second-generation subjects.</description>
+    <baseCost>2000</baseCost>
+    <tab>BigMT_WestTek</tab>
+    <techLevel>Spacer</techLevel>
+    <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Advanced</knowledgeCategory>
+    <prerequisites>
+      <li>BigMT_FEVSuperMutantAnalysis</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ==================== TIER 3: WEST TEK FEV SYNTHESIS ==================== -->
+
+  <ResearchProjectDef>
+    <defName>BigMT_WestTekSynthesis</defName>
+    <label>West Tek FEV synthesis</label>
+    <description>Synthesize a controlled sample of the Big MT FEV variant using data gathered from containment study. This classified research feeds directly into WestTek's advanced FEV procedure tree and unlocks the next tier of FEV mutation research. The synthesis process requires Saturnite alloy as a catalyst medium.</description>
+    <baseCost>3500</baseCost>
+    <tab>BigMT_WestTek</tab>
+    <techLevel>Spacer</techLevel>
+    <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Advanced</knowledgeCategory>
+    <prerequisites>
+      <li>BigMT_NightkinContainment</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
