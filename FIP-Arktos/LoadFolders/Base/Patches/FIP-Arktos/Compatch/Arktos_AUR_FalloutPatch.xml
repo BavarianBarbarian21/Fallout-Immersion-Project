@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>XMB.AncientUrbanrUins.MO</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Default AUR gun pools are modern real-world kits. Fall back to generic industrial weapons unless FCP ballistic packs are present. -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_OrdinaryWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_Revolver</li>
+                        <li>Gun_Autopistol</li>
+                        <li>Gun_MachinePistol</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1~2</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_BoltActionRifle</li>
+                        <li>Gun_PumpShotgun</li>
+                        <li>Gun_HeavySMG</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_AdvancedWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_AssaultRifle</li>
+                        <li>Gun_ChainShotgun</li>
+                        <li>Gun_LMG</li>
+                        <li>Gun_SniperRifle</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="AncientSoldierBoss"]/weaponTags</xpath>
+          <value>
+            <weaponTags>
+              <li>IndustrialGunAdvanced</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="AncientMallGuards"]/weaponTags</xpath>
+          <value>
+            <weaponTags>
+              <li>IndustrialGunAdvanced</li>
+            </weaponTags>
+          </value>
+        </li>
+
+        <!-- Fallout-facing fallback labels for directly placed packaged food and drinks. -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_MRE"]/label</xpath>
+          <value><label>pre-war field ration</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_CannedBraisedPorkbelly"]/label</xpath>
+          <value><label>canned pork</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_CannedHerring"]/label</xpath>
+          <value><label>canned fish</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_CannedPeas"]/label</xpath>
+          <value><label>canned peas</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_CannedStewedBeef"]/label</xpath>
+          <value><label>canned stew</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_DeliciousCannedBeef"]/label</xpath>
+          <value><label>canned beef</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsA"]/label</xpath>
+          <value><label>potato crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsB"]/label</xpath>
+          <value><label>paprika crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsC"]/label</xpath>
+          <value><label>barbecue crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsD"]/label</xpath>
+          <value><label>sour cream crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsE"]/label</xpath>
+          <value><label>salted crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_PotatoChipsF"]/label</xpath>
+          <value><label>spiced crisps</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_Coca"]/label</xpath>
+          <value><label>cola</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_Fanta"]/label</xpath>
+          <value><label>orange soda</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_MilkBeer"]/label</xpath>
+          <value><label>milk stout</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_Pepsi"]/label</xpath>
+          <value><label>dark cola</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_Sprite"]/label</xpath>
+          <value><label>clear soda</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_TsingtaoBeer"]/label</xpath>
+          <value><label>pre-war lager</label></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AM_Budweiser"]/label</xpath>
+          <value><label>light lager</label></value>
+        </li>
+
+        <!-- Prefer Fallout food and weapons when the corresponding FCP modules are loaded. -->
+        <li Class="PatchOperationReplace" MayRequire="Rick.FCP.PreWarFood">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_PotatoChips"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>FCP_Food_Potato_Crisps</li>
+                        <li>FCP_Food_Potato_Crisps_Lightly_Salted</li>
+                        <li>FCP_Food_Fancy_Lad_Snack_Cakes</li>
+                        <li>FCP_Food_Fancy_Lad_Snack_Cakes_Buzzbite_Flavor</li>
+                        <li>FCP_Food_Sugar_Bombs</li>
+                        <li>FCP_Food_Sugar_Bombs_Fun_Size</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>2~6</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace" MayRequire="Rick.FCP.PreWarFood">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_Food"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>MealSurvivalPack</li>
+                        <li>FCP_Food_Cram</li>
+                        <li>FCP_Food_Insta_Mash</li>
+                        <li>FCP_Food_Packaged_Iguana_Bits</li>
+                        <li>FCP_Food_Pork_N_Beans</li>
+                        <li>FCP_Food_Salisbury_Steak</li>
+                        <li>FCP_Food_Yum_Yum_Deviled_Eggs</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1~3</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.25</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Pemmican</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>25~75</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BallisticWeapons">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_OrdinaryWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>FCP_Gun_10mm_Pistol</li>
+                        <li>FCP_Gun_9mm_Pistol</li>
+                        <li>FCP_Gun_10mm_SMG</li>
+                        <li>FCP_Gun_9mm_SMG</li>
+                        <li>FCP_Gun_Varmint_Rifle</li>
+                        <li>FCP_Gun_Cowboy_Repeater</li>
+                        <li>FCP_Gun_Combat_Rifle_Short</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BallisticWeapons">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_AdvancedWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>FCP_Gun_Combat_Rifle_Standard</li>
+                        <li>FCP_Gun_Combat_Rifle_Scoped</li>
+                        <li>FCP_Gun_DKS_501_Sniper_Rifle</li>
+                        <li>FCP_Gun_Light_Machine_Gun</li>
+                        <li>FCP_Gun_Minigun</li>
+                        <li>FCP_Gun_44Magnum_Revolver</li>
+                        <li>FCP_Gun_Hunting_Revolver</li>
+                        <li>FCP_Gun_223_Rifle</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Name="WestTek_Apparel_FlakVestBase" ParentName="ArmorMachineableBase" Abstract="True">
+  <ThingDef Name="WestTek_Apparel_Armor" ParentName="ArmorMachineableBase" Abstract="True">
     <techLevel>Industrial</techLevel>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
@@ -11,7 +11,7 @@
       <li>ApparelArmor</li>
     </thingCategories>
     <equippedStatOffsets>
-      <MoveSpeed>-0.12</MoveSpeed>
+      <MoveSpeed>-0.08</MoveSpeed>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -32,7 +32,7 @@
   </ThingDef>
 
   <!--Tier 1 Armor-->
-  <ThingDef ParentName="WestTek_Apparel_FlakVestBase">
+  <ThingDef ParentName="WestTek_Apparel_Armor">
     <defName>WestTek_Apparel_GruntArmor</defName>
     <label>grunt armor</label>
     <description>Crude field armor assembled for ordinary super mutant shock troops.</description>
@@ -44,21 +44,24 @@
     </recipeMaker>
     <costList>
       <Steel>90</Steel>
-      <Uranium>20</Uranium>
+      <Cloth>35</Cloth>
     </costList>
     <statBases>
-      <WorkToMake>3200</WorkToMake>
-      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToMake>2400</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
       <Mass>8</Mass>
-      <MarketValue>240</MarketValue>
-      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.24</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.1</ArmorRating_Heat>
+      <MarketValue>300</MarketValue>
+      <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.22</ArmorRating_Heat>
     </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>2</CarryingCapacity>
+    </equippedStatOffsets>
   </ThingDef>
 
   <!--Tier 2 Armor-->
-  <ThingDef ParentName="WestTek_Apparel_FlakVestBase">
+  <ThingDef ParentName="WestTek_Apparel_Armor">
     <defName>WestTek_Apparel_BruteArmor</defName>
     <label>brute armor</label>
     <description>Heavier scavenged plating intended for large mutant bruisers expected to absorb return fire.</description>
@@ -70,22 +73,24 @@
     </recipeMaker>
     <costList>
       <Steel>130</Steel>
-      <Uranium>45</Uranium>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <statBases>
-      <WorkToMake>4200</WorkToMake>
-      <MaxHitPoints>190</MaxHitPoints>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>220</MaxHitPoints>
       <Mass>11</Mass>
-      <MarketValue>360</MarketValue>
-      <ArmorRating_Sharp>0.56</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <MarketValue>450</MarketValue>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
     </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>5</CarryingCapacity>
+    </equippedStatOffsets>
   </ThingDef>
 
   <!--Tier 3 Armor-->
-  <ThingDef ParentName="WestTek_Apparel_FlakVestBase">
+  <ThingDef ParentName="WestTek_Apparel_Armor">
     <defName>WestTek_Apparel_MasterArmor</defName>
     <label>master armor</label>
     <description>Command armor reserved for high-value mutant leaders and vat-born enforcers.</description>
@@ -96,18 +101,22 @@
       </skillRequirements>
     </recipeMaker>
     <costList>
-      <Steel>160</Steel>
-      <Uranium>80</Uranium>
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>165</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Cloth>35</Cloth>
     </costList>
     <statBases>
-      <WorkToMake>5200</WorkToMake>
-      <MaxHitPoints>230</MaxHitPoints>
+      <WorkToMake>6500</WorkToMake>
+      <MaxHitPoints>260</MaxHitPoints>
       <Mass>13</Mass>
-      <MarketValue>520</MarketValue>
-      <ArmorRating_Sharp>0.68</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.24</ArmorRating_Heat>
+      <MarketValue>720</MarketValue>
+      <ArmorRating_Sharp>1.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.38</ArmorRating_Heat>
     </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>8</CarryingCapacity>
+      <MeleeHitChance>0.03</MeleeHitChance>
+    </equippedStatOffsets>
   </ThingDef>
 </Defs>

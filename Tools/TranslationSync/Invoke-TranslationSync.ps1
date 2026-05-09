@@ -27,11 +27,13 @@ param(
     [ValidateSet('fip', 'fcp', 'compatible', 'playset-other', 'part1', 'part2', 'part3', 'part4')]
     [string]$Category,
 
-    [string]$ConfigPath = (Join-Path $PSScriptRoot 'config.json'),
+    [string]$ConfigPath,
 
     [string]$PlaysetModsRoot,
 
     [string[]]$Languages,
+
+    [string[]]$IncludeMods,
 
     [switch]$RefreshLists,
 
@@ -42,6 +44,40 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+function Normalize-ListArgument {
+    param([string[]]$Values)
+
+    $normalized = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($value in @($Values)) {
+        if ([string]::IsNullOrWhiteSpace($value)) {
+            continue
+        }
+
+        foreach ($part in @([string]$value -split ',')) {
+            $trimmed = $part.Trim()
+            if (-not [string]::IsNullOrWhiteSpace($trimmed)) {
+                $normalized.Add($trimmed) | Out-Null
+            }
+        }
+    }
+
+    return $normalized.ToArray()
+}
+
+$Languages = @(Normalize-ListArgument -Values $Languages)
+$IncludeMods = @(Normalize-ListArgument -Values $IncludeMods)
+
+if ([string]::IsNullOrWhiteSpace($ConfigPath)) {
+    $scriptRoot = if (-not [string]::IsNullOrWhiteSpace($PSScriptRoot)) {
+        $PSScriptRoot
+    }
+    else {
+        Split-Path -Parent $MyInvocation.MyCommand.Path
+    }
+
+    $ConfigPath = Join-Path $scriptRoot 'config.json'
+}
 
 $Utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 [void][System.Reflection.Assembly]::LoadWithPartialName('System.Web.Extensions')
@@ -210,6 +246,7 @@ function Load-Config {
     $paths.RimWorldRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.rimWorldRoot
     $paths.FcpCacheRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.fcpCacheRoot
     $paths.LanguageTemplateRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.languageTemplateRoot
+    $paths.LocaleRulesPath = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.localeRulesPath
     $paths.PlaysetModsRoot = if ($PlaysetModsRoot) {
         Get-AbsolutePath -BasePath $configRoot -Path $PlaysetModsRoot
     }
@@ -225,7 +262,504 @@ function Load-Config {
         $categoryEntry.modListPath = Get-AbsolutePath -BasePath $configRoot -Path $categoryEntry.modListPath
     }
 
+    if (-not $config.ContainsKey('translation') -or $null -eq $config.translation) {
+        $config['translation'] = @{}
+    }
+    if (-not $config.translation.ContainsKey('provider') -or [string]::IsNullOrWhiteSpace([string]$config.translation.provider)) {
+        $config.translation['provider'] = 'google-gtx'
+    }
+    if (-not $config.translation.ContainsKey('sourceLanguageCode') -or [string]::IsNullOrWhiteSpace([string]$config.translation.sourceLanguageCode)) {
+        $config.translation['sourceLanguageCode'] = 'en'
+    }
+    if (-not $config.translation.ContainsKey('requestDelayMs')) {
+        $config.translation['requestDelayMs'] = 0
+    }
+    if (-not $config.translation.ContainsKey('timeoutSeconds')) {
+        $config.translation['timeoutSeconds'] = 30
+    }
+
     return $config
+}
+
+function New-EmptyLocaleRules {
+    return @{
+        global = @{
+            literalReplacements = @()
+        }
+        languages = @{}
+    }
+}
+
+function Load-LocaleRules {
+    param([hashtable]$Config)
+
+    $rulesPath = $Config.paths.LocaleRulesPath
+    if ([string]::IsNullOrWhiteSpace($rulesPath) -or -not (Test-Path -LiteralPath $rulesPath)) {
+        return New-EmptyLocaleRules
+    }
+
+    $rules = Load-JsonFile -FilePath $rulesPath
+    if ($null -eq $rules) {
+        return New-EmptyLocaleRules
+    }
+
+    if (-not $rules.ContainsKey('global')) {
+        $rules['global'] = @{ literalReplacements = @() }
+    }
+    elseif (-not $rules.global.ContainsKey('literalReplacements')) {
+        $rules.global.literalReplacements = @()
+    }
+
+    if (-not $rules.ContainsKey('languages')) {
+        $rules['languages'] = @{}
+    }
+
+    return $rules
+}
+
+function Get-LanguageLiteralReplacements {
+    param(
+        [string]$Language,
+        [hashtable]$LocaleRules
+    )
+
+    if ($null -eq $LocaleRules) {
+        return @()
+    }
+
+    $all = New-Object 'System.Collections.Generic.List[object]'
+    foreach ($replacement in @($LocaleRules.global.literalReplacements)) {
+        $all.Add($replacement) | Out-Null
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($Language) -and $LocaleRules.languages.ContainsKey($Language)) {
+        $languageConfig = $LocaleRules.languages[$Language]
+        if ($languageConfig.ContainsKey('literalReplacements')) {
+            foreach ($replacement in @($languageConfig.literalReplacements)) {
+                $all.Add($replacement) | Out-Null
+            }
+        }
+    }
+
+    return @($all.ToArray() | Sort-Object -Property @{ Expression = {
+        if ($_.ContainsKey('from') -and -not [string]::IsNullOrWhiteSpace([string]$_.from)) {
+            ([string]$_.from).Length
+        }
+        else {
+            0
+        }
+    } } -Descending)
+}
+
+function Apply-LanguageRulesToText {
+    param(
+        [string]$Text,
+        [string]$Language,
+        [hashtable]$LocaleRules
+    )
+
+    if ([string]::IsNullOrEmpty($Text) -or [string]::IsNullOrWhiteSpace($Language) -or $Language -eq 'English') {
+        return $Text
+    }
+
+    $result = $Text
+    foreach ($replacement in @(Get-LanguageLiteralReplacements -Language $Language -LocaleRules $LocaleRules)) {
+        $from = [string]$replacement.from
+        if ([string]::IsNullOrWhiteSpace($from)) {
+            continue
+        }
+
+        $to = if ($replacement.ContainsKey('to') -and $null -ne $replacement.to) {
+            [string]$replacement.to
+        }
+        else {
+            ''
+        }
+
+        $ignoreCase = $true
+        if ($replacement.ContainsKey('ignoreCase')) {
+            $ignoreCase = [bool]$replacement.ignoreCase
+        }
+
+        $options = [System.Text.RegularExpressions.RegexOptions]::None
+        if ($ignoreCase) {
+            $options = $options -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+        }
+
+        $escapedPattern = [regex]::Escape($from)
+        $result = [regex]::Replace(
+            $result,
+            $escapedPattern,
+            [System.Text.RegularExpressions.MatchEvaluator]{
+                param($match)
+                $to
+            },
+            $options
+        )
+    }
+
+    return $result
+}
+
+function Get-LanguageTranslationCode {
+    param([string]$Language)
+
+    switch ($Language) {
+        'German' { return 'de' }
+        'ChineseSimplified' { return 'zh-CN' }
+        default { return $null }
+    }
+}
+
+function Get-TranslationCacheKey {
+    param(
+        [string]$Language,
+        [string]$Text
+    )
+
+    $provider = if ($script:TranslationConfig -and $script:TranslationConfig.ContainsKey('provider')) {
+        [string]$script:TranslationConfig.provider
+    }
+    else {
+        'none'
+    }
+
+    $payload = '{0}`n{1}`n{2}`n{3}' -f 'v6', $provider, $Language, $Text
+    $bytes = [System.Text.Encoding]::UTF8.GetBytes($payload)
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        $hash = $sha256.ComputeHash($bytes)
+    }
+    finally {
+        $sha256.Dispose()
+    }
+
+    return ([System.BitConverter]::ToString($hash)).Replace('-', '')
+}
+
+function Protect-TextForTranslation {
+    param(
+        [string]$Text,
+        [string]$Language,
+        [hashtable]$LocaleRules
+    )
+
+    $protectedText = $Text
+    $tokens = New-Object 'System.Collections.Generic.List[object]'
+    $tokenIndex = 0
+
+    foreach ($replacement in @(Get-LanguageLiteralReplacements -Language $Language -LocaleRules $LocaleRules)) {
+        $from = [string]$replacement.from
+        if ([string]::IsNullOrWhiteSpace($from)) {
+            continue
+        }
+
+        $to = if ($replacement.ContainsKey('to') -and $null -ne $replacement.to) {
+            [string]$replacement.to
+        }
+        else {
+            ''
+        }
+
+        $ignoreCase = $true
+        if ($replacement.ContainsKey('ignoreCase')) {
+            $ignoreCase = [bool]$replacement.ignoreCase
+        }
+
+        $options = [System.Text.RegularExpressions.RegexOptions]::None
+        if ($ignoreCase) {
+            $options = $options -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+        }
+
+        $escapedPattern = [regex]::Escape($from)
+        $protectedText = [regex]::Replace(
+            $protectedText,
+            $escapedPattern,
+            [System.Text.RegularExpressions.MatchEvaluator]{
+                param($match)
+                $token = '__FIP_TERM_{0}__' -f $tokenIndex
+                $tokens.Add([pscustomobject]@{ Token = $token; Value = $to }) | Out-Null
+                $tokenIndex++
+                return $token
+            },
+            $options
+        )
+    }
+
+    $provider = if ($script:TranslationConfig -and $script:TranslationConfig.ContainsKey('provider')) {
+        [string]$script:TranslationConfig.provider
+    }
+    else {
+        'none'
+    }
+
+    if ($provider -eq 'google-gtx') {
+        return [pscustomobject]@{
+            Text   = $protectedText
+            Tokens = $tokens.ToArray()
+        }
+    }
+
+    $placeholderPattern = '\r\n|\n|\r|\t|\[[^\]]+\]|\{[^{}\r\n]+\}'
+    $protectedText = [regex]::Replace(
+        $protectedText,
+        $placeholderPattern,
+        [System.Text.RegularExpressions.MatchEvaluator]{
+            param($match)
+            $token = '__FIP_TOKEN_{0}__' -f $tokenIndex
+            $tokens.Add([pscustomobject]@{ Token = $token; Value = $match.Value }) | Out-Null
+            $tokenIndex++
+            return $token
+        }
+    )
+
+    return [pscustomobject]@{
+        Text   = $protectedText
+        Tokens = $tokens.ToArray()
+    }
+}
+
+function Restore-TextAfterTranslation {
+    param(
+        [string]$Text,
+        [object[]]$Tokens
+    )
+
+    $restored = $Text
+    foreach ($token in @($Tokens | Sort-Object { ([string]$_.Token).Length } -Descending)) {
+        $restored = $restored.Replace([string]$token.Token, [string]$token.Value)
+    }
+    return $restored
+}
+
+function Normalize-TranslatedProtectionTokens {
+    param([string]$Text)
+
+    return [regex]::Replace(
+        $Text,
+        '(?:__\s*)?FIP(?:\s*_|\s+)?(?<kind>TOKEN|TERM)(?:\s*_|\s+)?(?<index>\d+)(?:\s*__)?',
+        [System.Text.RegularExpressions.MatchEvaluator]{
+            param($match)
+            return '__FIP_{0}_{1}__' -f $match.Groups['kind'].Value.ToUpperInvariant(), $match.Groups['index'].Value
+        },
+        [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+    )
+}
+
+function Restore-SourcePlaceholders {
+    param(
+        [string]$SourceText,
+        [string]$TranslatedText
+    )
+
+    if ([string]::IsNullOrEmpty($SourceText) -or [string]::IsNullOrEmpty($TranslatedText)) {
+        return $TranslatedText
+    }
+
+    $placeholderPattern = '\[[^\]]+\]|\{[^{}\r\n]+\}'
+    $sourceMatches = [regex]::Matches($SourceText, $placeholderPattern)
+    if ($sourceMatches.Count -eq 0) {
+        return $TranslatedText
+    }
+
+    $translatedMatches = [regex]::Matches($TranslatedText, $placeholderPattern)
+    if ($translatedMatches.Count -ne $sourceMatches.Count) {
+        return $TranslatedText
+    }
+
+    $builder = [System.Text.StringBuilder]::new()
+    $position = 0
+    for ($index = 0; $index -lt $translatedMatches.Count; $index++) {
+        $match = $translatedMatches[$index]
+        [void]$builder.Append($TranslatedText.Substring($position, $match.Index - $position))
+        [void]$builder.Append($sourceMatches[$index].Value)
+        $position = $match.Index + $match.Length
+    }
+
+    [void]$builder.Append($TranslatedText.Substring($position))
+    return $builder.ToString()
+}
+
+function Split-TextForTranslation {
+    param(
+        [string]$Text,
+        [int]$MaxLength = 400
+    )
+
+    if ([string]::IsNullOrEmpty($Text) -or $Text.Length -le $MaxLength) {
+        return @($Text)
+    }
+
+    $chunks = New-Object 'System.Collections.Generic.List[string]'
+    $remaining = $Text.Trim()
+    while ($remaining.Length -gt $MaxLength) {
+        $splitIndex = $remaining.LastIndexOf(' ', $MaxLength)
+        if ($splitIndex -lt 0 -or $splitIndex -lt [Math]::Floor($MaxLength / 2)) {
+            $splitIndex = $MaxLength
+        }
+
+        $chunk = $remaining.Substring(0, $splitIndex).Trim()
+        if (-not [string]::IsNullOrWhiteSpace($chunk)) {
+            $chunks.Add($chunk) | Out-Null
+        }
+        $remaining = $remaining.Substring($splitIndex).TrimStart()
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($remaining)) {
+        $chunks.Add($remaining) | Out-Null
+    }
+
+    return $chunks.ToArray()
+}
+
+function Test-LocaleValueNeedsRefresh {
+    param(
+        [string]$CurrentEnglish,
+        [string]$ExistingLocale
+    )
+
+    if ($script:TranslationForceRefreshAllLocales) {
+        return $true
+    }
+
+    if ([string]::IsNullOrWhiteSpace($ExistingLocale)) {
+        return $true
+    }
+    if ($ExistingLocale -eq $CurrentEnglish) {
+        return $true
+    }
+    if ($ExistingLocale -match 'QUERY LENGTH LIMIT EXCEEDED') {
+        return $true
+    }
+    if ($ExistingLocale -match 'FIP\s*(?:TOKEN|TERM)\s*\d+\s*X') {
+        return $true
+    }
+
+    $placeholderPattern = '\[[^\]]+\]|\{[^{}\r\n]+\}'
+    foreach ($match in [regex]::Matches($CurrentEnglish, $placeholderPattern)) {
+        if (-not $ExistingLocale.Contains($match.Value)) {
+            return $true
+        }
+    }
+
+    return $false
+}
+
+function Invoke-ConfiguredTranslation {
+    param(
+        [string]$Text,
+        [string]$Language,
+        [hashtable]$LocaleRules
+    )
+
+    if ([string]::IsNullOrEmpty($Text) -or [string]::IsNullOrWhiteSpace($Language) -or $Language -eq 'English') {
+        return $Text
+    }
+
+    $provider = if ($script:TranslationConfig -and $script:TranslationConfig.ContainsKey('provider')) {
+        [string]$script:TranslationConfig.provider
+    }
+    else {
+        'none'
+    }
+
+    if ([string]::IsNullOrWhiteSpace($provider) -or $provider -eq 'none') {
+        return Apply-LanguageRulesToText -Text $Text -Language $Language -LocaleRules $LocaleRules
+    }
+
+    $targetCode = Get-LanguageTranslationCode -Language $Language
+    if ([string]::IsNullOrWhiteSpace($targetCode)) {
+        return Apply-LanguageRulesToText -Text $Text -Language $Language -LocaleRules $LocaleRules
+    }
+
+    $cacheKey = Get-TranslationCacheKey -Language $Language -Text $Text
+    $translationCache = $script:TranslationState.Data.translationCache
+    if ($translationCache.ContainsKey($cacheKey)) {
+        return [string]$translationCache[$cacheKey].translated
+    }
+
+    $prepared = Protect-TextForTranslation -Text $Text -Language $Language -LocaleRules $LocaleRules
+    if ([string]::IsNullOrWhiteSpace($prepared.Text)) {
+        return Restore-TextAfterTranslation -Text $prepared.Text -Tokens $prepared.Tokens
+    }
+
+    $translated = $prepared.Text
+    try {
+        switch ($provider) {
+            'google-gtx' {
+                [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+                $sourceCode = [string]$script:TranslationConfig.sourceLanguageCode
+                $timeoutSeconds = [int]$script:TranslationConfig.timeoutSeconds
+                $translatedChunks = New-Object 'System.Collections.Generic.List[string]'
+                foreach ($chunk in @(Split-TextForTranslation -Text $prepared.Text -MaxLength 3000)) {
+                    $uri = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' + [System.Uri]::EscapeDataString($sourceCode) + '&tl=' + [System.Uri]::EscapeDataString($targetCode) + '&dt=t&q=' + [System.Uri]::EscapeDataString($chunk)
+                    $response = Invoke-RestMethod -Uri $uri -Method Get -TimeoutSec $timeoutSeconds
+                    $translatedChunk = $chunk
+                    if ($null -ne $response -and $response.Count -gt 0 -and $null -ne $response[0]) {
+                        $builder = [System.Text.StringBuilder]::new()
+                        foreach ($segment in @($response[0])) {
+                            if ($segment -is [System.Array] -and $segment.Length -gt 0 -and $null -ne $segment[0]) {
+                                [void]$builder.Append([string]$segment[0])
+                            }
+                        }
+
+                        if ($builder.Length -gt 0) {
+                            $translatedChunk = $builder.ToString()
+                        }
+                    }
+                    $translatedChunks.Add($translatedChunk) | Out-Null
+                }
+
+                if ($translatedChunks.Count -gt 0) {
+                    $translated = $translatedChunks -join ' '
+                }
+            }
+            'mymemory' {
+                [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+                $sourceCode = [string]$script:TranslationConfig.sourceLanguageCode
+                $timeoutSeconds = [int]$script:TranslationConfig.timeoutSeconds
+                $translatedChunks = New-Object 'System.Collections.Generic.List[string]'
+                foreach ($chunk in @(Split-TextForTranslation -Text $prepared.Text -MaxLength 400)) {
+                    $uri = 'https://api.mymemory.translated.net/get?q=' + [System.Uri]::EscapeDataString($chunk) + '&langpair=' + [System.Uri]::EscapeDataString($sourceCode) + '|' + [System.Uri]::EscapeDataString($targetCode)
+                    $response = Invoke-RestMethod -Uri $uri -Method Get -TimeoutSec $timeoutSeconds
+                    $translatedChunk = $chunk
+                    if ($null -ne $response -and $response.PSObject.Properties.Match('responseData').Count -gt 0 -and $null -ne $response.responseData -and $response.responseData.PSObject.Properties.Match('translatedText').Count -gt 0) {
+                        $translatedChunk = [string]$response.responseData.translatedText
+                    }
+                    $translatedChunks.Add($translatedChunk) | Out-Null
+                }
+
+                if ($translatedChunks.Count -gt 0) {
+                    $translated = $translatedChunks -join ' '
+                }
+            }
+            default {
+                throw "Unknown translation provider '$provider'."
+            }
+        }
+    }
+    catch {
+        $translated = $prepared.Text
+    }
+
+    $translated = [System.Web.HttpUtility]::HtmlDecode($translated)
+    $translated = Normalize-TranslatedProtectionTokens -Text $translated
+    $translated = Restore-TextAfterTranslation -Text $translated -Tokens $prepared.Tokens
+    $translated = Restore-SourcePlaceholders -SourceText $Text -TranslatedText $translated
+    $translated = Apply-LanguageRulesToText -Text $translated -Language $Language -LocaleRules $LocaleRules
+
+    $translationCache[$cacheKey] = @{
+        language   = $Language
+        source     = $Text
+        translated = $translated
+    }
+
+    $delayMs = [int]$script:TranslationConfig.requestDelayMs
+    if ($delayMs -gt 0) {
+        [System.Threading.Thread]::Sleep($delayMs)
+    }
+
+    return $translated
 }
 
 function Get-CategoryMap {
@@ -267,7 +801,7 @@ function Get-LanguageList {
         if ($selected -notcontains 'English') {
             $selected.Insert(0, 'English')
         }
-        return @($selected)
+        return $selected.ToArray()
     }
 
     return @($available)
@@ -350,13 +884,13 @@ function Get-TranslatablePairs {
         }
 
         $childIsStringList = $StringListParents.ContainsKey($childName.ToLowerInvariant())
-        $subResults = Get-TranslatablePairs -Element $child -PathPrefix $childPath -IsStringListParent $childIsStringList
+        $subResults = @(Get-TranslatablePairs -Element $child -PathPrefix $childPath -IsStringListParent $childIsStringList)
         foreach ($subResult in $subResults) {
             $results.Add($subResult) | Out-Null
         }
     }
 
-    return @($results)
+    return $results.ToArray()
 }
 
 function Read-DefsXmlDocument {
@@ -402,7 +936,7 @@ function Extract-DefFile {
             continue
         }
 
-        $pairs = Get-TranslatablePairs -Element $defNode -PathPrefix $defNameNode.InnerText.Trim()
+        $pairs = @(Get-TranslatablePairs -Element $defNode -PathPrefix $defNameNode.InnerText.Trim())
         if ($pairs.Count -eq 0) {
             continue
         }
@@ -425,7 +959,7 @@ function Extract-DefFile {
         }) | Out-Null
     }
 
-    return @($groups)
+    return $groups.ToArray()
 }
 
 function Read-LanguageXml {
@@ -456,7 +990,7 @@ function Read-LanguageXml {
     }
 
     return [pscustomobject]@{
-        Comments = @($comments)
+        Comments = $comments.ToArray()
         Entries  = $entries
     }
 }
@@ -543,6 +1077,12 @@ function Load-State {
 
     if (-not $state.ContainsKey('defCache')) {
         $state.defCache = @{}
+    }
+    if (-not $state.ContainsKey('translationCache')) {
+        $state.translationCache = @{}
+    }
+    if (-not $state.ContainsKey('translation')) {
+        $state.translation = @{}
     }
 
     return [pscustomobject]@{
@@ -891,23 +1431,37 @@ function Refresh-PlaysetOtherList {
         return @()
     }
 
+    $categoryMap = Get-CategoryMap -Config $Config
     $excludedNames = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
-    foreach ($listPath in @(
-        (Get-CategoryMap -Config $Config)['fip'].modListPath,
-        (Get-CategoryMap -Config $Config)['fcp'].modListPath,
-        (Get-CategoryMap -Config $Config)['compatible'].modListPath
-    )) {
-        if (Test-Path -LiteralPath $listPath) {
-            foreach ($line in [System.IO.File]::ReadAllLines($listPath, [System.Text.Encoding]::UTF8)) {
-                if (-not [string]::IsNullOrWhiteSpace($line)) {
-                    [void]$excludedNames.Add($line.Trim())
-                }
+    $excludedPackageIds = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+    foreach ($categoryId in @('fip', 'fcp', 'compatible')) {
+        $sourceCategory = $categoryMap[$categoryId]
+        $searchRoots = Get-CategorySearchRoots -Config $Config -CategoryConfig $sourceCategory
+        foreach ($modName in Get-ModNamesFromList -FilePath $sourceCategory.modListPath) {
+            if ([string]::IsNullOrWhiteSpace($modName)) {
+                continue
+            }
+
+            [void]$excludedNames.Add($modName)
+            $modRoot = Resolve-ModRoot -ModName $modName -SearchRoots $searchRoots
+            if ($null -eq $modRoot) {
+                continue
+            }
+
+            $meta = Get-AboutMetadata -ModRoot $modRoot
+            if (-not [string]::IsNullOrWhiteSpace($meta.PackageId)) {
+                [void]$excludedPackageIds.Add($meta.PackageId)
             }
         }
     }
 
     $remaining = @(Get-ChildItem -LiteralPath $Config.paths.PlaysetModsRoot -Directory | Where-Object {
-        -not $excludedNames.Contains($_.Name)
+        if ($excludedNames.Contains($_.Name)) {
+            return $false
+        }
+
+        $meta = Get-AboutMetadata -ModRoot $_.FullName
+        return -not $excludedPackageIds.Contains($meta.PackageId)
     } | Sort-Object Name | Select-Object -ExpandProperty Name)
     Save-TextFile -FilePath $category.modListPath -Content (($remaining -join [Environment]::NewLine) + [Environment]::NewLine)
     return $remaining
@@ -992,15 +1546,24 @@ function Get-CategorySearchRoots {
     }
 }
 
-function Get-SourceLanguageDirs {
+function Get-SourceLanguageFiles {
     param(
         [string]$ModRoot,
-        [string]$LeafSuffix
+        [string]$RelativePattern,
+        [string]$Filter
     )
 
-    return @(Get-ChildItem -LiteralPath $ModRoot -Directory -Recurse -ErrorAction SilentlyContinue | Where-Object {
-        $_.FullName -like "*\\Languages\\English\\$LeafSuffix"
-    })
+    $languageRootMarker = '\Languages\English\'
+    return @(Get-ChildItem -LiteralPath $ModRoot -File -Recurse -Filter $Filter -ErrorAction SilentlyContinue | Where-Object {
+        $fullName = $_.FullName
+        $markerIndex = $fullName.IndexOf($languageRootMarker, [System.StringComparison]::OrdinalIgnoreCase)
+        if ($markerIndex -lt 0) {
+            return $false
+        }
+
+        $languageRelativePath = $fullName.Substring($markerIndex + $languageRootMarker.Length)
+        return $languageRelativePath -like $RelativePattern
+    } | Sort-Object FullName)
 }
 
 function Add-KeyedOutputsFromMod {
@@ -1010,14 +1573,12 @@ function Add-KeyedOutputsFromMod {
         [System.Collections.Generic.List[object]]$Outputs
     )
 
-    foreach ($dir in Get-SourceLanguageDirs -ModRoot $ModRoot -LeafSuffix 'Keyed') {
-        foreach ($file in Get-ChildItem -LiteralPath $dir.FullName -Filter '*.xml' -File -ErrorAction SilentlyContinue | Sort-Object Name) {
-            $outputs.Add([pscustomobject]@{
-                Kind          = 'Keyed'
-                OutputRelPath = ('Keyed/{0}__{1}' -f $OutputStem, $file.Name).Replace('/', '\')
-                SourcePath    = $file.FullName
-            }) | Out-Null
-        }
+    foreach ($file in Get-SourceLanguageFiles -ModRoot $ModRoot -RelativePattern 'Keyed\*.xml' -Filter '*.xml') {
+        $outputs.Add([pscustomobject]@{
+            Kind          = 'Keyed'
+            OutputRelPath = ('Keyed/{0}__{1}' -f $OutputStem, $file.Name).Replace('/', '\')
+            SourcePath    = $file.FullName
+        }) | Out-Null
     }
 }
 
@@ -1028,14 +1589,40 @@ function Add-NamesOutputsFromMod {
         [System.Collections.Generic.List[object]]$Outputs
     )
 
-    foreach ($dir in Get-SourceLanguageDirs -ModRoot $ModRoot -LeafSuffix 'Strings\Names') {
-        foreach ($file in Get-ChildItem -LiteralPath $dir.FullName -Filter '*.txt' -File -ErrorAction SilentlyContinue | Sort-Object Name) {
-            $outputs.Add([pscustomobject]@{
-                Kind          = 'Names'
-                OutputRelPath = ('Strings/Names/{0}__{1}' -f $OutputStem, $file.Name).Replace('/', '\')
-                SourcePath    = $file.FullName
-            }) | Out-Null
+    foreach ($file in Get-SourceLanguageFiles -ModRoot $ModRoot -RelativePattern 'Strings\Names\*.txt' -Filter '*.txt') {
+        $outputs.Add([pscustomobject]@{
+            Kind          = 'Names'
+            OutputRelPath = ('Strings/Names/{0}__{1}' -f $OutputStem, $file.Name).Replace('/', '\')
+            SourcePath    = $file.FullName
+        }) | Out-Null
+    }
+}
+
+function Add-ExistingDefInjectedOutputsFromMod {
+    param(
+        [string]$ModRoot,
+        [string]$OutputStem,
+        [System.Collections.Generic.List[object]]$Outputs
+    )
+
+    foreach ($file in Get-SourceLanguageFiles -ModRoot $ModRoot -RelativePattern 'DefInjected\*\*.xml' -Filter '*.xml') {
+        $englishRoot = $file.Directory.Parent.Parent.FullName
+        $relativePath = Get-RelativePathFragment -BasePath $englishRoot -FullPath $file.FullName
+        $relativePath = $relativePath.Replace('/', '\')
+        $relativeDirectory = Split-Path -Parent $relativePath
+        $outputFileName = '{0}__{1}' -f $OutputStem, $file.Name
+        $outputRelPath = if ([string]::IsNullOrWhiteSpace($relativeDirectory)) {
+            $outputFileName
         }
+        else {
+            (Join-Path $relativeDirectory $outputFileName)
+        }
+
+        $outputs.Add([pscustomobject]@{
+            Kind          = 'DefInjected'
+            OutputRelPath = $outputRelPath
+            SourcePath    = $file.FullName
+        }) | Out-Null
     }
 }
 
@@ -1052,7 +1639,7 @@ function Add-DefInjectedOutputsFromMod {
     })
 
     foreach ($defDir in $defDirectories) {
-        foreach ($file in Get-ChildItem -LiteralPath $defDir.FullName -Filter '*.xml' -File -ErrorAction SilentlyContinue | Sort-Object Name) {
+        foreach ($file in Get-ChildItem -LiteralPath $defDir.FullName -Filter '*.xml' -File -Recurse -ErrorAction SilentlyContinue | Sort-Object FullName) {
             $stamp = Get-DirectoryStamp -FilePath $file.FullName
             $cacheRecord = $null
             if ($State.Data.defCache.ContainsKey($file.FullName)) {
@@ -1063,7 +1650,7 @@ function Add-DefInjectedOutputsFromMod {
             }
 
             $groups = if ($null -ne $cacheRecord) {
-                @($cacheRecord.groups)
+                [object[]]$cacheRecord.groups
             }
             else {
                 $parsedGroups = @(Extract-DefFile -FilePath $file.FullName)
@@ -1073,13 +1660,13 @@ function Add-DefInjectedOutputsFromMod {
                     foreach ($entry in $group.Entries) {
                         $serializedEntries.Add(@{ Key = $entry.Key; Text = $entry.Text }) | Out-Null
                     }
-                    $serializedGroups.Add(@{ DefType = $group.DefType; Entries = @($serializedEntries) }) | Out-Null
+                    $serializedGroups.Add(@{ DefType = $group.DefType; Entries = $serializedEntries.ToArray() }) | Out-Null
                 }
                 $State.Data.defCache[$file.FullName] = @{
                     stamp  = $stamp
-                    groups = @($serializedGroups)
+                    groups = $serializedGroups.ToArray()
                 }
-                @($serializedGroups)
+                $serializedGroups.ToArray()
             }
 
             foreach ($group in $groups) {
@@ -1104,6 +1691,15 @@ function Get-CategorySources {
     )
 
     $modNames = Get-ModNamesFromList -FilePath $CategoryConfig.modListPath
+    if ($IncludeMods -and $IncludeMods.Count -gt 0) {
+        $requestedMods = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+        foreach ($modName in $IncludeMods) {
+            if (-not [string]::IsNullOrWhiteSpace($modName)) {
+                [void]$requestedMods.Add($modName)
+            }
+        }
+        $modNames = @($modNames | Where-Object { $requestedMods.Contains($_) })
+    }
     $searchRoots = Get-CategorySearchRoots -Config $Config -CategoryConfig $CategoryConfig
     $resolvedMods = New-Object 'System.Collections.Generic.List[object]'
     $missingMods = New-Object 'System.Collections.Generic.List[string]'
@@ -1117,22 +1713,43 @@ function Get-CategorySources {
 
         $metadata = Get-AboutMetadata -ModRoot $modRoot
         $outputs = New-Object 'System.Collections.Generic.List[object]'
+        $beforeKeyed = $outputs.Count
         Add-KeyedOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs
+        $keyedCount = $outputs.Count - $beforeKeyed
+        $beforeNames = $outputs.Count
         Add-NamesOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs
+        $namesCount = $outputs.Count - $beforeNames
+        $beforeExistingDefInjected = $outputs.Count
+        Add-ExistingDefInjectedOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs
+        $existingDefInjectedCount = $outputs.Count - $beforeExistingDefInjected
+        $beforeExtractedDefInjected = $outputs.Count
         Add-DefInjectedOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs -State $State
+        $extractedDefInjectedCount = $outputs.Count - $beforeExtractedDefInjected
+
+        $uniqueOutputs = New-Object 'System.Collections.Generic.List[object]'
+        $seenOutputRelPaths = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+        foreach ($output in $outputs) {
+            if ($seenOutputRelPaths.Add($output.OutputRelPath)) {
+                $uniqueOutputs.Add($output) | Out-Null
+            }
+        }
 
         $resolvedMods.Add([pscustomobject]@{
             FolderName = $modName
             ModRoot    = $modRoot
             Name       = $metadata.Name
             PackageId  = $metadata.PackageId
-            Outputs    = @($outputs)
+            KeyedCount = $keyedCount
+            NamesCount = $namesCount
+            ExistingDefInjectedCount = $existingDefInjectedCount
+            ExtractedDefInjectedCount = $extractedDefInjectedCount
+            Outputs    = $uniqueOutputs.ToArray()
         }) | Out-Null
     }
 
     return [pscustomobject]@{
-        Mods       = @($resolvedMods)
-        MissingMods = @($missingMods)
+        Mods       = $resolvedMods.ToArray()
+        MissingMods = $missingMods.ToArray()
     }
 }
 
@@ -1140,7 +1757,9 @@ function Merge-XmlEntries {
     param(
         [System.Collections.Specialized.OrderedDictionary]$CurrentEnglish,
         [System.Collections.Specialized.OrderedDictionary]$PreviousEnglish,
-        [System.Collections.Specialized.OrderedDictionary]$ExistingLocale
+        [System.Collections.Specialized.OrderedDictionary]$ExistingLocale,
+        [string]$Language,
+        [hashtable]$LocaleRules
     )
 
     $merged = New-Object 'System.Collections.Specialized.OrderedDictionary'
@@ -1148,12 +1767,14 @@ function Merge-XmlEntries {
         $currentValue = [string]$CurrentEnglish[$key]
         $hasPrevious = $null -ne $PreviousEnglish -and $PreviousEnglish.Contains($key)
         $hasLocale = $null -ne $ExistingLocale -and $ExistingLocale.Contains($key)
+        $existingLocaleValue = if ($hasLocale) { [string]$ExistingLocale[$key] } else { $null }
+        $hasUsefulLocale = $hasLocale -and -not (Test-LocaleValueNeedsRefresh -CurrentEnglish $currentValue -ExistingLocale $existingLocaleValue)
 
-        if ($hasPrevious -and $hasLocale -and [string]$PreviousEnglish[$key] -eq $currentValue) {
-            $merged[$key] = $ExistingLocale[$key]
+        if ($hasPrevious -and $hasUsefulLocale -and [string]$PreviousEnglish[$key] -eq $currentValue) {
+            $merged[$key] = $existingLocaleValue
         }
         else {
-            $merged[$key] = $currentValue
+            $merged[$key] = Invoke-ConfiguredTranslation -Text $currentValue -Language $Language -LocaleRules $LocaleRules
         }
     }
     return $merged
@@ -1163,7 +1784,9 @@ function Merge-NameLines {
     param(
         [string[]]$CurrentEnglish,
         [string[]]$PreviousEnglish,
-        [string[]]$ExistingLocale
+        [string[]]$ExistingLocale,
+        [string]$Language,
+        [hashtable]$LocaleRules
     )
 
     $merged = New-Object 'System.Collections.Generic.List[string]'
@@ -1171,7 +1794,8 @@ function Merge-NameLines {
         $currentValue = $CurrentEnglish[$index]
         $keepLocale = $false
         if ($null -ne $PreviousEnglish -and $index -lt $PreviousEnglish.Count -and $null -ne $ExistingLocale -and $index -lt $ExistingLocale.Count) {
-            if ($PreviousEnglish[$index] -eq $currentValue) {
+            $existingLocaleValue = $ExistingLocale[$index]
+            if ($PreviousEnglish[$index] -eq $currentValue -and -not (Test-LocaleValueNeedsRefresh -CurrentEnglish $currentValue -ExistingLocale $existingLocaleValue)) {
                 $keepLocale = $true
             }
         }
@@ -1179,10 +1803,10 @@ function Merge-NameLines {
             $merged.Add($ExistingLocale[$index]) | Out-Null
         }
         else {
-            $merged.Add($currentValue) | Out-Null
+            $merged.Add((Invoke-ConfiguredTranslation -Text $currentValue -Language $Language -LocaleRules $LocaleRules)) | Out-Null
         }
     }
-    return @($merged)
+    return $merged.ToArray()
 }
 
 function Test-FileContentEquals {
@@ -1305,7 +1929,8 @@ function Sync-Category {
         [hashtable]$CategoryConfig,
         [string[]]$ResolvedLanguages,
         [pscustomobject]$State,
-        [hashtable]$AllCategorySources
+        [hashtable]$AllCategorySources,
+        [hashtable]$LocaleRules
     )
 
     $categorySources = $AllCategorySources[$CategoryConfig.id]
@@ -1322,6 +1947,9 @@ function Sync-Category {
             $report.Add("Missing mod root for list entry: $missing") | Out-Null
         }
     }
+    foreach ($mod in $categorySources.Mods) {
+        $report.Add(("{0}: Keyed={1}, Names={2}, ExistingDefInjected={3}, ExtractedDefInjected={4}, UniqueOutputs={5}" -f $mod.FolderName, $mod.KeyedCount, $mod.NamesCount, $mod.ExistingDefInjectedCount, $mod.ExtractedDefInjectedCount, $mod.Outputs.Count)) | Out-Null
+    }
 
     $outputs = New-Object 'System.Collections.Generic.List[object]'
     foreach ($mod in $categorySources.Mods) {
@@ -1330,66 +1958,104 @@ function Sync-Category {
         }
     }
 
+    $outputErrors = New-Object 'System.Collections.Generic.List[string]'
+    $progressPath = Join-Path $outputRoot 'Reports\current-sync-progress.txt'
+    Save-TextFile -FilePath $progressPath -Content ((@(
+        "Category: $($CategoryConfig.id)",
+        "Languages: $($ResolvedLanguages -join ', ')",
+        "Outputs queued: $($outputs.Count)",
+        'Status: running',
+        'Last completed: none'
+    ) -join [Environment]::NewLine) + [Environment]::NewLine)
+
     $expectedPaths = @($outputs | Select-Object -ExpandProperty OutputRelPath -Unique)
     Remove-StaleOutputFiles -OutputRoot $outputRoot -Languages $ResolvedLanguages -ExpectedRelativePaths $expectedPaths
 
     foreach ($output in $outputs) {
-        $englishPath = Join-Path $englishRoot $output.OutputRelPath
-        switch ($output.Kind) {
-            'Keyed' {
-                $previousEnglish = Read-LanguageXml -FilePath $englishPath
-                Ensure-Directory -Path (Split-Path -Parent $englishPath)
-                [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
-                $currentEnglish = Read-LanguageXml -FilePath $englishPath
-                foreach ($language in $ResolvedLanguages) {
-                    if ($language -eq 'English') {
-                        continue
-                    }
+        try {
+            $englishPath = Join-Path $englishRoot $output.OutputRelPath
+            switch ($output.Kind) {
+                'Keyed' {
+                    $previousEnglish = Read-LanguageXml -FilePath $englishPath
+                    Ensure-Directory -Path (Split-Path -Parent $englishPath)
+                    [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
+                    $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                    foreach ($language in $ResolvedLanguages) {
+                        if ($language -eq 'English') {
+                            continue
+                        }
 
-                    $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
-                    $existingLocale = Read-LanguageXml -FilePath $localePath
-                    $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglish.Entries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null })
-                    $comments = if ($existingLocale -and $existingLocale.Comments.Count -gt 0) { $existingLocale.Comments } else { $currentEnglish.Comments }
-                    Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $comments
-                }
-            }
-            'Names' {
-                $previousEnglish = Read-NamesFile -FilePath $englishPath
-                $currentEnglishLines = Read-NamesFile -FilePath $output.SourcePath
-                Write-NamesFile -FilePath $englishPath -Lines $currentEnglishLines
-                foreach ($language in $ResolvedLanguages) {
-                    if ($language -eq 'English') {
-                        continue
+                        $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
+                        $existingLocale = Read-LanguageXml -FilePath $localePath
+                        $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglish.Entries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null }) -Language $language -LocaleRules $LocaleRules
+                        $comments = if ($existingLocale -and $existingLocale.Comments.Count -gt 0) { $existingLocale.Comments } else { $currentEnglish.Comments }
+                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $comments
                     }
-                    $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
-                    $existingLocale = Read-NamesFile -FilePath $localePath
-                    $mergedLines = Merge-NameLines -CurrentEnglish $currentEnglishLines -PreviousEnglish $previousEnglish -ExistingLocale $existingLocale
-                    Write-NamesFile -FilePath $localePath -Lines $mergedLines
                 }
-            }
-            'DefInjected' {
-                $previousEnglish = Read-LanguageXml -FilePath $englishPath
-                $currentEnglishEntries = Get-OrderedEntriesFromPairs -Pairs $output.Entries
-                $comments = @()
-                Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments $comments
-                foreach ($language in $ResolvedLanguages) {
-                    if ($language -eq 'English') {
-                        continue
+                'Names' {
+                    $previousEnglish = Read-NamesFile -FilePath $englishPath
+                    $currentEnglishLines = Read-NamesFile -FilePath $output.SourcePath
+                    Write-NamesFile -FilePath $englishPath -Lines $currentEnglishLines
+                    foreach ($language in $ResolvedLanguages) {
+                        if ($language -eq 'English') {
+                            continue
+                        }
+                        $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
+                        $existingLocale = Read-NamesFile -FilePath $localePath
+                        $mergedLines = Merge-NameLines -CurrentEnglish $currentEnglishLines -PreviousEnglish $previousEnglish -ExistingLocale $existingLocale -Language $language -LocaleRules $LocaleRules
+                        Write-NamesFile -FilePath $localePath -Lines $mergedLines
                     }
-                    $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
-                    $existingLocale = Read-LanguageXml -FilePath $localePath
-                    $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglishEntries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null })
-                    $localeComments = if ($existingLocale) { $existingLocale.Comments } else { @() }
-                    Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $localeComments
+                }
+                'DefInjected' {
+                    $previousEnglish = Read-LanguageXml -FilePath $englishPath
+                    if ($output.PSObject.Properties.Match('SourcePath').Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($output.SourcePath)) {
+                        Ensure-Directory -Path (Split-Path -Parent $englishPath)
+                        [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
+                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                        $currentEnglishEntries = $currentEnglish.Entries
+                        $comments = $currentEnglish.Comments
+                    }
+                    else {
+                        $currentEnglishEntries = Get-OrderedEntriesFromPairs -Pairs $output.Entries
+                        $comments = @()
+                    }
+                    Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments $comments
+                    foreach ($language in $ResolvedLanguages) {
+                        if ($language -eq 'English') {
+                            continue
+                        }
+                        $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
+                        $existingLocale = Read-LanguageXml -FilePath $localePath
+                        $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglishEntries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null }) -Language $language -LocaleRules $LocaleRules
+                        $localeComments = if ($existingLocale) { $existingLocale.Comments } else { @() }
+                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $localeComments
+                    }
+                }
+                default {
+                    throw "Unhandled output kind: $($output.Kind)"
                 }
             }
-            default {
-                throw "Unhandled output kind: $($output.Kind)"
-            }
+
+            Save-TextFile -FilePath $progressPath -Content ((@(
+                "Category: $($CategoryConfig.id)",
+                "Languages: $($ResolvedLanguages -join ', ')",
+                "Outputs queued: $($outputs.Count)",
+                'Status: running',
+                "Last completed: $($output.OutputRelPath)"
+            ) -join [Environment]::NewLine) + [Environment]::NewLine)
+        }
+        catch {
+            $outputErrors.Add(('Error in {0}: {1}' -f $output.OutputRelPath, $_.Exception.Message)) | Out-Null
+            Save-TextFile -FilePath $progressPath -Content ((@(
+                "Category: $($CategoryConfig.id)",
+                "Languages: $($ResolvedLanguages -join ', ')",
+                "Outputs queued: $($outputs.Count)",
+                'Status: running-with-errors',
+                "Last completed: $($output.OutputRelPath)",
+                ('Last error: {0}' -f $_.Exception.Message)
+            ) -join [Environment]::NewLine) + [Environment]::NewLine)
         }
     }
-
-    Remove-EmptyDirectories -RootPath (Join-Path $outputRoot 'Languages')
 
     $reportPath = Join-Path $outputRoot 'Reports\last-sync-report.txt'
     $summaryLines = @(
@@ -1397,8 +2063,22 @@ function Sync-Category {
         "Source mods: $($categorySources.Mods.Count)",
         "Output files: $($outputs.Count)",
         "Languages: $($ResolvedLanguages -join ', ')"
-    ) + @($report)
+    ) + $report.ToArray() + $outputErrors.ToArray()
     Save-TextFile -FilePath $reportPath -Content (($summaryLines -join [Environment]::NewLine) + [Environment]::NewLine)
+    Save-TextFile -FilePath $progressPath -Content ((@(
+        "Category: $($CategoryConfig.id)",
+        "Languages: $($ResolvedLanguages -join ', ')",
+        "Outputs queued: $($outputs.Count)",
+        'Status: completed',
+        ('Errors: {0}' -f $outputErrors.Count)
+    ) -join [Environment]::NewLine) + [Environment]::NewLine)
+
+    try {
+        Remove-EmptyDirectories -RootPath (Join-Path $outputRoot 'Languages')
+    }
+    catch {
+        Write-Warning ('Failed to prune empty language directories under {0}: {1}' -f $outputRoot, $_.Exception.Message)
+    }
 }
 
 $config = Load-Config -FilePath $ConfigPath
@@ -1408,7 +2088,43 @@ if ($PSBoundParameters.ContainsKey('Category') -and -not [string]::IsNullOrWhite
 }
 Import-TranslatableMembersFromRimWorldSource -RimWorldRoot $config.paths.RimWorldRoot
 $resolvedLanguages = Get-LanguageList -Config $config -RequestedLanguages $Languages
+$localeRules = Load-LocaleRules -Config $config
 $state = Load-State -Config $config
+$script:TranslationConfig = $config.translation
+$script:TranslationState = $state
+$currentTranslationProvider = if ($script:TranslationConfig.ContainsKey('provider')) {
+    [string]$script:TranslationConfig.provider
+}
+else {
+    'none'
+}
+$currentTranslationProfile = '{0}|{1}|{2}' -f $currentTranslationProvider, [string]$script:TranslationConfig.sourceLanguageCode, 'raw-placeholders-with-shape-restore-v3'
+$previousTranslationProvider = if ($state.Data.translation.ContainsKey('provider')) {
+    [string]$state.Data.translation.provider
+}
+else {
+    ''
+}
+$previousTranslationProfile = if ($state.Data.translation.ContainsKey('profile')) {
+    [string]$state.Data.translation.profile
+}
+else {
+    ''
+}
+$script:TranslationForceRefreshAllLocales = $false
+if (-not [string]::IsNullOrWhiteSpace($currentTranslationProfile) -and $currentTranslationProvider -ne 'none') {
+    if ([string]::IsNullOrWhiteSpace($previousTranslationProfile)) {
+        if ($state.Data.translationCache.Count -gt 0) {
+            $script:TranslationForceRefreshAllLocales = $true
+        }
+    }
+    elseif ($previousTranslationProfile -ne $currentTranslationProfile) {
+        $script:TranslationForceRefreshAllLocales = $true
+    }
+}
+$state.Data.translation.provider = $currentTranslationProvider
+$state.Data.translation.profile = $currentTranslationProfile
+$state.Data.translation.sourceLanguageCode = [string]$script:TranslationConfig.sourceLanguageCode
 
 switch ($Command) {
     'refresh-lists' {
@@ -1429,7 +2145,7 @@ switch ($Command) {
             }
             $allSources[$otherCategoryId] = [pscustomobject]@{ Mods = @(); MissingMods = @() }
         }
-        Sync-Category -Config $config -CategoryConfig $categoryMap[$Category] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources
+        Sync-Category -Config $config -CategoryConfig $categoryMap[$Category] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules
         Save-State -State $state
     }
     'sync-all' {
@@ -1442,7 +2158,7 @@ switch ($Command) {
         }
         foreach ($categoryId in ($categoryMap.Keys | Sort-Object)) {
             Write-Host "Syncing category $categoryId"
-            Sync-Category -Config $config -CategoryConfig $categoryMap[$categoryId] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources
+            Sync-Category -Config $config -CategoryConfig $categoryMap[$categoryId] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules
         }
         Save-State -State $state
     }

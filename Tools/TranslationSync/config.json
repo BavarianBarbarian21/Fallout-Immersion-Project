@@ -1,10 +1,11 @@
 {
   "paths": {
     "repoRoot": "../..",
-    "rimWorldRoot": "../../../../../../Modding/Rimworld",
-    "fcpCacheRoot": "../../../../../../Modding/Rimworld/FCP Mods",
-    "languageTemplateRoot": "../../Translations/FIP-Translation Part 1/Languages",
-    "playsetModsRoot": "",
+    "rimWorldRoot": "D:/Steam/steamapps/common/RimWorld",
+    "fcpCacheRoot": "C:/Users/Matthias/Desktop/Fallout Collaboration Project",
+    "languageTemplateRoot": "./language-template",
+    "localeRulesPath": "./locale-rules.json",
+    "playsetModsRoot": "D:/Steam/steamapps/workshop/content/294100",
     "stateRoot": "./state",
     "modListRoot": "./mod-lists"
   },
@@ -30,15 +31,23 @@
       "Rick.FCP.",
       "rick.fcp."
     ],
-    "additionalLookupRoots": []
+    "additionalLookupRoots": [
+      "D:/Steam/steamapps/workshop/content/294100"
+    ]
+  },
+  "translation": {
+    "provider": "google-gtx",
+    "sourceLanguageCode": "en",
+    "requestDelayMs": 0,
+    "timeoutSeconds": 30
   },
   "categories": [
     {
       "id": "fip",
-      "name": "FIP - Translation Part 1",
+      "name": "FIP-Translation Part 1",
       "description": "Incremental translation scaffold for all FIP mods. English source text is copied 1:1 and propagated as fallback into every configured locale when entries are added or changed.",
       "packageId": "FIP.Translation.Part1",
-      "outputModPath": "../../Translations/Generated/FIP-Translation Part 1",
+      "outputModPath": "../../FIP-Translation Part 1",
       "modListPath": "./mod-lists/fip.txt",
       "loadAfterAllKnownPackages": true,
       "extraLoadAfterPackageIds": [
@@ -49,30 +58,30 @@
     },
     {
       "id": "fcp",
-      "name": "FIP - Translation Part 2",
+      "name": "FIP-Translation Part 2",
       "description": "Incremental translation scaffold for all FCP mods. English source text is copied 1:1 and propagated as fallback into every configured locale when entries are added or changed.",
       "packageId": "FIP.Translation.Part2",
-      "outputModPath": "../../Translations/Generated/FIP-Translation Part 2",
+      "outputModPath": "../../FIP-Translation Part 2",
       "modListPath": "./mod-lists/fcp.txt",
       "loadAfterAllKnownPackages": false,
       "extraLoadAfterPackageIds": []
     },
     {
       "id": "compatible",
-      "name": "FIP - Translation Part 3",
+      "name": "FIP-Translation Part 3",
       "description": "Incremental translation scaffold for mods referenced by FIP dependencies, loadAfter entries, and MayRequire patches, excluding FIP, FCP, and official DLC package IDs.",
       "packageId": "FIP.Translation.Part3",
-      "outputModPath": "../../Translations/Generated/FIP-Translation Part 3",
+      "outputModPath": "../../FIP-Translation Part 3",
       "modListPath": "./mod-lists/compatible.txt",
       "loadAfterAllKnownPackages": false,
       "extraLoadAfterPackageIds": []
     },
     {
       "id": "playset-other",
-      "name": "FIP - Translation Part 4",
+      "name": "FIP-Translation Part 4",
       "description": "Incremental translation scaffold for playset mods that are neither FIP, FCP, nor compatibility-target mods.",
       "packageId": "FIP.Translation.Part4",
-      "outputModPath": "../../Translations/Generated/FIP-Translation Part 4",
+      "outputModPath": "../../FIP-Translation Part 4",
       "modListPath": "./mod-lists/playset-other.txt",
       "loadAfterAllKnownPackages": false,
       "extraLoadAfterPackageIds": []

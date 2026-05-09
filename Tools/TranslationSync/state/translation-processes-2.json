@@ -1,0 +1,4 @@
+﻿{
+    "ProcessId":  13208,
+    "CommandLine":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command $out = \u0027c:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\translation-processes-2.json\u0027; Get-CimInstance Win32_Process | Where-Object { $_.Name -eq \u0027powershell.exe\u0027 -and $_.CommandLine -like \u0027*Invoke-TranslationSync.ps1*\u0027 } | Select-Object ProcessId, CommandLine | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $out -Encoding UTF8"
+}

@@ -1,0 +1,10 @@
+﻿[
+    {
+        "ProcessId":  5328,
+        "CommandLine":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command $marker = \u0027c:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\part1-task-status.txt\u0027; Remove-Item -LiteralPath $marker -ErrorAction SilentlyContinue; try { Set-ExecutionPolicy -Scope Process Bypass; \u0026 \u0027c:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\Invoke-TranslationSync.ps1\u0027 -Command sync -Category part1 -Languages English,German,ChineseSimplified; Set-Content -LiteralPath $marker -Value \u0027success\u0027 -Encoding UTF8 } catch { Set-Content -LiteralPath $marker -Value (($_ | Out-String) + [Environment]::NewLine + $_.ScriptStackTrace) -Encoding UTF8; exit 1 }"
+    },
+    {
+        "ProcessId":  20032,
+        "CommandLine":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command $out = \u0027c:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\translation-processes-clean.json\u0027; Get-CimInstance Win32_Process | Where-Object { $_.Name -eq \u0027powershell.exe\u0027 -and $_.CommandLine -like \u0027*Invoke-TranslationSync.ps1*\u0027 } | Select-Object ProcessId, CommandLine | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $out -Encoding UTF8"
+    }
+]

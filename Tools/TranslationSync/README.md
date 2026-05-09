@@ -20,13 +20,17 @@
 - Writes an English dummy baseline for each output translation mod.
 - Updates every configured non-English locale so that:
   - unchanged English source keeps the existing translation,
-  - new English entries are inserted as English fallback text,
-  - changed English entries reset to the new English fallback text.
+  - unchanged English fallback entries that are still identical to English are machine-translated,
+  - new English entries are inserted and machine-translated,
+  - changed English entries are retranscribed from the new English source.
 
 ## Runtime behavior
 
 - Def XML parsing is incremental. The tool caches parsed `Defs` files using file length plus UTC write ticks.
 - English `Keyed` and `Names` files are copied directly from source mods.
+- Existing English `DefInjected` files are copied directly before extracted `Defs` fallback is generated.
+- When `translation.provider` is enabled, non-English locale text is machine-translated through the configured backend with a small cache under `state/translation-sync-state.json`.
+- If the configured provider changes, existing non-English locale files are refreshed on the next sync so stale output from the previous backend is not kept.
 - Local FIP source refresh is optional and only happens when you pass `-RefreshFipSource`.
 - FCP source refresh is optional and only happens when you pass `-RefreshFcpSources`.
 - Part 3 currently means: external mods your FIP mods patch, depend on, or conditionally load against.
@@ -39,6 +43,8 @@ Edit `config.json` before first real use.
 - `paths.playsetModsRoot`: leave empty for now; set this later when you want the fourth category populated automatically.
 - `paths.fcpCacheRoot`: local folder where FCP repositories are cloned or updated.
 - `compatibility.additionalLookupRoots`: add extra mod library folders if compatibility targets are not under RimWorld or the FCP cache.
+- `translation.provider`: set to `none` to disable machine translation, `google-gtx` to use the current default backend, or `mymemory` if you explicitly want the older public backend.
+- `translation.timeoutSeconds`: per-request timeout for machine translation.
 
 ## Usage
 
@@ -66,6 +72,12 @@ Sync one category:
 .\Invoke-TranslationSync.ps1 -Command sync -Category part1 -RefreshLists
 ```
 
+Sync one category for a specific mod only:
+
+```powershell
+.\Invoke-TranslationSync.ps1 -Command sync -Category part1 -IncludeMods FIP-Hubris -Languages English,German,ChineseSimplified
+```
+
 Sync everything:
 
 ```powershell
@@ -84,3 +96,6 @@ Limit sync to specific locales plus English:
 - `compatible-unresolved-packageIds.txt` is written when Part 3 can detect a referenced package ID but cannot map it to a local folder name.
 - Comma-separated package-id lists from `LoadFolders.xml` and patch metadata are split into individual package IDs.
 - Part 1 is configured to `loadAfter` all package IDs discovered across all category lists when you use `sync-all`, plus Parts 2-4.
+- Some shells on this machine block `.ps1` execution by policy. If direct script invocation is denied, run the script through `powershell.exe -ExecutionPolicy Bypass` for that session or process.
+- The current public machine-translation backends are network-dependent and should be treated as a best-effort first pass, not as a polished final localization pass.
+- `google-gtx` is now the default because it preserves RimWorld placeholders far more reliably than the older MyMemory path and avoids the very small daily quota that caused partial output.
