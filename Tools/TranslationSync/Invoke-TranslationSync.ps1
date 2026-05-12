@@ -82,7 +82,7 @@ if ([string]::IsNullOrWhiteSpace($ConfigPath)) {
 $Utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 [void][System.Reflection.Assembly]::LoadWithPartialName('System.Web.Extensions')
 $JsonSerializer = [System.Web.Script.Serialization.JavaScriptSerializer]::new()
-$JsonSerializer.MaxJsonLength = 67108864
+$JsonSerializer.MaxJsonLength = [int]::MaxValue
 
 $TranslatableLeafNames = @{}
 @(
@@ -405,8 +405,29 @@ function Get-LanguageTranslationCode {
     param([string]$Language)
 
     switch ($Language) {
+        'French' { return 'fr' }
         'German' { return 'de' }
+        'Polish' { return 'pl' }
+        'Russian' { return 'ru' }
+        'Italian' { return 'it' }
+        'Spanish' { return 'es' }
+        'Czech' { return 'cs' }
+        'Danish' { return 'da' }
+        'Dutch' { return 'nl' }
+        'Hungarian' { return 'hu' }
+        'Japanese' { return 'ja' }
+        'Norwegian' { return 'no' }
+        'Portuguese' { return 'pt' }
+        'PortugueseBrazilian' { return 'pt-BR' }
         'ChineseSimplified' { return 'zh-CN' }
+        'Swedish' { return 'sv' }
+        'ChineseTraditional' { return 'zh-TW' }
+        'Turkish' { return 'tr' }
+        'Ukrainian' { return 'uk' }
+        'Finnish' { return 'fi' }
+        'Korean' { return 'ko' }
+        'Romanian' { return 'ro' }
+        'SpanishLatin' { return 'es-419' }
         default { return $null }
     }
 }
@@ -917,12 +938,26 @@ function Extract-DefFile {
     param([string]$FilePath)
 
     $doc = Read-DefsXmlDocument -FilePath $FilePath
-    if ($null -eq $doc -or $null -eq $doc.Defs) {
+    if ($null -eq $doc -or $null -eq $doc.DocumentElement -or $doc.DocumentElement.Name -ne 'Defs') {
+        return @()
+    }
+
+    $defsRoot = $doc.DocumentElement
+    if ($defsRoot -isnot [System.Xml.XmlElement]) {
+        Write-Warning "Skipping unsupported defs root in $FilePath"
+        return @()
+    }
+
+    try {
+        $defNodes = @($defsRoot.ChildNodes)
+    }
+    catch {
+        Write-Warning "Skipping unsupported defs structure in $FilePath"
         return @()
     }
 
     $byType = @{}
-    foreach ($defNode in $doc.Defs.ChildNodes) {
+    foreach ($defNode in $defNodes) {
         if ($defNode -isnot [System.Xml.XmlElement]) {
             continue
         }
@@ -971,7 +1006,16 @@ function Read-LanguageXml {
 
     $document = [System.Xml.XmlDocument]::new()
     $document.PreserveWhitespace = $true
-    $document.Load($FilePath)
+    try {
+        $document.Load($FilePath)
+    }
+    catch {
+        return $null
+    }
+
+    if ($null -eq $document.DocumentElement -or $document.DocumentElement.Name -ne 'LanguageData') {
+        return $null
+    }
 
     $comments = New-Object 'System.Collections.Generic.List[string]'
     $entries = New-Object 'System.Collections.Specialized.OrderedDictionary'
@@ -1103,7 +1147,7 @@ function Get-AboutMetadata {
     $aboutPath = Join-Path $ModRoot 'About\About.xml'
     $fallback = [pscustomobject]@{
         Name      = [System.IO.Path]::GetFileName($ModRoot)
-        PackageId = [System.IO.Path]::GetFileName($ModRoot)
+        PackageId = $null
     }
 
     if (-not (Test-Path -LiteralPath $aboutPath)) {
@@ -1116,7 +1160,7 @@ function Get-AboutMetadata {
         $packageId = if ($about.ModMetaData.packageId) { $about.ModMetaData.packageId } else { $fallback.PackageId }
         return [pscustomobject]@{
             Name      = [string]$name
-            PackageId = [string]$packageId
+            PackageId = if ([string]::IsNullOrWhiteSpace($packageId)) { $null } else { [string]$packageId }
         }
     }
     catch {
@@ -1135,6 +1179,10 @@ function Get-ModMetadataIndex {
 
         foreach ($directory in Get-ChildItem -LiteralPath $root -Directory -ErrorAction SilentlyContinue) {
             $meta = Get-AboutMetadata -ModRoot $directory.FullName
+            if ([string]::IsNullOrWhiteSpace($meta.PackageId)) {
+                continue
+            }
+
             if (-not $index.ContainsKey($meta.PackageId)) {
                 $index[$meta.PackageId] = [pscustomobject]@{
                     FolderName = $directory.Name
@@ -1460,7 +1508,15 @@ function Refresh-PlaysetOtherList {
             return $false
         }
 
+        if (-not (Test-Path -LiteralPath (Join-Path $_.FullName 'About\About.xml'))) {
+            return $false
+        }
+
         $meta = Get-AboutMetadata -ModRoot $_.FullName
+        if ([string]::IsNullOrWhiteSpace($meta.PackageId)) {
+            return $true
+        }
+
         return -not $excludedPackageIds.Contains($meta.PackageId)
     } | Sort-Object Name | Select-Object -ExpandProperty Name)
     Save-TextFile -FilePath $category.modListPath -Content (($remaining -join [Environment]::NewLine) + [Environment]::NewLine)
@@ -1938,8 +1994,13 @@ function Sync-Category {
     $englishRoot = Join-Path $outputRoot 'Languages\English'
     Ensure-Directory -Path $englishRoot
 
+    $isPartialSync = ($IncludeMods -and $IncludeMods.Count -gt 0)
+
     $aboutXml = Build-AboutXml -Config $Config -CategoryConfig $CategoryConfig -CategoryMods $categorySources.Mods -AllCategorySources $AllCategorySources
-    Save-TextFile -FilePath (Join-Path $outputRoot 'About\About.xml') -Content $aboutXml
+    $aboutPath = Join-Path $outputRoot 'About\About.xml'
+    if (-not $isPartialSync -or -not (Test-Path -LiteralPath $aboutPath)) {
+        Save-TextFile -FilePath $aboutPath -Content $aboutXml
+    }
 
     $report = New-Object 'System.Collections.Generic.List[string]'
     if ($categorySources.MissingMods.Count -gt 0) {
@@ -1969,7 +2030,9 @@ function Sync-Category {
     ) -join [Environment]::NewLine) + [Environment]::NewLine)
 
     $expectedPaths = @($outputs | Select-Object -ExpandProperty OutputRelPath -Unique)
-    Remove-StaleOutputFiles -OutputRoot $outputRoot -Languages $ResolvedLanguages -ExpectedRelativePaths $expectedPaths
+    if (-not $isPartialSync) {
+        Remove-StaleOutputFiles -OutputRoot $outputRoot -Languages $ResolvedLanguages -ExpectedRelativePaths $expectedPaths
+    }
 
     foreach ($output in $outputs) {
         try {
