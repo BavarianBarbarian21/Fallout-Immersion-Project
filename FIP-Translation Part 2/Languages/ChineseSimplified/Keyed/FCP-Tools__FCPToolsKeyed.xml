@@ -9,47 +9,106 @@
   <!-- Apparel Requirements -->
   <!-- Enlistment - Hostile Factions -->
 
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
-  <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
-  <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Settings_Category>FCP工具</FCP_Settings_Category>
+  <FCP_Settings.General>一般的</FCP_Settings.General>
+  <FCP_Settings.General.tt>影响整个模组或不适合其他任何地方的选项。</FCP_Settings.General.tt>
+  <FCP_Settings_Stims>刺激</FCP_Settings_Stims>
+  <FCP_Settings_Stims_AutoStim>自动注射刺激剂</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>当受到损坏时，Pawn 会自动使用库存中的刺激物。</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>禁酒者可以自动注射</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>允许具有滴酒不沾特质的 pawn 自动使用 stimpaks。</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_Enlistment>征募</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>活跃入伍类型</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>调试</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>帮助诊断问题或修改调试行为的选项</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>记录</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>详细日志记录</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>由于 {0_possessive} 晋升为 {1}，{0_labelShort} 失去了 {0_possessive} {2} 许可</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>特殊流浪者：{PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>名为 {PAWN_title} 的 pawn {PAWN_nameDef} 已抵达并想要加入殖民地。</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>常见的</FCP_RarityCommon>
+  <FCP_RarityRare>稀有的</FCP_RarityRare>
+  <FCP_RarityUnique>独特的</FCP_RarityUnique>
+  <FCP_MechDetonate>起爆</FCP_MechDetonate>
+  <FCP_CannotPickUp>无法接听{0}</FCP_CannotPickUp>
+  <FCP_PickUp>接{0}</FCP_PickUp>
+  <FCP_PickUpMax>拾取最大</FCP_PickUpMax>
+  <FCP_PickUpOne>拿起一个{0}</FCP_PickUpOne>
+  <FCP_TooHeavy>太重</FCP_TooHeavy>
+  <FCP_Techprint_Label>FCP 技术印刷品 ({PROJECT_label})</FCP_Techprint_Label>
+  <FCP_Techprint_Desc>这是研究项目“{PROJECT_label}”的技术印刷品。
+\n技术印刷品的物理形式可以是从带有图表的纸片到先进的独立教学机器。无论形式如何，它们都扮演着相同的角色。 They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
+\n您的研究人员需要技术印刷品提供的基础知识才能知道从哪里开始研究特定的技术。只有在应用了足够的技术印刷品之后，您的研究人员才能制定出如何在您的特定情况下使用该技术的详细信息。
+\n将技术印刷品应用于满意的项目即可完成剩余研究进度的一半。此外，研究人员在应用技术印刷品时，即使是已经完成的技术，他们的智力技能也总是会得到提升。</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>错误的异型</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>未满足要求</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>需要异种型</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>禁止的异型：{0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>需要异种型：{0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>需要服装：{0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>需要特征：{0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>需要：{0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>需要以下任意一项：{0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>需要动力装甲训练</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>新敌人</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>通过加入 {ENLISTED_name}，您已成为 {HOSTILE_name} 的敌人。他们现在对你的殖民地怀有敌意。</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>与 {0} 的商誉不够，至少需要 {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0}已被击败</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>派系 {0} 不存在</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>无法使用动力装甲站</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>储存动力装甲</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>从车站装备</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>交换动力装甲</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>存放的服装</FCP_StoredApparel>
+  <FCP_ExtractHolotape>提取全息带</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>已经提取了</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} 在终端中发现了 {1}！</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} 在终端中找不到有用的数据。</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>数据已提取</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>可能包含数据</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>必须贴在墙上</MustPlaceOnWall>
+  <FCP_HackTerminal>黑客终端</FCP_HackTerminal>
+  <FCP_TerminalLocked>锁定 - 需要黑客攻击</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>终端已解锁 - 收到 {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>终端已锁定 {0} 小时</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>已锁定（还剩 {0} 小时）</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>增值税</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>增值税设置</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>启用时间减速</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>启用缩放着色器</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>创建后经过多少个刻度，直到我们强制删除缩放（以防出现错误）：{0} 个刻度</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>VATS co老旧 拥有的刻度数是：{0} 个刻度</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>各个身体部位的准确性乘数。</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>每级精度增益乘数 [{0}]。</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>小于 1 的值按指数比例缩放至每级增益为零。大于 1 的值按指数缩放至无穷大。</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>使用 VATS [{0}] 可以平稳提升瞄准效果。</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>为瞄准增加平坦的提升，因为较低级别的命中率计算非常不有趣。</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>精确缩放的钳位因子 [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>限制最大精度提升，并适当缩放</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>重置</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>传奇效果：</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} 的 {1} 已残废。</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>释放{0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>将{0}搬到笼子里</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>这个笼子会捕捉野生动物吗？</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>会捕捉野生动物。</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>不会捕捉野生动物。</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>动物被捕获！</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>您已在笼子里捕获了{0}。</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>选择新笼子</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>选择这个笼子。</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>将{0}转移到另一个笼子。</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>音乐扩展</ME_MusicExpanded>
+  <ME_Theme>主题</ME_Theme>
+  <ME_ThemeDescription>主题</ME_ThemeDescription>
+  <ME_SelectTheme>选择主题</ME_SelectTheme>
+  <ME_ShowNowPlaying>节目正在播放</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>启用后，将显示一条消息，其中包含当前所选曲目的标题。</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>原版音乐更新</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>启用后，RimWorld 将定期播放音乐，而不是持续播放。</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>选择声音</ME_SelectSounds>
+  <ME_SelectSoundsDescription>如果可能的话，该主题将用于声音。任何未替换的声音都将使用原版声音。</ME_SelectSoundsDescription>
+  <ME_NowPlaying>正在播放：{0}</ME_NowPlaying>
+  <ME_Vanilla_Label>音乐扩展：香草</ME_Vanilla_Label>
+  <ME_Vanilla_Description>所有普通的 SongDef 均采用 MusicExpanded 的功能实现！</ME_Vanilla_Description>
 </LanguageData>

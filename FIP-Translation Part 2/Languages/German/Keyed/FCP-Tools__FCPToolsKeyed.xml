@@ -9,47 +9,106 @@
   <!-- Apparel Requirements -->
   <!-- Enlistment - Hostile Factions -->
 
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
+  <FCP_Settings_Category>FCP-Tools</FCP_Settings_Category>
+  <FCP_Settings.General>Allgemein</FCP_Settings.General>
+  <FCP_Settings.General.tt>Optionen, die den gesamten Mod betreffen oder nirgendwo anders passen.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
-  <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Settings_Stims_AutoStim>Stimpaks automatisch injizieren</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Bei Beschädigung verwenden Vasallen automatisch Stimpaks aus ihrem Inventar.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Abstinenzler können eine Autoinjektion durchführen</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Erlauben Sie Bauern mit der Eigenschaft Abstinenzler, automatisch Stimpaks zu verwenden.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_Enlistment>Einberufung</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Aktive Eintragungstypen</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>Debuggen</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>Optionen, die bei der Diagnose von Problemen helfen oder das Verhalten zum Debuggen ändern</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Protokollierung</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Ausführliche Protokollierung</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>Aufgrund der Beförderung von {0_possessive} zu {1} hat {0_labelShort} die Genehmigung für {0_possessive} {2} verloren</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>Besonderer Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>Ein Bauer {PAWN_title} namens {PAWN_nameDef} ist angekommen und möchte der Kolonie beitreten.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Gemeinsam</FCP_RarityCommon>
+  <FCP_RarityRare>Selten</FCP_RarityRare>
+  <FCP_RarityUnique>Einzigartig</FCP_RarityUnique>
+  <FCP_MechDetonate>Detonieren</FCP_MechDetonate>
+  <FCP_CannotPickUp>{0} kann nicht abgeholt werden</FCP_CannotPickUp>
+  <FCP_PickUp>Abholung von {0}</FCP_PickUp>
+  <FCP_PickUpMax>Abholung max</FCP_PickUpMax>
+  <FCP_PickUpOne>Holen Sie sich einen {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>Zu schwer</FCP_TooHeavy>
+  <FCP_Techprint_Label>FCP-Techprint ({PROJECT_label})</FCP_Techprint_Label>
+  <FCP_Techprint_Desc>Dies ist ein Techprint für das Forschungsprojekt „{PROJECT_label}“.
+\nDie physische Form von Techprints kann von Papierfetzen mit Diagrammen bis hin zu fortschrittlichen, eigenständigen Lehrgeräten reichen. Unabhängig von der Form spielen sie die gleiche Rolle. Sie geben Ihren Forschern die Gewissheit, dass eine Idee möglich ist, und eine ungefähre Vorstellung von den Designs, die in etablierteren Gesellschaften verwendet werden.
+\nIhre Forscher benötigen das grundlegende Wissen von Techprints, um zu wissen, wo sie mit einer bestimmten Technologie beginnen sollen. Erst nachdem genügend Techprints angewendet wurden, können Ihre Forscher die Feinheiten ausarbeiten, wie Sie die Technologie in Ihrer speziellen Situation nutzen können.
+\nDas Anwenden von Techprints auf ein erfülltes Projekt erfüllt die Hälfte des verbleibenden Forschungsfortschritts. Darüber hinaus gewinnen Forscher durch die Anwendung von Techprints stets einen Schub an intellektuellen Fähigkeiten, selbst bei bereits abgeschlossenen Technologien.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>Falscher Xenotyp</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Anforderungen nicht erfüllt</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Erfordert einen Xenotyp</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Verbotener Xenotyp: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Erfordert Xenotyp: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Benötigte Kleidung: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Erfordert Eigenschaft: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Erfordert: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Erfordert eines von: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Erfordert Powerrüstungstraining</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Neuer Feind</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>Indem Sie sich bei {ENLISTED_name} anmelden, sind Sie zum Feind von {HOSTILE_name} geworden. Sie stehen Ihrer Kolonie jetzt feindselig gegenüber.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>Nicht genügend Goodwill mit {0}, es sind mindestens {1} erforderlich</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} wurde besiegt</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Fraktion {0} existiert nicht</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Die Powerrüstungsstation kann nicht verwendet werden</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Bewahren Sie Powerrüstungen auf</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Von der Station aus ausrüsten</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Powerrüstung tauschen</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Gelagerte Kleidung</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Holoband extrahieren</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Bereits extrahiert</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} hat eine {1} im Terminal gefunden!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} hat im Terminal keine nützlichen Daten gefunden.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Daten bereits extrahiert</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Kann Daten enthalten</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Muss an der Wand angebracht werden</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack-Terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Gesperrt – erfordert Hacking</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal entsperrt – {0} erhalten</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal für {0} Stunden gesperrt</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Gesperrt ({0}h verbleibend)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>MwSt.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>MwSt. Einstellungen</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Zeitverlangsamung aktivieren</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Aktivieren Sie den Zoom-Shader</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Wie viele Ticks nach der Erstellung, bis wir das Entfernen des Zooms erzwingen (im Falle von Fehlern): {0} Ticks</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Wie viele Ticks beträgt die MwSt.-Coaltown: {0} Ticks</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Genauigkeitsmultiplikatoren für verschiedene Körperteile.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Genauigkeitsgewinn pro Level-Multiplikator [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Werte unter 1 skalieren exponentiell auf einen Gewinn von null pro Stufe. Werte größer als 1 werden exponentiell bis ins Unendliche skaliert.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Flat-Boost für das Zielen mit VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Fügt dem Zielen einen pauschalen Boost hinzu, da die Berechnung der Trefferchance auf niedrigeren Leveln sehr wenig Spaß macht.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Klemmfaktor für die Genauigkeitsskalierung [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Legt die maximale Genauigkeitssteigerung fest und skaliert entsprechend</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Zurücksetzen</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendäre Effekte:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} hat einen verkrüppelten {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Geben Sie {0} frei</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Trage {0} zum Käfig</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Wird dieser Käfig wilde Tiere fangen?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Wird wilde Tiere fangen.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Wildtiere werden nicht gefangen.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Tier gefangen!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Sie haben {0} in Ihrem Käfig gefangen.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Wählen Sie einen neuen Käfig</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Wählen Sie diesen Käfig aus.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Übertragen Sie {0} in einen anderen Käfig.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Musik erweitert</ME_MusicExpanded>
+  <ME_Theme>Thema</ME_Theme>
+  <ME_ThemeDescription>Thema</ME_ThemeDescription>
+  <ME_SelectTheme>Wählen Sie Thema aus</ME_SelectTheme>
+  <ME_ShowNowPlaying>Jetzt anzeigen</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Wenn diese Option aktiviert ist, wird eine Meldung mit dem Titel des aktuell ausgewählten Titels angezeigt.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanilla Music Update</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Wenn diese Option aktiviert ist, spielt RimWorld in regelmäßigen Abständen Musik ab, nicht ständig.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Wählen Sie Töne</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Dieses Thema wird nach Möglichkeit für Sounds verwendet. Alle nicht ersetzten Sounds verwenden Vanilla-Sounds.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Läuft gerade: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Musik erweitert: Vanille</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Alle Vanilla SongDefs wurden mit den Funktionen von MusicExpanded implementiert!</ME_Vanilla_Description>
 </LanguageData>

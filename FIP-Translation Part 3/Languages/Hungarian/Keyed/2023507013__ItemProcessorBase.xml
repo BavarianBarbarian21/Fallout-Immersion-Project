@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Generic -->
+
+  <IP_InsertFirstItemDesc>Beszúrás</IP_InsertFirstItemDesc>
+  <IP_InsertSecondItemDesc>Beszúrás</IP_InsertSecondItemDesc>
+  <IP_InsertThirdItemDesc>Beszúrás</IP_InsertThirdItemDesc>
+  <IP_InsertFourthItemDesc>Beszúrás</IP_InsertFourthItemDesc>
+  <IP_InsertVariable>{0} beszúrása</IP_InsertVariable>
+  <IP_Output>Kimenet: {0}</IP_Output>
+  <IP_OutputVariable>{0} kimenet innen: {1}</IP_OutputVariable>
+  <IP_OutputDesc>A processzor a következőt adja ki: {0}. Etetni kell vele: {1}</IP_OutputDesc>
+  <IP_InsertVariableSecond>Helyezze be a(z) {0} elemet a 2. helybe</IP_InsertVariableSecond>
+  <IP_InsertVariableThird>Helyezze be a(z) {0} elemet a 3. helybe</IP_InsertVariableThird>
+  <IP_CantFindThing>Nem található ilyen típusú elem ({0}) ezen a térképen</IP_CantFindThing>
+  <IP_BringIngredients>Hozd össze az összetevőket</IP_BringIngredients>
+  <IP_BringIngredientsDesc>A folyamat elindításához hozza magával a hozzávalókat</IP_BringIngredientsDesc>
+  <IP_CancelIngredients>Mégsem az összetevők behozatalát</IP_CancelIngredients>
+  <IP_CancelIngredientsDesc>Mégse az összetevők bevitelének az épületbe</IP_CancelIngredientsDesc>
+  <IP_NoIngredientFound>A térképen nem található összetevő</IP_NoIngredientFound>
+  <IP_ChooseIngredient>Válassza az Összetevőt</IP_ChooseIngredient>
+  <IP_ChooseOutput>Válassza a Kimenet lehetőséget</IP_ChooseOutput>
+  <IP_ChooseIngredientSecond>Válassza a Második összetevőt</IP_ChooseIngredientSecond>
+  <IP_ChooseIngredientThird>Válassza a Harmadik összetevőt</IP_ChooseIngredientThird>
+  <IP_ChooseIngredientFourth>Válassza a Negyedik összetevőt</IP_ChooseIngredientFourth>
+  <IP_IngredientImproperlyDefined>Az egyik összetevőt nem megfelelően határozták meg úgy, hogy az elemfeldolgozóval működjön. Forduljon a mod szerzőjéhez</IP_IngredientImproperlyDefined>
+  <IP_NoPowerDestroysWarning>A(z) {0} működéséhez áram alá kell helyezni</IP_NoPowerDestroysWarning>
+  <IP_NoFuelDestroysWarning>A(z) {0}-t fel kell tölteni a munka megkezdéséhez</IP_NoFuelDestroysWarning>
+  <IP_LightDestroysWarning>A(z) {0}-nak megfelelő fényerővel kell rendelkeznie a munka megkezdéséhez</IP_LightDestroysWarning>
+  <IP_RainDestroysWarning>A(z) {0}-nak nem kell esnie a munka megkezdéséhez</IP_RainDestroysWarning>
+  <IP_TemperatureDestroysWarning>A(z) {0} megfelelő hőmérsékletűnek kell lennie ({1} - {2}) a működés megkezdéséhez</IP_TemperatureDestroysWarning>
+  <IP_NoPowerDestroysInitialWarning>Az eredmény a cikkfeldolgozó áramkimaradása miatt romlik</IP_NoPowerDestroysInitialWarning>
+  <IP_NoPowerDestroysMessage>Az eredmény megromlott a tételfeldolgozó áramkimaradása miatt</IP_NoPowerDestroysMessage>
+  <IP_GenericProductFinished>Egy termék feldolgozása befejeződött, és átvételre vár</IP_GenericProductFinished>
+  <IP_IsEmpty>{0} üres</IP_IsEmpty>
+  <IP_FilledWith>{0} tele van a következővel: {1}</IP_FilledWith>
+  <IP_FilledWithSecond>{0} 2. helye megtelt a következővel: {1}</IP_FilledWithSecond>
+  <IP_FilledWithThird>{0} 3. helye megtelt a következővel: {1}</IP_FilledWithThird>
+  <IP_FilledWithFourth>{0} 4. helye megtelt a következővel: {1}</IP_FilledWithFourth>
+  <IP_IngredientPercentage>(töltve: {0}/{1})</IP_IngredientPercentage>
+  <IP_ProcessorWorking>{0} dolgozik:</IP_ProcessorWorking>
+  <IP_ProcessorPaused>{0} szünetel:</IP_ProcessorPaused>
+  <IP_ProcessingInProgress>{0} feldolgozza a következőt: {1}. A(z) {2} {3} minőségben lesz kész {4} múlva</IP_ProcessingInProgress>
+  <IP_ProcessingInProgressNoQuality>{0} feldolgozza a következőt: {1}. {2} {3} múlva lesz kész</IP_ProcessingInProgressNoQuality>
+  <IP_RemoveProduct>{0} ({1}) eltávolítása</IP_RemoveProduct>
+  <IP_RemoveProductDesc>Távolítsa el a következőt: {0} a következőből: {1}. A termék a jelenlegi minőségi szinten lesz kész ({2})</IP_RemoveProductDesc>
+  <IP_ResetSemiautomatic>Receptek visszaállítása</IP_ResetSemiautomatic>
+  <IP_ResetSemiautomaticDesc>Ez visszaállítja az épületet, miután az aktuális termék elkészült, így új beviteli összetevő választható</IP_ResetSemiautomaticDesc>
+  <IP_NoCombination>Nem található kombináció ezekhez az összetevőkhöz</IP_NoCombination>
+  <IP_SetAutoQuality>Állítsa be a minőséget a termék kitermeléséhez. Amikor a termék eléri ezt a minőséget, a telepes automatikusan visszakeresi és egy raktárba viszi, ha van ilyen. Ha nincs beállítva, a termékek manuálisan vagy Legendás minőségben kerülnek kinyerésre.</IP_SetAutoQuality>
+  <IP_ChooseQualityAuto>Válassza az Automatikus minőség lehetőséget</IP_ChooseQualityAuto>
+  <IP_QualityAutoIs>Automatikus minőség: {0}</IP_QualityAutoIs>
+  <IP_QualityAutoNot>Az automatikus minőség letiltása</IP_QualityAutoNot>
+  <IP_QualityAutoEstablished>Automatikus minőség, a termék minőségi szinten lesz kinyerve: {0}</IP_QualityAutoEstablished>
+  <IP_ToggleAuto>Auto-összetevők beszerzése</IP_ToggleAuto>
+  <IP_ToggleAutoDesc>Ha aktív, akkor ez az épület automatikusan megragadja a hozzávalókat a szomszédos tartályokból, és a termék eltávolítása után automatikusan újraindul. Ha nem, a telepesek az összetevőket az épületbe szállítják, és az újratöltés után manuálisan kell aktiválni.</IP_ToggleAutoDesc>
+  <IP_ResetFullAuto>Reset Machine</IP_ResetFullAuto>
+  <IP_ResetFullAutoDesc>Teljesen alaphelyzetbe állítja a gépet és leállítja. Figyelem, tönkreteszi a folyamatot és a beviteli elemeket</IP_ResetFullAutoDesc>
+  <IP_ProductWaiting>Átvételre vár</IP_ProductWaiting>
+  <IP_OutsideLightRange>A folyamat ebben a gépben megszakad a nem megfelelő fényszint miatt, és hamarosan tönkremegy</IP_OutsideLightRange>
+  <IP_SpoiledDueToLight>A készülékben lévő termék megromlott a nem megfelelő fényszint miatt</IP_SpoiledDueToLight>
+  <IP_ItRains>A folyamat ebben a gépben a zord időjárás miatt megszakad, és hamarosan elrontják</IP_ItRains>
+  <IP_SpoiledDueToRain>Ebben a gépben a termék megromlott a zord időjárás miatt</IP_SpoiledDueToRain>
+  <IP_WrongTemp>A folyamat ebben a gépben megszakad a nem megfelelő hőmérséklet miatt, és hamarosan megromlik</IP_WrongTemp>
+  <IP_SpoiledDueToWrongTemp>A termék megromlott a nem megfelelő hőmérséklet miatt. {0} és {1} ºC közötti hőmérsékletre van szükség</IP_SpoiledDueToWrongTemp>
+  <IP_TempRangeInThisMachine>A jelenlegi folyamatnak {0} és {1} ºC közötti hőmérsékletre van szüksége</IP_TempRangeInThisMachine>
+  <IP_TogglePause>Szünet / Újraindítás</IP_TogglePause>
+  <IP_TogglePauseDesc>Szünet / Indítsa újra a gép feldolgozását</IP_TogglePauseDesc>
+  <IP_OverThreshold>Várakozás a kimenet törlésére. Kimeneti korlát: {0}</IP_OverThreshold>
+  <IP_NoRecipesHere>Nem találhatók módosított receptek ehhez a gyárhoz</IP_NoRecipesHere>
+</LanguageData>
