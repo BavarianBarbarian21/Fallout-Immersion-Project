@@ -147,6 +147,27 @@
 			"command": "$out = 'c:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\translation-process-stats-2.json'; Get-Process -Id 5328 | Select-Object Id, CPU, WorkingSet64, StartTime | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $out -Encoding UTF8",
 			"isBackground": false,
 			"group": "test"
+		},
+		{
+			"label": "translation-sync-part1-add-languages",
+			"type": "shell",
+			"command": "Set-ExecutionPolicy -Scope Process Bypass; & '${workspaceFolder}/Tools/TranslationSync/Invoke-TranslationSync.ps1' -Command sync -Category part1 -Languages Catalan,Estonian,Greek,Slovak,Vietnamese",
+			"isBackground": false,
+			"group": "test"
+		},
+		{
+			"label": "translation-sync-part2-add-languages",
+			"type": "shell",
+			"command": "Set-ExecutionPolicy -Scope Process Bypass; & '${workspaceFolder}/Tools/TranslationSync/Invoke-TranslationSync.ps1' -Command sync -Category part2 -Languages Catalan,Estonian,Greek,Slovak,Vietnamese",
+			"isBackground": false,
+			"group": "test"
+		},
+		{
+			"label": "translation-sync-part4-add-languages",
+			"type": "shell",
+			"command": "Set-ExecutionPolicy -Scope Process Bypass; & '${workspaceFolder}/Tools/TranslationSync/Invoke-TranslationSync.ps1' -Command sync -Category part4 -Languages Catalan,Estonian,Greek,Slovak,Vietnamese",
+			"isBackground": false,
+			"group": "test"
 		}
 	]
 }
