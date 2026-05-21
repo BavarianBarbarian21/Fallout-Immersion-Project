@@ -8,11 +8,11 @@ foreach ($part in $parts) {
     $engPath  = [IO.Path]::Combine($langRoot, 'English')
     if (-not (Test-Path $engPath)) { Write-Host "SKIP $part"; continue }
 
-    # Pre-cache English line counts (read once, not once per language)
+    # Pre-cache English entry counts (count  <tag> lines, ignore blank/header lines)
     $engMap = @{}
     Get-ChildItem $engPath -Recurse -Filter '*.xml' | ForEach-Object {
         $rel = $_.FullName.Substring($engPath.Length + 1)
-        $engMap[$rel] = [System.IO.File]::ReadAllLines($_.FullName).Length
+        $engMap[$rel] = ([System.IO.File]::ReadAllLines($_.FullName) -match '<[A-Za-z_][^>]*>[^<]*</').Count
     }
 
     $languages = Get-ChildItem $langRoot -Directory | Where-Object Name -ne 'English'
@@ -28,9 +28,9 @@ foreach ($part in $parts) {
 
         foreach ($rel in $engMap.Keys) {
             if (-not $langFiles.ContainsKey($rel)) {
-                $allMissing.Add("[$part] $($lang.Name) / $rel  (eng=$($engMap[$rel])L)")
+                $allMissing.Add("[$part] $($lang.Name) / $rel  (eng=$($engMap[$rel])entries)")
             } else {
-                $ll = [System.IO.File]::ReadAllLines($langFiles[$rel]).Length
+                $ll = ([System.IO.File]::ReadAllLines($langFiles[$rel]) -match '<[A-Za-z_][^>]*>[^<]*</').Count
                 if ($ll -ne $engMap[$rel]) {
                     $allMismatch.Add([PSCustomObject]@{
                         Part=$part; Lang=$lang.Name; File=$rel
