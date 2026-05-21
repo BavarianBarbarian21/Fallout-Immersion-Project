@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Generic -->
+
+  <IP_InsertFirstItemDesc>插入</IP_InsertFirstItemDesc>
+  <IP_InsertSecondItemDesc>插入</IP_InsertSecondItemDesc>
+  <IP_InsertThirdItemDesc>插入</IP_InsertThirdItemDesc>
+  <IP_InsertFourthItemDesc>插入</IP_InsertFourthItemDesc>
+  <IP_InsertVariable>插入{0}</IP_InsertVariable>
+  <IP_Output>输出{0}</IP_Output>
+  <IP_OutputVariable>来自 {0} 的输出 {1}</IP_OutputVariable>
+  <IP_OutputDesc>处理器将输出{0}。需要喂食{1}</IP_OutputDesc>
+  <IP_InsertVariableSecond>将 {0} 插入第二个槽位</IP_InsertVariableSecond>
+  <IP_InsertVariableThird>将 {0} 插入第三个槽位</IP_InsertVariableThird>
+  <IP_CantFindThing>在此地图中找不到此类项目 ({0})</IP_CantFindThing>
+  <IP_BringIngredients>带上食材</IP_BringIngredients>
+  <IP_BringIngredientsDesc>带上原料开始这个过程</IP_BringIngredientsDesc>
+  <IP_CancelIngredients>取消携带食材</IP_CancelIngredients>
+  <IP_CancelIngredientsDesc>取消将食材带入该建筑物</IP_CancelIngredientsDesc>
+  <IP_NoIngredientFound>地图上没有找到成分</IP_NoIngredientFound>
+  <IP_ChooseIngredient>选择成分</IP_ChooseIngredient>
+  <IP_ChooseOutput>选择输出</IP_ChooseOutput>
+  <IP_ChooseIngredientSecond>选择第二种成分</IP_ChooseIngredientSecond>
+  <IP_ChooseIngredientThird>选择第三种成分</IP_ChooseIngredientThird>
+  <IP_ChooseIngredientFourth>选择第四种成分</IP_ChooseIngredientFourth>
+  <IP_IngredientImproperlyDefined>其中一种成分被错误地定义为与物品处理器一起使用，请联系模组的作者</IP_IngredientImproperlyDefined>
+  <IP_NoPowerDestroysWarning>{0} 需要通电才能开始工作</IP_NoPowerDestroysWarning>
+  <IP_NoFuelDestroysWarning>{0} 需要补充能量才能开始工作</IP_NoFuelDestroysWarning>
+  <IP_LightDestroysWarning>{0} 需要有足够的光照水平才能开始工作</IP_LightDestroysWarning>
+  <IP_RainDestroysWarning>{0} 必须在不下雨的情况下才能开始工作</IP_RainDestroysWarning>
+  <IP_TemperatureDestroysWarning>{0} 需要有足够的温度 ({1} - {2}) 才能开始工作</IP_TemperatureDestroysWarning>
+  <IP_NoPowerDestroysInitialWarning>由于项目处理器断电，结果被破坏</IP_NoPowerDestroysInitialWarning>
+  <IP_NoPowerDestroysMessage>由于项目处理器断电，结果已损坏</IP_NoPowerDestroysMessage>
+  <IP_GenericProductFinished>产品已加工完毕，等待提货</IP_GenericProductFinished>
+  <IP_IsEmpty>{0} 为空</IP_IsEmpty>
+  <IP_FilledWith>{0} 充满了 {1}</IP_FilledWith>
+  <IP_FilledWithSecond>{0} 的第二个槽已填充 {1}</IP_FilledWithSecond>
+  <IP_FilledWithThird>{0} 的第 3 个槽已填充 {1}</IP_FilledWithThird>
+  <IP_FilledWithFourth>{0} 的第 4 个槽位填充有 {1}</IP_FilledWithFourth>
+  <IP_IngredientPercentage>（已填写第 {0} 个，共 {1} 个）</IP_IngredientPercentage>
+  <IP_ProcessorWorking>{0}正在运行：</IP_ProcessorWorking>
+  <IP_ProcessorPaused>{0} 已暂停：</IP_ProcessorPaused>
+  <IP_ProcessingInProgress>{0} 正在处理 {1}。 {2} 将在 {3} 准备好，具有 {4} 的质量</IP_ProcessingInProgress>
+  <IP_ProcessingInProgressNoQuality>{0} 正在处理 {1}。 {2}将于{3}准备好</IP_ProcessingInProgressNoQuality>
+  <IP_RemoveProduct>删除 {0} ({1})</IP_RemoveProduct>
+  <IP_RemoveProductDesc>从 {0} 中删除 {1}。产品将按当前质量水平准备就绪 ({2})</IP_RemoveProductDesc>
+  <IP_ResetSemiautomatic>重置食谱</IP_ResetSemiautomatic>
+  <IP_ResetSemiautomaticDesc>这将在当前产品完成后重置建筑物，因此可以选择新的输入成分</IP_ResetSemiautomaticDesc>
+  <IP_NoCombination>未找到这些成分的组合</IP_NoCombination>
+  <IP_SetAutoQuality>设置产品提取的质量。当产品达到此质量时，殖民者将自动检索它并将其运送到库存（如果有）。如果未设置，产品将被手动提取，或以传奇品质提取。</IP_SetAutoQuality>
+  <IP_ChooseQualityAuto>选择自动质量</IP_ChooseQualityAuto>
+  <IP_QualityAutoIs>汽车质量：{0}</IP_QualityAutoIs>
+  <IP_QualityAutoNot>禁用自动质量</IP_QualityAutoNot>
+  <IP_QualityAutoEstablished>自动质量，产品将按质量级别提取：{0}</IP_QualityAutoEstablished>
+  <IP_ToggleAuto>自动获取原料</IP_ToggleAuto>
+  <IP_ToggleAutoDesc>如果设置为活动状态，该建筑物将自动从相邻料斗中抓取原料，并在产品被移除后自动重新开始工作。如果没有，殖民者会将原料拖到建筑物中，并且在重新填充后需要手动激活</IP_ToggleAutoDesc>
+  <IP_ResetFullAuto>重置机器</IP_ResetFullAuto>
+  <IP_ResetFullAutoDesc>完全重置机器并使其停止。警告，它会破坏进程和输入项</IP_ResetFullAutoDesc>
+  <IP_ProductWaiting>等待取货</IP_ProductWaiting>
+  <IP_OutsideLightRange>由于光线不足，这台机器中的进程正在中断，很快就会损坏</IP_OutsideLightRange>
+  <IP_SpoiledDueToLight>由于光线不足，机器中的产品已变质</IP_SpoiledDueToLight>
+  <IP_ItRains>由于恶劣天气，这台机器的加工过程正在中断，很快就会变质</IP_ItRains>
+  <IP_SpoiledDueToRain>本机中的产品因恶劣天气而变质</IP_SpoiledDueToRain>
+  <IP_WrongTemp>由于温度不合适，该机器中的加工过程正在中断，并且很快就会变质</IP_WrongTemp>
+  <IP_SpoiledDueToWrongTemp>由于温度不合适，产品已变质。需要在 {0} 到 {1} ℃ 之间</IP_SpoiledDueToWrongTemp>
+  <IP_TempRangeInThisMachine>当前工艺需要 {0} 到 {1} ℃ 之间的温度</IP_TempRangeInThisMachine>
+  <IP_TogglePause>暂停/重新启动</IP_TogglePause>
+  <IP_TogglePauseDesc>暂停/重新启动本机的处理</IP_TogglePauseDesc>
+  <IP_OverThreshold>等待输出清除。输出限制为{0}</IP_OverThreshold>
+  <IP_NoRecipesHere>没有找到该工厂的修改配方</IP_NoRecipesHere>
+</LanguageData>
