@@ -3,6 +3,26 @@
 	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewECandT">
 		<success>Always</success>
 		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VBE_EspressoMachineBuilding"]/label</xpath>
+				<value>
+					<label>luxobrew coffee pot</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="VBE_EspressoMachineBuilding"]/description</xpath>
+				<value>
+					<description>A polished Lucky 38 Luxobrew coffee pot rebuilt for high-volume service. It handles espresso pulls, reheating chilled coffee, and tea blends from a single compact station.</description>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="VBE_MakeCoffee" or defName="VBE_MakeTea" or defName="VBE_MakeCoffeeFast" or defName="VBE_ReheatCoffee" or defName="VBE_BrewLatteCoffee" or defName="VBE_BrewMochaCoffee" or defName="VBE_BrewIrishCoffee" or defName="VBE_BrewCannibalCoffee" or defName="VBE_MakeTeaFast" or defName="VBE_MakeBlackTea" or defName="VBE_MakeYuenYeung" or defName="VBE_MakeKombucha" or defName="VBE_BrewLemonCoffee" or defName="VBE_MakeLemonTea" or defName="VBE_MakeEarlGreyTea"]/recipeUsers</xpath>
+				<value>
+					<recipeUsers>
+						<li>VBE_EspressoMachineBuilding</li>
+					</recipeUsers>
+				</value>
+			</li>
 			<li Class="PatchOperationFindMod" MayRequire="Rick.FCP.Plants">
 				<mods>
 					<li>Vanilla Cooking Expanded</li>

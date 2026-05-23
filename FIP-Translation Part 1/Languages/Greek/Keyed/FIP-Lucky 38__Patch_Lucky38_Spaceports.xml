@@ -1,112 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <AccessControlButton>Flight control</AccessControlButton>
-  <AccessControlDesc>Specify what kind of vertibird traffic is allowed to use this pad.</AccessControlDesc>
-  <LetterTraderShuttleArrival>A Brotherhood quartermaster vertibird from {0} is landing. They are a {1}.</LetterTraderShuttleArrival>
-  <Spaceports_AirspaceLockdown>Flight lockdown</Spaceports_AirspaceLockdown>
-  <Spaceports_AirspaceLockdownDesc>Due to hostiles, or because it was manually activated, one or more of your colonies has entered flight lockdown. No new vertibird traffic will arrive, but any landed craft can still depart. 
+  <AccessControlButton>Έλεγχος πτήσης</AccessControlButton>
+  <AccessControlDesc>Καθορίστε τι είδους κίνηση vertibird επιτρέπεται να χρησιμοποιεί αυτό το pad.</AccessControlDesc>
+  <LetterTraderShuttleArrival>Ένα Vertibird του Brotherhood quartermaster από το {0} προσγειώνεται. Είναι {1}.</LetterTraderShuttleArrival>
+  <Spaceports_AirspaceLockdown>Κλείδωμα πτήσεων</Spaceports_AirspaceLockdown>
+  <Spaceports_AirspaceLockdownDesc>Λόγω εχθρικών εχθροπραξιών ή επειδή ενεργοποιήθηκε χειροκίνητα, μία ή περισσότερες από τις αποικίες σας έχουν μπει σε κλείδωμα πτήσεων. Δεν θα φτάσει νέα κίνηση vertibird, αλλά κάθε σκάφος μπορεί να αναχωρήσει. 
 
-Colonies currently under flight lockdown:
-</Spaceports_AirspaceLockdownDesc>
-  <Spaceports_AllTypes>All vertibirds</Spaceports_AllTypes>
-  <Spaceports_AutoEvac>Emergency scramble in progress</Spaceports_AutoEvac>
-  <Spaceports_AutoEvacDesc>Due to hostiles, one or more of your colonies has initiated automatic evacuation of landed visitors and crews. 
+Αποικίες υπό αποκλεισμό πτήσεων:</Spaceports_AirspaceLockdownDesc>
+  <Spaceports_AllTypes>Όλα τα vertibirds</Spaceports_AllTypes>
+  <Spaceports_AutoEvac>Αναμέτρηση έκτακτης ανάγκης σε εξέλιξη</Spaceports_AutoEvac>
+  <Spaceports_AutoEvacDesc>Λόγω εχθρικών εχθροπραξιών, μία ή περισσότερες από τις αποικίες σας έχει ξεκινήσει την αυτόματη εκκένωση των προσγειωμένων επισκεπτών και των πληρωμάτων. 
 
-Colonies currently performing emergency scrambles:
-</Spaceports_AutoEvacDesc>
-  <Spaceports_BeaconAtCap>
-Flight traffic at user-defined limit - landings suspended.</Spaceports_BeaconAtCap>
-  <Spaceports_BeaconKessler>
-Debris hazard in the flight corridor - landings impossible.</Spaceports_BeaconKessler>
-  <Spaceports_BeaconNoPads>
-No active vertibird pads detected - flight network offline.</Spaceports_BeaconNoPads>
-  <Spaceports_BeaconOK>
-Flight network online.</Spaceports_BeaconOK>
-  <Spaceports_BeaconPadsFull>
-All vertibird pads are occupied - landings suspended.</Spaceports_BeaconPadsFull>
-  <Spaceports_BeaconUnpowered>
-Beacon unpowered - flight network offline.</Spaceports_BeaconUnpowered>
-  <Spaceports_CallTaxi>Request transit vertibird</Spaceports_CallTaxi>
-  <Spaceports_CallTaxiDisabled>beacon is unpowered - cannot reach Brotherhood flight control.</Spaceports_CallTaxiDisabled>
-  <Spaceports_CallTaxiInfo>Service: One-way transit vertibird
-Fare: 500 silver
-Boarding: first open pad</Spaceports_CallTaxiInfo>
-  <Spaceports_CallTaxiTooltip>Request a one-way Brotherhood-chartered vertibird for 500 silver.</Spaceports_CallTaxiTooltip>
-  <Spaceports_DismissAll>Scramble all</Spaceports_DismissAll>
-  <Spaceports_DismissAllTooltip>Force all vertibirds on the map to lift off and depart immediately, regardless of whether all required cargo is loaded.</Spaceports_DismissAllTooltip>
-  <Spaceports_GizmoDisabled>you do not control this vertibird, or it is incapable of taking off.</Spaceports_GizmoDisabled>
-  <Spaceports_GroupVisitorsLanding>A Brotherhood vertibird from {0} is landing with visitors.</Spaceports_GroupVisitorsLanding>
-  <Spaceports_ImmediateDeparture>Scramble</Spaceports_ImmediateDeparture>
-  <Spaceports_ImmediateDepartureTooltip>Force this vertibird to lift off and depart immediately, regardless of whether all required cargo is loaded.</Spaceports_ImmediateDepartureTooltip>
-  <Spaceports_JustGuests>Allied guests only</Spaceports_JustGuests>
-  <Spaceports_JustTraders>Quartermasters only</Spaceports_JustTraders>
-  <Spaceports_JustVisitors>Visitors only</Spaceports_JustVisitors>
-  <Spaceports_ManualAirspaceLockdown>Flight lockdown</Spaceports_ManualAirspaceLockdown>
-  <Spaceports_ManualAirspaceLockdownTooltip>Manually toggle vertibird traffic lockdown.</Spaceports_ManualAirspaceLockdownTooltip>
-  <Spaceports_None>No flights</Spaceports_None>
-  <Spaceports_RecallAll>Recall all crews</Spaceports_RecallAll>
-  <Spaceports_RecallAllTooltip>Force all landed parties to board their vertibirds and depart immediately.</Spaceports_RecallAllTooltip>
-  <Spaceports_RecallParty>Recall passengers</Spaceports_RecallParty>
-  <Spaceports_RecallPartyTooltip>Force this vertibird's passengers to board immediately and depart.</Spaceports_RecallPartyTooltip>
-  <Spaceports_SingleVisitorLanding>A Brotherhood vertibird from {1} is landing with a visiting patron. {PAWN_titleIndef} named {PAWN_nameFull} is onboard.</Spaceports_SingleVisitorLanding>
-  <Spaceports_Uplink>Brotherhood uplink established...</Spaceports_Uplink>
-  <Spaceports_VisitorsLeaving>Visitors from {0} are departing by Brotherhood vertibird.</Spaceports_VisitorsLeaving>
-  <Spaceports_DryModeWarning>Warning: without water access, the aviation fuel processor will run at 33% efficiency.</Spaceports_DryModeWarning>
-  <Spaceports_DryModeWarningDBH>Warning: the aviation fuel processor requires water piping to operate at full efficiency.</Spaceports_DryModeWarningDBH>
-  <Spaceports_FFTerrain>Aviation fuel processor must be placed in shallow water, a river, or on terrain that supports Heavy.</Spaceports_FFTerrain>
-  <Spaceports_FuelLevel>Aviation fuel reserves: {0}</Spaceports_FuelLevel>
-  <Spaceports_ModeDry>Operating mode: dry (reduced yield)</Spaceports_ModeDry>
-  <Spaceports_ModeWet>Operating mode: wet (full yield)</Spaceports_ModeWet>
-  <Spaceports_NetworkInfo>There are {0} tanks on the network holding a total of {1} aviation fuel.</Spaceports_NetworkInfo>
-  <Spaceports_ProductionCache>Ready fuel stock: {0}</Spaceports_ProductionCache>
-  <Spaceports_RoofBlocking>Vertibird pad blocked by roofing.</Spaceports_RoofBlocking>
-  <Spaceports_TotalFuelProduced>Lifetime aviation fuel production: {0}</Spaceports_TotalFuelProduced>
-  <Spaceports_TotalSales>Lifetime refueling revenue: {0}</Spaceports_TotalSales>
-  <Spaceports_InterstellarDerelictBoom>The lander's drive sputters dangerously as it nears your colony. It is going to crash.</Spaceports_InterstellarDerelictBoom>
-  <Spaceports_InterstellarDerelictLetter>Your short-range radio has picked up an automated distress call from a crippled vessel drifting in-system. As you watch its passage, a battered emergency lander breaks away from the hull and fires its drive for a last descent. Soon after, you receive a transmission from the passengers: they picked up your flight beacon.
+Αποικίες που εκτελούν επί του παρόντος αναμετρήσεις έκτακτης ανάγκης:</Spaceports_AutoEvacDesc>
+  <Spaceports_BeaconAtCap>Κυκλοφορία πτήσεων στο όριο που καθορίζεται από τον χρήστη - οι προσγειώσεις έχουν ανασταλεί.</Spaceports_BeaconAtCap>
+  <Spaceports_BeaconKessler>Κίνδυνος συντριμμιών στο διάδρομο πτήσης - αδύνατη η προσγείωση.</Spaceports_BeaconKessler>
+  <Spaceports_BeaconNoPads>Δεν εντοπίστηκαν ενεργά επιθέματα vertibird - δίκτυο πτήσεων εκτός σύνδεσης.</Spaceports_BeaconNoPads>
+  <Spaceports_BeaconOK>Δίκτυο πτήσεων σε απευθείας σύνδεση.</Spaceports_BeaconOK>
+  <Spaceports_BeaconPadsFull>Όλα τα μαξιλαράκια vertibird είναι κατειλημμένα - οι προσγειώσεις έχουν ανασταλεί.</Spaceports_BeaconPadsFull>
+  <Spaceports_BeaconUnpowered>Beacon χωρίς τροφοδοσία - δίκτυο πτήσεων εκτός σύνδεσης.</Spaceports_BeaconUnpowered>
+  <Spaceports_CallTaxi>Αίτημα transit vertibird</Spaceports_CallTaxi>
+  <Spaceports_CallTaxiDisabled>Το beacon δεν λειτουργεί - δεν μπορεί να φτάσει στον έλεγχο πτήσης της Brotherhood.</Spaceports_CallTaxiDisabled>
+  <Spaceports_CallTaxiInfo>Υπηρεσία: Διαμετακόμιση μονής κατεύθυνσης vertibird
+Τιμή: 500 ασήμι
+Επιβίβαση: πρώτο ανοιχτό ταμπλό</Spaceports_CallTaxiInfo>
+  <Spaceports_CallTaxiTooltip>Ζητήστε ένα vertibird μονόδρομο ναυλωμένο από την Brotherhood για 500 ασήμι.</Spaceports_CallTaxiTooltip>
+  <Spaceports_DismissAll>Ανακατέψτε όλα</Spaceports_DismissAll>
+  <Spaceports_DismissAllTooltip>Αναγκάστε όλα τα vertibirds στον χάρτη να απογειωθούν και να αναχωρήσουν αμέσως, ανεξάρτητα από το αν έχει φορτωθεί όλο το απαιτούμενο φορτίο.</Spaceports_DismissAllTooltip>
+  <Spaceports_GizmoDisabled>δεν ελέγχετε αυτό το vertibird, ή δεν είναι σε θέση να απογειωθεί.</Spaceports_GizmoDisabled>
+  <Spaceports_GroupVisitorsLanding>Ένα Brotherhood vertibird από το {0} προσγειώνεται με επισκέπτες.</Spaceports_GroupVisitorsLanding>
+  <Spaceports_ImmediateDeparture>Σκαρφάλωμα</Spaceports_ImmediateDeparture>
+  <Spaceports_ImmediateDepartureTooltip>Αναγκάστε αυτό το vertibird να απογειωθεί και να αναχωρήσει αμέσως, ανεξάρτητα από το αν έχει φορτωθεί όλο το απαιτούμενο φορτίο.</Spaceports_ImmediateDepartureTooltip>
+  <Spaceports_JustGuests>Μόνο συμμαχικοί επισκέπτες</Spaceports_JustGuests>
+  <Spaceports_JustTraders>Quartermaster μόνο</Spaceports_JustTraders>
+  <Spaceports_JustVisitors>Μόνο επισκέπτες</Spaceports_JustVisitors>
+  <Spaceports_ManualAirspaceLockdown>Κλείδωμα πτήσεων</Spaceports_ManualAirspaceLockdown>
+  <Spaceports_ManualAirspaceLockdownTooltip>Χειροκίνητη εναλλαγή κλειδώματος κυκλοφορίας vertibird.</Spaceports_ManualAirspaceLockdownTooltip>
+  <Spaceports_None>Όχι πτήσεις</Spaceports_None>
+  <Spaceports_RecallAll>Ανάκληση όλων των πληρωμάτων</Spaceports_RecallAll>
+  <Spaceports_RecallAllTooltip>Αναγκάστε όλους τους προσγειωμένους να επιβιβαστούν στο vertibird τους και να αναχωρήσουν αμέσως.</Spaceports_RecallAllTooltip>
+  <Spaceports_RecallParty>Ανάκληση επιβατών</Spaceports_RecallParty>
+  <Spaceports_RecallPartyTooltip>Αναγκάστε τους επιβάτες αυτού του vertibird να επιβιβαστούν αμέσως και να αναχωρήσουν.</Spaceports_RecallPartyTooltip>
+  <Spaceports_SingleVisitorLanding>Ένα Vertibird της Brotherhood από το {1} προσγειώνεται με έναν επισκέπτη θαμώνα. Το {PAWN_titleIndef} με όνομα {PAWN_nameFull} είναι ενσωματωμένο.</Spaceports_SingleVisitorLanding>
+  <Spaceports_Uplink>Ιδρύθηκε η ανοδική σύνδεση της αδελφότητας...</Spaceports_Uplink>
+  <Spaceports_VisitorsLeaving>Οι επισκέπτες από το {0} αναχωρούν με Brotherhood vertibird.</Spaceports_VisitorsLeaving>
+  <Spaceports_DryModeWarning>Προειδοποίηση: χωρίς πρόσβαση στο νερό, ο επεξεργαστής καυσίμων αεροσκαφών θα λειτουργεί με απόδοση 33%.</Spaceports_DryModeWarning>
+  <Spaceports_DryModeWarningDBH>Προειδοποίηση: ο επεξεργαστής καυσίμων αεροσκαφών απαιτεί τη σωλήνωση νερού για να λειτουργεί με πλήρη απόδοση.</Spaceports_DryModeWarningDBH>
+  <Spaceports_FFTerrain>Ο επεξεργαστής καυσίμων αεροσκαφών πρέπει να τοποθετείται σε ρηχά νερά, σε ποτάμι ή σε έδαφος που υποστηρίζει το Heavy.</Spaceports_FFTerrain>
+  <Spaceports_FuelLevel>Αποθέματα αεροπορικών καυσίμων: {0}</Spaceports_FuelLevel>
+  <Spaceports_ModeDry>Τρόπος λειτουργίας: στεγνό (μειωμένη απόδοση)</Spaceports_ModeDry>
+  <Spaceports_ModeWet>Τρόπος λειτουργίας: υγρό (πλήρης απόδοση)</Spaceports_ModeWet>
+  <Spaceports_NetworkInfo>Υπάρχουν {0} δεξαμενές στο δίκτυο που περιέχουν συνολικά {1} αεροπορικά καύσιμα.</Spaceports_NetworkInfo>
+  <Spaceports_ProductionCache>Έτοιμο απόθεμα καυσίμου: {0}</Spaceports_ProductionCache>
+  <Spaceports_RoofBlocking>Το μαξιλαράκι Vertibird μπλοκάρεται από την οροφή.</Spaceports_RoofBlocking>
+  <Spaceports_TotalFuelProduced>Παραγωγή αεροπορικών καυσίμων εφ' όρου ζωής: {0}</Spaceports_TotalFuelProduced>
+  <Spaceports_TotalSales>Έσοδα από ανεφοδιασμό εφ' όρου ζωής: {0}</Spaceports_TotalSales>
+  <Spaceports_InterstellarDerelictBoom>Η κίνηση του προσεδάφισης εκτινάσσεται επικίνδυνα καθώς πλησιάζει στην αποικία σας. Πρόκειται να συντριβεί.</Spaceports_InterstellarDerelictBoom>
+  <Spaceports_InterstellarDerelictLetter>Το ραδιόφωνο μικρής εμβέλειας έλαβε μια αυτοματοποιημένη κλήση κινδύνου από ένα ανάπηρο σκάφος που παρασύρεται στο σύστημα. Καθώς παρακολουθείτε το πέρασμά του, ένα χτυπημένο προσεδάφιο έκτακτης ανάγκης ξεφεύγει από το κύτος και πυροδοτεί την οδήγησή του για μια τελευταία κάθοδο. Αμέσως μετά, λαμβάνετε μια μετάδοση από τους επιβάτες: πήραν τον φάρο της πτήσης σας.
 
-The pilot explains that the craft is too unstable to perform a controlled descent and begs you to clear them for an emergency landing. He offers some advanced equipment as a reward.
+Ο πιλότος εξηγεί ότι το σκάφος είναι πολύ ασταθές για να πραγματοποιήσει ελεγχόμενη κάθοδο και σας παρακαλεί να το αφήσετε για αναγκαστική προσγείωση. Προσφέρει κάποιο προηγμένο εξοπλισμό ως ανταμοιβή.
 
-You can accept their request, but be warned: the lander's damaged reactor could detonate during atmospheric entry, raining debris down on your colony. It might even explode on impact, wreaking havoc on your vertibird facilities.</Spaceports_InterstellarDerelictLetter>
-  <Spaceports_InterstellarDerelictSafe>The lander's drive holds steady as it approaches your beacon. It is going to make it.</Spaceports_InterstellarDerelictSafe>
-  <Spaceports_InterstellarDerelictShrapnel>The lander's reactor lost containment during atmospheric entry. Your flight beacon has picked up {0} inbound chunks of shrapnel and debris.</Spaceports_InterstellarDerelictShrapnel>
-  <Spaceports_MysteryCargo>Unidentified vertibird</Spaceports_MysteryCargo>
-  <Spaceports_MysteryCargo0>It seems the vertibird contains a small assortment of useful things.</Spaceports_MysteryCargo0>
-  <Spaceports_MysteryCargo1>It seems the vertibird contains a large assortment of useful things.</Spaceports_MysteryCargo1>
-  <Spaceports_MysteryCargo2>It seems the vertibird is empty. Its engines are damaged, making it useful only for scrap.</Spaceports_MysteryCargo2>
-  <Spaceports_MysteryCargo3>The vertibird's engine spins up as you approach, and it takes off for parts unknown.</Spaceports_MysteryCargo3>
-  <Spaceports_MysteryCargo4>The vertibird depressurizes violently when you approach, hurling several desiccated skeletons out of its cabin.</Spaceports_MysteryCargo4>
-  <Spaceports_MysteryCargo5>A piercing mental scream emits from the vertibird as you approach. A psychic charge.</Spaceports_MysteryCargo5>
-  <Spaceports_MysteryCargo6>The vertibird's hatch springs open when you approach, and a small attack party from {0} pours out.</Spaceports_MysteryCargo6>
-  <Spaceports_MysteryCargo7>The vertibird's reactor begins to wail louder and louder as you approach. It is a bomb.</Spaceports_MysteryCargo7>
-  <Spaceports_MysteryCargoAccept>Let the vertibird land.</Spaceports_MysteryCargoAccept>
-  <Spaceports_MysteryCargoLetter>Your Brotherhood flight beacon has detected an unidentified vertibird approaching on autopilot. Its transponder has been disabled, and all attempts to contact any crew onboard have failed.
+Μπορείτε να αποδεχτείτε το αίτημά τους, αλλά να λάβετε προειδοποίηση: ο κατεστραμμένος αντιδραστήρας του αεροσκάφους μπορεί να εκραγεί κατά την ατμοσφαιρική είσοδο, βρέχοντας συντρίμμια στην αποικία σας. Μπορεί ακόμη και να εκραγεί κατά την πρόσκρουση, προκαλώντας όλεθρο στις εγκαταστάσεις σας στο vertibird.</Spaceports_InterstellarDerelictLetter>
+  <Spaceports_InterstellarDerelictSafe>Η κίνηση του προσεδάφισης παραμένει σταθερή καθώς πλησιάζει τον φάρο σας. Θα τα καταφέρει.</Spaceports_InterstellarDerelictSafe>
+  <Spaceports_InterstellarDerelictShrapnel>Ο αντιδραστήρας του προσεδάφισης έχασε τον περιορισμό κατά την ατμοσφαιρική είσοδο. Ο φάρος πτήσης σας έχει μαζέψει {0} εισερχόμενα κομμάτια θραυσμάτων και συντριμμιών.</Spaceports_InterstellarDerelictShrapnel>
+  <Spaceports_MysteryCargo>Μη αναγνωρισμένο ιλίγοπηλο</Spaceports_MysteryCargo>
+  <Spaceports_MysteryCargo0>Φαίνεται ότι το vertibird περιέχει μια μικρή ποικιλία από χρήσιμα πράγματα.</Spaceports_MysteryCargo0>
+  <Spaceports_MysteryCargo1>Φαίνεται ότι το vertibird περιέχει μια μεγάλη ποικιλία από χρήσιμα πράγματα.</Spaceports_MysteryCargo1>
+  <Spaceports_MysteryCargo2>Φαίνεται ότι το vertibird είναι άδειο. Οι κινητήρες του είναι κατεστραμμένοι, με αποτέλεσμα να είναι χρήσιμο μόνο για σκραπ.</Spaceports_MysteryCargo2>
+  <Spaceports_MysteryCargo3>Ο κινητήρας του vertibird περιστρέφεται καθώς πλησιάζετε και απογειώνεται για άγνωστα μέρη.</Spaceports_MysteryCargo3>
+  <Spaceports_MysteryCargo4>Το Vertibird αποσυμπιέζεται βίαια όταν πλησιάζετε, εκτοξεύοντας αρκετούς αποξηραμένους σκελετούς έξω από την καμπίνα του.</Spaceports_MysteryCargo4>
+  <Spaceports_MysteryCargo5>Μια διαπεραστική ψυχική κραυγή εκπέμπεται από το vertibird καθώς πλησιάζετε. Μια ψυχική φόρτιση.</Spaceports_MysteryCargo5>
+  <Spaceports_MysteryCargo6>Τα ελατήρια καταπακτής του vertibird ανοίγουν όταν πλησιάζετε και ένα μικρό πάρτι επίθεσης από το {0} ξεχύνεται.</Spaceports_MysteryCargo6>
+  <Spaceports_MysteryCargo7>Ο αντιδραστήρας του vertibird αρχίζει να κλαίει όλο και πιο δυνατά καθώς πλησιάζετε. Είναι μια βόμβα.</Spaceports_MysteryCargo7>
+  <Spaceports_MysteryCargoAccept>Αφήστε το vertibird να προσγειωθεί.</Spaceports_MysteryCargoAccept>
+  <Spaceports_MysteryCargoLetter>Ο φάρος πτήσης της Brotherhood εντόπισε ένα άγνωστο vertibird που πλησιάζει με αυτόματο πιλότο. Ο αναμεταδότης του έχει απενεργοποιηθεί και όλες οι προσπάθειες επικοινωνίας με οποιοδήποτε πλήρωμα στο πλοίο απέτυχαν.
 
-However, analysis of its trajectory suggests it carries a heavy payload. It could be something valuable... or it could be a trap.
+Ωστόσο, η ανάλυση της τροχιάς του δείχνει ότι φέρει βαρύ φορτίο. Μπορεί να είναι κάτι πολύτιμο... ή μπορεί να είναι παγίδα.
 
-You can quash your beacon to hide from the approach, or keep it active and let the vertibird land.</Spaceports_MysteryCargoLetter>
-  <Spaceports_PickupInbound>A vertibird is landing to pick up {0}.</Spaceports_PickupInbound>
-  <Spaceports_PrisonerTransferLetter>You’ve just received a proposition from {0} of {1}. They have a surplus of prisoners at one of their holdings and are looking to offload a few for a fee.
+Μπορείτε να καταργήσετε τον φάρο σας για να κρυφτείτε από την προσέγγιση, ή να τον διατηρήσετε ενεργό και να αφήσετε το vertibird να προσγειωθεί.</Spaceports_MysteryCargoLetter>
+  <Spaceports_PickupInbound>Ένα vertibird προσγειώνεται για να πάρει το {0}.</Spaceports_PickupInbound>
+  <Spaceports_PrisonerTransferLetter>Μόλις λάβατε μια πρόταση από {0} από {1}. Έχουν πλεόνασμα κρατουμένων σε μια από τις εκμεταλλεύσεις τους και θέλουν να ξεφορτώσουν μερικούς έναντι αμοιβής.
 
-{0} says that two batches are available for transfer - one low-security, the other high-security. If you accept, both the payment and the prisoners will be transferred to you by vertibird.
+Το {0} λέει ότι δύο παρτίδες είναι διαθέσιμες για μεταφορά - η μία χαμηλής ασφάλειας και η άλλη υψηλής ασφάλειας. Εάν αποδεχτείτε, τόσο η πληρωμή όσο και οι κρατούμενοι θα μεταφερθούν σε εσάς με το vertibird.
 
-Low-sec payment: {2}
-High-sec payment: {3}</Spaceports_PrisonerTransferLetter>
-  <Spaceports_ShuttleDisabled>No free vertibird pads</Spaceports_ShuttleDisabled>
-  <Spaceports_ShuttleMedevacAccept>Clear the vertibird for emergency landing.</Spaceports_ShuttleMedevacAccept>
-  <Spaceports_ShuttleMedevacLetter>Your short-range radio crackles to life with a distressed Brotherhood pilot from {0}. Their medevac vertibird is carrying a badly injured ally.
+Πληρωμή χαμηλών δευτερολέπτων: {2}
+Πληρωμή υψηλού δευτερολέπτου: {3}</Spaceports_PrisonerTransferLetter>
+  <Spaceports_ShuttleDisabled>Χωρίς δωρεάν επιθέματα vertibird</Spaceports_ShuttleDisabled>
+  <Spaceports_ShuttleMedevacAccept>Καθαρίστε το vertibird για επείγουσα προσγείωση.</Spaceports_ShuttleMedevacAccept>
+  <Spaceports_ShuttleMedevacLetter>Το ραδιόφωνό σας μικρής εμβέλειας αναζωογονείται με έναν πιλότο της Brotherhood από το {0}. Το medevac vertibird κουβαλάει έναν βαριά τραυματισμένο σύμμαχο.
 
-Unfortunately, the patient’s condition has deteriorated rapidly, and the onboard medic fears they may not reach the nearest {0} base with proper medical facilities in time. Your settlement, however, is only a few minutes away.
+Δυστυχώς, η κατάσταση του ασθενούς έχει επιδεινωθεί γρήγορα και οι ιατροί φοβούνται ότι μπορεί να μην φτάσουν έγκαιρα στην πλησιέστερη βάση {0} με τις κατάλληλες ιατρικές εγκαταστάσεις. Ο οικισμός σας, ωστόσο, απέχει μόλις λίγα λεπτά.
 
-The pilot and medic both implore you to clear them for an emergency landing so you can stabilize the patient. They cannot promise a concrete material reward, but they swear they will put in a good word with {1} and try to route some token of gratitude your way.</Spaceports_ShuttleMedevacLetter>
-  <Spaceports_ShuttleMedevacLetterLabel>Brotherhood medevac</Spaceports_ShuttleMedevacLetterLabel>
-  <Spaceports_ShuttleMedevacReward>Some time ago, you assisted a distressed Brotherhood medevac vertibird. The pilot and medic kept their word and managed to have a reward drop sent your way.</Spaceports_ShuttleMedevacReward>
-  <Spaceports_ShuttleMedevacRewardLabel>Brotherhood medevac reward</Spaceports_ShuttleMedevacRewardLabel>
-  <Spaceports_SpicyPawnLendingLetter>You've just received a proposition from {0}. They need professional help with a particularly complex and risky {1} job, and they think one of your colonists - {2} - is exactly who they need.
+Ο πιλότος και ο γιατρός σας εκλιπαρούν να τους απομακρύνετε για επείγουσα προσγείωση, ώστε να μπορέσετε να σταθεροποιήσετε τον ασθενή. Δεν μπορούν να υποσχεθούν μια συγκεκριμένη υλική ανταμοιβή, αλλά ορκίζονται ότι θα εκφράσουν μια καλή λέξη με το {1} και θα προσπαθήσουν να σας δείξουν ευγνωμοσύνη.</Spaceports_ShuttleMedevacLetter>
+  <Spaceports_ShuttleMedevacLetterLabel>Αδελφότητα medevac</Spaceports_ShuttleMedevacLetterLabel>
+  <Spaceports_ShuttleMedevacReward>Πριν από λίγο καιρό, βοηθήσατε ένα ταλαιπωρημένο medevac vertibird της Αδελφότητας. Ο πιλότος και ο γιατρός κράτησαν τον λόγο τους και κατάφεραν να σας στείλουν μια ανταμοιβή.</Spaceports_ShuttleMedevacReward>
+  <Spaceports_ShuttleMedevacRewardLabel>Αδελφότητα medevac ανταμοιβή</Spaceports_ShuttleMedevacRewardLabel>
+  <Spaceports_SpicyPawnLendingLetter>Μόλις λάβατε μια πρόταση από το {0}. Χρειάζονται επαγγελματική βοήθεια με μια ιδιαίτερα περίπλοκη και επικίνδυνη εργασία {1} και πιστεύουν ότι ένας από τους αποίκους σας - {2} - είναι ακριβώς αυτός που χρειάζονται.
 
-If you accept, {0} will send a vertibird to ferry {2} to the worksite, where {3} will {4} The job will take 10 to 15 days, after which {2} will be flown back on a second vertibird alongside the promised reward.
+Εάν αποδεχτείτε, ο {0} θα στείλει ένα vertibird στο πλοίο {2} στο εργοτάξιο, όπου ο {3} θα {4} Η εργασία θα διαρκέσει 10 έως 15 ημέρες, μετά τις οποίες ο {2} θα μεταφερθεί πίσω με ένα δεύτερο vertibird μαζί με την ανταμοιβή που υποσχέθηκε.
 
-However, {0} warns that while they can say {2} is not at risk of death, they cannot guarantee {2}'s general safety and health while on the job.
+Ωστόσο, ο χρήστης {0} προειδοποιεί ότι, ενώ μπορεί να πει ότι ο {2} δεν κινδυνεύει με θάνατο, δεν μπορεί να εγγυηθεί τη γενική ασφάλεια και υγεία του {2} κατά τη διάρκεια της εργασίας του.
 
-If you choose to accept, {0} offers the following reward: {5}</Spaceports_SpicyPawnLendingLetter>
+Εάν επιλέξετε να αποδεχτείτε, η {0} προσφέρει την ακόλουθη ανταμοιβή: {5}</Spaceports_SpicyPawnLendingLetter>
 </LanguageData>
