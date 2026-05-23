@@ -405,6 +405,7 @@ function Get-LanguageTranslationCode {
     param([string]$Language)
 
     switch ($Language) {
+        'Catalan' { return 'ca' }
         'French' { return 'fr' }
         'German' { return 'de' }
         'Polish' { return 'pl' }
@@ -414,16 +415,20 @@ function Get-LanguageTranslationCode {
         'Czech' { return 'cs' }
         'Danish' { return 'da' }
         'Dutch' { return 'nl' }
+        'Estonian' { return 'et' }
+        'Greek' { return 'el' }
         'Hungarian' { return 'hu' }
         'Japanese' { return 'ja' }
         'Norwegian' { return 'no' }
         'Portuguese' { return 'pt' }
         'PortugueseBrazilian' { return 'pt-BR' }
         'ChineseSimplified' { return 'zh-CN' }
+        'Slovak' { return 'sk' }
         'Swedish' { return 'sv' }
         'ChineseTraditional' { return 'zh-TW' }
         'Turkish' { return 'tr' }
         'Ukrainian' { return 'uk' }
+        'Vietnamese' { return 'vi' }
         'Finnish' { return 'fi' }
         'Korean' { return 'ko' }
         'Romanian' { return 'ro' }
@@ -445,7 +450,12 @@ function Get-TranslationCacheKey {
         'none'
     }
 
-    $payload = '{0}`n{1}`n{2}`n{3}' -f 'v6', $provider, $Language, $Text
+    $profile = ''
+    if ($script:TranslationState -and $script:TranslationState.Data.translation.ContainsKey('profile')) {
+        $profile = [string]$script:TranslationState.Data.translation.profile
+    }
+
+    $payload = '{0}`n{1}`n{2}`n{3}`n{4}' -f 'v7', $provider, $profile, $Language, $Text
     $bytes = [System.Text.Encoding]::UTF8.GetBytes($payload)
     $sha256 = [System.Security.Cryptography.SHA256]::Create()
     try {
@@ -666,6 +676,40 @@ function Test-LocaleValueNeedsRefresh {
     return $false
 }
 
+function Split-StructuredTranslationText {
+    param([string]$Text)
+
+    if ([string]::IsNullOrWhiteSpace($Text)) {
+        return $null
+    }
+
+    foreach ($separator in @('&gt;', '->')) {
+        $index = $Text.IndexOf($separator, [System.StringComparison]::Ordinal)
+        if ($index -le 0) {
+            continue
+        }
+
+        $prefix = $Text.Substring(0, $index + $separator.Length)
+        if ($prefix.Contains(' ')) {
+            continue
+        }
+
+        $suffix = $Text.Substring($index + $separator.Length)
+        if ([string]::IsNullOrWhiteSpace($suffix)) {
+            continue
+        }
+
+        if ($suffix -match '[A-Za-z]') {
+            return [pscustomobject]@{
+                Prefix = $prefix
+                Suffix = $suffix
+            }
+        }
+    }
+
+    return $null
+}
+
 function Invoke-ConfiguredTranslation {
     param(
         [string]$Text,
@@ -675,6 +719,11 @@ function Invoke-ConfiguredTranslation {
 
     if ([string]::IsNullOrEmpty($Text) -or [string]::IsNullOrWhiteSpace($Language) -or $Language -eq 'English') {
         return $Text
+    }
+
+    $structuredText = Split-StructuredTranslationText -Text $Text
+    if ($null -ne $structuredText) {
+        return $structuredText.Prefix + (Invoke-ConfiguredTranslation -Text $structuredText.Suffix -Language $Language -LocaleRules $LocaleRules)
     }
 
     $provider = if ($script:TranslationConfig -and $script:TranslationConfig.ContainsKey('provider')) {
@@ -1254,7 +1303,6 @@ function Get-RequiredPackageIdsFromAboutFile {
     $nodePaths = @(
         '/ModMetaData/modDependencies/li/packageId',
         '/ModMetaData/modDependenciesByVersion/li/packageId',
-        '/ModMetaData/modDependenciesOptional/li/packageId',
         '/ModMetaData/loadAfter/li'
     )
 
@@ -1931,14 +1979,14 @@ function Build-AboutXml {
     }
     [void]$builder.AppendLine('  </supportedVersions>')
 
-    [void]$builder.AppendLine('  <modDependenciesOptional>')
+    [void]$builder.AppendLine('  <modDependencies>')
     foreach ($item in $dependencyItems) {
         [void]$builder.AppendLine('    <li>')
         [void]$builder.AppendLine("      <packageId>$($item.PackageId)</packageId>")
         [void]$builder.AppendLine("      <displayName>$([System.Security.SecurityElement]::Escape($item.DisplayName))</displayName>")
         [void]$builder.AppendLine('    </li>')
     }
-    [void]$builder.AppendLine('  </modDependenciesOptional>')
+    [void]$builder.AppendLine('  </modDependencies>')
 
     [void]$builder.AppendLine('  <loadAfter>')
     foreach ($packageId in $packageIds) {
@@ -2161,7 +2209,7 @@ $currentTranslationProvider = if ($script:TranslationConfig.ContainsKey('provide
 else {
     'none'
 }
-$currentTranslationProfile = '{0}|{1}|{2}' -f $currentTranslationProvider, [string]$script:TranslationConfig.sourceLanguageCode, 'raw-placeholders-with-shape-restore-v3'
+$currentTranslationProfile = '{0}|{1}|{2}' -f $currentTranslationProvider, [string]$script:TranslationConfig.sourceLanguageCode, 'raw-placeholders-with-shape-restore-v4'
 $previousTranslationProvider = if ($state.Data.translation.ContainsKey('provider')) {
     [string]$state.Data.translation.provider
 }
