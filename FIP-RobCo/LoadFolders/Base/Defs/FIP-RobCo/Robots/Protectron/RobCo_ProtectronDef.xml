@@ -77,8 +77,8 @@
 	<!-- Constructron -->
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Constructron</defName>
-		<label>Constructron</label>
-		<description>A Protectron unit configured for construction and infrastructure work. It carries welding and assembly tool attachments in place of standard hand lasers and was deployed at pre-war building sites and industrial facilities. Standard threat response protocols remain active.</description>
+		<label>constructron</label>
+		<description>A Protectron unit configured for construction and infrastructure work. It carries welding and assembly tool attachments in place of standard hand lasers and was deployed at pre-War building sites and industrial facilities. Standard threat response protocols remain active.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Construction</li>
@@ -87,7 +87,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Constructron</defName>
-		<label>Constructron</label>
+		<label>constructron</label>
 		<race>RobCo_Constructron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -110,7 +110,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
 		<defName>RobCo_Constructron_Recipe</defName>
-		<label>craft Constructron</label>
+		<label>craft constructron</label>
 		<description>Craft an Constructron.</description>
 		<products>
 			<RobCo_Constructron>1</RobCo_Constructron>
@@ -122,7 +122,7 @@
 	<!-- Factotron -->
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Factotron</defName>
-		<label>Factotron</label>
+		<label>factotron</label>
 		<description>A Protectron variant programmed for factory and manufacturing tasks. It was designed to operate on assembly lines and production floors, performing a wide range of manufacturing sub-tasks with precision. Factotrons are among the less commonly encountered Protectron variants in the post-war wasteland.</description>
 		<race>
 			<mechEnabledWorkTypes>
@@ -134,7 +134,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Factotron</defName>
-		<label>Factotron</label>
+		<label>factotron</label>
 		<race>RobCo_Factotron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -157,7 +157,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
 		<defName>RobCo_Factotron_Recipe</defName>
-		<label>craft Factotron</label>
+		<label>craft factotron</label>
 		<description>Craft an Factotron.</description>
 		<products>
 			<RobCo_Factotron>1</RobCo_Factotron>
@@ -169,8 +169,8 @@
 	<!-- Utilitron -->
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Utilitron</defName>
-		<label>Utilitron</label>
-		<description>A Protectron unit fitted with a heavy drill attachment in place of a standard hand laser, intended for mining and excavation work. It was contracted to pre-war mining operations for subterranean resource extraction. The drill arm makes it slower than a standard Protectron but gives it significant close-quarters capability.</description>
+		<label>utilitron</label>
+		<description>A Protectron unit fitted with a heavy drill attachment in place of a standard hand laser, intended for mining and excavation work. It was contracted to pre-War mining operations for subterranean resource extraction. The drill arm makes it slower than a standard Protectron but gives it significant close-quarters capability.</description>
 		<race>
 			<mechEnabledWorkTypes>
 				<li>Mining</li>
@@ -191,7 +191,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Utilitron</defName>
-		<label>Utilitron</label>
+		<label>utilitron</label>
 		<race>RobCo_Utilitron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -214,7 +214,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
 		<defName>RobCo_Utilitron_Recipe</defName>
-		<label>craft Utilitron</label>
+		<label>craft utilitron</label>
 		<description>Craft an Utilitron.</description>
 		<products>
 			<RobCo_Utilitron>1</RobCo_Utilitron>
@@ -226,7 +226,7 @@
 	<!-- Collectron -->
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Collectron</defName>
-		<label>Collectron</label>
+		<label>collectron</label>
 		<description>A Protectron variant reprogrammed for resource collection and salvage. It was adopted by various post-war factions to automate the gathering of specific materials. The Collectron operates autonomously within a defined area and will defend its collection zone against interference.</description>
 		<race>
 			<mechEnabledWorkTypes>
@@ -237,7 +237,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Collectron</defName>
-		<label>Collectron</label>
+		<label>collectron</label>
 		<race>RobCo_Collectron</race>
 		<combatPower>10</combatPower>
 		<lifeStages>
@@ -260,7 +260,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_ProtectronBase_Recipe">
 		<defName>RobCo_Collectron_Recipe</defName>
-		<label>craft Collectron</label>
+		<label>craft collectron</label>
 		<description>Craft an Collectron.</description>
 		<products>
 			<RobCo_Collectron>1</RobCo_Collectron>
@@ -273,7 +273,7 @@
 	<ThingDef ParentName="RobCo_ProtectronBase">
 		<defName>RobCo_Protectron</defName>
 		<label>Protectron</label>
-		<description>A widely deployed pre-war utility and security robot manufactured by RobCo Industries. It features a large domed head with three optical sensors, dual hand-mounted laser emitters, and a head laser. Powered by a fission battery, the Protectron was used across offices, hospitals, and public facilities throughout the United States. It is slow and less capable in direct combat than dedicated military robots.</description>
+		<description>A widely deployed pre-War utility and security robot manufactured by RobCo Industries. It features a large domed head with three optical sensors, dual hand-mounted laser emitters, and a head laser. Powered by a fission battery, the Protectron was used across offices, hospitals, and public facilities throughout the United States. It is slow and less capable in direct combat than dedicated military robots.</description>
 		<race>
 			<baseHealthScale>2.0</baseHealthScale>
 			<lifeStageAges>
@@ -307,7 +307,7 @@
 				</bodyGraphicData>
 			</li>
 			<li>
-				<label>pre-war Protectron</label>
+				<label>pre-War Protectron</label>
 				<bodyGraphicData>
 					<texPath>FIP-RobCo/Robots/Protectron/ProtectronAncient/ProtectronAncient</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>

@@ -120,7 +120,7 @@
 				</bodyGraphicData>
 			</li>
 			<li>
-				<label>pre-war Eyebot</label>
+				<label>pre-War Eyebot</label>
 				<bodyGraphicData>
 					<texPath>FIP-RobCo/Robots/Eyebot/EyebotAncient/EyebotAncient</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>
@@ -151,7 +151,7 @@
 	<!-- Eyebot Duraframe -->
 	<ThingDef ParentName="RobCo_EyebotBase">
 		<defName>RobCo_EyebotDuraframe</defName>
-		<label>Eyebot Duraframe</label>
+		<label>Eyebot duraframe</label>
 		<description>An enhanced Eyebot built on the experimental Duraframe chassis. It features reinforced internal components for greater durability than a standard unit and carries a more powerful energy weapon. The most documented Duraframe unit, designated ED-E, was fitted with a Tesla cannon and carried sensitive Enclave research data across the wasteland for decades before being recovered.</description>
 		<comps>
 			<li Class="FIP_RobCo.CompProperties_NonHostilePawnAura">
@@ -177,7 +177,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_EyebotDuraframe</defName>
-		<label>Eyebot Duraframe</label>
+		<label>Eyebot duraframe</label>
 		<race>RobCo_EyebotDuraframe</race>
 		<combatPower>50</combatPower>
 		<lifeStages>
@@ -200,7 +200,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_EyebotBase_Recipe">
 		<defName>RobCo_EyebotDuraframe_Recipe</defName>
-		<label>craft Eyebot Duraframe</label>
+		<label>craft Eyebot duraframe</label>
 		<description>Craft an Eyebot Duraframe.</description>
 		<products>
 			<RobCo_EyebotDuraframe>1</RobCo_EyebotDuraframe>
@@ -212,8 +212,8 @@
 	<!-- Crashed Vertibot -->
 	<ThingDef ParentName="RobCo_EyebotBase">
 		<defName>RobCo_EyebotCrashed</defName>
-		<label>Crashed Vertibot Robot</label>
-		<description>The remains of a Vertibot — a pre-war military VTOL drone — brought down and no longer capable of flight. Despite its condition, onboard weapon systems and automated defense protocols remain partially active. It will engage anything that enters its perimeter.</description>
+		<label>crashed vertibot robot</label>
+		<description>The remains of a Vertibot — a pre-War military VTOL drone — brought down and no longer capable of flight. Despite its condition, onboard weapon systems and automated defense protocols remain partially active. It will engage anything that enters its perimeter.</description>
 		<race>
 			<body>RobCo_Eyebot</body>
 			<intelligence>ToolUser</intelligence>
@@ -229,7 +229,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_EyebotCrashed</defName>
-		<label>Crashed Vertibot Robot</label>
+		<label>crashed vertibot robot</label>
 		<race>RobCo_EyebotCrashed</race>
 		<combatPower>300</combatPower>
 		<lifeStages>
