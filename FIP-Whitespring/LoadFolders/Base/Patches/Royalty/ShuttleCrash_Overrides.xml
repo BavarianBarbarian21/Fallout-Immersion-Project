@@ -3,21 +3,21 @@
 
   <!-- Replace shuttle terminology with vertibird in ShuttleCrash_Rescue quest -->
   <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->shuttle"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/questNameRules/rulesStrings/li[text()="shuttle->shuttle"]</xpath>
     <value>
       <li>shuttle->vertibird</li>
     </value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->transporter"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/questNameRules/rulesStrings/li[text()="shuttle->transporter"]</xpath>
     <value>
       <li>shuttle->vertibird</li>
     </value>
   </Operation>
 
   <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->ship"]</xpath>
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/questNameRules/rulesStrings/li[text()="shuttle->ship"]</xpath>
     <value>
       <li>shuttle->vertibird</li>
     </value>
