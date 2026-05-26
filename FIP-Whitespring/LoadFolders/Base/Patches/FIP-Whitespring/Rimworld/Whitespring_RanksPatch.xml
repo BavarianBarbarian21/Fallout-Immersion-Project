@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><Patch><!-- Patch Royalty Empire titles to Whitespring ranks --><Operation Class="PatchOperationReplace"><xpath>Defs/RoyalTitleDef[defName="Emperor"]/labelFemale</xpath><value><label>president</label></value></Operation></Patch>
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Patch Royalty Empire titles to Whitespring ranks -->
+
+  <!-- Remove female-specific title variants: all Enclave ranks are gender-neutral -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/labelFemale</xpath>
+  </Operation>
+
+</Patch>

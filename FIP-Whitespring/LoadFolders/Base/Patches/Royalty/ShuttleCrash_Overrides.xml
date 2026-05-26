@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch MayRequire="Ludeon.RimWorld.Royalty">
+
+  <!-- Replace shuttle terminology with vertibird in ShuttleCrash_Rescue quest -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->shuttle"]</xpath>
+    <value>
+      <li>shuttle->vertibird</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->transporter"]</xpath>
+    <value>
+      <li>shuttle->vertibird</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="ShuttleCrash_Rescue"]/root/questNameRules/rulesStrings/li[text()="shuttle->ship"]</xpath>
+    <value>
+      <li>shuttle->vertibird</li>
+    </value>
+  </Operation>
+
+</Patch>

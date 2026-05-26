@@ -1,1 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><Patch><!-- Faction: Empire -> Whitespring Enclave --><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/factionIconPath</xpath><value><factionIconPath>FIP-Whitespring/Whitespring</factionIconPath></value></Operation><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/colorSpectrum</xpath><value><colorSpectrum><li>(1, 1, 1)</li></colorSpectrum></value></Operation><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/royalFavorLabel</xpath><value><royalFavorLabel>intel</royalFavorLabel></value></Operation><!-- Ship / Shuttle --><!-- Pawn kind visible label renames: imperial -> Whitespring --><!-- RulePack: rename 'empire' token to 'whitespring' for namers --></Patch>
+<?xml version="1.0" encoding="utf-8"?><Patch><!-- Faction: Empire -> Whitespring Enclave --><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/factionIconPath</xpath><value><factionIconPath>FIP-Whitespring/Whitespring</factionIconPath></value></Operation><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/colorSpectrum</xpath><value><colorSpectrum><li>(1, 1, 1)</li></colorSpectrum></value></Operation><Operation Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="Empire"]/royalFavorLabel</xpath><value><royalFavorLabel>intel</royalFavorLabel></value></Operation><!-- Ship / Shuttle --><!-- Pawn kind visible label renames: imperial -> Whitespring -->  <!-- PawnKind labelFemale removes: Knight (dame) and Baron (baroness) are now gender-neutral Enclave ranks -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Knight"]/labelFemale</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Baron"]/labelFemale</xpath>
+  </Operation>
+
+  <!-- Settlement namer: replace with Whitespring signal-station naming convention -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RulePackDef[defName="NamerSettlementEmpire"]/rulePack</xpath>
+    <value>
+      <rulePack>
+        <rulesStrings>
+          <li>r_name->[stationType] [greek]</li>
+          <li>r_name->[greek] [stationNoun]</li>
+
+          <li>stationType->Relay Station</li>
+          <li>stationType->Observation Post</li>
+          <li>stationType->Listening Post</li>
+
+          <li>stationNoun->Array</li>
+          <li>stationNoun->Node</li>
+          <li>stationNoun->Transmitter</li>
+
+          <li>greek->Alpha</li>
+          <li>greek->Beta</li>
+          <li>greek->Gamma</li>
+          <li>greek->Delta</li>
+          <li>greek->Epsilon</li>
+          <li>greek->Zeta</li>
+          <li>greek->Eta</li>
+          <li>greek->Theta</li>
+          <li>greek->Iota</li>
+          <li>greek->Kappa</li>
+          <li>greek->Lambda</li>
+          <li>greek->Mu</li>
+          <li>greek->Nu</li>
+          <li>greek->Xi</li>
+          <li>greek->Omicron</li>
+          <li>greek->Pi</li>
+          <li>greek->Rho</li>
+          <li>greek->Sigma</li>
+          <li>greek->Tau</li>
+          <li>greek->Upsilon</li>
+          <li>greek->Phi</li>
+          <li>greek->Chi</li>
+          <li>greek->Psi</li>
+          <li>greek->Omega</li>
+        </rulesStrings>
+      </rulePack>
+    </value>
+  </Operation>
+
+</Patch>
