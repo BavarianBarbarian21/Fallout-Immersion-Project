@@ -30,9 +30,38 @@ $partNames = @{
     part4 = 'FIP-Translation Part 4'
 }
 
+$statusRoot = Join-Path $toolsRoot 'state\launcher-status'
+$statusPath = Join-Path $statusRoot ("{0}-{1}.json" -f $Category, $Mode)
 $outputRoot = Join-Path $translationRoot $partNames[$Category]
 $englishRoot = Join-Path $outputRoot 'Languages\English'
 $snapshotRoot = Join-Path $toolsRoot (Join-Path 'state\previous-english' $Category)
+
+function Write-LauncherStatus {
+    param(
+        [string]$State,
+        [string]$Message,
+        [Nullable[int]]$ExitCode = $null
+    )
+
+    New-Item -ItemType Directory -Path $statusRoot -Force | Out-Null
+
+    $payload = [ordered]@{
+        category    = $Category
+        mode        = $Mode
+        label       = "{0} {1}" -f $Category.ToUpperInvariant(), $Mode
+        state       = $State
+        message     = $Message
+        progressPath = (Join-Path $outputRoot 'Reports\current-sync-progress.txt')
+        updatedAt   = (Get-Date).ToString('o')
+    }
+
+    if ($ExitCode -ne $null) {
+        $payload.exitCode = [int]$ExitCode
+    }
+
+    $json = $payload | ConvertTo-Json -Depth 4
+    [System.IO.File]::WriteAllText($statusPath, $json, [System.Text.UTF8Encoding]::new($false))
+}
 
 function Copy-DirectoryContents {
     param(
@@ -64,8 +93,39 @@ function Invoke-TranslationTool {
     }
 }
 
-if ($Mode -eq 'EnglishSync') {
-    Copy-DirectoryContents -SourcePath $englishRoot -DestinationPath $snapshotRoot
+try {
+    Write-LauncherStatus -State 'running' -Message 'Updater started.'
+
+    if ($Mode -eq 'EnglishSync') {
+        Copy-DirectoryContents -SourcePath $englishRoot -DestinationPath $snapshotRoot
+
+        $arguments = @(
+            '-NoProfile',
+            '-ExecutionPolicy', 'Bypass',
+            '-File', $toolPath,
+            '-ConfigPath', $configPath,
+            '-Command', 'sync',
+            '-Category', $Category,
+            '-Languages', 'English',
+            '-RefreshLists'
+        )
+
+        if ($Category -eq 'part2') {
+            $arguments += '-RefreshFcpSources'
+        }
+
+        Invoke-TranslationTool -Arguments $arguments
+        Write-LauncherStatus -State 'completed' -Message 'English Sync finished successfully.' -ExitCode 0
+        return
+    }
+
+    if (-not (Test-Path -LiteralPath $englishRoot)) {
+        throw 'English Sync must run first so the current English baseline exists.'
+    }
+
+    if (-not (Test-Path -LiteralPath $snapshotRoot)) {
+        throw 'Previous English snapshot missing. Run English Sync first.'
+    }
 
     $arguments = @(
         '-NoProfile',
@@ -74,35 +134,14 @@ if ($Mode -eq 'EnglishSync') {
         '-ConfigPath', $configPath,
         '-Command', 'sync',
         '-Category', $Category,
-        '-Languages', 'English',
-        '-RefreshLists'
+        '-SkipEnglishBaseline',
+        '-PreviousEnglishRoot', $snapshotRoot
     )
 
-    if ($Category -eq 'part2') {
-        $arguments += '-RefreshFcpSources'
-    }
-
     Invoke-TranslationTool -Arguments $arguments
-    return
+    Write-LauncherStatus -State 'completed' -Message 'Language Translation finished successfully.' -ExitCode 0
 }
-
-if (-not (Test-Path -LiteralPath $englishRoot)) {
-    throw 'English Sync must run first so the current English baseline exists.'
+catch {
+    Write-LauncherStatus -State 'failed' -Message $_.Exception.Message -ExitCode 1
+    throw
 }
-
-if (-not (Test-Path -LiteralPath $snapshotRoot)) {
-    throw 'Previous English snapshot missing. Run English Sync first.'
-}
-
-$arguments = @(
-    '-NoProfile',
-    '-ExecutionPolicy', 'Bypass',
-    '-File', $toolPath,
-    '-ConfigPath', $configPath,
-    '-Command', 'sync',
-    '-Category', $Category,
-    '-SkipEnglishBaseline',
-    '-PreviousEnglishRoot', $snapshotRoot
-)
-
-Invoke-TranslationTool -Arguments $arguments

@@ -24,11 +24,33 @@
   - new English entries are inserted and machine-translated,
   - changed English entries are retranscribed from the new English source.
 
+## Step By Step
+
+1. The tool resolves the category mod list from `config.json` and the matching `mod-lists/*.txt` file.
+2. It resolves each listed mod folder from the configured search roots for that category.
+3. For each resolved mod it scans `Languages/English/Keyed/*.xml` and keeps those as `Keyed` outputs.
+4. It scans `Languages/English/Strings/Names/*.txt` and keeps those as `Names` outputs.
+5. It scans any existing `Languages/English/DefInjected/<DefType>/*.xml` files and reads their `<LanguageData>` nodes into translation entries.
+6. It scans every `Defs/**/*.xml` file under the mod.
+7. Each defs file is parsed as RimWorld def XML.
+8. Each non-abstract def node with a `defName` is inspected recursively for translatable leaf nodes.
+9. The extraction logic builds translation keys as `defName.path.to.node`, for example a label under a protectron def becomes a keyed entry under that def name.
+10. Extracted entries are grouped by def type such as `AbilityDef`, `ThingDef`, or `PawnKindDef`.
+11. Existing English `DefInjected` entries and extracted defs entries are merged into one generated file per def category.
+12. The generated def category files are now named `FIP-Translation_<DefType>.xml`, for example `DefInjected/AbilityDef/FIP-Translation_AbilityDef.xml`.
+13. New keys are appended in encounter order as the mod scan proceeds; if the same key appears again later, the later text replaces the earlier text without creating a duplicate node.
+14. The tool writes the English baseline first.
+15. The tool then updates each non-English locale by comparing current English against the previous English snapshot and the existing locale file.
+16. Locale XML comments are intentionally stripped from generated output.
+17. Progress is written to `Reports/current-sync-progress.txt`, while the per-mod counts are written to `Reports/last-sync-report.txt`.
+
 ## Runtime behavior
 
 - Def XML parsing is incremental. The tool caches parsed `Defs` files using file length plus UTC write ticks.
-- English `Keyed` and `Names` files are copied directly from source mods.
-- Existing English `DefInjected` files are copied directly before extracted `Defs` fallback is generated.
+- English `Keyed` files are normalized through the XML writer so generated output does not preserve source comments.
+- English `Names` files are copied directly from source mods.
+- Existing English `DefInjected` files are normalized into generated category files before extracted `Defs` fallback is merged in.
+- Generated locale XML no longer preserves comment nodes from source or previous locale files.
 - When `translation.provider` is enabled, non-English locale text is machine-translated through the configured backend with a small cache under `state/translation-sync-state.json`.
 - If the configured provider changes, existing non-English locale files are refreshed on the next sync so stale output from the previous backend is not kept.
 - Local FIP source refresh is optional and only happens when you pass `-RefreshFipSource`.

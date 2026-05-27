@@ -1150,6 +1150,24 @@ function Get-OrderedEntriesFromPairs {
     return $ordered
 }
 
+function Convert-OrderedEntriesToPairs {
+    param([System.Collections.Specialized.OrderedDictionary]$Entries)
+
+    $pairs = New-Object 'System.Collections.Generic.List[object]'
+    if ($null -eq $Entries) {
+        return $pairs.ToArray()
+    }
+
+    foreach ($key in $Entries.Keys) {
+        $pairs.Add([pscustomobject]@{
+            Key  = [string]$key
+            Text = [string]$Entries[$key]
+        }) | Out-Null
+    }
+
+    return $pairs.ToArray()
+}
+
 function Get-RelativePathFragment {
     param(
         [string]$BasePath,
@@ -1709,7 +1727,6 @@ function Add-NamesOutputsFromMod {
 function Add-ExistingDefInjectedOutputsFromMod {
     param(
         [string]$ModRoot,
-        [string]$OutputStem,
         [System.Collections.Generic.List[object]]$Outputs
     )
 
@@ -1717,19 +1734,20 @@ function Add-ExistingDefInjectedOutputsFromMod {
         $englishRoot = $file.Directory.Parent.Parent.FullName
         $relativePath = Get-RelativePathFragment -BasePath $englishRoot -FullPath $file.FullName
         $relativePath = $relativePath.Replace('/', '\')
-        $relativeDirectory = Split-Path -Parent $relativePath
-        $outputFileName = '{0}__{1}' -f $OutputStem, $file.Name
-        $outputRelPath = if ([string]::IsNullOrWhiteSpace($relativeDirectory)) {
-            $outputFileName
+        $defType = Split-Path -Leaf (Split-Path -Parent $relativePath)
+        if ([string]::IsNullOrWhiteSpace($defType)) {
+            continue
         }
-        else {
-            (Join-Path $relativeDirectory $outputFileName)
+
+        $parsed = Read-LanguageXml -FilePath $file.FullName
+        if ($null -eq $parsed -or $parsed.Entries.Count -eq 0) {
+            continue
         }
 
         $outputs.Add([pscustomobject]@{
             Kind          = 'DefInjected'
-            OutputRelPath = $outputRelPath
-            SourcePath    = $file.FullName
+            OutputRelPath = ('DefInjected/{0}/FIP-Translation_{0}.xml' -f $defType).Replace('/', '\')
+            Entries       = @(Convert-OrderedEntriesToPairs -Entries $parsed.Entries)
         }) | Out-Null
     }
 }
@@ -1737,7 +1755,6 @@ function Add-ExistingDefInjectedOutputsFromMod {
 function Add-DefInjectedOutputsFromMod {
     param(
         [string]$ModRoot,
-        [string]$OutputStem,
         [System.Collections.Generic.List[object]]$Outputs,
         [pscustomobject]$State
     )
@@ -1783,12 +1800,67 @@ function Add-DefInjectedOutputsFromMod {
                 }
                 $outputs.Add([pscustomobject]@{
                     Kind          = 'DefInjected'
-                    OutputRelPath = ('DefInjected/{0}/{1}__{2}' -f $group.DefType, $OutputStem, $file.Name).Replace('/', '\')
+                    OutputRelPath = ('DefInjected/{0}/FIP-Translation_{0}.xml' -f $group.DefType).Replace('/', '\')
                     Entries       = @($group.Entries)
                 }) | Out-Null
             }
         }
     }
+}
+
+function Merge-OutputCollection {
+    param([System.Collections.Generic.List[object]]$Outputs)
+
+    $mergedOutputs = New-Object 'System.Collections.Generic.List[object]'
+    $mergedIndex = @{}
+
+    foreach ($output in $Outputs) {
+        $key = '{0}|{1}' -f $output.Kind, $output.OutputRelPath
+        if (-not $mergedIndex.ContainsKey($key)) {
+            if ($output.Kind -eq 'DefInjected') {
+                $entryMap = New-Object 'System.Collections.Specialized.OrderedDictionary'
+                foreach ($entry in @($output.Entries)) {
+                    $entryMap[[string]$entry.Key] = [string]$entry.Text
+                }
+
+                $aggregate = [pscustomobject]@{
+                    Kind          = $output.Kind
+                    OutputRelPath = $output.OutputRelPath
+                    EntryMap      = $entryMap
+                }
+                $mergedIndex[$key] = $aggregate
+                $mergedOutputs.Add($aggregate) | Out-Null
+                continue
+            }
+
+            $mergedIndex[$key] = $output
+            $mergedOutputs.Add($output) | Out-Null
+            continue
+        }
+
+        if ($output.Kind -eq 'DefInjected') {
+            $aggregate = $mergedIndex[$key]
+            foreach ($entry in @($output.Entries)) {
+                $aggregate.EntryMap[[string]$entry.Key] = [string]$entry.Text
+            }
+        }
+    }
+
+    $finalOutputs = New-Object 'System.Collections.Generic.List[object]'
+    foreach ($output in $mergedOutputs) {
+        if ($output.Kind -eq 'DefInjected') {
+            $finalOutputs.Add([pscustomobject]@{
+                Kind          = $output.Kind
+                OutputRelPath = $output.OutputRelPath
+                Entries       = @(Convert-OrderedEntriesToPairs -Entries $output.EntryMap)
+            }) | Out-Null
+            continue
+        }
+
+        $finalOutputs.Add($output) | Out-Null
+    }
+
+    return $finalOutputs.ToArray()
 }
 
 function Get-CategorySources {
@@ -1828,19 +1900,13 @@ function Get-CategorySources {
         Add-NamesOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs
         $namesCount = $outputs.Count - $beforeNames
         $beforeExistingDefInjected = $outputs.Count
-        Add-ExistingDefInjectedOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs
+        Add-ExistingDefInjectedOutputsFromMod -ModRoot $modRoot -Outputs $outputs
         $existingDefInjectedCount = $outputs.Count - $beforeExistingDefInjected
         $beforeExtractedDefInjected = $outputs.Count
-        Add-DefInjectedOutputsFromMod -ModRoot $modRoot -OutputStem $modName -Outputs $outputs -State $State
+        Add-DefInjectedOutputsFromMod -ModRoot $modRoot -Outputs $outputs -State $State
         $extractedDefInjectedCount = $outputs.Count - $beforeExtractedDefInjected
 
-        $uniqueOutputs = New-Object 'System.Collections.Generic.List[object]'
-        $seenOutputRelPaths = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
-        foreach ($output in $outputs) {
-            if ($seenOutputRelPaths.Add($output.OutputRelPath)) {
-                $uniqueOutputs.Add($output) | Out-Null
-            }
-        }
+        $uniqueOutputs = @(Merge-OutputCollection -Outputs $outputs)
 
         $resolvedMods.Add([pscustomobject]@{
             FolderName = $modName
@@ -2031,6 +2097,51 @@ function Remove-StaleOutputFiles {
     }
 }
 
+function Write-SyncProgress {
+    param(
+        [string]$ProgressPath,
+        [string]$CategoryId,
+        [string[]]$Languages,
+        [int]$OutputsQueued,
+        [int]$CompletedOutputs,
+        [string]$Status,
+        [datetime]$StartedAt,
+        [string]$CurrentOutput,
+        [string]$LastCompleted,
+        [string]$LastError,
+        [Nullable[int]]$Errors = $null
+    )
+
+    $percent = if ($OutputsQueued -gt 0) {
+        [math]::Min(100, [math]::Max(0, [math]::Floor(($CompletedOutputs * 100.0) / $OutputsQueued)))
+    }
+    else {
+        0
+    }
+
+    $lines = @(
+        "Category: $CategoryId",
+        "Languages: $($Languages -join ', ')",
+        "Outputs queued: $OutputsQueued",
+        "Completed outputs: $CompletedOutputs",
+        "Progress percent: $percent",
+        "Started at: $($StartedAt.ToString('o'))",
+        "Status: $Status",
+        "Current output: $(if ([string]::IsNullOrWhiteSpace($CurrentOutput)) { 'none' } else { $CurrentOutput })",
+        "Last completed: $(if ([string]::IsNullOrWhiteSpace($LastCompleted)) { 'none' } else { $LastCompleted })"
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($LastError)) {
+        $lines += "Last error: $LastError"
+    }
+
+    if ($Errors -ne $null) {
+        $lines += "Errors: $Errors"
+    }
+
+    Save-TextFile -FilePath $ProgressPath -Content (($lines -join [Environment]::NewLine) + [Environment]::NewLine)
+}
+
 function Sync-Category {
     param(
         [hashtable]$Config,
@@ -2085,13 +2196,10 @@ function Sync-Category {
 
     $outputErrors = New-Object 'System.Collections.Generic.List[string]'
     $progressPath = Join-Path $outputRoot 'Reports\current-sync-progress.txt'
-    Save-TextFile -FilePath $progressPath -Content ((@(
-        "Category: $($CategoryConfig.id)",
-        "Languages: $($ResolvedLanguages -join ', ')",
-        "Outputs queued: $($outputs.Count)",
-        'Status: running',
-        'Last completed: none'
-    ) -join [Environment]::NewLine) + [Environment]::NewLine)
+    $startedAt = Get-Date
+    $completedOutputs = 0
+    $lastCompletedOutput = ''
+    Write-SyncProgress -ProgressPath $progressPath -CategoryId $CategoryConfig.id -Languages $ResolvedLanguages -OutputsQueued $outputs.Count -CompletedOutputs 0 -Status 'running' -StartedAt $startedAt -CurrentOutput '' -LastCompleted '' -LastError ''
 
     $expectedPaths = @($outputs | Select-Object -ExpandProperty OutputRelPath -Unique)
     if (-not $isPartialSync) {
@@ -2100,6 +2208,9 @@ function Sync-Category {
 
     foreach ($output in $outputs) {
         try {
+            $currentIndex = $completedOutputs + 1
+            Write-Host ("[{0}/{1}] Translating {2}" -f $currentIndex, $outputs.Count, $output.OutputRelPath)
+            Write-SyncProgress -ProgressPath $progressPath -CategoryId $CategoryConfig.id -Languages $ResolvedLanguages -OutputsQueued $outputs.Count -CompletedOutputs $completedOutputs -Status 'running' -StartedAt $startedAt -CurrentOutput $output.OutputRelPath -LastCompleted $lastCompletedOutput -LastError ''
             $englishPath = Join-Path $englishRoot $output.OutputRelPath
             switch ($output.Kind) {
                 'Keyed' {
@@ -2112,9 +2223,11 @@ function Sync-Category {
                         $currentEnglish = Read-LanguageXml -FilePath $englishPath
                     }
                     else {
-                        Ensure-Directory -Path (Split-Path -Parent $englishPath)
-                        [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
-                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                        $currentEnglish = Read-LanguageXml -FilePath $output.SourcePath
+                        if ($null -eq $currentEnglish) {
+                            throw "Unable to parse source Keyed file: $($output.SourcePath)"
+                        }
+                        Write-LanguageXml -FilePath $englishPath -Entries $currentEnglish.Entries -Comments @()
                     }
                     foreach ($language in $ResolvedLanguages) {
                         if ($language -eq 'English') {
@@ -2124,8 +2237,7 @@ function Sync-Category {
                         $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
                         $existingLocale = Read-LanguageXml -FilePath $localePath
                         $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglish.Entries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null }) -Language $language -LocaleRules $LocaleRules
-                        $comments = if ($existingLocale -and $existingLocale.Comments.Count -gt 0) { $existingLocale.Comments } else { $currentEnglish.Comments }
-                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $comments
+                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments @()
                     }
                 }
                 'Names' {
@@ -2160,19 +2272,10 @@ function Sync-Category {
                         }
                         $currentEnglish = Read-LanguageXml -FilePath $englishPath
                         $currentEnglishEntries = $currentEnglish.Entries
-                        $comments = $currentEnglish.Comments
-                    }
-                    elseif ($output.PSObject.Properties.Match('SourcePath').Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($output.SourcePath)) {
-                        Ensure-Directory -Path (Split-Path -Parent $englishPath)
-                        [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
-                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
-                        $currentEnglishEntries = $currentEnglish.Entries
-                        $comments = $currentEnglish.Comments
                     }
                     else {
                         $currentEnglishEntries = Get-OrderedEntriesFromPairs -Pairs $output.Entries
-                        $comments = @()
-                        Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments $comments
+                        Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments @()
                     }
                     foreach ($language in $ResolvedLanguages) {
                         if ($language -eq 'English') {
@@ -2181,8 +2284,7 @@ function Sync-Category {
                         $localePath = Join-Path $outputRoot (Join-Path "Languages\$language" $output.OutputRelPath)
                         $existingLocale = Read-LanguageXml -FilePath $localePath
                         $mergedEntries = Merge-XmlEntries -CurrentEnglish $currentEnglishEntries -PreviousEnglish $(if ($previousEnglish) { $previousEnglish.Entries } else { $null }) -ExistingLocale $(if ($existingLocale) { $existingLocale.Entries } else { $null }) -Language $language -LocaleRules $LocaleRules
-                        $localeComments = if ($existingLocale) { $existingLocale.Comments } else { @() }
-                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments $localeComments
+                        Write-LanguageXml -FilePath $localePath -Entries $mergedEntries -Comments @()
                     }
                 }
                 default {
@@ -2190,24 +2292,14 @@ function Sync-Category {
                 }
             }
 
-            Save-TextFile -FilePath $progressPath -Content ((@(
-                "Category: $($CategoryConfig.id)",
-                "Languages: $($ResolvedLanguages -join ', ')",
-                "Outputs queued: $($outputs.Count)",
-                'Status: running',
-                "Last completed: $($output.OutputRelPath)"
-            ) -join [Environment]::NewLine) + [Environment]::NewLine)
+            $completedOutputs++
+            $lastCompletedOutput = $output.OutputRelPath
+            Write-SyncProgress -ProgressPath $progressPath -CategoryId $CategoryConfig.id -Languages $ResolvedLanguages -OutputsQueued $outputs.Count -CompletedOutputs $completedOutputs -Status 'running' -StartedAt $startedAt -CurrentOutput '' -LastCompleted $lastCompletedOutput -LastError ''
         }
         catch {
             $outputErrors.Add(('Error in {0}: {1}' -f $output.OutputRelPath, $_.Exception.Message)) | Out-Null
-            Save-TextFile -FilePath $progressPath -Content ((@(
-                "Category: $($CategoryConfig.id)",
-                "Languages: $($ResolvedLanguages -join ', ')",
-                "Outputs queued: $($outputs.Count)",
-                'Status: running-with-errors',
-                "Last completed: $($output.OutputRelPath)",
-                ('Last error: {0}' -f $_.Exception.Message)
-            ) -join [Environment]::NewLine) + [Environment]::NewLine)
+            Write-Warning ("Failed {0}: {1}" -f $output.OutputRelPath, $_.Exception.Message)
+            Write-SyncProgress -ProgressPath $progressPath -CategoryId $CategoryConfig.id -Languages $ResolvedLanguages -OutputsQueued $outputs.Count -CompletedOutputs $completedOutputs -Status 'running-with-errors' -StartedAt $startedAt -CurrentOutput $output.OutputRelPath -LastCompleted $lastCompletedOutput -LastError $_.Exception.Message -Errors $outputErrors.Count
         }
     }
 
@@ -2219,13 +2311,7 @@ function Sync-Category {
         "Languages: $($ResolvedLanguages -join ', ')"
     ) + $report.ToArray() + $outputErrors.ToArray()
     Save-TextFile -FilePath $reportPath -Content (($summaryLines -join [Environment]::NewLine) + [Environment]::NewLine)
-    Save-TextFile -FilePath $progressPath -Content ((@(
-        "Category: $($CategoryConfig.id)",
-        "Languages: $($ResolvedLanguages -join ', ')",
-        "Outputs queued: $($outputs.Count)",
-        'Status: completed',
-        ('Errors: {0}' -f $outputErrors.Count)
-    ) -join [Environment]::NewLine) + [Environment]::NewLine)
+    Write-SyncProgress -ProgressPath $progressPath -CategoryId $CategoryConfig.id -Languages $ResolvedLanguages -OutputsQueued $outputs.Count -CompletedOutputs $completedOutputs -Status 'completed' -StartedAt $startedAt -CurrentOutput '' -LastCompleted $lastCompletedOutput -LastError '' -Errors $outputErrors.Count
 
     try {
         Remove-EmptyDirectories -RootPath (Join-Path $outputRoot 'Languages')

@@ -2,6 +2,27 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "repo-auto-fetch-on-open",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"fetch",
+				"--all",
+				"--prune"
+			],
+			"options": {
+				"cwd": "c:\\Users\\km-fei-mat\\source\\repos\\FIP-Mods"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "dedicated"
+			},
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"isBackground": false
+		},
+		{
 			"label": "copilot-smoke-write",
 			"type": "shell",
 			"command": "cmd.exe",
