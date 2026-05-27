@@ -31,6 +31,8 @@ param(
 
     [string]$PlaysetModsRoot,
 
+    [string]$PreviousEnglishRoot,
+
     [string[]]$Languages,
 
     [string[]]$IncludeMods,
@@ -39,7 +41,9 @@ param(
 
     [switch]$RefreshFipSource,
 
-    [switch]$RefreshFcpSources
+    [switch]$RefreshFcpSources,
+
+    [switch]$SkipEnglishBaseline
 )
 
 Set-StrictMode -Version Latest
@@ -1986,12 +1990,24 @@ function Sync-Category {
         [string[]]$ResolvedLanguages,
         [pscustomobject]$State,
         [hashtable]$AllCategorySources,
-        [hashtable]$LocaleRules
+        [hashtable]$LocaleRules,
+        [string]$PreviousEnglishRoot,
+        [switch]$SkipEnglishBaseline
     )
+
+    if ($SkipEnglishBaseline -and [string]::IsNullOrWhiteSpace($PreviousEnglishRoot)) {
+        throw 'PreviousEnglishRoot is required when SkipEnglishBaseline is set.'
+    }
 
     $categorySources = $AllCategorySources[$CategoryConfig.id]
     $outputRoot = $CategoryConfig.outputModPath
     $englishRoot = Join-Path $outputRoot 'Languages\English'
+    $cleanupLanguages = if ($SkipEnglishBaseline) {
+        @($ResolvedLanguages | Where-Object { $_ -ne 'English' })
+    }
+    else {
+        $ResolvedLanguages
+    }
     Ensure-Directory -Path $englishRoot
 
     $isPartialSync = ($IncludeMods -and $IncludeMods.Count -gt 0)
@@ -2031,7 +2047,7 @@ function Sync-Category {
 
     $expectedPaths = @($outputs | Select-Object -ExpandProperty OutputRelPath -Unique)
     if (-not $isPartialSync) {
-        Remove-StaleOutputFiles -OutputRoot $outputRoot -Languages $ResolvedLanguages -ExpectedRelativePaths $expectedPaths
+        Remove-StaleOutputFiles -OutputRoot $outputRoot -Languages $cleanupLanguages -ExpectedRelativePaths $expectedPaths
     }
 
     foreach ($output in $outputs) {
@@ -2039,10 +2055,19 @@ function Sync-Category {
             $englishPath = Join-Path $englishRoot $output.OutputRelPath
             switch ($output.Kind) {
                 'Keyed' {
-                    $previousEnglish = Read-LanguageXml -FilePath $englishPath
-                    Ensure-Directory -Path (Split-Path -Parent $englishPath)
-                    [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
-                    $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                    $previousEnglishPath = if ($SkipEnglishBaseline) { Join-Path $PreviousEnglishRoot $output.OutputRelPath } else { $englishPath }
+                    $previousEnglish = Read-LanguageXml -FilePath $previousEnglishPath
+                    if ($SkipEnglishBaseline) {
+                        if (-not (Test-Path -LiteralPath $englishPath)) {
+                            throw "English baseline missing for $($output.OutputRelPath). Run English Sync first."
+                        }
+                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                    }
+                    else {
+                        Ensure-Directory -Path (Split-Path -Parent $englishPath)
+                        [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
+                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                    }
                     foreach ($language in $ResolvedLanguages) {
                         if ($language -eq 'English') {
                             continue
@@ -2056,9 +2081,18 @@ function Sync-Category {
                     }
                 }
                 'Names' {
-                    $previousEnglish = Read-NamesFile -FilePath $englishPath
-                    $currentEnglishLines = Read-NamesFile -FilePath $output.SourcePath
-                    Write-NamesFile -FilePath $englishPath -Lines $currentEnglishLines
+                    $previousEnglishPath = if ($SkipEnglishBaseline) { Join-Path $PreviousEnglishRoot $output.OutputRelPath } else { $englishPath }
+                    $previousEnglish = Read-NamesFile -FilePath $previousEnglishPath
+                    if ($SkipEnglishBaseline) {
+                        if (-not (Test-Path -LiteralPath $englishPath)) {
+                            throw "English baseline missing for $($output.OutputRelPath). Run English Sync first."
+                        }
+                        $currentEnglishLines = Read-NamesFile -FilePath $englishPath
+                    }
+                    else {
+                        $currentEnglishLines = Read-NamesFile -FilePath $output.SourcePath
+                        Write-NamesFile -FilePath $englishPath -Lines $currentEnglishLines
+                    }
                     foreach ($language in $ResolvedLanguages) {
                         if ($language -eq 'English') {
                             continue
@@ -2070,8 +2104,17 @@ function Sync-Category {
                     }
                 }
                 'DefInjected' {
-                    $previousEnglish = Read-LanguageXml -FilePath $englishPath
-                    if ($output.PSObject.Properties.Match('SourcePath').Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($output.SourcePath)) {
+                    $previousEnglishPath = if ($SkipEnglishBaseline) { Join-Path $PreviousEnglishRoot $output.OutputRelPath } else { $englishPath }
+                    $previousEnglish = Read-LanguageXml -FilePath $previousEnglishPath
+                    if ($SkipEnglishBaseline) {
+                        if (-not (Test-Path -LiteralPath $englishPath)) {
+                            throw "English baseline missing for $($output.OutputRelPath). Run English Sync first."
+                        }
+                        $currentEnglish = Read-LanguageXml -FilePath $englishPath
+                        $currentEnglishEntries = $currentEnglish.Entries
+                        $comments = $currentEnglish.Comments
+                    }
+                    elseif ($output.PSObject.Properties.Match('SourcePath').Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($output.SourcePath)) {
                         Ensure-Directory -Path (Split-Path -Parent $englishPath)
                         [System.IO.File]::Copy($output.SourcePath, $englishPath, $true)
                         $currentEnglish = Read-LanguageXml -FilePath $englishPath
@@ -2081,8 +2124,8 @@ function Sync-Category {
                     else {
                         $currentEnglishEntries = Get-OrderedEntriesFromPairs -Pairs $output.Entries
                         $comments = @()
+                        Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments $comments
                     }
-                    Write-LanguageXml -FilePath $englishPath -Entries $currentEnglishEntries -Comments $comments
                     foreach ($language in $ResolvedLanguages) {
                         if ($language -eq 'English') {
                             continue
@@ -2149,6 +2192,9 @@ $categoryMap = Get-CategoryMap -Config $config
 if ($PSBoundParameters.ContainsKey('Category') -and -not [string]::IsNullOrWhiteSpace($Category)) {
     $Category = Resolve-CategoryAlias -CategoryName $Category
 }
+if (-not [string]::IsNullOrWhiteSpace($PreviousEnglishRoot)) {
+    $PreviousEnglishRoot = Get-AbsolutePath -BasePath $config.__ConfigRoot -Path $PreviousEnglishRoot
+}
 Import-TranslatableMembersFromRimWorldSource -RimWorldRoot $config.paths.RimWorldRoot
 $resolvedLanguages = Get-LanguageList -Config $config -RequestedLanguages $Languages
 $localeRules = Load-LocaleRules -Config $config
@@ -2208,7 +2254,7 @@ switch ($Command) {
             }
             $allSources[$otherCategoryId] = [pscustomobject]@{ Mods = @(); MissingMods = @() }
         }
-        Sync-Category -Config $config -CategoryConfig $categoryMap[$Category] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules
+        Sync-Category -Config $config -CategoryConfig $categoryMap[$Category] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules -PreviousEnglishRoot $PreviousEnglishRoot -SkipEnglishBaseline:$SkipEnglishBaseline
         Save-State -State $state
     }
     'sync-all' {
@@ -2221,7 +2267,7 @@ switch ($Command) {
         }
         foreach ($categoryId in ($categoryMap.Keys | Sort-Object)) {
             Write-Host "Syncing category $categoryId"
-            Sync-Category -Config $config -CategoryConfig $categoryMap[$categoryId] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules
+            Sync-Category -Config $config -CategoryConfig $categoryMap[$categoryId] -ResolvedLanguages $resolvedLanguages -State $state -AllCategorySources $allSources -LocaleRules $localeRules -PreviousEnglishRoot $PreviousEnglishRoot -SkipEnglishBaseline:$SkipEnglishBaseline
         }
         Save-State -State $state
     }
