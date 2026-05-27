@@ -1,1 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?><Patch><!-- AncientExostriderRemains --><!-- Patch letterText for CompProperties_ProximityLetter --><Operation Class="PatchOperationReplace"><xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_ProximityLetter"]/letterText</xpath><value><letterText>A crashed Vertibot lies here, its hull twisted and scorched. Pre-war technology and secrets may be hidden within the wreckage.</letterText></value></Operation><!-- Patch letterText for CompProperties_LeavingsLetter --><Operation Class="PatchOperationReplace"><xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_LeavingsLetter"]/letterText</xpath><value><letterText>The Vertibot wreckage has been disturbed, scattering remnants of pre-war tech and memories of its final flight.</letterText></value></Operation><!-- AncientExostriderHead --><!-- AncientExostriderLeg --><!-- AncientExostriderCannon --><!-- BandNode --><!-- MechGestator --><!-- Large MechGestator --><!-- BasicRecharger --><!-- StandardRecharger --><!-- SubcoreEncoder --><!-- SubcoreSoftscanner --><!-- SubcoreRipscanner --><!-- Change MechBooster to RobCo Booster --><!-- Patch MechGestator recipes --><Operation Class="PatchOperationAdd"><xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath><value><li>RobCo_Eyebot_Recipe</li><li>RobCo_EyebotDuraframe_Recipe</li><li>RobCo_MisterFarmhand_Recipe</li><li>RobCo_MisterHandy_Recipe</li><li>RobCo_MissNanny_Recipe</li><li>RobCo_MisterGutsy_Recipe</li><li>RobCo_Constructron_Recipe</li><li>RobCo_Factotron_Recipe</li><li>RobCo_Utilitron_Recipe</li><li>RobCo_Collectron_Recipe</li><li>RobCo_Protectron_Recipe</li></value></Operation><!-- Patch LargeMechGestator recipes --><Operation Class="PatchOperationAdd"><xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath><value><li>RobCo_Assaultron_Recipe</li><li>RobCo_Robobrain_Recipe</li><li>RobCo_Cyberdog_Recipe</li><li>RobCo_SentrybotSiegebreaker_Recipe</li><li>RobCo_SentrybotPestcontrol_Recipe</li><li>RobCo_SentrybotAnnihilator_Recipe</li></value></Operation><Operation Class="PatchOperationConditional"><success>Always</success><xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]</xpath><match Class="PatchOperationSequence"><operations></operations></match></Operation><Operation Class="PatchOperationConditional"><success>Always</success><xpath>/Defs/*[defName="RobCo_Laser_Combat"]</xpath><match Class="PatchOperationReplace"><xpath>/Defs/*[defName="RobCo_Laser_Combat"]/description</xpath><value><description>Integrated laser cannon mounted on a Securitron. Lethal combat weapon.</description></value></match></Operation></Patch>
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- AncientExostriderRemains -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/label</xpath>
+    <value>
+      <label>crashed Vertibot</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/description</xpath>
+    <value>
+      <description>The remains of a Vertibot, a pre-war military transport aircraft. Scattered with pre-war tech.</description>
+    </value>
+  </Operation>
+  <!-- Patch letterText for CompProperties_ProximityLetter -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_ProximityLetter"]/letterText</xpath>
+    <value>
+      <letterText>A crashed Vertibot lies here, its hull twisted and scorched. Pre-war technology and secrets may be hidden within the wreckage.</letterText>
+    </value>
+  </Operation>
+  <!-- Patch letterText for CompProperties_LeavingsLetter -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderRemains"]/comps/li[@Class="CompProperties_LeavingsLetter"]/letterText</xpath>
+    <value>
+      <letterText>The Vertibot wreckage has been disturbed, scattering remnants of pre-war tech and memories of its final flight.</letterText>
+    </value>
+  </Operation>
+  <!-- AncientExostriderHead -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderHead"]/label</xpath>
+    <value>
+      <label>Vertibot cockpit</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderHead"]/description</xpath>
+    <value>
+      <description>The cockpit of a crashed Vertibot, filled with old controls and shattered glass.</description>
+    </value>
+  </Operation>
+  <!-- AncientExostriderLeg -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderLeg"]/label</xpath>
+    <value>
+      <label>Vertibot landing gear</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderLeg"]/description</xpath>
+    <value>
+      <description>Landing gear from a Vertibot, twisted and scorched from the crash.</description>
+    </value>
+  </Operation>
+  <!-- AncientExostriderCannon -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderCannon"]/label</xpath>
+    <value>
+      <label>Vertibot autocannon</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientExostriderCannon"]/description</xpath>
+    <value>
+      <description>A heavy autocannon salvaged from a Vertibot wreck.</description>
+    </value>
+  </Operation>
+  <!-- BandNode -->
+  <!-- MechGestator -->
+  <!-- Large MechGestator -->
+  <!-- BasicRecharger -->
+  <!-- StandardRecharger -->
+  <!-- SubcoreEncoder -->
+  <!-- SubcoreSoftscanner -->
+  <!-- SubcoreRipscanner -->
+  <!-- Change MechBooster to RobCo Booster -->
+  <!-- Patch MechGestator recipes -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>RobCo_Eyebot_Recipe</li>
+      <li>RobCo_EyebotDuraframe_Recipe</li>
+      <li>RobCo_MisterFarmhand_Recipe</li>
+      <li>RobCo_MisterHandy_Recipe</li>
+      <li>RobCo_MissNanny_Recipe</li>
+      <li>RobCo_MisterGutsy_Recipe</li>
+      <li>RobCo_Constructron_Recipe</li>
+      <li>RobCo_Factotron_Recipe</li>
+      <li>RobCo_Utilitron_Recipe</li>
+      <li>RobCo_Collectron_Recipe</li>
+      <li>RobCo_Protectron_Recipe</li>
+    </value>
+  </Operation>
+  <!-- Patch LargeMechGestator recipes -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>RobCo_Assaultron_Recipe</li>
+      <li>RobCo_Robobrain_Recipe</li>
+      <li>RobCo_Cyberdog_Recipe</li>
+      <li>RobCo_SentrybotSiegebreaker_Recipe</li>
+      <li>RobCo_SentrybotPestcontrol_Recipe</li>
+      <li>RobCo_SentrybotAnnihilator_Recipe</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+    <xpath>/Defs/*[defName="RobCo_ScurrybotLaser"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations></operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+    <xpath>/Defs/*[defName="RobCo_Laser_Combat"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/*[defName="RobCo_Laser_Combat"]/description</xpath>
+      <value>
+        <description>Integrated laser cannon mounted on a Securitron. Lethal combat weapon.</description>
+      </value>
+    </match>
+  </Operation>
+</Patch>

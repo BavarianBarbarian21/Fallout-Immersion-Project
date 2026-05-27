@@ -1,0 +1,256 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "copilot-smoke-write",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"echo task-smoke>\"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\terminal-smoke-test.txt\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "copilot-smoke-write-ps",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"Set-Content -LiteralPath 'C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\terminal-smoke-test.txt' -Value 'task-smoke-ps' -Encoding UTF8"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "copilot-smoke-write-ps2",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"& { Set-Content -LiteralPath \"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\terminal-smoke-test.txt\" -Value \"task-smoke-ps2\" -Encoding UTF8 }"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1-hhtools-catalan-probe",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\Invoke-TranslationSync.ps1",
+				"-Command",
+				"sync",
+				"-Category",
+				"part1",
+				"-Languages",
+				"Catalan",
+				"-IncludeMods",
+				"FIP-H&HTools"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1-hhtools-catalan-probe-quoted",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\Invoke-TranslationSync.ps1",
+				"-Command",
+				"sync",
+				"-Category",
+				"part1",
+				"-Languages",
+				"Catalan",
+				"-IncludeMods",
+				"'FIP-H&HTools'"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-recheck",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-recheck-2",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-translationsync-probe-13848",
+			"type": "shell",
+			"command": "taskkill.exe",
+			"args": [
+				"/PID",
+				"13848",
+				"/F"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-recheck-3",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-translationsync-part1-worker-5876",
+			"type": "shell",
+			"command": "taskkill.exe",
+			"args": [
+				"/PID",
+				"5876",
+				"/F"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1-hhtools-catalan-probe-v4",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\Invoke-TranslationSync.ps1",
+				"-Command",
+				"sync",
+				"-Category",
+				"part1",
+				"-Languages",
+				"Catalan",
+				"-IncludeMods",
+				"'FIP-H&HTools'"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-recheck-4",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-translationsync-part1-workers-5080-3940",
+			"type": "shell",
+			"command": "taskkill.exe",
+			"args": [
+				"/PID",
+				"5080",
+				"/PID",
+				"3940",
+				"/F"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-run",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "translationsync-part1to3-all-languages-clean",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Run-Part1To3-AllLanguages.ps1",
+				"-RestartIfBusy"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "dump-powershell-processes",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"C:\\Users\\Matthias\\Desktop\\Fallout Immersion Project\\Tools\\TranslationSync\\state\\Dump-PowerShellProcesses.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "kill-translationsync-conflicts-current",
+			"type": "shell",
+			"command": "taskkill.exe",
+			"args": [
+				"/PID",
+				"13472",
+				"/F"
+			],
+			"isBackground": false
+		},
+
+	]
+}

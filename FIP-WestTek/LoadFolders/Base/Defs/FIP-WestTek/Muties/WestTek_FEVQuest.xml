@@ -25,24 +25,24 @@
     <isRootSpecial>true</isRootSpecial>
     <questNameRules>
       <rulesStrings>
-        <li>questName(p=3)->[complexAdj] West Tek laboratory</li>
-        <li>questName->ancient West Tek laboratory</li>
-        <li>complexAdj->sealed</li>
-        <li>complexAdj->ancient</li>
-        <li>complexAdj->hidden</li>
-        <li>complexAdj->buried</li>
-        <li>complexAdj->quarantined</li>
+        <li>questName(p=3)-&gt;[complexAdj] West Tek laboratory</li>
+        <li>questName-&gt;ancient West Tek laboratory</li>
+        <li>complexAdj-&gt;sealed</li>
+        <li>complexAdj-&gt;ancient</li>
+        <li>complexAdj-&gt;hidden</li>
+        <li>complexAdj-&gt;buried</li>
+        <li>complexAdj-&gt;quarantined</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->You've [discoveryDesc] of an ancient West Tek laboratory nearby. The site appears to contain sealed FEV research material, including probes and unstable dosages left behind in cryogenic storage.
+        <li>questDescription-&gt;You've [discoveryDesc] of an ancient West Tek laboratory nearby. The site appears to contain sealed FEV research material, including probes and unstable dosages left behind in cryogenic storage.
 
 If you can break into the laboratory and recover the cache, your colonists can begin analyzing the material and establish the first controlled FEV process.
 
 Be warned - facilities of this type can contain dormant mechanoid defenses, and your intrusion may attract unwanted attention.</li>
-        <li>discoveryDesc(discovered==false)->learned</li>
-        <li>discoveryDesc(discovered==true)->determined the location</li>
+        <li>discoveryDesc(discovered==false)-&gt;learned</li>
+        <li>discoveryDesc(discovered==true)-&gt;determined the location</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="FIP.WestTek.QuestNode_Root_Loot_AncientWestTekLaboratory" />

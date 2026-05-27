@@ -161,6 +161,39 @@
 		</comps>
 	</AbilityDef>
 
+	<AbilityDef>
+		<defName>RobCo_AssaultronStealthField</defName>
+		<label>stealth field</label>
+		<description>Activates an onboard refraction field and briefly renders the unit almost impossible to see.</description>
+		<iconPath>FIP-RobCo/Misc/RobCo_AssaultronStealthUI</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<hostile>false</hostile>
+		<targetRequired>false</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>60000~60000</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>15</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<warmupTime>0.5</warmupTime>
+			<range>0</range>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>PsychicInvisibility</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
 	<HediffDef>
 		<defName>RobCo_WarMachineLiberatorUplink</defName>
 		<label>war machine uplink</label>

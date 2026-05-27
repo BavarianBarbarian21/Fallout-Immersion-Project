@@ -103,7 +103,7 @@
 	<!-- Robobrain -->
 	<ThingDef ParentName="RobCo_RobobrainBase">
 		<defName>RobCo_Robobrain</defName>
-		<label>Robobrain</label>
+		<label>robobrain</label>
 		<description>A large tracked combat robot produced by General Atomics International for the United States Army. It houses a living primate or human brain in a biomedical gel dome, wired directly into its control systems. The Robobrain is equipped with manipulator claws, an integrated laser weapon, and a Mesmetron stun device. Its biological brain component provides exceptional tactical intelligence and the ability to handle human-standard weapons.</description>
 		<comps>
 			<li Class="CompProperties_ProjectileInterceptor">
@@ -125,7 +125,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_SmallRobotKind">
 		<defName>RobCo_Robobrain</defName>
-		<label>Robobrain</label>
+		<label>robobrain</label>
 		<race>RobCo_Robobrain</race>
 		<combatPower>250</combatPower>
 		<lifeStages>
@@ -142,7 +142,7 @@
 				</bodyGraphicData>
 			</li>
 			<li>
-				<label>pre-war Robobrain</label>
+				<label>pre-War robobrain</label>
 				<bodyGraphicData>
 					<texPath>FIP-RobCo/Robots/Robobrain/RobobrainAncient/RobobrainAncient</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>
@@ -161,7 +161,7 @@
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_RobobrainBase_Recipe">
 		<defName>RobCo_Robobrain_Recipe</defName>
-		<label>craft Robobrain</label>
+		<label>craft robobrain</label>
 		<description>Craft a Robobrain.</description>
 		<products>
 			<RobCo_Robobrain>1</RobCo_Robobrain>

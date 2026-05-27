@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewECandT">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VBE_EspressoMachineBuilding"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>FIP-Lucky 38/Buildings/Lucky38_CoffeeWorkbench</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VBE_EspressoMachineBuilding"]/graphicData/graphicClass</xpath>
+        <value>
+          <graphicClass>Graphic_Multi</graphicClass>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VFEPD_EspressoMachine"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>FIP-Lucky 38/Buildings/Lucky38_CoffeeWorkbench</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VFEPD_EspressoMachine"]/graphicData/graphicClass</xpath>
+        <value>
+          <graphicClass>Graphic_Multi</graphicClass>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><Patch><!-- Mechanoid Waiter RobCo integration --><Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter"><success>Always</success><operations><li Class="PatchOperationSequence" MayRequire="FIP.RobCo"><success>Always</success><operations><li Class="PatchOperationAdd"><xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath><value><li>Hauling</li></value></li><li Class="PatchOperationAdd" MayRequire="Orion.Gastronomy"><xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath><value><li>Gastronomy_Waiting</li></value></li><li Class="PatchOperationAdd" MayRequire="Adamas.Storefront"><xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath><value><li>Storefront_Selling</li></value></li></operations></li></operations></Operation><Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter"><success>Always</success><operations></operations></Operation></Patch>
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Mechanoid Waiter RobCo integration -->
+  <Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationSequence" MayRequire="FIP.RobCo">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+            <value>
+              <li>Hauling</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="Orion.Gastronomy">
+            <xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+            <value>
+              <li>Gastronomy_Waiting</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd" MayRequire="Adamas.Storefront">
+            <xpath>/Defs/ThingDef[defName="RobCo_MisterHandy"]/race/mechEnabledWorkTypes</xpath>
+            <value>
+              <li>Storefront_Selling</li>
+            </value>
+          </li>
+        </operations>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence" MayRequire="GonDragon.MechanoidWaiter">
+    <success>Always</success>
+    <operations></operations>
+  </Operation>
+</Patch>

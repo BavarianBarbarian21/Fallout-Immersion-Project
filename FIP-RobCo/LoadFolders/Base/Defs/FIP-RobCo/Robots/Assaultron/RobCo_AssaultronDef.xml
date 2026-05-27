@@ -134,7 +134,7 @@
 				</bodyGraphicData>
 			</li>
 			<li>
-				<label>pre-war Assaultron</label>
+				<label>pre-War Assaultron</label>
 				<bodyGraphicData>
 					<texPath>FIP-RobCo/Robots/Assaultron/AssaultronAncient/AssaultronAncient</texPath>
 					<shaderType>CutoutWithOverlay</shaderType>
@@ -162,10 +162,61 @@
 			<ThingDef>RobCo_Assaultron</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
+	<!-- Assaultron Dominator -->
+	<ThingDef ParentName="RobCo_AssaultronBase">
+		<defName>RobCo_AssaultronDominator</defName>
+		<label>Assaultron Dominator</label>
+		<description>A specialized Assaultron hunter-killer variant built around an integrated stealth-field emitter and a dedicated close-assault blade package. It gives up the standard head laser in exchange for faster cloaked approaches and more dangerous melee engagements.</description>
+		<statBases>
+			<MarketValue>3600</MarketValue>
+			<MoveSpeed>5.0</MoveSpeed>
+			<BandwidthCost>4</BandwidthCost>
+		</statBases>
+		<race>
+			<baseHealthScale>3.4</baseHealthScale>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="RobCo_SmallRobotKind">
+		<defName>RobCo_AssaultronDominator</defName>
+		<label>Assaultron Dominator</label>
+		<race>RobCo_AssaultronDominator</race>
+		<combatPower>400</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>FIP-RobCo/Robots/Assaultron/Assaultron/Assaultron</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.25</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>RobCo_AssaultronBlade</li>
+		</weaponTags>
+		<abilities>
+			<li>RobCo_AssaultronStealthField</li>
+		</abilities>
+	</PawnKindDef>
+	<RecipeDef ParentName="RobCo_AssaultronBase_Recipe">
+		<defName>RobCo_AssaultronDominator_Recipe</defName>
+		<label>craft Assaultron Dominator</label>
+		<description>Craft an Assaultron Dominator.</description>
+		<products>
+			<RobCo_AssaultronDominator>1</RobCo_AssaultronDominator>
+		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_AssaultronDominator</ThingDef>
+		</descriptionHyperlinks>
+	</RecipeDef>
 	<!-- Sheepsquatch -->
 	<ThingDef ParentName="RobCo_AssaultronBase">
 		<defName>RobCo_AssaultronSheepsquatch</defName>
-		<label>Sheepsquatch</label>
+		<label>sheepsquatch</label>
 		<description>A heavily modified Assaultron chassis built to resemble the legendary Sheepsquatch cryptid of Appalachian folklore. Larger than a standard Assaultron and fitted with an uprated head laser, it was likely constructed as an intimidation tool by whoever had access to a robotics workbench and a dark sense of humor.</description>
 		<race>
 			<body>RobCo_Assaultron</body>
@@ -184,7 +235,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="RobCo_HugeRobotKind">
 		<defName>RobCo_AssaultronSheepsquatch</defName>
-		<label>Sheepsquatch</label>
+		<label>sheepsquatch</label>
 		<race>RobCo_AssaultronSheepsquatch</race>
 		<combatPower>500</combatPower>
 		<lifeStages>

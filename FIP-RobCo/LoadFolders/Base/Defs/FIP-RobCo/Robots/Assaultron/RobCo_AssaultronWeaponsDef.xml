@@ -57,9 +57,44 @@
 		</verbs>
 	</ThingDef>
 
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_AssaultronBlade</defName>
+		<label>Assaultron blade</label>
+		<description>An integrated Assaultron-pattern forearm blade optimized for rapid slashing and puncturing strikes at close range.</description>
+		<thingCategories Inherit="False">
+			<li>WeaponsMelee</li>
+		</thingCategories>
+		<weaponClasses Inherit="False">
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<smeltable>false</smeltable>
+		<relicChance>0</relicChance>
+		<graphicData>
+			<texPath>FIP-RobCo/Weapons/Assaultron/RobCo_AssaultronBlade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.7</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>RobCo_AssaultronBlade</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>Assaultron blade</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
 	<ThingDef ParentName="BaseGun">
 		<defName>RobCo_SheepsquatchHeadLaser</defName>
-		<label>RobCo Assaultron head laser</label>
+		<label>RobCo sheepsquatch head laser</label>
 		<description>A high-output head-mounted beam projector built around a long charge cycle and a large blast radius. The discharge produces significant heat and is most effective when fired from standoff range.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
