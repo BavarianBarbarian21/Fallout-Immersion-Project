@@ -175,9 +175,33 @@ function Import-TranslatableMembersFromRimWorldSource {
 function Ensure-Directory {
     param([string]$Path)
 
-    if (-not (Test-Path -LiteralPath $Path)) {
-        $null = New-Item -Path $Path -ItemType Directory -Force
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return
     }
+
+    $null = [System.IO.Directory]::CreateDirectory((Get-LongPath -Path $Path))
+}
+
+function Get-LongPath {
+    param([string]$Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        return $Path
+    }
+
+    if ($Path.StartsWith('\\?\')) {
+        return $Path
+    }
+
+    if ($Path.StartsWith('\\')) {
+        return '\\?\UNC\' + $Path.TrimStart('\\')
+    }
+
+    if ([System.IO.Path]::IsPathRooted($Path)) {
+        return '\\?\' + [System.IO.Path]::GetFullPath($Path)
+    }
+
+    return $Path
 }
 
 function Get-AbsolutePath {
@@ -200,16 +224,45 @@ function Get-AbsolutePath {
 function Load-JsonFile {
     param([string]$FilePath)
 
-    if (-not (Test-Path -LiteralPath $FilePath)) {
+    $resolvedPath = Get-LongPath -Path $FilePath
+    if (-not [System.IO.File]::Exists($resolvedPath)) {
         return $null
     }
 
-    $raw = [System.IO.File]::ReadAllText($FilePath, $Utf8NoBom)
+    $raw = [System.IO.File]::ReadAllText($resolvedPath, $Utf8NoBom)
     if ([string]::IsNullOrWhiteSpace($raw)) {
         return $null
     }
 
     return $JsonSerializer.DeserializeObject($raw)
+}
+
+function Resolve-PlaysetModsRoot {
+    param(
+        [string]$ConfigRoot,
+        [string]$ConfiguredPath
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($ConfiguredPath)) {
+        return Get-AbsolutePath -BasePath $ConfigRoot -Path $ConfiguredPath
+    }
+
+    $sharedConfigPath = Get-AbsolutePath -BasePath $ConfigRoot -Path '../../Tools/TranslationSync/config.json'
+    if (-not (Test-Path -LiteralPath $sharedConfigPath)) {
+        return $null
+    }
+
+    $sharedConfig = Load-JsonFile -FilePath $sharedConfigPath
+    if ($null -eq $sharedConfig -or -not $sharedConfig.ContainsKey('paths') -or $null -eq $sharedConfig.paths) {
+        return $null
+    }
+
+    $sharedPlaysetPath = [string]$sharedConfig.paths.playsetModsRoot
+    if ([string]::IsNullOrWhiteSpace($sharedPlaysetPath)) {
+        return $null
+    }
+
+    return Get-AbsolutePath -BasePath (Split-Path -Parent $sharedConfigPath) -Path $sharedPlaysetPath
 }
 
 function Save-JsonFile {
@@ -221,7 +274,7 @@ function Save-JsonFile {
 
     Ensure-Directory -Path (Split-Path -Parent $FilePath)
     $json = $Data | ConvertTo-Json -Depth $Depth
-    [System.IO.File]::WriteAllText($FilePath, $json, $Utf8NoBom)
+    [System.IO.File]::WriteAllText((Get-LongPath -Path $FilePath), $json, $Utf8NoBom)
 }
 
 function Save-TextFile {
@@ -231,7 +284,7 @@ function Save-TextFile {
     )
 
     Ensure-Directory -Path (Split-Path -Parent $FilePath)
-    [System.IO.File]::WriteAllText($FilePath, $Content, $Utf8NoBom)
+    [System.IO.File]::WriteAllText((Get-LongPath -Path $FilePath), $Content, $Utf8NoBom)
 }
 
 function Load-Config {
@@ -251,12 +304,7 @@ function Load-Config {
     $paths.FcpCacheRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.fcpCacheRoot
     $paths.LanguageTemplateRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.languageTemplateRoot
     $paths.LocaleRulesPath = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.localeRulesPath
-    $paths.PlaysetModsRoot = if ($PlaysetModsRoot) {
-        Get-AbsolutePath -BasePath $configRoot -Path $PlaysetModsRoot
-    }
-    else {
-        Get-AbsolutePath -BasePath $configRoot -Path $config.paths.playsetModsRoot
-    }
+    $paths.PlaysetModsRoot = Resolve-PlaysetModsRoot -ConfigRoot $configRoot -ConfiguredPath $(if ($PlaysetModsRoot) { $PlaysetModsRoot } else { [string]$config.paths.playsetModsRoot })
     $paths.StateRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.stateRoot
     $paths.ModListRoot = Get-AbsolutePath -BasePath $configRoot -Path $config.paths.modListRoot
     $config.paths = $paths
@@ -1053,20 +1101,32 @@ function Extract-DefFile {
 function Read-LanguageXml {
     param([string]$FilePath)
 
-    if (-not (Test-Path -LiteralPath $FilePath)) {
+    $resolvedPath = Get-LongPath -Path $FilePath
+    if (-not [System.IO.File]::Exists($resolvedPath)) {
         return $null
     }
 
     $document = [System.Xml.XmlDocument]::new()
     $document.PreserveWhitespace = $true
     try {
-        $document.Load($FilePath)
+        $bytes = [System.IO.File]::ReadAllBytes($resolvedPath)
+        $strictUtf8 = [System.Text.UTF8Encoding]::new($false, $true)
+
+        try {
+            $content = $strictUtf8.GetString($bytes)
+        }
+        catch {
+            # Some upstream language files are saved as Windows-1252 despite declaring UTF-8.
+            $content = [System.Text.Encoding]::GetEncoding(1252).GetString($bytes)
+        }
+
+        $document.LoadXml($content)
     }
     catch {
         return $null
     }
 
-    if ($null -eq $document.DocumentElement -or $document.DocumentElement.Name -ne 'LanguageData') {
+    if ($null -eq $document.DocumentElement -or $document.DocumentElement.Name -notin @('LanguageData', 'LanguagData')) {
         return $null
     }
 
@@ -1123,11 +1183,12 @@ function Write-LanguageXml {
 function Read-NamesFile {
     param([string]$FilePath)
 
-    if (-not (Test-Path -LiteralPath $FilePath)) {
+    $resolvedPath = Get-LongPath -Path $FilePath
+    if (-not [System.IO.File]::Exists($resolvedPath)) {
         return $null
     }
 
-    return @([System.IO.File]::ReadAllLines($FilePath, [System.Text.Encoding]::UTF8))
+    return @([System.IO.File]::ReadAllLines($resolvedPath, [System.Text.Encoding]::UTF8))
 }
 
 function Write-NamesFile {
@@ -1137,7 +1198,7 @@ function Write-NamesFile {
     )
 
     Ensure-Directory -Path (Split-Path -Parent $FilePath)
-    [System.IO.File]::WriteAllLines($FilePath, $Lines, $Utf8NoBom)
+    [System.IO.File]::WriteAllLines((Get-LongPath -Path $FilePath), $Lines, $Utf8NoBom)
 }
 
 function Get-OrderedEntriesFromPairs {
@@ -1312,7 +1373,10 @@ function Get-RequiredPackageIdsFromXmlFile {
 }
 
 function Get-RequiredPackageIdsFromAboutFile {
-    param([string]$FilePath)
+    param(
+        [string]$FilePath,
+        [switch]$LoadAfterOnly
+    )
 
     $packageIds = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
     try {
@@ -1322,11 +1386,16 @@ function Get-RequiredPackageIdsFromAboutFile {
         return $packageIds
     }
 
-    $nodePaths = @(
-        '/ModMetaData/modDependencies/li/packageId',
-        '/ModMetaData/modDependenciesByVersion/li/packageId',
-        '/ModMetaData/loadAfter/li'
-    )
+    $nodePaths = if ($LoadAfterOnly) {
+        @('/ModMetaData/loadAfter/li')
+    }
+    else {
+        @(
+            '/ModMetaData/modDependencies/li/packageId',
+            '/ModMetaData/modDependenciesByVersion/li/packageId',
+            '/ModMetaData/loadAfter/li'
+        )
+    }
 
     foreach ($nodePath in $nodePaths) {
         $nodes = $about.SelectNodes($nodePath)
@@ -1491,17 +1560,8 @@ function Refresh-CompatibleList {
     foreach ($mod in $fipMods) {
         $aboutPath = Join-Path $mod.FullName 'About\About.xml'
         if (Test-Path -LiteralPath $aboutPath) {
-            $aboutIds = Get-RequiredPackageIdsFromAboutFile -FilePath $aboutPath
+            $aboutIds = Get-RequiredPackageIdsFromAboutFile -FilePath $aboutPath -LoadAfterOnly
             foreach ($packageId in $aboutIds) {
-                if (-not (Test-IsIgnoredPackageId -PackageId $packageId -Config $Config)) {
-                    [void]$referencedPackageIds.Add($packageId)
-                }
-            }
-        }
-
-        foreach ($xmlFile in Get-ChildItem -LiteralPath $mod.FullName -Recurse -Filter '*.xml' -File -ErrorAction SilentlyContinue) {
-            $xmlIds = Get-RequiredPackageIdsFromXmlFile -FilePath $xmlFile.FullName
-            foreach ($packageId in $xmlIds) {
                 if (-not (Test-IsIgnoredPackageId -PackageId $packageId -Config $Config)) {
                     [void]$referencedPackageIds.Add($packageId)
                 }
@@ -1509,9 +1569,7 @@ function Refresh-CompatibleList {
         }
     }
 
-    $lookupRoots = @($Config.paths.RimWorldRoot, $Config.paths.FcpCacheRoot) + @($Config.compatibility.additionalLookupRoots | ForEach-Object {
-        Get-AbsolutePath -BasePath $Config.__ConfigRoot -Path $_
-    })
+    $lookupRoots = @($Config.paths.PlaysetModsRoot)
     $metadataIndex = Get-ModMetadataIndex -Roots $lookupRoots
 
     $resolvedNames = New-Object 'System.Collections.Generic.List[string]'
@@ -1587,6 +1645,10 @@ function Refresh-PlaysetOtherList {
             return $true
         }
 
+        if (Test-IsIgnoredPackageId -PackageId $meta.PackageId -Config $Config) {
+            return $false
+        }
+
         return -not $excludedPackageIds.Contains($meta.PackageId)
     } | Sort-Object Name | Select-Object -ExpandProperty Name)
     Save-TextFile -FilePath $category.modListPath -Content (($remaining -join [Environment]::NewLine) + [Environment]::NewLine)
@@ -1655,11 +1717,8 @@ function Get-CategorySearchRoots {
         'fcp' { return @($Config.paths.FcpCacheRoot, (Join-Path $Config.paths.RimWorldRoot 'FCP Mods')) }
         'compatible' {
             $roots = New-Object 'System.Collections.Generic.List[string]'
-            $roots.Add($Config.paths.RimWorldRoot) | Out-Null
-            $roots.Add((Join-Path $Config.paths.RimWorldRoot 'Data')) | Out-Null
-            $roots.Add((Join-Path $Config.paths.RimWorldRoot 'FCP Mods')) | Out-Null
-            foreach ($path in $Config.compatibility.additionalLookupRoots) {
-                $roots.Add((Get-AbsolutePath -BasePath $Config.__ConfigRoot -Path $path)) | Out-Null
+            if (-not [string]::IsNullOrWhiteSpace($Config.paths.PlaysetModsRoot)) {
+                $roots.Add($Config.paths.PlaysetModsRoot) | Out-Null
             }
             return @($roots | Select-Object -Unique)
         }
@@ -1917,7 +1976,7 @@ function Get-CategorySources {
             NamesCount = $namesCount
             ExistingDefInjectedCount = $existingDefInjectedCount
             ExtractedDefInjectedCount = $extractedDefInjectedCount
-            Outputs    = $uniqueOutputs.ToArray()
+            Outputs    = @($uniqueOutputs)
         }) | Out-Null
     }
 
@@ -1989,11 +2048,12 @@ function Test-FileContentEquals {
         [string]$Content
     )
 
-    if (-not (Test-Path -LiteralPath $FilePath)) {
+    $resolvedPath = Get-LongPath -Path $FilePath
+    if (-not [System.IO.File]::Exists($resolvedPath)) {
         return $false
     }
 
-    $existing = [System.IO.File]::ReadAllText($FilePath, $Utf8NoBom)
+    $existing = [System.IO.File]::ReadAllText($resolvedPath, $Utf8NoBom)
     return $existing -eq $Content
 }
 

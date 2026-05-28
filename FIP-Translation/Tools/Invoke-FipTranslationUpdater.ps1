@@ -35,6 +35,7 @@ $statusPath = Join-Path $statusRoot ("{0}-{1}.json" -f $Category, $Mode)
 $outputRoot = Join-Path $translationRoot $partNames[$Category]
 $englishRoot = Join-Path $outputRoot 'Languages\English'
 $snapshotRoot = Join-Path $toolsRoot (Join-Path 'state\previous-english' $Category)
+$operationLabel = "{0} {1}" -f $Category.ToUpperInvariant(), $Mode
 
 function Write-LauncherStatus {
     param(
@@ -78,9 +79,10 @@ function Copy-DirectoryContents {
         return
     }
 
-    foreach ($item in Get-ChildItem -LiteralPath $SourcePath -Force) {
-        $targetPath = Join-Path $DestinationPath $item.Name
-        Copy-Item -LiteralPath $item.FullName -Destination $targetPath -Recurse -Force
+    $robocopyLog = Join-Path $statusRoot ("robocopy-{0}-{1}.log" -f $Category, $Mode)
+    $null = & robocopy.exe $SourcePath $DestinationPath /E /R:2 /W:1 /NFL /NDL /NJH /NJS /NP /UNILOG:$robocopyLog
+    if ($LASTEXITCODE -ge 8) {
+        throw "Snapshot copy failed with robocopy exit code $LASTEXITCODE."
     }
 }
 
@@ -91,6 +93,15 @@ function Invoke-TranslationTool {
     if ($LASTEXITCODE -ne 0) {
         throw "Translation tool failed with exit code $LASTEXITCODE."
     }
+}
+
+function Write-TerminalCompletionLine {
+    param(
+        [string]$State,
+        [string]$Message
+    )
+
+    Write-Host ("[{0}] {1}: {2}" -f $State.ToUpperInvariant(), $operationLabel, $Message)
 }
 
 try {
@@ -116,6 +127,7 @@ try {
 
         Invoke-TranslationTool -Arguments $arguments
         Write-LauncherStatus -State 'completed' -Message 'English Sync finished successfully.' -ExitCode 0
+        Write-TerminalCompletionLine -State 'completed' -Message 'Operation finished successfully.'
         return
     }
 
@@ -140,8 +152,10 @@ try {
 
     Invoke-TranslationTool -Arguments $arguments
     Write-LauncherStatus -State 'completed' -Message 'Language Translation finished successfully.' -ExitCode 0
+    Write-TerminalCompletionLine -State 'completed' -Message 'Operation finished successfully.'
 }
 catch {
     Write-LauncherStatus -State 'failed' -Message $_.Exception.Message -ExitCode 1
+    Write-TerminalCompletionLine -State 'failed' -Message $_.Exception.Message
     throw
 }

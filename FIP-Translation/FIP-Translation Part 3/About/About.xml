@@ -3,10 +3,316 @@
   <packageId>FIP.Translation.Part3</packageId>
   <name>FIP-Translation Part 3</name>
   <author>Feil</author>
-  <description>Incremental translation scaffold for mods referenced by FIP dependencies, loadAfter entries, and MayRequire patches, excluding FIP, FCP, and official DLC package IDs.</description>
+  <description>Incremental translation scaffold for compatibility-target mods.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>XMB.AncientUrbanrUins.MO</packageId>
+      <displayName>Ancient urban ruins</displayName>
+    </li>
+    <li>
+      <packageId>Orion.CashRegister</packageId>
+      <displayName>Cash Register (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>Dubwise.DubsBadHygiene</packageId>
+      <displayName>Dubs Bad Hygiene</displayName>
+    </li>
+    <li>
+      <packageId>Orion.Gastronomy</packageId>
+      <displayName>Gastronomy (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>Orion.Hospitality</packageId>
+      <displayName>Hospitality (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>Adamas.HospitalityCasino</packageId>
+      <displayName>Hospitality: Casino</displayName>
+    </li>
+    <li>
+      <packageId>Adamas.HospitalitySpa</packageId>
+      <displayName>Hospitality: Spa</displayName>
+    </li>
+    <li>
+      <packageId>Adamas.Storefront</packageId>
+      <displayName>Hospitality: Storefront</displayName>
+    </li>
+    <li>
+      <packageId>Adamas.VendingMachines</packageId>
+      <displayName>Hospitality: Vending machines</displayName>
+    </li>
+    <li>
+      <packageId>GonDragon.MechanoidWaiter</packageId>
+      <displayName>Mechanoid Waiter</displayName>
+    </li>
+    <li>
+      <packageId>zal.spaceports</packageId>
+      <displayName>Rimsential - Spaceports (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>zal.smallhotspring</packageId>
+      <displayName>Small Hot Spring (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>Orion.Therapy</packageId>
+      <displayName>Therapy (Continued)</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaAnimalsExpanded</packageId>
+      <displayName>Vanilla Animals Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VAERoy</packageId>
+      <displayName>Vanilla Animals Expanded — Royal Animals</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VAEWaste</packageId>
+      <displayName>Vanilla Animals Expanded — Waste Animals</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaAspirationsExpanded</packageId>
+      <displayName>Vanilla Aspirations Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaBackstoriesExpanded</packageId>
+      <displayName>Vanilla Backstories Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.BaseGeneration</packageId>
+      <displayName>Vanilla Base Generation Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VBooksE</packageId>
+      <displayName>Vanilla Books Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VBrewE</packageId>
+      <displayName>Vanilla Brewing Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VBrewECandT</packageId>
+      <displayName>Vanilla Brewing Expanded - Coffees and Teas</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VChemfuelE</packageId>
+      <displayName>Vanilla Chemfuel Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VCookE</packageId>
+      <displayName>Vanilla Cooking Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VCookEHaute</packageId>
+      <displayName>Vanilla Cooking Expanded - Haute</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VCookEStews</packageId>
+      <displayName>Vanilla Cooking Expanded - Stews</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VCookESushi</packageId>
+      <displayName>Vanilla Cooking Expanded - Sushi</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VEE</packageId>
+      <displayName>Vanilla Events Expanded</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Deserters</packageId>
+      <displayName>Vanilla Factions Expanded - Deserters</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Empire</packageId>
+      <displayName>Vanilla Factions Expanded - Empire</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Medieval2</packageId>
+      <displayName>Vanilla Factions Expanded - Medieval 2</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.SettlersModule</packageId>
+      <displayName>Vanilla Factions Expanded - Settlers</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VFE.Tribals</packageId>
+      <displayName>Vanilla Factions Expanded - Tribals</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VCEF</packageId>
+      <displayName>Vanilla Fishing Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaFoodVarietyExpanded</packageId>
+      <displayName>Vanilla Food Variety Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFECore</packageId>
+      <displayName>Vanilla Furniture Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEArchitect</packageId>
+      <displayName>Vanilla Furniture Expanded - Architect</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEArt</packageId>
+      <displayName>Vanilla Furniture Expanded - Art</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEFactory</packageId>
+      <displayName>Vanilla Furniture Expanded - Factory</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEFarming</packageId>
+      <displayName>Vanilla Furniture Expanded - Farming</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEMedical</packageId>
+      <displayName>Vanilla Furniture Expanded - Medical Module</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEPower</packageId>
+      <displayName>Vanilla Furniture Expanded - Power</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEProduction</packageId>
+      <displayName>Vanilla Furniture Expanded - Production</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFEPropsandDecor</packageId>
+      <displayName>Vanilla Furniture Expanded - Props and Decor</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFESecurity</packageId>
+      <displayName>Vanilla Furniture Expanded - Security</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VFESpacer</packageId>
+      <displayName>Vanilla Furniture Expanded - Spacer Module</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VGeneticsE</packageId>
+      <displayName>Vanilla Genetics Expanded</displayName>
+    </li>
+    <li>
+      <packageId>vanillaexpanded.gravship</packageId>
+      <displayName>Vanilla Gravship Expanded - Chapter 1</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.HelixienGas</packageId>
+      <displayName>Vanilla Helixien Gas Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.Ideo.Dryads</packageId>
+      <displayName>Vanilla Ideology Expanded - Dryads</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VIEHAR</packageId>
+      <displayName>Vanilla Ideology Expanded - Hats and Rags</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VMemesE</packageId>
+      <displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VExplorationE</packageId>
+      <displayName>Vanilla Landmarks Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VNutrientE</packageId>
+      <displayName>Vanilla Nutrient Paste Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPersonaWeaponsE</packageId>
+      <displayName>Vanilla Persona Weapons Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPlantsE</packageId>
+      <displayName>Vanilla Plants Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPlantsEMore</packageId>
+      <displayName>Vanilla Plants Expanded - More Plants</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPlantsEMushrooms</packageId>
+      <displayName>Vanilla Plants Expanded - Mushrooms</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPlantsESucculents</packageId>
+      <displayName>Vanilla Plants Expanded - Succulents</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPsycastsE</packageId>
+      <displayName>Vanilla Psycasts Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPE.Hemosage</packageId>
+      <displayName>Vanilla Psycasts Expanded - Hemosage</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VPE.Puppeteer</packageId>
+      <displayName>Vanilla Psycasts Expanded - Puppeteer</displayName>
+    </li>
+    <li>
+      <packageId>vanillaquestsexpanded.ancients</packageId>
+      <displayName>Vanilla Quests Expanded - Ancients</displayName>
+    </li>
+    <li>
+      <packageId>vanillaquestsexpanded.cryptoforge</packageId>
+      <displayName>Vanilla Quests Expanded - Cryptoforge</displayName>
+    </li>
+    <li>
+      <packageId>vanillaquestsexpanded.deadlife</packageId>
+      <displayName>Vanilla Quests Expanded - Deadlife</displayName>
+    </li>
+    <li>
+      <packageId>vanillaquestsexpanded.generator</packageId>
+      <displayName>Vanilla Quests Expanded - The Generator</displayName>
+    </li>
+    <li>
+      <packageId>vanillaracesexpanded.sanguophage</packageId>
+      <displayName>Vanilla Races Expanded - Sanguophage</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.Recycling</packageId>
+      <displayName>Vanilla Recycling Expanded</displayName>
+    </li>
+    <li>
+      <packageId>vanillaexpanded.skills</packageId>
+      <displayName>Vanilla Skills Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaSocialInteractionsExpanded</packageId>
+      <displayName>Vanilla Social Interactions Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.Temperature</packageId>
+      <displayName>Vanilla Temperature Expanded</displayName>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VanillaTraitsExpanded</packageId>
+      <displayName>Vanilla Traits Expanded</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaVehiclesExpanded</packageId>
+      <displayName>Vanilla Vehicles Expanded</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaVehiclesExpandedTier3</packageId>
+      <displayName>Vanilla Vehicles Expanded - Tier 3</displayName>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaVehiclesExpandedUpgrades</packageId>
+      <displayName>Vanilla Vehicles Expanded - Upgrades</displayName>
+    </li>
+  </modDependencies>
   <loadAfter>
     <li>Adamas.HospitalityCasino</li>
     <li>Adamas.HospitalitySpa</li>
@@ -84,6 +390,5 @@
     <li>XMB.AncientUrbanrUins.MO</li>
     <li>zal.smallhotspring</li>
     <li>zal.spaceports</li>
-    <li>FIP.Translation.Part4</li>
   </loadAfter>
 </ModMetaData>
