@@ -1120,6 +1120,10 @@ function Read-LanguageXml {
             $content = [System.Text.Encoding]::GetEncoding(1252).GetString($bytes)
         }
 
+        if (-not [string]::IsNullOrEmpty($content) -and $content[0] -eq [char]0xFEFF) {
+            $content = $content.Substring(1)
+        }
+
         $document.LoadXml($content)
     }
     catch {
