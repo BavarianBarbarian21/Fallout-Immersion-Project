@@ -63,15 +63,31 @@
     <value>
       <description>text_todo</description>
     </value>
-  </li><!-- Misc/Expectations.xml --><!-- Misc/HonorDefs.xml --><!-- Misc/RoyaltyTabDefs.xml --><!-- Misc/TitheTypeDefs.xml --><!-- PawnKinds/PawnKinds_Deserter.xml --><li Class="PatchOperationReplace">
+  </li><!-- Misc/Expectations.xml --><!-- Misc/HonorDefs.xml --><li Class="PatchOperationRemove">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archcount"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archduke"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Despot"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Magister"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/RoyalTitleDef[defName="VFEE_Marquess"]/labelFemale</xpath>
+  </li><!-- Misc/RoyaltyTabDefs.xml --><!-- Misc/TitheTypeDefs.xml --><!-- PawnKinds/PawnKinds_Deserter.xml --><li Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="VFEE_Deserter"]/label</xpath>
     <value>
-      <label>deserter</label>
+      <label>Brotherhood expeditionary</label>
     </value>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archcount"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archduke"]/labelFemale</xpath>
+  </li><li Class="PatchOperationRemove">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Marquess"]/labelFemale</xpath>
   </li><!-- PawnKinds/PawnKinds_Empire.xml --><li Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/label</xpath>
     <value>
-      <label>emperor</label>
+      <label>Whitespring president</label>
     </value>
   </li><!-- QuestScriptDef/Permit_CallTechfriar.xml --><li Class="PatchOperationReplace">
     <xpath>/Defs/QuestScriptDef[defName="VFEE_Permit_CallTechfriar"]/root/nodes/li[11]/node/nodes/li[3]/label</xpath>
@@ -323,7 +339,7 @@
     <value>
       <label>spawn raid on map</label>
     </value>
-  </li><li Class="PatchOperationReplace"><xpath>/Defs/ScenarioDef[defName="VFEE_NewFamily"]/scenario/parts/li[def="GameStartDialog"]/text</xpath><value><text>It was supposed to be another quiet night for your Whitespring splinter cell, tucked away in a secluded estate far from the main administrative halls. You do not know whether the blackout was caused by Brotherhood sabotage, a compromised security officer, or a simple systems failure, but when the perimeter defenses died at midnight your enclave cell was left blind and exposed. By the time the gates opened, there was no time to organize a proper response - only to hide and survive.
+  </li><li Class="PatchOperationReplace"><xpath>/Defs/ScenarioDef[defName="VFEE_NewFamily"]/scenario/parts/li[def="GameStartDialog"]/text</xpath><value><text>It was supposed to be another quiet night for your Whitespring splinter cell, tucked away in a secluded estate far from the main administrative halls. You do not know whether the blackout was caused by Brotherhood sabotage, a compromised security officer, or a simple systems failure, but when the perimeter defenses died at midnight your Whitespring cell was left blind and exposed. By the time the gates opened, there was no time to organize a proper response - only to hide and survive.
 You heard your officers, researchers, and support staff being cut down as the Brotherhood expeditionary strike team swept through the compound. Whatever remained of your old command structure died with them. Now your splinter cell is shattered, your safehouse is burning, and revenge will mean nothing unless you escape this raid alive. You can either wait the raid out, use permits to call for reinforcements, or try running for the hills - the choice is yours.</text></value></li><!-- Storyteller/Storytellers.xml --><li Class="PatchOperationReplace">
     <xpath>/Defs/StorytellerDef[defName="VFEE_AriadneArchduchess"]/label</xpath>
     <value>

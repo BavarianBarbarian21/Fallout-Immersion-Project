@@ -15,4 +15,16 @@
       </colorSpectrum>
     </value>
   </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Knight"]/labelFemale</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Baron"]/labelFemale</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/labelFemale</xpath>
+  </Operation>
 </Patch>
