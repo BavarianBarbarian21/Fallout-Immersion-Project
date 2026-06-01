@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>Ferramentas FCP</FCP_Settings_Category>
+  <FCP_Settings_Category>Ferramentas FCP</FCP_Settings_Category>
   <FCP_Settings.General>Em geral</FCP_Settings.General>
   <FCP_Settings.General.tt>Opções que afetam todo o mod ou não cabem em nenhum outro lugar.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Estimula</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Os peões usarão automaticamente stimpaks de seu inventário quando danificados.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Abstêmios podem auto-injetar</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Permitir que peões com característica abstêmia usem stimpaks automaticamente.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Condição da Arma</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Habilitar condição de arma e bloqueio</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>As armas FCP degradam-se a cada tiro. Abaixo de 30 condições, eles podem travar no meio do combate, fazendo com que o tiro falhe e penalize a precisão do tiro até ser liberado. Na condição 1, a arma está completamente travada e deve ser consertada em uma bancada de reparos antes que possa disparar novamente.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Condição: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - limpando...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} de {1} travou!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>QUEBRADO - deve ser reparado antes do uso</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Equipamento do júri: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} fraudado por júri {1}. Condição: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Slot de arma: vazio</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Espaço para arma: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Carregar arma</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Selecione uma arma FCP no mapa para carregá-la na bancada para reparo.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Remover: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Remova a arma carregada da bancada e solte-a na célula de interação.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Nenhuma arma FCP encontrada no mapa.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Nenhum colono disponível para levar a arma até o banco.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} reparou {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Slot de vestuário: vazio</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Espaço para vestuário: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Carregar roupas</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Selecione uma vestimenta ou armadura FCP no mapa para carregar na bancada para reparo.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Remover: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Remova o item carregado da bancada e solte-o na célula de interação.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Nenhum vestuário FCP encontrado no mapa.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Nenhum colono disponível para transportar o item para a bancada.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} reparou {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Nenhum contrato de entrega disponível neste posto avançado no momento.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Contrato de entrega aceito: leve {COUNT}x {THING} para {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>São necessários {COUNT}x {THING} para concluir esta entrega.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Alistamento</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Tipos de inscrição ativa</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Depurar</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requer treinamento em Power Armor</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Novo inimigo</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Ao se alistar em {ENLISTED_name}, você se tornou um inimigo de {HOSTILE_name}. Eles agora são hostis à sua colônia.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>não há boa reputação suficiente com {0}, exija no mínimo {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} foi derrotado</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>A facção {0} não existe</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Não é possível usar a estação de power armor</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Armazene armadura de poder</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Equipar da estação</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Trocar armadura de poder</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Vestuário armazenado</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Extrair holotape</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Já extraído</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} encontrou um {1} no terminal!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} não encontrou dados úteis no terminal.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Dados já extraídos</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Pode conter dados</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Deve colocar na parede</MustPlaceOnWall>
+  <FCP_HackTerminal>Terminal de hackers</FCP_HackTerminal>
+  <FCP_TerminalLocked>Bloqueado - requer hacking</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal desbloqueado - recebido {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal bloqueado por {0} horas</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Bloqueado ({0}h restantes)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Configurações</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Ativar desaceleração do tempo</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Habilite o sombreador de zoom</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Quantos ticks após a criação até forçarmos a remoção do zoom (em caso de bugs): {0} ticks</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Quantos ticks tem o tempo de espera do VATS: {0} ticks</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Multiplicadores de precisão para várias partes do corpo.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Multiplicador de ganho de precisão por nível [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Valores menores que 1 escalam exponencialmente para ganho zero por nível. Valores maiores que 1 escalam exponencialmente até o infinito.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Aumento fixo na mira com VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Adiciona um impulso fixo à mira, já que o cálculo da chance de acerto em níveis mais baixos não é muito divertido.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Fator de fixação para escala de precisão [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Fixa o aumento máximo de precisão e dimensiona adequadamente</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Reiniciar</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Efeitos lendários:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} tem um {1} aleijado.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Liberar {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Leve {0} para a jaula</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Esta gaiola irá capturar animais selvagens.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Capturará animais selvagens.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Não capturará animais selvagens.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Animal capturado!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Você capturou {0} em sua jaula.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Escolha uma nova gaiola</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Selecione esta gaiola.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Transfira {0} para outra gaiola.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Música expandida</ME_MusicExpanded>
+  <ME_Theme>Tema</ME_Theme>
+  <ME_ThemeDescription>Tema</ME_ThemeDescription>
+  <ME_SelectTheme>Selecione o tema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Mostrar em reprodução</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Quando ativado, uma mensagem aparecerá com o título da faixa atualmente selecionada.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Atualização da música Vanilla</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Quando ativado, o RimWorld tocará música periodicamente, em vez de constantemente.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Selecione sons</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Este tema será usado para sons quando possível. Quaisquer sons não substituídos usarão sons básicos.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Em reprodução: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Música expandida: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Todos os SongDefs vanilla implementados com os recursos do MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Este vertibird foi projetado apenas para vôo atmosférico e não pode atingir altitudes orbitais.</FCP_CannotLaunchToOrbit>
 </LanguageData>

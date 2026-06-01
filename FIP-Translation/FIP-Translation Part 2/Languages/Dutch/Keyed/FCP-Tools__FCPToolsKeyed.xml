@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>FCP-hulpmiddelen</FCP_Settings_Category>
+  <FCP_Settings_Category>FCP-hulpmiddelen</FCP_Settings_Category>
   <FCP_Settings.General>Algemeen</FCP_Settings.General>
   <FCP_Settings.General.tt>Opties die de hele mod beïnvloeden of nergens anders passen.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stimmen</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Pionnen zullen automatisch stimpaks uit hun inventaris gebruiken als ze beschadigd zijn.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Geheelonthouders kunnen automatisch injecteren</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Sta toe dat pionnen met de geheelonthoudereigenschap automatisch stimpaks gebruiken.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Staat van het wapen</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Schakel wapenconditie en jamming in</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP-wapens worden bij elk schot slechter. Onder de 30 kunnen ze midden in een gevecht vastlopen, waardoor een schot mislukt en de schietnauwkeurigheid wordt bestraft totdat het wordt gewist. Bij 1 voorwaarde is het wapen volledig vergrendeld en moet het op een reparatiebank worden gerepareerd voordat het weer kan vuren.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Conditie: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>GEJAMMED - opruimen...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>De {0} van {1} is vastgelopen!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>GEBROKEN - moet vóór gebruik worden gerepareerd</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Juryopstelling: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} door jury opgetuigd {1}. Conditie: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Wapensleuf: leeg</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Wapensleuf: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Wapen laden</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Selecteer een FCP-wapen op de kaart en laad het op de bank voor reparatie.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Verwijderen: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Verwijder het geladen wapen van de bank en laat het bij de interactiecel vallen.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Geen FCP-wapens gevonden op de kaart.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Geen kolonist beschikbaar om het wapen naar de bank te slepen.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} heeft {1} gerepareerd.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Kledingslot: leeg</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Kledingruimte: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Kleding laden</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Selecteer een FCP-kledingstuk of pantser op de kaart om op de bank te laden voor reparatie.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Verwijderen: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Verwijder het geladen item van de bank en laat het bij de interactiecel vallen.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Geen FCP-kleding gevonden op de kaart.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Er is geen kolonist beschikbaar om het item naar de bank te slepen.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} heeft {1} gerepareerd.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Er zijn momenteel geen leveringscontracten beschikbaar bij deze buitenpost.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Leveringscontract geaccepteerd: breng {COUNT}x {THING} naar {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Je hebt {COUNT}x {THING} nodig om deze levering te voltooien.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Indiensttreding</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Actieve inschrijvingstypen</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Foutopsporing</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Vereist Power Armor-training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Nieuwe vijand</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Door je aan te melden bij {ENLISTED_name} ben je een vijand van {HOSTILE_name} geworden. Ze staan ​​nu vijandig tegenover jouw kolonie.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>niet genoeg goodwill met {0}, minimaal {1} ​​vereist</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} is verslagen</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Factie {0} bestaat niet</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Kan het Power Armor-station niet gebruiken</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Bewaar krachtpantser</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Uitrusten vanaf station</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Wissel krachtpantser uit</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Opgeslagen kleding</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Holotape uitpakken</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Al uitgepakt</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} heeft een {1} gevonden in de terminal!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} heeft geen bruikbare gegevens gevonden in de terminal.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Gegevens al geëxtraheerd</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Kan gegevens bevatten</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Moet aan de muur worden geplaatst</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack-terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Vergrendeld - vereist hacking</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal ontgrendeld - ontvangen {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal vergrendeld gedurende {0} uur</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Vergrendeld ({0}u resterend)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>BTW</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>BTW Instellingen</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Schakel tijdvertraging in</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Schakel de zoomshader in</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Hoeveel tikken na het maken totdat we de zoom geforceerd verwijderen (in geval van bugs): {0} tikken</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Hoeveel ticks is de BTWS-cooldown: {0} ticks</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Nauwkeurigheidsvermenigvuldigers voor verschillende lichaamsdelen.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Nauwkeurigheidswinst per niveau-multiplier [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Waarden kleiner dan 1 schalen exponentieel naar nul versterking per niveau. Waarden groter dan 1 schalen exponentieel naar oneindig.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Vlakke boost voor richten met VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Voegt een vlakke boost toe aan het richten, omdat de berekening van de trefferkans op lagere niveaus erg niet leuk is.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Klemfactor voor nauwkeurigheidsschaling [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Klemt de maximale nauwkeurigheidsboost vast en schaalt op de juiste manier</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Opnieuw instellen</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendarische effecten:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} heeft een kreupele {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Vrijgeven {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Draag {0} naar de kooi</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Zal deze kooi wilde dieren vangen?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Zal wilde dieren vangen.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Zal geen wilde dieren vangen.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Dier gevangen!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Je hebt {0} gevangen in je kooi.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Kies een nieuwe kooi</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Selecteer deze kooi.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Breng {0} over naar een andere kooi.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Muziek uitgebreid</ME_MusicExpanded>
+  <ME_Theme>Thema</ME_Theme>
+  <ME_ThemeDescription>Thema</ME_ThemeDescription>
+  <ME_SelectTheme>Selecteer Thema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Toon nu afspelen</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Indien ingeschakeld, verschijnt er een bericht met de titel van het momenteel geselecteerde nummer.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanille muziek-update</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Wanneer ingeschakeld, zal RimWorld periodiek muziek afspelen in plaats van constant.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Selecteer Geluiden</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Dit thema wordt waar mogelijk voor geluiden gebruikt. Voor alle geluiden die niet worden vervangen, worden vanillegeluiden gebruikt.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Nu aan het spelen: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Muziek Uitgebreid: Vanille</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Alle standaard SongDefs geïmplementeerd met de functies van MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Deze vertibird is alleen ontworpen voor atmosferische vluchten en kan geen orbitale hoogten bereiken.</FCP_CannotLaunchToOrbit>
 </LanguageData>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>FCP 도구</FCP_Settings_Category>
+  <FCP_Settings_Category>FCP 도구</FCP_Settings_Category>
   <FCP_Settings.General>일반적인</FCP_Settings.General>
   <FCP_Settings.General.tt>전체 모드에 영향을 미치거나 다른 곳에는 맞지 않는 옵션입니다.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>자극</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>폰은 손상되면 자동으로 인벤토리의 스팀팩을 사용합니다.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers는 자동 주사를 할 수 있습니다</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>teetotaler 특성이 있는 폰이 자동으로 스팀팩을 사용하도록 허용합니다.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>무기 상태</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>무기 상태 및 재밍 활성화</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP 무기는 사격할 때마다 성능이 저하됩니다. 30 미만의 조건에서는 전투 중에 방해가 발생하여 사격이 실패하고 사격이 완료될 때까지 사격 정확도에 불이익을 줄 수 있습니다. 1번 조건에서는 무기가 완전히 잠겨 있으므로 다시 발사하기 전에 수리대에서 수리해야 합니다.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>조건: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>걸림 - 삭제 중...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0}의 {1}이(가) 막혔습니다!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>BROKEN - 사용하기 전에 수리해야 함</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>심사위원단: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} 배심원이 조작한 {1}. 조건: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>무기 슬롯: 비어 있음</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>무기 슬롯: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>무기 장전</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>수리를 위해 벤치에 로드할 FCP 무기를 지도에서 선택하세요.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>삭제: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>장전된 무기를 벤치에서 꺼내 상호작용 셀에 놓습니다.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>지도에서 FCP 무기를 찾을 수 없습니다.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>무기를 벤치로 운반할 수 있는 식민지 주민이 없습니다.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0}이(가) {1}을(를) 수리했습니다.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>의류 슬롯: 비어 있음</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>의류 슬롯: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>의류 로드</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>수리를 위해 벤치에 로드할 FCP 의류나 방어구를 지도에서 선택하세요.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>삭제: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>벤치에서 로드된 항목을 제거하고 상호 작용 셀에 놓습니다.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>지도에서 FCP 의류를 찾을 수 없습니다.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>항목을 벤치로 운반할 수 있는 식민지 주민이 없습니다.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0}이(가) {1}을(를) 수리했습니다.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>현재 이 전초기지에는 배송 계약이 없습니다.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>배송 계약 수락됨: {COUNT}x개의 {THING}개를 {DEST}로 가져오세요.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>이 배송을 완료하려면 {COUNT}x {THING}개가 필요합니다.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>입대</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>활성 입대 유형</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>디버그</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>파워 아머 훈련 필요</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>새로운 적</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>{ENLISTED_name}에 입대함으로써 귀하는 {HOSTILE_name}의 적이 되었습니다. 그들은 이제 당신의 식민지에 적대적입니다.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>{0}에 대한 호의가 충분하지 않습니다. 최소 {1}이 필요합니다.</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0}님이 패배했습니다</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>팩션 {0}이(가) 존재하지 않습니다.</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>파워아머 스테이션을 사용할 수 없습니다.</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>파워아머 저장</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>역에서 장비하기</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>파워아머 교환</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>보관된 의류</FCP_StoredApparel>
+  <FCP_ExtractHolotape>홀로테이프 추출</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>이미 추출됨</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef}가 터미널에서 {1}을(를) 찾았습니다!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef}가 터미널에서 유용한 데이터를 찾지 못했습니다.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>이미 추출된 데이터</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>데이터를 포함할 수 있음</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>벽에 놓아야 함</MustPlaceOnWall>
+  <FCP_HackTerminal>해킹 터미널</FCP_HackTerminal>
+  <FCP_TerminalLocked>잠김 - 해킹이 필요함</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>터미널 잠금 해제됨 - {0} 수신됨</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>터미널이 {0}시간 동안 잠겨 있습니다.</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>잠김({0}시간 남음)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. 설정</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>시간 감속 활성화</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>확대/축소 셰이더 활성화</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>생성 후 확대/축소를 강제로 제거할 때까지의 틱 수(버그의 경우): {0}틱</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>VATS 쿨다운은 몇 틱입니까: {0}틱</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>다양한 신체 부위에 대한 정확도 승수.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>레벨당 정확도 이득 승수 [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>1보다 작은 값은 레벨당 이득이 0이 되도록 지수적으로 확장됩니다. 1보다 큰 값은 기하급수적으로 무한대로 확장됩니다.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>VATS [{0}]를 사용한 조준이 균일하게 향상되었습니다.</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>낮은 레벨의 적중률 계산이 매우 재미없기 때문에 조준에 균일한 부스트를 추가합니다.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>정확도 스케일링을 위한 클램핑 계수 [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>최대 정확도 향상을 고정하고 적절하게 확장합니다.</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>다시 놓기</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>전설적인 효과:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort}에 손상된 {1}이(가) 있습니다.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>릴리스 {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>{0}을(를) 케이지로 운반</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>이 우리는 야생동물을 포획할 것인가?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>야생동물을 포획하게 됩니다.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>야생동물을 포획하지 않습니다.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>동물이 잡혔어요!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>우리에 {0} 마리를 포획했습니다.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>새 케이지 선택</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>이 케이지를 선택하세요.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>{0}을(를) 다른 케이지로 옮깁니다.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>음악 확장</ME_MusicExpanded>
+  <ME_Theme>주제</ME_Theme>
+  <ME_ThemeDescription>주제</ME_ThemeDescription>
+  <ME_SelectTheme>테마 선택</ME_SelectTheme>
+  <ME_ShowNowPlaying>지금 재생 중 보기</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>켜져 있으면 현재 선택한 트랙의 제목과 함께 메시지가 나타납니다.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>바닐라 음악 업데이트</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>켜져 있으면 RimWorld는 음악을 계속 재생하지 않고 주기적으로 재생합니다.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>소리 선택</ME_SelectSounds>
+  <ME_SelectSoundsDescription>이 테마는 가능한 경우 사운드에 사용됩니다. 교체되지 않은 사운드는 바닐라 사운드를 사용합니다.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>지금 재생 중: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>확장된 음악: 바닐라</ME_Vanilla_Label>
+  <ME_Vanilla_Description>MusicExpanded의 기능으로 구현된 모든 바닐라 SongDef!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>이 버티버드는 대기권 비행 전용으로 설계되었으며 궤도 고도에 도달할 수 없습니다.</FCP_CannotLaunchToOrbit>
 </LanguageData>

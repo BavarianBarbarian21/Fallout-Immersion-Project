@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>FCP eszközök</FCP_Settings_Category>
+  <FCP_Settings_Category>FCP eszközök</FCP_Settings_Category>
   <FCP_Settings.General>Általános</FCP_Settings.General>
   <FCP_Settings.General.tt>Opciók, amelyek az egész modot érintik, vagy máshol nem illenek.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>A gyalogok automatikusan használnak bélyegeket a készletükből, ha megsérülnek.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>A fogadagolók képesek automatikusan befecskendezni</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Engedélyezze a teetotaler tulajdonsággal rendelkező gyalogok számára, hogy automatikusan használja a bélyegeket.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Fegyver állapota</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Fegyverállapot és zavarás engedélyezése</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Az FCP fegyverek minden lövéssel leromlanak. 30 feltétel alatt elakadhatnak a harc közepén, ami a lövés kudarcát okozhatja, és a lövés pontosságát büntetik, amíg meg nem oldják. 1 állapotban a fegyver teljesen le van zárva, és egy javítópadon meg kell javítani, mielőtt ismét tüzelhetne.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Állapot: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>ELAKADT – törlés...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} {1}-je elakadt!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>TÖRÖTT – használat előtt meg kell javítani</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Esküdtszék: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} a zsűri által kidolgozott {1}. Állapot: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Fegyvernyílás: üres</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Fegyverhely: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Töltsön fegyvert</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Válasszon ki egy FCP fegyvert a térképről, hogy javítsa a padra.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Eltávolítás: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Távolítsa el a megtöltött fegyvert a padról, és dobja le az interakciós cellára.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Nem található FCP fegyver a térképen.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Nincs olyan telepes, aki a fegyvert a padra cipelné.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} megjavította a következőt: {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Ruházati nyílás: üres</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Ruházati hely: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Töltsön be ruházatot</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Válasszon ki egy FCP ruhadarabot vagy páncélt a térképről, hogy javítsa a padra.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Eltávolítás: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Távolítsa el a betöltött elemet a padról, és dobja le az interakciós cellára.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Nem található FCP-ruházat a térképen.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Nem áll rendelkezésre telepes, aki a tárgyat a padra vinné.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} megjavította a következőt: {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Jelenleg nem áll rendelkezésre szállítási szerződés ezen az előőrsön.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Szállítási szerződés elfogadva: hozzon {COUNT}x {THING}-et ide: {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>A kézbesítés befejezéséhez {COUNT}x {THING} szükséges.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Sorozás</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Aktív besorozási típusok</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Hibakeresés</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Power Armor képzést igényel</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Új Ellenség</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>A(z) {ENLISTED_name} felvételével a(z) {HOSTILE_name} ellenségévé váltál. Most ellenségesek a kolóniáddal szemben.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>nincs elég jóindulat a(z) {0}-nál, minimum {1} szükséges</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} legyőzve</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>A(z) {0} frakció nem létezik</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Nem használható erőpáncél állomás</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Erős páncél tárolása</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Felszerelés az állomásról</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Cserélje ki az erőpáncélt</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Tárolt ruházat</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Kivonat holotape</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Már kivonták</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} {1}-et talált a terminálban!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} nem talált hasznos adatokat a terminálban.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Az adatok már kinyerve</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Tartalmazhat adatokat</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>A falra kell helyezni</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack terminál</FCP_HackTerminal>
+  <FCP_TerminalLocked>Lezárva – feltörést igényel</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminál feloldva – érkezett: {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>A terminál {0} órára lezárva</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Lezárva ({0} óra van hátra)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Beállítások elemre</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Az idő lassításának engedélyezése</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>A zoom shader engedélyezése</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Hány pipa létrehozása után, amíg nem kényszerítjük a nagyítás eltávolítását (hiba esetén): {0} pipa</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Hány pipa a VATS lehűlés: {0} kullancs</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Pontossági szorzók különböző testrészekhez.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Pontossági nyereség szintenkénti szorzója [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Az 1-nél kisebb értékek szintenként exponenciálisan nullára skálázódnak. Az 1-nél nagyobb értékek exponenciálisan a végtelenig skálázódnak.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Lapos növelés a célzáshoz ÁFA-val [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Lapos lökést ad a célzáshoz, mivel az eltalálás esélyének kiszámítása alacsonyabb szinteken nagyon nem szórakoztató.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Rögzítési tényező a pontos méretezéshez [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Rögzíti a maximális pontosságnövelést, és megfelelően skáláz</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Reset</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendás effektusok:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>A(z) {PAWN_labelShort} {1} hibája.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>{0}. kiadás</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Vidd {0}-ot a ketrecbe</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Vajon fog ez a ketrec vadon élő állatokat.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Vadállatokat fog befogni.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Vadállatokat nem fog be.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Elfogták az állatot!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Befogta {0} személyt a ketrecébe.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Válasszon új ketrecet</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Válassza ezt a ketrecet.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Helyezze át {0}-ot egy másik ketrecbe.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Zene bővítve</ME_MusicExpanded>
+  <ME_Theme>Téma</ME_Theme>
+  <ME_ThemeDescription>Téma</ME_ThemeDescription>
+  <ME_SelectTheme>Válassza a Témát</ME_SelectTheme>
+  <ME_ShowNowPlaying>Show Now Playing</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Ha be van kapcsolva, megjelenik egy üzenet az aktuálisan kiválasztott szám címével.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanilla Music frissítés</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Ha be van kapcsolva, a RimWorld rendszeresen fog zenét lejátszani, nem pedig folyamatosan.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Válassza a Hangok lehetőséget</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Ezt a témát a rendszer hangokhoz használja, ha lehetséges. A ki nem cserélt hangok vaníliás hangokat használnak.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Most játszik: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Zene bővítve: Vanília</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Minden vanília SongDef a MusicExpanded funkcióival van megvalósítva!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Ezt a vertibird-et csak légköri repülésre tervezték, és nem érheti el a pályamagasságot.</FCP_CannotLaunchToOrbit>
 </LanguageData>

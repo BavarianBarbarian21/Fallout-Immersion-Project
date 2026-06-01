@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>FCP værktøjer</FCP_Settings_Category>
+  <FCP_Settings_Category>FCP værktøjer</FCP_Settings_Category>
   <FCP_Settings.General>Generel</FCP_Settings.General>
   <FCP_Settings.General.tt>Indstillinger, der påvirker hele mod'et eller ikke passer andre steder.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stimmer</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Bønder vil automatisk bruge stimpaks fra deres inventar, når de er beskadiget.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers kan auto-injicere</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Tillad bønder med teetotaler-egenskaben automatisk at bruge stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Våben tilstand</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Aktiver våbentilstand og jamming</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP-våben nedbrydes med hvert skud. Under 30-tilstanden kan de blokere midt i kampen, hvilket får et skud til at mislykkes og straffer skudpræcisionen, indtil det bliver ryddet. Ved 1 tilstand er våbnet fuldstændig låst og skal repareres ved en reparationsbænk, før det kan skyde igen.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Tilstand: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - rydder...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0}s {1} har sat sig fast!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>BRUGT - skal repareres før brug</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Juryopstilling: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} jury-rigget {1}. Tilstand: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Våbenplads: tom</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Våbenplads: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Lad våben</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Vælg et FCP-våben fra kortet, der skal lades på bænken til reparation.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Fjern: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Fjern det ladede våben fra bænken og slip det ved interaktionscellen.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Ingen FCP-våben fundet på kortet.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Ingen kolonist tilgængelig til at trække våbnet til bænken.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} har repareret {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Beklædningsrum: tom</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Beklædningsplads: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Indlæs tøj</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Vælg en FCP-beklædningsgenstand eller -rustning fra kortet for at indlæse på bænken til reparation.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Fjern: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Fjern den indlæste genstand fra bænken og slip den ved interaktionscellen.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Ingen FCP-beklædning fundet på kortet.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Ingen kolonist til rådighed til at slæbe varen til bænken.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} har repareret {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Ingen leveringskontrakter tilgængelige på denne forpost lige nu.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Leveringskontrakt accepteret: medbring {COUNT}x {THING} til {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Behøver {COUNT}x {THING} for at fuldføre denne levering.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Hvervning</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Aktive indmeldelsestyper</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Kræver Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Ny fjende</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Ved at melde dig med {ENLISTED_name} er du blevet en fjende af {HOSTILE_name}. De er nu fjendtlige over for din koloni.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>ikke nok goodwill med {0}, kræver minimum {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} er blevet besejret</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Fraktion {0} eksisterer ikke</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Kan ikke bruge power armor station</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Store power panser</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Udstyr fra stationen</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Skift magt panser</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Opbevaret tøj</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Udtræk holotape</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Allerede udvundet</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} fandt en {1} i terminalen!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} fandt ingen nyttige data i terminalen.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Data er allerede udtrukket</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Kan indeholde data</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Skal placeres på væggen</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Låst - kræver hacking</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal ulåst - modtaget {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal låst ude i {0} timer</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Låst ({0} timer tilbage)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Indstillinger</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Aktiver tidsnedsættelse</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Aktiver zoomskyggeren</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Hvor mange flueben efter oprettelsen, indtil vi tvinger zoomet til at fjerne (i tilfælde af fejl): {0} flueben</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Hvor mange flueben er momsnedkølingen: {0} flueben</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Nøjagtighedsmultiplikatorer for forskellige kropsdele.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Multiplikator for nøjagtighed pr. niveau [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Værdier mindre end 1 skaleres eksponentielt til nul forstærkning pr. niveau. Værdier større end 1 skaleres eksponentielt til uendeligt.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Fladt løft til at sigte med moms [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Tilføjer et fladt boost til at sigte, da beregningen for hitchance på lavere niveauer er meget ikke sjov.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Clamping Factor for nøjagtighedsskalering [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Spænder den maksimale nøjagtighedsforstærkning og skalerer passende</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Nulstil</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendariske effekter:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} har en forkrøblet {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Frigiv {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Bær {0} til buret</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Vil dette bur fange vilde dyr.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Vil fange vilde dyr.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Vil ikke fange vilde dyr.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Dyr fanget!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Du har fanget {0} i dit bur.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Vælg nyt bur</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Vælg dette bur.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Overfør {0} til et andet bur.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Musik udvidet</ME_MusicExpanded>
+  <ME_Theme>Tema</ME_Theme>
+  <ME_ThemeDescription>Tema</ME_ThemeDescription>
+  <ME_SelectTheme>Vælg tema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Vis Spiller nu</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Når den er aktiveret, vises en meddelelse med titlen på det aktuelt valgte nummer.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanilla Music Update</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Når den er aktiveret, vil RimWorld spille musik med jævne mellemrum, i stedet for konstant.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Vælg Lyde</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Dette tema vil blive brugt til lyde, når det er muligt. Alle lyde, der ikke erstattes, vil bruge vaniljelyde.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Spiller nu: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Musik udvidet: Vanilje</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Alle vanilla SongDefs implementeret med funktionerne i MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Denne vertibird er kun designet til atmosfærisk flyvning og kan ikke nå orbitale højder.</FCP_CannotLaunchToOrbit>
 </LanguageData>

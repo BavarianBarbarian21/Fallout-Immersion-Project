@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <!-- VFE Deserters apparel retextured with Brotherhood equivalents when FCP-Brotherhood-of-Steel is present. -->
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BOS">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/BoS_Armor/Outcast_Recon_Armor/FCP_Outast_Recon_Armor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BOS">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_ArmorDeserter"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/BoS_Armor/Outcast_Recon_Armor/FCP_Outast_Recon_Armor</wornGraphicPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BOS">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Apparel/BoS_Headgear/Outcast_Recon_Armor_Hood/FCP_Outast_Recon_Armor_Hood</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="Rick.FCP.BOS">
+        <xpath>/Defs/ThingDef[defName="VFEE_Apparel_DeserterHelmet"]/apparel/wornGraphicPath</xpath>
+        <value>
+          <wornGraphicPath>Things/Apparel/BoS_Headgear/Outcast_Recon_Armor_Hood/FCP_Outast_Recon_Armor_Hood</wornGraphicPath>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

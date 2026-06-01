@@ -1,46 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
+  <FCP_Settings_Category>Eines FCP</FCP_Settings_Category>
   <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
+  <FCP_Settings.General.tt>Opcions que afecten tot el mod o que no encaixen en cap altre lloc.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
+  <FCP_Settings_Stims_AutoStim>Stimpaks d'injecció automàtica</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Els peons utilitzaran automàticament els stimpaks del seu inventari quan es facin malbé.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Els absents poden injectar-se automàticament</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Permet que els peons amb el tret d'absentiment utilitzin stimpaks automàticament.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Condició de l'arma</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Activa l'estat de l'arma i l'embussos</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Les armes FCP es degraden amb cada tret. Per sota de la condició de 30 poden encallar-se a la meitat del combat, fent que un tir falli i penalitzant la precisió del tir fins que s'elimini. En 1 condició, l'arma està completament bloquejada i s'ha de reparar en un banc de reparació abans de poder disparar de nou.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Condició: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>EMBALLAT - esborrant...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>El {0} ​​de {1} s'ha encallat!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>TRECAT: s'ha de reparar abans d'utilitzar-lo</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Equip del jurat: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} trucat pel jurat {1}. Condició: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Ranura d'arma: buida</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Ranura d'arma: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Carrega l'arma</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Seleccioneu una arma FCP del mapa per carregar-la al banc per reparar-la.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Elimina: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Traieu l'arma carregada del banc i deixeu-la caure a la cel·la d'interacció.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>No s'han trobat armes FCP al mapa.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>No hi ha cap colon disponible per portar l'arma al banc.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} ha reparat {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Ranura de roba: buida</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Ranura de roba: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Carregar roba</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Seleccioneu una peça o una armadura FCP del mapa per carregar-la al banc per reparar-la.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Elimina: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Traieu l'element carregat del banc i deixeu-lo anar a la cel·la d'interacció.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>No s'ha trobat cap roba FCP al mapa.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>No hi ha cap colon disponible per portar l'objecte al banc.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} ha reparat {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>No hi ha contractes de lliurament disponibles en aquest lloc avançat ara mateix.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>S'accepta el contracte de lliurament: porta {COUNT} x {THING} a {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Necessites {COUNT} x {THING} per completar aquest lliurament.</FCP_DeliveryQuestNotEnoughItems>
+  <FCP_Settings_Enlistment>Allistament</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Tipus d'allistament actiu</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>Depuració</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>Opcions per ajudar amb el diagnòstic de problemes o modificar el comportament per a la depuració</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Enregistrament</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Registre detallat</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>A causa de la promoció de {0_possessive} a {1}, {0_labelShort} ha perdut el permís {0_possessive} {2}</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>Vagabund especial: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>Un peó {PAWN_title} anomenat {PAWN_nameDef} ha arribat i vol unir-se a la colònia.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Comú</FCP_RarityCommon>
+  <FCP_RarityRare>Rar</FCP_RarityRare>
+  <FCP_RarityUnique>Únic</FCP_RarityUnique>
+  <FCP_MechDetonate>Detonar</FCP_MechDetonate>
+  <FCP_CannotPickUp>No es pot recollir {0}</FCP_CannotPickUp>
+  <FCP_PickUp>Recollir {0}</FCP_PickUp>
+  <FCP_PickUpMax>Recollida màx</FCP_PickUpMax>
+  <FCP_PickUpOne>Recolliu-ne un {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>Massa pesat</FCP_TooHeavy>
   <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Techprint_Desc>Aquesta és una empremta tècnica per al projecte de recerca '{PROJECT_label}'.
+\nLa forma física de les impressions tecnològiques pot anar des de trossos de paper amb diagrames fins a màquines d'ensenyament autònomes avançades. Independentment de la forma, juguen el mateix paper. Donen als vostres investigadors la confiança que una idea és possible i una idea aproximada dels dissenys utilitzats en societats més consolidades.
+\nEls teus investigadors necessiten els coneixements bàsics que ofereix techprints per saber per on començar amb una tecnologia determinada. Només després que s'hagin aplicat prou techprints, els vostres investigadors podran esbrinar els detalls detallats de com fer ús de la tecnologia en la vostra situació particular.
+\nAplicar techprints a un projecte satisfet compleix la meitat del progrés de recerca restant. A més, els investigadors sempre milloren les seves habilitats intel·lectuals quan apliquen empremtes tecnològiques, fins i tot en tecnologies ja acabades.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>Xenotip incorrecte</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Requisits no complerts</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Requereix un xenotip</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Xenotip prohibit: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Requereix xenotip: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Requereix roba: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Requereix el tret: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Requereix: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requereix qualsevol de: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requereix entrenament d'armadura elèctrica</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Nou Enemic</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>En enrolar-vos amb {ENLISTED_name}, us heu convertit en un enemic de {HOSTILE_name}. Ara són hostils cap a la vostra colònia.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>no hi ha prou bona voluntat amb {0}, requereix {1} com a mínim</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} ha estat derrotat</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>La facció {0} no existeix</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>No es pot utilitzar l'estació d'armadura elèctrica</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Emmagatzema una armadura de poder</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Equipar des de l'estació</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Canviar l'armadura de poder</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Roba emmagatzemada</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Extraieu l'holocinta</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Ja extret</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} ha trobat un {1} al terminal!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} no ha trobat dades útils al terminal.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Dades ja extretes</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Pot contenir dades</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>S'ha de col·locar a la paret</MustPlaceOnWall>
+  <FCP_HackTerminal>Hackejar el terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Bloquejat: requereix pirateig</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal desbloquejat - rebut {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal bloquejat durant {0} hores</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Bloquejat ({0}h restants)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Configuració</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Activa la desacceleració del temps</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Activa l'ombrejat del zoom</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Quants ticks després de la creació fins que obliguem a eliminar el zoom (en cas d'errors): {0} ticks</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Quants ticks té el temps de reutilització del VATS: {0} ticks</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Multiplicadors de precisió per a diverses parts del cos.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Guany de precisió per multiplicador de nivell [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Els valors inferiors a 1 escalen exponencialment fins a zero guany per nivell. Els valors superiors a 1 escalen exponencialment fins a l'infinit.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Augment total per apuntar amb VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Afegeix un impuls pla a l'objectiu, ja que el càlcul de la probabilitat d'impacte als nivells inferiors no és molt divertit.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Factor de fixació per a l'escala de precisió [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Suprimeix l'augment de precisió màxim i escala adequadament</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Restableix</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Efectes llegendaris:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} té un {1} paralitzat.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Alliberament {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Porta {0} a la gàbia</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Aquesta gàbia capturarà animals salvatges?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Capturarà animals salvatges.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>No capturarà animals salvatges.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Animal capturat!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Has capturat {0} a la teva gàbia.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Trieu una gàbia nova</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Seleccioneu aquesta gàbia.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Transferiu {0} a una altra gàbia.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Música ampliada</ME_MusicExpanded>
+  <ME_Theme>Tema</ME_Theme>
+  <ME_ThemeDescription>Tema</ME_ThemeDescription>
+  <ME_SelectTheme>Seleccioneu el tema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Mostra en reproducció</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Quan està activat, apareixerà un missatge amb el títol de la pista seleccionada actualment.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Actualització de música de Vanilla</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Quan està activat, RimWorld reproduirà música periòdicament, en lloc de constantment.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Seleccioneu Sons</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Aquest tema s'utilitzarà per als sons quan sigui possible. Qualsevol so que no es substitueixi utilitzarà sons de vainilla.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Jugant ara: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Música ampliada: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Tots els SongDefs de vainilla implementats amb les funcions de MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Aquest vertibird està dissenyat només per al vol atmosfèric i no pot arribar a altituds orbitals.</FCP_CannotLaunchToOrbit>
 </LanguageData>

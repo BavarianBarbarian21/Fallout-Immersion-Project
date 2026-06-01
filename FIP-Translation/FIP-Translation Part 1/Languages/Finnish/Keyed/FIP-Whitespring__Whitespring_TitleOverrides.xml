@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <LetterLabelLostRoyalTitle>{TITLE} rank lost: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
-  <LetterLabelGainedRoyalTitle>{TITLE} rank gained: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
-  <LetterGainedRoyalTitle>{PAWN_labelShort} received the rank of {TITLE} from {FACTION_name}!</LetterGainedRoyalTitle>
-  <LetterLostRoyalTitle>{PAWN_labelShort} no longer holds the rank of {TITLE} with {FACTION_name}.</LetterLostRoyalTitle>
-  <LetterLabelRewardsForNewTitle>Rank rewards</LetterLabelRewardsForNewTitle>
-  <LetterRewardsForNewTitle>To honor {PAWN_labelShort} advancing to the rank of {TITLE}, {FACTION_name} has sent {PAWN_objective} the following reward(s):</LetterRewardsForNewTitle>
-  <LetterPartBestowingExtraHonor>{PAWN_labelShort} received {1} Votes as a sign of respect from {FACTION_name}, for gathering {3} spectators.</LetterPartBestowingExtraHonor>
-  <LetterPartNoExtraHonor>{PAWN_labelShort} received no extra Votes since there weren't many spectators.</LetterPartNoExtraHonor>
-  <LetterTextHonorAward_BanditCamp>Who should be credited with {0} Votes for defeating the bandit camp?</LetterTextHonorAward_BanditCamp>
-  <LetterLabelShuttleCrashed>Vertibird crashed</LetterLabelShuttleCrashed>
-  <LetterTextShuttleCrashed>A Vertibird has crashed nearby</LetterTextShuttleCrashed>
-  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'s rank changed</LetterLabelBestowingCeremonyTitleUpdated>
-  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} has gained new rank since the bestowing ceremony was scheduled. In order for bestowing to match the new rank, another ceremony will be scheduled soon.
+  <LetterLabelLostRoyalTitle>Sijoitus {TITLE} menetetty: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
+  <LetterLabelGainedRoyalTitle>Sijoitus {TITLE} saavutettu: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
+  <LetterGainedRoyalTitle>{PAWN_labelShort} sai arvosanan {TITLE} käyttäjältä {FACTION_name}!</LetterGainedRoyalTitle>
+  <LetterLostRoyalTitle>{PAWN_labelShort} ei enää omista arvoa {TITLE} kanssa {FACTION_name}.</LetterLostRoyalTitle>
+  <LetterLabelRewardsForNewTitle>Sijoita palkintoja</LetterLabelRewardsForNewTitle>
+  <LetterRewardsForNewTitle>Kunnioittaakseen {PAWN_labelShort}:n etenemistä sarjaan {TITLE}, {FACTION_name} on lähettänyt {PAWN_objective} seuraavat palkinnot:</LetterRewardsForNewTitle>
+  <LetterPartBestowingExtraHonor>{PAWN_labelShort} sai {1} ääntä kunnioituksen osoituksena käyttäjältä {FACTION_name}, koska hän keräsi {3} katsojaa.</LetterPartBestowingExtraHonor>
+  <LetterPartNoExtraHonor>{PAWN_labelShort} ei saanut ylimääräisiä ääniä, koska katsojia ei ollut paljon.</LetterPartNoExtraHonor>
+  <LetterTextHonorAward_BanditCamp>Kenelle {0} ääntä pitäisi antaa rosvoleirin kukistamisesta?</LetterTextHonorAward_BanditCamp>
+  <LetterLabelShuttleCrashed>Vertibird kaatui</LetterLabelShuttleCrashed>
+  <LetterTextShuttleCrashed>Vertibird on kaatunut lähistölle</LetterTextShuttleCrashed>
+  <LetterTextLaborersArrived>[permitFaction_name]:n työntekijät ovat saapuneet. Pyörivä lintu tulee hakemaan ne [laborersDurationDays] päivän kuluttua.</LetterTextLaborersArrived>
+  <LetterLabelShuttleArrived>Vertibird saapui</LetterLabelShuttleArrived>
+  <LetterTextShuttleArrivedForLaborers>Pyörivä lintu on saapunut hakemaan [permitFaction_name]:n työntekijät.</LetterTextShuttleArrivedForLaborers>
+  <InspectStringDepartShuttle>Pitäisi lähteä vertibirdillä</InspectStringDepartShuttle>
+  <LetterLabelBestowingCeremonyTitleUpdated>Käyttäjän {TARGET_definite} sijoitus muuttui</LetterLabelBestowingCeremonyTitleUpdated>
+  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} on saanut uuden arvosanan lahjoitusseremonian ajoituksen jälkeen. Jotta lahjoittaminen vastaa uutta arvoa, uusi seremonia järjestetään pian.
 
-The new bestowing ceremony will include the cryptid insight rewards for all ranks which were not yet awarded.</LetterTextBestowingCeremonyTitleUpdated>
-  <LetterLabelTributeCollectorArrival>Enclave representative arrival</LetterLabelTributeCollectorArrival>
-  <LetterTributeCollectorArrival>An enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for supporting the enclave.
+Uusi lahjoitusseremonia sisältää salatut näkemyspalkinnot kaikille riveille, joita ei ole vielä myönnetty.</LetterTextBestowingCeremonyTitleUpdated>
+  <LetterLabelTributeCollectorArrival>Enklaaven edustajan saapuminen</LetterLabelTributeCollectorArrival>
+  <LetterTributeCollectorArrival>An Enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. Se, joka antaa kunnianosoituksen, saa {FACTION_royalFavorLabel} Enklaaven tukemisesta.
 
-You can expect an enclave representative to arrive roughly twice per year as long as you are not enemies with {FACTION_name}.</LetterTributeCollectorArrival>
+Voit odottaa Enclaven edustajan saapuvan noin kahdesti vuodessa, kunhan et ole {FACTION_name}:n vihollisia.</LetterTributeCollectorArrival>
 </LanguageData>

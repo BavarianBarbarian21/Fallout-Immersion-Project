@@ -1,46 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
-  <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
-  <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Settings_Category>Công cụ FCP</FCP_Settings_Category>
+  <FCP_Settings.General>Tổng quan</FCP_Settings.General>
+  <FCP_Settings.General.tt>Các tùy chọn ảnh hưởng đến toàn bộ mod hoặc không phù hợp với bất kỳ nơi nào khác.</FCP_Settings.General.tt>
+  <FCP_Settings_Stims>kích thích</FCP_Settings_Stims>
+  <FCP_Settings_Stims_AutoStim>Tự động tiêm kích thích</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Những con tốt sẽ tự động sử dụng các kích thích từ kho của chúng khi bị hư hại.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Người không uống rượu có thể tự tiêm thuốc</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Cho phép những con tốt có đặc điểm teetotaler tự động sử dụng các kích thích.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Tình trạng vũ khí</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Kích hoạt tình trạng vũ khí và gây nhiễu</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Vũ khí FCP xuống cấp sau mỗi lần bắn. Điều kiện dưới 30, chúng có thể gây nhiễu giữa trận chiến, khiến cú bắn không thành công và làm giảm độ chính xác của cú bắn cho đến khi hoàn thành. Ở điều kiện 1, vũ khí bị khóa hoàn toàn và phải được sửa chữa tại bàn sửa chữa trước khi có thể bắn trở lại.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Điều kiện: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>Kẹt - đang xóa...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} của {1} đã bị kẹt!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>HỎI - phải được sửa chữa trước khi sử dụng</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Ban giám khảo: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} do bồi thẩm đoàn gian lận {1}. Điều kiện: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Khe vũ khí: trống</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Khe chứa vũ khí: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Nạp vũ khí</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Chọn vũ khí FCP từ bản đồ để tải lên băng ghế để sửa chữa.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Xóa: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Lấy vũ khí đã nạp đạn ra khỏi băng ghế và thả nó vào ô tương tác.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Không tìm thấy vũ khí FCP trên bản đồ.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Không có người dân thuộc địa nào có thể lôi vũ khí vào băng ghế.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} đã sửa chữa {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Khe trang phục: trống</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Khe trang phục: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Tải quần áo</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Chọn quần áo hoặc áo giáp FCP từ bản đồ để tải lên băng ghế để sửa chữa.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Xóa: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Lấy vật phẩm đã tải ra khỏi băng ghế và thả nó vào ô tương tác.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Không tìm thấy trang phục FCP trên bản đồ.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Không có người dân thuộc địa nào có thể lôi vật phẩm ra băng ghế.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} đã sửa chữa {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Hiện tại không có hợp đồng giao hàng nào tại tiền đồn này.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Hợp đồng giao hàng được chấp nhận: mang {COUNT}x {THING} đến {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Cần {COUNT}x {THING} để hoàn thành việc giao hàng này.</FCP_DeliveryQuestNotEnoughItems>
+  <FCP_Settings_Enlistment>nhập ngũ</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Các loại đăng ký tích cực</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>Gỡ lỗi</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>Các tùy chọn giúp chẩn đoán sự cố hoặc sửa đổi hành vi để gỡ lỗi</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Ghi nhật ký</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Ghi nhật ký dài dòng</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>Do việc thăng hạng {0_possessive} lên {1}, {0_labelShort} đã mất giấy phép {0_possessive} {2}</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>Kẻ lang thang đặc biệt: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>Một con tốt {PAWN_title} tên là {PAWN_nameDef} đã đến và muốn gia nhập thuộc địa.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Chung</FCP_RarityCommon>
+  <FCP_RarityRare>Hiếm</FCP_RarityRare>
+  <FCP_RarityUnique>Độc nhất</FCP_RarityUnique>
+  <FCP_MechDetonate>kích nổ</FCP_MechDetonate>
+  <FCP_CannotPickUp>Không thể nhấc máy {0}</FCP_CannotPickUp>
+  <FCP_PickUp>Đón {0}</FCP_PickUp>
+  <FCP_PickUpMax>Nhận tối đa</FCP_PickUpMax>
+  <FCP_PickUpOne>Chọn một cái {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>quá nặng</FCP_TooHeavy>
+  <FCP_Techprint_Label>Công nghệ FCP ({PROJECT_label})</FCP_Techprint_Label>
+  <FCP_Techprint_Desc>Đây là bản in kỹ thuật cho dự án nghiên cứu '{PROJECT_label}'.
+\nDạng vật lý của bản in công nghệ có thể bao gồm từ những mảnh giấy vụn có sơ đồ cho đến các máy giảng dạy khép kín tiên tiến. Bất kể hình thức, chúng đều đóng vai trò như nhau. Chúng mang lại cho các nhà nghiên cứu của bạn niềm tin rằng một ý tưởng là khả thi và một ý tưởng sơ bộ về các thiết kế được sử dụng trong các xã hội lâu đời hơn.
+\nCác nhà nghiên cứu của bạn cần có kiến ​​thức nền tảng do techprints cung cấp để biết nên bắt đầu từ đâu trên một công nghệ nhất định. Chỉ sau khi áp dụng đủ số lượng bản in công nghệ, các nhà nghiên cứu của bạn mới có thể tìm ra các chi tiết cụ thể về cách sử dụng công nghệ trong tình huống cụ thể của bạn.
+\nViệc áp dụng bản in kỹ thuật cho một dự án hài lòng sẽ hoàn thành một nửa tiến độ nghiên cứu còn lại. Ngoài ra, các nhà nghiên cứu luôn được nâng cao kỹ năng trí tuệ khi áp dụng techprint, ngay cả trên các công nghệ đã hoàn thiện.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>kiểu xeno sai</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Yêu cầu không được đáp ứng</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Yêu cầu một kiểu xenotype</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Kiểu xenotype bị cấm: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Yêu cầu kiểu xeno: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Yêu cầu trang phục: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Yêu cầu Đặc điểm: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Yêu cầu: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Yêu cầu bất kỳ: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Yêu cầu đào tạo áo giáp sức mạnh</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Kẻ thù mới</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>Khi gia nhập {ENLISTED_name}, bạn đã trở thành kẻ thù của {HOSTILE_name}. Bây giờ họ đang thù địch với thuộc địa của bạn.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>không đủ thiện chí với {0}, yêu cầu tối thiểu {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} đã bị đánh bại</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Phe {0} không tồn tại</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Không thể sử dụng trạm áo giáp điện</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Lưu trữ áo giáp sức mạnh</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Trang bị từ trạm</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Trao đổi áo giáp sức mạnh</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Quần áo được lưu trữ</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Trích xuất ảnh ba chiều</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Đã được trích xuất</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} đã tìm thấy {1} trong thiết bị đầu cuối!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} không tìm thấy dữ liệu hữu ích nào trong thiết bị đầu cuối.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Dữ liệu đã được trích xuất</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Có thể chứa dữ liệu</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Phải đặt trên tường</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack thiết bị đầu cuối</FCP_HackTerminal>
+  <FCP_TerminalLocked>Đã khóa - yêu cầu hack</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Đã mở khóa thiết bị đầu cuối - đã nhận được {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Thiết bị đầu cuối bị khóa trong {0} giờ</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Đã khóa (còn lại {0} giờ)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Cài đặt</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Kích hoạt tính năng làm chậm thời gian</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Bật trình đổ bóng thu phóng</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Có bao nhiêu tích tắc sau khi tạo cho đến khi chúng tôi buộc xóa thu phóng (trong trường hợp có lỗi): {0} tích tắc</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Thời gian hồi chiêu VATS là bao nhiêu tích tắc: {0} tích tắc</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Hệ số nhân chính xác cho các bộ phận cơ thể khác nhau.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Độ chính xác đạt được trên mỗi cấp số nhân [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Các giá trị nhỏ hơn 1 có quy mô theo cấp số nhân tới mức tăng bằng 0 trên mỗi cấp độ. Các giá trị lớn hơn 1 có quy mô theo cấp số nhân đến vô cùng.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Tăng cường nhắm mục tiêu bằng VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Thêm mức tăng cố định cho việc nhắm mục tiêu, vì việc tính toán cơ hội trúng đích ở các cấp độ thấp hơn rất không thú vị.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Hệ số kẹp để chia tỷ lệ chính xác [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Kiểm soát mức tăng độ chính xác tối đa và chia tỷ lệ phù hợp</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Cài lại</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Hiệu ứng huyền thoại:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} có {1} bị tê liệt.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Phát hành {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Mang {0} vào lồng</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Cái lồng này có bắt được động vật hoang dã không?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Sẽ bắt động vật hoang dã.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Sẽ không bắt động vật hoang dã.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Động vật bị bắt!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Bạn đã bắt được {0} trong lồng của mình.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Chọn lồng mới</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Chọn cái lồng này.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Chuyển {0} sang lồng khác.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Âm nhạc mở rộng</ME_MusicExpanded>
+  <ME_Theme>chủ đề</ME_Theme>
+  <ME_ThemeDescription>chủ đề</ME_ThemeDescription>
+  <ME_SelectTheme>Chọn chủ đề</ME_SelectTheme>
+  <ME_ShowNowPlaying>Hiển thị ngay Đang phát</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Khi bật, một thông báo sẽ xuất hiện cùng với tiêu đề của bản nhạc hiện được chọn.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Cập nhật nhạc Vanilla</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Khi bật, RimWorld sẽ phát nhạc định kỳ thay vì liên tục.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Chọn âm thanh</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Chủ đề này sẽ được sử dụng cho âm thanh khi có thể. Bất kỳ âm thanh nào không được thay thế sẽ sử dụng âm thanh vani.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Đang phát: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Âm nhạc mở rộng: Vani</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Tất cả các SongDef vani được triển khai với các tính năng của MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Loài vertibird này được thiết kế chỉ để bay trong khí quyển và không thể đạt tới độ cao quỹ đạo.</FCP_CannotLaunchToOrbit>
 </LanguageData>

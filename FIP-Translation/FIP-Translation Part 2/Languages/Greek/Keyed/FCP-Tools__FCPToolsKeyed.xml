@@ -1,46 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
+  <FCP_Settings_Category>Εργαλεία FCP</FCP_Settings_Category>
+  <FCP_Settings.General>Γενικός</FCP_Settings.General>
+  <FCP_Settings.General.tt>Επιλογές που επηρεάζουν ολόκληρο το mod ή δεν ταιριάζουν πουθενά αλλού.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
+  <FCP_Settings_Stims_AutoStim>Αυτόματη έγχυση στυπωμάτων</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Τα πιόνια θα χρησιμοποιήσουν αυτόματα στυπώματα από το απόθεμά τους όταν καταστραφούν.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Οι teetotalers μπορούν να κάνουν αυτόματη ένεση</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Επιτρέψτε στα πιόνια με το χαρακτηριστικό teetotaler να χρησιμοποιούν αυτόματα ραβδάκια.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Κατάσταση Όπλου</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Ενεργοποίηση κατάστασης όπλου και εμπλοκής</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Τα όπλα FCP υποβαθμίζονται με κάθε βολή. Συνθήκη κάτω από το 30 μπορεί να μπλοκάρουν στη μέση της μάχης, προκαλώντας την αποτυχία μιας βολής και τιμωρώντας την ακρίβεια βολής μέχρι να καθαριστεί. Στην 1 κατάσταση το όπλο είναι εντελώς κλειδωμένο και πρέπει να επισκευαστεί σε πάγκο επισκευής πριν μπορέσει να πυροβολήσει ξανά.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Κατάσταση: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - εκκαθάριση...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>Το {0} του {1} έχει μπλοκαριστεί!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>ΣΠΑΣΜΑ - πρέπει να επισκευαστεί πριν από τη χρήση</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Εξέδρα κριτικής επιτροπής: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} νοθεία από κριτική επιτροπή {1}. Κατάσταση: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Υποδοχή όπλου: άδεια</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Υποδοχή όπλου: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Φορτώστε το όπλο</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Επιλέξτε ένα όπλο FCP από τον χάρτη για να το φορτώσετε στον πάγκο για επισκευή.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Αφαίρεση: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Αφαιρέστε το φορτωμένο όπλο από τον πάγκο και ρίξτε το στο κελί αλληλεπίδρασης.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Δεν βρέθηκαν όπλα FCP στον χάρτη.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Δεν υπάρχει διαθέσιμος άποικος για να μεταφέρει το όπλο στον πάγκο.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>Ο χρήστης {0} έχει επιδιορθώσει το {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Υποδοχή ένδυσης: άδεια</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Υποδοχή ένδυσης: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Φορτώστε τα ρούχα</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Επιλέξτε ένα ρούχο ή πανοπλία FCP από τον χάρτη για να το φορτώσετε στον πάγκο για επισκευή.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Αφαίρεση: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Αφαιρέστε το φορτωμένο αντικείμενο από τον πάγκο και αφήστε το στο κελί αλληλεπίδρασης.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Δεν βρέθηκαν ρούχα FCP στον χάρτη.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Δεν υπάρχει διαθέσιμος άποικος για να μεταφέρει το αντικείμενο στον πάγκο.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>Ο χρήστης {0} έχει επιδιορθώσει το {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Δεν υπάρχουν διαθέσιμα συμβόλαια παράδοσης σε αυτό το φυλάκιο αυτήν τη στιγμή.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Αποδεκτή σύμβαση παράδοσης: φέρτε {COUNT}x {THING} στο {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Χρειάζεστε {COUNT}x {THING} για να ολοκληρώσετε αυτήν την παράδοση.</FCP_DeliveryQuestNotEnoughItems>
+  <FCP_Settings_Enlistment>Στράτευση</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Ενεργοί τύποι στρατολόγησης</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>Εντοπισμός σφαλμάτων</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>Επιλογές για βοήθεια στη διάγνωση προβλημάτων ή τροποποίηση συμπεριφοράς για εντοπισμό σφαλμάτων</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Ξύλευση</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Λεπτή καταγραφή</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>Λόγω της προώθησης {0_possessive} στο {1}, ο χρήστης {0_labelShort} έχασε την άδεια {0_possessive} {2}</FCP_MessagePermitLostOnPromotion>
   <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
-  <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Letter_SpecialWandererJoins>Ένα πιόνι {PAWN_title} με το όνομα {PAWN_nameDef} έφτασε και θέλει να ενταχθεί στην αποικία.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Κοινός</FCP_RarityCommon>
+  <FCP_RarityRare>Σπάνιος</FCP_RarityRare>
+  <FCP_RarityUnique>Μοναδικός</FCP_RarityUnique>
+  <FCP_MechDetonate>Εκπυρσοκροτώ</FCP_MechDetonate>
+  <FCP_CannotPickUp>Δεν είναι δυνατή η παραλαβή του {0}</FCP_CannotPickUp>
+  <FCP_PickUp>παραλαβή {0}</FCP_PickUp>
+  <FCP_PickUpMax>Παραλαβή μέγ</FCP_PickUpMax>
+  <FCP_PickUpOne>Πάρτε ένα {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>Πάρα πολύ βαρύ</FCP_TooHeavy>
+  <FCP_Techprint_Label>Τεχνική εκτύπωση FCP ({PROJECT_label})</FCP_Techprint_Label>
+  <FCP_Techprint_Desc>Αυτό είναι ένα techprint για το ερευνητικό έργο "{PROJECT_label}".
+\nΗ φυσική μορφή των techprints μπορεί να κυμαίνεται από κομμάτια χαρτιού με διαγράμματα, μέχρι προηγμένες αυτόνομες μηχανές διδασκαλίας. Ανεξαρτήτως μορφής, παίζουν τον ίδιο ρόλο. Δίνουν στους ερευνητές σας τη σιγουριά ότι μια ιδέα είναι δυνατή και μια πρόχειρη ιδέα για τα σχέδια που χρησιμοποιούνται σε πιο καθιερωμένες κοινωνίες.
+\nΟι ερευνητές σας χρειάζονται τις βασικές γνώσεις που προσφέρει η techprints για να ξέρουν από πού να ξεκινήσουν σε μια δεδομένη τεχνολογία. Μόνο αφού εφαρμοστούν αρκετά τεχνικά αποτυπώματα, οι ερευνητές σας μπορούν να βρουν λεπτομερείς λεπτομέρειες σχετικά με τον τρόπο χρήσης της τεχνολογίας στη συγκεκριμένη περίπτωσή σας.
+\nΗ εφαρμογή techprints σε ένα ικανοποιημένο έργο εκπληρώνει το ήμισυ της ερευνητικής προόδου που απομένει. Επιπλέον, οι ερευνητές κερδίζουν πάντα μια ώθηση στις πνευματικές τους δεξιότητες όταν εφαρμόζουν techprints, ακόμη και σε ήδη ολοκληρωμένες τεχνολογίες.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>Λάθος ξενότυπο</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Οι απαιτήσεις δεν πληρούνται</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Απαιτεί έναν ξενότυπο</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Απαγορευμένος ξενότυπος: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Απαιτεί ξενότυπο: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Απαιτεί ένδυση: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Απαιτεί χαρακτηριστικό: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Απαιτείται: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Απαιτεί οποιοδήποτε από τα εξής: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Απαιτεί εκπαίδευση Power Armor</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Νέος Εχθρός</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>Με την εγγραφή σας στο {ENLISTED_name}, έχετε γίνει εχθρός του {HOSTILE_name}. Τώρα είναι εχθρικοί απέναντι στην αποικία σας.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>δεν υπάρχει αρκετή υπεραξία με {0}, απαιτούνται τουλάχιστον {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>Ο χρήστης {0} ηττήθηκε</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Η παράταξη {0} δεν υπάρχει</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Δεν είναι δυνατή η χρήση ηλεκτρικού σταθμού θωράκισης</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Αποθηκεύστε ηλεκτρικές πανοπλίες</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Εξοπλισμός από σταθμό</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Ανταλλάξτε πανοπλία ισχύος</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Αποθηκευμένα ρούχα</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Εκχύλισμα ολοταινίας</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Έχει ήδη εξαχθεί</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>Ο χρήστης {PAWN_nameDef} βρήκε ένα {1} στο τερματικό!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>Το {PAWN_nameDef} δεν βρήκε χρήσιμα δεδομένα στο τερματικό.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Τα δεδομένα έχουν ήδη εξαχθεί</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Μπορεί να περιέχει δεδομένα</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Πρέπει να τοποθετηθεί στον τοίχο</MustPlaceOnWall>
+  <FCP_HackTerminal>Τερματικό hack</FCP_HackTerminal>
+  <FCP_TerminalLocked>Κλειδωμένο - απαιτεί hacking</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Το τερματικό ξεκλειδώθηκε - ελήφθη {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Το τερματικό κλειδώθηκε για {0} ώρες</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Κλειδωμένο (απομένουν {0} ώρες)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Ρυθμίσεις</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Ενεργοποίηση επιβράδυνσης χρόνου</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Ενεργοποιήστε το zoom shader</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Πόσα σημάδια μετά τη δημιουργία μέχρι να καταργήσουμε αναγκαστικά το ζουμ (σε περίπτωση σφαλμάτων): {0} τικ</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Πόσα σημάδια είναι η ψύξη του VATS: {0} τικ</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Πολλαπλασιαστές ακρίβειας για διάφορα μέρη του σώματος.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Πολλαπλασιαστής κέρδους ακρίβειας ανά επίπεδο [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Τιμές μικρότερες από 1 κλιμακώνονται εκθετικά σε μηδενικό κέρδος ανά επίπεδο. Τιμές μεγαλύτερες από 1 κλιμακώνονται εκθετικά στο άπειρο.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Επίπεδη ώθηση στη στόχευση με ΦΠΑ [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Προσθέτει μια επίπεδη ώθηση στη στόχευση, καθώς ο υπολογισμός για την πιθανότητα επιτυχίας σε χαμηλότερα επίπεδα δεν είναι πολύ διασκεδαστικός.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Συντελεστής σύσφιξης για κλιμάκωση ακρίβειας [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Συσφίγγει τη μέγιστη ώθηση ακρίβειας και κλιμακώνει κατάλληλα</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Επαναφορά</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Θρυλικά εφέ:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>Το {PAWN_labelShort} έχει ένα ανάπηρο {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Έκδοση {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Μεταφέρετε το {0} στο κλουβί</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Αυτό το κλουβί θα πιάσει άγρια ​​ζώα;</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Θα συλλάβει άγρια ​​ζώα.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Δεν θα συλλάβει άγρια ​​ζώα.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Ζώο συλλαμβάνεται!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Έχετε αιχμαλωτίσει το {0} στο κλουβί σας.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Επιλέξτε νέο κλουβί</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Επιλέξτε αυτό το κλουβί.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Μεταφέρετε το {0} σε άλλο κλουβί.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Η μουσική επεκτάθηκε</ME_MusicExpanded>
+  <ME_Theme>Θέμα</ME_Theme>
+  <ME_ThemeDescription>Θέμα</ME_ThemeDescription>
+  <ME_SelectTheme>Επιλέξτε Θέμα</ME_SelectTheme>
+  <ME_ShowNowPlaying>Εμφάνιση Τώρα Παίζει</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Όταν είναι ενεργοποιημένο, θα εμφανιστεί ένα μήνυμα με τον τίτλο του τρέχοντος επιλεγμένου κομματιού.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Ενημέρωση μουσικής Vanilla</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Όταν είναι ενεργοποιημένο, το RimWorld θα παίζει μουσική περιοδικά και όχι συνεχώς.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Επιλέξτε Ήχοι</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Αυτό το θέμα θα χρησιμοποιηθεί για ήχους όταν είναι δυνατόν. Οι ήχοι που δεν αντικαθίστανται θα χρησιμοποιούν ήχους βανίλιας.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Παίζει τώρα: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Επέκταση μουσικής: Βανίλια</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Όλα τα vanilla SongDefs υλοποιούνται με τις δυνατότητες του MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Αυτό το vertibird έχει σχεδιαστεί μόνο για ατμοσφαιρική πτήση και δεν μπορεί να φτάσει σε τροχιακά ύψη.</FCP_CannotLaunchToOrbit>
 </LanguageData>

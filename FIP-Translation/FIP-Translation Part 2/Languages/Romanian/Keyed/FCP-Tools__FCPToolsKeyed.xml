@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>Instrumente FCP</FCP_Settings_Category>
+  <FCP_Settings_Category>Instrumente FCP</FCP_Settings_Category>
   <FCP_Settings.General>General</FCP_Settings.General>
   <FCP_Settings.General.tt>Opțiuni care afectează întregul mod sau nu se potrivesc în altă parte.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Pionii vor folosi automat stimpak-uri din inventarul lor atunci când sunt deteriorați.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Absoluții se pot injecta automat</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Permiteți pionilor cu trăsătura de absenta să folosească automat stimpak-uri.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Starea armei</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Activați starea armei și blocarea</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Armele FCP se degradează cu fiecare lovitură. Sub condiția de 30 se pot bloca la mijlocul luptei, provocând eșecul unei lovituri și penalizând precizia tragerii până când este eliminată. La 1 condiție, arma este complet blocată și trebuie reparată la un banc de reparații înainte de a putea trage din nou.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Stare: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>BLOCAT - se șterge...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} lui {1} s-a blocat!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>SRUPT - trebuie reparat înainte de utilizare</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Instalația juriului: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} trucat de juriu {1}. Condiție: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Slot pentru armă: gol</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Slot pentru armă: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Încărcați arma</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Selectați o armă FCP de pe hartă pentru a o încărca pe bancă pentru reparație.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Eliminați: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Scoateți arma încărcată de pe bancă și aruncați-o în celula de interacțiune.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Nu s-au găsit arme FCP pe hartă.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Niciun colonist disponibil pentru a transporta arma la bancă.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} a reparat {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Fantă pentru îmbrăcăminte: gol</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Slot pentru îmbrăcăminte: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Încărcați îmbrăcăminte</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Selectați o îmbrăcăminte sau armură FCP de pe hartă pentru a o încărca pe bancă pentru reparație.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Eliminați: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Scoateți elementul încărcat de pe bancă și aruncați-l în celula de interacțiune.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Nu s-a găsit nicio îmbrăcăminte FCP pe hartă.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Niciun colonist disponibil pentru a transporta obiectul pe bancă.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} a reparat {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Nu există contracte de livrare disponibile la acest avanpost momentan.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Contract de livrare acceptat: aduceți {COUNT} x {THING} la {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Aveți nevoie de {COUNT} x {THING} pentru a finaliza această livrare.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Înrolare</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Tipuri active de înrolare</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Depanați</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Necesită antrenament Power Armor</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Noul Inamic</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Înrolându-vă la {ENLISTED_name}, ați devenit un inamic al lui {HOSTILE_name}. Acum sunt ostili față de colonia ta.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>nu este suficientă bunăvoință cu {0}, necesită minim {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} a fost învins</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Fracțiunea {0} nu există</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Nu se poate folosi stația de blindaj electric</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Depozitați armura de putere</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Echipați din stație</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Schimbați armura de putere</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Îmbrăcăminte depozitată</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Extrage holobanda</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Deja extras</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} a găsit un {1} în terminal!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} nu a găsit date utile în terminal.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Date deja extrase</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Poate conține date</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Trebuie plasat pe perete</MustPlaceOnWall>
+  <FCP_HackTerminal>Hack terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Blocat - necesită piratare</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal deblocat - primit {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminalul a fost blocat timp de {0} ore</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Blocat ({0}h rămase)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Setări</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Activați încetinirea timpului</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Activați zoom shader</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Câte bifări după creare până când forțăm eliminarea zoom-ului (în cazul erorilor): {0} bifări</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Câte bifări este timpul de răcire al VATS: {0} ticuri</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Multiplicatori de precizie pentru diferite părți ale corpului.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Câștig de precizie pe multiplicator de nivel [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Valorile mai mici de 1 scalează exponențial la câștig zero pe nivel. Valorile mai mari de 1 scala exponențial la infinit.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Amplificare la țintire cu VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Adaugă un impuls plat la țintire, deoarece calculul șanselor de lovire la niveluri inferioare nu este deloc distractiv.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Factor de fixare pentru scalarea cu precizie [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Fixează creșterea maximă a preciziei și scalează corespunzător</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Resetați</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Efecte legendare:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} are un {1} infirm.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Lansare {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Purtați {0} în cușcă</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Va captura această cușcă animale sălbatice?</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Va captura animale sălbatice.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Nu va captura animale sălbatice.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Animal capturat!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>L-ați capturat pe {0} în cușcă.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Alege o cușcă nouă</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Selectați această cușcă.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Transferați {0} într-o altă cușcă.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Muzică extinsă</ME_MusicExpanded>
+  <ME_Theme>Temă</ME_Theme>
+  <ME_ThemeDescription>Temă</ME_ThemeDescription>
+  <ME_SelectTheme>Selectați Tema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Afișează acum se joacă</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Când este activat, va apărea un mesaj cu titlul piesei selectate în prezent.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Actualizare muzicală Vanilla</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Când este activat, RimWorld va reda muzică periodic, mai degrabă decât în ​​mod constant.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Selectați Sunete</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Această temă va fi folosită pentru sunete atunci când este posibil. Orice sunete care nu sunt înlocuite vor folosi sunete de vanilie.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Se joacă acum: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Muzică extinsă: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Toate SongDef-urile de vanilie sunt implementate cu funcțiile MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Această vertibird este concepută numai pentru zborul atmosferic și nu poate atinge altitudini orbitale.</FCP_CannotLaunchToOrbit>
 </LanguageData>

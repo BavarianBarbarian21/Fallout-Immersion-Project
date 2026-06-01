@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <LetterLabelLostRoyalTitle>{TITLE} rank lost: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
-  <LetterLabelGainedRoyalTitle>{TITLE} rank gained: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
-  <LetterGainedRoyalTitle>{PAWN_labelShort} received the rank of {TITLE} from {FACTION_name}!</LetterGainedRoyalTitle>
-  <LetterLostRoyalTitle>{PAWN_labelShort} no longer holds the rank of {TITLE} with {FACTION_name}.</LetterLostRoyalTitle>
-  <LetterLabelRewardsForNewTitle>Rank rewards</LetterLabelRewardsForNewTitle>
-  <LetterRewardsForNewTitle>To honor {PAWN_labelShort} advancing to the rank of {TITLE}, {FACTION_name} has sent {PAWN_objective} the following reward(s):</LetterRewardsForNewTitle>
-  <LetterPartBestowingExtraHonor>{PAWN_labelShort} received {1} Votes as a sign of respect from {FACTION_name}, for gathering {3} spectators.</LetterPartBestowingExtraHonor>
-  <LetterPartNoExtraHonor>{PAWN_labelShort} received no extra Votes since there weren't many spectators.</LetterPartNoExtraHonor>
-  <LetterTextHonorAward_BanditCamp>Who should be credited with {0} Votes for defeating the bandit camp?</LetterTextHonorAward_BanditCamp>
-  <LetterLabelShuttleCrashed>Vertibird crashed</LetterLabelShuttleCrashed>
-  <LetterTextShuttleCrashed>A Vertibird has crashed nearby</LetterTextShuttleCrashed>
-  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'s rank changed</LetterLabelBestowingCeremonyTitleUpdated>
-  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} has gained new rank since the bestowing ceremony was scheduled. In order for bestowing to match the new rank, another ceremony will be scheduled soon.
+  <LetterLabelLostRoyalTitle>{TITLE} sıra kaybı: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
+  <LetterLabelGainedRoyalTitle>{TITLE} sıralaması kazanıldı: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
+  <LetterGainedRoyalTitle>{PAWN_labelShort}, {TITLE} tarafından {FACTION_name} rütbesini aldı!</LetterGainedRoyalTitle>
+  <LetterLostRoyalTitle>{PAWN_labelShort} artık {TITLE} ile {FACTION_name} sıralamasında yer almıyor.</LetterLostRoyalTitle>
+  <LetterLabelRewardsForNewTitle>Sıralama ödülleri</LetterLabelRewardsForNewTitle>
+  <LetterRewardsForNewTitle>{PAWN_labelShort}, {TITLE}'un {FACTION_name} sıralamasına yükselmesini onurlandırmak için {PAWN_objective} adlı kullanıcıya aşağıdaki ödülleri gönderdi:</LetterRewardsForNewTitle>
+  <LetterPartBestowingExtraHonor>{PAWN_labelShort}, {1} seyirci topladığı için {FACTION_name}'dan saygı göstergesi olarak {3} Oy aldı.</LetterPartBestowingExtraHonor>
+  <LetterPartNoExtraHonor>{PAWN_labelShort} çok fazla seyirci olmadığı için fazladan Oy alamadı.</LetterPartNoExtraHonor>
+  <LetterTextHonorAward_BanditCamp>Haydut kampını mağlup ettiği için kime {0} Oyla kredi verilmeli?</LetterTextHonorAward_BanditCamp>
+  <LetterLabelShuttleCrashed>Vertibird çöktü</LetterLabelShuttleCrashed>
+  <LetterTextShuttleCrashed>Yakınlarda bir Vertibird düştü</LetterTextShuttleCrashed>
+  <LetterTextLaborersArrived>[permitFaction_name] işçileri geldi. [laborersDurationDays] gün içinde bir vertibird onları toplamaya gelecek.</LetterTextLaborersArrived>
+  <LetterLabelShuttleArrived>Vertibird geldi</LetterLabelShuttleArrived>
+  <LetterTextShuttleArrivedForLaborers>İşçileri [permitFaction_name]'den toplamak için bir vertibird geldi.</LetterTextShuttleArrivedForLaborers>
+  <InspectStringDepartShuttle>Vertibird'de yola çıkmalı</InspectStringDepartShuttle>
+  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'nin sıralaması değişti</LetterLabelBestowingCeremonyTitleUpdated>
+  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite}, bağışlama töreninin planlanmasından bu yana yeni rütbe kazandı. Yeni rütbeye uygun ihsan için yakın zamanda başka bir tören daha planlanacak.
 
-The new bestowing ceremony will include the cryptid insight rewards for all ranks which were not yet awarded.</LetterTextBestowingCeremonyTitleUpdated>
-  <LetterLabelTributeCollectorArrival>Enclave representative arrival</LetterLabelTributeCollectorArrival>
-  <LetterTributeCollectorArrival>An enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for supporting the enclave.
+Yeni bahşiş töreni, henüz verilmemiş tüm rütbeler için şifreli içgörü ödüllerini içerecek.</LetterTextBestowingCeremonyTitleUpdated>
+  <LetterLabelTributeCollectorArrival>Enclave temsilcisinin gelişi</LetterLabelTributeCollectorArrival>
+  <LetterTributeCollectorArrival>{FACTION_name}'den bir Enclave temsilcisi yaklaşıyor.\n\nHaraç olarak sunduğunuz tüm mahkumları ve kaynakları kabul edecekler. Haraç veren kişi, Enclave'i desteklediği için {FACTION_royalFavorLabel} alacak.
 
-You can expect an enclave representative to arrive roughly twice per year as long as you are not enemies with {FACTION_name}.</LetterTributeCollectorArrival>
+{FACTION_name} ile düşman olmadığınız sürece bir Enclave temsilcisinin yılda yaklaşık iki kez gelmesini bekleyebilirsiniz.</LetterTributeCollectorArrival>
 </LanguageData>

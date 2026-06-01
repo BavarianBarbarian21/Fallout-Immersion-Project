@@ -1,46 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
+  <FCP_Settings_Category>Nástroje FCP</FCP_Settings_Category>
+  <FCP_Settings.General>generál</FCP_Settings.General>
+  <FCP_Settings.General.tt>Možnosti, ktoré ovplyvňujú celý mod alebo sa nikam inam nehodia.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Stims_AutoStim>Automatické vstrekovanie stimpakov</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Pri poškodení pešiaci automaticky použijú stimpaky zo svojho inventára.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers môžu auto-injekciu</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Umožnite pešiakom s abstinenčnou črtou automaticky používať stimpaky.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Stav zbrane</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Povoliť stav zbraní a rušenie</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP zbrane degradujú pri každom výstrele. Pod stavom 30 sa môžu zaseknúť v priebehu boja, čo spôsobí zlyhanie strely a penalizuje presnosť streľby, kým nebude vymazaná. Pri 1 stave je zbraň úplne uzamknutá a musí byť opravená na opravárenskom stole, aby mohla znova strieľať.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Stav: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - čistenie...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} používateľa {1} sa zasekol!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>PORUŠENÉ - pred použitím treba opraviť</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Porota: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} sfalšovaný porotou {1}. Stav: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Slot na zbraň: prázdny</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Slot na zbrane: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Nabite zbraň</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Vyberte z mapy zbraň FCP, ktorú naložíte na lavičku na opravu.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Odstrániť: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Odstráňte nabitú zbraň z lavičky a pustite ju do interakčnej bunky.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Na mape sa nenašli žiadne zbrane FCP.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Nie je k dispozícii žiadny kolonista, ktorý by vytiahol zbraň na lavičku.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} opravil {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Priestor na oblečenie: prázdny</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Priestor na oblečenie: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Načítať oblečenie</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Vyberte si z mapy odev alebo brnenie FCP, ktoré naložíte na lavičku na opravu.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Odstrániť: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Odstráňte načítanú položku z lavice a pustite ju do bunky interakcie.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Na mape sa nenašlo žiadne oblečenie FCP.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Nie je k dispozícii žiadny kolonista, ktorý by predmet vytiahol na lavicu.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} opravil {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Na tejto základni momentálne nie sú k dispozícii žiadne dodacie zmluvy.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Zmluva o doručení bola prijatá: prineste {COUNT} x {THING} do {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Na dokončenie tejto dodávky potrebujete {COUNT}x {THING}.</FCP_DeliveryQuestNotEnoughItems>
+  <FCP_Settings_Enlistment>Zaradenie do služby</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Aktívne typy zaradenia</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
+  <FCP_Settings_Debug_tt>Možnosti, ktoré vám pomôžu s diagnostikou problémov alebo úpravou správania pre ladenie</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Ťažba dreva</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Podrobné protokolovanie</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>Kvôli povýšeniu {0_possessive} na {1} stratil {0_labelShort} povolenie {0_possessive} {2}</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>Špeciálny Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>Prišiel pešiak {PAWN_title} s názvom {PAWN_nameDef} a chce sa pripojiť ku kolónii.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Bežné</FCP_RarityCommon>
+  <FCP_RarityRare>Zriedkavé</FCP_RarityRare>
+  <FCP_RarityUnique>Jedinečný</FCP_RarityUnique>
+  <FCP_MechDetonate>Odpáliť</FCP_MechDetonate>
+  <FCP_CannotPickUp>Nie je možné vyzdvihnúť {0}</FCP_CannotPickUp>
+  <FCP_PickUp>Vyzdvihnúť {0}</FCP_PickUp>
+  <FCP_PickUpMax>Vyzdvihnúť max</FCP_PickUpMax>
+  <FCP_PickUpOne>Vyzdvihnúť jednu {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>Príliš ťažké</FCP_TooHeavy>
   <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Techprint_Desc>Toto je technický výtlačok pre výskumný projekt '{PROJECT_label}'.
+\nFyzická podoba technických výtlačkov môže siahať od útržkov papiera s diagramami až po pokročilé samostatné učebné stroje. Bez ohľadu na formu zohrávajú rovnakú úlohu. Poskytujú vašim výskumníkom istotu, že nápad je možný, a hrubú predstavu o dizajnoch používaných v zavedenejších spoločnostiach.
+\nVaši výskumníci potrebujú základné znalosti, ktoré ponúkajú techprinty, aby vedeli, kde začať s danou technológiou. Až po aplikovaní dostatočného množstva techprintov môžu vaši výskumníci vypracovať jemné detaily, ako využiť technológiu vo vašej konkrétnej situácii.
+\nPoužitím techprintov na spokojný projekt sa dosiahne polovica zostávajúceho pokroku vo výskume. Okrem toho výskumníci vždy získajú podporu svojich intelektuálnych schopností pri aplikovaní techprintov, dokonca aj na už dokončených technológiách.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>Nesprávny xenotyp</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Požiadavky nie sú splnené</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Vyžaduje xenotyp</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Zakázaný xenotyp: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Vyžaduje xenotyp: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Vyžaduje sa oblečenie: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Vyžaduje vlastnosť: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Vyžaduje: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Vyžaduje sa niektorý z: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Vyžaduje výcvik Power Armor</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Nový nepriateľ</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>Registráciou s {ENLISTED_name} ste sa stali nepriateľom {HOSTILE_name}. Teraz sú nepriateľskí voči vašej kolónii.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>nedostatok dobrej vôle s {0}, vyžaduje sa minimálne {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} bol porazený</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Frakcia {0} neexistuje</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Nie je možné použiť power armor station</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Uložte elektrické brnenie</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Vybaviť zo stanice</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Vymeňte mocné brnenie</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Uskladnené oblečenie</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Extrahujte holotape</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Už vyťažené</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} našiel {1} ​​v termináli!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} nenašiel v termináli žiadne užitočné údaje.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Údaje už boli extrahované</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Môže obsahovať údaje</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Treba umiestniť na stenu</MustPlaceOnWall>
+  <FCP_HackTerminal>Hacknúť terminál</FCP_HackTerminal>
+  <FCP_TerminalLocked>Zamknuté - vyžaduje hackovanie</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminál odomknutý – prijaté {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminál je zablokovaný na {0} hodín</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Uzamknuté (zostáva {0} h)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Nastavenia</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Povoliť spomalenie času</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Povoliť zoom shader</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Koľko začiarknutí po vytvorení, kým nevynútime odstránenie priblíženia (v prípade chýb): {0} zaškrtnutí</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Koľko tikov je cooldown VATS: {0} ticks</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Násobiče presnosti pre rôzne časti tela.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Násobiteľ presnosti zisku na úroveň [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Hodnoty menšie ako 1 sa exponenciálne menia na nulový zisk na úroveň. Hodnoty väčšie ako 1 sa exponenciálne menia na nekonečno.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Ploché zvýšenie mierenia pomocou DPH [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Pridáva miernu podporu miereniu, pretože výpočet šance na zásah na nižších úrovniach nie je veľmi zábavný.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Upínací faktor pre škálovanie presnosti [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Upína zvýšenie maximálnej presnosti a vhodne sa nastavuje</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Resetovať</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendárne efekty:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} má poškodenú {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Vydanie {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Preneste {0} do klietky</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Bude táto klietka zachytávať divoké zvieratá.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Zachytí voľne žijúce zvieratá.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Nezachytia voľne žijúce zvieratá.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Zviera chytené!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Zajali ste {0} vo svojej klietke.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Vyberte novú klietku</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Vyberte túto klietku.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Preneste {0} do inej klietky.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Hudba rozbalená</ME_MusicExpanded>
+  <ME_Theme>Téma</ME_Theme>
+  <ME_ThemeDescription>Téma</ME_ThemeDescription>
+  <ME_SelectTheme>Vyberte tému</ME_SelectTheme>
+  <ME_ShowNowPlaying>Zobraziť práve to hrá</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Keď je zapnuté, zobrazí sa správa s názvom aktuálne zvolenej skladby.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Aktualizácia Vanilla Music</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Keď je zapnutá, RimWorld bude prehrávať hudbu pravidelne, nie neustále.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Vyberte položku Zvuky</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Ak je to možné, táto téma sa použije pre zvuky. Všetky zvuky, ktoré sa nenahradia, budú používať vanilkové zvuky.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Práve sa prehráva: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Music Expanded: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Všetky vanilkové SongDefs implementované s funkciami MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Tento vertibird je určený len na let v atmosfére a nemôže dosiahnuť orbitálne výšky.</FCP_CannotLaunchToOrbit>
 </LanguageData>

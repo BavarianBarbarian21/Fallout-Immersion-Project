@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>FCP-työkalut</FCP_Settings_Category>
+  <FCP_Settings_Category>FCP-työkalut</FCP_Settings_Category>
   <FCP_Settings.General>Kenraali</FCP_Settings.General>
   <FCP_Settings.General.tt>Vaihtoehdot, jotka vaikuttavat koko modiin tai eivät sovi mihinkään muualle.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Sotilaat käyttävät automaattisesti merkkejä varastostaan, kun ne vaurioituvat.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers voivat pistää automaattisesti</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Salli teetotaler-ominaisuuden omaavien sotilaiden käyttää automaattisesti merkkejä.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Aseen kunto</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Ota käyttöön aseiden kunto ja häirintä</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP-aseet heikkenevät jokaisella laukauksella. Alle 30 tilassa ne voivat häiritä taistelun puolivälissä, mikä aiheuttaa laukauksen epäonnistumisen ja rankaisevat ampumisen tarkkuutta, kunnes se tyhjennetään. 1-tilassa ase on täysin lukittu ja se on korjattava korjauspenkillä ennen kuin se voi ampua uudelleen.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Kunto: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - tyhjennetään...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>Käyttäjän {0} {1} on juuttunut!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>Rikkoutunut - on korjattava ennen käyttöä</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Tuomaristo: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} tuomariston väärentämä {1}. Kunto: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Asepaikka: tyhjä</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Asepaikka: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Lataa ase</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Valitse kartalta FCP-ase ladataksesi penkille korjausta varten.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Poista: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Poista ladattu ase penkiltä ja pudota se vuorovaikutuskennolle.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>FCP-aseita ei löytynyt kartalta.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Ei ole siirtokuntia saatavilla kuljettamaan asetta penkille.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} on korjannut kohteen {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Vaatepaikka: tyhjä</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Vaatepaikka: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Lataa vaatteet</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Valitse kartalta FCP-vaate tai -panssari, joka ladataan penkille korjattavaksi.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Poista: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Poista ladattu kohde pöydältä ja pudota se vuorovaikutussoluun.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Kartasta ei löytynyt FCP-vaatteita.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Ei ole saatavilla siirtolaista, joka kuljettaisi esineen penkille.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} on korjannut kohteen {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Toimitussopimuksia ei ole tällä hetkellä saatavilla tässä etupisteessä.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Toimitussopimus hyväksytty: tuo {COUNT}x {THING} kohteeseen {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Tarvitset {COUNT}x {THING} tämän toimituksen suorittamiseen.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Pestaus</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Aktiiviset värväystyypit</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Vaatii Power Armor -koulutuksen</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Uusi vihollinen</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Ilmoittautumalla joukkoon {ENLISTED_name} sinusta on tullut {HOSTILE_name}:n vihollinen. He ovat nyt vihamielisiä siirtokuntaasi kohtaan.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>ei tarpeeksi liikearvoa {0}:n kanssa, vaaditaan vähintään {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} on voitettu</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Ryhmää {0} ei ole olemassa</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Sähköpanssariasemaa ei voi käyttää</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Varastoi tehopanssari</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Varusteet asemalta</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Vaihda voimapanssari</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Säilytetyt vaatteet</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Pura holotappi</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Jo purettu</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} löysi {1} terminaalista!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} ei löytänyt hyödyllisiä tietoja päätteestä.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Tiedot on jo poimittu</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Saattaa sisältää dataa</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>On asetettava seinälle</MustPlaceOnWall>
+  <FCP_HackTerminal>Hakkeroitu terminaali</FCP_HackTerminal>
+  <FCP_TerminalLocked>Lukittu - vaatii hakkeroinnin</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Pääte avattu - vastaanotettu {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminaali lukittu {0} tunniksi</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Lukittu ({0} h jäljellä)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Asetukset</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Ota ajan hidastaminen käyttöön</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Ota zoomausvarjostin käyttöön</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Kuinka monta rastia luomisen jälkeen, kunnes pakotamme poistamaan zoomauksen (jos on virheitä): {0} rastia</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Kuinka monta rastia VATS-jäähdytys on: {0} rastia</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Tarkkuuskertoimet eri kehonosiin.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Tarkkuusvahvistus tasoa kohden [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Arvot alle 1 skaalautuvat eksponentiaalisesti nollaan tasoa kohti. Arvot, jotka ovat suurempia kuin 1, skaalautuvat eksponentiaalisesti äärettömään.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Tasainen tehostus tähtäämiseen VATS:lla [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Lisää tasaisen tehosteen tähtäämiseen, koska osumamahdollisuuden laskeminen alemmilla tasoilla ei ole hauskaa.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Tarkkuusskaalauksen kiinnityskerroin [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Kiinnittää maksimitarkkuuslisäyksen ja skaalaa asianmukaisesti</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Nollaa</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendaariset efektit:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} on vammautunut {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Julkaisu {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Kuljeta {0} häkkiin</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Vangitaanko tämä häkki villieläimiä.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Vangitsee villieläimiä.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Ei vangita villieläimiä.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Eläin kiinni!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Olet vanginnut {0} häkkiisi.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Valitse uusi häkki</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Valitse tämä häkki.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Siirrä {0} toiseen häkkiin.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Musiikki laajennettu</ME_MusicExpanded>
+  <ME_Theme>Teema</ME_Theme>
+  <ME_ThemeDescription>Teema</ME_ThemeDescription>
+  <ME_SelectTheme>Valitse Teema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Näytä Nyt toistetaan</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Kun päällä, näkyviin tulee viesti, joka sisältää valitun raidan nimen.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanilla Music -päivitys</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Kun RimWorld on päällä, se soittaa musiikkia säännöllisesti, ei jatkuvasti.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Valitse Äänet</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Tätä teemaa käytetään ääniin, kun mahdollista. Kaikki äänet, joita ei korvata, käyttävät vaniljaääniä.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Nyt toistetaan: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Musiikki Laajennettu: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Kaikki vanilja SongDefs toteutettu MusicExpandedin ominaisuuksilla!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Tämä vertibird on suunniteltu vain ilmakehän lentoon, eikä se voi saavuttaa kiertoradan korkeuksia.</FCP_CannotLaunchToOrbit>
 </LanguageData>

@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>当受到损坏时，Pawn 会自动使用库存中的刺激物。</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>禁酒者可以自动注射</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>允许具有滴酒不沾特质的 pawn 自动使用 stimpaks。</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>武器状况</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>启用武器状态和干扰</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP 武器每次射击都会退化。低于 30 的条件下，它们可能会在战斗中卡住，导致射击失败并影响射击精度，直到清除为止。在第 1 种情况下，武器完全锁定，必须在修理台上修理才能再次发射。</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>条件：{0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>堵塞 - 清理...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} 的 {1} 卡住了！</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>损坏 - 使用前必须修理</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>陪审团装备：{0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0}临时操纵的{1}。条件：{2}/100。</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>武器槽：空</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>武器槽：{0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>装载武器</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>从地图上选择一个 FCP 武器，将其加载到工作台上进行维修。</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>删除：{0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>从工作台上取下已装弹的武器并将其放在交互单元中。</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>地图上未发现 FCP 武器。</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>没有殖民者可以将武器拖到长凳上。</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0}已修复{1}。</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>服装槽：空</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>服装槽：{0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>装载服装</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>从地图上选择一件 FCP 服装或盔甲，加载到工作台上进行修理。</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>删除：{0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>从工作台上取下加载的物品并将其放在交互单元中。</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>地图上未找到 FCP 服装。</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>没有殖民者可以将物品拖到长凳上。</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0}已修复{1}。</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>该前哨站目前没有可用的交付合同。</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>送货合同已接受：将 {COUNT}x {THING} 件带到 {DEST}。</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>需要 {COUNT}x {THING} 件才能完成此交付。</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>征募</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>活跃入伍类型</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>调试</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>需要动力装甲训练</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>新敌人</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>通过加入 {ENLISTED_name}，您已成为 {HOSTILE_name} 的敌人。他们现在对你的殖民地怀有敌意。</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>与 {0} 的商誉不够，至少需要 {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0}已被击败</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>派系 {0} 不存在</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>无法使用动力装甲站</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>储存动力装甲</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>从车站装备</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>交换动力装甲</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>存放的服装</FCP_StoredApparel>
+  <FCP_ExtractHolotape>提取全息带</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>已经提取了</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} 在终端中发现了 {1}！</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} 在终端中找不到有用的数据。</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>数据已提取</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>可能包含数据</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>必须贴在墙上</MustPlaceOnWall>
+  <FCP_HackTerminal>黑客终端</FCP_HackTerminal>
+  <FCP_TerminalLocked>锁定 - 需要黑客攻击</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>终端已解锁 - 收到 {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>终端已锁定 {0} 小时</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>已锁定（还剩 {0} 小时）</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>增值税</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>增值税设置</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>启用时间减速</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>启用缩放着色器</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>创建后经过多少个刻度，直到我们强制删除缩放（以防出现错误）：{0} 个刻度</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>VATS co老旧 拥有的刻度数是：{0} 个刻度</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>各个身体部位的准确性乘数。</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>每级精度增益乘数 [{0}]。</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>小于 1 的值按指数比例缩放至每级增益为零。大于 1 的值按指数缩放至无穷大。</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>使用 VATS [{0}] 可以平稳提升瞄准效果。</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>为瞄准增加平坦的提升，因为较低级别的命中率计算非常不有趣。</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>精确缩放的钳位因子 [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>限制最大精度提升，并适当缩放</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>重置</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>传奇效果：</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} 的 {1} 已残废。</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>释放{0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>将{0}搬到笼子里</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>这个笼子会捕捉野生动物吗？</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>会捕捉野生动物。</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>不会捕捉野生动物。</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>动物被捕获！</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>您已在笼子里捕获了{0}。</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>选择新笼子</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>选择这个笼子。</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>将{0}转移到另一个笼子。</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>音乐扩展</ME_MusicExpanded>
+  <ME_Theme>主题</ME_Theme>
+  <ME_ThemeDescription>主题</ME_ThemeDescription>
+  <ME_SelectTheme>选择主题</ME_SelectTheme>
+  <ME_ShowNowPlaying>节目正在播放</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>启用后，将显示一条消息，其中包含当前所选曲目的标题。</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>原版音乐更新</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>启用后，RimWorld 将定期播放音乐，而不是持续播放。</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>选择声音</ME_SelectSounds>
+  <ME_SelectSoundsDescription>如果可能的话，该主题将用于声音。任何未替换的声音都将使用原版声音。</ME_SelectSoundsDescription>
+  <ME_NowPlaying>正在播放：{0}</ME_NowPlaying>
+  <ME_Vanilla_Label>音乐扩展：香草</ME_Vanilla_Label>
+  <ME_Vanilla_Description>所有普通的 SongDef 均采用 MusicExpanded 的功能实现！</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>这种飞鸟仅设计用于大气层飞行，无法到达轨道高度。</FCP_CannotLaunchToOrbit>
 </LanguageData>

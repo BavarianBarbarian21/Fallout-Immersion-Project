@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <LetterLabelLostRoyalTitle>{TITLE} rank lost: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
-  <LetterLabelGainedRoyalTitle>{TITLE} rank gained: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
-  <LetterGainedRoyalTitle>{PAWN_labelShort} received the rank of {TITLE} from {FACTION_name}!</LetterGainedRoyalTitle>
-  <LetterLostRoyalTitle>{PAWN_labelShort} no longer holds the rank of {TITLE} with {FACTION_name}.</LetterLostRoyalTitle>
-  <LetterLabelRewardsForNewTitle>Rank rewards</LetterLabelRewardsForNewTitle>
-  <LetterRewardsForNewTitle>To honor {PAWN_labelShort} advancing to the rank of {TITLE}, {FACTION_name} has sent {PAWN_objective} the following reward(s):</LetterRewardsForNewTitle>
-  <LetterPartBestowingExtraHonor>{PAWN_labelShort} received {1} Votes as a sign of respect from {FACTION_name}, for gathering {3} spectators.</LetterPartBestowingExtraHonor>
-  <LetterPartNoExtraHonor>{PAWN_labelShort} received no extra Votes since there weren't many spectators.</LetterPartNoExtraHonor>
-  <LetterTextHonorAward_BanditCamp>Who should be credited with {0} Votes for defeating the bandit camp?</LetterTextHonorAward_BanditCamp>
-  <LetterLabelShuttleCrashed>Vertibird crashed</LetterLabelShuttleCrashed>
-  <LetterTextShuttleCrashed>A Vertibird has crashed nearby</LetterTextShuttleCrashed>
-  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'s rank changed</LetterLabelBestowingCeremonyTitleUpdated>
-  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} has gained new rank since the bestowing ceremony was scheduled. In order for bestowing to match the new rank, another ceremony will be scheduled soon.
+  <LetterLabelLostRoyalTitle>{TITLE} утрачен ранг: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
+  <LetterLabelGainedRoyalTitle>Получен рейтинг {TITLE}: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
+  <LetterGainedRoyalTitle>Пользователь {PAWN_labelShort} получил ранг {TITLE} от {FACTION_name}!</LetterGainedRoyalTitle>
+  <LetterLostRoyalTitle>{PAWN_labelShort} больше не имеет ранга {TITLE} в составе {FACTION_name}.</LetterLostRoyalTitle>
+  <LetterLabelRewardsForNewTitle>Награды за ранг</LetterLabelRewardsForNewTitle>
+  <LetterRewardsForNewTitle>В честь достижения {PAWN_labelShort} ранга {TITLE}, {FACTION_name} отправила {PAWN_objective} следующие награды:</LetterRewardsForNewTitle>
+  <LetterPartBestowingExtraHonor>Пользователь {PAWN_labelShort} получил {1} голосов в знак уважения от {FACTION_name} за сбор {3} зрителей.</LetterPartBestowingExtraHonor>
+  <LetterPartNoExtraHonor>{PAWN_labelShort} не получил дополнительных голосов, так как зрителей было немного.</LetterPartNoExtraHonor>
+  <LetterTextHonorAward_BanditCamp>Кому следует зачислить {0} голосов за победу над лагерем бандитов?</LetterTextHonorAward_BanditCamp>
+  <LetterLabelShuttleCrashed>Вертиберд разбился</LetterLabelShuttleCrashed>
+  <LetterTextShuttleCrashed>Неподалёку разбился вертиберд</LetterTextShuttleCrashed>
+  <LetterTextLaborersArrived>Прибыли рабочие из [permitFaction_name]. Вертиберд прибудет за ними через [laborersDurationDays] дней.</LetterTextLaborersArrived>
+  <LetterLabelShuttleArrived>Вертиберд прибыл</LetterLabelShuttleArrived>
+  <LetterTextShuttleArrivedForLaborers>Вертиберд прибыл, чтобы забрать рабочих из [permitFaction_name].</LetterTextShuttleArrivedForLaborers>
+  <InspectStringDepartShuttle>Должен отправиться на вертиберде</InspectStringDepartShuttle>
+  <LetterLabelBestowingCeremonyTitleUpdated>Ранг пользователя {TARGET_definite} изменен</LetterLabelBestowingCeremonyTitleUpdated>
+  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} получил новый ранг после запланированной церемонии награждения. Для присвоения нового звания в ближайшее время будет назначена еще одна церемония.
 
-The new bestowing ceremony will include the cryptid insight rewards for all ranks which were not yet awarded.</LetterTextBestowingCeremonyTitleUpdated>
-  <LetterLabelTributeCollectorArrival>Enclave representative arrival</LetterLabelTributeCollectorArrival>
-  <LetterTributeCollectorArrival>An enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for supporting the enclave.
+Новая церемония награждения будет включать в себя награды за понимание криптидов для всех рангов, которые еще не были присвоены.</LetterTextBestowingCeremonyTitleUpdated>
+  <LetterLabelTributeCollectorArrival>Прибытие представителя Анклава</LetterLabelTributeCollectorArrival>
+  <LetterTributeCollectorArrival>Приближается представитель Анклава из {FACTION_name}.\n\nОни примут любых пленников и ресурсы, которые вы предложите в качестве дани. Тот, кто отдаст дань, получит {FACTION_royalFavorLabel} за поддержку Анклава.
 
-You can expect an enclave representative to arrive roughly twice per year as long as you are not enemies with {FACTION_name}.</LetterTributeCollectorArrival>
+Вы можете ожидать, что представитель Анклава будет прибывать примерно два раза в год, если вы не являетесь врагом {FACTION_name}.</LetterTributeCollectorArrival>
 </LanguageData>

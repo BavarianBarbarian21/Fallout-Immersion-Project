@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>Инструменты FCP</FCP_Settings_Category>
+  <FCP_Settings_Category>Инструменты FCP</FCP_Settings_Category>
   <FCP_Settings.General>Общий</FCP_Settings.General>
   <FCP_Settings.General.tt>Опции, которые влияют на весь мод или больше никуда не подходят.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Стиммы</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>При повреждении пешки будут автоматически использовать стимуляторы из своего инвентаря.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Трезвенники могут делать инъекции автоматически</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Разрешить пешкам с чертой трезвенника автоматически использовать стимуляторы.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Состояние оружия</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Включить состояние оружия и глушение</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Оружие FCP ухудшается с каждым выстрелом. При состоянии ниже 30 они могут застрять в середине боя, что приведет к сбою выстрела и снижению точности стрельбы, пока не будет устранено. При условии 1 оружие полностью заблокировано и должно быть отремонтировано на ремонтном стенде, прежде чем оно сможет снова стрелять.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Состояние: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>ЗАСТРЯЛО - проясняется...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} пользователя {1} застрял!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>СЛОМАН – необходимо починить перед использованием</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Судебная установка: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} самосвал {1}. Состояние: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Слот для оружия: пустой</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Слот для оружия: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Загрузить оружие</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Выберите оружие FCP на карте, чтобы загрузить его на верстак для ремонта.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Удалить: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Снимите со скамейки заряженное оружие и бросьте его в ячейку взаимодействия.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>На карте не обнаружено оружия FCP.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Нет колониста, который мог бы доставить оружие на стол.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} отремонтировал {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Слот для одежды: пусто</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Слот для одежды: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Загрузите одежду</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Выберите одежду или доспехи FCP на карте, чтобы загрузить их на верстак для ремонта.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Удалить: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Снимите загруженный предмет со скамейки и бросьте его в ячейку взаимодействия.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>На карте не найдено одежды FCP.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Нет колониста, который мог бы доставить предмет на скамейку.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} отремонтировал {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>На данный момент на этом аванпосте нет контрактов на поставку.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Договор на доставку принят: доставьте {COUNT}x {THING} в {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Для завершения доставки нужно {COUNT} x {THING}.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Зачисление</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Активные типы регистрации</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Отлаживать</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Требуется обучение силовой броне.</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Новый враг</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Вступив в ряды {ENLISTED_name}, вы стали врагом {HOSTILE_name}. Теперь они враждебно настроены по отношению к вашей колонии.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>недостаточно доброжелательности с {0}, требуется минимум {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} побежден</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Фракция {0} не существует</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Невозможно использовать станцию ​​силовой брони.</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Магазин силовой брони</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Экипировать со станции</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Поменять силовую броню</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Хранимая одежда</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Извлечь голозапись</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Уже извлечено</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} нашел {1} в терминале!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} не нашел в терминале полезных данных.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Данные уже извлечены</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Может содержать данные</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Необходимо разместить на стене</MustPlaceOnWall>
+  <FCP_HackTerminal>Взломать терминал</FCP_HackTerminal>
+  <FCP_TerminalLocked>Заблокировано - требует взлома</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Терминал разблокирован – получен {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Терминал заблокирован на {0} часов.</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Заблокировано (осталось {0} ч.)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>НДС</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>НДС Настройки</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Включить замедление времени</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Включить шейдер масштабирования</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Сколько тиков после создания до принудительного удаления масштаба (в случае ошибок): {0} тиков</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Сколько тиков составляет время восстановления НДС: {0} тиков.</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Множители точности для различных частей тела.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Множитель прироста точности за уровень [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Значения меньше 1 экспоненциально масштабируются до нулевого прироста на уровень. Значения больше 1 экспоненциально масштабируются до бесконечности.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Плавное повышение прицеливания с помощью VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Добавляет фиксированное усиление прицеливания, так как расчет шанса попадания на более низких уровнях очень неприятен.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Коэффициент ограничения для масштабирования точности [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Фиксирует максимальную точность и масштабируется соответствующим образом.</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Перезагрузить</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Легендарные эффекты:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>У {PAWN_labelShort} поврежден {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Выпуск {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Отнесите {0} в клетку</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Будет ли эта клетка ловить диких животных.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Будет ловить диких животных.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Не ловит диких животных.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Животное поймано!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Вы поймали {0} в своей клетке.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Выбрать новую клетку</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Выберите эту клетку.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Перенесите {0} в другую клетку.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Расширенная музыка</ME_MusicExpanded>
+  <ME_Theme>Тема</ME_Theme>
+  <ME_ThemeDescription>Тема</ME_ThemeDescription>
+  <ME_SelectTheme>Выберите тему</ME_SelectTheme>
+  <ME_ShowNowPlaying>Показать сейчас играет</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Если эта функция включена, появится сообщение с названием выбранной в данный момент дорожки.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Обновление ванильной музыки</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Если этот параметр включен, RimWorld будет воспроизводить музыку периодически, а не постоянно.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Выберите звуки</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Эта тема будет использоваться для звуков, когда это возможно. Любые не замененные звуки будут использовать ванильные звуки.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Сейчас играет: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Расширенная музыка: Ваниль</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Все стандартные SongDefs реализованы с использованием функций MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Этот вертиберд предназначен только для полетов в атмосфере и не может достигать орбитальных высот.</FCP_CannotLaunchToOrbit>
 </LanguageData>

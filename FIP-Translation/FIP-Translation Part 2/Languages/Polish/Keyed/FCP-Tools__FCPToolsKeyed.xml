@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>Narzędzia FCP</FCP_Settings_Category>
+  <FCP_Settings_Category>Narzędzia FCP</FCP_Settings_Category>
   <FCP_Settings.General>Ogólny</FCP_Settings.General>
   <FCP_Settings.General.tt>Opcje mające wpływ na cały mod lub niepasujące nigdzie indziej.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stymuluje</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Pionki automatycznie użyją stimpaków ze swojego ekwipunku, gdy zostaną uszkodzone.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Abstynenci mogą wykonywać automatyczne zastrzyki</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Pozwól pionkom z cechą abstynenta na automatyczne używanie stimpaków.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Stan broni</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Włącz stan broni i zagłuszanie</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>Broń FCP ulega degradacji przy każdym strzale. Poniżej 30 mogą zaciąć się w trakcie walki, powodując nieudany strzał i wpływając negatywnie na dokładność strzelania, dopóki nie zostaną usunięte. W stanie 1 broń jest całkowicie zablokowana i musi zostać naprawiona w warsztacie naprawczym, zanim będzie mogła ponownie oddać strzał.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Stan: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>ZACIĘCIE - usuwanie...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>{0} użytkownika {1} się zaciął!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>USZKODZONY – należy go naprawić przed użyciem</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Zestaw sędziowski: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} sfałszowane przez ławę przysięgłych {1}. Stan: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Miejsce na broń: puste</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Miejsce na broń: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Załaduj broń</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Wybierz broń FCP z mapy, aby załadować ją na stół w celu naprawy.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Usuń: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Zdejmij naładowaną broń z ławki i rzuć ją w stronę celi interakcyjnej.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Na mapie nie znaleziono broni FCP.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Nie ma kolonisty, który mógłby zanieść broń na stół.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} naprawił {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Miejsce na odzież: puste</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Miejsce na odzież: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Załaduj odzież</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Wybierz z mapy odzież lub zbroję FCP, aby załadować ją na stół w celu naprawy.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Usuń: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Zdejmij załadowany przedmiot z ławki i upuść go w celę interakcji.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Na mapie nie znaleziono odzieży FCP.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Brak kolonisty, który mógłby zanieść przedmiot na ławkę.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} naprawił {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>W tej placówce nie są obecnie dostępne żadne umowy na dostawę.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Umowa dostawy została zaakceptowana: przywieź {COUNT} x {THING} do {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Potrzebujesz {COUNT} x {THING}, aby zrealizować tę dostawę.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Zaciąg</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Aktywne typy zapisów</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Odpluskwić</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Wymaga szkolenia w zakresie pancerza wspomaganego</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Nowy wróg</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Zaciągając się do {ENLISTED_name}, stałeś się wrogiem {HOSTILE_name}. Są teraz wrogo nastawieni do twojej kolonii.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>za mało dobrej woli w przypadku {0}, wymagaj minimum {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} został pokonany</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Frakcja {0} nie istnieje</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Nie można używać stacji pancerza wspomaganego</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Przechowuj zbroję wspomaganą</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Wyposaż ze stacji</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Zamień pancerz wspomagany</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Przechowywane ubrania</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Wyodrębnij holotaśmy</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Już wydobyte</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} znalazł {1} w terminalu!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} nie znalazł żadnych przydatnych danych w terminalu.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Dane już wyodrębnione</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Może zawierać dane</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Należy umieścić na ścianie</MustPlaceOnWall>
+  <FCP_HackTerminal>Włamać się do terminala</FCP_HackTerminal>
+  <FCP_TerminalLocked>Zablokowany - wymaga hackowania</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal odblokowany - otrzymany {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal zablokowany na {0} godzin</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Zablokowany (pozostało {0}h)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Ustawienia</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Włącz spowolnienie czasu</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Włącz moduł cieniujący powiększenia</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Ile znaczników po utworzeniu, zanim wymusimy usunięcie powiększenia (w przypadku błędów): {0} znaczników</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Ile cykli wynosi czas odnowienia VATS: {0} cykli</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Mnożniki dokładności dla różnych części ciała.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Wzrost dokładności na mnożnik poziomu [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Wartości mniejsze niż 1 skalują wykładniczo do zera zysku na poziom. Wartości większe niż 1 skalują wykładniczo do nieskończoności.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Stałe przyspieszenie celowania dzięki VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Dodaje stałą premię do celowania, ponieważ obliczanie szansy na trafienie na niższych poziomach nie jest zabawne.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Współczynnik zaciskający dla skalowania dokładności [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Ogranicza maksymalne zwiększenie celności i odpowiednio się skaluje</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Nastawić</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendarne efekty:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} ma kalekę {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Wydaj {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Zanieś {0} do klatki</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Czy ta klatka będzie łapać dzikie zwierzęta.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Schwyta dzikie zwierzęta.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Nie łapie dzikich zwierząt.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Zwierzę schwytane!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Złapałeś {0} w swojej klatce.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Wybierz nową klatkę</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Wybierz tę klatkę.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Przenieś {0} do innej klatki.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Muzyka rozszerzona</ME_MusicExpanded>
+  <ME_Theme>Temat</ME_Theme>
+  <ME_ThemeDescription>Temat</ME_ThemeDescription>
+  <ME_SelectTheme>Wybierz Motyw</ME_SelectTheme>
+  <ME_ShowNowPlaying>Pokaż teraz odtwarzane</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Po włączeniu pojawi się komunikat z tytułem aktualnie wybranego utworu.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Aktualizacja muzyki waniliowej</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Kiedy jest włączony, RimWorld będzie odtwarzał muzykę okresowo, a nie stale.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Wybierz Dźwięki</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Jeśli to możliwe, ten motyw będzie używany do dźwięków. Wszelkie dźwięki, które nie zostaną zastąpione, będą używać dźwięków waniliowych.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Teraz odtwarzane: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Rozszerzona muzyka: Wanilia</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Wszystkie standardowe SongDefy zaimplementowane z funkcjami MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Ten vertibird jest przeznaczony wyłącznie do lotów atmosferycznych i nie może osiągnąć wysokości orbitalnej.</FCP_CannotLaunchToOrbit>
 </LanguageData>

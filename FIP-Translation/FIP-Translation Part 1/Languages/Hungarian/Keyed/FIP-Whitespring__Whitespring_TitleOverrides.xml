@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <LetterLabelLostRoyalTitle>{TITLE} rank lost: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
-  <LetterLabelGainedRoyalTitle>{TITLE} rank gained: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
-  <LetterGainedRoyalTitle>{PAWN_labelShort} received the rank of {TITLE} from {FACTION_name}!</LetterGainedRoyalTitle>
-  <LetterLostRoyalTitle>{PAWN_labelShort} no longer holds the rank of {TITLE} with {FACTION_name}.</LetterLostRoyalTitle>
-  <LetterLabelRewardsForNewTitle>Rank rewards</LetterLabelRewardsForNewTitle>
-  <LetterRewardsForNewTitle>To honor {PAWN_labelShort} advancing to the rank of {TITLE}, {FACTION_name} has sent {PAWN_objective} the following reward(s):</LetterRewardsForNewTitle>
-  <LetterPartBestowingExtraHonor>{PAWN_labelShort} received {1} Votes as a sign of respect from {FACTION_name}, for gathering {3} spectators.</LetterPartBestowingExtraHonor>
-  <LetterPartNoExtraHonor>{PAWN_labelShort} received no extra Votes since there weren't many spectators.</LetterPartNoExtraHonor>
-  <LetterTextHonorAward_BanditCamp>Who should be credited with {0} Votes for defeating the bandit camp?</LetterTextHonorAward_BanditCamp>
-  <LetterLabelShuttleCrashed>Vertibird crashed</LetterLabelShuttleCrashed>
-  <LetterTextShuttleCrashed>A Vertibird has crashed nearby</LetterTextShuttleCrashed>
-  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'s rank changed</LetterLabelBestowingCeremonyTitleUpdated>
-  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} has gained new rank since the bestowing ceremony was scheduled. In order for bestowing to match the new rank, another ceremony will be scheduled soon.
+  <LetterLabelLostRoyalTitle>A(z) {TITLE} rangja elveszett: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
+  <LetterLabelGainedRoyalTitle>Megszerzett {TITLE} rang: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
+  <LetterGainedRoyalTitle>{PAWN_labelShort} megkapta a {TITLE} rangot {FACTION_name}-tól!</LetterGainedRoyalTitle>
+  <LetterLostRoyalTitle>A(z) {PAWN_labelShort} már nem rendelkezik a(z) {TITLE} rangjával a(z) {FACTION_name} mellett.</LetterLostRoyalTitle>
+  <LetterLabelRewardsForNewTitle>Rang jutalmak</LetterLabelRewardsForNewTitle>
+  <LetterRewardsForNewTitle>A(z) {PAWN_labelShort} {TITLE} rangra jutásának tiszteletére {FACTION_name} a következő jutalma(ka)t küldte {PAWN_objective} számára:</LetterRewardsForNewTitle>
+  <LetterPartBestowingExtraHonor>{PAWN_labelShort} {1} szavazatot kapott tisztelete jeléül {FACTION_name}-tól, amiért {3} nézőt gyűjtött össze.</LetterPartBestowingExtraHonor>
+  <LetterPartNoExtraHonor>{PAWN_labelShort} nem kapott extra szavazatot, mivel nem volt sok néző.</LetterPartNoExtraHonor>
+  <LetterTextHonorAward_BanditCamp>Kinek köszönhető a {0} szavazat a bandita tábor legyőzéséért?</LetterTextHonorAward_BanditCamp>
+  <LetterLabelShuttleCrashed>Vertibird lezuhant</LetterLabelShuttleCrashed>
+  <LetterTextShuttleCrashed>Egy Vertibird lezuhant a közelben</LetterTextShuttleCrashed>
+  <LetterTextLaborersArrived>Megérkeztek a [permitFaction_name] munkásai. [laborersDurationDays] napon belül jön egy vertibird, hogy összegyűjtse őket.</LetterTextLaborersArrived>
+  <LetterLabelShuttleArrived>Megérkezett a Vertibird</LetterLabelShuttleArrived>
+  <LetterTextShuttleArrivedForLaborers>Megérkezett egy vertibird, hogy összegyűjtse a [permitFaction_name] munkásait.</LetterTextShuttleArrivedForLaborers>
+  <InspectStringDepartShuttle>A vertibirdről indulnia kell</InspectStringDepartShuttle>
+  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite} rangja megváltozott</LetterLabelBestowingCeremonyTitleUpdated>
+  <LetterTextBestowingCeremonyTitleUpdated>A {TARGET_definite} új rangot kapott az adományozási ceremónia kitűzése óta. Annak érdekében, hogy az adományozás megfeleljen az új rangnak, hamarosan újabb szertartást terveznek.
 
-The new bestowing ceremony will include the cryptid insight rewards for all ranks which were not yet awarded.</LetterTextBestowingCeremonyTitleUpdated>
-  <LetterLabelTributeCollectorArrival>Enclave representative arrival</LetterLabelTributeCollectorArrival>
-  <LetterTributeCollectorArrival>An enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for supporting the enclave.
+Az új adományozási ceremónia magában foglalja a rejtett betekintési jutalmakat minden olyan rangért, amelyet még nem osztottak ki.</LetterTextBestowingCeremonyTitleUpdated>
+  <LetterLabelTributeCollectorArrival>Enklávé képviselő érkezése</LetterLabelTributeCollectorArrival>
+  <LetterTributeCollectorArrival>A(z) {FACTION_name} Enclave képviselője közeledik.\n\nElfogadnak minden foglyot és forrást, amelyet elismerésként felajánlasz. Az, aki átadja a tribute-ot, {FACTION_royalFavorLabel}-t kap az Enklávé támogatásáért.
 
-You can expect an enclave representative to arrive roughly twice per year as long as you are not enemies with {FACTION_name}.</LetterTributeCollectorArrival>
+Az Enclave képviselője nagyjából évente kétszer érkezik, feltéve, hogy Ön nem ellensége a {FACTION_name}-nek.</LetterTributeCollectorArrival>
 </LanguageData>

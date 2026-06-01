@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- =====================================================================
+       HHTools mission integration
+       Source: HHTools mission patch override
+       ===================================================================== -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace" MayRequire="FundyMods.HHTools">
+        <xpath>/Defs/QuestScriptDef[defName="Mission_BanditCamp"]/root/factionsToDrawLeaderFrom</xpath>
+        <value>
+          <factionsToDrawLeaderFrom>
+            <li>Empire</li>
+          </factionsToDrawLeaderFrom>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace" MayRequire="FundyMods.HHTools">
+        <xpath>/Defs/QuestScriptDef[defName="Mission_BanditCamp"]/root/siteFactions</xpath>
+        <value>
+          <siteFactions>
+            <li>HHTools_Arizona_Raider</li>
+            <li>HHTools_California_Raider</li>
+            <li>HHTools_Cascadia_Raider</li>
+            <li>HHTools_Texico_Raider</li>
+            <li>HHTools_Mutant_Army</li>
+          </siteFactions>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+  <!-- =====================================================================
+       Royal permits: use gold drop instead of silver drop
+       Source: Royalty/Defs/Misc/RoyalTitlePermitDefs.xml
+       ===================================================================== -->
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="SilverDrop"]/royalAid/itemsToDrop/Silver</xpath>
+    <value>
+      <Gold>500</Gold>
+    </value>
+  </Operation>
+
+</Patch>

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <LetterLabelLostRoyalTitle>{TITLE} rank lost: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
-  <LetterLabelGainedRoyalTitle>{TITLE} rank gained: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
-  <LetterGainedRoyalTitle>{PAWN_labelShort} received the rank of {TITLE} from {FACTION_name}!</LetterGainedRoyalTitle>
-  <LetterLostRoyalTitle>{PAWN_labelShort} no longer holds the rank of {TITLE} with {FACTION_name}.</LetterLostRoyalTitle>
-  <LetterLabelRewardsForNewTitle>Rank rewards</LetterLabelRewardsForNewTitle>
-  <LetterRewardsForNewTitle>To honor {PAWN_labelShort} advancing to the rank of {TITLE}, {FACTION_name} has sent {PAWN_objective} the following reward(s):</LetterRewardsForNewTitle>
-  <LetterPartBestowingExtraHonor>{PAWN_labelShort} received {1} Votes as a sign of respect from {FACTION_name}, for gathering {3} spectators.</LetterPartBestowingExtraHonor>
-  <LetterPartNoExtraHonor>{PAWN_labelShort} received no extra Votes since there weren't many spectators.</LetterPartNoExtraHonor>
-  <LetterTextHonorAward_BanditCamp>Who should be credited with {0} Votes for defeating the bandit camp?</LetterTextHonorAward_BanditCamp>
-  <LetterLabelShuttleCrashed>Vertibird crashed</LetterLabelShuttleCrashed>
-  <LetterTextShuttleCrashed>A Vertibird has crashed nearby</LetterTextShuttleCrashed>
-  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite}'s rank changed</LetterLabelBestowingCeremonyTitleUpdated>
-  <LetterTextBestowingCeremonyTitleUpdated>{TARGET_definite} has gained new rank since the bestowing ceremony was scheduled. In order for bestowing to match the new rank, another ceremony will be scheduled soon.
+  <LetterLabelLostRoyalTitle>{TITLE} のランクが失われました: {PAWN_labelShort}</LetterLabelLostRoyalTitle>
+  <LetterLabelGainedRoyalTitle>{TITLE} ランクを獲得: {PAWN_labelShort}</LetterLabelGainedRoyalTitle>
+  <LetterGainedRoyalTitle>{PAWN_labelShort} は {TITLE} から {FACTION_name} のランクを獲得しました。</LetterGainedRoyalTitle>
+  <LetterLostRoyalTitle>{PAWN_labelShort} は、{TITLE} での {FACTION_name} のランクを保持しなくなりました。</LetterLostRoyalTitle>
+  <LetterLabelRewardsForNewTitle>ランク報酬</LetterLabelRewardsForNewTitle>
+  <LetterRewardsForNewTitle>{PAWN_labelShort} が {TITLE} のランクに上がったことを称えて、{FACTION_name} は {PAWN_objective} に次の報酬を送りました:</LetterRewardsForNewTitle>
+  <LetterPartBestowingExtraHonor>{PAWN_labelShort} は、{1} 人の観客を集めたことに対して、{FACTION_name} から敬意の表れとして {3} 票を受け取りました。</LetterPartBestowingExtraHonor>
+  <LetterPartNoExtraHonor>観客が少なかったため、{PAWN_labelShort} は追加の投票を受け取りませんでした。</LetterPartNoExtraHonor>
+  <LetterTextHonorAward_BanditCamp>盗賊キャンプを倒したとして誰に {0} 票を与えるべきですか?</LetterTextHonorAward_BanditCamp>
+  <LetterLabelShuttleCrashed>ベルチバードが墜落した</LetterLabelShuttleCrashed>
+  <LetterTextShuttleCrashed>ベルチバードが近くに墜落しました</LetterTextShuttleCrashed>
+  <LetterTextLaborersArrived>[permitFaction_name] の労働者が到着しました。 [laborersDurationDays] 日以内にベルチバードが回収に来ます。</LetterTextLaborersArrived>
+  <LetterLabelShuttleArrived>ベルチバードが到着しました</LetterLabelShuttleArrived>
+  <LetterTextShuttleArrivedForLaborers>[permitFaction_name] から労働者を集めるためにベルチバードが到着しました。</LetterTextShuttleArrivedForLaborers>
+  <InspectStringDepartShuttle>ベルチバードで出発すべき</InspectStringDepartShuttle>
+  <LetterLabelBestowingCeremonyTitleUpdated>{TARGET_definite} のランクが変更されました</LetterLabelBestowingCeremonyTitleUpdated>
+  <LetterTextBestowingCeremonyTitleUpdated>授与式が予定されて以来、{TARGET_definite} は新たなランクを獲得しました。新しい階級にふさわしい授与式が近々行われる予定です。
 
-The new bestowing ceremony will include the cryptid insight rewards for all ranks which were not yet awarded.</LetterTextBestowingCeremonyTitleUpdated>
-  <LetterLabelTributeCollectorArrival>Enclave representative arrival</LetterLabelTributeCollectorArrival>
-  <LetterTributeCollectorArrival>An enclave representative from {FACTION_name} is approaching.\n\nThey will accept any prisoners and resources you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for supporting the enclave.
+新しい授与式には、まだ授与されていないすべてのランクに対する謎の洞察報酬が含まれます。</LetterTextBestowingCeremonyTitleUpdated>
+  <LetterLabelTributeCollectorArrival>エンクレイブ代表到着</LetterLabelTributeCollectorArrival>
+  <LetterTributeCollectorArrival>{FACTION_name} のエンクレイブ代表が近づいています。\n\n彼らは、あなたが提供した捕虜や資源を貢物として受け入れます。貢ぎ物を譲った人は、エンクレイブを支援したとして {FACTION_royalFavorLabel} を受け取ります。
 
-You can expect an enclave representative to arrive roughly twice per year as long as you are not enemies with {FACTION_name}.</LetterTributeCollectorArrival>
+あなたが {FACTION_name} と敵対していない限り、エンクレイブの代表者が年におよそ 2 回到着することが期待できます。</LetterTributeCollectorArrival>
 </LanguageData>

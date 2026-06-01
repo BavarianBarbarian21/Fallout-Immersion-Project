@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-<FCP_Settings_Category>Nástroje FCP</FCP_Settings_Category>
+  <FCP_Settings_Category>Nástroje FCP</FCP_Settings_Category>
   <FCP_Settings.General>Generál</FCP_Settings.General>
   <FCP_Settings.General.tt>Možnosti, které ovlivňují celý mod nebo se nikam jinam nehodí.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
@@ -8,6 +8,36 @@
   <FCP_Settings_Stims_AutoStim_Desc>Při poškození pěšci automaticky použijí stimpaky ze svého inventáře.</FCP_Settings_Stims_AutoStim_Desc>
   <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers mohou auto-injekce</FCP_Settings_Stims_TeetotalerAutoStim>
   <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Umožněte pěšcům s rysem abstinenta automaticky používat stimpaky.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Stav zbraně</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Povolit stav zbraně a rušení</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP zbraně degradují s každým výstřelem. Pod stavem 30 se mohou v průběhu boje zaseknout, což způsobí selhání střely a penalizuje přesnost střelby, dokud nebude vymazána. Při 1 stavu je zbraň zcela uzamčena a musí být opravena na opravárenském stole, než bude moci znovu střílet.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Stav: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED - čištění...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>Zařízení {0} uživatele {1} se zaseklo!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>PORUŠENÉ - před použitím nutno opravit</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Porota: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} zmanipulovaný porotou {1}. Stav: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Slot pro zbraň: prázdný</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Slot pro zbraně: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Nabijte zbraň</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Vyberte z mapy zbraň FCP, kterou naložíte na lavičku k opravě.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Odebrat: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Sejměte nabitou zbraň z lavice a pusťte ji do interakční buňky.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Na mapě nebyly nalezeny žádné zbraně FCP.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Není k dispozici žádný kolonista, který by zbraň vytáhl na lavičku.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} opravil {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Slot na oblečení: prázdný</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Blok oblečení: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Vložte oblečení</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Vyberte si z mapy oděv nebo brnění FCP, které naložíte na lavičku k opravě.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Odebrat: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Odstraňte načtený předmět z lavice a pusťte jej do buňky interakce.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Na mapě nebylo nalezeno žádné oblečení FCP.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Není k dispozici žádný kolonista, který by předmět vytáhl na lavici.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} opravil {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Na této základně momentálně nejsou k dispozici žádné dodací smlouvy.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Smlouva o dodání přijata: přineste {COUNT}x {THING} do {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>K dokončení této dodávky potřebujete {COUNT}x {THING}.</FCP_DeliveryQuestNotEnoughItems>
   <FCP_Settings_Enlistment>Zařazení</FCP_Settings_Enlistment>
   <FCP_Settings_Enlistment_ActiveTypes>Aktivní typy zařazení</FCP_Settings_Enlistment_ActiveTypes>
   <FCP_Settings_Debug>Ladit</FCP_Settings_Debug>
@@ -43,4 +73,64 @@
   <FCP_ApparelRequirement.RequiresPowerArmorTraining>Vyžaduje výcvik Power Armor</FCP_ApparelRequirement.RequiresPowerArmorTraining>
   <FCP_Enemy_Of_Enlist_Faction>Nový nepřítel</FCP_Enemy_Of_Enlist_Faction>
   <FCP_Enemy_Of_Enlist_Faction_Desc>Přihlášením k {ENLISTED_name} jste se stali nepřítelem {HOSTILE_name}. Nyní jsou nepřátelští vůči vaší kolonii.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>nedostatek dobrého jména s {0}, požadujte minimálně {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} byl poražen</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Frakce {0} neexistuje</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Nelze použít power armor station</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Uložte silové brnění</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Vybavit ze stanice</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Vyměňte mocné brnění</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Uložené oblečení</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Extrahujte holotape</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Již extrahováno</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} našel v terminálu {1}!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} nenašel v terminálu žádná užitečná data.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Data již extrahována</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Může obsahovat data</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Nutno umístit na zeď</MustPlaceOnWall>
+  <FCP_HackTerminal>Hackovat terminál</FCP_HackTerminal>
+  <FCP_TerminalLocked>Uzamčeno – vyžaduje hackování</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminál odemčen – přijato {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminál je na {0} hodin uzamčen</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Uzamčeno (zbývá {0} h)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Nastavení</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Povolit zpomalení času</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Povolit zoom shader</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Kolik zaškrtnutí po vytvoření, dokud nevynutíme odstranění přiblížení (v případě chyb): {0} zaškrtnutí</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Kolik tiků je cooldown VATS: {0} tiků</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Násobiče přesnosti pro různé části těla.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Multiplikátor zisku přesnosti na úroveň [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Hodnoty menší než 1 se exponenciálně mění na nulový zisk za úroveň. Hodnoty větší než 1 se exponenciálně škálují do nekonečna.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Ploché posílení míření pomocí VATS [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Přidává ploché posílení zaměřování, protože výpočet šance na zásah na nižších úrovních není příliš zábavný.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Upínací faktor pro měřítko přesnosti [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Upíná maximální zvýšení přesnosti a vhodně měří</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Resetovat</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendární efekty:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} má zmrzačené {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Vydání {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Přeneste {0} do klece</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Zachytí tato klec divoká zvířata.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Zachytí divoká zvířata.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Nezachytí divoká zvířata.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Zvíře chyceno!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Zajali jste {0} ve své kleci.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Vyberte novou klec</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Vyberte tuto klec.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Přeneste {0} do jiné klece.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Hudba Expanded</ME_MusicExpanded>
+  <ME_Theme>Téma</ME_Theme>
+  <ME_ThemeDescription>Téma</ME_ThemeDescription>
+  <ME_SelectTheme>Vyberte téma</ME_SelectTheme>
+  <ME_ShowNowPlaying>Zobrazit právě hraje</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Když je zapnuto, zobrazí se zpráva s názvem aktuálně vybrané skladby.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Aktualizace Vanilla Music</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Když je zapnuto, RimWorld bude přehrávat hudbu pravidelně, nikoli neustále.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Vyberte Zvuky</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Pokud to bude možné, bude toto téma použito pro zvuky. Všechny zvuky, které nebudou nahrazeny, budou používat vanilkové zvuky.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Právě hraje: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Hudba Expanded: Vanilka</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Všechny vanilkové SongDefs implementované s funkcemi MusicExpanded!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>Tento vertibird je určen pouze pro let v atmosféře a nemůže dosáhnout orbitálních výšek.</FCP_CannotLaunchToOrbit>
 </LanguageData>

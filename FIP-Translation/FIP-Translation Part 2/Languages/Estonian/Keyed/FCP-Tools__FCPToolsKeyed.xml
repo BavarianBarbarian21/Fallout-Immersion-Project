@@ -1,46 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <FCP_Settings_Category>FCP Tools</FCP_Settings_Category>
-  <FCP_Settings.General>General</FCP_Settings.General>
-  <FCP_Settings.General.tt>Options that affect the whole mod or don't fit anywhere else.</FCP_Settings.General.tt>
+  <FCP_Settings_Category>FCP tööriistad</FCP_Settings_Category>
+  <FCP_Settings.General>Kindral</FCP_Settings.General>
+  <FCP_Settings.General.tt>Valikud, mis mõjutavad kogu modi või ei sobi kuhugi mujale.</FCP_Settings.General.tt>
   <FCP_Settings_Stims>Stims</FCP_Settings_Stims>
-  <FCP_Settings_Stims_AutoStim>Auto-inject stimpaks</FCP_Settings_Stims_AutoStim>
-  <FCP_Settings_Stims_AutoStim_Desc>Pawns will automatically use stimpaks from their inventory when damaged.</FCP_Settings_Stims_AutoStim_Desc>
-  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers can auto-inject</FCP_Settings_Stims_TeetotalerAutoStim>
-  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Allow pawns with the teetotaler trait to automatically use stimpaks.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
-  <FCP_Settings_Enlistment>Enlistment</FCP_Settings_Enlistment>
-  <FCP_Settings_Enlistment_ActiveTypes>Active Enlistment Types</FCP_Settings_Enlistment_ActiveTypes>
-  <FCP_Settings_Debug>Debug</FCP_Settings_Debug>
-  <FCP_Settings_Debug_tt>Options to help with the diagnosis of issues or modify behaviour for debugging</FCP_Settings_Debug_tt>
-  <FCP_Settings_Debug_Logging>Logging</FCP_Settings_Debug_Logging>
-  <FCP_Settings_Debug_VerboseLogging>Verbose Logging</FCP_Settings_Debug_VerboseLogging>
-  <FCP_MessagePermitLostOnPromotion>Due to {0_possessive} promotion to {1}, {0_labelShort} has lost {0_possessive} {2} permit</FCP_MessagePermitLostOnPromotion>
-  <FCP_LetterLabel_SpecialWandererJoins>Special Wanderer: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
-  <FCP_Letter_SpecialWandererJoins>A pawn {PAWN_title} named {PAWN_nameDef} has arrived and wants to join the colony.</FCP_Letter_SpecialWandererJoins>
-  <FCP_RarityCommon>Common</FCP_RarityCommon>
-  <FCP_RarityRare>Rare</FCP_RarityRare>
-  <FCP_RarityUnique>Unique</FCP_RarityUnique>
-  <FCP_MechDetonate>Detonate</FCP_MechDetonate>
-  <FCP_CannotPickUp>Cannot pick up {0}</FCP_CannotPickUp>
-  <FCP_PickUp>Pick up {0}</FCP_PickUp>
-  <FCP_PickUpMax>Pick up max</FCP_PickUpMax>
-  <FCP_PickUpOne>Pick up one {0}</FCP_PickUpOne>
-  <FCP_TooHeavy>Too Heavy</FCP_TooHeavy>
-  <FCP_Techprint_Label>FCP techprint ({PROJECT_label})</FCP_Techprint_Label>
-  <FCP_Techprint_Desc>This is a techprint for the research project '{PROJECT_label}'.
-\nThe physical form of techprints can range from scraps of paper with diagrams, all the way to advanced self-contained teaching machines. Regardless of form, they play the same role. They give your researchers the confidence that an idea is possible, and a rough idea of the designs used in more established societies.
-\nYour researchers need the foundational knowledge offered by techprints to know where to start on a given technology. Only after enough techprints have been applied can your researchers work out the fine details of how to make use of the technology in your particular situation.
-\nApplying techprints to a satisfied project fulfills half the remaining research progress. In addition, researchers always gain a boost to their intellectual skills when applying techprints, even on already-completed technologies.</FCP_Techprint_Desc>
-  <FCP_WrongXenotype>Wrong xenotype</FCP_WrongXenotype>
-  <FCP_WeaponReq_RequirementsNotMet>Requirements not met</FCP_WeaponReq_RequirementsNotMet>
-  <FCP_WeaponReq_NoXenotype>Requires a xenotype</FCP_WeaponReq_NoXenotype>
-  <FCP_WeaponReq_BannedXenotype>Banned xenotype: {0}</FCP_WeaponReq_BannedXenotype>
-  <FCP_WeaponReq_WrongXenotype>Requires xenotype: {0}</FCP_WeaponReq_WrongXenotype>
-  <FCP_WeaponReq_RequiresApparel>Requires apparel: {0}</FCP_WeaponReq_RequiresApparel>
-  <FCP_ApparelRequirement.RequiresTrait>Requires Trait: {0}</FCP_ApparelRequirement.RequiresTrait>
-  <FCP_ApparelRequirement.RequiresApparel>Requires: {0}</FCP_ApparelRequirement.RequiresApparel>
-  <FCP_ApparelRequirement.RequiresAnyOfApparel>Requires any of: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
-  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Requires Power Armor Training</FCP_ApparelRequirement.RequiresPowerArmorTraining>
-  <FCP_Enemy_Of_Enlist_Faction>New Enemy</FCP_Enemy_Of_Enlist_Faction>
-  <FCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <FCP_Settings_Stims_AutoStim>Stimpade automaatne süstimine</FCP_Settings_Stims_AutoStim>
+  <FCP_Settings_Stims_AutoStim_Desc>Etturid kasutavad kahjustumisel automaatselt oma laoseisu stimpe.</FCP_Settings_Stims_AutoStim_Desc>
+  <FCP_Settings_Stims_TeetotalerAutoStim>Teetotalers saavad automaatselt süstida</FCP_Settings_Stims_TeetotalerAutoStim>
+  <FCP_Settings_Stims_TeetotalerAutoStim_Desc>Lubage teetotaleri tunnusega etturitel stimpake automaatselt kasutada.</FCP_Settings_Stims_TeetotalerAutoStim_Desc>
+  <FCP_Settings_WeaponCondition>Relva seisukord</FCP_Settings_WeaponCondition>
+  <FCP_Settings_WeaponCondition_Enabled>Luba relva seisund ja segamine</FCP_Settings_WeaponCondition_Enabled>
+  <FCP_Settings_WeaponCondition_Enabled_Desc>FCP relvad lagunevad iga lasuga. Kui tingimused on alla 30, võivad nad lahingu keskel ummistuda, põhjustades laskmise ebaõnnestumise ja karistades laskmise täpsust kuni kustutamiseni. 1 seisukorras on relv täielikult lukus ja seda tuleb remondipingil parandada, enne kui see saab uuesti tulistada.</FCP_Settings_WeaponCondition_Enabled_Desc>
+  <FCP_WeaponCondition_Condition>Seisukord: {0}/100</FCP_WeaponCondition_Condition>
+  <FCP_WeaponCondition_Jammed>JAMMED – puhastamine...</FCP_WeaponCondition_Jammed>
+  <FCP_WeaponCondition_JamMessage>Kasutaja {0} {1} on ummistunud!</FCP_WeaponCondition_JamMessage>
+  <FCP_WeaponCondition_Disabled>KATKENUD – tuleb enne kasutamist parandada</FCP_WeaponCondition_Disabled>
+  <FCP_JuryRig_FloatMenu>Žürii: {0}</FCP_JuryRig_FloatMenu>
+  <FCP_JuryRig_MessageDone>{0} žürii poolt valitud {1}. Seisukord: {2}/100.</FCP_JuryRig_MessageDone>
+  <FCP_RepairBench_Empty>Relvapesa: tühi</FCP_RepairBench_Empty>
+  <FCP_RepairBench_Loaded>Relvapesa: {0}</FCP_RepairBench_Loaded>
+  <FCP_RepairBench_Load>Laadige relv</FCP_RepairBench_Load>
+  <FCP_RepairBench_Load_Desc>Valige kaardilt FCP relv, mis laadite pingile parandamiseks.</FCP_RepairBench_Load_Desc>
+  <FCP_RepairBench_Eject>Eemalda: {0}</FCP_RepairBench_Eject>
+  <FCP_RepairBench_Eject_Desc>Eemaldage laetud relv pingilt ja visake see interaktsioonikambrisse.</FCP_RepairBench_Eject_Desc>
+  <FCP_RepairBench_NoWeapons>Kaardilt FCP relvi ei leitud.</FCP_RepairBench_NoWeapons>
+  <FCP_RepairBench_NoHauler>Relva pingile vedamiseks pole saadaval ühtegi kolonisti.</FCP_RepairBench_NoHauler>
+  <FCP_RepairBench_Done>{0} on parandanud objekti {1}.</FCP_RepairBench_Done>
+  <FCP_ApparelBench_Empty>Rõivaste pesa: tühi</FCP_ApparelBench_Empty>
+  <FCP_ApparelBench_Loaded>Rõivaste pesa: {0}</FCP_ApparelBench_Loaded>
+  <FCP_ApparelBench_Load>Laadige rõivaid</FCP_ApparelBench_Load>
+  <FCP_ApparelBench_Load_Desc>Valige kaardilt FCP rõivas või raudrüü, mis laadite selle parandamiseks pingile.</FCP_ApparelBench_Load_Desc>
+  <FCP_ApparelBench_Eject>Eemalda: {0}</FCP_ApparelBench_Eject>
+  <FCP_ApparelBench_Eject_Desc>Eemaldage laaditud üksus pingilt ja kukutage see interaktsioonilahtrisse.</FCP_ApparelBench_Eject_Desc>
+  <FCP_ApparelBench_NoApparel>Kaardilt ei leitud ühtegi FCP-riietust.</FCP_ApparelBench_NoApparel>
+  <FCP_ApparelBench_NoHauler>Ükski kolonist pole saadaval, kes eseme pingile viiks.</FCP_ApparelBench_NoHauler>
+  <FCP_ApparelBench_Done>{0} on parandanud objekti {1}.</FCP_ApparelBench_Done>
+  <FCP_NoDeliveryQuestsAvailable>Selles eelpostis pole praegu tarnelepinguid saadaval.</FCP_NoDeliveryQuestsAvailable>
+  <FCP_DeliveryQuestAccepted>Tarneleping aktsepteeritud: tooge {COUNT}x {THING} sihtkohta {DEST}.</FCP_DeliveryQuestAccepted>
+  <FCP_DeliveryQuestNotEnoughItems>Selle kohaletoimetamise lõpuleviimiseks on vaja {COUNT}x {THING}.</FCP_DeliveryQuestNotEnoughItems>
+  <FCP_Settings_Enlistment>Värbamine</FCP_Settings_Enlistment>
+  <FCP_Settings_Enlistment_ActiveTypes>Aktiivsed värbamistüübid</FCP_Settings_Enlistment_ActiveTypes>
+  <FCP_Settings_Debug>Silumine</FCP_Settings_Debug>
+  <FCP_Settings_Debug_tt>Valikud, mis aitavad probleeme diagnoosida või silumiseks käitumist muuta</FCP_Settings_Debug_tt>
+  <FCP_Settings_Debug_Logging>Logimine</FCP_Settings_Debug_Logging>
+  <FCP_Settings_Debug_VerboseLogging>Paljusõnaline logimine</FCP_Settings_Debug_VerboseLogging>
+  <FCP_MessagePermitLostOnPromotion>Seoses {0_possessive} reklaamiga {1} on {0_labelShort} kaotanud {0_possessive} {2} loa</FCP_MessagePermitLostOnPromotion>
+  <FCP_LetterLabel_SpecialWandererJoins>Erirändur: {PAWN_nameDef}</FCP_LetterLabel_SpecialWandererJoins>
+  <FCP_Letter_SpecialWandererJoins>Ettur {PAWN_title} nimega {PAWN_nameDef} on saabunud ja soovib kolooniaga liituda.</FCP_Letter_SpecialWandererJoins>
+  <FCP_RarityCommon>Levinud</FCP_RarityCommon>
+  <FCP_RarityRare>Harv</FCP_RarityRare>
+  <FCP_RarityUnique>Ainulaadne</FCP_RarityUnique>
+  <FCP_MechDetonate>Detoneerida</FCP_MechDetonate>
+  <FCP_CannotPickUp>Ei saa kätte {0}</FCP_CannotPickUp>
+  <FCP_PickUp>Pärast {0}</FCP_PickUp>
+  <FCP_PickUpMax>Korjamine max</FCP_PickUpMax>
+  <FCP_PickUpOne>Võtke üks {0}</FCP_PickUpOne>
+  <FCP_TooHeavy>Liiga raske</FCP_TooHeavy>
+  <FCP_Techprint_Label>FCP tehniline print ({PROJECT_label})</FCP_Techprint_Label>
+  <FCP_Techprint_Desc>See on tehniline trükis uurimisprojekti „{PROJECT_label}” jaoks.
+\nTehnprintide füüsiline vorm võib ulatuda diagrammidega paberitükkidest kuni täiustatud iseseisvate õppemasinateni. Olenemata vormist mängivad nad sama rolli. Need annavad teie teadlastele kindlustunde, et idee on võimalik, ja umbkaudse ettekujutuse väljakujunenud ühiskondades kasutatavatest kujundustest.
+\nTeie teadlased vajavad techprintsi pakutavaid põhiteadmisi, et teada saada, kust antud tehnoloogiaga alustada. Alles pärast piisava hulga tehniliste printide rakendamist saavad teie teadlased välja töötada täpsed üksikasjad selle kohta, kuidas tehnoloogiat teie konkreetses olukorras kasutada.
+\nTehnprintide rakendamine rahulolevale projektile täidab poole ülejäänud uurimistööst. Lisaks saavad teadlased tehnilisi printe rakendades alati oma intellektuaalsetele oskustele tõuke, isegi juba valminud tehnoloogiate puhul.</FCP_Techprint_Desc>
+  <FCP_WrongXenotype>Vale ksenotüüp</FCP_WrongXenotype>
+  <FCP_WeaponReq_RequirementsNotMet>Nõuded ei ole täidetud</FCP_WeaponReq_RequirementsNotMet>
+  <FCP_WeaponReq_NoXenotype>Nõuab ksenotüüpi</FCP_WeaponReq_NoXenotype>
+  <FCP_WeaponReq_BannedXenotype>Keelatud ksenotüüp: {0}</FCP_WeaponReq_BannedXenotype>
+  <FCP_WeaponReq_WrongXenotype>Nõuab ksenotüüpi: {0}</FCP_WeaponReq_WrongXenotype>
+  <FCP_WeaponReq_RequiresApparel>Nõuab rõivaid: {0}</FCP_WeaponReq_RequiresApparel>
+  <FCP_ApparelRequirement.RequiresTrait>Nõuab omadust: {0}</FCP_ApparelRequirement.RequiresTrait>
+  <FCP_ApparelRequirement.RequiresApparel>Nõuab: {0}</FCP_ApparelRequirement.RequiresApparel>
+  <FCP_ApparelRequirement.RequiresAnyOfApparel>Nõuab üht järgmistest: {0}</FCP_ApparelRequirement.RequiresAnyOfApparel>
+  <FCP_ApparelRequirement.RequiresPowerArmorTraining>Nõuab jõusoomurite väljaõpet</FCP_ApparelRequirement.RequiresPowerArmorTraining>
+  <FCP_Enemy_Of_Enlist_Faction>Uus vaenlane</FCP_Enemy_Of_Enlist_Faction>
+  <FCP_Enemy_Of_Enlist_Faction_Desc>Liitudes liikmeks {ENLISTED_name}, on teist saanud vaenlase {HOSTILE_name} vaenlane. Nad on nüüd teie koloonia vastu vaenulikud.</FCP_Enemy_Of_Enlist_Faction_Desc>
+  <GoodwillUnmet>ei piisa ettevõtte {0} firmaväärtusest, nõutakse minimaalselt {1}</GoodwillUnmet>
+  <Goodwill_FactionDefeated>{0} on võidetud</Goodwill_FactionDefeated>
+  <Goodwill_FactionDontExist>Fraktsiooni {0} pole olemas</Goodwill_FactionDontExist>
+  <FCP_CannotUsePowerArmorStation>Elektrisoomusjaama ei saa kasutada</FCP_CannotUsePowerArmorStation>
+  <FCP_StorePowerArmor>Hoidke jõurüüd</FCP_StorePowerArmor>
+  <FCP_EquipFromStation>Varustage jaamast</FCP_EquipFromStation>
+  <FCP_SwapPowerArmor>Vahetage jõurüü</FCP_SwapPowerArmor>
+  <FCP_StoredApparel>Ladustatud rõivad</FCP_StoredApparel>
+  <FCP_ExtractHolotape>Ekstraheerige holotaep</FCP_ExtractHolotape>
+  <FCP_ExtractHolotape_AlreadyExtracted>Juba ekstraheeritud</FCP_ExtractHolotape_AlreadyExtracted>
+  <FCP_ExtractedHolotape>{PAWN_nameDef} leidis terminalist {1}!</FCP_ExtractedHolotape>
+  <FCP_NoHolotapeFound>{PAWN_nameDef} ei leidnud terminalist kasulikke andmeid.</FCP_NoHolotapeFound>
+  <FCP_HolotapeStatus_Extracted>Andmed on juba ekstraktitud</FCP_HolotapeStatus_Extracted>
+  <FCP_HolotapeStatus_CanExtract>Võib sisaldada andmeid</FCP_HolotapeStatus_CanExtract>
+  <MustPlaceOnWall>Tuleb seinale panna</MustPlaceOnWall>
+  <FCP_HackTerminal>Häkkida terminal</FCP_HackTerminal>
+  <FCP_TerminalLocked>Lukustatud – nõuab häkkimist</FCP_TerminalLocked>
+  <FCP_TerminalHackSuccess>Terminal lukustamata – vastu võetud {0}</FCP_TerminalHackSuccess>
+  <FCP_TerminalLockedOut>Terminal lukustati {0} tunniks</FCP_TerminalLockedOut>
+  <FCP_TerminalLockedOut_Status>Lukustatud ({0} h jäänud)</FCP_TerminalLockedOut_Status>
+  <FCP_Settings_VATS>V.A.T.S.</FCP_Settings_VATS>
+  <FCP_Settings_VATS_header>V.A.T.S. Seaded</FCP_Settings_VATS_header>
+  <FCP_VATS_Settings_EnableSlowDownTime>Luba aja aeglustumine</FCP_VATS_Settings_EnableSlowDownTime>
+  <FCP_VATS_Settings_EnableZoom>Lubage suumivarjutaja</FCP_VATS_Settings_EnableZoom>
+  <FCP_VATS_Settings_ZoomTimeout>Mitu linnukest pärast loomist kuni suumi eemaldamiseni (vigade korral): {0} linnukest</FCP_VATS_Settings_ZoomTimeout>
+  <FCP_VATS_Settings_CooldownTicks>Kui palju linnukesi on VATS-i jahtumisel: {0} linnukest</FCP_VATS_Settings_CooldownTicks>
+  <FCP_VATS_Settings_BodyPartMultipliers>Erinevate kehaosade täpsuskordajad.</FCP_VATS_Settings_BodyPartMultipliers>
+  <FCP_VATS_Settings_Gain_Per_Level>Täpsusvõimendus taseme kordaja [{0}].</FCP_VATS_Settings_Gain_Per_Level>
+  <FCP_VATS_Settings_Gain_Per_Level_Mouseover>Väärtused, mis on väiksemad kui 1, skaleeruvad eksponentsiaalselt nulli võimenduseni taseme kohta. Väärtused, mis on suuremad kui 1, ulatuvad eksponentsiaalselt lõpmatuseni.</FCP_VATS_Settings_Gain_Per_Level_Mouseover>
+  <FCP_VATS_Settings_FlatHitChanceBoost>Lame tõuge sihtimisele käibemaksuga [{0}].</FCP_VATS_Settings_FlatHitChanceBoost>
+  <FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>Lisab sihtimisele kindla tõuke, kuna tabamuse tõenäosuse arvutamine madalamatel tasemetel ei ole väga lõbus.</FCP_VATS_Settings_FlatHitChanceBoost_Mouseover>
+  <FCP_VATS_Settings_ClampingFactor>Täpse skaleerimise kinnitustegur [{0}]</FCP_VATS_Settings_ClampingFactor>
+  <FCP_VATS_Settings_ClampingFactor_Mouseover>Kinnitab maksimaalse täpsuse suurendamise ja skaleerib asjakohaselt</FCP_VATS_Settings_ClampingFactor_Mouseover>
+  <FCP_VATS_Settings_Reset>Lähtesta</FCP_VATS_Settings_Reset>
+  <FCP_VATS_LegendaryStats>Legendaarsed efektid:</FCP_VATS_LegendaryStats>
+  <FCP_VATS_MessageReceivedDamageFromHediff>{PAWN_labelShort} on vigane {1}.</FCP_VATS_MessageReceivedDamageFromHediff>
+  <FCP_ReleaseAnimalFromCage>Väljalase {0}</FCP_ReleaseAnimalFromCage>
+  <FCP_CarryAnimalToCage>Kandke {0} puuri</FCP_CarryAnimalToCage>
+  <FCP_ShouldCaptureCommand>Kas see puur püüab metsloomi kinni.</FCP_ShouldCaptureCommand>
+  <FCP_ShouldCaptureTrue>Püüab metsloomi.</FCP_ShouldCaptureTrue>
+  <FCP_ShouldCaptureFalse>Metsloomi ei püüa.</FCP_ShouldCaptureFalse>
+  <FCP_CageAnimalCapturedLabel>Loom tabatud!</FCP_CageAnimalCapturedLabel>
+  <FCP_CageAnimalCapturedText>Olete oma puuri kinni püüdnud {0}.</FCP_CageAnimalCapturedText>
+  <FCP_ChooseAnimalCage>Vali uus puur</FCP_ChooseAnimalCage>
+  <FCP_SelectThisCage>Valige see puur.</FCP_SelectThisCage>
+  <FCP_TransferAnimalBetweenCages>Viige {0} teise puuri.</FCP_TransferAnimalBetweenCages>
+  <ME_MusicExpanded>Muusika laiendatud</ME_MusicExpanded>
+  <ME_Theme>Teema</ME_Theme>
+  <ME_ThemeDescription>Teema</ME_ThemeDescription>
+  <ME_SelectTheme>Valige Teema</ME_SelectTheme>
+  <ME_ShowNowPlaying>Näita praegu mängimas</ME_ShowNowPlaying>
+  <ME_ShowNowPlayingDescription>Kui see on sisse lülitatud, kuvatakse teade praegu valitud loo pealkirjaga.</ME_ShowNowPlayingDescription>
+  <ME_VanillaMusicUpdate>Vanilje muusika värskendus</ME_VanillaMusicUpdate>
+  <ME_VanillaMusicUpdateDescription>Kui see on sisse lülitatud, esitab RimWorld muusikat perioodiliselt, mitte pidevalt.</ME_VanillaMusicUpdateDescription>
+  <ME_SelectSounds>Valige Helid</ME_SelectSounds>
+  <ME_SelectSoundsDescription>Seda teemat kasutatakse võimaluse korral helide jaoks. Kõik helid, mida ei asendata, kasutavad vaniljeheli.</ME_SelectSoundsDescription>
+  <ME_NowPlaying>Praegu esitatakse: {0}</ME_NowPlaying>
+  <ME_Vanilla_Label>Muusika Laiendatud: Vanilla</ME_Vanilla_Label>
+  <ME_Vanilla_Description>Kõik vanilje SongDefid on rakendatud MusicExpanded funktsioonidega!</ME_Vanilla_Description>
+  <FCP_CannotLaunchToOrbit>See vertibird on mõeldud ainult atmosfäärilennuks ega suuda jõuda orbiidi kõrgusele.</FCP_CannotLaunchToOrbit>
 </LanguageData>
