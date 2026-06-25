@@ -5,7 +5,7 @@
 		<letterClass>FIP_RobCo.ChoiceLetter_RobCoPlatinumChipOpportunity</letterClass>
 	</LetterDef>
 
-	<WorldObjectDef>
+	<WorldObjectDef ParentName="Site">
 		<defName>RobCo_CourierCamp</defName>
 		<label>courier trail</label>
 		<description>A temporary courier camp tied to a RobCo platinum chip transaction.</description>
@@ -66,6 +66,7 @@
 		<chipTitle>the CEO</chipTitle>
 		<stage2EnemyPawnKind>RobCo_BerserkSecuritron</stage2EnemyPawnKind>
 		<stage2CorpsePawnKind>RobCo_LibertyPrime</stage2CorpsePawnKind>
+		<unlockResearch>RobCo_Choice_LibertyPrime</unlockResearch>
 		<stage1TargetPoints>700</stage1TargetPoints>
 		<stage2ThreatPoints>3200</stage2ThreatPoints>
 		<stage2LetterLabel>RobCo vault location recovered</stage2LetterLabel>
@@ -79,9 +80,52 @@
 		<chipTitle>the People's Republic</chipTitle>
 		<stage2EnemyPawnKind>RobCo_Liberator</stage2EnemyPawnKind>
 		<stage2CorpsePawnKind>RobCo_WarMachine</stage2CorpsePawnKind>
+		<unlockResearch>RobCo_Choice_WarMachine</unlockResearch>
 		<stage1TargetPoints>700</stage1TargetPoints>
 		<stage2ThreatPoints>3600</stage2ThreatPoints>
 		<stage2LetterLabel>PRC cache coordinates acquired</stage2LetterLabel>
 		<stage2LetterText>The courier's route logs reveal a remote RobCo cache where Chinese Liberators were stockpiled in absurd numbers. The archive also indicates that a War Machine chassis was lost there during containment failure.</stage2LetterText>
+	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+
+	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+		<defName>RobCo_PlatinumBranch_Calculator</defName>
+		<label>Calculator branch</label>
+		<courierNumber>3</courierNumber>
+		<chipTitle>the Calculator</chipTitle>
+		<stage2EnemyPawnKind>RobCo_BerserkSecuritron</stage2EnemyPawnKind>
+		<stage2CorpsePawnKind>RobCo_Pacificator</stage2CorpsePawnKind>
+		<unlockResearch>RobCo_Choice_Pacificator</unlockResearch>
+		<stage1TargetPoints>700</stage1TargetPoints>
+		<stage2ThreatPoints>3400</stage2ThreatPoints>
+		<stage2LetterLabel>Calculator archive recovered</stage2LetterLabel>
+		<stage2LetterText>The courier carried fragments from the Calculator's command archives. They point to an abandoned RobCo data center where a Pacificator chassis was sealed beneath the steel.</stage2LetterText>
+	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+
+	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+		<defName>RobCo_PlatinumBranch_ThinkTank</defName>
+		<label>Think Tank branch</label>
+		<courierNumber>4</courierNumber>
+		<chipTitle>the Think Tank</chipTitle>
+		<stage2EnemyPawnKind>RobCo_RoboScorpion</stage2EnemyPawnKind>
+		<stage2CorpsePawnKind>RobCo_RoboScorpionQueen</stage2CorpsePawnKind>
+		<unlockResearch>RobCo_Choice_ThinkTank</unlockResearch>
+		<stage1TargetPoints>700</stage1TargetPoints>
+		<stage2ThreatPoints>3800</stage2ThreatPoints>
+		<stage2LetterLabel>Think tank archives recovered</stage2LetterLabel>
+		<stage2LetterText>The courier's logs point to a buried Big MT think tank vault. A giant Roboscorpion queen was kept there as a testbed for post-war battlefield intelligence.</stage2LetterText>
+	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+
+	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+		<defName>RobCo_PlatinumBranch_University</defName>
+		<label>University branch</label>
+		<courierNumber>6</courierNumber>
+		<chipTitle>the University</chipTitle>
+		<stage2EnemyPawnKind>RobCo_SecuritronMkII</stage2EnemyPawnKind>
+		<stage2CorpsePawnKind>RobCo_Pacificator</stage2CorpsePawnKind>
+		<unlockResearch>RobCo_Choice_Synths</unlockResearch>
+		<stage1TargetPoints>700</stage1TargetPoints>
+		<stage2ThreatPoints>3000</stage2ThreatPoints>
+		<stage2LetterLabel>University vault recovered</stage2LetterLabel>
+		<stage2LetterText>The courier's route points to a forgotten university vault filled with synthetic personnel archives and dormant robotic test platforms.</stage2LetterText>
 	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
 </Defs>

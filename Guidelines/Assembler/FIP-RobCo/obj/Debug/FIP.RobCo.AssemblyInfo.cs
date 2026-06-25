@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIP_RobCo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a5d6cc80a02a24ed5eb014b042d77000e871300")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bfab3f74d86bfeaef00ff8a5f77fd74bf0399cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIP_RobCo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIP_RobCo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

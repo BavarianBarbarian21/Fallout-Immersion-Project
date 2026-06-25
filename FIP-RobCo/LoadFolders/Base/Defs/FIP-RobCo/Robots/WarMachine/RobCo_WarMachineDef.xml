@@ -49,7 +49,10 @@
 	</ThingDef>
 	<RecipeDef Name="RobCo_WarMachineBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>20</gestationCycles>
-		<researchPrerequisite>RobCo_OS</researchPrerequisite>
+		<researchPrerequisites>
+			<li>RobCo_OS</li>
+			<li>RobCo_Choice_WarMachine</li>
+		</researchPrerequisites>
 		<ingredients>
 			<li>
 				<filter>

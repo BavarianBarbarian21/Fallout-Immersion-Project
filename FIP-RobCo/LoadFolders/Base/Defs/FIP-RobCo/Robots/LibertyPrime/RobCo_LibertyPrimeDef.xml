@@ -50,7 +50,10 @@
 	</ThingDef>
 	<RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
 		<gestationCycles>25</gestationCycles>
-		<researchPrerequisite>RobCo_OS</researchPrerequisite>
+		<researchPrerequisites>
+			<li>RobCo_OS</li>
+			<li>RobCo_Choice_LibertyPrime</li>
+		</researchPrerequisites>
 		<ingredients>
 			<li>
 				<filter>
