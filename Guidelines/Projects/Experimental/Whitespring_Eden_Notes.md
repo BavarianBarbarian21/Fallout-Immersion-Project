@@ -1,0 +1,7 @@
+- Prototype only. These files are intentionally parked under `Guidelines/Projects/Experimental` and are not loaded by `FIP-Whitespring`.
+- `Whitespring_Eden_LeaderDefs.xml` copies the FCP premade leader pattern: unique `PawnKindDef` plus `FCP.Core.CharacterDef` with `CharacterRole_FactionLeader`.
+- Runtime requirement: this exact character pipeline depends on `Rick.FCP.Core.Tools` or an extracted/ported equivalent of the FCP character system. Without that runtime support, the fixed leader pawnkind would exist, but the guaranteed premade identity and name injection would not.
+- `Whitespring_Eden_FactionPatch.xml` swaps `FactionDef[defName="Empire"]` to a single fixed leader: `FIP_Whitespring_Unique_Pawnkind_JohnHenryEden`.
+- `Whitespring_Eden_WestTekPatch.xml` upgrades Eden from `Baseliner` to `WestTek_Xenotype_PureHumans` when `FIP.WestTek` is active.
+- Title caveat: vanilla Royalty uses `Empire_Royal_Stellarch` as the Empire faction leader pawnkind. FIP-Whitespring currently localizes `Stellarch` as `vice-president`, so `Whitespring_Eden_RankNotes.xml` is included as an experimental language override if you want Eden's ladder-facing rank text to read `president` too.
+- If this moves into the live mod, place the defs and patch files under the normal `FIP-Whitespring` load folders and move the language override into the appropriate `Languages/English/DefInjected/RoyalTitleDef` path.
