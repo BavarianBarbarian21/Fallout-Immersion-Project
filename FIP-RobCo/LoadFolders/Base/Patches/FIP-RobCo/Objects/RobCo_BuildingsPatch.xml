@@ -74,6 +74,48 @@
   <!-- SubcoreEncoder -->
   <!-- SubcoreSoftscanner -->
   <!-- SubcoreRipscanner -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/MechGestator/MechGestator</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/LargeMechGestator/LargeMechGestator</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="BasicRecharger"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/BasicRecharger/BasicRecharger</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="StandardRecharger"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/StandardRecharger/StandardRecharger</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreEncoder"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreEncoder/SubcoreEncoder</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreSoftscanner"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreSoftscanner/SubcoreSoftscanner</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreRipscanner"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreRipscanner/SubcoreRipscanner</texPath>
+    </value>
+  </Operation>
   <!-- Change MechBooster to RobCo Booster -->
   <!-- Patch MechGestator recipes -->
   <Operation Class="PatchOperationAdd">

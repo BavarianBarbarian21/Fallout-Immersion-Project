@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -54,6 +56,7 @@ public class RobCoQuestGameComponent : GameComponent
     {
         offerResolved = true;
         offerSent = true;
+        UnlockBranchResearch(branch);
 
         if (!RobCoQuestUtility.TryFindSiteTile(12, 24, out int tile))
         {
@@ -82,6 +85,35 @@ public class RobCoQuestGameComponent : GameComponent
     {
         offerResolved = true;
         offerSent = true;
+    }
+
+    private static void UnlockBranchResearch(RobCoPlatinumQuestBranchDef branch)
+    {
+        if (branch?.unlockResearch == null || Find.ResearchManager == null || branch.unlockResearch.IsFinished)
+        {
+            return;
+        }
+
+        MethodInfo finishMethod = typeof(ResearchManager).GetMethod(
+            "FinishProject",
+            BindingFlags.Instance | BindingFlags.Public,
+            null,
+            new[] { typeof(ResearchProjectDef), typeof(bool), typeof(Pawn) },
+            null);
+
+        if (finishMethod == null)
+        {
+            return;
+        }
+
+        try
+        {
+            finishMethod.Invoke(Find.ResearchManager, new object[] { branch.unlockResearch, false, null });
+        }
+        catch (Exception ex)
+        {
+            Log.Error($"RobCo quest branch unlock failed for {branch.defName}: {ex.Message}");
+        }
     }
 
     public void RevealVaultSite(RobCoPlatinumQuestBranchDef branch)

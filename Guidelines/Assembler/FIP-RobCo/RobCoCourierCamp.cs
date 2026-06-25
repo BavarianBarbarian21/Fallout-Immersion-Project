@@ -5,7 +5,7 @@ using Verse;
 
 namespace FIP_RobCo;
 
-public class RobCoCourierCamp : Camp
+public class RobCoCourierCamp : Site
 {
     public string branchDefName;
     public int expirationTick;

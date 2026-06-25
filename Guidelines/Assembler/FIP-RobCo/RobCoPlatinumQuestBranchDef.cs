@@ -9,6 +9,7 @@ public class RobCoPlatinumQuestBranchDef : Def
     public string chipTitle = string.Empty;
     public PawnKindDef stage2EnemyPawnKind;
     public PawnKindDef stage2CorpsePawnKind;
+    public ResearchProjectDef unlockResearch;
     public float stage1TargetPoints = 600f;
     public float stage2ThreatPoints = 2400f;
     public string stage2LetterLabel = string.Empty;
