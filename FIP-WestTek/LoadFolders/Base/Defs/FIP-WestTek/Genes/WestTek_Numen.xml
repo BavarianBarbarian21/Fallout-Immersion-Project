@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Ears-->
+<GeneDef ParentName="GeneEarsBase">
+  <defName>WestTek_SaplingGrowth</defName>
+  <label>sapling growth</label>
+  <description>Carriers of this gene develop small living saplings that sprout from their bodies. These symbiotic growths are characteristic of the Numen lineage, sustained by the host's mutated physiology.</description>
+
+  <iconPath>UI/Icons/Genes/Gene_SaplingGrowth</iconPath>
+
+  <renderNodeProperties>
+    <li>
+      <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+      <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+
+      <texPath>Things/Pawn/Humanlike/HeadAttachments/Saplings/Saplings</texPath>
+
+      <colorType>Skin</colorType>
+
+      <parentTagDef>Head</parentTagDef>
+
+      <useSkinShader>true</useSkinShader>
+      <useRottenColor>true</useRottenColor>
+
+      <rotDrawMode>Fresh, Rotting</rotDrawMode>
+
+      <drawData>
+        <defaultData>
+          <layer>70</layer>
+        </defaultData>
+      </drawData>
+    </li>
+  </renderNodeProperties>
+
+  <symbolPack>
+    <prefixSymbols>
+      <li><symbol>plant</symbol></li>
+      <li><symbol>flora</symbol></li>
+      <li><symbol>sapling</symbol></li>
+      <li><symbol>leaf</symbol></li>
+      <li><symbol>vine</symbol></li>
+    </prefixSymbols>
+
+    <suffixSymbols>
+      <li><symbol>plant</symbol></li>
+      <li><symbol>sapling</symbol></li>
+      <li><symbol>sprout</symbol></li>
+      <li><symbol>flora</symbol></li>
+      <li><symbol>leaf</symbol></li>
+    </suffixSymbols>
+  </symbolPack>
+</GeneDef>
+</Defs>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Ears-->
+<GeneDef ParentName="GeneEarsBase">
+  <defName>WestTek_CoonEars</defName>
+  <label>raccoon ears</label>
+  <description>Carriers of this gene have rounded raccoon-like ears, a hallmark of the S'Lanter and S'Nuffy lineages.</description>
+
+  <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
+
+  <renderNodeProperties>
+    <li>
+      <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+      <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+
+      <texPath>Things/Pawn/Humanlike/HeadAttachments/CoonEars/CoonEars</texPath>
+
+      <colorType>Skin</colorType>
+
+      <parentTagDef>Head</parentTagDef>
+
+      <useSkinShader>true</useSkinShader>
+      <useRottenColor>true</useRottenColor>
+
+      <rotDrawMode>Fresh, Rotting</rotDrawMode>
+
+      <drawData>
+        <defaultData>
+          <layer>70</layer>
+        </defaultData>
+      </drawData>
+    </li>
+  </renderNodeProperties>
+
+  <symbolPack>
+    <prefixSymbols>
+      <li><symbol>raccoon</symbol></li>
+      <li><symbol>coon</symbol></li>
+      <li><symbol>procyon</symbol></li>
+      <li><symbol>ringtail</symbol></li>
+      <li><symbol>mask</symbol></li>
+    </prefixSymbols>
+
+    <suffixSymbols>
+      <li><symbol>raccoon</symbol></li>
+      <li><symbol>coon</symbol></li>
+      <li><symbol>ringtail</symbol></li>
+      <li><symbol>ear</symbol></li>
+      <li><symbol>procyon</symbol></li>
+    </suffixSymbols>
+  </symbolPack>
+</GeneDef>
+
+  <!-- S'Nuffy combined skin + hair coloration genes -->
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_White</defName>
+  <label>white s'nuffy coloration</label>
+  <labelShortAdj>white</labelShortAdj>
+  <skinColorOverride>(225, 222, 214)</skinColorOverride>
+  <hairColorOverride>(175, 171, 163)</hairColorOverride>
+  <displayOrderInCategory>97</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Gray</defName>
+  <label>gray s'nuffy coloration</label>
+  <labelShortAdj>gray</labelShortAdj>
+  <skinColorOverride>(110, 108, 101)</skinColorOverride>
+  <hairColorOverride>(58, 57, 54)</hairColorOverride>
+  <displayOrderInCategory>98</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Brown</defName>
+  <label>brown s'nuffy coloration</label>
+  <labelShortAdj>brown</labelShortAdj>
+  <skinColorOverride>(128, 108, 89)</skinColorOverride>
+  <hairColorOverride>(74, 60, 48)</hairColorOverride>
+  <displayOrderInCategory>99</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Purple</defName>
+  <label>purple s'nuffy coloration</label>
+  <labelShortAdj>purple</labelShortAdj>
+  <skinColorOverride>(142, 126, 152)</skinColorOverride>
+  <hairColorOverride>(88, 74, 98)</hairColorOverride>
+  <displayOrderInCategory>100</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Black</defName>
+  <label>black s'nuffy coloration</label>
+  <labelShortAdj>black</labelShortAdj>
+  <skinColorOverride>(48, 47, 44)</skinColorOverride>
+  <hairColorOverride>(22, 22, 21)</hairColorOverride>
+  <displayOrderInCategory>101</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Blonde</defName>
+  <label>blonde s'nuffy coloration</label>
+  <labelShortAdj>blonde</labelShortAdj>
+  <skinColorOverride>(188, 169, 128)</skinColorOverride>
+  <hairColorOverride>(218, 194, 139)</hairColorOverride>
+  <displayOrderInCategory>102</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Teal</defName>
+  <label>teal s'nuffy coloration</label>
+  <labelShortAdj>teal</labelShortAdj>
+  <skinColorOverride>(92, 126, 124)</skinColorOverride>
+  <hairColorOverride>(48, 82, 82)</hairColorOverride>
+  <displayOrderInCategory>103</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+</GeneDef>
+
+</Defs>
