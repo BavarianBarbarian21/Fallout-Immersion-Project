@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>WestTek_Gene_SkinwalkerMutation</defName>
+    <label>skinwalker mutation</label>
+    <description>This pawn carries an unstable experimental fauna mutation, allowing controlled transformation into a Skinwalker form.</description>
+    <iconPath>UI/Icons/Genes/WestTek_SkinwalkerMutation</iconPath>
+    <displayOrderInCategory>500</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <biostatArc>1</biostatArc>
+    <abilities>
+      <li>WestTek_Ability_SkinwalkerShift</li>
+    </abilities>
+  </GeneDef>
+
+  <AbilityDef>
+    <defName>WestTek_Ability_SkinwalkerShift</defName>
+    <label>skinwalker shift</label>
+    <description>Shift between stabilized S'Lanter form and unstable Skinwalker form.</description>
+    <iconPath>UI/Abilities/WestTek_SkinwalkerShift</iconPath>
+    <targetRequired>false</targetRequired>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <comps>
+      <li Class="FIP.WestTek.CompProperties_AbilitySkinwalkerShift" />
+    </comps>
+  </AbilityDef>
+
+</Defs>

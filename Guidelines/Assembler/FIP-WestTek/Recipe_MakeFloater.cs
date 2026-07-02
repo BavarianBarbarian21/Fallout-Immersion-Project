@@ -31,6 +31,6 @@ public sealed class RecipeWorker_MakeFloater : RecipeWorker
             }
         }
 
-        Messages.Message("A tame floater lurches out of the culture vat and recognizes the colony as its handler.", floater, MessageTypeDefOf.PositiveEvent);
+        Messages.Message("A tame floater lurches out of the culture vat and recognizes the colony as its home.", floater, MessageTypeDefOf.PositiveEvent);
     }
 }

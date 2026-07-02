@@ -71,18 +71,13 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
         }
     }
 
-    private static void TransformIntoSuperMutant(Pawn pawn)
-    {
-        bool shouldBecomeNightkin = ShouldBecomeNightkin(pawn);
-        pawn.genes.SetXenotype(ChooseSuperMutantXenotype(pawn));
-        if (shouldBecomeNightkin)
-        {
-            WestTekMutationUtility.ApplyNightkinGene(pawn);
-        }
+  private static void TransformIntoSuperMutant(Pawn pawn)
+{
+    pawn.genes.SetXenotype(ChooseSuperMutantXenotype(pawn));
 
-        pawn.Drawer?.renderer?.SetAllGraphicsDirty();
-        PortraitsCache.SetDirty(pawn);
-    }
+    pawn.Drawer?.renderer?.SetAllGraphicsDirty();
+    PortraitsCache.SetDirty(pawn);
+}
 
     private static void TransformIntoCentaur(Pawn pawn)
     {
@@ -155,11 +150,7 @@ public abstract class Recipe_AdministerFEVBase : Recipe_Surgery
         return WestTekDefOf.WestTek_Xenotype_SuperMutantSecond;
     }
 
-    private static bool ShouldBecomeNightkin(Pawn pawn)
-    {
-        XenotypeDef xenotype = pawn.genes?.Xenotype;
-        return xenotype != null && xenotype.defName is "Hussar" or "Waster";
-    }
+
 }
 
 public sealed class Recipe_AdministerUnrefinedFEVDosage : Recipe_AdministerFEVBase

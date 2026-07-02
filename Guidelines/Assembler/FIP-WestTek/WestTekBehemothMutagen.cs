@@ -13,26 +13,52 @@ public sealed class CompProperties_UseEffectBehemothMutagen : CompProperties_Use
 
 public sealed class CompUseEffect_BehemothMutagen : CompUseEffect
 {
+    public override AcceptanceReport CanBeUsedBy(Pawn p)
+    {
+        AcceptanceReport baseReport = base.CanBeUsedBy(p);
+        if (!baseReport.Accepted)
+        {
+            return baseReport;
+        }
+
+        if (!WestTekMutationUtility.IsSuperMutant(p))
+        {
+            return "Only first- and second-generation super mutants can use this mutagen.";
+        }
+
+        return true;
+    }
+
     public override void DoEffect(Pawn usedBy)
     {
-        base.DoEffect(usedBy);
-
         if (usedBy == null || !WestTekMutationUtility.IsSuperMutant(usedBy))
         {
-            Messages.Message("Only first- and second-generation super mutants can survive a behemoth mutagen.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message(
+                "Only first- and second-generation super mutants can survive a behemoth mutagen.",
+                MessageTypeDefOf.RejectInput,
+                historical: false
+            );
             return;
         }
 
         Map map = usedBy.MapHeld;
         if (map == null)
         {
-            Messages.Message("The mutagen must be injected on a map tile.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message(
+                "The mutagen must be injected on a map tile.",
+                MessageTypeDefOf.RejectInput,
+                historical: false
+            );
             return;
         }
 
+        base.DoEffect(usedBy);
+
         IntVec3 position = usedBy.PositionHeld;
         Name originalName = usedBy.Name;
+
         Pawn behemoth = PawnGenerator.GeneratePawn(WestTekDefOf.WestTek_TameBehemoth, Faction.OfPlayer);
+
         if (originalName != null)
         {
             behemoth.Name = originalName;
@@ -40,7 +66,9 @@ public sealed class CompUseEffect_BehemothMutagen : CompUseEffect
 
         usedBy.DeSpawnOrDeselect();
         usedBy.Destroy(DestroyMode.Vanish);
+
         GenSpawn.Spawn(behemoth, position, map, WipeMode.Vanish);
+
         if (behemoth.training != null)
         {
             foreach (TrainableDef trainableDef in DefDatabase<TrainableDef>.AllDefsListForReading)
@@ -52,6 +80,10 @@ public sealed class CompUseEffect_BehemothMutagen : CompUseEffect
             }
         }
 
-        Messages.Message("The mutagen finishes its work by collapsing the subject into a tame behemoth.", behemoth, MessageTypeDefOf.PositiveEvent);
+        Messages.Message(
+            "The mutagen finishes its work by collapsing the subject into a tame behemoth.",
+            behemoth,
+            MessageTypeDefOf.PositiveEvent
+        );
     }
 }

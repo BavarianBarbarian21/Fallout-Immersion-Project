@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Flatworms-->
+  <RecipeDef>
+    <defName>WestTek_MakeFloater</defName>
+    <label>create floater</label>
+    <description>Condition an early FEV culture inside a flatworm-derived host, yielding a tamed floater specimen.</description>
+    <workerClass>FIP.WestTek.RecipeWorker_MakeFloater</workerClass>
+    <jobString>Growing a floater specimen.</jobString>
+    <workAmount>2200</workAmount>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <researchPrerequisite>WestTek_FlatwormMutation</researchPrerequisite>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_FEVProbe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_FEVProbe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <li>
+        <thingDef>WestTek_FEVProbe</thingDef>
+        <count>1</count>
+      </li>
+    </products>
+  </RecipeDef>
+
+<!--Tier 1 Procedure-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerUnrefinedFEVDosage</defName>
+    <label>administer unrefined FEV dosage</label>
+    <description>Inject an unstable Forced Evolutionary Virus dose into a colony prisoner. The virus is not controlled enough to produce consistent results — outcomes split between centaur conversion, super mutant conversion, and fatal tissue breakdown.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerUnrefinedFEVDosage</workerClass>
+    <jobString>Administering unrefined FEV dosage to TargetA.</jobString>
+    <workAmount>1600</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV1</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_UnrefinedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_UnrefinedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_UnrefinedFEVDosage</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <!--Tier 2 Procedure-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerRefinedFEVDosage</defName>
+    <label>administer refined FEV dosage</label>
+    <description>Inject a refined Forced Evolutionary Virus dose into a colonist or colony prisoner. Outcomes split between centaur conversion and super mutant conversion.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerRefinedFEVDosage</workerClass>
+    <jobString>Administering refined FEV dosage to TargetA.</jobString>
+    <workAmount>1800</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <skillRequirements>
+      <Medicine>7</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV2</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_RefinedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_RefinedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_RefinedFEVDosage</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <!--Tier 3 Procedure-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>WestTek_AdministerIsolatedFEVDosage</defName>
+    <label>administer isolated FEV dosage</label>
+    <description>Inject an isolated Forced Evolutionary Virus dose into a colonist. Vault-bred and baseline human subjects tend toward first-generation outcomes. Other xenotypes generally produce second-generation results.</description>
+    <workerClass>FIP.WestTek.Recipe_AdministerIsolatedFEVDosage</workerClass>
+    <jobString>Administering isolated FEV dosage to TargetA.</jobString>
+    <workAmount>2200</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>false</isViolation>
+    <skillRequirements>
+      <Medicine>9</Medicine>
+    </skillRequirements>
+    <researchPrerequisite>
+      <li>WestTek_FEV3</li>
+    </researchPrerequisite>
+    <uiIconThing>WestTek_IsolatedFEVDosage</uiIconThing>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_IsolatedFEVDosage</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WestTek_IsolatedFEVDosage</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+    <!--Tier 1 Effect-->
+  <HediffDef>
+    <defName>WestTek_FEVMutationPending_1</defName>
+    <label>unstable FEV exposure</label>
+    <description>An unrefined FEV dosage is tearing through this subject's body in violent, uneven waves. Their metabolism surges, tissues misfire, and the mind slips toward paranoia and collapse while the mutation struggles to take hold.</description>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <mentalBreakMtbDays>12</mentalBreakMtbDays>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--Tier 2 Effect-->
+  <HediffDef>
+    <defName>WestTek_FEVMutationPending_2</defName>
+    <label>refined FEV exposure</label>
+    <description>A refined FEV strain is restructuring this subject with far more control, but the process is still brutal. Violent mood swings, intrusive aggression, and bouts of instability are common until the body either stabilizes or fails.</description>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <mentalBreakMtbDays>8</mentalBreakMtbDays>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--Tier 3 Effect-->
+  <HediffDef>
+    <defName>WestTek_FEVMutationPending_3</defName>
+    <label>isolated FEV exposure</label>
+    <description>An isolated FEV culture is remaking this subject at the deepest biological level. The transformation is faster and cleaner than lesser strains, but the nervous system remains under immense pressure until the final mutation locks into place.</description>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <mentalBreakMtbDays>4</mentalBreakMtbDays>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef>
+  <defName>WestTek_UnrefinedFaunaMutagen</defName>
+  <label>unrefined fauna mutagen</label>
+  <description>An unstable FEV-derived fauna mutagen. Can be used on a living raccoon to force a S'Lanter transformation.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <resourceReadoutPriority>Middle</resourceReadoutPriority>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_UnrefinedFaunaMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectUnrefinedFaunaMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1200</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_FEVProbe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+        <li>WestTek_FEVProbe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_ExperimentalFaunaMutagen</defName>
+  <label>experimental fauna mutagen</label>
+  <description>An experimental mutagen for S'Lanter subjects. Adds the Skinwalker mutation and unlocks transformation.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_ExperimentalFaunaMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectExperimentalFaunaMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation3</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_RefinedFaunaMutagen</defName>
+  <label>refined fauna mutagen</label>
+  <description>A refined fauna mutagen for S'Lanter subjects. Stabilizes the subject into a Highmate-derived line unless they already carry the experimental Skinwalker mutation.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_RefinedFaunaMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectRefinedFaunaMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_CanineMutagen</defName>
+  <label>canine mutagen</label>
+  <description>A refined canine mutagen for Highmate-derived fauna subjects.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_CanineMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectFaunaGenePackageMutagen">
+      <packageLabel>R'Uffian genome</packageLabel>
+      <genesToAdd>
+        <li>WestTek_Gene_RUffian</li>
+        <!-- Cosmetics later:
+        <li>Ears_Floppy</li>
+        <li>Tail_Furry</li>
+        -->
+      </genesToAdd>
+    </li>
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_FelineMutagen</defName>
+  <label>feline mutagen</label>
+  <description>A refined feline mutagen for Highmate-derived fauna subjects.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_FelineMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectFaunaGenePackageMutagen">
+      <packageLabel>M'Erowi genome</packageLabel>
+      <genesToAdd>
+        <li>WestTek_Gene_MErowi</li>
+        <!-- Cosmetics later:
+        <li>Ears_Cat</li>
+        <li>Tail_Smooth</li>
+        -->
+      </genesToAdd>
+    </li>
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_LeporineMutagen</defName>
+  <label>leporine mutagen</label>
+  <description>A refined leporine mutagen for Highmate-derived fauna subjects.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_LeporineMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectFaunaGenePackageMutagen">
+      <packageLabel>B'Aja genome</packageLabel>
+      <genesToAdd>
+        <li>WestTek_Gene_BAja</li>
+        <!-- Cosmetics later:
+        <li>WestTek_BunnyEars</li>
+        <li>WestTek_CoonTail</li>
+        -->
+      </genesToAdd>
+    </li>
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_ProcyonineMutagen</defName>
+  <label>procyonine mutagen</label>
+  <description>A refined procyonine mutagen for Highmate-derived fauna subjects.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>Things/Item/WestTek_ProcyonineMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectFaunaGenePackageMutagen">
+      <packageLabel>S'Nuffy genome</packageLabel>
+      <genesToAdd>
+        <li>WestTek_Gene_SNuffy</li>
+        <!-- Cosmetics later:
+        <li>WestTek_CoonEars</li>
+        <li>WestTek_CoonTail</li>
+        -->
+      </genesToAdd>
+    </li>
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+</Defs>

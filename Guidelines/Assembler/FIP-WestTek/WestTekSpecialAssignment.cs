@@ -112,5 +112,14 @@ internal static class Patch_PawnGenerator_GenerateGenes
     private static void Postfix(Pawn pawn, XenotypeDef xenotype, PawnGenerationRequest request)
     {
         WestTekSpecialUtility.AssignGeneratedSpecials(pawn);
+
+        if (pawn?.genes?.Xenotype != null &&
+            pawn.genes.Xenotype.defName is
+                "WestTek_Xenotype_SLanter"
+                or "WestTek_Xenotype_SNuffy"
+                or "WestTek_Xenotype_Skinwalker")
+        {
+            WestTekFaunaMutationUtility.AssignRandomFurGene(pawn);
+        }
     }
 }
