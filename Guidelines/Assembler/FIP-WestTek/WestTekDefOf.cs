@@ -30,6 +30,7 @@ internal static class WestTekDefOf
     public static GeneDef WestTek_FEVSymbioticSenses = null;
     public static GeneDef WestTek_FEVSymbioticMotorics = null;
     public static GeneDef WestTek_FEVSymbioticOrgans = null;
+    public static ThingDef WestTek_PlantSymbiote = null;
 
     public static GeneDef WestTek_Gene_SolarPowered = null;
     public static GeneDef WestTek_Gene_Myceline = null;
@@ -37,8 +38,8 @@ internal static class WestTekDefOf
     public static GeneDef WestTek_Gene_SporeCarrier = null;
     public static GeneDef WestTek_Gene_Heterotroph = null;
 
-    public static ThingDef WestTek_RefinedFloraMutagen = null;
-    public static ThingDef WestTek_ExperimentalFloraMutagen = null;
+    public static ThingDef WestTek_CultivationFloraMutagen = null;
+    public static ThingDef WestTek_PollinationFloraMutagen = null;
 
     public static AbilityDef WestTek_Ability_SporeInfect = null;
 
@@ -60,10 +61,11 @@ internal static class WestTekDefOf
     public static GeneDef WestTek_Gene_MErowi = null;
     public static GeneDef WestTek_Gene_RUffian = null;
     public static GeneDef WestTek_Gene_SNuffy = null;
+    public static GeneDef WestTek_Gene_ProcyonScrounger = null;
 
     public static ThingDef WestTek_UnrefinedFaunaMutagen = null;
-    public static ThingDef WestTek_ExperimentalFaunaMutagen = null;
-    public static ThingDef WestTek_RefinedFaunaMutagen = null;
+    public static ThingDef WestTek_SkinwalkerFaunaMutagen = null;
+    public static ThingDef WestTek_DomesticationFaunaMutagen = null;
     public static ThingDef WestTek_CanineMutagen = null;
     public static ThingDef WestTek_FelineMutagen = null;
     public static ThingDef WestTek_LeporineMutagen = null;

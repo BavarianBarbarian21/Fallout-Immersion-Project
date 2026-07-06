@@ -8,6 +8,13 @@
     <iconPath>UI/Icons/Genes/Gene_EarFloppy</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
+    <skillGains>
+      <Animals>1</Animals>
+      <Plants>1</Plants>
+    </skillGains>
+    <statOffsets>
+      <MoveSpeed>0.12</MoveSpeed>
+    </statOffsets>
     <renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -67,6 +74,13 @@
     <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
+    <skillGains>
+      <Melee>1</Melee>
+      <Social>1</Social>
+    </skillGains>
+    <statOffsets>
+      <MeleeHitChance>0.05</MeleeHitChance>
+    </statOffsets>
     <renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -126,6 +140,12 @@
     <iconPath>UI/Icons/Genes/Gene_EarFloppy</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
+    <skillGains>
+      <Melee>2</Melee>
+    </skillGains>
+    <statOffsets>
+      <MeleeDPS>0.20</MeleeDPS>
+    </statOffsets>
     <renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -182,11 +202,16 @@
     <defName>WestTek_Gene_SNuffy</defName>
     <label>S'Nuffy genome</label>
     <description>A stabilized procyonine-derived fauna genome.</description>
-    <iconPath>UI/Icons/Genes/Gene_EarFloppy</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-      <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
-
+    <skillGains>
+      <Animals>2</Animals>
+      <Social>1</Social>
+    </skillGains>
+    <statOffsets>
+      <SocialImpact>0.10</SocialImpact>
+    </statOffsets>
   <renderNodeProperties>
     <li>
       <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -237,6 +262,77 @@
         </drawData>
       </li>
   </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>WestTek_Gene_ProcyonScrounger</defName>
+    <label>procyon scrounger genome</label>
+    <description>A stabilized procyonine scavenger package for S'Nuffy subjects. Carriers are quicker, better at animals, and more resistant to wasteland toxins.</description>
+    <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <skillGains>
+      <Animals>1</Animals>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <statOffsets>
+      <MoveSpeed>0.10</MoveSpeed>
+    </statOffsets>
+    <statFactors>
+      <ToxicResistance>1.15</ToxicResistance>
+    </statFactors>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>WestTek_Gene_CoonEars</defName>
+    <label>coon ears</label>
+    <description>Rounded procyonine ears inherited from the S'Nuffy line.</description>
+    <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CoonEars/CoonEars</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>WestTek_Gene_Docile</defName>
+    <label>docile</label>
+    <description>S'Nuffy domestication makes the carrier calmer and easier to live with.</description>
+    <iconPath>FIP-WestTek/Misc/Placeholder</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <statOffsets>
+      <MentalBreakThreshold>-0.04</MentalBreakThreshold>
+      <SocialImpact>0.08</SocialImpact>
+    </statOffsets>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>WestTek_Gene_FrightAndFlight</defName>
+    <label>fright and flight</label>
+    <description>S'Nuffy subjects panic easily, but that same reflex makes them fast when danger closes in.</description>
+    <iconPath>FIP-WestTek/Misc/Placeholder</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <statOffsets>
+      <MoveSpeed>0.16</MoveSpeed>
+      <MentalBreakThreshold>0.03</MentalBreakThreshold>
+    </statOffsets>
   </GeneDef>
 
   <!-- S'Nuffy combined skin + hair coloration genes -->

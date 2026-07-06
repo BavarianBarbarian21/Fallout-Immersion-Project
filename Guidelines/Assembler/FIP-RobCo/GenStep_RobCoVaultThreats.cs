@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public class GenStep_RobCoVaultThreats : GenStep
 {

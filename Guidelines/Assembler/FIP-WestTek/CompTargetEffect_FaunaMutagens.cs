@@ -64,15 +64,15 @@ public sealed class CompTargetEffect_UnrefinedFaunaMutagen : CompTargetEffect
     }
 }
 
-public sealed class CompProperties_TargetEffectExperimentalFaunaMutagen : CompProperties
+public sealed class CompProperties_TargetEffectSkinwalkerFaunaMutagen : CompProperties
 {
-    public CompProperties_TargetEffectExperimentalFaunaMutagen()
+    public CompProperties_TargetEffectSkinwalkerFaunaMutagen()
     {
-        compClass = typeof(CompTargetEffect_ExperimentalFaunaMutagen);
+        compClass = typeof(CompTargetEffect_SkinwalkerFaunaMutagen);
     }
 }
 
-public sealed class CompTargetEffect_ExperimentalFaunaMutagen : CompTargetEffect
+public sealed class CompTargetEffect_SkinwalkerFaunaMutagen : CompTargetEffect
 {
     public override void DoEffectOn(Pawn user, Thing target)
     {
@@ -84,7 +84,7 @@ public sealed class CompTargetEffect_ExperimentalFaunaMutagen : CompTargetEffect
 
         if (!WestTekFaunaMutationUtility.IsSLanter(pawn))
         {
-            Messages.Message("Experimental fauna mutagen can only be used on S'Lanter.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("Skinwalker fauna mutagen can only be used on S'Lanter.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
@@ -98,7 +98,7 @@ public sealed class CompTargetEffect_ExperimentalFaunaMutagen : CompTargetEffect
         ConsumeOne();
 
         Messages.Message(
-            $"{pawn.LabelShortCap} is now carrying the experimental Skinwalker mutation.",
+            $"{pawn.LabelShortCap} is now carrying the Skinwalker mutation.",
             pawn,
             MessageTypeDefOf.PositiveEvent
         );
@@ -123,15 +123,15 @@ public sealed class CompTargetEffect_ExperimentalFaunaMutagen : CompTargetEffect
     }
 }
 
-public sealed class CompProperties_TargetEffectRefinedFaunaMutagen : CompProperties
+public sealed class CompProperties_TargetEffectDomesticationFaunaMutagen : CompProperties
 {
-    public CompProperties_TargetEffectRefinedFaunaMutagen()
+    public CompProperties_TargetEffectDomesticationFaunaMutagen()
     {
-        compClass = typeof(CompTargetEffect_RefinedFaunaMutagen);
+        compClass = typeof(CompTargetEffect_DomesticationFaunaMutagen);
     }
 }
 
-public sealed class CompTargetEffect_RefinedFaunaMutagen : CompTargetEffect
+public sealed class CompTargetEffect_DomesticationFaunaMutagen : CompTargetEffect
 {
     public override void DoEffectOn(Pawn user, Thing target)
     {
@@ -143,21 +143,21 @@ public sealed class CompTargetEffect_RefinedFaunaMutagen : CompTargetEffect
 
         if (!WestTekFaunaMutationUtility.IsSLanter(pawn))
         {
-            Messages.Message("Refined fauna mutagen can only be used on S'Lanter.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("Domestication fauna mutagen can only be used on S'Lanter.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
         if (WestTekFaunaMutationUtility.HasSkinwalkerMutation(pawn))
         {
-            Messages.Message("This S'Lanter already carries the experimental mutation and cannot be refined into a Highmate line.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("This S'Lanter already carries the Skinwalker mutation and cannot be domesticated into a S'Nuffy line.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
-        WestTekFaunaMutationUtility.TransformSLanterIntoHighmate(pawn);
+        WestTekFaunaMutationUtility.TransformSLanterIntoSNuffy(pawn);
         ConsumeOne();
 
         Messages.Message(
-            $"{pawn.LabelShortCap} stabilizes into a Highmate-derived fauna strain.",
+            $"{pawn.LabelShortCap} stabilizes into a S'Nuffy fauna strain.",
             pawn,
             MessageTypeDefOf.PositiveEvent
         );
@@ -206,9 +206,9 @@ public sealed class CompTargetEffect_FaunaGenePackageMutagen : CompTargetEffect
             return;
         }
 
-        if (!WestTekFaunaMutationUtility.IsHighmate(pawn))
+        if (!WestTekFaunaMutationUtility.IsSNuffy(pawn))
         {
-            Messages.Message("This mutagen can only be used on Highmates.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("This mutagen can only be used on S'Nuffies.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 

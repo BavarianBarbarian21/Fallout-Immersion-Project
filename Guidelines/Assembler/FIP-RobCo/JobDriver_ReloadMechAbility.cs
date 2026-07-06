@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public class JobDriver_ReloadMechAbility : JobDriver
 {
@@ -61,6 +61,20 @@ public class JobDriver_ReloadMechAbility : JobDriver
         checkAmmo.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return checkAmmo;
 
+        Toil gotoMech = Toils_Goto.GotoThing(MechInd, PathEndMode.Touch);
+        Toil reload = new();
+        reload.initAction = delegate
+        {
+            GetReloadableComp()?.ReloadFromInventory(pawn);
+        };
+        reload.defaultCompleteMode = ToilCompleteMode.Instant;
+
+        yield return Toils_Jump.JumpIf(gotoMech, () =>
+        {
+            CompAbilityEffect_LaunchProjectileMultiple comp = GetReloadableComp();
+            return HasEnoughAmmoInInventory(comp);
+        });
+
         yield return Toils_Goto.GotoThing(AmmoInd, PathEndMode.ClosestTouch)
             .FailOnDespawnedNullOrForbidden(AmmoInd)
             .FailOn(() => Ammo == null);
@@ -89,14 +103,7 @@ public class JobDriver_ReloadMechAbility : JobDriver
         takeAmmo.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return takeAmmo;
 
-        yield return Toils_Goto.GotoThing(MechInd, PathEndMode.Touch);
-
-        Toil reload = new();
-        reload.initAction = delegate
-        {
-            GetReloadableComp()?.ReloadFromInventory(pawn);
-        };
-        reload.defaultCompleteMode = ToilCompleteMode.Instant;
+        yield return gotoMech;
         yield return reload;
     }
 
@@ -117,5 +124,15 @@ public class JobDriver_ReloadMechAbility : JobDriver
         }
 
         return null;
+    }
+
+    private bool HasEnoughAmmoInInventory(CompAbilityEffect_LaunchProjectileMultiple comp)
+    {
+        if (comp?.Props.ammoDef == null)
+        {
+            return false;
+        }
+
+        return (pawn.inventory?.innerContainer.TotalStackCountOfDef(comp.Props.ammoDef) ?? 0) >= comp.Props.ammoCountPerCharge;
     }
 }

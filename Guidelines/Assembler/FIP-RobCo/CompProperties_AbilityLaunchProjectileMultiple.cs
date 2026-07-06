@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.Sound;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public class CompProperties_AbilityLaunchProjectileMultiple : CompProperties_AbilityLaunchProjectile
 {

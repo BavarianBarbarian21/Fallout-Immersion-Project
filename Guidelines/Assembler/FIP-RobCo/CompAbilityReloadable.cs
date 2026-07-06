@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public class CompAbilityReloadable : ThingComp
 {

@@ -2,18 +2,60 @@
 <Defs>
 
   <!-- ========================= -->
+  <!-- Shared symbiote material  -->
+  <!-- ========================= -->
+
+  <ThingDef>
+    <defName>WestTek_PlantSymbiote</defName>
+    <label>plant symbiote</label>
+    <description>A living FEV flora symbiote prepared for surgical grafting. West Tek plant prostheses consume one symbiote per operation.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>25</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <graphicData>
+      <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workAmount>1200</workAmount>
+      <ingredients>
+        <li>
+          <filter>
+            <thingDefs>
+              <li>Uranium</li>
+            </thingDefs>
+          </filter>
+          <count>100</count>
+        </li>
+      </ingredients>
+      <fixedIngredientFilter>
+        <thingDefs>
+          <li>Uranium</li>
+        </thingDefs>
+      </fixedIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- ========================= -->
   <!-- Plant replacement Hediffs -->
   <!-- ========================= -->
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>WestTek_SymbioticPlantEye</defName>
     <label>symbiotic plant eye</label>
-    <description>A living FEV plant eye grown into the socket. It functions as a biological replacement and counts as a sensory flora implant.</description>
-
+    <description>A living FEV plant eye grown into the socket. It behaves close to a bionic eye and counts as a sensory flora implant.</description>
     <addedPartProps>
       <partEfficiency>1.10</partEfficiency>
     </addedPartProps>
-
     <modExtensions>
       <li Class="FIP.WestTek.WestTekFloraImplantExtension">
         <category>Senses</category>
@@ -26,16 +68,184 @@
     </modExtensions>
   </HediffDef>
 
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_PhotosyntheticPlantEye</defName>
+    <label>photosynthetic plant eye</label>
+    <description>A light-hungry FEV plant eye with finer detail perception but less raw stability than the standard symbiotic eye.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Eye</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantEar</defName>
+    <label>symbiotic plant ear</label>
+    <description>A sensitive leaf-and-root hearing organ. It is stable, responsive, and counts as a sensory flora implant.</description>
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Ear</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_ResonantPlantEar</defName>
+    <label>resonant plant ear</label>
+    <description>A resonant flora ear that amplifies faint movement and vibration through living fibers.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Ear</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantNose</defName>
+    <label>symbiotic plant nose</label>
+    <description>A living plant nose with clean scent reception and a faint herbal bloom.</description>
+    <addedPartProps>
+      <partEfficiency>1.05</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Nose</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_BlossomingPlantNose</defName>
+    <label>blossoming plant nose</label>
+    <description>A more expressive flora nose with small flowering vents and sharper chemical sensitivity.</description>
+    <addedPartProps>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Nose</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantJaw</defName>
+    <label>symbiotic plant jaw</label>
+    <description>A living vine-and-bark jaw that restores speech and eating with steady bionic-grade strength.</description>
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Jaw</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_ThornedPlantJaw</defName>
+    <label>thorned plant jaw</label>
+    <description>A stronger jaw grown with thorned bark ridges. It bites harder, but the structure is more invasive.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Jaw</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantTongue</defName>
+    <label>symbiotic plant tongue</label>
+    <description>A flexible flora tongue that restores speech and eating with natural-seeming control.</description>
+    <addedPartProps>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Tongue</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_NectarPlantTongue</defName>
+    <label>nectar plant tongue</label>
+    <description>A nectar-secreting plant tongue with quick sensory tendrils and a faintly sweet chemical trace.</description>
+    <addedPartProps>
+      <partEfficiency>1.12</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Tongue</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>WestTek_ParasiticPlantArm</defName>
     <label>parasitic plant arm</label>
-    <description>A muscular FEV vine structure replacing the original arm. It functions as a biological replacement and counts as a motoric flora implant.</description>
-
+    <description>A muscular FEV vine structure replacing the original arm. It is slightly stronger than a bionic arm but biologically invasive.</description>
     <addedPartProps>
       <partEfficiency>1.15</partEfficiency>
     </addedPartProps>
-
     <modExtensions>
       <li Class="FIP.WestTek.WestTekFloraImplantExtension">
         <category>Motorics</category>
@@ -48,16 +258,222 @@
     </modExtensions>
   </HediffDef>
 
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_TendrilPlantArm</defName>
+    <label>tendril plant arm</label>
+    <description>A flexible tendril-woven plant arm. It is less forceful than the parasitic arm but moves with excellent precision.</description>
+    <addedPartProps>
+      <partEfficiency>1.08</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Arm</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantHand</defName>
+    <label>symbiotic plant hand</label>
+    <description>A vine-fingered hand suited to delicate work and steady manipulation.</description>
+    <addedPartProps>
+      <partEfficiency>1.08</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Hand</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_RootedPlantHand</defName>
+    <label>rooted plant hand</label>
+    <description>A dense root-wrapped hand that grips tools with stubborn strength and plantlike patience.</description>
+    <addedPartProps>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Hand</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantLeg</defName>
+    <label>symbiotic plant leg</label>
+    <description>A living plant leg with strong root-muscle fibers and bionic-grade stride control.</description>
+    <addedPartProps>
+      <partEfficiency>1.12</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Leg</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SpringvinePlantLeg</defName>
+    <label>springvine plant leg</label>
+    <description>A springy tendril leg grown for quick recovery, long strides, and uneven ground.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Leg</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantFoot</defName>
+    <label>symbiotic plant foot</label>
+    <description>A root-padded foot that restores balance and quiet movement.</description>
+    <addedPartProps>
+      <partEfficiency>1.05</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Foot</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_ClingingPlantFoot</defName>
+    <label>clinging plant foot</label>
+    <description>A tendril-foot that grips broken terrain and stabilizes the pawn's stance.</description>
+    <addedPartProps>
+      <partEfficiency>1.12</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Foot</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantSpine</defName>
+    <label>symbiotic plant spine</label>
+    <description>A flexible vine-spine that supports the body and suppresses spinal degeneration.</description>
+    <addedPartProps>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Spine</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_BracingPlantSpine</defName>
+    <label>bracing plant spine</label>
+    <description>A thicker root-braced spine that supports heavy strain with better living articulation.</description>
+    <addedPartProps>
+      <partEfficiency>1.12</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Spine</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantStomach</defName>
+    <label>symbiotic plant stomach</label>
+    <description>A living plant stomach that digests wasteland food with steady biological filtration.</description>
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Stomach</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_ReprocessorPlantStomach</defName>
+    <label>reprocessor plant stomach</label>
+    <description>A root-chamber stomach that reprocesses nutrition more aggressively than the standard symbiotic stomach.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Stomach</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>WestTek_SymbioticPlantHeart</defName>
     <label>symbiotic plant heart</label>
-    <description>A living FEV plant heart rooted into the circulatory system. It functions as a biological replacement and counts as an organ flora implant.</description>
-
+    <description>A living FEV plant heart rooted into the circulatory system. It is powerful, resilient, and counts as an organ flora implant.</description>
     <addedPartProps>
       <partEfficiency>1.15</partEfficiency>
     </addedPartProps>
-
     <modExtensions>
       <li Class="FIP.WestTek.WestTekFloraImplantExtension">
         <category>Organs</category>
@@ -70,6 +486,100 @@
     </modExtensions>
   </HediffDef>
 
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_RootedPlantHeart</defName>
+    <label>rooted plant heart</label>
+    <description>A dense root-heart that filters poisons and toxins through living FEV tissue, trading a little output for better resistance.</description>
+    <addedPartProps>
+      <partEfficiency>1.08</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Heart</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantLung</defName>
+    <label>symbiotic plant lung</label>
+    <description>A living plant lung that breathes through layered green membranes and resists toxic air.</description>
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Lung</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_FilteringPlantLung</defName>
+    <label>filtering plant lung</label>
+    <description>A thicker flora lung that filters haze and spores with specialized root membranes.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Lung</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantKidney</defName>
+    <label>symbiotic plant kidney</label>
+    <description>A living plant kidney that restores blood filtration through rootlike tissue.</description>
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Kidney</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_DetoxifyingPlantKidney</defName>
+    <label>detoxifying plant kidney</label>
+    <description>A detoxifying flora kidney bred to strip poisons from the blood more aggressively.</description>
+    <addedPartProps>
+      <partEfficiency>1.18</partEfficiency>
+    </addedPartProps>
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Kidney</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
 
   <!-- ===================== -->
   <!-- Installation recipes  -->
@@ -80,102 +590,418 @@
     <label>install symbiotic plant eye</label>
     <description>Install a living FEV plant replacement eye.</description>
     <jobString>Installing symbiotic plant eye.</jobString>
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
     <workAmount>2500</workAmount>
     <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
-
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </filter>
-        <count>100</count>
-      </li>
-    </ingredients>
-
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Uranium</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-
-    <appliedOnFixedBodyParts>
-      <li>Eye</li>
-    </appliedOnFixedBodyParts>
-
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Eye</li></appliedOnFixedBodyParts>
     <addsHediff>WestTek_SymbioticPlantEye</addsHediff>
     <isViolation>true</isViolation>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>WestTek_InstallPhotosyntheticPlantEye</defName>
+    <label>install photosynthetic plant eye</label>
+    <description>Install a light-sensitive FEV plant replacement eye.</description>
+    <jobString>Installing photosynthetic plant eye.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Eye</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_PhotosyntheticPlantEye</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantEar</defName>
+    <label>install symbiotic plant ear</label>
+    <description>Install a living FEV plant replacement ear.</description>
+    <jobString>Installing symbiotic plant ear.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Ear</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantEar</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallResonantPlantEar</defName>
+    <label>install resonant plant ear</label>
+    <description>Install a resonant FEV plant replacement ear.</description>
+    <jobString>Installing resonant plant ear.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Ear</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_ResonantPlantEar</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantNose</defName>
+    <label>install symbiotic plant nose</label>
+    <description>Install a living FEV plant replacement nose.</description>
+    <jobString>Installing symbiotic plant nose.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Nose</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantNose</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallBlossomingPlantNose</defName>
+    <label>install blossoming plant nose</label>
+    <description>Install a flowering FEV plant replacement nose.</description>
+    <jobString>Installing blossoming plant nose.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Nose</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_BlossomingPlantNose</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantJaw</defName>
+    <label>install symbiotic plant jaw</label>
+    <description>Install a living FEV plant replacement jaw.</description>
+    <jobString>Installing symbiotic plant jaw.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2600</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Jaw</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantJaw</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallThornedPlantJaw</defName>
+    <label>install thorned plant jaw</label>
+    <description>Install a thorned FEV plant replacement jaw.</description>
+    <jobString>Installing thorned plant jaw.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2600</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Jaw</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_ThornedPlantJaw</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantTongue</defName>
+    <label>install symbiotic plant tongue</label>
+    <description>Install a living FEV plant replacement tongue.</description>
+    <jobString>Installing symbiotic plant tongue.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Tongue</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantTongue</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallNectarPlantTongue</defName>
+    <label>install nectar plant tongue</label>
+    <description>Install a nectar FEV plant replacement tongue.</description>
+    <jobString>Installing nectar plant tongue.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Tongue</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_NectarPlantTongue</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
 
   <RecipeDef>
     <defName>WestTek_InstallParasiticPlantArm</defName>
     <label>install parasitic plant arm</label>
     <description>Install a living FEV plant replacement arm.</description>
     <jobString>Installing parasitic plant arm.</jobString>
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
     <workAmount>3000</workAmount>
     <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
-
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </filter>
-        <count>100</count>
-      </li>
-    </ingredients>
-
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Uranium</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-
-    <appliedOnFixedBodyParts>
-      <li>Arm</li>
-    </appliedOnFixedBodyParts>
-
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Arm</li></appliedOnFixedBodyParts>
     <addsHediff>WestTek_ParasiticPlantArm</addsHediff>
     <isViolation>true</isViolation>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>WestTek_InstallTendrilPlantArm</defName>
+    <label>install tendril plant arm</label>
+    <description>Install a flexible FEV plant replacement arm.</description>
+    <jobString>Installing tendril plant arm.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3000</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Arm</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_TendrilPlantArm</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantHand</defName>
+    <label>install symbiotic plant hand</label>
+    <description>Install a living FEV plant replacement hand.</description>
+    <jobString>Installing symbiotic plant hand.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantHand</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallRootedPlantHand</defName>
+    <label>install rooted plant hand</label>
+    <description>Install a rooted FEV plant replacement hand.</description>
+    <jobString>Installing rooted plant hand.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_RootedPlantHand</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantLeg</defName>
+    <label>install symbiotic plant leg</label>
+    <description>Install a living FEV plant replacement leg.</description>
+    <jobString>Installing symbiotic plant leg.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3000</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Leg</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantLeg</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSpringvinePlantLeg</defName>
+    <label>install springvine plant leg</label>
+    <description>Install a springvine FEV plant replacement leg.</description>
+    <jobString>Installing springvine plant leg.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3000</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Leg</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SpringvinePlantLeg</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantFoot</defName>
+    <label>install symbiotic plant foot</label>
+    <description>Install a living FEV plant replacement foot.</description>
+    <jobString>Installing symbiotic plant foot.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Foot</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantFoot</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallClingingPlantFoot</defName>
+    <label>install clinging plant foot</label>
+    <description>Install a clinging FEV plant replacement foot.</description>
+    <jobString>Installing clinging plant foot.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>2300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Foot</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_ClingingPlantFoot</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantSpine</defName>
+    <label>install symbiotic plant spine</label>
+    <description>Install a living FEV plant replacement spine.</description>
+    <jobString>Installing symbiotic plant spine.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Spine</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantSpine</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallBracingPlantSpine</defName>
+    <label>install bracing plant spine</label>
+    <description>Install a bracing FEV plant replacement spine.</description>
+    <jobString>Installing bracing plant spine.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Spine</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_BracingPlantSpine</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantStomach</defName>
+    <label>install symbiotic plant stomach</label>
+    <description>Install a living FEV plant replacement stomach.</description>
+    <jobString>Installing symbiotic plant stomach.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Stomach</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantStomach</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallReprocessorPlantStomach</defName>
+    <label>install reprocessor plant stomach</label>
+    <description>Install a reprocessor FEV plant replacement stomach.</description>
+    <jobString>Installing reprocessor plant stomach.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Stomach</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_ReprocessorPlantStomach</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
 
   <RecipeDef>
     <defName>WestTek_InstallSymbioticPlantHeart</defName>
     <label>install symbiotic plant heart</label>
     <description>Install a living FEV plant replacement heart.</description>
     <jobString>Installing symbiotic plant heart.</jobString>
-    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
     <workAmount>3500</workAmount>
     <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
-
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </filter>
-        <count>100</count>
-      </li>
-    </ingredients>
-
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Uranium</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-
-    <appliedOnFixedBodyParts>
-      <li>Heart</li>
-    </appliedOnFixedBodyParts>
-
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Heart</li></appliedOnFixedBodyParts>
     <addsHediff>WestTek_SymbioticPlantHeart</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallRootedPlantHeart</defName>
+    <label>install rooted plant heart</label>
+    <description>Install a toxin-filtering FEV plant replacement heart.</description>
+    <jobString>Installing rooted plant heart.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Heart</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_RootedPlantHeart</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantLung</defName>
+    <label>install symbiotic plant lung</label>
+    <description>Install a living FEV plant replacement lung.</description>
+    <jobString>Installing symbiotic plant lung.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Lung</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantLung</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallFilteringPlantLung</defName>
+    <label>install filtering plant lung</label>
+    <description>Install a filtering FEV plant replacement lung.</description>
+    <jobString>Installing filtering plant lung.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3300</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Lung</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_FilteringPlantLung</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantKidney</defName>
+    <label>install symbiotic plant kidney</label>
+    <description>Install a living FEV plant replacement kidney.</description>
+    <jobString>Installing symbiotic plant kidney.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Kidney</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_SymbioticPlantKidney</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>WestTek_InstallDetoxifyingPlantKidney</defName>
+    <label>install detoxifying plant kidney</label>
+    <description>Install a detoxifying FEV plant replacement kidney.</description>
+    <jobString>Installing detoxifying plant kidney.</jobString>
+    <workerClass>FIP.WestTek.Recipe_InstallFloraSymbiote</workerClass>
+    <workAmount>3200</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+    <ingredients><li><filter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>WestTek_PlantSymbiote</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Kidney</li></appliedOnFixedBodyParts>
+    <addsHediff>WestTek_DetoxifyingPlantKidney</addsHediff>
     <isViolation>true</isViolation>
   </RecipeDef>
 

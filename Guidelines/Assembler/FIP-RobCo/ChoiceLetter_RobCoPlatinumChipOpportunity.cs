@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Verse;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public class ChoiceLetter_RobCoPlatinumChipOpportunity : ChoiceLetter
 {

@@ -3,15 +3,15 @@ using Verse;
 
 namespace FIP.WestTek;
 
-public sealed class CompProperties_TargetEffectRefinedFloraMutagen : CompProperties
+public sealed class CompProperties_TargetEffectCultivationFloraMutagen : CompProperties
 {
-    public CompProperties_TargetEffectRefinedFloraMutagen()
+    public CompProperties_TargetEffectCultivationFloraMutagen()
     {
-        compClass = typeof(CompTargetEffect_RefinedFloraMutagen);
+        compClass = typeof(CompTargetEffect_CultivationFloraMutagen);
     }
 }
 
-public sealed class CompTargetEffect_RefinedFloraMutagen : CompTargetEffect
+public sealed class CompTargetEffect_CultivationFloraMutagen : CompTargetEffect
 {
     public override void DoEffectOn(Pawn user, Thing target)
     {
@@ -21,21 +21,17 @@ public sealed class CompTargetEffect_RefinedFloraMutagen : CompTargetEffect
             return;
         }
 
-        if (!WestTekFloraMutationUtility.IsEligibleForFloraMutation(pawn))
+        if (!WestTekFloraMutationUtility.IsEligibleForNumenMutation(pawn))
         {
-            Messages.Message("This subject is not compatible with refined flora mutation.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("This subject needs exactly one plant symbiote and a compatible human xenotype.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
-        int implantCount = WestTekFloraMutationUtility.CountFloraImplants(pawn);
-
-        WestTekFloraMutationUtility.ApplyRefinedFloraMutation(pawn);
+        WestTekFloraMutationUtility.ApplyNumenMutation(pawn);
         ConsumeOne();
 
-        string result = implantCount >= 5 ? "Overgrown" : "Numen";
-
         Messages.Message(
-            $"{pawn.LabelShortCap} stabilizes into a {result} flora strain.",
+            $"{pawn.LabelShortCap} cultivates into a Numen flora strain.",
             pawn,
             MessageTypeDefOf.PositiveEvent
         );
@@ -60,15 +56,15 @@ public sealed class CompTargetEffect_RefinedFloraMutagen : CompTargetEffect
     }
 }
 
-public sealed class CompProperties_TargetEffectExperimentalFloraMutagen : CompProperties
+public sealed class CompProperties_TargetEffectPollinationFloraMutagen : CompProperties
 {
-    public CompProperties_TargetEffectExperimentalFloraMutagen()
+    public CompProperties_TargetEffectPollinationFloraMutagen()
     {
-        compClass = typeof(CompTargetEffect_ExperimentalFloraMutagen);
+        compClass = typeof(CompTargetEffect_PollinationFloraMutagen);
     }
 }
 
-public sealed class CompTargetEffect_ExperimentalFloraMutagen : CompTargetEffect
+public sealed class CompTargetEffect_PollinationFloraMutagen : CompTargetEffect
 {
     public override void DoEffectOn(Pawn user, Thing target)
     {
@@ -78,13 +74,13 @@ public sealed class CompTargetEffect_ExperimentalFloraMutagen : CompTargetEffect
             return;
         }
 
-        if (!WestTekFloraMutationUtility.IsEligibleForFloraMutation(pawn))
+        if (!WestTekFloraMutationUtility.IsEligibleForSporeCarrierMutation(pawn))
         {
-            Messages.Message("This subject is not compatible with experimental flora mutation.", MessageTypeDefOf.RejectInput, historical: false);
+            Messages.Message("This subject is not compatible with pollination flora mutation.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
-        WestTekFloraMutationUtility.ApplyExperimentalFloraMutation(pawn);
+        WestTekFloraMutationUtility.ApplySporeCarrierMutation(pawn);
         ConsumeOne();
 
         Messages.Message(

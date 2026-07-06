@@ -25,6 +25,7 @@ internal static class WestTekMutationUtility
             or "WestTek_Xenotype_Overgrown"
             or "WestTek_Xenotype_SLanter"
             or "WestTek_Xenotype_SNuffy"
+            or "Highmate"
             or "WestTek_Xenotype_SporeCarrier"
             or "WestTek_Xenotype_SuperMutantFirst"
             or "WestTek_Xenotype_SuperMutantSecond"

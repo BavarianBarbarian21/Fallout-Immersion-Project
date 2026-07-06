@@ -49,17 +49,7 @@
 				<muzzleFlashScale>1.8</muzzleFlashScale>
 			</li>
 		</verbs>
-		<comps Inherit="False">
-			<li Class="CompProperties_EquippableAbilityReloadable">
-				<abilityDef>RobCo_LightFlamer</abilityDef>
-				<maxCharges>1</maxCharges>
-				<soundReload>Standard_Reload</soundReload>
-				<chargeNoun>flamer charge</chargeNoun>
-				<ammoDef>Chemfuel</ammoDef>
-				<ammoCountPerCharge>10</ammoCountPerCharge>
-				<baseReloadTicks>60</baseReloadTicks>
-			</li>
-		</comps>
+		<comps Inherit="False" />
 	</ThingDef>
 
 	<ThingDef Name="RobCo_EyeOfHydraSniperBase" ParentName="RobCo_BaseGun" Abstract="True">

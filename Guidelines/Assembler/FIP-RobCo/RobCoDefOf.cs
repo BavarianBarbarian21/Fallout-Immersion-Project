@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace FIP.WestTek;
+namespace FIP.RobCo;
 
 [DefOf]
 internal static class RobCoDefOf

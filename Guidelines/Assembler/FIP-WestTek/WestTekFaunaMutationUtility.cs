@@ -30,7 +30,7 @@ internal static class WestTekFaunaMutationUtility
             yield return WestTekDefOf.WestTek_Gene_BAja;
             yield return WestTekDefOf.WestTek_Gene_MErowi;
             yield return WestTekDefOf.WestTek_Gene_RUffian;
-            yield return WestTekDefOf.WestTek_Gene_SNuffy;
+            yield return WestTekDefOf.WestTek_Gene_ProcyonScrounger;
         }
     }
 
@@ -54,7 +54,7 @@ internal static class WestTekFaunaMutationUtility
         return pawn?.genes?.Xenotype == WestTekDefOf.WestTek_Xenotype_Skinwalker;
     }
 
-    public static bool IsHighmate(Pawn pawn)
+    public static bool IsSNuffy(Pawn pawn)
     {
         return pawn?.genes?.Xenotype == WestTekDefOf.Highmate;
     }
@@ -220,7 +220,7 @@ internal static class WestTekFaunaMutationUtility
         RefreshGraphics(pawn);
     }
 
-    public static void TransformSLanterIntoHighmate(Pawn pawn)
+    public static void TransformSLanterIntoSNuffy(Pawn pawn)
     {
         if (pawn?.genes == null)
         {

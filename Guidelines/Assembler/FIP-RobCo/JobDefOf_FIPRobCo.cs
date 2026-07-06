@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 [DefOf]
 public static class JobDefOf_FIPRobCo

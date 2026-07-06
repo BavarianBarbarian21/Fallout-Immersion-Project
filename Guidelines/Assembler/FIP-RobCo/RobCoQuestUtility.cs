@@ -5,7 +5,7 @@ using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 public static class RobCoQuestUtility
 {

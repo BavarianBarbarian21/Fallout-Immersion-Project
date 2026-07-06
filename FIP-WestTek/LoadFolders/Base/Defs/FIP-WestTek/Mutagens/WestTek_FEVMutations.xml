@@ -196,7 +196,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_UnrefinedFaunaMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -241,9 +241,9 @@
 </ThingDef>
 
 <ThingDef>
-  <defName>WestTek_ExperimentalFaunaMutagen</defName>
-  <label>experimental fauna mutagen</label>
-  <description>An experimental mutagen for S'Lanter subjects. Adds the Skinwalker mutation and unlocks transformation.</description>
+  <defName>WestTek_SkinwalkerFaunaMutagen</defName>
+  <label>skinwalker fauna mutagen</label>
+  <description>A forced mutation mutagen for S'Lanter subjects. Adds the Skinwalker mutation and unlocks controlled transformation.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -252,7 +252,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_ExperimentalFaunaMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -260,7 +260,54 @@
     <li Class="CompProperties_Targetable">
       <compClass>CompTargetable_SinglePawn</compClass>
     </li>
-    <li Class="FIP.WestTek.CompProperties_TargetEffectExperimentalFaunaMutagen" />
+    <li Class="FIP.WestTek.CompProperties_TargetEffectSkinwalkerFaunaMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_DomesticationFaunaMutagen</defName>
+  <label>domestication fauna mutagen</label>
+  <description>A forced domestication mutagen for S'Lanter subjects. Stabilizes the subject into a S'Nuffy fauna line unless they already carry the Skinwalker mutation.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <graphicData>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectDomesticationFaunaMutagen" />
   </comps>
 
   <recipeMaker>
@@ -288,56 +335,9 @@
 </ThingDef>
 
 <ThingDef>
-  <defName>WestTek_RefinedFaunaMutagen</defName>
-  <label>refined fauna mutagen</label>
-  <description>A refined fauna mutagen for S'Lanter subjects. Stabilizes the subject into a Highmate-derived line unless they already carry the experimental Skinwalker mutation.</description>
-  <thingClass>ThingWithComps</thingClass>
-  <category>Item</category>
-  <stackLimit>10</stackLimit>
-  <useHitPoints>false</useHitPoints>
-  <selectable>true</selectable>
-  <alwaysHaulable>true</alwaysHaulable>
-  <tickerType>Never</tickerType>
-  <graphicData>
-    <texPath>Things/Item/WestTek_RefinedFaunaMutagen</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
-
-  <comps>
-    <li Class="CompProperties_Targetable">
-      <compClass>CompTargetable_SinglePawn</compClass>
-    </li>
-    <li Class="FIP.WestTek.CompProperties_TargetEffectRefinedFaunaMutagen" />
-  </comps>
-
-  <recipeMaker>
-    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
-    <recipeUsers>
-      <li>DrugLab</li>
-    </recipeUsers>
-    <workAmount>1600</workAmount>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Uranium</li>
-          </thingDefs>
-        </filter>
-        <count>100</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Uranium</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-  </recipeMaker>
-</ThingDef>
-
-<ThingDef>
   <defName>WestTek_CanineMutagen</defName>
   <label>canine mutagen</label>
-  <description>A refined canine mutagen for Highmate-derived fauna subjects.</description>
+  <description>A refined canine mutagen for S'Nuffy fauna subjects.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -346,7 +346,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_CanineMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -367,7 +367,7 @@
   </comps>
 
   <recipeMaker>
-    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <researchPrerequisite>WestTek_FaunaMutation3</researchPrerequisite>
     <recipeUsers>
       <li>DrugLab</li>
     </recipeUsers>
@@ -393,7 +393,7 @@
 <ThingDef>
   <defName>WestTek_FelineMutagen</defName>
   <label>feline mutagen</label>
-  <description>A refined feline mutagen for Highmate-derived fauna subjects.</description>
+  <description>A refined feline mutagen for S'Nuffy fauna subjects.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -402,7 +402,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_FelineMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -423,7 +423,7 @@
   </comps>
 
   <recipeMaker>
-    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <researchPrerequisite>WestTek_FaunaMutation3</researchPrerequisite>
     <recipeUsers>
       <li>DrugLab</li>
     </recipeUsers>
@@ -449,7 +449,7 @@
 <ThingDef>
   <defName>WestTek_LeporineMutagen</defName>
   <label>leporine mutagen</label>
-  <description>A refined leporine mutagen for Highmate-derived fauna subjects.</description>
+  <description>A refined leporine mutagen for S'Nuffy fauna subjects.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -458,7 +458,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_LeporineMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -479,7 +479,7 @@
   </comps>
 
   <recipeMaker>
-    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <researchPrerequisite>WestTek_FaunaMutation3</researchPrerequisite>
     <recipeUsers>
       <li>DrugLab</li>
     </recipeUsers>
@@ -505,7 +505,7 @@
 <ThingDef>
   <defName>WestTek_ProcyonineMutagen</defName>
   <label>procyonine mutagen</label>
-  <description>A refined procyonine mutagen for Highmate-derived fauna subjects.</description>
+  <description>A refined procyonine scavenger mutagen for S'Nuffy fauna subjects.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -514,7 +514,7 @@
   <alwaysHaulable>true</alwaysHaulable>
   <tickerType>Never</tickerType>
   <graphicData>
-    <texPath>Things/Item/WestTek_ProcyonineMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -523,9 +523,9 @@
       <compClass>CompTargetable_SinglePawn</compClass>
     </li>
     <li Class="FIP.WestTek.CompProperties_TargetEffectFaunaGenePackageMutagen">
-      <packageLabel>S'Nuffy genome</packageLabel>
+      <packageLabel>procyon scrounger genome</packageLabel>
       <genesToAdd>
-        <li>WestTek_Gene_SNuffy</li>
+        <li>WestTek_Gene_ProcyonScrounger</li>
         <!-- Cosmetics later:
         <li>WestTek_CoonEars</li>
         <li>WestTek_CoonTail</li>
@@ -535,7 +535,7 @@
   </comps>
 
   <recipeMaker>
-    <researchPrerequisite>WestTek_FaunaMutation2</researchPrerequisite>
+    <researchPrerequisite>WestTek_FaunaMutation3</researchPrerequisite>
     <recipeUsers>
       <li>DrugLab</li>
     </recipeUsers>
@@ -559,9 +559,9 @@
 </ThingDef>
 
 <ThingDef>
-  <defName>WestTek_ExperimentalFloraMutagen</defName>
-  <label>experimental flora mutagen</label>
-  <description>An unstable FEV flora mutagen. Compatible human subjects become Spore Carriers.</description>
+  <defName>WestTek_PollinationFloraMutagen</defName>
+  <label>pollination flora mutagen</label>
+  <description>A forced pollination mutagen. Compatible human subjects become Spore Carriers.</description>
   <thingClass>ThingWithComps</thingClass>
   <category>Item</category>
   <stackLimit>10</stackLimit>
@@ -571,7 +571,7 @@
   <tickerType>Never</tickerType>
 
   <graphicData>
-    <texPath>Things/Item/WestTek_ExperimentalFloraMutagen</texPath>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
 
@@ -579,7 +579,64 @@
     <li Class="CompProperties_Targetable">
       <compClass>CompTargetable_SinglePawn</compClass>
     </li>
-    <li Class="FIP.WestTek.CompProperties_TargetEffectExperimentalFloraMutagen" />
+    <li Class="FIP.WestTek.CompProperties_TargetEffectPollinationFloraMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FloraMutation2</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1800</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_FEVProbe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+        <li>WestTek_FEVProbe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
+<ThingDef>
+  <defName>WestTek_CultivationFloraMutagen</defName>
+  <label>cultivation flora mutagen</label>
+  <description>A forced cultivation mutagen. Compatible human subjects stabilize into a Numen flora strain, or into an Overgrown strain if enough flora implants are present.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+
+  <graphicData>
+    <texPath>FIP-WestTek/Misc/Placeholder</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectCultivationFloraMutagen" />
   </comps>
 
   <recipeMaker>

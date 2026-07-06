@@ -2,14 +2,14 @@
 <Defs>
 	<LetterDef ParentName="CustomChoiceLetterBase">
 		<defName>RobCo_PlatinumChipOpportunity</defName>
-		<letterClass>FIP_RobCo.ChoiceLetter_RobCoPlatinumChipOpportunity</letterClass>
+		<letterClass>FIP.RobCo.ChoiceLetter_RobCoPlatinumChipOpportunity</letterClass>
 	</LetterDef>
 
 	<WorldObjectDef ParentName="Site">
 		<defName>RobCo_CourierCamp</defName>
 		<label>courier trail</label>
 		<description>A temporary courier camp tied to a RobCo platinum chip transaction.</description>
-		<worldObjectClass>FIP_RobCo.RobCoCourierCamp</worldObjectClass>
+		<worldObjectClass>FIP.RobCo.RobCoCourierCamp</worldObjectClass>
 		<texture>World/WorldObjects/Camp</texture>
 		<expandingIcon>true</expandingIcon>
 		<expandingIconTexture>World/WorldObjects/Expanding/Camp</expandingIconTexture>
@@ -30,7 +30,7 @@
 		<defName>RobCo_VaultSite</defName>
 		<label>RobCo vault site</label>
 		<description>A sealed RobCo vault or management annex tied to a platinum chip courier route.</description>
-		<worldObjectClass>FIP_RobCo.RobCoVaultSite</worldObjectClass>
+		<worldObjectClass>FIP.RobCo.RobCoVaultSite</worldObjectClass>
 		<texture>World/WorldObjects/Sites/GenericSite</texture>
 	</WorldObjectDef>
 
@@ -56,10 +56,10 @@
 		<defName>RobCo_AncientVaultThreats</defName>
 		<linkWithSite>RobCo_AncientVault</linkWithSite>
 		<order>471</order>
-		<genStep Class="FIP_RobCo.GenStep_RobCoVaultThreats" />
+		<genStep Class="FIP.RobCo.GenStep_RobCoVaultThreats" />
 	</GenStepDef>
 
-	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_CEO</defName>
 		<label>CEO branch</label>
 		<courierNumber>2</courierNumber>
@@ -71,9 +71,9 @@
 		<stage2ThreatPoints>3200</stage2ThreatPoints>
 		<stage2LetterLabel>RobCo vault location recovered</stage2LetterLabel>
 		<stage2LetterText>The dead courier carried access fragments tied to a RobCo executive archive. They point to a distant vault complex still crawling with corrupted Securitrons. Somewhere inside lies the wreck of Liberty Prime.</stage2LetterText>
-	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 
-	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_PRC</defName>
 		<label>People's Republic branch</label>
 		<courierNumber>5</courierNumber>
@@ -85,9 +85,9 @@
 		<stage2ThreatPoints>3600</stage2ThreatPoints>
 		<stage2LetterLabel>PRC cache coordinates acquired</stage2LetterLabel>
 		<stage2LetterText>The courier's route logs reveal a remote RobCo cache where Chinese Liberators were stockpiled in absurd numbers. The archive also indicates that a War Machine chassis was lost there during containment failure.</stage2LetterText>
-	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 
-	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_Calculator</defName>
 		<label>Calculator branch</label>
 		<courierNumber>3</courierNumber>
@@ -99,9 +99,9 @@
 		<stage2ThreatPoints>3400</stage2ThreatPoints>
 		<stage2LetterLabel>Calculator archive recovered</stage2LetterLabel>
 		<stage2LetterText>The courier carried fragments from the Calculator's command archives. They point to an abandoned RobCo data center where a Pacificator chassis was sealed beneath the steel.</stage2LetterText>
-	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 
-	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_ThinkTank</defName>
 		<label>Think Tank branch</label>
 		<courierNumber>4</courierNumber>
@@ -113,9 +113,9 @@
 		<stage2ThreatPoints>3800</stage2ThreatPoints>
 		<stage2LetterLabel>Think tank archives recovered</stage2LetterLabel>
 		<stage2LetterText>The courier's logs point to a buried Big MT think tank vault. A giant Roboscorpion queen was kept there as a testbed for post-war battlefield intelligence.</stage2LetterText>
-	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 
-	<FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_University</defName>
 		<label>University branch</label>
 		<courierNumber>6</courierNumber>
@@ -127,5 +127,5 @@
 		<stage2ThreatPoints>3000</stage2ThreatPoints>
 		<stage2LetterLabel>University vault recovered</stage2LetterLabel>
 		<stage2LetterText>The courier's route points to a forgotten university vault filled with synthetic personnel archives and dormant robotic test platforms.</stage2LetterText>
-	</FIP_RobCo.RobCoPlatinumQuestBranchDef>
+	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 </Defs>

@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace FIP.WestTek;
+namespace FIP.RobCo;
 
 public sealed class WestTekSynthGeneExtension : DefModExtension
 {
@@ -57,8 +57,8 @@ internal static class WestTekSynthGeneUtility
             return false;
         }
 
-        return gene.def != WestTekDefOf.WestTek_Gene_SynthComponents
-            && gene.def != WestTekDefOf.WestTek_Gene_Courser;
+        return gene.def != RobCoDefOf.WestTek_Gene_SynthComponents
+            && gene.def != RobCoDefOf.WestTek_Gene_Courser;
     }
 
     public static List<Gene> GetExistingSynthEndogeneCandidates(Pawn pawn)
@@ -112,9 +112,9 @@ internal static class WestTekSynthGeneUtility
 
         pawn.genes.RemoveGene(synthComponentsGene);
 
-        if (!HasGene(pawn, WestTekDefOf.WestTek_Gene_Courser))
+        if (!HasGene(pawn, RobCoDefOf.WestTek_Gene_Courser))
         {
-            pawn.genes.AddGene(WestTekDefOf.WestTek_Gene_Courser, xenogene: false);
+            pawn.genes.AddGene(RobCoDefOf.WestTek_Gene_Courser, xenogene: false);
         }
 
         if (pawn.Faction == Faction.OfPlayer)

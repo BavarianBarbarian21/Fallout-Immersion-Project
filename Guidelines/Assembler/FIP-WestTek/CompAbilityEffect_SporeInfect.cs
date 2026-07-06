@@ -31,13 +31,13 @@ public sealed class CompAbilityEffect_SporeInfect : CompAbilityEffect
             return;
         }
 
-        if (!WestTekFloraMutationUtility.IsEligibleForFloraMutation(victim))
+        if (!WestTekFloraMutationUtility.IsEligibleForSporeCarrierMutation(victim))
         {
             Messages.Message("The target is not compatible with spore infection.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
-        WestTekFloraMutationUtility.ApplyExperimentalFloraMutation(victim);
+        WestTekFloraMutationUtility.ApplySporeCarrierMutation(victim);
 
         Messages.Message(
             $"{victim.LabelShortCap} is overtaken by infectious FEV spores.",
@@ -55,6 +55,6 @@ public sealed class CompAbilityEffect_SporeInfect : CompAbilityEffect
             return false;
         }
 
-        return WestTekFloraMutationUtility.IsEligibleForFloraMutation(victim);
+        return WestTekFloraMutationUtility.IsEligibleForSporeCarrierMutation(victim);
     }
 }

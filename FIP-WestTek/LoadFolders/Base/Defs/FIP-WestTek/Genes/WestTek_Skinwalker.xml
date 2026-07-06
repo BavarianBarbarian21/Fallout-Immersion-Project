@@ -15,6 +15,39 @@
     </abilities>
   </GeneDef>
 
+  <GeneDef>
+    <defName>WestTek_Gene_SkinwalkerRaccoonShape</defName>
+    <label>skinwalker raccoon shape</label>
+    <description>The Skinwalker form collapses the pawn's silhouette toward its old raccoon ancestry.</description>
+    <iconPath>FIP-WestTek/Misc/Placeholder</iconPath>
+    <displayOrderInCategory>501</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <skillGains>
+      <Melee>2</Melee>
+      <Animals>1</Animals>
+    </skillGains>
+    <statOffsets>
+      <MoveSpeed>0.30</MoveSpeed>
+      <MeleeDPS>0.25</MeleeDPS>
+    </statOffsets>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Animal/Raccoon/Raccoon</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1.25, 1.25)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>95</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
   <AbilityDef>
     <defName>WestTek_Ability_SkinwalkerShift</defName>
     <label>skinwalker shift</label>

@@ -2,7 +2,7 @@ using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace FIP_RobCo;
+namespace FIP.RobCo;
 
 [DefOf]
 public static class RobCoQuestDefOf

@@ -54,3 +54,11 @@ public sealed class ThoughtWorker_WestTek_MycelineNetwork : ThoughtWorker
         return WestTekFloraMutationUtility.IsNearGauranlenTree(pawn);
     }
 }
+
+public sealed class ThoughtWorker_WestTek_MastersArmy : ThoughtWorker
+{
+    protected override ThoughtState CurrentStateInternal(Pawn pawn)
+    {
+        return WestTekMutationUtility.IsSuperMutantSlave(pawn);
+    }
+}
