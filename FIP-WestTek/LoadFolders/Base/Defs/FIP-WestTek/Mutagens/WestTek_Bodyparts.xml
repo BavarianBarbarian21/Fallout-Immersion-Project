@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ========================= -->
+  <!-- Plant replacement Hediffs -->
+  <!-- ========================= -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantEye</defName>
+    <label>symbiotic plant eye</label>
+    <description>A living FEV plant eye grown into the socket. It functions as a biological replacement and counts as a sensory flora implant.</description>
+
+    <addedPartProps>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Senses</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Eye</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_ParasiticPlantArm</defName>
+    <label>parasitic plant arm</label>
+    <description>A muscular FEV vine structure replacing the original arm. It functions as a biological replacement and counts as a motoric flora implant.</description>
+
+    <addedPartProps>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Motorics</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Arm</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WestTek_SymbioticPlantHeart</defName>
+    <label>symbiotic plant heart</label>
+    <description>A living FEV plant heart rooted into the circulatory system. It functions as a biological replacement and counts as an organ flora implant.</description>
+
+    <addedPartProps>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+
+    <modExtensions>
+      <li Class="FIP.WestTek.WestTekFloraImplantExtension">
+        <category>Organs</category>
+      </li>
+      <li Class="FIP.WestTek.WestTekPlantRegrowthExtension">
+        <appliesToParts>
+          <li>Heart</li>
+        </appliesToParts>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+
+  <!-- ===================== -->
+  <!-- Installation recipes  -->
+  <!-- ===================== -->
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantEye</defName>
+    <label>install symbiotic plant eye</label>
+    <description>Install a living FEV plant replacement eye.</description>
+    <jobString>Installing symbiotic plant eye.</jobString>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workAmount>2500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+
+    <addsHediff>WestTek_SymbioticPlantEye</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+
+  <RecipeDef>
+    <defName>WestTek_InstallParasiticPlantArm</defName>
+    <label>install parasitic plant arm</label>
+    <description>Install a living FEV plant replacement arm.</description>
+    <jobString>Installing parasitic plant arm.</jobString>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workAmount>3000</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <appliedOnFixedBodyParts>
+      <li>Arm</li>
+    </appliedOnFixedBodyParts>
+
+    <addsHediff>WestTek_ParasiticPlantArm</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+
+  <RecipeDef>
+    <defName>WestTek_InstallSymbioticPlantHeart</defName>
+    <label>install symbiotic plant heart</label>
+    <description>Install a living FEV plant replacement heart.</description>
+    <jobString>Installing symbiotic plant heart.</jobString>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <workAmount>3500</workAmount>
+    <researchPrerequisite>WestTek_FloraMutation</researchPrerequisite>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+
+    <addsHediff>WestTek_SymbioticPlantHeart</addsHediff>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+</Defs>

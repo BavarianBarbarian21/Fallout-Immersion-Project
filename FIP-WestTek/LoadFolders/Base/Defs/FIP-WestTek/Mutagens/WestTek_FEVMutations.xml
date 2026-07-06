@@ -558,4 +558,61 @@
   </recipeMaker>
 </ThingDef>
 
+<ThingDef>
+  <defName>WestTek_ExperimentalFloraMutagen</defName>
+  <label>experimental flora mutagen</label>
+  <description>An unstable FEV flora mutagen. Compatible human subjects become Spore Carriers.</description>
+  <thingClass>ThingWithComps</thingClass>
+  <category>Item</category>
+  <stackLimit>10</stackLimit>
+  <useHitPoints>false</useHitPoints>
+  <selectable>true</selectable>
+  <alwaysHaulable>true</alwaysHaulable>
+  <tickerType>Never</tickerType>
+
+  <graphicData>
+    <texPath>Things/Item/WestTek_ExperimentalFloraMutagen</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+
+  <comps>
+    <li Class="CompProperties_Targetable">
+      <compClass>CompTargetable_SinglePawn</compClass>
+    </li>
+    <li Class="FIP.WestTek.CompProperties_TargetEffectExperimentalFloraMutagen" />
+  </comps>
+
+  <recipeMaker>
+    <researchPrerequisite>WestTek_FloraMutation3</researchPrerequisite>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <workAmount>1800</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WestTek_FEVProbe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+        <li>WestTek_FEVProbe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </recipeMaker>
+</ThingDef>
+
 </Defs>
