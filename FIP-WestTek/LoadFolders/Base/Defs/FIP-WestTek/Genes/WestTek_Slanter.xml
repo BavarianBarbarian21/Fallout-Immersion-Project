@@ -2,17 +2,66 @@
 <Defs>
 
   <GeneDef>
+    <defName>WestTek_Gene_SLanterFeatures</defName>
+    <label>S'Lanter ears and tail</label>
+    <description>Rounded ears and a heavy tail inherited from the FEV-mutated S'Lanter line.</description>
+    <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CoonEars/CoonEars</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/FurryTail/FurryTail</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0.1, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.1, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef>
     <defName>WestTek_Gene_BAja</defName>
     <label>B'Aja genome</label>
     <description>A stabilized leporine-derived fauna genome.</description>
     <iconPath>UI/Icons/Genes/Gene_EarFloppy</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <skillGains>
-      <Animals>1</Animals>
-      <Plants>1</Plants>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <MoveSpeed>0.12</MoveSpeed>
     </statOffsets>
     <renderNodeProperties>
@@ -74,11 +123,7 @@
     <iconPath>UI/Icons/Genes/Gene_EarCat</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <skillGains>
-      <Melee>1</Melee>
-      <Social>1</Social>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <MeleeHitChance>0.05</MeleeHitChance>
     </statOffsets>
     <renderNodeProperties>
@@ -140,10 +185,7 @@
     <iconPath>UI/Icons/Genes/Gene_EarFloppy</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <skillGains>
-      <Melee>2</Melee>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <MeleeDPS>0.20</MeleeDPS>
     </statOffsets>
     <renderNodeProperties>
@@ -205,11 +247,7 @@
     <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <skillGains>
-      <Animals>2</Animals>
-      <Social>1</Social>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <SocialImpact>0.10</SocialImpact>
     </statOffsets>
   <renderNodeProperties>
@@ -271,11 +309,7 @@
     <iconPath>UI/Icons/Genes/Gene_CoonEars</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <skillGains>
-      <Animals>1</Animals>
-      <Intellectual>1</Intellectual>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <MoveSpeed>0.10</MoveSpeed>
     </statOffsets>
     <statFactors>

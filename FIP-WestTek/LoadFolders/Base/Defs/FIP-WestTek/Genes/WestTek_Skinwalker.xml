@@ -23,11 +23,7 @@
     <displayOrderInCategory>501</displayOrderInCategory>
     <biostatCpx>2</biostatCpx>
     <biostatMet>-2</biostatMet>
-    <skillGains>
-      <Melee>2</Melee>
-      <Animals>1</Animals>
-    </skillGains>
-    <statOffsets>
+<statOffsets>
       <MoveSpeed>0.30</MoveSpeed>
       <MeleeDPS>0.25</MeleeDPS>
     </statOffsets>
@@ -55,6 +51,18 @@
     <iconPath>UI/Abilities/WestTek_SkinwalkerShift</iconPath>
     <targetRequired>false</targetRequired>
     <cooldownTicksRange>60000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>1</warmupTime>
+      <range>0</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
     <comps>
       <li Class="FIP.WestTek.CompProperties_AbilitySkinwalkerShift" />
     </comps>

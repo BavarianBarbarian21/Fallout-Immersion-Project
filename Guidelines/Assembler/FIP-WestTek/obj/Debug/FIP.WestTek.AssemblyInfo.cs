@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIP_WestTek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce88fce0a7251dec0c2b927e55331be8dd3e6897")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+406c6589b1bd80fb73ffb537f4bc34b0232f1c2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIP_WestTek")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIP_WestTek")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

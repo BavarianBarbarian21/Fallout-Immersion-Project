@@ -153,26 +153,42 @@ internal static class Patch_Pawn_TickRare_FloraGenes
 [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
 internal static class Patch_Pawn_Kill_SporeCarrierFertility
 {
-    private static void Prefix(Pawn __instance, out Map __stateMap, out IntVec3 __statePosition, out bool __stateShouldFertilize)
+    private readonly struct KillState
     {
-        __stateMap = __instance?.Map;
-        __statePosition = __instance?.Position ?? IntVec3.Invalid;
-        __stateShouldFertilize = WestTekSporeCarrierDeathUtility.ShouldFertilizeOnDeath(__instance);
+        public KillState(Map map, IntVec3 position, bool shouldFertilize)
+        {
+            Map = map;
+            Position = position;
+            ShouldFertilize = shouldFertilize;
+        }
+
+        public Map Map { get; }
+        public IntVec3 Position { get; }
+        public bool ShouldFertilize { get; }
     }
 
-    private static void Postfix(Map __stateMap, IntVec3 __statePosition, bool __stateShouldFertilize)
+    private static void Prefix(Pawn __instance, out KillState __state)
     {
-        if (!__stateShouldFertilize)
+        __state = new KillState(
+            __instance?.Map,
+            __instance?.Position ?? IntVec3.Invalid,
+            WestTekSporeCarrierDeathUtility.ShouldFertilizeOnDeath(__instance)
+        );
+    }
+
+    private static void Postfix(KillState __state)
+    {
+        if (!__state.ShouldFertilize)
         {
             return;
         }
 
-        if (__stateMap == null || !__statePosition.IsValid)
+        if (__state.Map == null || !__state.Position.IsValid)
         {
             return;
         }
 
-        WestTekSporeCarrierDeathUtility.FertilizeDeathArea(__stateMap, __statePosition);
+        WestTekSporeCarrierDeathUtility.FertilizeDeathArea(__state.Map, __state.Position);
     }
 }
 [HarmonyPatch(typeof(SkillRecord), "Interval")]

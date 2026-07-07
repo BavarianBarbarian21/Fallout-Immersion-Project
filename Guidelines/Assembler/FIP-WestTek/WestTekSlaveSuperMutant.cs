@@ -69,8 +69,8 @@ internal static class WestTekMutationUtility
             return;
         }
 
-        foreach (Gene gene in pawn.genes.Xenogenes
-            .Where(gene => gene.def.exclusionTags != null && gene.def.exclusionTags.Contains("SkinColorOverride"))
+        foreach (Gene gene in pawn.genes.GenesListForReading
+            .Where(IsSkinColorGene)
             .ToList())
         {
             pawn.genes.RemoveGene(gene);
@@ -85,6 +85,17 @@ internal static class WestTekMutationUtility
 
         pawn.Drawer?.renderer?.SetAllGraphicsDirty();
         PortraitsCache.SetDirty(pawn);
+    }
+
+    private static bool IsSkinColorGene(Gene gene)
+    {
+        if (gene?.def == null || gene.def == WestTekDefOf.WestTek_Gene_Nightkin)
+        {
+            return false;
+        }
+
+        return gene.def.defName.StartsWith("Skin_")
+            || gene.def.exclusionTags?.Contains("SkinColorOverride") == true;
     }
 
     public static bool IsSuperMutantSlave(Pawn pawn)
