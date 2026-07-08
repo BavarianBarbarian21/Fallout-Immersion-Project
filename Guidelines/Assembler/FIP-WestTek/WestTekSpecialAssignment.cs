@@ -113,12 +113,7 @@ internal static class Patch_PawnGenerator_GenerateGenes
     {
         WestTekSpecialUtility.AssignGeneratedSpecials(pawn);
 
-        if (pawn?.genes?.Xenotype != null &&
-            pawn.genes.Xenotype.defName is
-                "WestTek_Xenotype_SLanter"
-                or "WestTek_Xenotype_SNuffy"
-                or "Highmate"
-                or "WestTek_Xenotype_Skinwalker")
+        if (WestTekFaunaMutationUtility.IsGeneratedFaunaXenotype(xenotype))
         {
             WestTekFaunaMutationUtility.AssignRandomFurGene(pawn);
         }

@@ -3,6 +3,20 @@
 	<Operation Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Medieval2">
 		<success>Always</success>
 		<operations>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomRough"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomSavage"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_CivilClan"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_ClanRough"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+			<li Class="PatchOperationAdd"><xpath>/Defs/FactionDef[defName="VFEM2_ClanSavage"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomCivil"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomRough"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+			<li Class="PatchOperationReplace"><xpath>/Defs/FactionDef[defName="VFEM2_KingdomSavage"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence" MayRequire="OskarPotocki.VFE.Medieval2">
+		<success>Always</success>
+		<operations>
 			<li Class="PatchOperationAdd"><xpath>Defs/ScenarioDef[defName="VFEM2_NewKingdom"]/scenario</xpath><value><showInUI>false</showInUI></value></li>
 			<li Class="PatchOperationRemove"><xpath>Defs/ThingDef[designationCategory="Structure" and defName!="VFEM2_Palisade"]/designationCategory</xpath></li>
 			<li Class="PatchOperationRemove"><xpath>Defs/ThingDef[category="Building" and starts-with(defName,"VFEM2_") and defName!="VFEM2_Palisade" and defName!="VFEM2_ArcheryTarget" and defName!="VFEM2_TrainingDummy"]/designationCategory</xpath></li>
@@ -18,18 +32,6 @@
 			<li Class="PatchOperationAdd"><xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]</xpath><value><generateCommonality>0</generateCommonality></value></li>
 			<li Class="PatchOperationRemove"><xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker</xpath></li>
 			<li Class="PatchOperationReplace"><xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath><value><generateAllowChance>0</generateAllowChance></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationAdd"><xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]</xpath><value><settlementGenerationWeight>0</settlementGenerationWeight><canMakeRandomly>false</canMakeRandomly></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_KingdomCivil"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_KingdomRough"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_KingdomSavage"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_CivilClan"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_ClanRough"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
-			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_ClanSavage"]/maxConfigurableAtWorldCreation</xpath><value><maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation></value></li>
 			<li Class="PatchOperationReplace"><xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_Skirmish"]/rootSelectionWeight</xpath><value><rootSelectionWeight>0</rootSelectionWeight></value></li>
 			<li Class="PatchOperationReplace"><xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_SiegeCamp"]/rootSelectionWeight</xpath><value><rootSelectionWeight>0</rootSelectionWeight></value></li>
 			<li Class="PatchOperationReplace"><xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath><value><factionNameMaker>HHTools_FactionNameMaker_CaravanCompany</factionNameMaker></value></li>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName="VRE_AnimalFeeder"]</xpath>
+				<value>
+					<canGenerateInGeneSet>false</canGenerateInGeneSet>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName="VRE_SanguoFeeder"]</xpath>
+				<value>
+					<canGenerateInGeneSet>false</canGenerateInGeneSet>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName="VRE_LowHemogenDrain"]</xpath>
+				<value>
+					<canGenerateInGeneSet>false</canGenerateInGeneSet>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes/li[text()="HemogenDrain"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName="Sanguophage"]/genes</xpath>
+				<value>
+					<li>VRE_ExtremeHemogenDrain</li>
+					<li>VRE_CorpseFeeder</li>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Strigoi</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Ekkimian</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnKindDef[@Name="SanguophageBase"]/xenotypeSet/xenotypeChances/VRE_Bruxa</xpath>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

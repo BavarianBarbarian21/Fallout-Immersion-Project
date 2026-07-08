@@ -59,6 +59,18 @@ internal static class WestTekFaunaMutationUtility
         return pawn?.genes?.Xenotype == WestTekDefOf.Highmate;
     }
 
+    public static bool IsGeneratedFaunaXenotype(XenotypeDef xenotype)
+    {
+        if (xenotype == null)
+        {
+            return false;
+        }
+
+        return xenotype == WestTekDefOf.WestTek_Xenotype_SLanter
+            || xenotype == WestTekDefOf.Highmate
+            || xenotype.defName == "WestTek_Xenotype_SNuffy";
+    }
+
     public static bool HasGene(Pawn pawn, GeneDef geneDef)
     {
         if (pawn?.genes == null || geneDef == null)
