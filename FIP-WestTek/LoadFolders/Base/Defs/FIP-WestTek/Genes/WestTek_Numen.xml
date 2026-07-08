@@ -217,7 +217,7 @@
   <description>Infect a compatible human pawn with unstable FEV spores, transforming them into a Spore Carrier.</description>
   <iconPath>UI/Abilities/WestTek_SporeInfect</iconPath>
   <targetRequired>true</targetRequired>
-  <cooldownTicksRange>180000</cooldownTicksRange>
+  <cooldownTicksRange>180000~180000</cooldownTicksRange>
   <verbProperties>
     <range>3.9</range>
     <warmupTime>1.5</warmupTime>
@@ -255,7 +255,7 @@
 <AbilityDef Name="WestTek_NumenAbilityBase" Abstract="True">
   <iconPath>FIP-WestTek/Misc/Placeholder</iconPath>
   <targetRequired>false</targetRequired>
-  <cooldownTicksRange>60000</cooldownTicksRange>
+  <cooldownTicksRange>60000~60000</cooldownTicksRange>
   <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
   <statBases>
     <Ability_Duration>20</Ability_Duration>
@@ -272,6 +272,24 @@
       <canTargetSelf>True</canTargetSelf>
     </targetParams>
   </verbProperties>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_Flowering</defName>
+  <label>flowering senses</label>
+  <description>Focus the host's flowering sensory symbiotes.</description>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_GrowingStrong</defName>
+  <label>growing strong</label>
+  <description>Focus the host's motoric flora growth.</description>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_Rooted</defName>
+  <label>rooted organs</label>
+  <description>Focus the host's rooted organ symbiotes.</description>
 </AbilityDef>
 
 <AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenEye</defName><label>ocular bloom</label><description>Sharpen sight through the eye symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Eye</hediffDef></li></comps></AbilityDef>
