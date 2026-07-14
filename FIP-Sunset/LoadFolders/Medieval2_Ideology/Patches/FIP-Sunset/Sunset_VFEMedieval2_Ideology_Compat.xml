@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/MemeDef[defName="VFEM2_Structure_Norse"]/hiddenInChooseMemes</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/MemeDef[defName="VFEM2_Structure_Norse"]/hiddenInChooseMemes</xpath>
+          <value>
+            <hiddenInChooseMemes>true</hiddenInChooseMemes>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/MemeDef[defName="VFEM2_Structure_Norse"]</xpath>
+          <value>
+            <hiddenInChooseMemes>true</hiddenInChooseMemes>
+          </value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/MemeDef[defName="VFEM2_Structure_Norse"]/randomizationSelectionWeightFactor</xpath>
+        <value>
+          <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
