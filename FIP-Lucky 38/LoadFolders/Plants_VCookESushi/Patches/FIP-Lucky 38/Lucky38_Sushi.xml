@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VCE_Soybean"]/plant/harvestedThingDef</xpath>
+    <value>
+      <harvestedThingDef>FCP_Raw_Cranberry</harvestedThingDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VCE_Soybean"]/plant/sowTags</xpath>
+    <value>
+      <sowTags/>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="VCE_SoybeansToSauce"]/items/li[text()="VCE_RawSoybean"]</xpath>
+    <value>
+      <li>FCP_Raw_Cranberry</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/*[defName="IP_SoyFermenterFirstItem"]/items/li[text()="VCE_RawSoybean"]</xpath>
+    <value>
+      <li>FCP_Raw_Cranberry</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VCE_Wasabi"]/plant/harvestedThingDef</xpath>
+    <value>
+      <harvestedThingDef>FCP_Raw_Xander_Root</harvestedThingDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VCE_Wasabi"]/plant/sowTags</xpath>
+    <value>
+      <sowTags/>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="VCE_WasabiPaste"]/ingredients/li/filter/thingDefs/li[text()="VCE_RawWasabi"]</xpath>
+    <value>
+      <li>FCP_Raw_Xander_Root</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="VCE_WasabiPaste"]/fixedIngredientFilter/thingDefs/li[text()="VCE_RawWasabi"]</xpath>
+    <value>
+      <li>FCP_Raw_Xander_Root</li>
+    </value>
+  </Operation>
+</Patch>

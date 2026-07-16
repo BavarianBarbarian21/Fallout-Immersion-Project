@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Patch>
   <!--Block all Vanilla Biomes-->
   <Operation Class="PatchOperationAdd">
@@ -84,45 +84,5 @@
       <canAutoChoose>false</canAutoChoose>
       <generatesNaturally>false</generatesNaturally>
     </value>
-  </Operation>
-
-  <Operation Class="PatchOperationSequence">
-    <operations>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
-        <xpath>/Defs/BiomeDef[defName="Grasslands"]</xpath>
-        <value>
-          <canAutoChoose>false</canAutoChoose>
-          <generatesNaturally>false</generatesNaturally>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
-        <xpath>/Defs/BiomeDef[defName="GlacialPlain"]</xpath>
-        <value>
-          <canAutoChoose>false</canAutoChoose>
-          <generatesNaturally>false</generatesNaturally>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
-        <xpath>/Defs/BiomeDef[defName="LavaField"]</xpath>
-        <value>
-          <canAutoChoose>false</canAutoChoose>
-          <generatesNaturally>false</generatesNaturally>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
-        <xpath>/Defs/BiomeDef[defName="Glowforest"]</xpath>
-        <value>
-          <canAutoChoose>false</canAutoChoose>
-          <generatesNaturally>false</generatesNaturally>
-        </value>
-      </li>
-      <li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
-        <xpath>/Defs/BiomeDef[defName="Scarlands"]</xpath>
-        <value>
-          <canAutoChoose>false</canAutoChoose>
-          <generatesNaturally>false</generatesNaturally>
-        </value>
-      </li>
-    </operations>
   </Operation>
 </Patch>

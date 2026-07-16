@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Patch>
   <!-- AncientComplex_Mechanitor -->
   <!--Mechanoid (Faction)-->
@@ -17,16 +17,7 @@
     </value>
   </Operation>
   <!-- Patch MechanitorShip questDescription -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questDescriptionRules/rulesStrings/li[contains(text(),'questDescription-&gt;')]</xpath>
-    <value>
-      <li>questDescription-&gt;You have decrypted an ancient RobCo transponder, revealing the location of a Vertibot ship in orbit. The ship is badly damaged, but you can signal it to land nearby.
 
-The Vertibot contains the remains of a long-dead RobCo mechanic. Mechanics can create and control robots for work and combat. By extracting the deceased mechanic's Pipboy, you can turn one of your own colonists into a mechanic. Beware - the ship also contains hostile RobCo robots. The robot group is composed of:
-
-[mechList]</li>
-    </value>
-  </Operation>
   <!-- Patch MechanitorShip mechGroups to spawn 1 Eyebot and 2 Protectrons -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/root/mechGroups</xpath>
@@ -49,42 +40,12 @@ The Vertibot contains the remains of a long-dead RobCo mechanic. Mechanics can c
     </value>
   </Operation>
   <!-- Patch MechanitorShip questContentRules -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),'mechanitorShuttleCrashedLetterLabel-&gt;')]</xpath>
-    <value>
-      <li>mechanitorShuttleCrashedLetterLabel-&gt;Vertibot crash site</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),'mechanitorShuttleCrashedLetterText-&gt;')]</xpath>
-    <value>
-      <li>mechanitorShuttleCrashedLetterText-&gt;A Vertibot containing rogue RobCo robots has crashed nearby. The robots will exit the wreck and prepare to fight.</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),'assaultBeginLetterLabel-&gt;')]</xpath>
-    <value>
-      <li>assaultBeginLetterLabel-&gt;RobCo robot attack</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),'assaultBeginLetterText-&gt;')]</xpath>
-    <value>
-      <li>assaultBeginLetterText-&gt;The rogue RobCo robots are coming to assault the colony!</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),"mechlinkAvailableLetterLabel-&gt;")]</xpath>
-    <value>
-      <li>mechlinkAvailableLetterLabel-&gt;[mechanitor_nameDef]'s Pipboy available</li>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/questContentRules/rulesStrings/li[contains(text(),"mechlinkAvailableLetterText-&gt;")]</xpath>
-    <value>
-      <li>mechlinkAvailableLetterText-&gt;The crashed Vertibot contained the corpse of an ancient RobCo mechanitor. Extract [mechanitor_possessive] Pipboy by selecting a colonist and right-clicking the corpse.</li>
-    </value>
-  </Operation>
+
+
+
+
+
+
   <!-- Raid spawn changes -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers</xpath>
@@ -151,50 +112,13 @@ The Vertibot contains the remains of a long-dead RobCo mechanic. Mechanics can c
     <xpath>/Defs/ThingDef[defName="AncientMechGestatorTank"]/comps/li[@Class="CompProperties_MechGestatorTank"]/mechKindOptions</xpath>
     <value>
       <mechKindOptions>
-        <RobCo_MisterGutsy />
-        <RobCo_Assaultron />
-        <RobCo_Protectron />
-        <RobCo_SentrybotAnnihilator />
-        <RobCo_Robobrain />
+        <RobCo_MisterGutsy/>
+        <RobCo_Assaultron/>
+        <RobCo_Protectron/>
+        <RobCo_SentrybotAnnihilator/>
+        <RobCo_Robobrain/>
       </mechKindOptions>
     </value>
   </Operation>
   <!-- Mech capsule, assembler, and drop beacon changes -->
-  <Operation Class="PatchOperationSequence">
-    <operations>
-      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-        <xpath>/Defs/ThingDef[defName="MechCapsule"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/spawnablePawnKinds</xpath>
-        <value>
-          <spawnablePawnKinds>
-            <li>RobCo_MisterGutsy</li>
-            <li>RobCo_Assaultron</li>
-            <li>RobCo_Protectron</li>
-            <li>RobCo_SentrybotAnnihilator</li>
-          </spawnablePawnKinds>
-        </value>
-      </li>
-      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-        <xpath>/Defs/ThingDef[defName="MechAssembler"]/comps/li[@Class="CompProperties_SpawnerPawn"]/spawnablePawnKinds</xpath>
-        <value>
-          <spawnablePawnKinds>
-            <li>RobCo_MisterGutsy</li>
-            <li>RobCo_Assaultron</li>
-            <li>RobCo_Protectron</li>
-            <li>RobCo_SentrybotAnnihilator</li>
-          </spawnablePawnKinds>
-        </value>
-      </li>
-      <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-        <xpath>/Defs/ThingDef[defName="MechDropBeacon"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/spawnablePawnKinds</xpath>
-        <value>
-          <spawnablePawnKinds>
-            <li>RobCo_MisterGutsy</li>
-            <li>RobCo_Assaultron</li>
-            <li>RobCo_Protectron</li>
-            <li>RobCo_SentrybotAnnihilator</li>
-          </spawnablePawnKinds>
-        </value>
-      </li>
-    </operations>
-  </Operation>
 </Patch>

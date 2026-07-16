@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="FCP_Faction_PRC"]/xenotypeSet</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.8</Baseliner>
+          <FCP_Xenotype_Ghoul MayRequire="Rick.FCP.Ghouls">0.2</FCP_Xenotype_Ghoul>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+</Patch>

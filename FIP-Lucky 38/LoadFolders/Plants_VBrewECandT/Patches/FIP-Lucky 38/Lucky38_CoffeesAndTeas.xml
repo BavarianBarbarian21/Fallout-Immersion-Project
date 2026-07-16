@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Patch>
-  <Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VBrewECandT">
+  <Operation Class="PatchOperationSequence">
     <success>Always</success>
     <operations>
       <li Class="PatchOperationReplace">
@@ -11,105 +11,11 @@
           </recipeUsers>
         </value>
       </li>
-      <li Class="PatchOperationFindMod" MayRequire="Rick.FCP.Plants">
-        <mods>
-          <li>Vanilla Cooking Expanded</li>
-        </mods>
-        <match Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
-          <success>Always</success>
-          <operations>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeCoffeeFast"]/ingredients/li/filter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
-              <value>
-                <li>FCP_Raw_Honey_Mesquite</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeCoffeeFast"]/fixedIngredientFilter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
-              <value>
-                <li>FCP_Raw_Honey_Mesquite</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeCoffeeFast"]/defaultIngredientFilter/thingDefs/li[text()="VBE_RawCoffee"]</xpath>
-              <value>
-                <li>FCP_Raw_Honey_Mesquite</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeTeaFast"]/ingredients/li/filter/thingDefs/li[text()="VBE_RawTea"]</xpath>
-              <value>
-                <li>FCP_Raw_Mutated_Fern</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeTeaFast"]/fixedIngredientFilter/thingDefs/li[text()="VBE_RawTea"]</xpath>
-              <value>
-                <li>FCP_Raw_Mutated_Fern</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeTeaFast"]/defaultIngredientFilter/thingDefs/li[text()="VBE_RawTea"]</xpath>
-              <value>
-                <li>FCP_Raw_Mutated_Fern</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/ThingDef[defName="VBE_MintPlant"]/plant/harvestedThingDef</xpath>
-              <value>
-                <harvestedThingDef>FCP_Raw_Carrot_Flower</harvestedThingDef>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/ThingDef[defName="VBE_MintPlant"]/plant/sowTags</xpath>
-              <value>
-                <sowTags />
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_BrewMintCoffee"]/ingredients/li/filter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_BrewMintCoffee"]/fixedIngredientFilter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_BrewMintCoffee"]/defaultIngredientFilter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeMintTea"]/ingredients/li/filter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeMintTea"]/fixedIngredientFilter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/RecipeDef[defName="VBE_MakeMintTea"]/defaultIngredientFilter/thingDefs/li[text()="VBE_MintLeaves"]</xpath>
-              <value>
-                <li>FCP_Raw_Carrot_Flower</li>
-              </value>
-            </li>
-          </operations>
-        </match>
-      </li>
-      <li Class="PatchOperationFindMod" MayRequire="Rick.FCP.Plants">
+      <li Class="PatchOperationFindMod">
         <mods>
           <li>Vanilla Plants Expanded</li>
         </mods>
-        <match Class="PatchOperationSequence" MayRequire="Rick.FCP.Plants">
+        <match Class="PatchOperationSequence">
           <success>Always</success>
           <operations>
             <li Class="PatchOperationReplace">

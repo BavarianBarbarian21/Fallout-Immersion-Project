@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/settlementTexturePath</xpath>
+    <value>
+      <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/settlementTexturePath</xpath>
+    <value>
+      <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/weaponTags</xpath>
+    <value>
+      <li>SimpleGun</li>
+      <li>GrenadeDestructive</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Civilian"]/apparelTags</xpath>
+    <value>
+      <li>Outlander</li>
+      <li>NeolithicRangedBasic</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/weaponTags</xpath>
+    <value>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Fighter"]/apparelTags</xpath>
+    <value>
+      <li>Outlander</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/weaponTags</xpath>
+    <value>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Trader"]/apparelTags</xpath>
+    <value>
+      <li>Outlander</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/weaponTags</xpath>
+    <value>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="HHTools_Settlement_Leader"]/apparelTags</xpath>
+    <value>
+      <li>Outlander</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_") and not(contains(defName,"_Child"))]/weaponTags</xpath>
+    <value>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+      <li>IndustrialGunAdvanced</li>
+      <li>GrenadeDestructive</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[starts-with(defName,"HHTools_") and contains(defName,"_Settlement_")]/apparelTags</xpath>
+    <value>
+      <li>Outlander</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </value>
+  </Operation>
+</Patch>

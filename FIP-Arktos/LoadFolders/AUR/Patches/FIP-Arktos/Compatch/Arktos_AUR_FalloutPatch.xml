@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <!-- Default AUR gun pools are modern real-world kits. Fall back to generic industrial weapons unless FCP ballistic packs are present. -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_OrdinaryWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_Revolver</li>
+                        <li>Gun_Autopistol</li>
+                        <li>Gun_MachinePistol</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1~2</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_BoltActionRifle</li>
+                        <li>Gun_PumpShotgun</li>
+                        <li>Gun_HeavySMG</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingSetMakerDef[defName="AM_AdvancedWeapons"]/root/options</xpath>
+          <value>
+            <options>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Gun_AssaultRifle</li>
+                        <li>Gun_ChainShotgun</li>
+                        <li>Gun_LMG</li>
+                        <li>Gun_SniperRifle</li>
+                      </thingDefs>
+                    </filter>
+                    <countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="AncientSoldierBoss"]/weaponTags</xpath>
+          <value>
+            <weaponTags>
+              <li>IndustrialGunAdvanced</li>
+            </weaponTags>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="AncientMallGuards"]/weaponTags</xpath>
+          <value>
+            <weaponTags>
+              <li>IndustrialGunAdvanced</li>
+            </weaponTags>
+          </value>
+        </li>
+    </operations>
+  </Operation>
+</Patch>

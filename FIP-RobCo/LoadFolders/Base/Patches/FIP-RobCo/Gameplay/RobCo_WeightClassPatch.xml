@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Patch>
   <!-- MechWeightClassDef label changes -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/minGenerationAge</xpath>
     <value>
-      <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
-      <maxGenerationAge MayRequire="Ludeon.RimWorld.Biotech">270</maxGenerationAge>
+      <minGenerationAge>200</minGenerationAge>
+      <maxGenerationAge>270</maxGenerationAge>
     </value>
   </Operation>
 </Patch>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingSetMakerDef[defName="AM_OrdinaryWeapons"]/root/options</xpath>
+    <value>
+      <options>
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>FCP_Gun_10mm_Pistol</li>
+                  <li>FCP_Gun_9mm_Pistol</li>
+                  <li>FCP_Gun_10mm_SMG</li>
+                  <li>FCP_Gun_9mm_SMG</li>
+                  <li>FCP_Gun_Varmint_Rifle</li>
+                  <li>FCP_Gun_Cowboy_Repeater</li>
+                  <li>FCP_Gun_Combat_Rifle_Short</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingSetMakerDef[defName="AM_AdvancedWeapons"]/root/options</xpath>
+    <value>
+      <options>
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>FCP_Gun_Combat_Rifle_Standard</li>
+                  <li>FCP_Gun_Combat_Rifle_Scoped</li>
+                  <li>FCP_Gun_DKS_501_Sniper_Rifle</li>
+                  <li>FCP_Gun_Light_Machine_Gun</li>
+                  <li>FCP_Gun_Minigun</li>
+                  <li>FCP_Gun_44Magnum_Revolver</li>
+                  <li>FCP_Gun_Hunting_Revolver</li>
+                  <li>FCP_Gun_223_Rifle</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </value>
+  </Operation>
+</Patch>

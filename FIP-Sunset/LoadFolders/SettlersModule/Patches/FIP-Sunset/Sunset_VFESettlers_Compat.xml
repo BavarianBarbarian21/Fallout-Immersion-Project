@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="SettlerCivil"]</xpath>
+    <value>
+      <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <canMakeRandomly>false</canMakeRandomly>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="SettlerRough"]</xpath>
+    <value>
+      <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <canMakeRandomly>false</canMakeRandomly>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="SettlerSavage"]</xpath>
+    <value>
+      <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <canMakeRandomly>false</canMakeRandomly>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="SettlerCivil"]/maxConfigurableAtWorldCreation</xpath>
+    <value>
+      <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="SettlerRough"]/maxConfigurableAtWorldCreation</xpath>
+    <value>
+      <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="SettlerSavage"]/maxConfigurableAtWorldCreation</xpath>
+    <value>
+      <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/QuestScriptDef[defName="VFES_Wanted"]/rootSelectionWeight</xpath>
+    <value>
+      <rootSelectionWeight>0</rootSelectionWeight>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/QuestScriptDef[defName="VFES_CaravanRaid"]/rootSelectionWeight</xpath>
+    <value>
+      <rootSelectionWeight>0</rootSelectionWeight>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ScenarioDef[defName="VFES_Bandits"]/scenario</xpath>
+    <value>
+      <showInUI>false</showInUI>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThinkTreeDef[defName="Muffalo_PreMain" and thinkRoot/@Class="VFE_Settlers.ThinkNodes.ThinkNode_ConditionalChemshinedMuffalo"]</xpath>
+  </Operation>
+
+</Patch>

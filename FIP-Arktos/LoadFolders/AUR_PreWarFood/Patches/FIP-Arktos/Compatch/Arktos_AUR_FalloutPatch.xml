@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingSetMakerDef[defName="AM_PotatoChips"]/root/options</xpath>
+    <value>
+      <options>
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>FCP_Food_Potato_Crisps</li>
+                  <li>FCP_Food_Potato_Crisps_Lightly_Salted</li>
+                  <li>FCP_Food_Fancy_Lad_Snack_Cakes</li>
+                  <li>FCP_Food_Fancy_Lad_Snack_Cakes_Buzzbite_Flavor</li>
+                  <li>FCP_Food_Sugar_Bombs</li>
+                  <li>FCP_Food_Sugar_Bombs_Fun_Size</li>
+                </thingDefs>
+              </filter>
+              <countRange>2~6</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingSetMakerDef[defName="AM_Food"]/root/options</xpath>
+    <value>
+      <options>
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>MealSurvivalPack</li>
+                  <li>FCP_Food_Cram</li>
+                  <li>FCP_Food_Insta_Mash</li>
+                  <li>FCP_Food_Packaged_Iguana_Bits</li>
+                  <li>FCP_Food_Pork_N_Beans</li>
+                  <li>FCP_Food_Salisbury_Steak</li>
+                  <li>FCP_Food_Yum_Yum_Deviled_Eggs</li>
+                </thingDefs>
+              </filter>
+              <countRange>1~3</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>0.25</weight>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Pemmican</li>
+                </thingDefs>
+              </filter>
+              <countRange>25~75</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </value>
+  </Operation>
+</Patch>
