@@ -8,50 +8,59 @@ Your feedback directly shapes development!
 
 [h2]Features[/h2]
 [list]
-[*] Serves as the [b]core framework layer[/b] for finalized FIP modules.
-[*] Adds shared cultures, faction bases, pawnkind defs, apparel scaffolding, and regional naming systems used across the project.
-[*] Centralizes rulepacks and name makers for Arktos worldgen, Greenway religions, and broader wasteland settlement flavor.
-[*] Includes optional patch support for FCP weapons, xenotypes, faction integrations, and transport naming.
+[*] [b]Regional faction system:[/b] adds civil settlements, rough settlements, raider gangs, and tribes for California, Arizona, Cascadia, and Nuevo Texico, plus ghoul ghost towns, super-mutant strongholds, mutant armies, S'Lanter tribes, Numen tribes, and other mutant communities.
+[*] [b]Faction populations:[/b] supplies dedicated settler, guard, trader, mayor, child, miner, hunter, logger, farmer, raider, and tribal pawn kinds, with regional apparel and weapon pools.
+[*] [b]Cultures and names:[/b] adds American, Bear, Bull, Cascadian, Nuevo Texican, raider, ghoul, mutant, Numen, and S'Lanter cultures; regional pawn names; faction-name makers; settlement names; religion names; and a large library of Fallout-style world-feature and landmark names.
+[*] [b]Starting-scenario retheme:[/b] rewrites Crashlanded as an airship wreck, Rich Explorer as a vault dweller leaving safety behind, Lost Tribe as survivors of a machine attack, and Naked Brutality as a wastelander robbed and left for dead.
+[*] [b]FCP integration:[/b] adds shared ballistic, energy, melee, and unarmed weapon tags and assigns compatible West Tek xenotypes to Brotherhood, Enclave, Great Khans, Legion, NCR, PRC, Raider, United States, and Wastelander factions when those mods are active.
+[*] [b]Vanilla/DLC faction conversion:[/b] patches player factions, ancients, refugees, Empire, sanguophages, pilgrims, cultists, insects, salvagers, and traders into the shared FIP faction framework.
+[*] [b]Visuals:[/b] includes custom icons for democratic, despotic, tribal, raider, mutant, mechanist, remnant, American, and Whitespring identities. It does not replace pawn bodies or equipment textures.
 [/list]
 
 [h2]Requirements[/h2]
 [list]
-[*] No hard requirements - this framework can load by itself.
+[*] No DLC or external mod is a hard requirement.
 [/list]
 
 [h2]Recommended[/h2]
 [list]
-[*] [b]FCP - Ghouls[/b] - Optional (extra Fallout race and faction support)
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3590034301][b]FCP - Ballistic Weapons[/b][/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3590041149][b]FCP - Energy Weapons[/b][/url] - Optional (weapon tagging and shared patch hooks)
-[*] [b]FCP - Melee Weapons[/b] and [b]FCP - Unarmed Weapons[/b] - Optional (additional weapon family coverage)
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202704][b]FIP - Arktos[/b][/url] - Uses H&H's world-feature and landmark naming library.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202407][b]FIP - West Tek[/b][/url] - Supplies the xenotypes used by mutant and regional faction integration.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3760675636][b]FIP - Greenway[/b][/url] - Uses the shared religion name makers and ideology-facing faction bases.
+[*] [b]FCP Ghouls, factions, and weapon packs[/b] - Optional; activate the matching xenotype and weapon-pool patches.
 [/list]
 
 [h2]Development Notes[/h2]
 [list]
-[*] This module is in open beta. Balance passes, naming cleanup, and compatibility refinements are still ongoing, so targeted feedback is useful.
-[*] This mod is part of the Fallout Immersion Project (FIP) - a complete modular overhaul inspired by Fallout's lore. FIP is not affiliated with the Fallout Collaboration Project (FCP), but it is designed to complement FCP and other Fallout-friendly RimWorld mods. You can also find the project in the FCP Discord's FIP channel: [url=https://discordapp.com/channels/644497305650593793/1414315188483657869]Join here[/url]
+[*] H&H Tools is both a shared framework and a visible faction pack. Adding its factions to an existing world cannot rebuild that world's original faction distribution; a new game is recommended.
+[*] Removing it from a save that uses dependent FIP factions, cultures, pawn kinds, or names is not supported.
+[*] [url=https://github.com/BavarianBarbarian21/Fallout-Immersion-Project]Source code and development repository[/url]
+[*] This mod is part of the Fallout Immersion Project (FIP) - a modular overhaul inspired by Fallout's lore. FIP is not affiliated with the Fallout Collaboration Project (FCP), but is designed to complement it. [url=https://discordapp.com/channels/644497305650593793/1414315188483657869]FIP channel in the FCP Discord[/url]
 [/list]
 
 [h2]Fallout Immersion Project Modules[/h2]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202124]Fallout Immersion Project - Donaustahl (Vanilla cleanup and immersion remover)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202704]Fallout Immersion Project - Arktos (Biomes and world generation)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202407]Fallout Immersion Project - West Tek (Biotech genetics and xenotypes)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3563825876]Fallout Immersion Project - RobCo (Biotech robotics and mechanitors)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3698413567]Fallout Immersion Project - Greenway (Ideology, dryads, and gauranlen retheme)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3687522435]Fallout Immersion Project - Whitespring (Royalty empire conversion)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3698412697]Fallout Immersion Project - Hubris (Royalty anima and occultism)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3688034883]Fallout Immersion Project - Repconn (Odyssey gravships and aerospace)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3700612546]Fallout Immersion Project - Poseidon (Vanilla Expanded energy and technology compatches)[/url]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3700613098]Fallout Immersion Project - Lucky 38 (Hospitality compatibility and casino flavor)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202124]FIP - Donaustahl (Vanilla Expanded cleanup and Fallout terminology)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202704]FIP - Arktos (biomes, landmarks, fire ants, and ecosystem conversion)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3592202407]FIP - West Tek (FEV, S.P.E.C.I.A.L., mutations, and xenotypes)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3563825876]FIP - RobCo (robots, Mechanitor progression, bosses, and quests)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3760675636]FIP - Greenway (Ideology, mutant policy, Treefather, and Treeminders)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3687522435]FIP - Whitespring (Royalty Empire and Enclave conversion)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3698412697]FIP - Hubris (cryptid psycasts and Mothman visuals)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3688034883]FIP - Repconn (Odyssey Hellion gravships and aerospace)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3700612546]FIP - Poseidon (oil, propane, power, and industry rethemes)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3700613098]FIP - Lucky 38 (hospitality, food, casino, and vertibird rethemes)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3760676309]FIP - Sunset (VFE Settlers, Tribals, and Medieval 2 conversion)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3760677126]FIP - Future-Tec (Vault-Tec blacksites and quest-chain conversion)[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3760683002]FIP - Corvega (Chryslus and Corvega vehicle branding)[/url]
 [/list]
 
 [h2]Credits[/h2]
 [list]
 [*] All placeholder textures and sprites created by [b]MisterHouse[/b].
-[*] All professional art was made by the amazing [b]Okagrim[/b] and [b]Farxmai[/b].
-[*] Special thanks to all the amazing [b]supporters[/b] on [b]Ko-fi[/b] - they are the ones who fund the commissions.
-[*] And of course, for helping out with coding and playtesting, huge shoutout to [b]Alvalor[/b].
+[*] Professional artwork created by [b]Okagrim[/b] and [b]Farxmai[/b].
+[*] Special thanks to all [b]Ko-fi supporters[/b] who fund commissioned artwork.
+[*] Special thanks to [b]Alvalor[/b] for coding support and playtesting.
 [/list]
 
 [h2]Support the Project[/h2]
