@@ -91,7 +91,13 @@ public class RobCoCourierCamp : Site
         Pawn target = GenerateCourierTarget();
         if (target == null)
         {
-            failed = true;
+            succeeded = true;
+            Thing chip = PlaceFallbackChip(map);
+            RobCoQuestUtility.SendLetter(
+                "RobCoQuestCourierFledLabel".Translate().Resolve(),
+                "RobCoQuestCourierFledText".Translate().Resolve(),
+                LetterDefOf.PositiveEvent,
+                new LookTargets(chip));
             return;
         }
 
@@ -99,6 +105,14 @@ public class RobCoCourierCamp : Site
         GenSpawn.Spawn(target, spawnCell, map);
         targetThingId = target.thingIDNumber;
         mapInitialized = true;
+    }
+
+    private Thing PlaceFallbackChip(Map map)
+    {
+        IntVec3 chipCell = CellFinder.RandomClosewalkCellNear(map.Center, map, 8);
+        Thing chip = ThingMaker.MakeThing(RobCoQuestDefOf.RobCo_PlatinumChip);
+        GenPlace.TryPlaceThing(chip, chipCell, map, ThingPlaceMode.Near);
+        return chip;
     }
 
     private Pawn GenerateCourierTarget()
