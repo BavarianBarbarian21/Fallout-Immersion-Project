@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FIP.HHTools.HHToolsPoliticalMissionSettingsDef>
+    <defName>HHTools_PoliticalMissionSettings</defName>
+    <herdAnimalKind>Cow</herdAnimalKind>
+  </FIP.HHTools.HHToolsPoliticalMissionSettingsDef>
+
+  <WorldObjectDef ParentName="Site">
+    <defName>HHTools_AbandonedMotelMissionSite</defName>
+    <label>abandoned roadside motel</label>
+    <description>A decaying pre-war roadside motel. Its closed rooms may conceal supplies, mission objectives, or additional dangers.</description>
+    <worldObjectClass>FIP.HHTools.HHToolsMotelMissionSite</worldObjectClass>
+    <texture>World/WorldObjects/Sites/GenericSite</texture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <mapGenerator>Encounter</mapGenerator>
+    <overrideMapSize>(120,1,120)</overrideMapSize>
+    <canHaveFaction>false</canHaveFaction>
+  </WorldObjectDef>
+
+  <SitePartDef>
+    <defName>HHTools_AbandonedMotel</defName>
+    <label>abandoned roadside motel</label>
+    <description>A classic American roadside motel with guest rooms, a manager's office, service rooms, a parking lot, and a nearby highway. Several rooms are closed or sealed and remain hidden until explored.</description>
+    <workerClass>SitePartWorker</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <requiresFaction>false</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <copyQuestName>true</copyQuestName>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>HHTools_AbandonedMotel</defName>
+    <linkWithSite>HHTools_AbandonedMotel</linkWithSite>
+    <order>470</order>
+    <genStep Class="FIP.HHTools.GenStep_HHToolsMotel"/>
+  </GenStepDef>
+
+  <QuestScriptDef>
+    <defName>HHTools_PoliticalMotelMission</defName>
+    <autoAccept>true</autoAccept>
+    <randomlySelectable>false</randomlySelectable>
+    <sendAvailableLetter>false</sendAvailableLetter>
+    <affectedByPoints>false</affectedByPoints>
+    <affectedByPopulation>false</affectedByPopulation>
+    <root Class="FIP.HHTools.QuestNode_Root_HHToolsPoliticalMotelMission"/>
+  </QuestScriptDef>
+
+</Defs>

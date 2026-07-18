@@ -34,12 +34,22 @@ public class Window_HHToolsFactionPolitics : Window
             return;
         }
 
-        Rect headerRect = new(inRect.x, inRect.y, inRect.width, 70f);
+        Rect headerRect = new(inRect.x, inRect.y, inRect.width, 122f);
         Text.Anchor = TextAnchor.MiddleCenter;
         Text.Font = GameFont.Medium;
-        Widgets.Label(headerRect.TopHalf(), settlement.LabelCap);
+        Widgets.Label(new Rect(headerRect.x, headerRect.y, headerRect.width, 34f), settlement.LabelCap);
         Text.Font = GameFont.Small;
-        Widgets.Label(headerRect.BottomHalf(), state.system == HHToolsFactionPoliticalSystem.Civilized ? "Parliament of Three Powers" : "Boss Network");
+        Widgets.Label(
+            new Rect(headerRect.x, headerRect.y + 34f, headerRect.width, 26f),
+            state.system == HHToolsFactionPoliticalSystem.Civilized
+                ? "Parliament of Three Powers"
+                : "Four-Family Network");
+        Widgets.Label(
+            new Rect(headerRect.x, headerRect.y + 62f, headerRect.width, 28f),
+            HHToolsFactionPoliticsTracker.Instance?.GetQuestStatusSummary(settlement.Faction) ?? string.Empty);
+        Widgets.Label(
+            new Rect(headerRect.x, headerRect.y + 90f, headerRect.width, 28f),
+            HHToolsFactionPoliticsTracker.Instance?.GetPoliticalMissionAvailability(state) ?? string.Empty);
         Text.Anchor = TextAnchor.UpperLeft;
 
         Rect contentRect = new(inRect.x, headerRect.yMax + 12f, inRect.width, inRect.height - headerRect.height - 12f);
@@ -67,13 +77,27 @@ public class Window_HHToolsFactionPolitics : Window
             DrawCardBackground(cardRect);
 
             HHToolsCivilizedPartyState partyState = parties[index];
+            string details = state.civilizedControlLocked
+                ? state.civilizedController == partyState.party
+                    ? "Consolidated benefit active:\n"
+                        + HHToolsFactionPoliticsUtility.GetCivilizedBenefitDescription(partyState.party)
+                    : "This party is now opposition. Its benefit is inactive."
+                : "Mission result: +2 support for this party and -1 for each rival.\n\n"
+                    + $"A party consolidates control above {HHToolsFactionPoliticsUtility.CivilizedMajorityThreshold}%."
+                    + "\n\nConsolidated benefit:\n"
+                    + HHToolsFactionPoliticsUtility.GetCivilizedBenefitDescription(partyState.party);
+
             DrawLeaderSection(
                 cardRect,
                 partyState.leaderPawn,
                 partyState.leaderPawn?.Name?.ToStringFull ?? HHToolsFactionPoliticsUtility.GetFallbackLeaderName(partyState.party),
                 HHToolsFactionPoliticsUtility.GetGroupLabel(partyState.party),
                 GetCivilizedStatusLabel(partyState),
-                GetCivilizedStatusColor(partyState));
+                GetCivilizedStatusColor(partyState),
+                details,
+                reservedBottom: 52f);
+
+            DrawCivilizedMissionButton(cardRect, partyState);
         }
     }
 
@@ -91,23 +115,47 @@ public class Window_HHToolsFactionPolitics : Window
             HHToolsCrimeBossState bossState = bosses[index];
             string statusText = GetBossStatusLabel(bossState, totalFavors);
             Color statusColor = GetBossStatusColor(bossState, totalFavors);
+            string details = GetBossDetails(bossState);
 
             DrawLeaderSection(
                 cardRect,
                 bossState.leaderPawn,
                 bossState.leaderPawn?.Name?.ToStringFull ?? HHToolsFactionPoliticsUtility.GetFallbackLeaderName(bossState.boss),
-                HHToolsFactionPoliticsUtility.GetBossTitle(bossState.boss),
+                $"{HHToolsFactionPoliticsUtility.GetFamilyLabel(bossState.boss)} — "
+                    + HHToolsFactionPoliticsUtility.GetBossTitle(bossState.boss),
                 statusText,
-                statusColor);
+                statusColor,
+                details,
+                reservedBottom: ShouldShowEliminationButton(bossState) ? 92f : 52f);
+
+            DrawAuthoritarianMissionButtons(cardRect, bossState);
         }
     }
 
-    private static void DrawLeaderSection(Rect cardRect, Pawn pawn, string leaderName, string subtitle, string statusLabel, Color statusColor)
+    private static void DrawLeaderSection(
+        Rect cardRect,
+        Pawn pawn,
+        string leaderName,
+        string subtitle,
+        string statusLabel,
+        Color statusColor,
+        string details,
+        float reservedBottom)
     {
         Rect nameRect = new(cardRect.x + 10f, cardRect.y + 10f, cardRect.width - 20f, 34f);
         Rect subtitleRect = new(cardRect.x + 10f, nameRect.yMax + 2f, cardRect.width - 20f, 28f);
-        Rect portraitRect = new(cardRect.x + 35f, subtitleRect.yMax + 8f, cardRect.width - 70f, cardRect.height - 170f);
+        float portraitHeight = Mathf.Min(235f, cardRect.height * 0.40f);
+        Rect portraitRect = new(
+            cardRect.x + 35f,
+            subtitleRect.yMax + 8f,
+            cardRect.width - 70f,
+            portraitHeight);
         Rect statusRect = new(cardRect.x + 10f, portraitRect.yMax + 12f, cardRect.width - 20f, 34f);
+        Rect detailsRect = new(
+            cardRect.x + 14f,
+            statusRect.yMax + 12f,
+            cardRect.width - 28f,
+            cardRect.yMax - statusRect.yMax - 22f - reservedBottom);
 
         Text.Anchor = TextAnchor.MiddleCenter;
         Text.Font = GameFont.Medium;
@@ -123,6 +171,161 @@ public class Window_HHToolsFactionPolitics : Window
         Text.Font = GameFont.Small;
         Widgets.Label(statusRect, statusLabel);
         Text.Anchor = TextAnchor.UpperLeft;
+        Widgets.Label(detailsRect, details);
+    }
+
+    private void DrawCivilizedMissionButton(
+        Rect cardRect,
+        HHToolsCivilizedPartyState partyState)
+    {
+        Rect buttonRect = new(
+            cardRect.x + 12f,
+            cardRect.yMax - 44f,
+            cardRect.width - 24f,
+            34f);
+        DrawMissionMenuButton(
+            buttonRect,
+            HHToolsFactionPoliticsUtility.GetMissions(partyState.party),
+            eliminationTarget: null);
+    }
+
+    private void DrawAuthoritarianMissionButtons(
+        Rect cardRect,
+        HHToolsCrimeBossState bossState)
+    {
+        if (bossState.eliminated)
+        {
+            return;
+        }
+
+        bool showElimination = ShouldShowEliminationButton(bossState);
+        Rect missionRect = new(
+            cardRect.x + 12f,
+            cardRect.yMax - (showElimination ? 84f : 44f),
+            cardRect.width - 24f,
+            34f);
+        DrawMissionMenuButton(
+            missionRect,
+            HHToolsFactionPoliticsUtility.GetMissions(bossState.boss),
+            eliminationTarget: null);
+
+        if (!showElimination)
+        {
+            return;
+        }
+
+        Rect eliminationRect = new(
+            cardRect.x + 12f,
+            cardRect.yMax - 44f,
+            cardRect.width - 24f,
+            34f);
+        DrawEliminationButton(eliminationRect, bossState.boss);
+    }
+
+    private void DrawMissionMenuButton(
+        Rect buttonRect,
+        IReadOnlyList<HHToolsPoliticalMissionType> missions,
+        HHToolsCrimeBoss? eliminationTarget)
+    {
+        if (missions == null || missions.Count == 0)
+        {
+            return;
+        }
+
+        HHToolsFactionPoliticsTracker tracker = HHToolsFactionPoliticsTracker.Instance;
+        Caravan caravan = GetVisitingPlayerCaravan();
+        string disabledReason = null;
+        bool enabled = tracker != null
+            && tracker.CanRequestPoliticalMission(
+                settlement,
+                caravan,
+                missions[0],
+                eliminationTarget,
+                out disabledReason);
+
+        string label = enabled ? "Request mission" : "Mission unavailable";
+        if (Widgets.ButtonText(buttonRect, label, active: enabled))
+        {
+            List<FloatMenuOption> options = missions
+                .Select(mission => new FloatMenuOption(
+                    HHToolsFactionPoliticsUtility.GetMissionTitle(mission)
+                        + " — "
+                        + HHToolsFactionPoliticsUtility.GetMissionDescription(mission),
+                    () => TryStartMission(mission, eliminationTarget)))
+                .ToList();
+            Find.WindowStack.Add(new FloatMenu(options));
+        }
+
+        if (!enabled && !disabledReason.NullOrEmpty())
+        {
+            TooltipHandler.TipRegion(buttonRect, disabledReason);
+        }
+    }
+
+    private void DrawEliminationButton(Rect buttonRect, HHToolsCrimeBoss boss)
+    {
+        HHToolsFactionPoliticsTracker tracker = HHToolsFactionPoliticsTracker.Instance;
+        Caravan caravan = GetVisitingPlayerCaravan();
+        string disabledReason = null;
+        bool enabled = tracker != null
+            && tracker.CanRequestPoliticalMission(
+                settlement,
+                caravan,
+                HHToolsPoliticalMissionType.FamilyElimination,
+                boss,
+                out disabledReason);
+
+        if (Widgets.ButtonText(buttonRect, "Eliminate family", active: enabled))
+        {
+            string familyLabel = HHToolsFactionPoliticsUtility.GetFamilyLabel(boss);
+            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+                $"Begin an elimination operation against the {familyLabel}? "
+                + "Their boss and a combat group stronger than an ordinary raid will occupy the motel. "
+                + "Success permanently removes their trader, missions, favors, and bonuses.",
+                () => TryStartMission(HHToolsPoliticalMissionType.FamilyElimination, boss),
+                destructive: true));
+        }
+
+        if (!enabled && !disabledReason.NullOrEmpty())
+        {
+            TooltipHandler.TipRegion(buttonRect, disabledReason);
+        }
+    }
+
+    private void TryStartMission(
+        HHToolsPoliticalMissionType mission,
+        HHToolsCrimeBoss? eliminationTarget)
+    {
+        Caravan caravan = GetVisitingPlayerCaravan();
+        if (HHToolsFactionPoliticsTracker.Instance.TryRequestPoliticalMission(
+                settlement,
+                caravan,
+                mission,
+                eliminationTarget,
+                out string failureReason))
+        {
+            Close();
+            return;
+        }
+
+        Messages.Message(
+            failureReason ?? "The mission could not be started.",
+            MessageTypeDefOf.RejectInput,
+            historical: false);
+    }
+
+    private Caravan GetVisitingPlayerCaravan()
+    {
+        return Find.WorldObjects.Caravans.FirstOrDefault(caravan =>
+            caravan.IsPlayerControlled
+            && CaravanVisitUtility.SettlementVisitedNow(caravan) == settlement);
+    }
+
+    private bool ShouldShowEliminationButton(HHToolsCrimeBossState bossState)
+    {
+        return bossState is { eliminated: false }
+            && state.ActiveCrimeBossCount > 1
+            && !state.authoritarianControlLocked;
     }
 
     private static void DrawPortrait(Rect portraitRect, Pawn pawn)
@@ -154,10 +357,12 @@ public class Window_HHToolsFactionPolitics : Window
     {
         if (state.civilizedControlLocked)
         {
-            return state.civilizedController == partyState.party ? "Ruling Party" : "Opposition";
+            return state.civilizedController == partyState.party
+                ? $"Ruling Party — {partyState.influence}% Support"
+                : $"Opposition — {partyState.influence}% Support";
         }
 
-        return $"{partyState.influence}% Seats";
+        return $"{partyState.influence}% Support";
     }
 
     private Color GetCivilizedStatusColor(HHToolsCivilizedPartyState partyState)
@@ -194,7 +399,7 @@ public class Window_HHToolsFactionPolitics : Window
             return "Favor Secured";
         }
 
-        return $"Favor {bossState.completedMissions}/5";
+        return $"Favors {bossState.completedMissions}/{HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily}";
     }
 
     private Color GetBossStatusColor(HHToolsCrimeBossState bossState, int totalFavors)
@@ -220,5 +425,42 @@ public class Window_HHToolsFactionPolitics : Window
         }
 
         return new Color(0.32f, 0.22f, 0.12f, 0.95f);
+    }
+
+    private string GetBossDetails(HHToolsCrimeBossState bossState)
+    {
+        if (bossState.eliminated)
+        {
+            return "This family is eliminated. Its trader, favors, missions, and bonuses are permanently unavailable.";
+        }
+
+        string category = HHToolsFactionPoliticsUtility.GetFamilyTradeCategory(bossState.boss);
+        string details = $"Specialist market: {category}.\n\n"
+            + "Full family favor: 10% better prices at this family's market.";
+
+        if (state.authoritarianControlLocked
+            && state.authoritarianController == bossState.boss)
+        {
+            details += bossState.favorGranted
+                ? "\n\nSole-family bonus active: 30% better prices and expanded specialist stock."
+                : "\n\nSole-family bonus unlocks when this family reaches full favor.";
+        }
+        else if (state.friendOfTheFamilies)
+        {
+            details += "\n\nAll-family bonus active: coalition reinforcements can support attacks on other settlements.";
+        }
+        else
+        {
+            details += "\n\nFull favor with all four families unlocks coalition support for settlement attacks.";
+        }
+
+        if (state.eliminationOperationActive)
+        {
+            details += state.eliminationTarget == bossState.boss
+                ? "\n\nAn elimination operation against this family is active."
+                : "\n\nAnother family's elimination operation is already active.";
+        }
+
+        return details;
     }
 }

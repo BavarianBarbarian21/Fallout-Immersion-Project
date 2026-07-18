@@ -37,6 +37,42 @@ public class WorldObjectCompFactionPolitics : WorldObjectComp
         {
             yield return command;
         }
+
+        if (parent is not Settlement settlement)
+        {
+            yield break;
+        }
+
+        HHToolsFactionPoliticsTracker tracker = HHToolsFactionPoliticsTracker.Instance;
+        if (tracker != null
+            && CaravanVisitUtility.SettlementVisitedNow(caravan) == settlement
+            && tracker.TryGetState(settlement.Faction, out HHToolsFactionPoliticalState state)
+            && state.system == HHToolsFactionPoliticalSystem.Authoritarian)
+        {
+            foreach (HHToolsCrimeBossState bossState in state.crimeBosses)
+            {
+                if (bossState.eliminated)
+                {
+                    continue;
+                }
+
+                Command_Action tradeCommand = HHToolsFamilyTrader.CreateTradeCommand(
+                    caravan,
+                    settlement,
+                    state,
+                    bossState);
+                if (tradeCommand != null)
+                {
+                    yield return tradeCommand;
+                }
+            }
+        }
+
+        Command_Action coalitionCommand = CreateCoalitionAttackCommand(caravan, settlement);
+        if (coalitionCommand != null)
+        {
+            yield return coalitionCommand;
+        }
     }
 
     private Command_Action CreatePoliticsCommand()
@@ -65,6 +101,56 @@ public class WorldObjectCompFactionPolitics : WorldObjectComp
             defaultDesc = "View the internal power structure of this faction.",
             icon = icon,
             action = () => Find.WindowStack.Add(new Window_HHToolsFactionPolitics(settlement))
+        };
+    }
+
+    private static Command_Action CreateCoalitionAttackCommand(
+        Caravan caravan,
+        Settlement targetSettlement)
+    {
+        if (targetSettlement?.Faction == null
+            || targetSettlement.Faction == Faction.OfPlayer
+            || !targetSettlement.Attackable)
+        {
+            return null;
+        }
+
+        HHToolsFactionPoliticsTracker tracker = HHToolsFactionPoliticsTracker.Instance;
+        HHToolsFactionPoliticalState supportState =
+            tracker?.GetAvailableCoalitionSupport(targetSettlement.Faction);
+        if (supportState?.faction == null)
+        {
+            return null;
+        }
+
+        Faction supportFaction = supportState.faction;
+        return new Command_Action
+        {
+            defaultLabel = "Attack with family support",
+            defaultDesc =
+                $"Attack this settlement with a reinforcement group from {supportFaction.Name}. "
+                + "Requires favor with all four families and has a 30-day cooldown.",
+            icon = Settlement.AttackCommand,
+            action = () =>
+            {
+                if (!tracker.TryReserveCoalitionSupport(
+                        targetSettlement.Faction,
+                        out Faction reservedSupportFaction))
+                {
+                    Messages.Message(
+                        "Family support is no longer available.",
+                        MessageTypeDefOf.RejectInput,
+                        historical: false);
+                    return;
+                }
+
+                tracker.SetPendingCoalitionTargetTile(targetSettlement.Tile);
+                Messages.Message(
+                    $"{reservedSupportFaction.Name} has committed a family coalition force to the attack.",
+                    MessageTypeDefOf.PositiveEvent,
+                    historical: true);
+                SettlementUtility.Attack(caravan, targetSettlement);
+            }
         };
     }
 }

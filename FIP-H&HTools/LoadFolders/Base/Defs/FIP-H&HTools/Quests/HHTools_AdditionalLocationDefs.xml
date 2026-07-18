@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <WorldObjectDef ParentName="Site">
+    <defName>HHTools_HomesteadLocationSite</defName>
+    <label>abandoned homestead</label>
+    <description>An isolated homestead centered on a single pre-war farmhouse.</description>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/Sites/GenericSite</texture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <mapGenerator>Encounter</mapGenerator>
+    <overrideMapSize>(120,1,120)</overrideMapSize>
+    <canHaveFaction>false</canHaveFaction>
+  </WorldObjectDef>
+
+  <SitePartDef>
+    <defName>HHTools_Homestead</defName>
+    <label>abandoned homestead</label>
+    <description>An isolated farmhouse with a porch, divided living spaces, cultivated fields, and a dirt approach road.</description>
+    <workerClass>SitePartWorker</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <requiresFaction>false</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100,1,100)</minMapSize>
+    <copyQuestName>true</copyQuestName>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>HHTools_Homestead</defName>
+    <linkWithSite>HHTools_Homestead</linkWithSite>
+    <order>470</order>
+    <genStep Class="FIP.HHTools.GenStep_HHToolsHomestead"/>
+  </GenStepDef>
+
+  <WorldObjectDef ParentName="Site">
+    <defName>HHTools_ChurchLocationSite</defName>
+    <label>abandoned church settlement</label>
+    <description>A small settlement arranged around a central pre-war church.</description>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/Sites/GenericSite</texture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <mapGenerator>Encounter</mapGenerator>
+    <overrideMapSize>(120,1,120)</overrideMapSize>
+    <canHaveFaction>false</canHaveFaction>
+  </WorldObjectDef>
+
+  <SitePartDef>
+    <defName>HHTools_Church</defName>
+    <label>abandoned church settlement</label>
+    <description>A large central church with nave, altar, and pews, surrounded by four much smaller homes and a modest graveyard.</description>
+    <workerClass>SitePartWorker</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <requiresFaction>false</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(110,1,110)</minMapSize>
+    <copyQuestName>true</copyQuestName>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>HHTools_Church</defName>
+    <linkWithSite>HHTools_Church</linkWithSite>
+    <order>470</order>
+    <genStep Class="FIP.HHTools.GenStep_HHToolsChurch"/>
+  </GenStepDef>
+
+  <WorldObjectDef ParentName="Site">
+    <defName>HHTools_WarehouseLocationSite</defName>
+    <label>abandoned warehouse</label>
+    <description>A broad pre-war warehouse built around one large open storage hall.</description>
+    <worldObjectClass>Site</worldObjectClass>
+    <texture>World/WorldObjects/Sites/GenericSite</texture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <mapGenerator>Encounter</mapGenerator>
+    <overrideMapSize>(120,1,120)</overrideMapSize>
+    <canHaveFaction>false</canHaveFaction>
+  </WorldObjectDef>
+
+  <SitePartDef>
+    <defName>HHTools_Warehouse</defName>
+    <label>abandoned warehouse</label>
+    <description>A single cavernous storage room with several loading doors, a central vehicle aisle, container rows, and an exterior loading apron.</description>
+    <workerClass>SitePartWorker</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
+    <requiresFaction>false</requiresFaction>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minMapSize>(100,1,100)</minMapSize>
+    <copyQuestName>true</copyQuestName>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>HHTools_Warehouse</defName>
+    <linkWithSite>HHTools_Warehouse</linkWithSite>
+    <order>470</order>
+    <genStep Class="FIP.HHTools.GenStep_HHToolsWarehouse"/>
+  </GenStepDef>
+
+</Defs>

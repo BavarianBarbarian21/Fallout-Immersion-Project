@@ -7,7 +7,7 @@ using Verse;
 
 namespace FIP.HHTools;
 
-public class HHToolsFactionPoliticsTracker : WorldComponent
+public partial class HHToolsFactionPoliticsTracker : WorldComponent
 {
     public static HHToolsFactionPoliticsTracker Instance { get; private set; }
 
@@ -31,9 +31,15 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
 
     public override void WorldComponentTick()
     {
-        if (Find.TickManager.TicksGame % 600 == 0)
+        int currentTick = Find.TickManager.TicksGame;
+        if (currentTick % 600 == 0)
         {
             SyncWithWorldFactions();
+        }
+
+        if (currentTick % 250 == 0)
+        {
+            ProcessPoliticalBenefits();
         }
     }
 
@@ -56,6 +62,7 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
         }
 
         HHToolsFactionPoliticalState state = new(faction, faction.GetPoliticsExtension().system);
+        EnsureStateShape(state);
         EnsureLeaderPawns(state);
         factionStates.Add(state);
         factionStateByFaction[faction] = state;
@@ -75,13 +82,60 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
 
     public int TotalFavors(HHToolsFactionPoliticalState state)
     {
-        return state?.crimeBosses.Count(current => current.favorGranted) ?? 0;
+        return state?.crimeBosses.Count(current => current is { favorGranted: true, eliminated: false }) ?? 0;
+    }
+
+    public string GetQuestStatusSummary(Faction faction)
+    {
+        HHToolsFactionPoliticalState state = GetOrCreateState(faction);
+        if (state == null)
+        {
+            return string.Empty;
+        }
+
+        if (state.system == HHToolsFactionPoliticalSystem.Civilized)
+        {
+            return "Current support — "
+                + string.Join(
+                    "; ",
+                    state.civilizedParties.Select(current =>
+                        $"{HHToolsFactionPoliticsUtility.GetGroupLabel(current.party)}: {current.influence}%"));
+        }
+
+        if (state.system == HHToolsFactionPoliticalSystem.Authoritarian)
+        {
+            return "Current favors — "
+                + string.Join(
+                    "; ",
+                    state.crimeBosses
+                        .OrderBy(current => current.boss)
+                        .Select(current =>
+                            $"{HHToolsFactionPoliticsUtility.GetFamilyLabel(current.boss)}: "
+                            + (current.eliminated
+                                ? "eliminated"
+                                : $"{current.completedMissions}/{HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily}")));
+        }
+
+        return string.Empty;
+    }
+
+    public float GetSettlementTradeBonus(Faction faction)
+    {
+        HHToolsFactionPoliticalState state = GetOrCreateState(faction);
+        return state is
+        {
+            system: HHToolsFactionPoliticalSystem.Civilized,
+            civilizedControlLocked: true,
+            civilizedController: HHToolsCivilizedParty.Caravans
+        }
+            ? HHToolsFactionPoliticsUtility.ConsolidatedTradeBonus
+            : 0f;
     }
 
     public void RecordCivilizedMissionSuccess(Faction faction, HHToolsCivilizedParty winningParty)
     {
         HHToolsFactionPoliticalState state = GetOrCreateState(faction);
-        if (state?.system != HHToolsFactionPoliticalSystem.Civilized)
+        if (state?.system != HHToolsFactionPoliticalSystem.Civilized || state.civilizedControlLocked)
         {
             return;
         }
@@ -93,7 +147,7 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
         }
 
         HHToolsCivilizedPartyState winner = state.GetCivilizedParty(winningParty);
-        if (!state.civilizedControlLocked && winner is { influence: > 50 })
+        if (winner is { influence: > HHToolsFactionPoliticsUtility.CivilizedMajorityThreshold })
         {
             state.civilizedControlLocked = true;
             state.civilizedController = winningParty;
@@ -114,13 +168,12 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             return;
         }
 
-        bossState.completedMissions += 1;
-        if (bossState.completedMissions >= 5)
-        {
-            bossState.favorGranted = true;
-        }
-
-        state.friendOfTheFamilies = state.crimeBosses.Count == 4 && state.crimeBosses.All(current => current.favorGranted);
+        bossState.completedMissions = Math.Min(
+            HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily,
+            bossState.completedMissions + 1);
+        bossState.favorGranted =
+            bossState.completedMissions >= HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily;
+        RefreshAuthoritarianOutcome(state);
     }
 
     public bool CanEliminateBoss(Faction faction, HHToolsCrimeBoss boss)
@@ -132,7 +185,37 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
         }
 
         HHToolsCrimeBossState bossState = state.GetCrimeBoss(boss);
-        return bossState is { eliminated: false, favorGranted: false };
+        return bossState is { eliminated: false }
+            && state.ActiveCrimeBossCount > 1
+            && !state.authoritarianControlLocked
+            && !state.eliminationOperationActive;
+    }
+
+    public bool TryBeginBossElimination(Faction faction, HHToolsCrimeBoss boss)
+    {
+        if (!CanEliminateBoss(faction, boss))
+        {
+            return false;
+        }
+
+        HHToolsFactionPoliticalState state = GetOrCreateState(faction);
+        state.eliminationOperationActive = true;
+        state.eliminationTarget = boss;
+        return true;
+    }
+
+    public void CancelBossElimination(Faction faction, HHToolsCrimeBoss boss)
+    {
+        HHToolsFactionPoliticalState state = GetOrCreateState(faction);
+        if (state?.system != HHToolsFactionPoliticalSystem.Authoritarian
+            || !state.eliminationOperationActive
+            || state.eliminationTarget != boss)
+        {
+            return;
+        }
+
+        state.eliminationOperationActive = false;
+        state.eliminationTarget = default;
     }
 
     public void RecordBossEliminated(Faction faction, HHToolsCrimeBoss boss)
@@ -149,16 +232,23 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             return;
         }
 
-        bossState.eliminated = true;
-        if (!state.authoritarianControlLocked && state.crimeBosses.Count(current => current.eliminated) >= 3)
+        if (bossState.eliminated || state.ActiveCrimeBossCount <= 1)
         {
-            HHToolsCrimeBossState survivingBoss = state.crimeBosses.FirstOrDefault(current => !current.eliminated);
-            if (survivingBoss != null)
-            {
-                state.authoritarianControlLocked = true;
-                state.authoritarianController = survivingBoss.boss;
-            }
+            return;
         }
+
+        bossState.eliminated = true;
+        bossState.completedMissions = 0;
+        bossState.favorGranted = false;
+        HHToolsFamilyTrader.DestroyStock(bossState);
+
+        if (state.eliminationOperationActive && state.eliminationTarget == boss)
+        {
+            state.eliminationOperationActive = false;
+            state.eliminationTarget = default;
+        }
+
+        RefreshAuthoritarianOutcome(state);
     }
 
     public void SetConfederationFormed(Faction faction, bool enabled = true)
@@ -190,6 +280,7 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
     public override void ExposeData()
     {
         Scribe_Collections.Look(ref factionStates, "factionStates", LookMode.Deep);
+        ExposeBenefitData();
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
@@ -211,6 +302,7 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             }
 
             state.RefreshFactionMetadata();
+            EnsureStateShape(state);
             EnsureLeaderPawns(state);
             factionStateByFaction[state.faction] = state;
         }
@@ -225,6 +317,14 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             HHToolsFactionPoliticalState state = factionStates[index];
             if (state?.faction == null || !allFactions.Contains(state.faction) || !AppliesTo(state.faction))
             {
+                if (state?.crimeBosses != null)
+                {
+                    foreach (HHToolsCrimeBossState bossState in state.crimeBosses)
+                    {
+                        HHToolsFamilyTrader.DestroyStock(bossState);
+                    }
+                }
+
                 factionStates.RemoveAt(index);
             }
         }
@@ -238,6 +338,8 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
                 GetOrCreateState(faction);
             }
         }
+
+        EnsureSettlementTraderTrackers();
     }
 
     private void EnsureLeaderPawns(HHToolsFactionPoliticalState state)
@@ -269,6 +371,11 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
             case HHToolsFactionPoliticalSystem.Authoritarian:
                 foreach (HHToolsCrimeBossState bossState in state.crimeBosses)
                 {
+                    if (bossState.eliminated)
+                    {
+                        continue;
+                    }
+
                     if (NeedsRepresentative(bossState.leaderPawn))
                     {
                         bossState.leaderPawn = GenerateRepresentative(state.faction, representativePawnKind);
@@ -344,5 +451,70 @@ public class HHToolsFactionPoliticsTracker : WorldComponent
         Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef, stuffDef);
         PawnGenerator.PostProcessGeneratedGear(apparel, pawn);
         pawn.apparel.Wear(apparel, dropReplacedApparel: false);
+    }
+
+    private static void EnsureStateShape(HHToolsFactionPoliticalState state)
+    {
+        if (state == null)
+        {
+            return;
+        }
+
+        state.civilizedParties ??= [];
+        state.crimeBosses ??= [];
+
+        if (state.system == HHToolsFactionPoliticalSystem.Civilized)
+        {
+            foreach (HHToolsCivilizedParty party in Enum.GetValues(typeof(HHToolsCivilizedParty)))
+            {
+                if (state.GetCivilizedParty(party) == null)
+                {
+                    state.civilizedParties.Add(new HHToolsCivilizedPartyState(party, 0));
+                }
+            }
+        }
+        else if (state.system == HHToolsFactionPoliticalSystem.Authoritarian)
+        {
+            foreach (HHToolsCrimeBoss boss in Enum.GetValues(typeof(HHToolsCrimeBoss)))
+            {
+                if (state.GetCrimeBoss(boss) == null)
+                {
+                    state.crimeBosses.Add(new HHToolsCrimeBossState(boss));
+                }
+            }
+
+            RefreshAuthoritarianOutcome(state);
+        }
+    }
+
+    private static void RefreshAuthoritarianOutcome(HHToolsFactionPoliticalState state)
+    {
+        if (state?.system != HHToolsFactionPoliticalSystem.Authoritarian)
+        {
+            return;
+        }
+
+        List<HHToolsCrimeBossState> activeBosses = state.ActiveCrimeBosses.ToList();
+        state.friendOfTheFamilies = activeBosses.Count == 4
+            && state.crimeBosses.Count == 4
+            && activeBosses.All(current => current.favorGranted);
+
+        if (activeBosses.Count == 1)
+        {
+            state.authoritarianControlLocked = true;
+            state.authoritarianController = activeBosses[0].boss;
+            state.eliminationOperationActive = false;
+            state.eliminationTarget = default;
+        }
+        else
+        {
+            state.authoritarianControlLocked = false;
+            if (state.eliminationOperationActive
+                && state.GetCrimeBoss(state.eliminationTarget) is not { eliminated: false })
+            {
+                state.eliminationOperationActive = false;
+                state.eliminationTarget = default;
+            }
+        }
     }
 }

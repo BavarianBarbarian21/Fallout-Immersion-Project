@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>HHTools_WeaponSchematics</defName>
+    <label>weapon schematics</label>
+    <description>Detailed weapon manufacturing plans stolen from a rival gun-running outfit. They are marked as property of the family that issued the mission.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Schematic/Schematic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>HHTools_CaravanCargo</defName>
+    <label>marked caravan cargo</label>
+    <description>A sealed cargo crate bearing the marks of the caravan company that issued the mission.</description>
+    <graphicData>
+      <texPath>Things/Building/Ruins/CrateSmall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9,0.9)</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <MarketValue>350</MarketValue>
+      <Mass>18</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>HHTools_AlcoholShipment</defName>
+    <label>marked liquor shipment</label>
+    <description>A carefully packed shipment of pre-war and wasteland liquor marked for delivery to the family saloon.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Beer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <MarketValue>300</MarketValue>
+      <Mass>8</Mass>
+      <Flammability>0.8</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+
+</Defs>

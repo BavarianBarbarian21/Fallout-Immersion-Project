@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace FIP.HHTools;
@@ -29,30 +30,88 @@ public class HHToolsCivilizedPartyState : IExposable
     }
 }
 
-public class HHToolsCrimeBossState : IExposable
+public class HHToolsCrimeBossState : IExposable, IThingHolder
 {
     public HHToolsCrimeBoss boss;
     public int completedMissions;
     public bool favorGranted;
     public bool eliminated;
     public Pawn leaderPawn;
+    public ThingOwner<Thing> tradeStock;
+    public int lastTradeStockGenerationTick = -1;
+    public string tradeStockTraderKindDefName;
+
+    private List<Pawn> tmpSavedTradePawns = [];
+
+    public IThingHolder ParentHolder => null;
 
     public HHToolsCrimeBossState()
     {
+        tradeStock = new ThingOwner<Thing>(this);
     }
 
     public HHToolsCrimeBossState(HHToolsCrimeBoss boss)
     {
         this.boss = boss;
+        tradeStock = new ThingOwner<Thing>(this);
     }
 
     public void ExposeData()
     {
+        if (Scribe.mode == LoadSaveMode.Saving)
+        {
+            tmpSavedTradePawns.Clear();
+            if (tradeStock != null)
+            {
+                for (int index = tradeStock.Count - 1; index >= 0; index -= 1)
+                {
+                    if (tradeStock[index] is Pawn pawn)
+                    {
+                        tradeStock.Remove(pawn);
+                        tmpSavedTradePawns.Add(pawn);
+                    }
+                }
+            }
+        }
+
         Scribe_Values.Look(ref boss, "boss");
         Scribe_Values.Look(ref completedMissions, "completedMissions");
         Scribe_Values.Look(ref favorGranted, "favorGranted");
         Scribe_Values.Look(ref eliminated, "eliminated");
         Scribe_References.Look(ref leaderPawn, "leaderPawn");
+        Scribe_Collections.Look(ref tmpSavedTradePawns, "tmpSavedTradePawns", LookMode.Reference);
+        Scribe_Deep.Look(ref tradeStock, "tradeStock", this);
+        Scribe_Values.Look(ref lastTradeStockGenerationTick, "lastTradeStockGenerationTick", -1);
+        Scribe_Values.Look(ref tradeStockTraderKindDefName, "tradeStockTraderKindDefName");
+
+        completedMissions = System.Math.Max(
+            0,
+            System.Math.Min(
+                completedMissions,
+                HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily));
+        favorGranted = favorGranted || completedMissions >= HHToolsFactionPoliticsUtility.FavorsRequiredPerFamily;
+        tradeStock ??= new ThingOwner<Thing>(this);
+        tmpSavedTradePawns ??= [];
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit || Scribe.mode == LoadSaveMode.Saving)
+        {
+            foreach (Pawn pawn in tmpSavedTradePawns)
+            {
+                tradeStock.TryAdd(pawn, canMergeWithExistingStacks: false);
+            }
+
+            tmpSavedTradePawns.Clear();
+        }
+    }
+
+    public ThingOwner GetDirectlyHeldThings()
+    {
+        return tradeStock;
+    }
+
+    public void GetChildHolders(List<IThingHolder> outChildren)
+    {
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, tradeStock);
     }
 }
 
@@ -71,6 +130,14 @@ public class HHToolsFactionPoliticalState : IExposable
     public bool friendOfTheFamilies;
     public bool confederationFormed;
     public bool protectorateFormed;
+    public bool eliminationOperationActive;
+    public HHToolsCrimeBoss eliminationTarget;
+    public HHToolsMotelMissionSite activePoliticalMissionSite;
+    public HHToolsPoliticalMissionType lastPoliticalMission;
+    public int nextPoliticalMissionTick = -1;
+    public int nextBrahminDeliveryTick = -1;
+    public int nextRangerAidTick = -1;
+    public int nextCoalitionAidTick = -1;
 
     public HHToolsFactionPoliticalState()
     {
@@ -115,6 +182,16 @@ public class HHToolsFactionPoliticalState : IExposable
         return crimeBosses.FirstOrDefault(state => state.boss == boss);
     }
 
+    public IEnumerable<HHToolsCrimeBossState> ActiveCrimeBosses =>
+        crimeBosses.Where(current => current is { eliminated: false });
+
+    public int ActiveCrimeBossCount => ActiveCrimeBosses.Count();
+
+    public bool HasSoleFavoredFamily =>
+        authoritarianControlLocked
+        && ActiveCrimeBossCount == 1
+        && GetCrimeBoss(authoritarianController) is { eliminated: false, favorGranted: true };
+
     public void RefreshFactionMetadata()
     {
         factionDefName = faction?.def?.defName ?? factionDefName;
@@ -136,6 +213,14 @@ public class HHToolsFactionPoliticalState : IExposable
         Scribe_Values.Look(ref friendOfTheFamilies, "friendOfTheFamilies");
         Scribe_Values.Look(ref confederationFormed, "confederationFormed");
         Scribe_Values.Look(ref protectorateFormed, "protectorateFormed");
+        Scribe_Values.Look(ref eliminationOperationActive, "eliminationOperationActive");
+        Scribe_Values.Look(ref eliminationTarget, "eliminationTarget");
+        Scribe_References.Look(ref activePoliticalMissionSite, "activePoliticalMissionSite");
+        Scribe_Values.Look(ref lastPoliticalMission, "lastPoliticalMission");
+        Scribe_Values.Look(ref nextPoliticalMissionTick, "nextPoliticalMissionTick", -1);
+        Scribe_Values.Look(ref nextBrahminDeliveryTick, "nextBrahminDeliveryTick", -1);
+        Scribe_Values.Look(ref nextRangerAidTick, "nextRangerAidTick", -1);
+        Scribe_Values.Look(ref nextCoalitionAidTick, "nextCoalitionAidTick", -1);
 
         civilizedParties ??= [];
         crimeBosses ??= [];
