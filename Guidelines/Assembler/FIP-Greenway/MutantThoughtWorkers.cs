@@ -7,6 +7,20 @@ namespace FIP.Greenway;
 
 internal static class MutantPolicyUtility
 {
+    private static readonly Dictionary<string, string> RequiredPreceptDefNamesByThoughtDefName = new()
+    {
+        ["Greenway_MutantCitizenship_ColonistPresent"] = "Greenway_Precept_MutantCitizenship",
+        ["Greenway_SecondClassMutants_MutantSlavePresent"] = "Greenway_Precept_SecondClassMutants",
+        ["Greenway_MutantSlaves_SlaveStatus"] = "Greenway_Precept_MutantSlaves",
+        ["Greenway_MutantSlaves_MutantColonistPresent"] = "Greenway_Precept_MutantSlaves",
+        ["Greenway_MutantPurge_MutantColonistPresent"] = "Greenway_Precept_MutantPurge",
+        ["Greenway_MutantPurge_MutantSlavePresent"] = "Greenway_Precept_MutantPurge",
+        ["Greenway_MutantMasters_MutantColonistPresent"] = "Greenway_Precept_MutantMasters",
+        ["Greenway_MutantMasters_NonMutantSlavePresent"] = "Greenway_Precept_MutantMasters",
+        ["Greenway_Utobitha_MutantColonistPresent"] = "Greenway_Precept_Utobitha",
+        ["Greenway_Utobitha_NonMutantPresent"] = "Greenway_Precept_Utobitha"
+    };
+
     private static readonly HashSet<string> MutantXenotypeDefNames =
     [
         "WestTek_Xenotype_SuperMutant",
@@ -43,6 +57,20 @@ internal static class MutantPolicyUtility
 
     public static bool HasNonMutantColonistOrSlave() => PlayerFactionPawns().Any(IsNonMutantColonistOrSlave);
 
+    public static bool PawnHasRequiredPolicy(Pawn pawn, ThoughtDef thoughtDef)
+    {
+        if (!ModsConfig.IdeologyActive
+            || pawn?.Ideo is null
+            || thoughtDef is null
+            || !RequiredPreceptDefNamesByThoughtDefName.TryGetValue(thoughtDef.defName, out string preceptDefName))
+        {
+            return false;
+        }
+
+        PreceptDef preceptDef = DefDatabase<PreceptDef>.GetNamedSilentFail(preceptDefName);
+        return preceptDef != null && pawn.Ideo.HasPrecept(preceptDef);
+    }
+
     private static bool IsMutantColonist(Pawn pawn) => pawn.IsColonist && !pawn.IsSlave && IsMutant(pawn);
 
     private static bool IsMutantSlave(Pawn pawn) => pawn.IsSlave && IsMutant(pawn);
@@ -75,7 +103,7 @@ public abstract class ThoughtWorker_MutantPolicyBase : ThoughtWorker
 {
     protected sealed override ThoughtState CurrentStateInternal(Pawn pawn)
     {
-        if (pawn?.Faction != Faction.OfPlayer)
+        if (pawn?.Faction != Faction.OfPlayer || !MutantPolicyUtility.PawnHasRequiredPolicy(pawn, def))
         {
             return ThoughtState.Inactive;
         }

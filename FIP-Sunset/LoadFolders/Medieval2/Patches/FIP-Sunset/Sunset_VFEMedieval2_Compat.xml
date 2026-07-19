@@ -156,17 +156,17 @@
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/thingCategories/li[text()="Textiles"]</xpath>
   </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_") and count(stuffProps/categories/li)&gt;1]/stuffProps/categories/li[text()="Fabric"]</xpath>
-  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]</xpath>
     <value>
       <generateCommonality>0</generateCommonality>
     </value>
   </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker</xpath>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker/recipeUsers</xpath>
+    <value>
+      <recipeUsers Inherit="False" />
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath>
