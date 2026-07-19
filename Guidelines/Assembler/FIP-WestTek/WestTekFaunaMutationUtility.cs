@@ -86,6 +86,18 @@ internal static class WestTekFaunaMutationUtility
         return HasGene(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerMutation);
     }
 
+    private static bool CanReceiveFurGene(Pawn pawn)
+    {
+        bool hasSLanterIdentity = HasGene(pawn, WestTekDefOf.WestTek_Gene_Slanter);
+
+        if ((IsSLanter(pawn) || IsSNuffy(pawn)) && hasSLanterIdentity)
+        {
+            return true;
+        }
+
+        return IsSkinwalker(pawn) && HasSkinwalkerMutation(pawn);
+    }
+
     public static bool HasAnyFurGene(Pawn pawn)
     {
         if (pawn?.genes == null)
@@ -125,6 +137,11 @@ internal static class WestTekFaunaMutationUtility
     public static void AssignRandomFurGene(Pawn pawn)
     {
         if (pawn?.genes == null)
+        {
+            return;
+        }
+
+        if (!CanReceiveFurGene(pawn))
         {
             return;
         }

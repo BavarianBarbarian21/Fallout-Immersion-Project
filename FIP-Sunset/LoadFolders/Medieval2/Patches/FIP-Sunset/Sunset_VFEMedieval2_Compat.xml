@@ -3,28 +3,40 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_KingdomRough"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_KingdomSavage"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_CivilClan"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
       <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
     </value>
@@ -32,7 +44,10 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_ClanRough"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
       <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
     </value>
@@ -40,9 +55,48 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_ClanSavage"]</xpath>
     <value>
+      <displayInFactionSelection>false</displayInFactionSelection>
       <settlementGenerationWeight>0</settlementGenerationWeight>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+      <maxCountAtGameStart>0</maxCountAtGameStart>
       <canMakeRandomly>false</canMakeRandomly>
       <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_KingdomCivil"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_KingdomRough"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_KingdomSavage"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_CivilClan"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_ClanRough"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="VFEM2_ClanSavage"]/startingCountAtWorldCreation</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
@@ -136,6 +190,30 @@
     <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath>
     <value>
       <factionNameMaker>HHTools_FactionNameMaker_CaravanCompany</factionNameMaker>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/label</xpath>
+    <value>
+      <label>caravan companies</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/leaderTitle</xpath>
+    <value>
+      <leaderTitle>caravan master</leaderTitle>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnSingular</xpath>
+    <value>
+      <pawnSingular>caravaneer</pawnSingular>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnsPlural</xpath>
+    <value>
+      <pawnsPlural>caravaneers</pawnsPlural>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">

@@ -13,33 +13,6 @@
     <Operation Class="PatchOperationRemove">
         <xpath>//FactionDef/allowedCultures</xpath>
     </Operation>-->
-    <!-- Structure Patch -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>FIP.Greenway</li>
-        </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/FactionDef[@Name="FactionBase"]/structureMemeWeights</xpath>
-            <value>
-                <structureMemeWeights>
-                    <Greenway_Religion_ChildrenOfAtom>1</Greenway_Religion_ChildrenOfAtom>
-                    <Greenway_Religion_ChildrenOfTheCathedral>1</Greenway_Religion_ChildrenOfTheCathedral>
-                    <Greenway_Religion_ChildrenOfKrvibi>1</Greenway_Religion_ChildrenOfKrvibi>
-                    <Greenway_Religion_Hubology>1</Greenway_Religion_Hubology>
-
-                    <Greenway_Religion_CanaaniteChurch>1</Greenway_Religion_CanaaniteChurch>
-                    <Greenway_Religion_AbbeyOfTheRoad>1</Greenway_Religion_AbbeyOfTheRoad>
-                    <Greenway_Religion_OrderOfOurLadyOfTheWaters>1</Greenway_Religion_OrderOfOurLadyOfTheWaters>
-                    <Greenway_Religion_FollowerOfTheApocalypse>1</Greenway_Religion_FollowerOfTheApocalypse>
-
-                    <Greenway_Religion_Syncretic>1</Greenway_Religion_Syncretic>
-                    <Greenway_Religion_Karma>1</Greenway_Religion_Karma>
-                    <Greenway_Religion_Native>1</Greenway_Religion_Native>
-                    <Greenway_Religion_Shi>1</Greenway_Religion_Shi>
-                </structureMemeWeights>
-            </value>
-        </match>
-    </Operation>
     <!-- FactionNameMaker Patch (Useless?)-->
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>

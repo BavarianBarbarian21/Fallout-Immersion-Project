@@ -3,6 +3,12 @@
   <Operation Class="PatchOperationSequence">
     <operations>
       <li Class="PatchOperationReplace">
+        <xpath>Defs/FactionDef[defName="Insect"]/label</xpath>
+        <value>
+          <label>antagonizer</label>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
         <xpath>Defs/FactionDef[defName="Insect"]/factionIconPath</xpath>
         <value>
           <factionIconPath>FIP-H&amp;HTools/HHTools_Antagonizer</factionIconPath>

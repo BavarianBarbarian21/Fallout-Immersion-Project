@@ -60,6 +60,7 @@ internal static class WestTekDefOf
     public static GeneDef WestTek_Gene_BAja = null;
     public static GeneDef WestTek_Gene_MErowi = null;
     public static GeneDef WestTek_Gene_RUffian = null;
+    public static GeneDef WestTek_Gene_Slanter = null;
     public static GeneDef WestTek_Gene_SNuffy = null;
     public static GeneDef WestTek_Gene_ProcyonScrounger = null;
 

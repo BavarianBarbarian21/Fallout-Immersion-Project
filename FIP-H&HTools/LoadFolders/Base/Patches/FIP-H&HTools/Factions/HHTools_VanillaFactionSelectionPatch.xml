@@ -2,6 +2,82 @@
 <Patch>
   <Operation Class="PatchOperationSequence">
     <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="OutlanderCivil"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="OutlanderRough"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="TribeCivil"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="TribeRough"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="TribeSavage"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
+        <value>
+          <displayInFactionSelection>false</displayInFactionSelection>
+          <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+          <maxCountAtGameStart>0</maxCountAtGameStart>
+          <canMakeRandomly>false</canMakeRandomly>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
+        <value>
+          <requiredCountAtGameStart>0</requiredCountAtGameStart>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="Pirate"]/settlementGenerationWeight</xpath>
+        <value>
+          <settlementGenerationWeight>0</settlementGenerationWeight>
+        </value>
+      </li>
       <li Class="PatchOperationReplace">
         <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/maxConfigurableAtWorldCreation</xpath>
         <value>

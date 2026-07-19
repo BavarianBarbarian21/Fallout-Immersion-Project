@@ -25,6 +25,14 @@ public sealed class HHToolsMod : Mod
         Settings = GetSettings<HHToolsModSettings>();
         HHToolsVanillaFactionSelectionApplier.Initialize();
         HHToolsVanillaFactionSelectionApplier.Apply(Settings.hideVanillaFactions);
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            HHToolsVanillaFactionSelectionApplier.Initialize();
+            int appliedCount = HHToolsVanillaFactionSelectionApplier.Apply(Settings.hideVanillaFactions);
+            Log.Message(
+                $"[FIP - H&H Tools] World-creation faction filter applied to {appliedCount} faction definitions " +
+                $"(enabled: {Settings.hideVanillaFactions}).");
+        });
     }
 
     public override string SettingsCategory()
@@ -39,9 +47,9 @@ public sealed class HHToolsMod : Mod
 
         bool updatedValue = Settings.hideVanillaFactions;
         listing.CheckboxLabeled(
-            "Hide vanilla factions at world creation",
+            "Hide replaced factions at world creation",
             ref updatedValue,
-            "Enabled by default. Sets vanilla and vanilla-biotech faction counts to zero in the world-creation configurator so the FIP faction set is foregrounded.");
+            "Enabled by default. Removes the vanilla, vanilla-biotech, Settlers, and Medieval 2 faction templates replaced by the FIP faction set.");
 
         if (updatedValue != Settings.hideVanillaFactions)
         {
@@ -73,39 +81,63 @@ internal static class HHToolsVanillaFactionSelectionApplier
         "PirateYttakin",
         "TribeSavageImpid",
         "OutlanderRoughPig",
-        "PirateWaster"
+        "PirateWaster",
+        "SettlerCivil",
+        "SettlerRough",
+        "SettlerSavage",
+        "VFEM2_KingdomCivil",
+        "VFEM2_KingdomRough",
+        "VFEM2_KingdomSavage",
+        "VFEM2_CivilClan",
+        "VFEM2_ClanRough",
+        "VFEM2_ClanSavage"
     };
 
-    private static readonly Dictionary<string, int> OriginalValuesByFactionDefName = new();
-    private static bool initialized;
+    private sealed class FactionSelectionState
+    {
+        public bool DisplayInFactionSelection;
+        public int RequiredCountAtGameStart;
+        public int StartingCountAtWorldCreation;
+        public int MaxCountAtGameStart;
+        public int MaxConfigurableAtWorldCreation;
+        public bool CanMakeRandomly;
+        public float SettlementGenerationWeight;
+    }
+
+    private static readonly Dictionary<string, FactionSelectionState> OriginalStatesByFactionDefName = new();
 
     public static void Initialize()
     {
-        if (initialized)
-        {
-            return;
-        }
-
         foreach (string factionDefName in TargetFactionDefNames)
         {
+            if (OriginalStatesByFactionDefName.ContainsKey(factionDefName))
+            {
+                continue;
+            }
+
             FactionDef factionDef = DefDatabase<FactionDef>.GetNamedSilentFail(factionDefName);
             if (factionDef != null)
             {
-                OriginalValuesByFactionDefName[factionDefName] = factionDef.maxConfigurableAtWorldCreation;
+                OriginalStatesByFactionDefName[factionDefName] = new FactionSelectionState
+                {
+                    DisplayInFactionSelection = factionDef.displayInFactionSelection,
+                    RequiredCountAtGameStart = factionDef.requiredCountAtGameStart,
+                    StartingCountAtWorldCreation = factionDef.startingCountAtWorldCreation,
+                    MaxCountAtGameStart = factionDef.maxCountAtGameStart,
+                    MaxConfigurableAtWorldCreation = factionDef.maxConfigurableAtWorldCreation,
+                    CanMakeRandomly = factionDef.canMakeRandomly,
+                    SettlementGenerationWeight = factionDef.settlementGenerationWeight
+                };
             }
         }
-
-        initialized = true;
     }
 
-    public static void Apply(bool hideVanillaFactions)
+    public static int Apply(bool hideVanillaFactions)
     {
-        if (!initialized)
-        {
-            Initialize();
-        }
+        Initialize();
+        int appliedCount = 0;
 
-        foreach ((string factionDefName, int originalValue) in OriginalValuesByFactionDefName)
+        foreach (string factionDefName in TargetFactionDefNames)
         {
             FactionDef factionDef = DefDatabase<FactionDef>.GetNamedSilentFail(factionDefName);
             if (factionDef == null)
@@ -113,7 +145,30 @@ internal static class HHToolsVanillaFactionSelectionApplier
                 continue;
             }
 
-            factionDef.maxConfigurableAtWorldCreation = hideVanillaFactions ? 0 : originalValue;
+            if (hideVanillaFactions)
+            {
+                factionDef.displayInFactionSelection = false;
+                factionDef.requiredCountAtGameStart = 0;
+                factionDef.startingCountAtWorldCreation = 0;
+                factionDef.maxCountAtGameStart = 0;
+                factionDef.maxConfigurableAtWorldCreation = 0;
+                factionDef.canMakeRandomly = false;
+                factionDef.settlementGenerationWeight = 0f;
+            }
+            else if (OriginalStatesByFactionDefName.TryGetValue(factionDefName, out FactionSelectionState originalState))
+            {
+                factionDef.displayInFactionSelection = originalState.DisplayInFactionSelection;
+                factionDef.requiredCountAtGameStart = originalState.RequiredCountAtGameStart;
+                factionDef.startingCountAtWorldCreation = originalState.StartingCountAtWorldCreation;
+                factionDef.maxCountAtGameStart = originalState.MaxCountAtGameStart;
+                factionDef.maxConfigurableAtWorldCreation = originalState.MaxConfigurableAtWorldCreation;
+                factionDef.canMakeRandomly = originalState.CanMakeRandomly;
+                factionDef.settlementGenerationWeight = originalState.SettlementGenerationWeight;
+            }
+
+            appliedCount++;
         }
+
+        return appliedCount;
     }
 }

@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="HoraxCult"]/label</xpath>
+    <value>
+      <label>holy Mothman cultists</label>
+    </value>
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
     <value>

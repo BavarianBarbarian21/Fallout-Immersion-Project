@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIP_HHTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfb22d609aea75ce623dd38dec0cf3409d037454")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+239cc997bf566e6764460b55b03d9e67b67be4be")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIP_HHTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIP_HHTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

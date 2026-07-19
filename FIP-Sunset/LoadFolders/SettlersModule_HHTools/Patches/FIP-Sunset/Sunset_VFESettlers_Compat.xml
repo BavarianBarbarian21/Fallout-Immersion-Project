@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Patch>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]/settlementTexturePath</xpath>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Democratic"]</xpath>
     <value>
       <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
     </value>
   </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]/settlementTexturePath</xpath>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[@Name="HHTools_Settler_Despotic"]</xpath>
     <value>
       <settlementTexturePath>World/WorldObjects/Expanding/SettlersSettlement</settlementTexturePath>
     </value>
