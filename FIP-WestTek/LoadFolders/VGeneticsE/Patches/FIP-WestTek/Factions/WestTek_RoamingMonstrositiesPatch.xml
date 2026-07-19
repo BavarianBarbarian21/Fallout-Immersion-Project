@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Keep Roaming Monstrosities available in world configuration, but do not select it by default. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="GR_RoamingMonstrosities"]/requiredCountAtGameStart</xpath>
+    <value>
+      <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="GR_RoamingMonstrosities" and not(startingCountAtWorldCreation)]</xpath>
+    <value>
+      <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    </value>
+  </Operation>
+</Patch>
