@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CommandReload>Reload</CommandReload>
   <CommandReloadDesc>Reload using {0}. Costs {1} per charge.</CommandReloadDesc>
@@ -11,4 +11,37 @@
   <NoInventory>No inventory</NoInventory>
   <CannotReload>Cannot reload</CannotReload>
   <ReloadMechAbility>Reload {0} with {1}</ReloadMechAbility>
+  <LetterLabelMechsFeral>RobCo bot(s) gone rogue</LetterLabelMechsFeral>
+  <LetterMechsFeral>Some RobCo bot(s) have linked with ancient RobCo control signals. They have joined {0} and become hostile, trying to escape the area.
+Rogue RobCo bots cannot be resurrected at a gestator when destroyed.
+These bots are involved:
+{1}</LetterMechsFeral>
+  <LetterLabelMechlinkInstalled>RobCo Pipboy equipped</LetterLabelMechlinkInstalled>
+  <LetterMechlinkInstalled>{PAWN_labelShort} has equipped a RobCo Pipboy! {PAWN_pronoun} is now a RobCo mechanic and can create and control RobCo bots.
+Research RobCo technology to get started.
+(*SectionTitle)Creating bots:(/SectionTitle) Your mechanic can create bots at a RobCo workbench.
+(*SectionTitle)About bandwidth:(/SectionTitle) Mechanitors can control as many bots as their total bandwidth allows. Select {PAWN_labelShort} and look at {PAWN_possessive} 'Bandwidth' readout to see how much bandwidth {PAWN_pronoun} is currently using and how much {PAWN_pronoun} has available. Bandwidth can be increased with certain apparel and by building RobCo band node buildings.
+(*SectionTitle)About control groups:(/SectionTitle) Mechanics control bots in groups. Each control group can be set to one of these modes:
+- Work
+- Escort
+- Recharge
+- Dormant self-charge
+To learn more about what each mode does, select the work mode icon on one of {PAWN_labelShort}'s control groups and hover over the different work orders. The maximum number of control groups can be increased with apparel and holotapes.
+(*SectionTitle)About threat calling:(/SectionTitle) Mechanics can signal ancient leader bots to attack in order to obtain rare items from them. You must do this to improve your mechanitor past certain limits, but beware the danger.</LetterMechlinkInstalled>
+  <LetterLabelMechanitorCasketOpened>{PAWN_nameDef}'s RobCo Pipboy available</LetterLabelMechanitorCasketOpened>
+  <LetterMechanitorCasketOpened>You have found the corpse of an ancient RobCo mechanic!
+Extract {PAWN_possessive} RobCo Pipboy by selecting a colonist and right-clicking the corpse.</LetterMechanitorCasketOpened>
+  <RefugeePodCrashLabel>Cargo bot crash</RefugeePodCrashLabel>
+  <RefugeePodCrash>{PAWN_titleIndef} named {PAWN_nameDef} is crashing in a cargo bot nearby. If {PAWN_pronoun} survives the impact, {PAWN_pronoun} will be badly wounded.</RefugeePodCrash>
+  <MechWeightClass>Operating System</MechWeightClass>
+  <MechWeightClassExplanation>The Operating System of this robot.</MechWeightClassExplanation>
+  <MechOverseer>This robot's overseer is {0}.</MechOverseer>
+  <MechWorkActivitiesExplanation>The work activities that can be performed by this robot.\n\nThe following list details which work activities can be done within each work type</MechWorkActivitiesExplanation>
+  <MechRechargeSettingsExplanation>Change when robots will start and stop charging.\n\nRobots with energy below this range will automatically seek out a recharger. They will stop charging once they reach the top of this range. These settings only apply in work mode.</MechRechargeSettingsExplanation>
+  <MechWorkSkillDesc>The skill level that this robot acts with.</MechWorkSkillDesc>
+  <AnyMech>Any robot</AnyMech>
+  <CaravanLacksMechMechanitorWarning>Your caravan contains a robot but not their overseer. You will have limited control over the robot when you reach your destination.</CaravanLacksMechMechanitorWarning>
+  <MechsSection>Robots</MechsSection>
+  <RenameMech>Rename robot</RenameMech>
+  <MechGainsName>The robot's name is now {0}.</MechGainsName>
 </LanguageData>
