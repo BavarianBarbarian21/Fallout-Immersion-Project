@@ -1,0 +1,2011 @@
+RIMWORLD BIOTECH — COMPLETE XML DEF LIST
+=========================================
+
+Generated: 2026-07-21
+Installed RimWorld version: 1.6.4871 rev590
+Source: D:\Steam\steamapps\common\RimWorld\Data\Biotech\Defs
+
+SCOPE
+-----
+Concrete Def entries: 1,339
+Unique (Def type + defName) pairs: 1,339
+Named abstract XML inheritance templates without defName: 101
+XML files scanned: 219
+
+Every top-level XML entry in Biotech\Defs is listed below. Concrete definitions
+show their XML Def type, defName, and source file. Named abstract templates are
+also listed separately inside their source folder because they are relevant when
+inheriting or patching definitions, although they are not instantiated Defs.
+Biotech patch files were checked; they modify existing definitions and do not add
+additional top-level Def entries.
+
+FORMAT
+------
+Concrete definition:
+  DefType | defName | relative source XML
+
+Named abstract template:
+  XML element type | template Name | Abstract value | relative source XML
+
+
+========================================================================
+AbilityDefs — 20 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+AbilityCategoryDef | Sanguophage | AbilityDefs\Abilities.xml
+AbilityDef | AcidSpray | AbilityDefs\Abilities.xml
+AbilityDef | AnimalWarcall | AbilityDefs\Abilities.xml
+AbilityDef | Bloodfeed | AbilityDefs\Abilities.xml
+AbilityDef | Coagulate | AbilityDefs\Abilities.xml
+AbilityDef | FireBurst | AbilityDefs\Abilities.xml
+AbilityDef | FirefoampopMech | AbilityDefs\Abilities.xml
+AbilityDef | FireSpew | AbilityDefs\Abilities.xml
+AbilityDef | FoamSpray | AbilityDefs\Abilities.xml
+AbilityDef | LongjumpMechLauncher | AbilityDefs\Abilities.xml
+AbilityDef | PiercingSpine | AbilityDefs\Abilities.xml
+AbilityDef | ReimplantXenogerm | AbilityDefs\Abilities.xml
+AbilityDef | Resurrect | AbilityDefs\Abilities.xml
+AbilityDef | ResurrectionMech | AbilityDefs\Abilities.xml
+AbilityDef | SmokepopMech | AbilityDefs\Abilities.xml
+LongJump | Longjump | AbilityDefs\Abilities.xml
+LongJumpMech | LongjumpMech | AbilityDefs\Abilities.xml
+ThingDef | PiercingSpine | AbilityDefs\Abilities.xml
+ThingDef | Proj_Acid | AbilityDefs\Abilities.xml
+ThingDef | Proj_Foam_Ability | AbilityDefs\Abilities.xml
+
+========================================================================
+BabyPlayDefs — 3 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+BabyPlayDef | PlayStatic | BabyPlayDefs\BabyPlay.xml
+BabyPlayDef | PlayToys | BabyPlayDefs\BabyPlay.xml
+BabyPlayDef | PlayWalking | BabyPlayDefs\BabyPlay.xml
+
+========================================================================
+BeardDefs — 11 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+BeardDef | BeardFurskinKnots | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinMegabraid | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinMonkey | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinMoustache | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinScruffy | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinSenile | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinSideChops | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinSideTufts | BeardDefs\BeardDefs.xml
+BeardDef | BeardFurskinStrongChops | BeardDefs\BeardDefs.xml
+BeardDef | FurskinCurlyMoustache | BeardDefs\BeardDefs.xml
+StyleItemCategoryDef | Furskin | BeardDefs\BeardDefs.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+FurskinBeardBase | FurskinBeardBase | True | BeardDefs\BeardDefs.xml
+
+========================================================================
+Bodies — 28 concrete defs, 2 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+BodyDef | Apocriton | Bodies\Bodies_Mechanoid_Medium.xml
+BodyDef | Mech_Agrihand | Bodies\Bodies_Mechanoid_Light.xml
+BodyDef | Mech_Centurion | Bodies\Bodies_Mechanoid_Superheavy.xml
+BodyDef | Mech_Diabolus | Bodies\Bodies_Mechanoid_Superheavy.xml
+BodyDef | Mech_Light | Bodies\Bodies_Mechanoid_Light.xml
+BodyDef | Mech_Tunneler | Bodies\Bodies_Mechanoid_Heavy.xml
+BodyDef | Mech_Warqueen | Bodies\Bodies_Mechanoid_Superheavy.xml
+BodyDef | Scorcher | Bodies\Bodies_Mechanoid_Medium.xml
+BodyPartDef | BulbTurret | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | DiabolusCapacitor | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodyFifthRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodyFirstRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodyFourthRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodySecondRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodySixthRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalDiabolusBodyThirdRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenBodyFifthRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenBodyFirstRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenBodyFourthRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenBodySecondRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenBodyThirdRing | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | MechanicalWarqueenFormingPod | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | PowerClaw | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | SmallMechanicalFoot | Bodies\BodyParts_Mechanoid.xml
+BodyPartDef | SmallMechanicalLeg | Bodies\BodyParts_Mechanoid.xml
+BodyPartGroupDef | BulbTurret | Bodies\BodyPartGroups.xml
+BodyPartGroupDef | LeftPowerClaw | Bodies\BodyPartGroups.xml
+BodyPartGroupDef | RightPowerClaw | Bodies\BodyPartGroups.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+MechanicalDiabolusRingBase | MechanicalDiabolusRingBase | True | Bodies\BodyParts_Mechanoid.xml
+MechanicalWarqueenRingBase | MechanicalWarqueenRingBase | True | Bodies\BodyParts_Mechanoid.xml
+
+========================================================================
+BossgroupDefs — 6 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+BossDef | Apocriton | BossgroupDefs\Bossgroups.xml
+BossDef | Diabolus | BossgroupDefs\Bossgroups.xml
+BossDef | Warqueen | BossgroupDefs\Bossgroups.xml
+BossgroupDef | Apocriton | BossgroupDefs\Bossgroups.xml
+BossgroupDef | Diabolus | BossgroupDefs\Bossgroups.xml
+BossgroupDef | Warqueen | BossgroupDefs\Bossgroups.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BaseBossgroup | BaseBossgroup | True | BossgroupDefs\Bossgroups.xml
+
+========================================================================
+DamageDefs — 3 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+DamageDef | BulletToxic | DamageDefs\Damages_RangedWeapon.xml
+DamageDef | MechBandShockwave | DamageDefs\Damages_Stun.xml
+DamageDef | ToxGas | DamageDefs\Damages_Misc.xml
+
+========================================================================
+DutyDefs — 5 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+DutyDef | DeliverPawnToBedForBirth | DutyDefs\Duties_Rituals.xml
+DutyDef | KeepLyingDown | DutyDefs\Duties_Misc.xml
+DutyDef | KeepLyingDownForBirth | DutyDefs\Duties_Misc.xml
+DutyDef | SocialMeeting | DutyDefs\Duties_Misc.xml
+DutyDef | Warqueen | DutyDefs\Duties_MechBosses.xml
+
+========================================================================
+Effects — 181 concrete defs, 7 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+EffecterDef | AncientExostriderRemainsPulse | Effects\Effecter_Misc.xml
+EffecterDef | AnimalWarcall_Cast | Effects\Effecter_Misc.xml
+EffecterDef | AnimalWarcall_CastOnTarget | Effects\Effecter_Misc.xml
+EffecterDef | AnimalWarcall_Warmup | Effects\Effecter_Misc.xml
+EffecterDef | AnimalWarcallMentalState | Effects\Effecter_Misc.xml
+EffecterDef | ApocrionAoeResolve | Effects\Effecter_Misc.xml
+EffecterDef | ApocrionAoeWarmup | Effects\Effecter_Misc.xml
+EffecterDef | ApocrionAttached | Effects\Effecter_Misc.xml
+EffecterDef | AtomizerResolve | Effects\Effecter_Misc.xml
+EffecterDef | BabyCrying | Effects\Effecter_BabyFits.xml
+EffecterDef | BabyGiggling | Effects\Effecter_BabyFits.xml
+EffecterDef | BandNodeRetuning | Effects\Effecter_Mechanitor.xml
+EffecterDef | BandNodeTuned | Effects\Effecter_Mechanitor.xml
+EffecterDef | BandNodeTuning | Effects\Effecter_Mechanitor.xml
+EffecterDef | BandNodeUntuned | Effects\Effecter_Mechanitor.xml
+EffecterDef | Birth | Effects\Effecter_Misc.xml
+EffecterDef | Birthday | Effects\Effecter_LifeStages.xml
+EffecterDef | BlastMechBandShockwave | Effects\Effecter_Misc.xml
+EffecterDef | Bloodfeed_Warmup | Effects\Effecter_Misc.xml
+EffecterDef | Breastfeeding | Effects\Effecter_Misc.xml
+EffecterDef | BurnoutMechlinkBoosterUsed | Effects\Effecter_Mechanitor.xml
+EffecterDef | CellPollution | Effects\Effecter_Misc.xml
+EffecterDef | CellPollution_Performant | Effects\Effecter_Misc.xml
+EffecterDef | Coagulate | Effects\Effecter_Misc.xml
+EffecterDef | CommsConsoleBossgroupSummoned | Effects\Effecter_Mechanitor.xml
+EffecterDef | ControlMech | Effects\Effecter_Mechanitor.xml
+EffecterDef | Fire_Burst | Effects\Effecter_Misc.xml
+EffecterDef | Fire_Burst_Warmup | Effects\Effecter_Misc.xml
+EffecterDef | Fire_Spew | Effects\Effecter_Misc.xml
+EffecterDef | Fire_SpewShort | Effects\Effecter_Misc.xml
+EffecterDef | Floordrawing | Effects\Effecter_Misc.xml
+EffecterDef | GeneAssembler_Working | Effects\Effecter_Misc.xml
+EffecterDef | GraserBeam_End | Effects\Effecter_Misc.xml
+EffecterDef | Implant_Xenogerm | Effects\Effecter_Misc.xml
+EffecterDef | JumpMechFlightEffect | Effects\Effecter_Misc.xml
+EffecterDef | JumpMechWarmupEffect | Effects\Effecter_Misc.xml
+EffecterDef | LaborEarly | Effects\Effecter_GivingBirth.xml
+EffecterDef | LaborLate | Effects\Effecter_GivingBirth.xml
+EffecterDef | MechBandAntennaPrepared | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechbandBuildingDestroyed | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechBandDishPrepared | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechbandDishUsed | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechBandElectricityArc | Effects\Effecter_Misc.xml
+EffecterDef | MechChargerWasteProduced | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechChargerWasteRemoved | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechRepairing | Effects\Effecter_Mechanitor.xml
+EffecterDef | MechResurrected | Effects\Effecter_Misc.xml
+EffecterDef | MechUncontrolled | Effects\Effecter_Misc.xml
+EffecterDef | PlayStatic | Effects\Effecter_Play.xml
+EffecterDef | PollutionExtractedPoluxTree | Effects\Effecter_Mechanitor.xml
+EffecterDef | PollutionPumped | Effects\Effecter_Mechanitor.xml
+EffecterDef | Radiotalking | Effects\Effecter_Misc.xml
+EffecterDef | RipScannerHeadGlow | Effects\Effecter_Misc.xml
+EffecterDef | SanguophageMeeting | Effects\Effecter_Misc.xml
+EffecterDef | SubcoreRipscanner_Start | Effects\Effecter_Misc.xml
+EffecterDef | SubcoreSoftscanner_Start | Effects\Effecter_Misc.xml
+EffecterDef | TunnelerSlowedDown | Effects\Effecter_Misc.xml
+EffecterDef | Vat_Bubbles_East | Effects\Effecter_Misc.xml
+EffecterDef | Vat_Bubbles_North | Effects\Effecter_Misc.xml
+EffecterDef | Vat_Bubbles_South | Effects\Effecter_Misc.xml
+EffecterDef | Vat_Bubbles_West | Effects\Effecter_Misc.xml
+EffecterDef | WarqueenWarUrchinsSpawned | Effects\Effecter_Misc.xml
+EffecterDef | WarUrchinSpawned | Effects\Effecter_Misc.xml
+EffecterDef | WastepackAtomizer_Operating | Effects\Effecter_Misc.xml
+EffecterDef | WastepackAtomizer_Working | Effects\Effecter_Misc.xml
+Fleck_WastepackDissolutionCell | Fleck_WastePackDissolutionCell | Effects\Fleck_Visual.xml
+FleckDef | AncientExostriderRedPulse | Effects\Fleck_Visual.xml
+FleckDef | AntennaFlash | Effects\Fleck_Visual.xml
+FleckDef | ApocritonResurrectFlashGrowing | Effects\Fleck_Visual.xml
+FleckDef | AtomizerFlash | Effects\Fleck_Visual.xml
+FleckDef | AtomizerFlashGrowing | Effects\Fleck_Visual.xml
+FleckDef | AtomizerGlowFast | Effects\Fleck_Visual.xml
+FleckDef | AtomizerGlowShrinking | Effects\Fleck_Visual.xml
+FleckDef | AtomizerSpark | Effects\Fleck_Visual.xml
+FleckDef | BandNodeGreenPulse | Effects\Fleck_Visual.xml
+FleckDef | BandNodeRedPulse | Effects\Fleck_Visual.xml
+FleckDef | BandNodeYellowPulse | Effects\Fleck_Visual.xml
+FleckDef | Beam_Glow | Effects\Fleck_Visual.xml
+FleckDef | BloodFeedSplash | Effects\Fleck_Visual.xml
+FleckDef | BrightFlash | Effects\Fleck_Visual.xml
+FleckDef | BrightFlashLong | Effects\Fleck_Visual.xml
+FleckDef | BurningWick | Effects\Fleck_Visual.xml
+FleckDef | FireAnimated | Effects\Fleck_Visual.xml
+FleckDef | FireSpew_A | Effects\Fleck_Visual.xml
+FleckDef | FireSpew_Base | Effects\Fleck_Visual.xml
+FleckDef | FireSpew_Glow | Effects\Fleck_Visual.xml
+FleckDef | FireSpew_Short | Effects\Fleck_Visual.xml
+FleckDef | FlashHollow | Effects\Fleck_Visual.xml
+FleckDef | FlashHollow_Red | Effects\Fleck_Visual.xml
+FleckDef | FlashMechBand | Effects\Fleck_Visual.xml
+FleckDef | FlashXenogerm | Effects\Fleck_Visual.xml
+FleckDef | Fleck_BeamBurn | Effects\Fleck_Visual.xml
+FleckDef | Fleck_BlastMechBandRedLine | Effects\Fleck_Visual.xml
+FleckDef | Fleck_BlastMechBandShockwave | Effects\Fleck_Visual.xml
+FleckDef | Fleck_ToxifierPollutionSource | Effects\Fleck_Visual.xml
+FleckDef | Fleck_VatBubble | Effects\Fleck_Visual.xml
+FleckDef | Fleck_WastePackDissolutionCell_Performant | Effects\Fleck_Visual.xml
+FleckDef | Fleck_WastePackDissolutionSource | Effects\Fleck_Visual.xml
+FleckDef | FleckBabyCrying | Effects\Effecter_BabyFits.xml
+FleckDef | FleckBabyGiggling | Effects\Effecter_BabyFits.xml
+FleckDef | FleckGivingBirth | Effects\Effecter_GivingBirth.xml
+FleckDef | FuelSpray | Effects\Fleck_Visual.xml
+FleckDef | JumpFlameGlowMech | Effects\Fleck_Visual.xml
+FleckDef | JumpFlameMech | Effects\Fleck_Visual.xml
+FleckDef | NewbornBecomeChildGlimmer | Effects\Fleck_Visual.xml
+FleckDef | SanguophageEyes | Effects\Fleck_Visual.xml
+FleckDef | WastepackAtomizer_Backward | Effects\Fleck_Visual.xml
+FleckDef | WastepackAtomizer_Forward | Effects\Fleck_Visual.xml
+MechGestatorFormingEast | MechGestatorForming_East | Effects\Mote_Visual.xml
+MechGestatorFormingLargeEast | MechGestatorFormingLarge_East | Effects\Mote_Visual.xml
+MechGestatorFormingLargeNorth | MechGestatorFormingLarge_North | Effects\Mote_Visual.xml
+MechGestatorFormingLargeSouth | MechGestatorFormingLarge_South | Effects\Mote_Visual.xml
+MechGestatorFormingLargeWest | MechGestatorFormingLarge_West | Effects\Mote_Visual.xml
+MechGestatorFormingNorth | MechGestatorForming_North | Effects\Mote_Visual.xml
+MechGestatorFormingSouth | MechGestatorForming_South | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleComplete_East | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleComplete_North | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleComplete_South | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleCompleteLarge_East | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleCompleteLarge_North | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleCompleteLarge_South | Effects\Mote_Visual.xml
+ThingDef | MechGestatorCycleCompleteLarge_West | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormed_East | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormed_North | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormed_South | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormedLarge_East | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormedLarge_North | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormedLarge_South | Effects\Mote_Visual.xml
+ThingDef | MechGestatorFormedLarge_West | Effects\Mote_Visual.xml
+ThingDef | Mote_AnimalWarcallMentalState | Effects\Mote_Visual.xml
+ThingDef | Mote_AnimalWarcallTarget | Effects\Mote_Visual.xml
+ThingDef | Mote_AnimalWarcallTargetFlash | Effects\Mote_Visual.xml
+ThingDef | Mote_AnimalWarcallWarmup | Effects\Mote_Visual.xml
+ThingDef | Mote_ApocritonPulse | Effects\Mote_Visual.xml
+ThingDef | Mote_ApocritonWarmupArea | Effects\Mote_Visual.xml
+ThingDef | Mote_BabyCryingDots | Effects\Mote_Visual.xml
+ThingDef | Mote_ChargingCablesPulse | Effects\Mote_Visual.xml
+ThingDef | Mote_CoagulateA | Effects\Mote_Visual.xml
+ThingDef | Mote_CoagulateB | Effects\Mote_Visual.xml
+ThingDef | Mote_CoagulateStencil | Effects\Mote_Visual.xml
+ThingDef | Mote_Deathresting | Effects\Mote_Visual.xml
+ThingDef | Mote_GraserBeamBase | Effects\Mote_Visual.xml
+ThingDef | Mote_HellsphereCannon_Aim | Effects\Mote_Visual.xml
+ThingDef | Mote_HellsphereCannon_Charge | Effects\Mote_Visual.xml
+ThingDef | Mote_HellsphereCannon_Target | Effects\Mote_Visual.xml
+ThingDef | Mote_MechbandAntennaWaves | Effects\Mote_Visual.xml
+ThingDef | Mote_MechbandDishWaves | Effects\Mote_Visual.xml
+ThingDef | Mote_MechbandElectricity | Effects\Mote_Visual.xml
+ThingDef | Mote_MechbandPreparing | Effects\Mote_Visual.xml
+ThingDef | Mote_MechCharging | Effects\Mote_Visual.xml
+ThingDef | Mote_MechControlTakingSparkArch | Effects\Mote_Visual.xml
+ThingDef | Mote_MechResurrectFlash | Effects\Mote_Visual.xml
+ThingDef | Mote_MechResurrectGlow | Effects\Mote_Visual.xml
+ThingDef | Mote_MechResurrectWarmupOnTarget | Effects\Mote_Visual.xml
+ThingDef | Mote_MechSparkSimple | Effects\Mote_Visual.xml
+ThingDef | Mote_MechTunnelerSlowedDown | Effects\Mote_Visual.xml
+ThingDef | Mote_MechUncontrolled | Effects\Mote_Visual.xml
+ThingDef | Mote_NewbornBecomeChildGlow | Effects\Mote_Visual.xml
+ThingDef | Mote_PollutionPump | Effects\Mote_Visual.xml
+ThingDef | Mote_RedFlash | Effects\Mote_Visual.xml
+ThingDef | Mote_RedFlashStrong | Effects\Mote_Visual.xml
+ThingDef | Mote_RipscannerHeadGlow | Effects\Mote_Visual.xml
+ThingDef | Mote_SanguophageMeetingSmoke | Effects\Mote_Visual.xml
+ThingDef | Mote_SubcoreEncoderEast | Effects\Mote_Visual.xml
+ThingDef | Mote_SubcoreEncoderNorth | Effects\Mote_Visual.xml
+ThingDef | Mote_SubcoreEncoderSouth | Effects\Mote_Visual.xml
+ThingDef | Mote_Toy | Effects\Mote_Meta.xml
+ThingDef | Mote_VatGlowHorizontal | Effects\Mote_Visual.xml
+ThingDef | Mote_VatGlowVertical | Effects\Mote_Visual.xml
+ThingDef | Mote_WarhUrchinSpawnElectricity | Effects\Mote_Visual.xml
+ThingDef | Mote_WarQueenSpineGlow | Effects\Mote_Visual.xml
+ThingDef | Mote_WarUrchinSpawnFlash | Effects\Mote_Visual.xml
+ThingDef | Mote_XenogermImplantation | Effects\Mote_Visual.xml
+ThingDef | RipScannerGlow_East | Effects\Mote_Visual.xml
+ThingDef | RipScannerGlow_North | Effects\Mote_Visual.xml
+ThingDef | RipScannerGlow_South | Effects\Mote_Visual.xml
+ThingDef | RipScannerGlow_West | Effects\Mote_Visual.xml
+ThingDef | SoftScannerGlow_East | Effects\Mote_Visual.xml
+ThingDef | SoftScannerGlow_North | Effects\Mote_Visual.xml
+ThingDef | SoftScannerGlow_South | Effects\Mote_Visual.xml
+ThingDef | SoftScannerGlow_West | Effects\Mote_Visual.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BandNodePulse | BandNodePulse | True | Effects\Fleck_Visual.xml
+GivingBirth | GivingBirth | True | Effects\Effecter_GivingBirth.xml
+MechGestatorFormingBase | MechGestatorFormingBase | True | Effects\Mote_Visual.xml
+MoteCoagulateBase | MoteCoagulateBase | True | Effects\Mote_Visual.xml
+SubcoreEncoderMoteBase | SubcoreEncoderMoteBase | True | Effects\Mote_Visual.xml
+SubcoreRipscannerMoteBase | SubcoreRipscannerMoteBase | True | Effects\Mote_Visual.xml
+SubcoreScannerMoteBase | SubcoreScannerMoteBase | True | Effects\Mote_Visual.xml
+
+
+========================================================================
+FactionDefs — 6 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+FactionDef | OutlanderRoughPig | FactionDefs\Factions_Misc.xml
+FactionDef | PirateWaster | FactionDefs\Factions_Misc.xml
+FactionDef | PirateYttakin | FactionDefs\Factions_Misc.xml
+FactionDef | Sanguophages | FactionDefs\Factions_Misc.xml
+FactionDef | TribeRoughNeanderthal | FactionDefs\Factions_Misc.xml
+FactionDef | TribeSavageImpid | FactionDefs\Factions_Misc.xml
+
+========================================================================
+GameConditionDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+GameConditionDef | NoxiousHaze | GameConditionDefs\GameConditions_Misc.xml
+
+========================================================================
+GeneDefs — 186 concrete defs, 34 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+GeneCategoryDef | Ability | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Aptitudes | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Archite | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Beauty | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Cosmetic_Body | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Drugs | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Healing | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Hemogen | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Mood | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Movement | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Pain | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Psychic | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Reproduction | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | ResistanceAndWeakness | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Sleep | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Temperature | GeneDefs\GeneCategoryDefs.xml
+GeneCategoryDef | Violence | GeneDefs\GeneCategoryDefs.xml
+GeneDef | AcidSpray | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | Ageless | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Aggression_Aggressive | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Aggression_DeadCalm | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Aggression_HyperAggressive | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | AnimalWarcall | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | ArchiteMetabolism | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Beard_Always | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Beard_BushyOnly | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Beard_NoBeardOnly | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Beauty_Beautiful | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Beauty_Pretty | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Beauty_Ugly | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Beauty_VeryUgly | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Bloodfeeder | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | Body_Fat | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Body_Hulk | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Body_Standard | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Body_Thin | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Brow_Heavy | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | CaveDweller | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Coagulate | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | DarkVision | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Deathless | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Deathrest | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Delicate | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | DiseaseFree | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Ears_Cat | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Ears_Floppy | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Ears_Human | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Ears_Pig | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Ears_Pointed | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | ElongatedFingers | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Eyes_Gray | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Eyes_Red | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | FacialRidges | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Fertile | GeneDefs\GeneDefs_Health.xml
+GeneDef | FireResistant | GeneDefs\GeneDefs_Misc.xml
+GeneDef | FireSpew | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | FireTerror | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | FireWeakness | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | FoamSpray | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | Furskin | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Hair_BaldOnly | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Hair_Grayless | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Hair_LongOnly | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Hair_ShortOnly | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Hands_Human | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Hands_Pig | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Head_Gaunt | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Headbone_CenterHorn | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Headbone_Human | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Headbone_MiniHorns | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | HemogenDrain | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Hemogenic | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | Immunity_Strong | GeneDefs\GeneDefs_Health.xml
+GeneDef | Immunity_SuperStrong | GeneDefs\GeneDefs_Health.xml
+GeneDef | Immunity_Weak | GeneDefs\GeneDefs_Health.xml
+GeneDef | Inbred | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Instability_Major | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Instability_Mild | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Jaw_Baseline | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Jaw_Heavy | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | KillThirst | GeneDefs\GeneDefs_Misc.xml
+GeneDef | KindInstinct | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Learning_Fast | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Learning_Slow | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Libido_High | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Libido_Low | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | LongjumpLegs | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | LowSleep | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MaxTemp_LargeIncrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MaxTemp_SmallDecrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MaxTemp_SmallIncrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MeleeDamage_Strong | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MeleeDamage_Weak | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MinTemp_LargeDecrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MinTemp_SmallDecrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MinTemp_SmallIncrease | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Mood_Depressive | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Mood_Optimist | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Mood_Pessimist | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Mood_Sanguine | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MoveSpeed_Quick | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MoveSpeed_Slow | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | MoveSpeed_VeryQuick | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | NakedSpeed | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Nearsighted | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Neversleep | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Nose_Human | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Nose_Pig | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | Pain_Extra | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Pain_Reduced | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | PerfectImmunity | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | PiercingSpine | GeneDefs\GeneDefs_Abilities.xml
+GeneDef | PollutionRush | GeneDefs\GeneDefs_Misc.xml
+GeneDef | PsychicAbility_Deaf | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | PsychicAbility_Dull | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | PsychicAbility_Enhanced | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | PsychicAbility_Extreme | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | PsychicBonding | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Robust | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | RobustDigestion | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Skin_Blue | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_DeepRed | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_DeepYellow | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_Green | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_InkBlack | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_LightGray | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_Orange | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_PaleRed | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_PaleYellow | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_Purple | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_SheerWhite | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Skin_SlateGray | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Sleepy | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Sterile | GeneDefs\GeneDefs_Health.xml
+GeneDef | StrongStomach | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Superclotting | GeneDefs\GeneDefs_Health.xml
+GeneDef | Tail_Furry | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | Tail_Smooth | GeneDefs\GeneDefs_Cosmetic.xml
+GeneDef | TotalHealing | GeneDefs\GeneDefs_Sanguophage.xml
+GeneDef | ToxicEnvironmentResistance_Partial | GeneDefs\GeneDefs_Health.xml
+GeneDef | ToxicEnvironmentResistance_Total | GeneDefs\GeneDefs_Health.xml
+GeneDef | ToxResist_Partial | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | ToxResist_Total | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | Unstoppable | GeneDefs\GeneDefs_Misc.xml
+GeneDef | UVSensitivity_Intense | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | UVSensitivity_Mild | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | VerySleepy | GeneDefs\GeneDefs_Spectrum.xml
+GeneDef | ViolenceDisabled | GeneDefs\GeneDefs_Misc.xml
+GeneDef | Voice_Human | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | VoicePig | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | VoiceRoar | GeneDefs\GeneDefs_Endogenes.xml
+GeneDef | WebbedPhalanges | GeneDefs\GeneDefs_Misc.xml
+GeneDef | WoundHealing_Fast | GeneDefs\GeneDefs_Health.xml
+GeneDef | WoundHealing_Slow | GeneDefs\GeneDefs_Health.xml
+GeneDef | WoundHealing_SuperFast | GeneDefs\GeneDefs_Health.xml
+GeneDef | XenogermReimplanter | GeneDefs\GeneDefs_Abilities.xml
+GeneTemplateDef | AddictionImmune | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | AddictionResistant | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | AptitudePoor | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | AptitudeRemarkable | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | AptitudeStrong | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | AptitudeTerrible | GeneDefs\GeneTemplateDefs.xml
+GeneTemplateDef | ChemicalDependency | GeneDefs\GeneTemplateDefs.xml
+ThoughtDef | Pyrophobia | GeneDefs\GeneDefs_Sanguophage.xml
+XenotypeDef | Baseliner | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Dirtmole | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Genie | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Highmate | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Hussar | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Impid | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Neanderthal | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Pigskin | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Sanguophage | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Waster | GeneDefs\XenotypeDefs.xml
+XenotypeDef | Yttakin | GeneDefs\XenotypeDefs.xml
+XenotypeIconDef | Basic | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Crescent | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Crown | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Ears | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Frown | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Furred | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Horn | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Lop | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Rect | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | Skull | GeneDefs\XenotypeIconDefs.xml
+XenotypeIconDef | SkullThin | GeneDefs\XenotypeIconDefs.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+CellInstabilityBase | CellInstabilityBase | True | GeneDefs\GeneDefs_Misc.xml
+FertilityBase | FertilityBase | True | GeneDefs\GeneDefs_Health.xml
+GeneAggressionBase | GeneAggressionBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneAptitudeBase | GeneAptitudeBase | True | GeneDefs\GeneTemplateDefs.xml
+GeneBeardStyleBase | GeneBeardStyleBase | True | GeneDefs\GeneDefs_Cosmetic.xml
+GeneBeautyBase | GeneBeautyBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneBodyBase | GeneBodyBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GeneChemicalBase | GeneChemicalBase | True | GeneDefs\GeneTemplateDefs.xml
+GeneEarsBase | GeneEarsBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GeneEyeColor | GeneEyeColor | True | GeneDefs\GeneDefs_Cosmetic.xml
+GeneHairStyleBase | GeneHairStyleBase | True | GeneDefs\GeneDefs_Cosmetic.xml
+GeneHandsBase | GeneHandsBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GeneHeadboneBase | GeneHeadboneBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GeneHealingRateBase | GeneHealingRateBase | True | GeneDefs\GeneDefs_Health.xml
+GeneImmunityBase | GeneImmunityBase | True | GeneDefs\GeneDefs_Health.xml
+GeneJawBase | GeneJawBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GeneLearningBase | GeneLearningBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneMaxTempBase | GeneMaxTempBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneMeleeDamageBase | GeneMeleeDamageBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneMinTempBase | GeneMinTempBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneMoodBase | GeneMoodBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneMoveSpeedBase | GeneMoveSpeedBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneNoseBase | GeneNoseBase | True | GeneDefs\GeneDefs_Endogenes.xml
+GenePainBase | GenePainBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GenePollutionBase | GenePollutionBase | True | GeneDefs\GeneDefs_Health.xml
+GenePsychicAbilityBase | GenePsychicAbilityBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneSkinColorOverride | GeneSkinColorOverride | True | GeneDefs\GeneDefs_Cosmetic.xml
+GeneSleepBase | GeneSleepBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneTailBase | GeneTailBase | True | GeneDefs\GeneDefs_Cosmetic.xml
+GeneToughnessBase | GeneToughnessBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneToxResistBase | GeneToxResistBase | True | GeneDefs\GeneDefs_Spectrum.xml
+GeneVoiceBase | GeneVoiceBase | True | GeneDefs\GeneDefs_Endogenes.xml
+LibidoBase | LibidoBase | True | GeneDefs\GeneDefs_Spectrum.xml
+UVSensitivityBase | UVSensitivityBase | True | GeneDefs\GeneDefs_Spectrum.xml
+
+========================================================================
+HeadTypeDefs — 13 concrete defs, 4 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+HeadTypeDef | Female_HeavyJawNormal | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Average1 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Average2 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Average3 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Gaunt | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Heavy1 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Heavy2 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Heavy3 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Narrow1 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Narrow2 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Furskin_Narrow3 | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Gaunt | HeadTypeDefs\HeadTypeDefs.xml
+HeadTypeDef | Male_HeavyJawNormal | HeadTypeDefs\HeadTypeDefs.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+FurskinAverageBase | FurskinAverageBase | True | HeadTypeDefs\HeadTypeDefs.xml
+FurskinHeavyBase | FurskinHeavyBase | True | HeadTypeDefs\HeadTypeDefs.xml
+FurskinNarrowBase | FurskinNarrowBase | True | HeadTypeDefs\HeadTypeDefs.xml
+HeavyJawBase | HeavyJawBase | True | HeadTypeDefs\HeadTypeDefs.xml
+
+========================================================================
+HediffDefs — 54 concrete defs, 3 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+AbilityDef | RemoteRepair | HediffDefs\Hediffs_Mechanitor.xml
+AbilityDef | RemoteShield | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | BandNode | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | BioStarvation | HediffDefs\Hediffs_Various.xml
+HediffDef | BloodfeederMark | HediffDefs\Hediffs_Local_Misc.xml
+HediffDef | ControlSublinkImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | Deathrest | HediffDefs\Hediffs_Various.xml
+HediffDef | DeathrestExhaustion | HediffDefs\Hediffs_Various.xml
+HediffDef | DetoxifierKidney | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+HediffDef | DetoxifierLung | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+HediffDef | GeneticDrugNeed | HediffDefs\Hediffs_Various.xml
+HediffDef | HemogenCraving | HediffDefs\Hediffs_Various.xml
+HediffDef | ImplantedIUD | HediffDefs\Hediffs_Local_Misc.xml
+HediffDef | InfantIllness | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | InterruptedDeathrest | HediffDefs\Hediffs_Various.xml
+HediffDef | Lactating | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | MechFormfeederImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | MechlinkImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | MorningSickness | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | OvumExtracted | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PollutionStimulus | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PostpartumExhaustion | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PregnancyLabor | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PregnancyLaborPushing | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PregnancyMood | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PregnantHuman | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | PsychicBond | HediffDefs\Hediffs_Various.xml
+HediffDef | PsychicBondTorn | HediffDefs\Hediffs_Various.xml
+HediffDef | RegenerationComa | HediffDefs\Hediffs_Various.xml
+HediffDef | RemoteRepairerImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | RemoteShielderImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | RepairProbeImplant | HediffDefs\Hediffs_Mechanitor.xml
+HediffDef | ScanningSickness | HediffDefs\Hediffs_Various.xml
+HediffDef | SelfShutdown | HediffDefs\Hediffs_Mechs.xml
+HediffDef | Stillborn | HediffDefs\Hediffs_Global_Misc.xml
+HediffDef | ToxGasExposure | HediffDefs\Hediffs_Local_Misc.xml
+HediffDef | TubalLigation | HediffDefs\Hediffs_Local_Misc.xml
+HediffDef | Vasectomy | HediffDefs\Hediffs_Local_Misc.xml
+HediffDef | VatGrowing | HediffDefs\Hediffs_Various.xml
+HediffDef | VatLearning | HediffDefs\Hediffs_Various.xml
+HediffDef | XenogerminationComa | HediffDefs\Hediffs_Various.xml
+HediffDef | XenogermLossShock | HediffDefs\Hediffs_Various.xml
+HediffDef | XenogermReplicating | HediffDefs\Hediffs_Various.xml
+RecipeDef | InstallDetoxifierKidney | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+RecipeDef | InstallDetoxifierLung | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+ThingDef | ControlSublink | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | ControlSublinkHigh | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | DetoxifierKidney | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+ThingDef | DetoxifierLung | HediffDefs\Hediffs_BodyParts_Detoxifier.xml
+ThingDef | MechFormfeeder | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | Mechlink | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | RemoteRepairer | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | RemoteShielder | HediffDefs\Hediffs_Mechanitor.xml
+ThingDef | RepairProbe | HediffDefs\Hediffs_Mechanitor.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+ControlSublinkBase | ControlSublinkBase | True | HediffDefs\Hediffs_Mechanitor.xml
+MechanitorImplantBase | MechanitorImplantBase | True | HediffDefs\Hediffs_Mechanitor.xml
+MechanitorImplantCraftableBase | MechanitorImplantCraftableBase | True | HediffDefs\Hediffs_Mechanitor.xml
+
+========================================================================
+HistoryEventDefs — 5 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+HistoryEventDef | AbsorbedXenogerm | HistoryEventDefs\HistoryEventDefs.xml
+HistoryEventDef | ExtractedHemogenPack | HistoryEventDefs\HistoryEventDefs.xml
+HistoryEventDef | PollutedBase | HistoryEventDefs\HistoryEventDefs.xml
+HistoryEventDef | PollutedNearbySite | HistoryEventDefs\HistoryEventDefs.xml
+HistoryEventDef | ToxicWasteDumping | HistoryEventDefs\HistoryEventDefs.xml
+
+========================================================================
+ImpactSoundTypeDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ImpactSoundTypeDef | MechBandShockwave | ImpactSoundTypeDefs\ImpactSoundTypeDefs.xml
+
+========================================================================
+IncidentDefs — 3 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+IncidentDef | GiveQuest_AncientComplex_Mechanitor | IncidentDefs\Incidents_Map_Special.xml
+IncidentDef | PoluxTreeSpawn | IncidentDefs\Incidents_Map_Special.xml
+IncidentDef | RefugeePodCrash_Baby | IncidentDefs\Incidents_Map_Special.xml
+
+========================================================================
+InteractionDefs — 22 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+InteractionDef | BabyPlay | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonAnimals | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonArtistic | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonConstruction | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonCooking | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonCrafting | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonGeneric | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonIntellectual | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonMedicine | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonMelee | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonMining | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonPlants | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonShooting | InteractionDefs\Interactions_Social.xml
+InteractionDef | LessonSocial | InteractionDefs\Interactions_Social.xml
+InteractionDef | SanguophageChat | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionCommonSituations | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionHowTo | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionQuiz | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionStudySubjectWith | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionTeachingAdverbs | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionTeachingVerbs | InteractionDefs\Interactions_Social.xml
+RulePackDef | LessonInteractionTeachSubjectTo | InteractionDefs\Interactions_Social.xml
+
+
+========================================================================
+JobDefs — 47 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+JobDef | AbsorbXenogerm | JobDefs\Jobs_Misc.xml
+JobDef | BabyPlay | JobDefs\Jobs_Childcare.xml
+JobDef | BabySuckle | JobDefs\Jobs_Childcare.xml
+JobDef | BottleFeedBaby | JobDefs\Jobs_Childcare.xml
+JobDef | Breastfeed | JobDefs\Jobs_Childcare.xml
+JobDef | BreastfeedCarryToMom | JobDefs\Jobs_Childcare.xml
+JobDef | BringBabyToSafety | JobDefs\Jobs_Childcare.xml
+JobDef | BringBabyToSafetyUnforced | JobDefs\Jobs_Childcare.xml
+JobDef | CarryGenepackToContainer | JobDefs\Jobs_Misc.xml
+JobDef | CarryToBuilding | JobDefs\Jobs_Misc.xml
+JobDef | CarryToMomAfterBirth | JobDefs\Jobs_Childcare.xml
+JobDef | CastAbilityGoToThing | JobDefs\Jobs_Misc.xml
+JobDef | CastAbilityOnThingWithoutWeapon | JobDefs\Jobs_Misc.xml
+JobDef | CastAbilityOnThingWithoutWeaponInterruptible | JobDefs\Jobs_Misc.xml
+JobDef | ClearPollution | JobDefs\Jobs_Misc.xml
+JobDef | ControlMech | JobDefs\Jobs_Misc.xml
+JobDef | CreateXenogerm | JobDefs\Jobs_Misc.xml
+JobDef | Deathrest | JobDefs\Jobs_Misc.xml
+JobDef | DisassembleMech | JobDefs\Jobs_Misc.xml
+JobDef | EmptyWasteContainer | JobDefs\Jobs_Work.xml
+JobDef | EnterBuilding | JobDefs\Jobs_Misc.xml
+JobDef | FertilizeOvum | JobDefs\Jobs_Childcare.xml
+jobDef | Floordrawing | JobDefs\Jobs_Learning.xml
+JobDef | GetReimplanted | JobDefs\Jobs_Misc.xml
+JobDef | HaulMechToCharger | JobDefs\Jobs_Misc.xml
+JobDef | HaulToAtomizer | JobDefs\Jobs_Work.xml
+JobDef | InstallMechlink | JobDefs\Jobs_Misc.xml
+jobDef | Lessongiving | JobDefs\Jobs_Learning.xml
+jobDef | Lessontaking | JobDefs\Jobs_Learning.xml
+JobDef | MechCharge | JobDefs\Jobs_Misc.xml
+JobDef | NatureRunning | JobDefs\Jobs_Learning.xml
+JobDef | PlayStatic | JobDefs\Jobs_Play.xml
+JobDef | PlayToys | JobDefs\Jobs_Play.xml
+JobDef | PlayWalking | JobDefs\Jobs_Play.xml
+JobDef | PrisonerBloodfeed | JobDefs\Jobs_Misc.xml
+jobDef | Radiotalking | JobDefs\Jobs_Learning.xml
+JobDef | ReadDatacore | JobDefs\Jobs_Misc.xml
+JobDef | ReleaseMechs | JobDefs\Jobs_Misc.xml
+JobDef | RemoveMechlink | JobDefs\Jobs_Misc.xml
+JobDef | RepairMech | JobDefs\Jobs_Misc.xml
+JobDef | RepairMechRemote | JobDefs\Jobs_Misc.xml
+JobDef | SelfShutdown | JobDefs\Jobs_Misc.xml
+JobDef | ShieldMech | JobDefs\Jobs_Misc.xml
+JobDef | Skydreaming | JobDefs\Jobs_Learning.xml
+JobDef | TryRomance | JobDefs\Jobs_Misc.xml
+JobDef | Wait_WithSleeping | JobDefs\Jobs_Misc.xml
+jobDef | Workwatching | JobDefs\Jobs_Learning.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BabyPlay | BabyPlay | True | JobDefs\Jobs_Play.xml
+
+========================================================================
+LayoutDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ComplexLayoutDef | AncientComplex_Mechanitor_Loot | LayoutDefs\Layouts_Misc.xml
+
+========================================================================
+LayoutRoomDefs — 4 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+LayoutRoomDef | AncientBandNodeRoom | LayoutRoomDefs\LayoutRooms_MechanitorComplex.xml
+LayoutRoomDef | AncientMechGeneratorRoom | LayoutRoomDefs\LayoutRooms_MechanitorComplex.xml
+LayoutRoomDef | AncientMechGestatorRoom | LayoutRoomDefs\LayoutRooms_MechanitorComplex.xml
+LayoutRoomDef | AncientRechargeRoom | LayoutRoomDefs\LayoutRooms_MechanitorComplex.xml
+
+========================================================================
+LearningDesireDefs — 7 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+LearningDesireDef | Floordrawing | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | Lessontaking | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | NatureRunning | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | Radiotalking | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | Reading | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | Skydreaming | LearningDesireDefs\LearningDesires.xml
+LearningDesireDef | Workwatching | LearningDesireDefs\LearningDesires.xml
+
+========================================================================
+MainButtonDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MainButtonDef | Mechs | MainButtonDefs\MainButtons.xml
+
+========================================================================
+MapGeneration — 4 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+GenStepDef | AncientExostriderRemains | MapGeneration\BasePlayerMapGenerator.xml
+GenStepDef | AncientPollutionJunk | MapGeneration\CommonMapGenerator.xml
+GenStepDef | Pollution | MapGeneration\CommonMapGenerator.xml
+GenStepDef | PoluxTrees | MapGeneration\BasePlayerMapGenerator.xml
+
+========================================================================
+MapMeshFlagDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MapMeshFlagDef | Pollution | MapMeshFlagDefs\MapMeshFlagDefs.xml
+
+========================================================================
+MemeDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MemeDef | Bloodfeeding | MemeDefs\Memes_Bloodfeeding.xml
+
+========================================================================
+MentalStateDefs — 7 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MentalBreakDef | FireTerror | MentalStateDefs\MentalStates_Special.xml
+MentalFitDef | Crying | MentalStateDefs\MentalStates_BabyFits.xml
+MentalFitDef | Giggling | MentalStateDefs\MentalStates_BabyFits.xml
+MentalStateDef | BerserkWarcall | MentalStateDefs\MentalStates_Special.xml
+MentalStateDef | Crying | MentalStateDefs\MentalStates_BabyFits.xml
+MentalStateDef | Giggling | MentalStateDefs\MentalStates_BabyFits.xml
+MentalStateDef | PanicFleeFire | MentalStateDefs\MentalStates_Special.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BaseBabyMentalFit | BaseBabyMentalFit | True | MentalStateDefs\MentalStates_BabyFits.xml
+
+========================================================================
+Misc — 32 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+BodyTypeDef | Baby | Misc\BodyTypeDefs\BodyTypes.xml
+BodyTypeDef | Child | Misc\BodyTypeDefs\BodyTypes.xml
+ClamorDef | BabyCry | Misc\ClamorDefs.xml
+DesignationCategoryDef | Biotech | Misc\DesignationCategories.xml
+FurDef | Furskin | Misc\FurDefs.xml
+LetterDef | BabyBirth | Misc\CustomNotificationLetters.xml
+LetterDef | BabyToChild | Misc\CustomNotificationLetters.xml
+LetterDef | Bossgroup | Misc\CustomNotificationLetters.xml
+LetterDef | ChildBirthday | Misc\CustomNotificationLetters.xml
+LetterDef | ChildToAdult | Misc\CustomNotificationLetters.xml
+LetterDef | HumanPregnancy | Misc\CustomNotificationLetters.xml
+LifeStageDef | HumanlikePreTeenager | Misc\LifeStageDefs\LifeStages.xml
+MechWorkModeDef | Escort | Misc\MechWorkModes.xml
+MechWorkModeDef | Recharge | Misc\MechWorkModes.xml
+MechWorkModeDef | SelfShutdown | Misc\MechWorkModes.xml
+MechWorkModeDef | Work | Misc\MechWorkModes.xml
+ShaderTypeDef | MoteApocritonPulse | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteGlowCircularScrollingDistortion | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteGlowParentRotation | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteGradientScan | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteMechGestatorGlow | Misc\ShaderTypes.xml
+ShaderTypeDef | MotePawnBodyColor | Misc\ShaderTypes.xml
+ShaderTypeDef | MotePawnBodyGlow | Misc\ShaderTypes.xml
+ShaderTypeDef | MotePollutionPump | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteSoftScannerGlow | Misc\ShaderTypes.xml
+ShaderTypeDef | MoteSubcoreEncoder | Misc\ShaderTypes.xml
+ShaderTypeDef | PollutionCloud | Misc\ShaderTypes.xml
+ShaderTypeDef | RitualSmokeNoMask | Misc\ShaderTypes.xml
+ShaderTypeDef | TerrainFadeRoughLinearBurn | Misc\ShaderTypes.xml
+ShaderTypeDef | TerrainWaterPolluted | Misc\ShaderTypes.xml
+ShaderTypeDef | TransparentColoredMask | Misc\ShaderTypes.xml
+ShaderTypeDef | TransparentShaking | Misc\ShaderTypes.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+Juvenile | Juvenile | True | Misc\BodyTypeDefs\BodyTypes.xml
+
+
+========================================================================
+NeedDefs — 5 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+NeedDef | Deathrest | NeedDefs\Needs.xml
+NeedDef | KillThirst | NeedDefs\Needs.xml
+NeedDef | Learning | NeedDefs\Needs.xml
+NeedDef | MechEnergy | NeedDefs\Needs.xml
+NeedDef | Play | NeedDefs\Needs.xml
+
+========================================================================
+PawnColumnDefs — 8 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+PawnColumnDef | AllowedAreaMech | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | AutoRepair | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | ControlGroup | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | DraftMech | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | Energy | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | Overseer | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | WorkMode | PawnColumnDefs\PawnColumns_Mechs.xml
+PawnColumnDef | Xenotype | PawnColumnDefs\PawnColumns_Icon.xml
+
+========================================================================
+PawnKindDefs_Humanlikes — 34 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MechanitorBase | Mechanitor | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+PawnKindDef | Drifter_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Grenadier_Tox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Mechanitor_Basic | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+PawnKindDef | Mercenary_Elite_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Mercenary_Elite_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Mercenary_EliteTox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Mercenary_Gunner_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Mercenary_Gunner_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Mercenary_GunnerTox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Mercenary_Heavy_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Mercenary_HeavyTox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Mercenary_Slasher_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Mercenary_SlasherTox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Mercenary_Sniper_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Pirate_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | PirateBossTox | PawnKindDefs_Humanlikes\PawnKinds_Waster.xml
+PawnKindDef | Sanguophage | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+PawnKindDef | Sanguophage_Player | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+PawnKindDef | SanguophageThrall | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+PawnKindDef | Scavenger_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Thrasher_Yttakin | PawnKindDefs_Humanlikes\PawnKinds_Yttakin.xml
+PawnKindDef | Town_Councilman_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Town_Guard_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Town_Trader_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Tribal_Archer_Fire | PawnKindDefs_Humanlikes\PawnKinds_Impid.xml
+PawnKindDef | Tribal_Child_Fire | PawnKindDefs_Humanlikes\PawnKinds_Impid.xml
+PawnKindDef | Tribal_Hunter_Fire | PawnKindDefs_Humanlikes\PawnKinds_Impid.xml
+PawnKindDef | Tribal_Penitent_Fire | PawnKindDefs_Humanlikes\PawnKinds_Impid.xml
+PawnKindDef | Tribal_Warrior_Fire | PawnKindDefs_Humanlikes\PawnKinds_Impid.xml
+PawnKindDef | Villager_Child_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+PawnKindDef | Villager_Pig | PawnKindDefs_Humanlikes\PawnKinds_Pigskin.xml
+TribalChildBase | Tribal_Child | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+Villager_Child | Villager_Child | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+SanguophageBase | SanguophageBase | True | PawnKindDefs_Humanlikes\PawnKinds_Special.xml
+
+========================================================================
+PawnRelationDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+PawnRelationDef | Overseer | PawnRelationDefs\PawnRelations_Misc.xml
+PawnRelationDef | ParentBirth | PawnRelationDefs\PawnRelations_FamiltyByBlood.xml
+
+========================================================================
+PawnTableDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+PawnTableDef | Mechs | PawnTableDefs\PawnTables.xml
+
+========================================================================
+PreceptDefs — 35 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+HistoryEventDef | BecomeNonPreferredXenotype | PreceptDefs\Precepts_Xenotype.xml
+HistoryEventDef | BloodfeederDied | PreceptDefs\Precepts_Bloodfeeders.xml
+HistoryEventDef | PropagateBloodfeederGene | PreceptDefs\Precepts_Bloodfeeders.xml
+IssueDef | Bloodfeeders | PreceptDefs\Precepts_Bloodfeeders.xml
+IssueDef | ChildLabor | PreceptDefs\Precepts_ChildLabor.xml
+IssueDef | GrowthVat | PreceptDefs\Precepts_GrowthVat.xml
+IssueDef | MechanoidLabor | PreceptDefs\Precepts_Mechanoids.xml
+IssueDef | PreferredXenotypes | PreceptDefs\Precepts_Xenotype.xml
+PreceptDef | Bloodfeeders_Revered | PreceptDefs\Precepts_Bloodfeeders.xml
+PreceptDef | Bloodfeeders_Reviled | PreceptDefs\Precepts_Bloodfeeders.xml
+PreceptDef | ChildBirth | PreceptDefs\Precepts_Rituals.xml
+PreceptDef | ChildLabor_Disapproved | PreceptDefs\Precepts_ChildLabor.xml
+PreceptDef | ChildLabor_Encouraged | PreceptDefs\Precepts_ChildLabor.xml
+PreceptDef | GrowthVat_Essential | PreceptDefs\Precepts_GrowthVat.xml
+PreceptDef | GrowthVat_Prohibited | PreceptDefs\Precepts_GrowthVat.xml
+PreceptDef | MechanoidLabor_Enhanced | PreceptDefs\Precepts_Mechanoids.xml
+PreceptDef | PreferredXenotype | PreceptDefs\Precepts_Xenotype.xml
+ThoughtDef | Bloodfeeder_ReveredBloodfeeder | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | Bloodfeeder_ReviledBloodfeeder | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | BloodfeederColonist_Revered | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | BloodfeederColonist_Reviled | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | BloodfeederDied_Revered | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | BloodfeederDied_Reviled | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | Bloodfeeders_Revered_Opinion_Bloodfeeder | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | Bloodfeeders_Reviled_Opinion_Bloodfeeder | PreceptDefs\Precepts_Bloodfeeders.xml
+ThoughtDef | ChildLabor_Encouraged_ChildAssignedRecreation | PreceptDefs\Precepts_ChildLabor.xml
+ThoughtDef | ChildLabor_Encouraged_ChildAssignedWork | PreceptDefs\Precepts_ChildLabor.xml
+ThoughtDef | GrowthVat_Essential_ChildNotInGrowthVat | PreceptDefs\Precepts_GrowthVat.xml
+ThoughtDef | GrowthVat_Essential_Pregnant | PreceptDefs\Precepts_GrowthVat.xml
+ThoughtDef | GrowthVat_Prohibited_ChildInGrowthVat | PreceptDefs\Precepts_GrowthVat.xml
+ThoughtDef | GrowthVat_Prohibited_ChildNotInGrowthVat | PreceptDefs\Precepts_GrowthVat.xml
+ThoughtDef | GrowthVat_Prohibited_GrowthVatInColony | PreceptDefs\Precepts_GrowthVat.xml
+ThoughtDef | PreferredXenotype | PreceptDefs\Precepts_Xenotype.xml
+ThoughtDef | PreferredXenotypeMakeup | PreceptDefs\Precepts_Xenotype.xml
+ThoughtDef | SelfDislikedXenotype | PreceptDefs\Precepts_Xenotype.xml
+
+========================================================================
+PreconfiguredIdeos — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+IdeoPresetDef | Blood_Worshippers | PreconfiguredIdeos\IdeoPresetDefs.xml
+
+========================================================================
+PrefabDefs — 5 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+PrefabDef | AncientBandNode_Cluster | PrefabDefs\CommonRoomPrefabs.xml
+PrefabDef | AncientBasicRecharger_Edge | PrefabDefs\CommonRoomPrefabs.xml
+PrefabDef | AncientLargeMechGestator | PrefabDefs\CommonRoomPrefabs.xml
+PrefabDef | AncientMechGestator_Cluster | PrefabDefs\CommonRoomPrefabs.xml
+PrefabDef | AncientStandardRecharger | PrefabDefs\CommonRoomPrefabs.xml
+
+========================================================================
+PrisonerIneractionModeDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+PrisonerInteractionModeDef | Bloodfeed | PrisonerIneractionModeDefs\PrisonerInteractionMode.xml
+PrisonerInteractionModeDef | HemogenFarm | PrisonerIneractionModeDefs\PrisonerInteractionMode.xml
+
+========================================================================
+QuestScriptDefs — 10 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+AncientMechanitorComplexBase | OpportunitySite_AncientComplex_Mechanitor | QuestScriptDefs\Script_Loot_AncientComplex.xml
+QuestScriptDef | Bossgroup | QuestScriptDefs\Script_Bossgroup.xml
+QuestScriptDef | MechanitorShip | QuestScriptDefs\Script_MechanitorShip.xml
+QuestScriptDef | MechanitorStartingMech | QuestScriptDefs\Script_StartingMech.xml
+QuestScriptDef | PollutionDump | QuestScriptDefs\Script_PollutionDump.xml
+QuestScriptDef | PollutionRaid | QuestScriptDefs\Script_PollutionRaid.xml
+QuestScriptDef | PollutionRetaliation | QuestScriptDefs\Script_PollutionRetaliation.xml
+QuestScriptDef | RefugeePodCrash_Baby | QuestScriptDefs\Script_TransportPodCrash_Baby.xml
+QuestScriptDef | SanguophageMeetingHost | QuestScriptDefs\Script_SanguophageMeetingHost.xml
+QuestScriptDef | SanguophageShip | QuestScriptDefs\Script_SanguophageShip.xml
+
+========================================================================
+RecipeDefs — 38 concrete defs, 10 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RecipeDef | Agrihand | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | BloodTransfusion | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | CentipedeBlaster | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | CentipedeBurner | RecipeDefs\Recipes_MechGestator_Heavy.xml
+RecipeDef | CentipedeGunner | RecipeDefs\Recipes_MechGestator_Heavy.xml
+RecipeDef | Centurion | RecipeDefs\Recipes_MechGestator_SuperHeavy.xml
+RecipeDef | Cleansweeper | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | Constructoid | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | Diabolus | RecipeDefs\Recipes_MechGestator_Heavy.xml
+RecipeDef | ExtractHemogenPack | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | ExtractOvum | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Fabricor | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | ImplantEmbryo | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | ImplantIUD | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | ImplantXenogerm | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Lancer | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | Legionary | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | Lifter | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | Make_BabyFood | RecipeDefs\Recipes_Food.xml
+RecipeDef | Make_BabyFoodBulk | RecipeDefs\Recipes_Food.xml
+RecipeDef | Militor | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | Paramedic | RecipeDefs\Recipes_MechGestator_Light.xml
+RecipeDef | Pikeman | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | RemoveIUD | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | ResurrectHeavyMech | RecipeDefs\Recipes_MechResurrection.xml
+RecipeDef | ResurrectLightMech | RecipeDefs\Recipes_MechResurrection.xml
+RecipeDef | ResurrectMediumMech | RecipeDefs\Recipes_MechResurrection.xml
+RecipeDef | ResurrectUltraheavyMech | RecipeDefs\Recipes_MechResurrection.xml
+RecipeDef | ReverseVasectomy | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Scorcher | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | Scyther | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | TerminatePregnancy | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Tesseron | RecipeDefs\Recipes_MechGestator_Medium.xml
+RecipeDef | TubalLigation | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Tunneler | RecipeDefs\Recipes_MechGestator_Heavy.xml
+RecipeDef | Vasectomy | RecipeDefs\Recipes_Surgery_Misc.xml
+RecipeDef | Warqueen | RecipeDefs\Recipes_MechGestator_SuperHeavy.xml
+SurgeryOutcomeEffectDef | ImplantXenogerm | RecipeDefs\SurgeryOutcomeEffectDefs.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BaseMechanoidRecipe | BaseMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Light.xml
+BaseMechanoidResurrectionRecipe | BaseMechanoidResurrectionRecipe | True | RecipeDefs\Recipes_MechResurrection.xml
+CentipedeMechanoidRecipe | CentipedeMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Heavy.xml
+FertilitySurgery | FertilitySurgery | True | RecipeDefs\Recipes_Surgery_Misc.xml
+HeavyMechanoidRecipe | HeavyMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Heavy.xml
+LightMechanoidRecipe | LightMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Light.xml
+MediumMechanoidRecipe | MediumMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Medium.xml
+SterilizeHuman | SterilizeHuman | True | RecipeDefs\Recipes_Surgery_Misc.xml
+SuperHeavyMechanoidRecipe | SuperHeavyMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_SuperHeavy.xml
+WalkerMediumMechanoidRecipe | WalkerMediumMechanoidRecipe | True | RecipeDefs\Recipes_MechGestator_Medium.xml
+
+
+========================================================================
+RecordDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RecordDef | TimeAsChildInColony | RecordDefs\Records_Time.xml
+
+========================================================================
+ResearchProjectDefs — 14 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ResearchProjectDef | Archogenetics | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | BasicMechtech | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+ResearchProjectDef | Deathrest | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | FertilityProcedures | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | GeneProcessor | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | GrowthVats | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | HighMechtech | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+ResearchProjectDef | StandardMechtech | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+ResearchProjectDef | ToxFiltration | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | ToxGas | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | ToxifierGenerator | ResearchProjectDefs\ResearchProjects_Misc.xml
+ResearchProjectDef | UltraMechtech | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+ResearchProjectDef | WastepackAtomizer | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+ResearchProjectDef | Xenogermination | ResearchProjectDefs\ResearchProjects_Misc.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+MechtechBase | MechtechBase | True | ResearchProjectDefs\ResearchProjects_Mechanitor.xml
+
+========================================================================
+Rituals — 4 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RitualBehaviorDef | ChildBirth | Rituals\Ritual_Behaviors.xml
+RitualObligationTargetFilterDef | ChildBirth | Rituals\Ritual_Targets.xml
+RitualOutcomeEffectDef | ChildBirth | Rituals\Ritual_Outcomes.xml
+RitualPatternDef | ChildBirth | Rituals\Ritual_Patterns.xml
+
+========================================================================
+Rooms — 5 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RoomRoleDef | Classroom | Rooms\RoomRoles.xml
+RoomRoleDef | DeathrestChamber | Rooms\RoomRoles.xml
+RoomRoleDef | Nursery | Rooms\RoomRoles.xml
+RoomRoleDef | Playroom | Rooms\RoomRoles.xml
+RoomStatDef | AssemblySpeedFactor | Rooms\RoomStats.xml
+
+========================================================================
+RuleDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RuleDef | AncientComplex_Mechanitor | RuleDefs\Rules_AncientComplex.xml
+RuleDef | Unpollute | RuleDefs\Rules_Basic.xml
+
+========================================================================
+RulePackDefs — 25 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+RulePackDef | Damage_MechBandShockwave | RulePackDefs\RulePacks_Damages.xml
+RulePackDef | GrowthMomentFlavor | RulePackDefs\RulePacks_GrowthMoments.xml
+RulePackDef | ImpidUtility | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerFactionOutlanderPig | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerFactionPirateWaster | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerFactionPirateYttakin | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerFactionTribalImpid | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerFactionTribalNeanderthal | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerGenepack | RulePackDefs\RulePacks_Genepacks.xml
+RulePackDef | NamerMech | RulePackDefs\RulePacks_Namers_Mechs.xml
+RulePackDef | NamerPersonDirtmole_Female | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerPersonDirtmole_Male | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerPersonImpid | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerPersonPigskin | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerPersonWaster | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerPersonYttakin | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+RulePackDef | NamerSettlementOutlanderPig | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerSettlementPirateWaster | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerSettlementPirateYttakin | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerSettlementTribalImpid | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerSettlementTribalNeaderthal | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | NamerXenotype | RulePackDefs\RulePacks_Genepacks.xml
+RulePackDef | NeanderthalUtility | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | WasterUtility | RulePackDefs\RulePacks_Namers_Faction.xml
+RulePackDef | YttakinUtility | RulePackDefs\RulePacks_Namers_Faction.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+NamerDirtmoleBase | NamerDirtmoleBase | True | RulePackDefs\RulePacks_Namers_Xenohumans.xml
+
+========================================================================
+Scenarios — 6 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ScenarioDef | Mechanitor | Scenarios\Scenarios.xml
+ScenarioDef | Sanguophage | Scenarios\Scenarios.xml
+ScenPartDef | ConfigurePawnsKindDefs | Scenarios\ScenParts_Various.xml
+ScenPartDef | ConfigurePawnsXenotypes | Scenarios\ScenParts_Various.xml
+ScenPartDef | DisableExostriderRemains | Scenarios\ScenParts_Various.xml
+ScenPartDef | StartingMech | Scenarios\ScenParts_Various.xml
+
+========================================================================
+Sites — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+GenStepDef | AncientComplex_Mechanitor | Sites\AncientComplex_Mechanitor.xml
+SitePartDef | AncientComplex_Mechanitor | Sites\AncientComplex_Mechanitor.xml
+
+========================================================================
+SketchResolverDefs — 4 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+SketchResolverDef | AncientBandNodeRoom | SketchResolverDefs\SketchResolvers.xml
+SketchResolverDef | AncientMechGeneratorRoom | SketchResolverDefs\SketchResolvers.xml
+SketchResolverDef | AncientMechGestatorRoom | SketchResolverDefs\SketchResolvers.xml
+SketchResolverDef | AncientRechargeRoom | SketchResolverDefs\SketchResolvers.xml
+
+========================================================================
+SoundDefs — 175 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+SoundDef | AnimalWarcall_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | AnimalWarcall_Warmup | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | BabyBecomesChild | SoundDefs\Pawn_Oneshot_Birthdays.xml
+SoundDef | BabyCrying | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | BabyGiggling | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | BandNodeTuned_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | BandNodeTuning_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | BandNodeTuning_Complete | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | BeamGraser_Shooting | SoundDefs\World_Sustainers_Weapons.xml
+SoundDef | BeamGraser_Shooting_Resolve | SoundDefs\World_Sustainers_Weapons.xml
+SoundDef | Birth | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | Bloodfeed_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | Breastfeeding | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | BurnoutMechlinkBoosterUsed | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | ChildBecomesAdult | SoundDefs\Pawn_Oneshot_Birthdays.xml
+SoundDef | ChildBirthday | SoundDefs\Pawn_Oneshot_Birthdays.xml
+SoundDef | Coagulate_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | CommsConsoleBossgroupSummoned | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | ControlMech | SoundDefs\Interact_Mechinator.xml
+SoundDef | ControlMech_Complete | SoundDefs\Interact_Mechinator.xml
+SoundDef | DatacoreRead | SoundDefs\UI_Oneshot_Misc.xml
+SoundDef | DeathrestAccelerator_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | DeathrestCapacitySerum_Consume | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | DeathrestCasket_Enter | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | DeathrestCasket_Exit | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | Designate_Adopt | SoundDefs\UI_Oneshot_Misc.xml
+SoundDef | Designate_ZoneAdd_RemovePollution | SoundDefs\UI_Oneshots_Designation.xml
+SoundDef | DisconnectedMech | SoundDefs\Interact_Mechinator.xml
+SoundDef | Explosion_MechBandShockwave | SoundDefs\World_Oneshots_Explosions.xml
+SoundDef | FireBurst_Warmup | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | Floordrawing | SoundDefs\Interact_Sustainers_Learning.xml
+SoundDef | FoamSpray_Resolve | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | FoamSpray_Warmup | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | GeneAssembler_Complete | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | GeneAssembler_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | GeneExtractor_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | GlucosoidPump_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | GlucosoidPump_Start | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | GlucosoidPump_Stop | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | GrowthVat_Close | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | GrowthVat_Open | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | GrowthVat_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | HellsphereCannon_Aiming | SoundDefs\World_Sustainers_Weapons.xml
+SoundDef | HemogenAmplifier_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | HemogenAmplifier_Start | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | HemogenAmplifier_Stop | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | HemogenPack_Consume | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | Hemopump_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | Hemopump_Start | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | Hemopump_Stop | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | HumanPregnancy | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | JumpMechLand | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | JumpMechLaunch | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | JumpMechPreLaunch | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | LaborEarly | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | LaborLate | SoundDefs\Pawn_Human_Misc.xml
+SoundDef | LetterArrive_Bossgroup | SoundDefs\UI_Oneshot_Misc.xml
+SoundDef | MechbandDishPrepared_Electronic | SoundDefs\Building_Sustainers_Misc.xml
+SoundDef | MechbandDishPrepared_Mechanical | SoundDefs\Building_Sustainers_Misc.xml
+SoundDef | MechbandDishUsed | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechBandShockwave | SoundDefs\World_Oneshots_Impacts.xml
+SoundDef | MechBooster_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | MechChargerCharging | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | MechChargerStart | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechChargerWasteProduced | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechChargerWasteRemoved | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechGestator_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | MechGestator_MaterialInserted | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | MechGestatorBill_Completed | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | MechGestatorCycle_Initiating | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | MechGestatorCycle_Started | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | Mechlink_Removed | SoundDefs\Interact_Oneshot_Misc.xml
+SoundDef | MechlinkCorpseReveal | SoundDefs\Interact_Oneshot_Misc.xml
+SoundDef | MechlinkInstalled | SoundDefs\Interact_Mechinator.xml
+SoundDef | MechResurrect_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechResurrect_Warmup | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | MechResurrectCast | SoundDefs\Pawn_Mech_Misc.xml
+SoundDef | MechSelfShutdown | SoundDefs\Pawn_Mech_Misc.xml
+SoundDef | Pawn_Furskin_Call | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | Pawn_Furskin_Death | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | Pawn_Furskin_Wounded | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | Pawn_Mech_Agrihand_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Agrihand_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Agrihand_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Apocriton_Ambience | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Apocriton_Call | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Apocriton_Death | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Apocriton_Wounded | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Centurion_Call | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Centurion_Death | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Centurion_Wounded | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Cleansweeper_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Cleansweeper_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Cleansweeper_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Constructoid_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Constructoid_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Constructoid_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Diabolus_Call | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Diabolus_Death | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Diabolus_Wounded | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Fabricor_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Fabricor_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Fabricor_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Legionary_Call | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Legionary_Death | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Legionary_Wounded | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Lifter_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Lifter_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Lifter_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Militor_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Militor_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Militor_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Paramedic_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Paramedic_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Paramedic_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_Scorcher_Call | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Scorcher_Death | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Scorcher_Wounded | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Tesseron_Call | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Tesseron_Death | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Tesseron_Wounded | SoundDefs\Pawn_Mech_Vox_Medium.xml
+SoundDef | Pawn_Mech_Tunneler_Call | SoundDefs\Pawn_Mech_Vox_Heavy.xml
+SoundDef | Pawn_Mech_Tunneler_Death | SoundDefs\Pawn_Mech_Vox_Heavy.xml
+SoundDef | Pawn_Mech_Tunneler_Wounded | SoundDefs\Pawn_Mech_Vox_Heavy.xml
+SoundDef | Pawn_Mech_Warqueen_Call | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Warqueen_Death | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_Warqueen_Wounded | SoundDefs\Pawn_Mech_Vox_SuperHeavy.xml
+SoundDef | Pawn_Mech_WarUrchin_Call | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_WarUrchin_Death | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Mech_WarUrchin_Wounded | SoundDefs\Pawn_Mech_Vox_Light.xml
+SoundDef | Pawn_Pigskin_Call | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | Pawn_Pigskin_Death | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | Pawn_Pigskin_Wounded | SoundDefs\Pawn_Humanlike_Vox_Genes.xml
+SoundDef | PawnBecameSanguophage | SoundDefs\Interact_Oneshot_Misc.xml
+SoundDef | PiercingSpine_Launch | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | PlayStatic | SoundDefs\Interact_Sustainers_Play.xml
+SoundDef | PollutionExtractedPoluxTree | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | PollutionPumped | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | PollutionSpreading | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | PsychofluidPump_Ambience | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | PsychofluidPump_Start | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | PsychofluidPump_Stop | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | Radiotalking | SoundDefs\Interact_Sustainers_Learning.xml
+SoundDef | ReimplantXenogerm_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | RepairMech_Remote | SoundDefs\Interact_Mechinator.xml
+SoundDef | RepairMech_Remote_Start | SoundDefs\Interact_Mechinator.xml
+SoundDef | RepairMech_Touch | SoundDefs\Interact_Mechinator.xml
+SoundDef | Resurrect_Cast | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | Resurrect_Resolve | SoundDefs\World_Oneshots_Misc.xml
+SoundDef | SanguophageMeeting | SoundDefs\Interact_Oneshot_Misc.xml
+SoundDef | ShieldMech | SoundDefs\Interact_Mechinator.xml
+SoundDef | ShieldMech_Complete | SoundDefs\Interact_Mechinator.xml
+SoundDef | ShieldMech_Start | SoundDefs\Interact_Mechinator.xml
+SoundDef | Shot_HellsphereCannonGun | SoundDefs\World_Oneshots_Weapons.xml
+SoundDef | Shot_MiniFlameblaster | SoundDefs\World_Oneshots_Weapons.xml
+SoundDef | Shot_Slugthrower | SoundDefs\World_Oneshots_Weapons.xml
+SoundDef | Shot_Spiner | SoundDefs\World_Oneshots_Weapons.xml
+SoundDef | Shot_ToxicNeedleGun | SoundDefs\World_Oneshots_Weapons.xml
+SoundDef | StartRecombining | SoundDefs\UI_Oneshot_Misc.xml
+SoundDef | SubcoreEncoder_Complete | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | SubcoreEncoder_Working | SoundDefs\Interact_Sustainers_Misc.xml
+SoundDef | SubcoreRipscanner_Complete | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | SubcoreRipscanner_Start | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | SubcoreRipscanner_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | SubcoreSoftscanner_Complete | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | SubcoreSoftscanner_Start | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | SubcoreSoftscanner_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | Toxifier_Pollute | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | Toxifier_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | WarqueenWarUrchinsSpawned | SoundDefs\Pawn_Mech_Misc.xml
+SoundDef | WarUrchinSpawned | SoundDefs\Pawn_Mech_Misc.xml
+SoundDef | WastepackAtomizer_Atomized | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | WastepackAtomizer_MaterialInserted | SoundDefs\Building_Oneshot_Misc.xml
+SoundDef | WastepackAtomizer_Working | SoundDefs\Building_Sustainers_Ambiences.xml
+SoundDef | WastepackDissolution | SoundDefs\World_Oneshots_Misc.xml
+
+
+========================================================================
+SpecialThingFilterDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+SpecialThingFilterDef | AllowCorpsesMechEnemy | SpecialThingFilterDefs\SpecialThingFilters.xml
+SpecialThingFilterDef | AllowCorpsesMechFriendly | SpecialThingFilterDefs\SpecialThingFilters.xml
+
+========================================================================
+Stats — 28 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+StatCategoryDef | Mechanitor | Stats\StatCategories.xml
+StatDef | AssemblySpeedFactor | Stats\Stats_Buildings_Special.xml
+StatDef | BabyPlayGainFactor | Stats\Stats_Buildings_Special.xml
+StatDef | BandwidthCost | Stats\Stats_Pawns_General.xml
+StatDef | BirthRitualQualityOffset | Stats\Stats_Buildings_Special.xml
+StatDef | CancerRate | Stats\Stats_Pawns_General.xml
+StatDef | ControlTakingTime | Stats\Stats_Pawns_General.xml
+StatDef | Fertility | Stats\Stats_Pawns_General.xml
+StatDef | GeneticComplexityIncrease | Stats\Stats_Buildings_Special.xml
+StatDef | GrowthVatOccupantSpeed | Stats\Stats_Pawns_General.xml
+StatDef | HemogenGainFactor | Stats\Stats_Pawns_General.xml
+StatDef | LearningRateFactor | Stats\Stats_Pawns_General.xml
+StatDef | MaxInstallCount | Stats\Stats_Misc.xml
+StatDef | MechBandwidth | Stats\Stats_Pawns_General.xml
+StatDef | MechControlGroups | Stats\Stats_Pawns_General.xml
+StatDef | MechEnergyLossPerHP | Stats\Stats_Pawns_General.xml
+StatDef | MechEnergyUsageFactor | Stats\Stats_Pawns_General.xml
+StatDef | MechFormingSpeed | Stats\Stats_Pawns_General.xml
+StatDef | MechRemoteRepairDistance | Stats\Stats_Pawns_General.xml
+StatDef | MechRemoteShieldDistance | Stats\Stats_Pawns_General.xml
+StatDef | MechRemoteShieldEnergy | Stats\Stats_Pawns_General.xml
+StatDef | MechRepairSpeed | Stats\Stats_Pawns_General.xml
+StatDef | MeleeDoorDamageFactor | Stats\Stats_Pawns_Combat.xml
+StatDef | RawNutritionFactor | Stats\Stats_Pawns_General.xml
+StatDef | ShootingAccuracyChildFactor | Stats\Stats_Pawns_Combat.xml
+StatDef | SubcoreEncodingSpeed | Stats\Stats_Pawns_General.xml
+StatDef | WastepacksPerRecharge | Stats\Stats_Pawns_General.xml
+StatDef | WorkSpeedGlobalOffsetMech | Stats\Stats_Pawns_WorkGeneral.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+MechanitorStatBase | MechanitorStatBase | True | Stats\Stats_Pawns_General.xml
+
+========================================================================
+Storyteller — 3 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+IncidentDef | NoxiousHaze | Storyteller\Incidents_Map_Misc.xml
+IncidentDef | WastepackInfestation | Storyteller\Incidents_Map_Threats.xml
+RaidAgeRestrictionDef | Children | Storyteller\RaidAgeRestrictions.xml
+
+========================================================================
+TaleDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+TaleDef | KilledChild | TaleDefs\Tales_DoublePawns.xml
+TaleDef | NoxiousHaze | TaleDefs\Tales_Incident.xml
+
+========================================================================
+ThingDefs_Buildings — 45 concrete defs, 7 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+HediffDef | GlucosoidRush | ThingDefs_Buildings\Buildings_Deathrest.xml
+HediffDef | HemogenAmplified | ThingDefs_Buildings\Buildings_Deathrest.xml
+HediffDef | MechBoost | ThingDefs_Buildings\Buildings_Misc.xml
+HediffDef | PsychofluidRush | ThingDefs_Buildings\Buildings_Deathrest.xml
+ShuttleCrashedExitable | ShuttleCrashed_Exitable | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | AncientBandNode | ThingDefs_Buildings\Buildings_Ancient_Mechanitor.xml
+ThingDef | AncientExostriderCannon | ThingDefs_Buildings\Buildings_Ancient_Outdoors.xml
+ThingDef | AncientExostriderHead | ThingDefs_Buildings\Buildings_Ancient_Outdoors.xml
+ThingDef | AncientExostriderLeg | ThingDefs_Buildings\Buildings_Ancient_Outdoors.xml
+ThingDef | AncientExostriderRemains | ThingDefs_Buildings\Buildings_Ancient_Outdoors.xml
+ThingDef | AncientToxifierGenerator | ThingDefs_Buildings\Buildings_Ancient_Mechanitor.xml
+ThingDef | BabyDecoration | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | BabySleepingSpot | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | BandNode | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | BasicRecharger | ThingDefs_Buildings\Buildings_Rechargers.xml
+ThingDef | Blackboard | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | BurnoutMechlinkBooster | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | Crib | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | DeathrestAccelerator | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | DeathrestCasket | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | GeneAssembler | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | GeneBank | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | GeneExtractor | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | GeneProcessor | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | GlucosoidPump | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | GrowthVat | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | HemogenAmplifier | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | Hemopump | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | LargeMechGestator | ThingDefs_Buildings\Buildings_Production.xml
+ThingDef | MechbandDish | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | MechBooster | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | MechGestator | ThingDefs_Buildings\Buildings_Production.xml
+ThingDef | PollutionPump | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | PsychofluidPump | ThingDefs_Buildings\Buildings_Deathrest.xml
+ThingDef | SanguphageMeetingTorch | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | SchoolDesk | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | ShuttleCrashed_Exitable_Mechanitor | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | StandardRecharger | ThingDefs_Buildings\Buildings_Rechargers.xml
+ThingDef | SubcoreEncoder | ThingDefs_Buildings\Buildings_Production.xml
+ThingDef | SubcoreRipscanner | ThingDefs_Buildings\Buildings_Production.xml
+ThingDef | SubcoreSoftscanner | ThingDefs_Buildings\Buildings_Production.xml
+ThingDef | ToxifierGenerator | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | ToyBox | ThingDefs_Buildings\Buildings_Furniture.xml
+ThingDef | TrapIED_ToxGas | ThingDefs_Buildings\Buildings_Misc.xml
+ThingDef | WastepackAtomizer | ThingDefs_Buildings\Buildings_Misc.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BaseMechCharger | BaseMechCharger | True | ThingDefs_Buildings\Buildings_Rechargers.xml
+DeathrestBuildingBase | DeathrestBuildingBase | True | ThingDefs_Buildings\Buildings_Deathrest.xml
+DeathrestBuildingHemogenFueled | DeathrestBuildingHemogenFueled | True | ThingDefs_Buildings\Buildings_Deathrest.xml
+DeathrestHediffBase | DeathrestHediffBase | True | ThingDefs_Buildings\Buildings_Deathrest.xml
+GeneBuildingBase | GeneBuildingBase | True | ThingDefs_Buildings\Buildings_Misc.xml
+MechGestatorBase | MechGestatorBase | True | ThingDefs_Buildings\Buildings_Production.xml
+SubcoreScannerBase | SubcoreScannerBase | True | ThingDefs_Buildings\Buildings_Production.xml
+
+
+========================================================================
+ThingDefs_Items — 22 concrete defs, 4 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ThingDef | ArchiteCapsule | ThingDefs_Items\Items_Various.xml
+ThingDef | BabyFood | ThingDefs_Items\Items_Food.xml
+ThingDef | Bullet_Shell_Tox | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | DeathrestCapacitySerum | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | Genepack | ThingDefs_Items\Items_Various.xml
+ThingDef | HemogenPack | ThingDefs_Items\Items_Food.xml
+ThingDef | HumanEmbryo | ThingDefs_Items\Items_Various.xml
+ThingDef | HumanOvum | ThingDefs_Items\Items_Various.xml
+ThingDef | MechanoidTransponder | ThingDefs_Items\Items_Various.xml
+ThingDef | NanostructuringChip | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | PowerfocusChip | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | RawToxipotato | ThingDefs_Items\Items_Resources_RawPlant.xml
+ThingDef | Shell_Toxic | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | Shell_Toxic_Releasing | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | Shell_Toxic_Releasing_Water | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | SignalChip | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | SubcoreBasic | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | SubcoreHigh | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | SubcoreRegular | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | UnfinishedSubcore | ThingDefs_Items\Items_Unfinished.xml
+ThingDef | Wastepack | ThingDefs_Items\Items_Resource_Manufactured.xml
+ThingDef | Xenogerm | ThingDefs_Items\Items_Various.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+GeneSetHolderBase | GeneSetHolderBase | True | ThingDefs_Items\Items_Various.xml
+MechResourceBase | MechResourceBase | True | ThingDefs_Items\Items_Resource_Manufactured.xml
+Shell_Toxic_Releasing_Base | Shell_Toxic_Releasing_Base | True | ThingDefs_Items\Items_Resource_Manufactured.xml
+SubcoreBase | SubcoreBase | True | ThingDefs_Items\Items_Resource_Manufactured.xml
+
+========================================================================
+ThingDefs_Misc — 43 concrete defs, 7 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ThingDef | Apparel_AirwireHeadset | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_ArmorHelmetMechCommander | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_ArmorHelmetMechlordHelmet | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_ArrayHeadset | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_Bandolier | ThingDefs_Misc\Apparel_Various.xml
+ThingDef | Apparel_GasMask | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_HeavyShield | ThingDefs_Misc\Apparel_Mech.xml
+ThingDef | Apparel_IntegratorHeadset | ThingDefs_Misc\Apparel_Headgear.xml
+ThingDef | Apparel_KidHelmet | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_KidPants | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_KidParka | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_KidRomper | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_KidShirt | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_KidTribal | ThingDefs_Misc\Apparel_Child.xml
+ThingDef | Apparel_MechlordSuit | ThingDefs_Misc\Apparel_Various.xml
+ThingDef | Apparel_PackBandwidth | ThingDefs_Misc\Apparel_Packs.xml
+ThingDef | Apparel_PackControl | ThingDefs_Misc\Apparel_Packs.xml
+ThingDef | Apparel_PackTox | ThingDefs_Misc\Apparel_Packs.xml
+ThingDef | Apparel_Sash | ThingDefs_Misc\Apparel_Various.xml
+ThingDef | Bullet_HellsphereCannonGun | ThingDefs_Misc\Weapons\RangedMechanoid_Heavy.xml
+ThingDef | Bullet_MiniShotgun | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Bullet_Slugthrower | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Bullet_Spiner | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Bullet_ToxbombLauncher | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+ThingDef | Bullet_ToxicNeedleGun | ThingDefs_Misc\Weapons\RangedMechanoid_Medium.xml
+ThingDef | CocoonSpawner | ThingDefs_Misc\Ethereal_Various.xml
+ThingDef | Filth_FlammableBile | ThingDefs_Misc\Filth_Various.xml
+ThingDef | Filth_Floordrawing | ThingDefs_Misc\Filth_Various.xml
+ThingDef | Flamebow | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+ThingDef | Gun_BeamGraser | ThingDefs_Misc\Weapons\RangedMechanoid_Medium.xml
+ThingDef | Gun_HellsphereCannon | ThingDefs_Misc\Weapons\RangedMechanoid_Heavy.xml
+ThingDef | Gun_MiniFlameblaster | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Gun_MiniShotgun | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Gun_NeedleLauncher | ThingDefs_Misc\Weapons\RangedMechanoid_Medium.xml
+ThingDef | Gun_Slugthrower | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Gun_Spiner | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+ThingDef | Gun_ToxbombLauncher | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+ThingDef | Gun_ToxicNeedle | ThingDefs_Misc\Weapons\RangedMechanoid_Medium.xml
+ThingDef | MechShield | ThingDefs_Misc\Ethereal_Various.xml
+ThingDef | Proj_FireArrow | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+ThingDef | Proj_GrenadeTox | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+ThingDef | ShuttleCrashing_Mechanitor | ThingDefs_Misc\Ethereal_Skyfallers.xml
+ThingDef | Weapon_GrenadeTox | ThingDefs_Misc\Weapons\RangedIndustrial.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+ApparelArmorHelmetMechanitorBase | ApparelArmorHelmetMechanitorBase | True | ThingDefs_Misc\Apparel_Headgear.xml
+ChildApparelMakeableBase | ChildApparelMakeableBase | True | ThingDefs_Misc\Apparel_Child.xml
+LightMechanoidGun | LightMechanoidGun | True | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+LightMechanoidGunRanged | LightMechanoidGunRanged | True | ThingDefs_Misc\Weapons\RangedMechanoid_Light.xml
+MechanitorHeadsetBase | MechanitorHeadsetBase | True | ThingDefs_Misc\Apparel_Headgear.xml
+MechanitorPackBase | MechanitorPackBase | True | ThingDefs_Misc\Apparel_Packs.xml
+MechApparelBase | MechApparelBase | True | ThingDefs_Misc\Apparel_Mech.xml
+
+========================================================================
+ThingDefs_Plants — 13 concrete defs, 3 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ThingDef | ChoppedStump_Polluted | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | ChoppedStump_Polux | ThingDefs_Plants\Plants_Special.xml
+ThingDef | Plant_GrayGrass | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | Plant_PebbleCactus | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | Plant_RatPalm | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | Plant_Ripthorn | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | Plant_Toxipotato | ThingDefs_Plants\Plants_Cultivated_Farm.xml
+ThingDef | Plant_TreeGrayPine | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | Plant_TreePolux | ThingDefs_Plants\Plants_Special.xml
+ThingDef | Plant_Witchwood | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | PoluxSeed | ThingDefs_Plants\Plants_Special.xml
+ThingDef | SmashedStump_Polluted | ThingDefs_Plants\Plants_Wild_General.xml
+ThingDef | SmashedStump_Polux | ThingDefs_Plants\Plants_Special.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+PollutionPlantBase | PollutionPlantBase | True | ThingDefs_Plants\Plants_Wild_General.xml
+PollutionTreeBase | PollutionTreeBase | True | ThingDefs_Plants\Plants_Wild_General.xml
+PollutionTreeWithStumpBase | PollutionTreeWithStumpBase | True | ThingDefs_Plants\Plants_Wild_General.xml
+
+========================================================================
+ThingDefs_Races — 37 concrete defs, 6 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+MechCenturion | Mech_Centurion | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+MechCenturionKind | Mech_Centurion | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+MechDiabolus | Mech_Diabolus | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+MechDiabolusKind | Mech_Diabolus | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+MechWarqueen | Mech_Warqueen | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+MechWarqueenKind | Mech_Warqueen | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+PawnKindDef | Mech_Agrihand | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Apocriton | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+PawnKindDef | Mech_Cleansweeper | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Constructoid | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Fabricor | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Legionary | ThingDefs_Races\Races_Mechanoids_Medium.xml
+PawnKindDef | Mech_Lifter | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Militor | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Paramedic | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Mech_Scorcher | ThingDefs_Races\Races_Mechanoids_Medium.xml
+PawnKindDef | Mech_Tesseron | ThingDefs_Races\Races_Mechanoids_Medium.xml
+PawnKindDef | Mech_Tunneler | ThingDefs_Races\Races_Mechanoids_Heavy.xml
+PawnKindDef | Mech_WarUrchin | ThingDefs_Races\Races_Mechanoids_Light.xml
+PawnKindDef | Toxalope | ThingDefs_Races\Races_Animal_Pollution.xml
+PawnKindDef | WasteRat | ThingDefs_Races\Races_Animal_Pollution.xml
+ThingDef | Gun_ChargeBlasterTurret | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+ThingDef | Mech_Agrihand | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Apocriton | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+ThingDef | Mech_Cleansweeper | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Constructoid | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Fabricor | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Legionary | ThingDefs_Races\Races_Mechanoids_Medium.xml
+ThingDef | Mech_Lifter | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Militor | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Paramedic | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Mech_Scorcher | ThingDefs_Races\Races_Mechanoids_Medium.xml
+ThingDef | Mech_Tesseron | ThingDefs_Races\Races_Mechanoids_Medium.xml
+ThingDef | Mech_Tunneler | ThingDefs_Races\Races_Mechanoids_Heavy.xml
+ThingDef | Mech_WarUrchin | ThingDefs_Races\Races_Mechanoids_Light.xml
+ThingDef | Toxalope | ThingDefs_Races\Races_Animal_Pollution.xml
+ThingDef | WasteRat | ThingDefs_Races\Races_Animal_Pollution.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+HeavyMechanoid | HeavyMechanoid | True | ThingDefs_Races\Races_Mechanoids_Heavy.xml
+HeavyMechanoidKind | HeavyMechanoidKind | True | ThingDefs_Races\Races_Mechanoids_Heavy.xml
+LightMechanoid | LightMechanoid | True | ThingDefs_Races\Races_Mechanoids_Light.xml
+LightMechanoidKind | LightMechanoidKind | True | ThingDefs_Races\Races_Mechanoids_Light.xml
+NonCombatLightMechanoidKind | NonCombatLightMechanoidKind | True | ThingDefs_Races\Races_Mechanoids_Light.xml
+SuperHeavyMechanoid | SuperHeavyMechanoid | True | ThingDefs_Races\Races_Mechanoids_SuperHeavy.xml
+
+========================================================================
+ThinkTreeDefs — 4 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ThinkTreeDef | HumanlikeBaby | ThinkTreeDefs\HumanlikeBaby.xml
+ThinkTreeDef | HumanlikeBabyConstant | ThinkTreeDefs\HumanlikeBaby.xml
+ThinkTreeDef | MechConstant | ThinkTreeDefs\SubTrees_Mech.xml
+ThinkTreeDef | WarUrchinConstant | ThinkTreeDefs\SubTrees_Mech.xml
+
+========================================================================
+ThoughtDefs — 67 concrete defs, 4 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ThoughtDef | AteBabyFood | ThoughtDefs\Thoughts_Memory_Eating.xml
+ThoughtDef | BabyBorn | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | BabyCriedSocial | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | BabyGiggledSocial | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | BabySick | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | BloodTorch | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | BreastfedBaby | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | BreastfedMe | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | ChildInGrowthVat | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | ChildlikePositivity | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | CribQuality | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | CryingBaby | ThoughtDefs\Thoughts_Memory_Childcare.xml
+ThoughtDef | DeathrestChamber | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | DeathrestExhaustion | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | EnslavedChild | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | FedBaby | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | FedMe | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | FedOn | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | FedOn_Social | ThoughtDefs\Thoughts_Memory_Social.xml
+ThoughtDef | GaveLesson | ThoughtDefs\Thoughts_Memory_Social.xml
+ThoughtDef | GigglingBaby | ThoughtDefs\Thoughts_Memory_Childcare.xml
+ThoughtDef | HateAura | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | HemogenCraving | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | IngestedHemogenPack | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | KilledChild | ThoughtDefs\Thoughts_Memory_Death.xml
+ThoughtDef | KilledChild_Opinion | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | KilledMyBirthMother | ThoughtDefs\Thoughts_Memory_Death.xml
+ThoughtDef | KillThirst | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | Miscarried | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | MoodOffsetHappy | ThoughtDefs\Thoughts_Situation_Genes.xml
+ThoughtDef | MoodOffsetUnhappy | ThoughtDefs\Thoughts_Situation_Genes.xml
+ThoughtDef | MoodOffsetVeryHappy | ThoughtDefs\Thoughts_Situation_Genes.xml
+ThoughtDef | MoodOffsetVeryUnhappy | ThoughtDefs\Thoughts_Situation_Genes.xml
+ThoughtDef | MyBirthMotherDied | ThoughtDefs\Thoughts_Memory_Death.xml
+ThoughtDef | MyBirthMotherLost | ThoughtDefs\Thoughts_Memory_Death.xml
+ThoughtDef | MyChildHappy | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | MyChildrenHappy | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | MyChildrenSad | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | MyChildSad | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | MyCryingBaby | ThoughtDefs\Thoughts_Memory_Childcare.xml
+ThoughtDef | MyGigglingBaby | ThoughtDefs\Thoughts_Memory_Childcare.xml
+ThoughtDef | MyParentHappy | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | MyParentsHappy | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | NeedLearning | ThoughtDefs\Thoughts_Situation_Needs.xml
+ThoughtDef | NeedPlay | ThoughtDefs\Thoughts_Situation_Needs.xml
+ThoughtDef | NoxiousHaze | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PartnerMiscarried | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | PlayedWithMe | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | PregnancyAttitude | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PregnancyEnded | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | PregnancyMood_Collapse | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PregnancyMood_Down | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PregnancyMood_High | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PregnancyMood_Up | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PregnancyTerminated | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | PsychicBond | ThoughtDefs\Thoughts_Situation_Social.xml
+ThoughtDef | PsychicBondProximity | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | PsychicBondTorn | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | Recluse | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | ScanningSickness | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | Stillbirth | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | SunlightSensitivity_Major | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | SunlightSensitivity_Mild | ThoughtDefs\Thoughts_Situation_Special.xml
+ThoughtDef | WasTaught | ThoughtDefs\Thoughts_Memory_Social.xml
+ThoughtDef | XenogermHarvested_Prisoner | ThoughtDefs\Thoughts_Memory_Special.xml
+ThoughtDef | YoungstersHappy | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtDef | YoungstersSad | ThoughtDefs\Thoughts_Situational_Children.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+BaseHeardBaby | BaseHeardBaby | True | ThoughtDefs\Thoughts_Memory_Childcare.xml
+BaseTeaching | BaseTeaching | True | ThoughtDefs\Thoughts_Memory_Social.xml
+ParentHappyBase | ParentHappyBase | True | ThoughtDefs\Thoughts_Situational_Children.xml
+ThoughtAboutChildBase | ThoughtAboutChildBase | True | ThoughtDefs\Thoughts_Situational_Children.xml
+
+
+========================================================================
+TipSetDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+TipSetDef | BiotechTips | TipSetDefs\Tips.xml
+
+========================================================================
+ToolCapacityDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ToolCapacityDef | DemolishDoors | ToolCapacityDefs\ToolCapacityDefs.xml
+
+========================================================================
+TraitDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+TraitDef | Delicate | TraitDefs\Traits.xml
+TraitDef | Recluse | TraitDefs\Traits.xml
+
+========================================================================
+TransportShipDefs — 2 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+TransportShipDef | Ship_ShuttleCrashing | TransportShipDefs\TransportShipDefs.xml
+TransportShipDef | Ship_ShuttleCrashing_Mechanitor | TransportShipDefs\TransportShipDefs.xml
+
+========================================================================
+Tutor — 7 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+ConceptDef | Babies | Tutor\Tutor.xml
+ConceptDef | Children | Tutor\Tutor.xml
+ConceptDef | Deathrest | Tutor\Tutor.xml
+ConceptDef | GenesAndXenotypes | Tutor\Tutor.xml
+ConceptDef | Mechanitors | Tutor\Tutor.xml
+ConceptDef | MechsInCaravans | Tutor\Tutor.xml
+ConceptDef | PollutedTerrain | Tutor\Tutor.xml
+
+========================================================================
+WorkGiverDefs — 26 concrete defs, 1 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+WorkGiverDef | BottleFeedBaby | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | BreastfeedBaby | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | BringBabyToSafety | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CarryToBreastfeed | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CarryToGeneExtractor | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CarryToGrowthVat | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CarryToSubcoreScanner | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | ChildcarerTeach | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CleanClearPollution | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | CreateXenogerm | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | DeliverHemogenToPrisoner | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | DoBillsMechGestator | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | DoBillsSubcoreEncoder | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | EmptyWasteContainer | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | EnterGeneExtractor | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | EnterGrowthVat | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | EnterSubcoreScanner | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | FeedHemogen | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulMechsToCharger | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulToCarrier | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulToGeneBank | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulToGrowthVat | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulToSubcoreScanner | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | HaulToWastepackAtomizer | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | PlayWithBaby | WorkGiverDefs\WorkGivers.xml
+WorkGiverDef | RepairMech | WorkGiverDefs\WorkGivers.xml
+
+NAMED ABSTRACT XML TEMPLATES
+XML type | template Name | Abstract | source
+HaulToBase | HaulToBase | True | WorkGiverDefs\WorkGivers.xml
+
+========================================================================
+WorkTypeDefs — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+WorkTypeDef | Childcare | WorkTypeDefs\WorkTypes.xml
+
+========================================================================
+WorldGeneration — 1 concrete defs, 0 templates
+========================================================================
+
+CONCRETE DEFS
+Type | defName | source
+WorldGenStepDef | Pollution | WorldGeneration\WorldGenerator.xml
