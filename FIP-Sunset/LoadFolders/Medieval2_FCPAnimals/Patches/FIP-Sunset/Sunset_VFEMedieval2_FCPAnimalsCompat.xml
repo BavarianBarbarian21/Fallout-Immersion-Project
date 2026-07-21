@@ -1,9 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Patch>
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+    <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
     <value>
-      <FCP_Animal_Bighorner>6</FCP_Animal_Bighorner>
+      <carriers>
+        <Horse>2</Horse>
+        <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+        <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+        <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+      </carriers>
     </value>
   </Operation>
 </Patch>
