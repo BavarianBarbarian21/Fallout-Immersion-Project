@@ -2,12 +2,15 @@
 <Defs>
 	<XenotypeDef>
 		<defName>RobCo_Gen2Synth</defName>
-		<label>gen 2 synth</label>
-		<description>Placeholder xenotype for the University branch.</description>
+		<label>generation 2 synth</label>
+		<description>A visibly artificial second-generation synth. Its exposed polymer shell hides a complete synthetic nervous system, but it remains unmistakably manufactured.</description>
 		<iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
-		<inheritable>true</inheritable>
+		<inheritable>false</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<canGenerateAsCombatant>false</canGenerateAsCombatant>
 		<genes>
 			<li>WestTek_Gene_SynthComponents</li>
+			<li>WestTek_Gene_SynthBody</li>
 			<li>WestTek_Gene_SystemOfCells</li>
 			<li>WestTek_Gene_WithinOneStem</li>
 			<li>WestTek_Gene_DreadfullyDistinct</li>
@@ -17,12 +20,15 @@
 			<li>WestTek_Gene_BloodBlackNothingness</li>
 		</genes>
 	</XenotypeDef>
+
 	<XenotypeDef>
 		<defName>RobCo_Gen3Synth</defName>
-		<label>gen 3 synth</label>
-		<description>Placeholder xenotype for the University branch.</description>
+		<label>generation 3 synth</label>
+		<description>A third-generation synth whose manufactured organs and synthetic mind are concealed beneath an entirely ordinary human appearance.</description>
 		<iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
-		<inheritable>true</inheritable>
+		<inheritable>false</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<canGenerateAsCombatant>false</canGenerateAsCombatant>
 		<genes>
 			<li>WestTek_Gene_SynthComponents</li>
 			<li>WestTek_Gene_SystemOfCells</li>
@@ -34,14 +40,17 @@
 			<li>WestTek_Gene_BloodBlackNothingness</li>
 		</genes>
 	</XenotypeDef>
+
 	<XenotypeDef>
 		<defName>RobCo_Gen4Synth</defName>
 		<label>courser</label>
-		<description>Placeholder xenotype for the University branch.</description>
+		<description>A stable Courser-grade synth. Coursers retain a normal human appearance and the complete synthetic capability package without component decay.</description>
 		<iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
-		<inheritable>true</inheritable>
+		<inheritable>false</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<canGenerateAsCombatant>false</canGenerateAsCombatant>
 		<genes>
-			<li>WestTek_Gene_SynthComponents</li>
+			<li>WestTek_Gene_Courser</li>
 			<li>WestTek_Gene_SystemOfCells</li>
 			<li>WestTek_Gene_WithinOneStem</li>
 			<li>WestTek_Gene_DreadfullyDistinct</li>

@@ -87,6 +87,7 @@ internal static class RobCoDefSettingsApplier
         "RobCo_Assaultron_Recipe",
         "RobCo_Cyberdog_Recipe",
         "RobCo_Robobrain_Recipe",
+        "RobCo_Gen1Synth_Recipe",
         "RobCo_SecuritronMkI_Recipe",
         "RobCo_SecuritronMkII_Recipe",
         "RobCo_SentrybotSiegebreaker_Recipe",

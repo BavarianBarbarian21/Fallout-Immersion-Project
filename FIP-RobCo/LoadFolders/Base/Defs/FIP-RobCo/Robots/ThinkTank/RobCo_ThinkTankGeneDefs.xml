@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneDef>
+		<defName>RobCo_Gene_ThinkTankCore</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>think tank chassis</label>
+		<description>The pawn's brain lives in a hovering armored glass vessel. Biogel performs posture and locomotion, the tank handles hearing, and dedicated monitor arms provide sight and speech. The chassis needs no food, sleeps only half as long, excels at research, and is poorly suited to physical labor.</description>
+		<geneClass>FIP.RobCo.Gene_ThinkTankCore</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>800</displayOrderInCategory>
+		<biostatCpx>8</biostatCpx>
+		<biostatMet>-6</biostatMet>
+		<forcedHair>Bald</forcedHair>
+		<forcedHeadTypes><li>RobCo_ThinkTankHead</li></forcedHeadTypes>
+		<tattoosVisible>false</tattoosVisible>
+		<hairTagFilter><whitelist>true</whitelist><tags><li>Bald</li></tags></hairTagFilter>
+		<beardTagFilter><whitelist>true</whitelist><tags /></beardTagFilter>
+		<disablesNeeds><li>Food</li></disablesNeeds>
+		<statFactors>
+			<RestRateMultiplier>2</RestRateMultiplier>
+			<ResearchSpeed>2</ResearchSpeed>
+			<PlantWorkSpeed>0.1</PlantWorkSpeed>
+			<ConstructionSpeed>0.1</ConstructionSpeed>
+			<MiningSpeed>0.1</MiningSpeed>
+			<GeneralLaborSpeed>0.8</GeneralLaborSpeed>
+			<CookSpeed>0.8</CookSpeed>
+		</statFactors>
+		<exclusionTags>
+			<li>RobCo_SyntheticAppearance</li>
+			<li>HeadShape</li>
+			<li>HairStyle</li>
+			<li>BeardStyle</li>
+			<li>Fur</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>RobCo_Gene_Biosphere</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>biosphere</label>
+		<labelShortAdj>biospheric</labelShortAdj>
+		<description>An archite-regulated sealed biosphere stops biological aging and makes the suspended brain immune to every immunizable disease loaded by the game.</description>
+		<iconPath>UI/Icons/Genes/Gene_PerfectImmunity</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<displayOrderInCategory>801</displayOrderInCategory>
+		<biostatCpx>6</biostatCpx>
+		<biostatArc>2</biostatArc>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points><li>(0, 0)</li><li>(1000, 0)</li></points>
+		</biologicalAgeTickFactorFromAgeCurve>
+		<exclusionTags><li>Immunity</li></exclusionTags>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>RobCo_Gene_ThinkTankEyes</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>monitor eyes</label>
+		<description>Two monitor arms display the Think Tank's independently animated artificial eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<displayOrderInCategory>802</displayOrderInCategory>
+		<biostatCpx>0</biostatCpx>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<texPaths>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesA</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesB</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesC</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesD</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesE</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesF</li>
+					<li>FIP-RobCo/Robots/ThinkTank/Eyes/Thinktank_eyesJ</li>
+				</texPaths>
+				<overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<baseLayer>60</baseLayer>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef Name="RobCo_BiogelColorBase" Abstract="True">
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<exclusionTags><li>RobCo_BiogelColor</li></exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelPurple</defName><label>purple biogel</label><labelShortAdj>purple</labelShortAdj><displayOrderInCategory>820</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.55, 0.28, 0.82)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelBlue</defName><label>blue biogel</label><labelShortAdj>blue</labelShortAdj><displayOrderInCategory>821</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.20, 0.48, 0.92)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelCyan</defName><label>cyan biogel</label><labelShortAdj>cyan</labelShortAdj><displayOrderInCategory>822</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.18, 0.82, 0.88)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelGreen</defName><label>green biogel</label><labelShortAdj>green</labelShortAdj><displayOrderInCategory>823</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.30, 0.78, 0.36)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelYellow</defName><label>yellow biogel</label><labelShortAdj>yellow</labelShortAdj><displayOrderInCategory>824</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.92, 0.82, 0.24)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelOrange</defName><label>orange biogel</label><labelShortAdj>orange</labelShortAdj><displayOrderInCategory>825</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.94, 0.48, 0.16)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelRed</defName><label>red biogel</label><labelShortAdj>red</labelShortAdj><displayOrderInCategory>826</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.82, 0.20, 0.20)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelPink</defName><label>pink biogel</label><labelShortAdj>pink</labelShortAdj><displayOrderInCategory>827</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.94, 0.42, 0.68)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelWhite</defName><label>white biogel</label><labelShortAdj>white</labelShortAdj><displayOrderInCategory>828</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.92, 0.94, 0.96)</color></li></modExtensions></GeneDef>
+	<GeneDef ParentName="RobCo_BiogelColorBase"><defName>RobCo_Gene_BiogelBlack</defName><label>black biogel</label><labelShortAdj>black</labelShortAdj><displayOrderInCategory>829</displayOrderInCategory><modExtensions><li Class="FIP.RobCo.ThinkTankBiogelExtension"><color>(0.12, 0.13, 0.16)</color></li></modExtensions></GeneDef>
+
+	<GeneDef>
+		<defName>RobCo_Gene_Lobotomized</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>lobotomized</label>
+		<labelShortAdj>lobotomized</labelShortAdj>
+		<description>Surgical destruction of the emotional cortex removes the mood need entirely. The pawn receives no positive or negative mood influences and cannot suffer a mood-driven mental break.</description>
+		<iconPath>UI/Icons/Genes/Gene_Deathless</iconPath>
+		<displayOrderInCategory>840</displayOrderInCategory>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<disablesNeeds><li>Mood</li></disablesNeeds>
+	</GeneDef>
+</Defs>

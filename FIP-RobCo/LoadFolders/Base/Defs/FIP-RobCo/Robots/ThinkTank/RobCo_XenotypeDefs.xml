@@ -3,8 +3,15 @@
 	<XenotypeDef>
 		<defName>RobCo_ThinkTank</defName>
 		<label>think tank</label>
-		<description>Placeholder xenotype for the Big MT think-tank branch.</description>
+		<description>A human brain preserved in colored biogel inside a hovering RobCo research chassis. Think Tanks are constructed surgically and never occur through ordinary pawn generation.</description>
 		<iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
-		<inheritable>true</inheritable>
+		<inheritable>false</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<canGenerateAsCombatant>false</canGenerateAsCombatant>
+		<genes>
+			<li>RobCo_Gene_ThinkTankCore</li>
+			<li>RobCo_Gene_Biosphere</li>
+			<li>RobCo_Gene_ThinkTankEyes</li>
+		</genes>
 	</XenotypeDef>
 </Defs>

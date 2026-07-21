@@ -1,193 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<GeneDef>
-  <defName>WestTek_Gene_SynthComponents</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>synth components</label>
-  <description>The pawn's body is maintained by unstable synthetic biocomponents. These components grant synthetic resilience and sterility, but may gradually shed unstable synth endogenes until only a Courser-grade framework remains.</description>
-  <geneClass>FIP.RobCo.Gene_WestTekSynthComponents</geneClass>
-  <iconPath>UI/Icons/Genes/WestTek_SynthComponents</iconPath>
-  <displayOrderInCategory>700</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_SynthComponents</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>synth components</label>
+		<description>Unstable synthetic biocomponents replace most ordinary biological maintenance. They prevent reproduction, ignore toxic gas, and may gradually shed synth endogenes until only a stable Courser-grade framework remains.</description>
+		<geneClass>FIP.RobCo.Gene_WestTekSynthComponents</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_Deathless</iconPath>
+		<displayOrderInCategory>700</displayOrderInCategory>
+		<biostatCpx>5</biostatCpx>
+		<biostatMet>-3</biostatMet>
+		<biostatArc>1</biostatArc>
+		<immuneToToxGasExposure>true</immuneToToxGasExposure>
+		<sterilize>true</sterilize>
+		<exclusionTags><li>WestTek_SynthCore</li></exclusionTags>
+	</GeneDef>
 
-  <biostatCpx>5</biostatCpx>
-  <biostatMet>-3</biostatMet>
-  <biostatArc>1</biostatArc>
-<statFactors>
-    <ToxicResistance>0</ToxicResistance>
-    <ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
-  </statFactors>
-<exclusionTags>
-    <li>WestTek_SynthCore</li>
-  </exclusionTags>
-</GeneDef>
+	<GeneDef>
+		<defName>WestTek_Gene_SynthBody</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>generation 2 synth body</label>
+		<description>An exposed polymer-and-metal generation 2 shell replaces the pawn's ordinary body and head appearance. Its face, including the eyes, is part of the fixed synth head.</description>
+		<geneClass>FIP.RobCo.Gene_Gen2SynthAppearance</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_HairStyleBaldOnly</iconPath>
+		<displayOrderInCategory>701</displayOrderInCategory>
+		<biostatCpx>0</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<forcedHair>Bald</forcedHair>
+		<forcedHeadTypes><li>RobCo_Gen2SynthHead</li></forcedHeadTypes>
+		<tattoosVisible>false</tattoosVisible>
+		<hairTagFilter><whitelist>true</whitelist><tags><li>Bald</li></tags></hairTagFilter>
+		<beardTagFilter><whitelist>true</whitelist><tags /></beardTagFilter>
+		<exclusionTags>
+			<li>RobCo_SyntheticAppearance</li>
+			<li>EyeColor</li>
+			<li>HairStyle</li>
+			<li>BeardStyle</li>
+			<li>Fur</li>
+		</exclusionTags>
+	</GeneDef>
 
-<GeneDef>
-  <defName>WestTek_Gene_SynthBody</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>synth body</label>
-  <description>The pawn's body is maintained by unstable synthetic biocomponents. These components grant synthetic resilience and sterility, but may gradually shed unstable synth endogenes until only a Courser-grade framework remains.</description>
-  <geneClass>FIP.RobCo.Gene_WestTekSynthComponents</geneClass>
-  <iconPath>UI/Icons/Genes/WestTek_SynthComponents</iconPath>
-  <displayOrderInCategory>700</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_Courser</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>courser framework</label>
+		<description>A stable Courser-grade synthetic framework preserves synth resilience without unstable endogene shedding or sterility.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>702</displayOrderInCategory>
+		<biostatCpx>6</biostatCpx>
+		<biostatMet>-4</biostatMet>
+		<biostatArc>1</biostatArc>
+		<immuneToToxGasExposure>true</immuneToToxGasExposure>
+		<exclusionTags><li>WestTek_SynthCore</li></exclusionTags>
+	</GeneDef>
 
-  <biostatCpx>5</biostatCpx>
-  <biostatMet>-3</biostatMet>
-  <biostatArc>1</biostatArc>
-<statFactors>
-    <ToxicResistance>0</ToxicResistance>
-    <ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
-  </statFactors>
-<exclusionTags>
-    <li>WestTek_SynthCore</li>
-  </exclusionTags>
-</GeneDef>
+	<GeneDef>
+		<defName>WestTek_Gene_SystemOfCells</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>system of cells</label>
+		<description>The pawn's synthetic nervous system does not interpret physical comfort as an emotional requirement.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>710</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>1</biostatMet>
+		<disablesNeeds><li>Comfort</li></disablesNeeds>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-<GeneDef>
-  <defName>WestTek_Gene_Courser</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>courser</label>
-  <description>The pawn carries a stable Courser-grade synthetic framework. It preserves the benefits of synth components without unstable endogene shedding or sterility.</description>
-  <iconPath>UI/Icons/Genes/WestTek_Courser</iconPath>
-  <displayOrderInCategory>701</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_WithinOneStem</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>within one stem</label>
+		<description>Shelter, open air, and beauty are processed as environmental data rather than emotional needs.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>711</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>1</biostatMet>
+		<disablesNeeds><li>Beauty</li><li>Outdoors</li></disablesNeeds>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-  <biostatCpx>6</biostatCpx>
-  <biostatMet>-4</biostatMet>
-  <biostatArc>1</biostatArc>
+	<GeneDef>
+		<defName>WestTek_Gene_DreadfullyDistinct</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>dreadfully distinct</label>
+		<description>The synthetic nervous system suppresses pain and cannot develop chemical addiction, tolerance, or an overdose.</description>
+		<iconPath>UI/Icons/Genes/Gene_PerfectImmunity</iconPath>
+		<displayOrderInCategory>712</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<painFactor>0.25</painFactor>
+		<addictionChanceFactor>0</addictionChanceFactor>
+		<toleranceBuildupFactor>0</toleranceBuildupFactor>
+		<overdoseChanceFactor>0</overdoseChanceFactor>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-  <statFactors>
-    <ToxicResistance>0</ToxicResistance>
-    <ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
-  </statFactors>
-<exclusionTags>
-    <li>WestTek_SynthCore</li>
-  </exclusionTags>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_SystemOfCells</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>system of cells</label>
-  <description>The pawn evaluates enclosed space and comfort as irrelevant structural data rather than emotional experience.</description>
-  <iconPath>UI/Icons/Genes/WestTek_SystemOfCells</iconPath>
-  <displayOrderInCategory>710</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_TallWhiteFountain</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>tall white fountain</label>
+		<description>A recursive synthetic control architecture severs psychic reception.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>713</displayOrderInCategory>
+		<biostatCpx>3</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<statFactors><PsychicSensitivity>0</PsychicSensitivity></statFactors>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-  <biostatCpx>1</biostatCpx>
-  <biostatMet>1</biostatMet>
-<modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_WithinOneStem</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>within one stem</label>
-  <description>The pawn no longer distinguishes between shelter, open air, or beauty. All surroundings collapse into one continuous field of input.</description>
-  <iconPath>UI/Icons/Genes/WestTek_WithinOneStem</iconPath>
-  <displayOrderInCategory>711</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_Interlinked</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>interlinked</label>
+		<description>The pawn has no mood need and cannot receive ordinary mood influences or suffer a mood-driven mental break.</description>
+		<iconPath>UI/Icons/Genes/Gene_Deathless</iconPath>
+		<displayOrderInCategory>714</displayOrderInCategory>
+		<biostatCpx>3</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<disablesNeeds><li>Mood</li></disablesNeeds>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-  <biostatCpx>1</biostatCpx>
-  <biostatMet>1</biostatMet>
-<modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_DreadfullyDistinct</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>dreadfully distinct</label>
-  <description>The pawn's nervous system rejects narcotic craving and suppresses pain into distant diagnostic noise.</description>
-  <iconPath>UI/Icons/Genes/WestTek_DreadfullyDistinct</iconPath>
-  <displayOrderInCategory>712</displayOrderInCategory>
+	<GeneDef>
+		<defName>WestTek_Gene_AgainstTheDark</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>against the dark</label>
+		<description>Learning remains possible, but protected synthetic memory is indexed and pruned more aggressively than a human brain.</description>
+		<iconPath>UI/Icons/Genes/Gene_Ageless</iconPath>
+		<displayOrderInCategory>715</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<statFactors><GlobalLearningFactor>0.85</GlobalLearningFactor></statFactors>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 
-  <biostatCpx>2</biostatCpx>
-  <biostatMet>-1</biostatMet>
-<modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_TallWhiteFountain</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>tall white fountain</label>
-  <description>The pawn's mind is isolated behind a pale recursive control architecture, severing psychic reception and suppressing ordinary psychological development.</description>
-  <iconPath>UI/Icons/Genes/WestTek_TallWhiteFountain</iconPath>
-  <displayOrderInCategory>713</displayOrderInCategory>
-
-  <biostatCpx>3</biostatCpx>
-  <biostatMet>-1</biostatMet>
-
-  <statFactors>
-    <PsychicSensitivity>0</PsychicSensitivity>
-  </statFactors>
-
-  <modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_Interlinked</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>interlinked</label>
-  <description>The pawn's mood architecture is network-governed. Joy is suppressed and mental collapse routines are disabled.</description>
-  <iconPath>UI/Icons/Genes/WestTek_Interlinked</iconPath>
-  <displayOrderInCategory>714</displayOrderInCategory>
-
-  <biostatCpx>3</biostatCpx>
-  <biostatMet>-1</biostatMet>
-<modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_AgainstTheDark</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>against the dark</label>
-  <description>The pawn's memory is compressed into protected synthetic storage. Learning remains possible, but old data is aggressively indexed and pruned.</description>
-  <iconPath>UI/Icons/Genes/WestTek_AgainstTheDark</iconPath>
-  <displayOrderInCategory>715</displayOrderInCategory>
-
-  <biostatCpx>2</biostatCpx>
-  <biostatMet>-1</biostatMet>
-
-  <statFactors>
-    <GlobalLearningFactor>0.85</GlobalLearningFactor>
-  </statFactors>
-
-  <modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-<GeneDef>
-  <defName>WestTek_Gene_BloodBlackNothingness</defName>
-  <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  <label>blood-black nothingness</label>
-  <description>The pawn is sustained by an internal black-cell power lattice instead of ordinary biological equilibrium.</description>
-  <iconPath>UI/Icons/Genes/WestTek_BloodBlackNothingness</iconPath>
-  <displayOrderInCategory>716</displayOrderInCategory>
-
-  <biostatCpx>3</biostatCpx>
-  <biostatMet>-2</biostatMet>
-
-  <statFactors>
-    <RestRateMultiplier>1.25</RestRateMultiplier>
-  </statFactors>
-
-  <modExtensions>
-    <li Class="FIP.RobCo.WestTekSynthGeneExtension">
-      <isSynthEndogene>true</isSynthEndogene>
-    </li>
-  </modExtensions>
-</GeneDef>
-
+	<GeneDef>
+		<defName>WestTek_Gene_BloodBlackNothingness</defName>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<selectionWeight>0</selectionWeight>
+		<label>blood-black nothingness</label>
+		<description>An internal black-cell power lattice replaces ordinary nutrition and accelerates rest-cycle recovery.</description>
+		<iconPath>UI/Icons/Genes/Gene_ArchiteMetabolism</iconPath>
+		<displayOrderInCategory>716</displayOrderInCategory>
+		<biostatCpx>3</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<disablesNeeds><li>Food</li></disablesNeeds>
+		<statFactors><RestRateMultiplier>1.25</RestRateMultiplier></statFactors>
+		<modExtensions><li Class="FIP.RobCo.WestTekSynthGeneExtension"><isSynthEndogene>true</isSynthEndogene></li></modExtensions>
+	</GeneDef>
 </Defs>

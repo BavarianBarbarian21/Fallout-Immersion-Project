@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RobCo_CreateThinkTank</defName>
+		<label>transfer brain into think tank</label>
+		<description>Remove the patient's brain and install it in a sealed, hovering Think Tank chassis. Every existing gene is retained; the Think Tank genes are added on top.</description>
+		<workerClass>FIP.RobCo.Recipe_CreateThinkTank</workerClass>
+		<jobString>Transferring brain into a Think Tank chassis.</jobString>
+		<workAmount>6000</workAmount>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<researchPrerequisites><li>RobCo_OS</li><li>RobCo_Choice_ThinkTank</li></researchPrerequisites>
+		<appliedOnFixedBodyParts><li>Brain</li></appliedOnFixedBodyParts>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<ingredients>
+			<li><filter><thingDefs><li>Plasteel</li></thingDefs></filter><count>60</count></li>
+			<li><filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter><count>2</count></li>
+			<li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>4</count></li>
+		</ingredients>
+		<fixedIngredientFilter><thingDefs><li>Plasteel</li><li>ComponentSpacer</li><li>MedicineIndustrial</li></thingDefs></fixedIngredientFilter>
+		<recipeUsers><li>Human</li></recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RobCo_Lobotomize</defName>
+		<label>perform Big MT lobotomy</label>
+		<description>Destroy the patient's emotional cortex, permanently removing all mood influences. On a prisoner this is treated as a hostile medical action.</description>
+		<workerClass>FIP.RobCo.Recipe_Lobotomize</workerClass>
+		<jobString>Performing a Big MT lobotomy.</jobString>
+		<workAmount>3000</workAmount>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<researchPrerequisites><li>RobCo_OS</li><li>RobCo_Choice_ThinkTank</li></researchPrerequisites>
+		<appliedOnFixedBodyParts><li>Brain</li></appliedOnFixedBodyParts>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<ingredients><li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>2</count></li></ingredients>
+		<fixedIngredientFilter><thingDefs><li>MedicineIndustrial</li></thingDefs></fixedIngredientFilter>
+		<recipeUsers><li>Human</li></recipeUsers>
+	</RecipeDef>
+</Defs>
