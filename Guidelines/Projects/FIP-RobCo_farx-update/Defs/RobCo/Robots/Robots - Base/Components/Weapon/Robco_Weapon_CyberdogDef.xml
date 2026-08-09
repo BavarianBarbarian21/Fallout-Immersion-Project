@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Cyberdog_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!-- Cyberdog Sonic Bark -->
+
+  <ThingDef ParentName="RobCo_Cyberdog_BaseGun">
+    <defName>RobCo_Gun_SonicBark</defName>
+    <label>sonic bark emitter</label>
+    <description>RobCo robot sonic bark emitter. Emits a powerful sonic wave that stuns all targets in a small area, including humans and robots, without causing physical harm.</description>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_SonicBarkUI</uiIconPath>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>1.5</Mass>
+      <AccuracyTouch>1.0</AccuracyTouch>
+      <AccuracyShort>1.0</AccuracyShort>
+      <AccuracyMedium>1.0</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_SonicBark</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_SonicBark</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>15.0</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>RobCo_SonicBark</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+</Defs>

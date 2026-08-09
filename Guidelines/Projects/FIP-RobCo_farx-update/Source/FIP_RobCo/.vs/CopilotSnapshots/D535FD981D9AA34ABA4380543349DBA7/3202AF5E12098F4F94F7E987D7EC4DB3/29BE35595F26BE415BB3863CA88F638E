@@ -1,0 +1,60 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+
+namespace FIP_RobCo
+
+{
+
+    public class CompProperties_AbilityLaunchProjectileMultiple : CompProperties_AbilityLaunchProjectile
+    {
+        public ThingDef projectileDef;
+        public int burstShotCount = 1;
+        public float forcedMissRadius = 2.9f;
+
+        public CompProperties_AbilityLaunchProjectileMultiple()
+        {
+            compClass = typeof(CompAbilityEffect_LaunchProjectileMultiple);
+        }
+    }
+
+    public class CompAbilityEffect_LaunchProjectileMultiple : CompAbilityEffect
+    {
+        public new CompProperties_AbilityLaunchProjectileMultiple Props => (CompProperties_AbilityLaunchProjectileMultiple)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            LaunchProjectile(target);
+        }
+
+        private void LaunchProjectile(LocalTargetInfo target)
+        {
+            if (Props.projectileDef != null)
+            {
+                Pawn pawn = parent.pawn;
+                for (int i = 0; i < Props.burstShotCount; i++)
+                {
+                    LocalTargetInfo missTarget = target;
+                    if (Props.forcedMissRadius > 0.5f)
+                    {
+                        IntVec3 targetCell = target.Cell + GenRadial.RadialPattern[Rand.Range(0, GenRadial.NumCellsInRadius(Props.forcedMissRadius))];
+                        missTarget = new LocalTargetInfo(targetCell);
+                    }
+                    ((Projectile)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map)).Launch(pawn, pawn.DrawPos, missTarget, target, ProjectileHitFlags.IntendedTarget, parent.verb.preventFriendlyFire);
+                }
+            }
+        }
+
+        public override bool AICanTargetNow(LocalTargetInfo target)
+        {
+            return target.Pawn != null;
+        }
+    }
+
+   
+}

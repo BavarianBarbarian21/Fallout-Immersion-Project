@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="WestTek_Apparel_Armor" ParentName="ArmorMachineableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.08</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <!--Tier 1 Armor-->
+  <ThingDef ParentName="WestTek_Apparel_Armor">
+    <defName>WestTek_Apparel_GruntArmor</defName>
+    <label>grunt armor</label>
+    <description>Crude field armor assembled for ordinary super mutant shock troops.</description>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV1</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>90</Steel>
+      <Cloth>35</Cloth>
+    </costList>
+    <statBases>
+      <WorkToMake>2400</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>8</Mass>
+      <MarketValue>300</MarketValue>
+      <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.22</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>2</CarryingCapacity>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!--Tier 2 Armor-->
+  <ThingDef ParentName="WestTek_Apparel_Armor">
+    <defName>WestTek_Apparel_BruteArmor</defName>
+    <label>brute armor</label>
+    <description>Heavier scavenged plating intended for large mutant bruisers expected to absorb return fire.</description>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV2</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>130</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Mass>11</Mass>
+      <MarketValue>450</MarketValue>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>5</CarryingCapacity>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!--Tier 3 Armor-->
+  <ThingDef ParentName="WestTek_Apparel_Armor">
+    <defName>WestTek_Apparel_MasterArmor</defName>
+    <label>master armor</label>
+    <description>Command armor reserved for high-value mutant leaders and vat-born enforcers.</description>
+    <recipeMaker>
+      <researchPrerequisite>WestTek_FEV3</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>165</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Cloth>35</Cloth>
+    </costList>
+    <statBases>
+      <WorkToMake>6500</WorkToMake>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>13</Mass>
+      <MarketValue>720</MarketValue>
+      <ArmorRating_Sharp>1.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.38</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>8</CarryingCapacity>
+      <MeleeHitChance>0.03</MeleeHitChance>
+    </equippedStatOffsets>
+  </ThingDef>
+</Defs>

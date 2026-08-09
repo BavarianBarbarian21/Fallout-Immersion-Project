@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Technical compatibility correction; intentionally not user-configurable. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThinkTreeDef[defName="Muffalo_PreMain" and thinkRoot/@Class="VFE_Settlers.ThinkNodes.ThinkNode_ConditionalChemshinedMuffalo"]</xpath>
+  </Operation>
+</Patch>

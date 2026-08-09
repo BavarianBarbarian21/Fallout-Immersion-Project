@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Lodger"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Laborer"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Common_Trader"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Trooper"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Grenadier"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Janissary"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Champion"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardRanged"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclavePowerArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Fighter_StellicGuardMelee"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_NobleWimp"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Yeoman"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Acolyte"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Knight"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Praetor"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Baron"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Count"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Duke"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Consul"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Stellarch"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveOfficer</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Empire_Royal_Bestower"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

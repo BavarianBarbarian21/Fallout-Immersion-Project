@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="FCP_Currency_Caps"]/tradeTags/li[.="NonContractable"]</xpath>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="FCP_Currency_Caps"]/tradeTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FCP_Currency_Caps"]/tradeTags</xpath>
+        <value>
+          <li>NonContractable</li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FCP_Currency_Caps"]</xpath>
+        <value>
+          <tradeTags>
+            <li>NonContractable</li>
+          </tradeTags>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+</Patch>

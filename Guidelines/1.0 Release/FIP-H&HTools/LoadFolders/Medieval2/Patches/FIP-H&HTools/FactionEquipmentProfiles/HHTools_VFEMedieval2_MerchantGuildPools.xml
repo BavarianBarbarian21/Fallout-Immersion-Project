@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Handgunner"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Raider"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+          <li>FIPA_Pool_SettlerGuard</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Merchant"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Caravan</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_WastelanderGeneric</li>
+          <li>FIPA_Pool_Settler</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/apparelRequired</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/apparelRequired</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]</xpath>
+      <value>
+        <apparelRequired Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/specificApparelRequirements</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]/specificApparelRequirements</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="VFEM2_Guildmaster"]</xpath>
+      <value>
+        <specificApparelRequirements Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

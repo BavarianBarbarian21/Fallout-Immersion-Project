@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Hospitality requests Peaceful pawn groups for visiting guests. Keep these
+       fallbacks only until FCP-NCR supplies its own groups. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef[defName="FCP_Faction_Powder_Gangers"]/pawnGroupMakers/li[kindDef="Peaceful"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[defName="FCP_Faction_Powder_Gangers"]/pawnGroupMakers</xpath>
+      <value>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FCP_Pawnkind_Powder_Ganger>12</FCP_Pawnkind_Powder_Ganger>
+            <FCP_Pawnkind_Powder_Ganger_Bomber>4</FCP_Pawnkind_Powder_Ganger_Bomber>
+            <FCP_Pawnkind_Powder_Ganger_Veteran>2</FCP_Pawnkind_Powder_Ganger_Veteran>
+            <FCP_Pawnkind_Powder_Ganger_Leader>1</FCP_Pawnkind_Powder_Ganger_Leader>
+          </options>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef[defName="FCP_Faction_NCR_Deserters"]/pawnGroupMakers/li[kindDef="Peaceful"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[defName="FCP_Faction_NCR_Deserters"]/pawnGroupMakers</xpath>
+      <value>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FCP_Pawnkind_NCR_Deserter_Trooper>10</FCP_Pawnkind_NCR_Deserter_Trooper>
+            <FCP_Pawnkind_NCR_Deserter_Officer>3</FCP_Pawnkind_NCR_Deserter_Officer>
+            <FCP_Pawnkind_NCR_Deserter_Colonel>1</FCP_Pawnkind_NCR_Deserter_Colonel>
+          </options>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

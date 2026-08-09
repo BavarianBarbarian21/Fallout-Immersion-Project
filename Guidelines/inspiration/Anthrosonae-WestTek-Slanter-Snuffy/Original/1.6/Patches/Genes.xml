@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- 
+	// Adding generic colors for each anthrosonae variant. This is probably unecessary, slow, and stupid... 
+	// but modExtensions nodes can't inherit in XML and I don't know I'm just a wolf.
+	-->
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/GeneDef[defName="ATK_AnthrobearFur" or defName="ATK_AnthrocatFur" or defName="ATK_AnthrocowFur" or defName="ATK_AnthrodeerFur" or defName="ATK_AnthrodrakeSkin" or defName="ATK_AnthrofoxFur" or defName="ATK_AnthrogoatFur" or defName="ATK_AnthrogriffFur" or defName="ATK_AnthrohorseFur" or defName="ATK_AnthrohyenaFur" or defName="ATK_AnthropandaFur" or defName="ATK_AnthrorabbitFur" or defName="ATK_AnthrosharkSkin" or defName="ATK_AnthrowahFur" or defName="ATK_AnthrowolfFur"]/modExtensions/li[@Class="Anthrosonae.FurColors"]/allowedFurColors</xpath>
+		<value>
+			<li>ATK_FurColor_Black</li>
+			<li>ATK_FurColor_Gray</li>
+			<li>ATK_FurColor_GrayLight</li>
+			<li>ATK_FurColor_GrayDark</li>
+			<li>ATK_FurColor_White</li>
+			<li>ATK_FurColor_Cream</li>
+
+			<li>ATK_FurColor_PaleBrown</li>
+			<li>ATK_FurColor_DeepBrown</li>
+			<li>ATK_FurColor_PaleTan</li>
+			<li>ATK_FurColor_DeepTan</li>
+			<li>ATK_FurColor_PaleOrange</li>
+			<li>ATK_FurColor_DeepOrange</li>
+			<li>ATK_FurColor_BurntOrange</li>
+
+			<li>ATK_FurColor_PaleBlue</li>
+			<li>ATK_FurColor_DeepBlue</li>
+			<li>ATK_FurColor_Purple</li>
+			<li>ATK_FurColor_PaleRed</li>
+			<li>ATK_FurColor_DeepRed</li>
+			<li>ATK_FurColor_Yellow</li>
+			<li>ATK_FurColor_PaleGreen</li>
+			<li>ATK_FurColor_DeepGreen</li>
+			<li>ATK_FurColor_Pink</li>
+		</value>
+	</Operation>
+
+</Patch>

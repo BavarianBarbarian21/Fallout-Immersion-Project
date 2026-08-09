@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Giant mole rat artwork: FCP molerat anatomy with a caravan-beast hump. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/GiantMoleRat/Arktos_GiantMoleRat_v6</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+      <value><graphicClass>Graphic_Single</graphicClass></value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData</xpath>
+      <value><graphicClass>Graphic_Single</graphicClass></value>
+    </nomatch>
+  </Operation>
+
+  <!-- Cottonmouth artwork for the renamed vanilla cobra. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Snakes/Cottonmouth/Arktos_Cottonmouth_v6</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/bodyGraphicData</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </nomatch>
+  </Operation>
+
+</Patch>

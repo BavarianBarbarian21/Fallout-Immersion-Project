@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Gravship Expanded - Chapter 1 (vanillaexpanded.gravship). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VGE_Apparel_OxygenPack"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VGE_Apparel_OxygenPack"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VGE_Apparel_OxygenPack"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VGE_Apparel_OxygenPack"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VGE_Apparel_OxygenPack"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Quests Expanded - Deadlife (vanillaquestsexpanded.deadlife). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Apparel_GeneralsCap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Apparel_GeneralsCap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQED_Apparel_GeneralsCap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_GeneralsCap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_GeneralsCap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Apparel_GeneralsInsignia"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Apparel_GeneralsInsignia"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQED_Apparel_GeneralsInsignia"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_GeneralsInsignia"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_GeneralsInsignia"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Apparel_MilitaryCoat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Apparel_MilitaryCoat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQED_Apparel_MilitaryCoat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_MilitaryCoat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQED_Apparel_MilitaryCoat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Gun_Autopistol_Ancient"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_Autopistol_Ancient"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_Autopistol_Ancient"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Gun_LMG_Ancient"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_LMG_Ancient"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Heavy</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_LMG_Ancient"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Heavy</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Gun_MachinePistol_Ancient"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_MachinePistol_Ancient"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_SMG</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_MachinePistol_Ancient"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_SMG</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQED_Gun_PumpShotgun_Ancient"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_PumpShotgun_Ancient"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Shotgun</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQED_Gun_PumpShotgun_Ancient"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Shotgun</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_DisruptorFlare"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_DisruptorFlare"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_DisruptorFlare"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

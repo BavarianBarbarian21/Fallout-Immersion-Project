@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FIP - Big MT: WestTek Faction
+  Defines the Big MT Experiment faction — a hostile permanent faction representing
+  escaped Super Mutant and Nightkin experiments roaming from Big MT research sites.
+  They are always hostile and cannot be allied. No base generation.
+  Requires FIP - WestTek active.
+-->
+<Defs>
+
+  <FactionDef>
+    <defName>BigMT_ExperimentFaction</defName>
+    <label>Big MT experiments</label>
+    <description>Escaped super mutants and other experiments from Big MT research sites. They operate on territorial instinct and broadcast-signal aggression rather than coordinated strategy. Not capable of diplomacy.</description>
+    <pawnSingular>experiment subject</pawnSingular>
+    <pawnsPlural>experiment subjects</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
+    <permanentEnemy>true</permanentEnemy>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.45, 0.55, 0.30, 1.0)</li>
+      <li>(0.35, 0.45, 0.20, 1.0)</li>
+    </colorSpectrum>
+    <baseTraderKinds />
+    <caravanTraderKinds />
+    <visitorTraderKinds />
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <li>
+            <kindDef>BigMT_CrazedSuperMutant</kindDef>
+            <selectionWeight>1</selectionWeight>
+          </li>
+          <li>
+            <kindDef>BigMT_Nightkin</kindDef>
+            <selectionWeight>0.3</selectionWeight>
+            <minGenerationPoints>200</minGenerationPoints>
+          </li>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+</Defs>

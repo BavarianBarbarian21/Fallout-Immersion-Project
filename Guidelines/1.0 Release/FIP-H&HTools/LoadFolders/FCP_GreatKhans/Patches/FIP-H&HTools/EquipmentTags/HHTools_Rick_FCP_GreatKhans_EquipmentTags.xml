@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Great Khans (Rick.FCP.GreatKhans). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Armored_Leathers"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Armored_Leathers"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CaliforniaRaider</li>
+        <li>FIPA_Pool_GreatKhanNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Armored_Leathers"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Armored_Leathers"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CaliforniaRaider</li>
+            <li>FIPA_Pool_GreatKhanNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Armored_Leathers"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CaliforniaRaider</li>
+              <li>FIPA_Pool_GreatKhanNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CaliforniaRaider</li>
+        <li>FIPA_Pool_GreatKhanNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CaliforniaRaider</li>
+            <li>FIPA_Pool_GreatKhanNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CaliforniaRaider</li>
+              <li>FIPA_Pool_GreatKhanNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CaliforniaRaider</li>
+        <li>FIPA_Pool_GreatKhanNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CaliforniaRaider</li>
+            <li>FIPA_Pool_GreatKhanNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Simple_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CaliforniaRaider</li>
+              <li>FIPA_Pool_GreatKhanNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CaliforniaRaider</li>
+        <li>FIPA_Pool_GreatKhanNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CaliforniaRaider</li>
+            <li>FIPA_Pool_GreatKhanNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CaliforniaRaider</li>
+              <li>FIPA_Pool_GreatKhanNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CaliforniaRaiderLeader</li>
+        <li>FIPA_Pool_GreatKhanNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CaliforniaRaiderLeader</li>
+            <li>FIPA_Pool_GreatKhanNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Great_Khan_Suit_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CaliforniaRaiderLeader</li>
+              <li>FIPA_Pool_GreatKhanNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Erin's Hairstyles 2</li></mods>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<HairDef>
+					<defName>ERNaveesbangs</defName>
+					<label>fringe</label>
+					<styleGender>FemaleUsually</styleGender>
+					<texPath>Things/Pawn/Humanlike/Hairs/AverysFringe</texPath>
+					<category>Punk</category>
+					<styleTags>
+						<li>Urban</li>
+						<li>Punk</li>
+					</styleTags>
+				</HairDef>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

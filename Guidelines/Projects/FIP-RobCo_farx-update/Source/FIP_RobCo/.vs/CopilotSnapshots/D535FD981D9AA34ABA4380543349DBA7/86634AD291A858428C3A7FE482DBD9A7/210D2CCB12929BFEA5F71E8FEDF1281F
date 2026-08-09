@@ -1,0 +1,166 @@
+﻿using RimWorld;
+using System.Collections.Generic;
+using Verse;
+using Verse.AI;
+
+namespace FIP_RobCo
+{
+    public class JobDriver_ReloadMechAbility : JobDriver
+    {
+        private const TargetIndex MechInd = TargetIndex.A;
+        private const TargetIndex AmmoInd = TargetIndex.B;
+
+        private Pawn Mech => (Pawn)job.GetTarget(MechInd).Thing;
+        private Thing Ammo => job.GetTarget(AmmoInd).Thing;
+
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            if (!pawn.Reserve(Mech, job, 1, -1, null, errorOnFailed))
+            {
+                return false;
+            }
+            if (Ammo != null && !pawn.Reserve(Ammo, job, 1, -1, null, errorOnFailed))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        protected override IEnumerable<Toil> MakeNewToils()
+        {
+            this.FailOnDespawnedOrNull(MechInd);
+            this.FailOnForbidden(MechInd);
+
+            Toil checkAmmo = new Toil();
+            checkAmmo.initAction = delegate
+            {
+                CompAbilityEffect_LaunchProjectileMultiple comp = GetReloadableComp();
+                if (comp == null || comp.Props.ammoDef == null)
+                {
+                    EndJobWith(JobCondition.Incompletable);
+                    return;
+                }
+
+                int ammoInInventory = pawn.inventory.innerContainer.TotalStackCountOfDef(comp.Props.ammoDef);
+                if (ammoInInventory >= comp.Props.ammoCountPerCharge)
+                {
+                    return;
+                }
+
+                Thing foundAmmo = GenClosest.ClosestThingReachable(
+                    pawn.Position,
+                    pawn.Map,
+                    ThingRequest.ForDef(comp.Props.ammoDef),
+                    PathEndMode.ClosestTouch,
+                    TraverseParms.For(pawn),
+                    9999f,
+                    (Thing t) => !t.IsForbidden(pawn) && pawn.CanReserve(t) && t != Ammo
+                );
+
+                if (foundAmmo != null)
+                {
+                    job.SetTarget(AmmoInd, foundAmmo);
+                    pawn.Reserve(foundAmmo, job);
+                }
+            };
+            checkAmmo.defaultCompleteMode = ToilCompleteMode.Instant;
+            yield return checkAmmo;
+
+            Toil gotoAmmo = Toils_Goto.GotoThing(AmmoInd, PathEndMode.ClosestTouch)
+                .FailOnDespawnedNullOrForbidden(AmmoInd)
+                .FailOn(() => Ammo == null);
+            yield return gotoAmmo;
+
+            Toil takeAmmo = new Toil();
+            takeAmmo.initAction = delegate
+            {
+                CompAbilityEffect_LaunchProjectileMultiple comp = GetReloadableComp();
+                if (comp == null)
+                {
+                    EndJobWith(JobCondition.Incompletable);
+                    return;
+                }
+
+                int ammoNeeded = job.count;
+                Thing ammo = Ammo;
+                if (ammo != null)
+                {
+                    int ammoToTake = System.Math.Min(ammoNeeded, ammo.stackCount);
+                    Thing takenAmmo = ammo.SplitOff(ammoToTake);
+                    if (!pawn.inventory.innerContainer.TryAdd(takenAmmo))
+                    {
+                        takenAmmo.Destroy();
+                    }
+
+                    if (ammo.Destroyed)
+                    {
+                        pawn.Map.reservationManager.Release(ammo, pawn, job);
+                    }
+                }
+            };
+            takeAmmo.defaultCompleteMode = ToilCompleteMode.Instant;
+            yield return takeAmmo;
+
+            yield return Toils_Goto.GotoThing(MechInd, PathEndMode.Touch);
+
+            Toil reload = new Toil();
+            reload.initAction = delegate
+            {
+                CompAbilityEffect_LaunchProjectileMultiple comp = GetReloadableComp();
+                if (comp != null)
+                {
+                    int ammoNeeded = (comp.Props.maxCharges - comp.CurrentCharges) * comp.Props.ammoCountPerCharge;
+                    int ammoInPawnInventory = pawn.inventory.innerContainer.TotalStackCountOfDef(comp.Props.ammoDef);
+                    int ammoToConsume = System.Math.Min(ammoNeeded, ammoInPawnInventory);
+
+                    if (ammoToConsume >= comp.Props.ammoCountPerCharge)
+                    {
+                        Thing ammoThing = null;
+                        foreach (Thing thing in pawn.inventory.innerContainer)
+                        {
+                            if (thing.def == comp.Props.ammoDef)
+                            {
+                                ammoThing = thing;
+                                break;
+                            }
+                        }
+
+                        if (ammoThing != null)
+                        {
+                            Thing consumedAmmo = pawn.inventory.innerContainer.Take(ammoThing, ammoToConsume);
+                            consumedAmmo.Destroy();
+
+                            comp.AddCharges(ammoToConsume / comp.Props.ammoCountPerCharge);
+
+                            if (comp.Props.soundReload != null)
+                            {
+                                comp.Props.soundReload.PlayOneShot(new TargetInfo(Mech.Position, Mech.Map));
+                            }
+                        }
+                    }
+                }
+            };
+            reload.defaultCompleteMode = ToilCompleteMode.Instant;
+            reload.WithProgressBarToilDelay(MechInd, false, -0.5f);
+            yield return reload;
+        }
+
+        private CompAbilityEffect_LaunchProjectileMultiple GetReloadableComp()
+        {
+            if (Mech?.abilities?.abilities == null)
+            {
+                return null;
+            }
+
+            foreach (Ability ability in Mech.abilities.abilities)
+            {
+                CompAbilityEffect_LaunchProjectileMultiple comp = ability.CompOfType<CompAbilityEffect_LaunchProjectileMultiple>();
+                if (comp != null)
+                {
+                    return comp;
+                }
+            }
+            return null;
+        }
+    }
+}

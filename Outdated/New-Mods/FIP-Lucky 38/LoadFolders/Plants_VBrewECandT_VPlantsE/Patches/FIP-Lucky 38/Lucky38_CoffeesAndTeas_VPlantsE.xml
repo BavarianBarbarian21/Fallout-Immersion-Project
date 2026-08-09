@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_BrewLemonCoffee"]/ingredients/li/filter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_BrewLemonCoffee"]/fixedIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_BrewLemonCoffee"]/defaultIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_MakeLemonTea"]/ingredients/li/filter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_MakeLemonTea"]/fixedIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_MakeLemonTea"]/defaultIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_MixLemonade"]/ingredients/li/filter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
+        <value>
+          <li>FCP_Raw_Mutfruit</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

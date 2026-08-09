@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for RimWorld Anomaly (Ludeon.RimWorld.Anomaly). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_CeremonialCultistMask"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_CeremonialCultistMask"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_CeremonialCultistMask"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_CeremonialCultistMask"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_CeremonialCultistMask"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_CultistMask"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_CultistMask"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_CultistMask"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_CultistMask"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_CultistMask"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_DeadlifePack"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_DeadlifePack"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_DeadlifePack"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_DeadlifePack"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_DeadlifePack"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_DisruptorFlarePack"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_DisruptorFlarePack"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_DisruptorFlarePack"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_DisruptorFlarePack"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_DisruptorFlarePack"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_LabCoat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_LabCoat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveScientist</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_LabCoat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_LabCoat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveScientist</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_LabCoat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveScientist</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_PackTurret"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_PackTurret"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_PackTurret"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_PackTurret"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_PackTurret"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Gun_HellcatRifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Gun_HellcatRifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Assault</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Gun_HellcatRifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Assault</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Gun_Incinerator"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Gun_Incinerator"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Gun_Incinerator"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="NerveSpiker"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="NerveSpiker"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Numen</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RegionalRaider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_Slanter</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Tribal</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T0_Improvised</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="NerveSpiker"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Numen</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RegionalRaider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_Slanter</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Tribal</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T0_Improvised</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

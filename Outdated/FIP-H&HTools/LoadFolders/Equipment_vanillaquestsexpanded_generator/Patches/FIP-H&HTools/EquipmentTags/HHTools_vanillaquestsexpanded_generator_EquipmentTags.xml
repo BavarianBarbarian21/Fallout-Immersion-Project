@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Quests Expanded - The Generator (vanillaquestsexpanded.generator). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_Apparel_Parka"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_Apparel_Parka"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQE_Apparel_Parka"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_Parka"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_Parka"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

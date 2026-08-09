@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--
+	// Fur presets are used for pawn generation, while
+	// fur colors are used in the "change fur color" window;
+    // overlap is normal and expected.
+    -->
+
+    <Anthrosonae.FurColorDef Name="ATK_FurPresetBase" Abstract="True">
+        <blacklistPrimary>true</blacklistPrimary>
+        <blacklistSecondary>true</blacklistSecondary>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrobear //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Grizzly</defName>
+        <primaryColor>(108,79,63)</primaryColor>
+        <secondaryColor>(108,79,63)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BlackBear</defName>
+        <primaryColor>(68,82,95)</primaryColor>
+        <secondaryColor>(205,186,171)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BrownBear</defName>
+        <primaryColor>(108,79,63)</primaryColor>
+        <secondaryColor>(130,114,98)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrocat //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Leopard</defName>
+        <primaryColor>(202,167,106)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_SnowLeopard</defName>
+        <primaryColor>(166,166,166)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrodeer //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Deer</defName>
+        <primaryColor>(188,146,110)</primaryColor>
+        <secondaryColor>(234,228,196)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Caribou</defName>
+        <primaryColor>(117,89,71)</primaryColor>
+        <secondaryColor>(234,228,196)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrodrake //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_SilverDrake</defName>
+        <primaryColor>(180,173,150)</primaryColor>
+        <secondaryColor>(180,173,150)</secondaryColor>
+		<selectionWeight>0.05</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GoldDrake</defName>
+        <primaryColor>(255,235,122)</primaryColor>
+        <secondaryColor>(255,235,122)</secondaryColor>
+		<selectionWeight>0.05</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_JadeDrake</defName>
+        <primaryColor>(85,118,69)</primaryColor>
+        <secondaryColor>(85,118,69)</secondaryColor>
+		<selectionWeight>0.05</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrofox //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_RedFox</defName>
+        <primaryColor>(178,100,34)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Fennec</defName>
+        <primaryColor>(202,167,106)</primaryColor>
+        <secondaryColor>(234,228,196)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrogoat //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Goat</defName>
+        <primaryColor>(138,137,135)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Ibex</defName>
+        <primaryColor>(130,114,98)</primaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrohorse //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Haflinger</defName>
+        <primaryColor>(223,214,183)</primaryColor>
+        <secondaryColor>(227,209,171)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BlueRoan</defName>
+        <primaryColor>(183,187,197)</primaryColor>
+        <secondaryColor>(183,187,197)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrohyena //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_SpottedHyena</defName>
+        <primaryColor>(130,114,98)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthropanda //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Panda</defName>
+        <primaryColor>(250,250,250)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrorabbit //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Hare</defName>
+        <primaryColor>(130,127,106)</primaryColor>
+        <secondaryColor>(162,156,130)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthroshark //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BlueShark</defName>
+        <primaryColor>(113,144,152)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_LemonShark</defName>
+        <primaryColor>(202,167,106)</primaryColor>
+        <secondaryColor>(227,209,171)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrowah //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_RedPanda</defName>
+        <primaryColor>(194,136,88)</primaryColor>
+        <secondaryColor>(119,67,43)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- //// Anthrowolf //// -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_TimberWolf</defName>
+        <primaryColor>(110,110,110)</primaryColor>
+        <secondaryColor>(202,167,106)</secondaryColor>
+		<selectionWeight>1.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_RedWolf</defName>
+        <primaryColor>(119,67,43)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Coyote</defName>
+        <primaryColor>(169,150,129)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- Monochrome and near-monchrome -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Black</defName>
+        <primaryColor>(60,60,60)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BlackGray</defName>
+        <primaryColor>(60,60,60)</primaryColor>
+        <secondaryColor>(110,110,110)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BlackWhite</defName>
+        <primaryColor>(60,60,60)</primaryColor>
+        <primaryColor>(250,250,250)</primaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GrayDarkGray</defName>
+        <primaryColor>(81,81,81)</primaryColor>
+        <secondaryColor>(110,110,110)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Gray</defName>
+        <primaryColor>(110,110,110)</primaryColor>
+        <secondaryColor>(110,110,110)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GrayBlack</defName>
+        <primaryColor>(110,110,110)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.05</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GrayWhite</defName>
+        <primaryColor>(110,110,110)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GrayLight</defName>
+        <primaryColor>(166,166,166)</primaryColor>
+        <secondaryColor>(166,166,166)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_GrayLightWhite</defName>
+        <primaryColor>(166,166,166)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_White</defName>
+        <primaryColor>(250,250,250)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Cream</defName>
+        <primaryColor>(227,209,171)</primaryColor>
+        <secondaryColor>(227,209,171)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+    <!-- Browns and tans -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleBrown</defName>
+        <primaryColor>(130,114,98)</primaryColor>
+        <secondaryColor>(130,114,98)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepBrown</defName>
+        <primaryColor>(117,89,71)</primaryColor>
+        <secondaryColor>(117,89,71)</secondaryColor>
+		<selectionWeight>0.63</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleTan</defName>
+        <primaryColor>(223,214,183)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepTan</defName>
+        <primaryColor>(202,167,106)</primaryColor>
+        <secondaryColor>(202,167,106)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepOrange</defName>
+        <primaryColor>(178,100,34)</primaryColor>
+        <secondaryColor>(178,100,34)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepOrangeWhite</defName>
+        <primaryColor>(178,100,34)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.5</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BurntOrange</defName>
+        <primaryColor>(119,67,43)</primaryColor>
+        <secondaryColor>(119,67,43)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_BurntOrangeWhite</defName>
+        <primaryColor>(119,67,43)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.2</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- Exotics -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleBlue</defName>
+        <primaryColor>(126,164,204)</primaryColor>
+        <secondaryColor>(126,164,204)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleBlueBlack</defName>
+        <primaryColor>(126,164,204)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleBlueWhite</defName>
+        <primaryColor>(126,164,204)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepBlue</defName>
+        <primaryColor>(61,105,166)</primaryColor>
+        <secondaryColor>(61,105,166)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepBlueBlack</defName>
+        <primaryColor>(61,105,166)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepBlueWhite</defName>
+        <primaryColor>(61,105,166)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Purple</defName>
+        <primaryColor>(97,87,195)</primaryColor>
+        <secondaryColor>(97,87,195)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PurpleBlack</defName>
+        <primaryColor>(97,87,195)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PurpleWhite</defName>
+        <primaryColor>(97,87,195)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleRed</defName>
+        <primaryColor>(201,112,112)</primaryColor>
+        <secondaryColor>(201,112,112)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepRed</defName>
+        <primaryColor>(150,62,62)</primaryColor>
+        <secondaryColor>(150,62,62)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepRedBlack</defName>
+        <primaryColor>(150,62,62)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepRedWhite</defName>
+        <primaryColor>(150,62,62)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepRedCream</defName>
+        <primaryColor>(150,62,62)</primaryColor>
+        <secondaryColor>(227,209,171)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Yellow</defName>
+        <primaryColor>(204,199,65)</primaryColor>
+        <secondaryColor>(204,199,65)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_YellowBlack</defName>
+        <primaryColor>(204,199,65)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_YellowWhite</defName>
+        <primaryColor>(204,199,65)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleGreen</defName>
+        <primaryColor>(161,213,180)</primaryColor>
+        <secondaryColor>(161,213,180)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleGreenBlack</defName>
+        <primaryColor>(161,213,180)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PaleGreenWhite</defName>
+        <primaryColor>(161,213,180)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepGreen</defName>
+        <primaryColor>(78,131,105)</primaryColor>
+        <secondaryColor>(78,131,105)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepGreenBlack</defName>
+        <primaryColor>(78,131,105)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_DeepGreenWhite</defName>
+        <primaryColor>(78,131,105)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_Pink</defName>
+        <primaryColor>(241,192,218)</primaryColor>
+        <secondaryColor>(241,192,218)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PinkBlack</defName>
+        <primaryColor>(241,192,218)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+    <Anthrosonae.FurColorDef ParentName="ATK_FurPresetBase">
+        <defName>ATK_FurPreset_PinkWhite</defName>
+        <primaryColor>(241,192,218)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+		<selectionWeight>0.02</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+</Defs>

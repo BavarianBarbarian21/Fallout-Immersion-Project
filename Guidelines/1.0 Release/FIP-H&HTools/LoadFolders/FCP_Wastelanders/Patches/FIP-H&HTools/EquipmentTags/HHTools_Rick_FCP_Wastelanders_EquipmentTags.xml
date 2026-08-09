@@ -1,0 +1,2472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Wastelanders (Rick.FCP.Wastelanders). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Army_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Army_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Army_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Army_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Army_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Army_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Army_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Army_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Army_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Army_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Assault_Gas_Mask"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Assault_Gas_Mask"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Assault_Gas_Mask"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Assault_Gas_Mask"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Assault_Gas_Mask"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Athletic_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Athletic_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Athletic_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Athletic_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Athletic_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Benny_Pre_War_Fancy_Suit_Clean"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Benny_Pre_War_Fancy_Suit_Clean"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Benny_Pre_War_Fancy_Suit_Clean"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Benny_Pre_War_Fancy_Suit_Clean"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Benny_Pre_War_Fancy_Suit_Clean"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Brahmin_Skin_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Brahmin_Skin_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Brahmin_Skin_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Brahmin_Skin_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Brahmin_Skin_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Bright_Brotherhood_Robe"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Bright_Brotherhood_Robe"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+        <li>FIPA_Pool_Ghoul</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Bright_Brotherhood_Robe"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Bright_Brotherhood_Robe"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+            <li>FIPA_Pool_Ghoul</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Bright_Brotherhood_Robe"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+              <li>FIPA_Pool_Ghoul</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Business_Pre_War"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Business_Pre_War"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Business_Pre_War"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Business_Pre_War"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Business_Pre_War"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Caravaneer_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Caravaneer_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Caravaneer_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Caravaneer_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Caravaneer_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Chained_Prostitute_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Chained_Prostitute_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Chained_Prostitute_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Chained_Prostitute_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Chained_Prostitute_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Heavy"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Heavy"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Heavy"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Heavy"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Heavy"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Light"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Light"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Light"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Light"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Light"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Sturdy"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Sturdy"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Sturdy"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Sturdy"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Armor_Sturdy"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Combat_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Combat_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Combat_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Exposed_Prostitute_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Exposed_Prostitute_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Exposed_Prostitute_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Exposed_Prostitute_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Exposed_Prostitute_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Dress"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Dress"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Dress"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Dress"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Dress"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Suit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Suit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Suit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Suit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Fancy_Gambler_Suit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Female_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Female_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Female_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Female_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Female_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Male_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Male_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Male_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Male_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Field_Hand_Male_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Ghoul</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Ghoul</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Ghoul</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger_Gas_Mask"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger_Gas_Mask"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Ghoul</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger_Gas_Mask"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger_Gas_Mask"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Ghoul</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gas_Ranger_Gas_Mask"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Ghoul</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Gasmask_Goggles"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gasmask_Goggles"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Gasmask_Goggles"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gasmask_Goggles"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Gasmask_Goggles"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Female"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Female"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Female"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Female"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Female"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Male"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Male"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Male"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Male"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Grognak_Male"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Jason_Bright"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Jason_Bright"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+        <li>FIPA_Pool_Ghoul</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Jason_Bright"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Jason_Bright"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+            <li>FIPA_Pool_Ghoul</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Jason_Bright"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+              <li>FIPA_Pool_Ghoul</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Capital"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Capital"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Capital"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Capital"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Capital"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Commonwealth"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Commonwealth"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Commonwealth"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Commonwealth"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Lab_Coat_Commonwealth"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Leather_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Leather_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Leather_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Leather_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Leather_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Leather_Coat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Leather_Coat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Leather_Coat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Leather_Coat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Leather_Coat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Manta_Man"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Manta_Man"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Manta_Man"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Manta_Man"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Manta_Man"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Merc_Adventurer_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Adventurer_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Adventurer_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Adventurer_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Adventurer_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Dress"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Dress"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Dress"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Dress"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Dress"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Suit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Suit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Suit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Suit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Charmer_Suit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Merc_Cruiser_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Cruiser_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Merc_Cruiser_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Cruiser_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Merc_Cruiser_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Metal_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Metal_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Metal_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Metal_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Metal_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Military_Fatigues"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Military_Fatigues"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Military_Fatigues"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Military_Fatigues"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Military_Fatigues"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Mistress_Mystery"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mistress_Mystery"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mistress_Mystery"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mistress_Mystery"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mistress_Mystery"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightgown"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightgown"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightgown"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightgown"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightgown"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightwear"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightwear"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightwear"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightwear"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Naughty_Nightwear"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Prospector_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prospector_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prospector_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prospector_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prospector_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Female"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Female"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Female"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Female"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Female"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Male"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Male"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Male"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Male"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Prostitute_Outfit_Male"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Radiation_Suit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Radiation_Suit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveScientist</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Radiation_Suit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Radiation_Suit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveScientist</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Radiation_Suit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveScientist</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Radiations_Suit_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Radiations_Suit_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveScientist</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Radiations_Suit_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Radiations_Suit_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveScientist</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Radiations_Suit_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveScientist</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Red_Rocket_Overalls"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Red_Rocket_Overalls"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Red_Rocket_Overalls"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Red_Rocket_Overalls"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Red_Rocket_Overalls"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet_Mk_II"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet_Mk_II"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet_Mk_II"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet_Mk_II"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_Helmet_Mk_II"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_II"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_II"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_II"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_II"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Reinforced_Combat_Armor_II"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_USArmy</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+            <li>FIPA_Pool_USArmy</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Rivet_City_Security_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+              <li>FIPA_Pool_USArmy</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Settler_Female_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Settler_Female_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Settler_Female_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Settler_Female_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Settler_Female_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Settler_Male_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Settler_Male_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Settler_Male_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Settler_Male_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Settler_Male_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Duster"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Duster"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_ArizonaCowboy</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Duster"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Duster"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_ArizonaCowboy</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Duster"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_ArizonaCowboy</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Hat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Hat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_ArizonaCowboy</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Hat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Hat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_ArizonaCowboy</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_SettlerGuard</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Sheriff_Hat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_ArizonaCowboy</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_SettlerGuard</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Silver_Shroud"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Silver_Shroud"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Silver_Shroud"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Silver_Shroud"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Silver_Shroud"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Slave_Bandana"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Bandana"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Bandana"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Bandana"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Bandana"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rag_Hood"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rag_Hood"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rag_Hood"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rag_Hood"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rag_Hood"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rags"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rags"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rags"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rags"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Rags"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Slave_Scarf_Hat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Scarf_Hat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Slave_Scarf_Hat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Scarf_Hat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Slave_Scarf_Hat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Dress"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Dress"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Dress"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Dress"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Dress"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Shirt"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Shirt"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Shirt"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Shirt"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Spring_Pre_War_Shirt"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Surveyor_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Surveyor_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Surveyor_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Surveyor_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Surveyor_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_The_Inspector"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_The_Inspector"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_Costume</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_The_Inspector"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_The_Inspector"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_Costume</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_The_Inspector"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_Costume</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Doctor_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Doctor_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Doctor_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Doctor_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Doctor_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Wanderer_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Wanderer_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Wanderer_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Wanderer_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wasteland_Wanderer_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Wrapped_Cap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wrapped_Cap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Wrapped_Cap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wrapped_Cap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Wrapped_Cap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

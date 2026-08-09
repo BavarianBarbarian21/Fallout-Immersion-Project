@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <!-- =====================================================================
+       HHTools mission integration
+       Source: HHTools mission patch override
+       ===================================================================== -->
+  <!-- =====================================================================
+       Royal permits: use gold drop instead of silver drop
+       Source: Royalty/Defs/Misc/RoyalTitlePermitDefs.xml
+       ===================================================================== -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RoyalTitlePermitDef[defName="SilverDrop"]/royalAid/itemsToDrop/Silver</xpath>
+    <value>
+      <Gold>500</Gold>
+    </value>
+  </Operation>
+</Patch>

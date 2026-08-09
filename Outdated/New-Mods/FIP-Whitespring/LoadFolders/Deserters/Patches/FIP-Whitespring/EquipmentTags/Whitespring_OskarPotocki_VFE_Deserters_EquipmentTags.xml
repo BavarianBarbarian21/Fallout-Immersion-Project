@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Factions Expanded - Deserters (OskarPotocki.VFE.Deserters). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFED_Apparel_BombPack"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Apparel_BombPack"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFED_Apparel_BombPack"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFED_Apparel_BombPack"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFED_Apparel_BombPack"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFED_Apparel_InvisibilityEngulfer"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Apparel_InvisibilityEngulfer"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFED_Apparel_InvisibilityEngulfer"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFED_Apparel_InvisibilityEngulfer"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFED_Apparel_InvisibilityEngulfer"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFED_Gun_ChargeCycler"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Gun_ChargeCycler"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Gun_ChargeCycler"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFED_Gun_Fletchling"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Gun_Fletchling"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFED_Gun_Fletchling"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

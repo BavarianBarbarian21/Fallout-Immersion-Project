@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="FCP_Faction_Wasteland_Settlers"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="FCP_Faction_Hidden_Wastelander_Techprint_Traders"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="FCP_Faction_Hidden_Wastelanders"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+</Patch>

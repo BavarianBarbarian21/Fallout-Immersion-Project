@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="Arktos_SnakeThingBase">
+    <defName>Arktos_Copperhead</defName>
+    <label>copperhead</label>
+    <description>A stocky pit viper whose scales have taken on the color of oxidized copper and wasteland dust. It hunts from ambush, delivering enough venom in a single bite to cripple much larger prey.</description>
+    <statBases>
+      <MoveSpeed>3.3</MoveSpeed>
+      <MarketValue>190</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>Arktos_EggCopperheadUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>Arktos_EggCopperheadFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~2</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <meatLabel>copperhead meat</meatLabel>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Arktos_Copperhead</defName>
+    <label>copperhead</label>
+    <race>Arktos_Copperhead</race>
+    <combatPower>80</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Snakes/Copperhead/Arktos_Copperhead_v7</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Snakes/Copperhead/Arktos_Copperhead_v7</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Snakes/Copperhead/Arktos_Copperhead_v7</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cobra/Dessicated_Cobra</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>Arktos_EggCopperheadFertilized</defName>
+    <label>copperhead egg (fert.)</label>
+    <description>A fertilized copperhead egg. If kept warm, it will hatch into a copperhead.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(173,124,87)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>28</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>4.5</hatcherDaystoHatch>
+        <hatcherPawn>Arktos_Copperhead</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>Arktos_EggCopperheadUnfertilized</defName>
+    <label>copperhead egg (unfert.)</label>
+    <description>An unfertilized copperhead egg. It can be eaten raw, but is safer cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(173,124,87)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>18</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</Defs>

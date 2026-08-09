@@ -1,0 +1,847 @@
+FCP WEAPON CATALOGUE AND FIP FACTION DISTRIBUTION PLAN
+======================================================
+
+Audit date: 24 July 2026
+
+Scope
+-----
+Installed FCP weapon content:
+- FCP Ballistic Weapons
+- FCP Energy Weapons
+- FCP Melee Weapons
+- FCP Unarmed Weapons
+- FCP Brotherhood of Steel
+- FCP Enclave
+- FCP NCR
+
+H&H Tools contains optional compatibility names for FCP PRC and United States,
+but neither faction mod is present in the local FCP installation audited here.
+They therefore cannot be given verified PawnKind mappings yet. If either mod is
+installed later, Donaustahl should add a conditional doctrine profile after
+examining its actual FactionDef and PawnKindDefs.
+
+Faction scope:
+- vanilla and DLC factions not removed by the H&H Tools world-creation filter
+- locally installed Vanilla Expanded factions not removed by that filter
+- non-abstract FIP factions
+- installed FCP factions
+
+This is a catalogue and implementation proposal. No weapon distribution patch
+has been applied yet.
+
+
+1. VERIFIED COUNTS AND SOURCE ISSUE
+===================================
+
+Physical ThingDef weapon declarations:
+- FCP Ballistic Weapons: 100
+- FCP Energy Weapons: 35
+- FCP Melee Weapons: 20
+- FCP Unarmed Weapons: 6
+- FCP Brotherhood of Steel: 4
+- FCP Enclave: 5
+- FCP NCR: 5
+- Total declarations: 175
+
+Unique defNames: 174
+
+Reason for the difference:
+FCP_Gun_Anti_Material_Rifle is declared independently by both FCP Ballistic
+Weapons and FCP NCR. The labels even differ slightly ("Anti-Materiel Rifle"
+versus "Anti-Material Rifle"). This should be resolved before final balancing.
+The Ballistic Weapons definition should be canonical; NCR should reference it
+and add an NCR loadout tag rather than declaring a second ThingDef.
+
+Rarity metadata across the 175 declarations:
+- Common: 37
+- Rare: 92
+- Unique: 37
+- no direct rarity value: 9
+
+FCP rarity is not sufficient for faction distribution. "Rare" includes both
+ordinary military rifles and top-tier plasma weapons. The proposed FIP tags
+therefore describe technology/access separately from item rarity.
+
+
+2. PROPOSED TWO-AXIS CATEGORIZATION
+===================================
+
+Every weapon receives:
+
+A) one functional role
+----------------------
+- FIPW_Role_Melee
+- FIPW_Role_Unarmed
+- FIPW_Role_Sidearm
+- FIPW_Role_SMG
+- FIPW_Role_Shotgun
+- FIPW_Role_Rifle
+- FIPW_Role_Assault
+- FIPW_Role_Sniper
+- FIPW_Role_Heavy
+- FIPW_Role_Flame
+- FIPW_Role_Laser
+- FIPW_Role_Plasma
+- FIPW_Role_Gauss
+- FIPW_Role_Pulse
+
+B) one availability pool
+------------------------
+- FIPW_T0_Improvised
+  Scrap, primitive, homemade, and very low-value weapons.
+
+- FIPW_T1_Wasteland
+  Civilian arms, hunting guns, common pre-war sidearms, and frontier weapons.
+
+- FIPW_T2_Service
+  Police and military weapons suitable for organized armed forces.
+
+- FIPW_T3_Advanced
+  Advanced automatic, heavy, power-armor, and conventional laser weapons.
+
+- FIPW_T4_Elite
+  Plasma, Gauss, pulse, and the most restricted faction technology.
+
+- FIPW_Unique
+  Named one-of-a-kind weapons. Never included in a random PawnKind pool.
+
+Optional signature tags are added alongside the availability tag:
+- FIPW_Signature_BoS
+- FIPW_Signature_Enclave
+- FIPW_Signature_NCR
+- FIPW_Signature_Ranger
+
+Existing FCP role tags should remain. The new FIP tags supplement them and
+provide the lore/access layer that the current tags do not express. Donaustahl
+PawnKinds should select the new FIP availability tags, not the broad legacy FCP
+role tags; otherwise a named Unique weapon could leak back into a random pool.
+
+
+3. COMPLETE WEAPON CATALOGUE WITH PROPOSED POOLS
+================================================
+
+3.1 FCP Ballistic Weapons - T0 Improvised (8)
+----------------------------------------------
+
+- FCP_Gun_Pipe_Pistol | Pipe Pistol
+- FCP_Gun_Pipe_Revolver | Pipe Revolver
+- FCP_Gun_Pipe_Rifle | Pipe Rifle
+- FCP_Gun_Pipe_BoltAction | Pipe Bolt-Action
+- FCP_Gun_Pipe_Shotgun | Pipe Shotgun
+- FCP_Gun_Pipe_Sniper | Pipe Sniper Rifle
+- FCP_Gun_SawnOff_Shotgun | Sawn-Off Shotgun
+- FCP_Gun_Single_Shotgun | Single Shotgun
+
+3.2 FCP Ballistic Weapons - T1 Wasteland (27)
+----------------------------------------------
+
+Sidearms and revolvers:
+- FCP_Gun_10mm_Pistol | 10mm Pistol
+- FCP_Gun_Silenced_10mm_Pistol | Silenced 10mm Pistol
+- FCP_Gun_Chinese_Pistol | Chinese Pistol
+- FCP_Gun_9mm_Pistol | 9mm Pistol
+- FCP_Gun_Silenced_22_Pistol | Silenced .22 Pistol
+- FCP_Gun_Colt_6520_Pistol | Colt 6520
+- FCP_Gun_45_Auto_Pistol | .45 Auto Pistol
+- FCP_Gun_357_Revolver | .357 Revolver
+- FCP_Gun_44Magnum_Revolver | .44 Magnum Revolver
+- FCP_Gun_Hunting_Revolver | Hunting Revolver
+- FCP_Gun_Police_Pistol | Police Pistol
+
+Rifles:
+- FCP_Gun_BB_Gun | BB Gun
+- FCP_Gun_Brush_Gun | Brush Gun
+- FCP_Lever_Action_Rifle | Lever Action Rifle
+- FCP_Gun_Cowboy_Repeater | Cowboy Repeater
+- FCP_Gun_Trail_Carbine | Trail Carbine
+- FCP_Gun_32_Hunting_Rifle | .32 Hunting Rifle
+- FCP_Gun_Varmint_Rifle | Varmint Rifle
+- FCP_Gun_223_Rangemaster | .223 Rangemaster Rifle
+- FCP_Gun_223_Rifle | .223 Rifle
+
+Shotguns:
+- FCP_Gun_Caravan_Shotgun | Caravan Shotgun
+- FCP_Gun_Hunting_Shotgun | Hunting Shotgun
+- FCP_Gun_LeverAction_Shotgun | Lever-Action Shotgun
+
+Submachine guns:
+- FCP_Gun_10mm_SMG | 10mm SMG
+- FCP_Gun_9mm_SMG | 9mm SMG
+- FCP_Gun_Silenced_22_SMG | Silenced .22 SMG
+- FCP_Gun_45_Auto_SMG | .45 Auto Submachine Gun
+
+3.3 FCP Ballistic Weapons - T2 Service (25)
+--------------------------------------------
+
+Service sidearms:
+- FCP_Gun_556_Pistol | 5.56mm Pistol
+- FCP_Gun_127mm_Pistol | 12.7mm Pistol
+- FCP_Gun_10mm_Pistol_MkII | 10mm Pistol MkII
+- FCP_Gun_14mm_Pistol | 14mm Pistol
+- FCP_Gun_223_Pistol | .223 Pistol
+- FCP_Gun_Deagle | Deagle
+
+Assault and service rifles:
+- FCP_Gun_R91_Rifle | R-91 Assault Rifle
+- FCP_Gun_Chinese_Assault_Rifle | Chinese Assault Rifle
+- FCP_Gun_Marksman_Carbine | Marksman Carbine
+- FCP_Gun_Assault_Carbine | Assault Carbine
+- FCP_Gun_AK_112_AR | AK-112 Assault Rifle
+- FCP_Gun_Automatic_Rifle | Automatic Rifle
+- FCP_Gun_Combat_Rifle_Standard | Combat Rifle
+- FCP_Gun_Battle_Rifle | Battle Rifle
+
+Combat shotguns:
+- FCP_Gun_Combat_Shotgun | Combat Shotgun
+- FCP_Gun_Riot_Shotgun | Riot Shotgun
+- FCP_Gun_Citykiller | Citykiller Shotgun
+- FCP_Gun_Combat_Shotgun_MkII | Combat Shotgun MkII
+- FCP_Gun_Jackhammer | Jackhammer Shotgun
+
+Military SMGs:
+- FCP_Gun_HK_10_SMG | HK-10 SMG
+- FCP_Gun_127mm_SMG | 12.7mm SMG
+
+Sniper rifles:
+- FCP_Gun_DKS_501_Sniper_Rifle | DKS-501 Sniper Rifle
+- FCP_Gun_Scoped_Hunting_Rifle | Scoped Hunting Rifle
+- FCP_Gun_Anti_Material_Rifle | Anti-Materiel Rifle
+- FCP_Gun_DKS_500_Sniper_Rifle | DKS-500 Sniper Rifle
+
+3.4 FCP Ballistic Weapons - T3 Advanced/Heavy (12)
+---------------------------------------------------
+
+Advanced rifles:
+- FCP_Gun_Power_Armor_Assault_Rifle | Power Armor Assault Rifle
+- FCP_Gun_G11_AR | G11 Assault Rifle
+- FCP_Gun_Infiltrator | Infiltrator
+
+Heavy weapons:
+- FCP_Gun_Minigun | Minigun
+- FCP_Gun_Light_Machine_Gun | Light Machine Gun
+- FCP_Gun_ChunkyBoi | Chunky Boi
+- FCP_Gun_MkI_Avenger | MkI Avenger
+- FCP_Gun_Vindicator | Vindicator
+- FCP_Gun_50_Cal_MG | .50 Cal Machine Gun
+- FCP_Gun_K900_Cyberdog_Gun | K9000 Cyberdog Gun
+- FCP_Gun_Rockwell_CZ54_Minigun | Rockwell CZ53 Personal Minigun
+- FCP_Gun_Shoulder_Mounted_MG | Shoulder Mounted Machine Gun
+
+K9000 should normally be excluded from human PawnKinds even inside T3. It is a
+Cyberdog-specific weapon and needs an additional species/equipment restriction.
+
+3.5 FCP Ballistic Weapons - Unique only (28)
+---------------------------------------------
+
+- FCP_Gun_Lucky | Lucky
+- FCP_Gun_Maria | Maria
+- FCP_Gun_AbileneKidLEBBGun | Abilene Kid LE BB Gun
+- FCP_Gun_AllAmerican | All-American
+- FCP_Gun_BigBoomer | Big Boomer
+- FCP_Gun_Deliverer | Deliverer
+- FCP_Gun_HHToolsNailgun | HH Tools Nailgun
+- FCP_Gun_LilDevil | Lil' Devil
+- FCP_Gun_LincolnsRepeater | Lincoln's Repeater
+- FCP_Gun_MkIIAvenger | MkII Avenger
+- FCP_Gun_Vances9mmSMG | Vance's 9mm SMG
+- FCP_Gun_GobiCampaignScoutRifle | Gobi Campaign Scout Rifle
+- FCP_Gun_MedicineStick | Medicine Stick
+- FCP_Gun_Bozar | Bozar
+- FCP_Gun_DinnerBell | Dinner Bell
+- FCP_Gun_Ratslayer | Ratslayer
+- FCP_Gun_Wanda | Wanda
+- FCP_Gun_OlPainless | Ol' Painless
+- FCP_Gun_VictoryRifle | Victory Rifle
+- FCP_Gun_ReservistsRifle | Reservist's Rifle
+- FCP_Gun_FIDO | FIDO
+- FCP_Gun_Light_Shining_In_Darkness | A Light Shining in Darkness
+- FCP_Gun_Paciena | Paciencia
+- FCP_Gun_Sleepy_Time | Sleepytime
+- FCP_Gun_Sturdy_Caravan_Shotgun | Sturdy Caravan Shotgun
+- FCP_Gun_Survivalist_Rifle | Survivalist's Rifle
+- FCP_Gun_This_Machine | This Machine
+- FCP_Gun_Weathered_10mm_Pistol | Weathered 10mm Pistol
+
+Source spelling notes:
+- The Def is FCP_Gun_Paciena although the label is Paciencia.
+- FCP_Gun_Rockwell_CZ54_Minigun is labelled Rockwell CZ53 Personal Minigun.
+
+3.6 FCP Energy Weapons - T2 conventional energy/flame (8)
+----------------------------------------------------------
+
+- FCP_Gun_Flamer_MkI | Flamer Mk I
+- FCP_Gun_Flamer_MkII | Flamer Mk II
+- FCP_Gun_Laser_Pistol | Laser Pistol
+- FCP_Gun_Laser_Rifle | Laser Rifle
+- FCP_Gun_Laser_Carbine | Laser Carbine
+- FCP_Gun_Recharger_Rifle | Recharger Rifle
+- FCP_Gun_Recharger_Pistol | Recharger Pistol
+- FCP_Gun_Wattz_1000_Laser_Pistol | Wattz 1000 Laser Pistol
+
+3.7 FCP Energy Weapons - T3 advanced/heavy laser (4)
+-----------------------------------------------------
+
+- FCP_Gun_Tri_Beam_Laser_Rifle | Tri-Beam Laser Rifle
+- FCP_Gun_Gatling_Laser | Gatling Laser
+- FCP_Gun_Laser_RCW | Laser RCW
+- FCP_Gun_Gatling_Laser_MkI | Gatling Laser Mk I
+
+3.8 FCP Energy Weapons - T4 plasma (9)
+--------------------------------------
+
+- FCP_Gun_Plasma_Pistol | Plasma Pistol
+- FCP_Gun_Plasma_Rifle | Plasma Rifle
+- FCP_Gun_Multiplas_Rifle | Multiplas Rifle
+- FCP_Gun_Plasma_Caster | Plasma Caster
+- FCP_Gun_Plasma_Defender | Plasma Defender
+- FCP_Gun_Plasma_Caster_MkI | Plasma Caster Mk I
+- FCP_Gun_Glock_86_Plasma_Pistol | Glock 86 Plasma Pistol
+- FCP_Gun_P_94_Plasma_Rifle | P-94 Plasma Rifle
+- FCP_Gun_Plasma_Machine_Gun | Plasma Machine Gun
+
+3.9 FCP Energy Weapons - T4 Gauss (4)
+-------------------------------------
+
+- FCP_Gun_PPK12_Gauss_Pistol | PPK12 Gauss Pistol
+- FCP_Gun_M72_Gauss_Rifle | M72 Gauss Rifle
+- FCP_Gun_Gauss_Minigun | Gauss Minigun
+- FCP_Gun_Gauss_Sniper_Rifle | Gauss Sniper Rifle
+
+3.10 FCP Energy Weapons - T4 pulse (2)
+--------------------------------------
+
+- FCP_Gun_YK32_Pulse_Pistol | YK32 Pulse Pistol
+- FCP_Gun_YK42B_Pulse_Rifle | YK42B Pulse Rifle
+
+3.11 FCP Energy Weapons - Unique only (8)
+-----------------------------------------
+
+- FCP_Gun_Heavy_Incinerator | Heavy Incinerator
+- FCP_Gun_M72_A2_Gauss_Rifle | M72 A2 Gauss Rifle
+- FCP_Gun_AER14_Prototype | AER14 Prototype
+- FCP_Gun_MF_Hyperbreeder_Alpha | MF Hyperbreeder Alpha
+- FCP_Gun_Pew_Pew | Pew Pew
+- FCP_Gun_Sprtel_Wood_9700_Unique | Sprtel-Wood 9700
+- FCP_Gun_Wattz_2000_Laser_Rifle | Wattz 2000 Laser Rifle
+- FCP_Gun_Q35_Matter_Modulator | Q-35 Matter Modulator
+
+3.12 FCP Melee Weapons - T0 improvised (13)
+-------------------------------------------
+
+- FCP_Melee_9_Iron | 9 Iron
+- FCP_Melee_Bat | Baseball Bat
+- FCP_Melee_Bat_Aluminum | Aluminum Bat
+- FCP_Melee_Bat_Spiked | Spiked Bat
+- FCP_Melee_Board_Spiked | Spiked Board
+- FCP_Melee_Meat_Cleaver | Meat Cleaver
+- FCP_Melee_Pool_Cue | Pool Cue
+- FCP_Melee_Rebar_Club | Rebar Club
+- FCP_Melee_Rolling_Pin | Rolling Pin
+- FCP_Melee_Scrap_Axe | Scrap Axe
+- FCP_Melee_Scrap_Machete | Scrap Machete
+- FCP_Melee_Scrap_Pipe | Scrap Pipe
+- FCP_Melee_Sledgehammer | Sledgehammer
+
+3.13 FCP Melee Weapons - T2 industrial (6)
+------------------------------------------
+
+- FCP_Melee_Bat_Saw | Saw Bat
+- FCP_Melee_Bumper_Sword | Bumper Sword
+- FCP_Melee_Chainsaw | Chainsaw
+- FCP_Melee_Mr_Handy_Buzz_Blade | Mr. Handy Buzz Blade
+- FCP_Melee_Ripper | Ripper
+- FCP_Melee_Shishkebab | Shishkebab
+
+3.14 FCP Melee Weapons - T3 powered/heavy (1)
+---------------------------------------------
+
+- FCP_Melee_Super_Sledge | Super Sledge
+
+3.15 FCP Unarmed Weapons (6)
+----------------------------
+
+T0 arena/civilian:
+- FCP_Unarmed_Boxing_Glove | Boxing Glove
+
+T2 industrial:
+- FCP_Unarmed_Industrial_Fist | Industrial Hand
+
+T3 powered:
+- FCP_Unarmed_Ballistic_Fist | Ballistic Fist
+- FCP_Unarmed_Power_Fist | Power Fist
+
+T4 experimental:
+- FCP_Unarmed_Displacer_Glove | Displacer Glove
+- FCP_Unarmed_Zap_Glove | Zap Glove
+
+3.16 FCP Brotherhood of Steel signature weapons (4)
+----------------------------------------------------
+
+- FCP_Gun_BoS_Crusader_Pistol | BoS 10mm Crusader Pistol
+  Pool: T3 + FIPW_Signature_BoS
+- FCP_Gun_BoS_M94_Plasma_Rifle | BoS M-94 Plasma Rifle
+  Pool: T4 + FIPW_Signature_BoS
+- FCP_Gun_BoS_Ultracite_Rifle | BoS Ultracite Rifle
+  Pool: T4 + FIPW_Signature_BoS
+- FCP_Melee_BoS_Super_Sledge | BoS Super Sledge
+  Pool: T3 + FIPW_Signature_BoS
+
+3.17 FCP Enclave signature weapons (5)
+--------------------------------------
+
+- FCP_Gun_Enclave_Plasma_SMG | Enclave Plasma SMG
+- FCP_Gun_Enclave_Assault_Plasma_Rifle | Enclave Assault Plasma Rifle
+- FCP_Gun_Enclave_Advanced_Multiplas_Rifle | Enclave Advanced Multiplas Rifle
+- FCP_Gun_Enclave_SMELE_Plasma_Rifle | Enclave SMELE Plasma Rifle
+- FCP_Gun_Enclave_Plasma_Cannon | Enclave Plasma Cannon
+
+All five: T4 + FIPW_Signature_Enclave.
+The plasma cannon also receives FIPW_Role_Heavy.
+
+3.18 FCP NCR weapons (5 declarations)
+-------------------------------------
+
+- FCP_Gun_Service_Rifle | Service Rifle
+  Pool: T2 + FIPW_Signature_NCR
+- FCP_Gun_Ranger_Sequoia | Ranger Sequoia
+  Pool: T2 + FIPW_Signature_NCR + FIPW_Signature_Ranger
+- FCP_Gun_Anti_Material_Rifle | Anti-Material Rifle
+  Pool: T2 + FIPW_Signature_NCR
+  Duplicate of the Ballistic Weapons defName; do not keep both declarations.
+- FCP_Gun_NCR_Hunting_Rifle | NCR Standard Hunting Rifle
+  Pool: T1 + FIPW_Signature_NCR
+- FCP_Gun_Ranger_Ricks_Big_Iron_Revolver | "Big Iron"
+  Pool: FIPW_Unique only
+
+
+4. DOCTRINE PROFILES
+====================
+
+Percentages below are target composition, not direct RimWorld XML weights.
+RimWorld chooses equipment through PawnKind weaponTags and weaponMoney. Exact
+ratios require separate PawnKinds/group-maker weights; ordinary tag unions only
+define what is possible.
+
+TRIBAL
+------
+- 60% vanilla primitive weapons (bows, spears, clubs)
+- 30% FCP T0 melee
+- 10% FCP T0 firearms
+- leader-only chance for T1 firearms
+- no T2+, laser, plasma, Gauss, or pulse
+
+RAIDER_CRUDE
+------------
+- 25% T0 melee
+- 40% T0 firearms
+- 30% T1
+- 5% T2, reserved for fighters/leaders
+- exactly 0% T3/T4 and 0% energy
+
+SETTLER
+-------
+- 10% T0 melee
+- 15% T0 firearms
+- 60% T1
+- 15% T2 for guards, hunters, and leaders
+- no plasma/Gauss/pulse; no heavy weapons
+
+ROUGH_SETTLER
+-------------
+- 10% T0
+- 50% T1
+- 35% T2
+- 5% T3 for leaders only
+- no T4
+
+CARAVAN_COMPANY
+---------------
+- 10% T0 melee
+- 60% T1
+- 25% T2
+- 5% T3 for caravan guards
+- no T4
+
+VAULT
+-----
+- 10% T1
+- 55% T2
+- 25% conventional laser/flame
+- 10% T3
+- plasma only for an explicitly elite Vault encounter
+
+MILITARY
+--------
+- 10% T1
+- 60% T2
+- 20% T3
+- 10% conventional laser
+- T4 only in a faction-specific elite profile
+
+DESERTER / CIRCLE OF STEEL
+--------------------------
+- 10% T1
+- 50% T2
+- 20% T3
+- 15% conventional/advanced laser
+- 5% rare plasma/Gauss for elite units
+
+BROTHERHOOD
+-----------
+- initiates: T2 ballistic and conventional laser
+- knights: T2/T3 ballistic, laser, signature Crusader pistol
+- paladins: T3, advanced laser, rare T4 plasma/Gauss
+- heavy/power-armored roles: heavy weapons and signature BoS weapons
+- ordinary members never receive Unique weapons
+
+ENCLAVE
+-------
+- 10% T2 ballistic
+- 20% conventional laser
+- 20% T3 advanced/heavy laser
+- 30% T4 plasma/Gauss/pulse
+- 20% Enclave signature weapons
+- heavy weapons only on heavy/power-armored PawnKinds
+
+ENCLAVE_REMNANT
+---------------
+- 20% T2 ballistic
+- 30% conventional laser
+- 20% T3
+- 20% T4
+- 10% Enclave signature weapons
+- less perfectly equipped than the full Enclave
+
+NCR
+---
+- troopers: Service Rifle, T1 sidearms, and T2 service weapons
+- heavy troopers: T2/T3 automatic and heavy ballistic weapons
+- veterans: Marksman Carbine, Battle Rifle, sniper weapons
+- Rangers: Ranger Sequoia, NCR Hunting Rifle, Anti-Materiel Rifle
+- captured laser chance only for elite units; no normal plasma pool
+
+LEGION
+------
+- recruits: T0 melee and primitive weapons
+- legionaries: scrap machetes, spears, T1 pistols/rifles
+- veterans: T2 ballistic and industrial melee
+- commanders: very small captured T2/T3 chance
+- no general laser/plasma/Gauss/pulse pool
+
+GREAT_KHANS
+-----------
+- T0/T1 pistols, SMGs, caravan/sawn-off/hunting shotguns, lever rifles
+- industrial melee
+- rare T2 rifles for veterans
+- no general energy pool
+
+POWDER_GANGERS
+---------------
+- T0 pipe weapons and melee
+- T1 revolvers, shotguns, varmint/hunting rifles
+- very small T2 chance for bosses
+- no energy or heavy weapons
+
+GHOUL_SETTLEMENT
+----------------
+- T0/T1 wasteland arms
+- somewhat more pre-war T1/T2 weapons than a tribal settlement
+- no automatic technology bonus merely for being ghouls
+
+SUPER_MUTANT
+------------
+- rebar clubs, bumper swords, sledgehammers, Super Sledges
+- T2 assault weapons
+- T3 machine guns/miniguns for heavy roles
+- rare laser/plasma only for masters or explicitly advanced armies
+- no delicate low-power sidearm pool for ordinary super mutants
+
+WENDIGO_CULT
+-------------
+- melee-forward T0/T2 industrial weapons
+- silenced T1/T2 sidearms and SMGs for hunters
+- no random plasma/Gauss/pulse weapons
+
+MOTHMAN_CULT
+-------------
+- T0 melee, hunting rifles, shotguns, and limited T1 firearms
+- holy/hostile cult fighters may receive limited T2
+- no advanced energy pool
+
+
+5. EXACT FACTION-TO-DOCTRINE MATRIX
+===================================
+
+5.1 Vanilla and DLC factions retained by FIP
+---------------------------------------------
+
+- Ancients | FIP label: controlled vault -> VAULT
+- AncientsHostile | FIP label: crazed vault -> VAULT, lower quality
+- Empire | FIP label: Whitespring Enclave -> ENCLAVE
+- OutlanderRefugee | FIP label: escaped slaves -> T0/T1 civilian only
+- Sanguophages | FIP label: Wendigo Cultists -> WENDIGO_CULT
+- Beggars -> unarmed or T0/T1 civilian only
+- Pilgrims | FIP label: wise Mothman cultists -> MOTHMAN_CULT
+- CannibalPirate -> RAIDER_CRUDE
+- NudistTribe -> TRIBAL
+- TribeCannibal -> TRIBAL, hostile
+- HoraxCult | FIP label: holy Mothman cultists -> MOTHMAN_CULT
+- Salvagers | FIP label: Enclave radicals -> ENCLAVE, radical/heavy variant
+- TradersGuild | FIP label: Enclave Remnants -> ENCLAVE_REMNANT
+
+No handheld weapon distribution:
+- Insect
+- Mechanoid/RobCo robots, except a separately supported Gen 1 Synth PawnKind
+- Entities, renamed cryptids
+- ResearchExpedition, renamed new cult, is a player faction
+- PlayerColony
+- PlayerTribe
+- GravshipCrew
+
+The following vanilla/biotech world factions are intentionally filtered out
+and must not receive Donaustahl loadout work:
+- OutlanderCivil
+- OutlanderRough
+- TribeCivil
+- TribeRough
+- TribeSavage
+- Pirate
+- TribeRoughNeanderthal
+- PirateYttakin
+- TribeSavageImpid
+- OutlanderRoughPig
+- PirateWaster
+
+5.2 H&H Tools regional factions
+--------------------------------
+
+Arizona:
+- HHTools_Arizona_Civil -> SETTLER
+- HHTools_Arizona_Rough -> ROUGH_SETTLER
+- HHTools_Arizona_Raider -> RAIDER_CRUDE
+- HHTools_Arizona_Tribal -> TRIBAL
+
+California:
+- HHTools_California_Civil -> SETTLER, slightly higher T2 guard access
+- HHTools_California_Rough -> ROUGH_SETTLER
+- HHTools_California_Raider -> RAIDER_CRUDE
+- HHTools_California_Tribal -> TRIBAL
+
+Cascadia:
+- HHTools_Cascadia_Civil -> SETTLER
+- HHTools_Cascadia_Rough -> ROUGH_SETTLER
+- HHTools_Cascadia_Raider -> RAIDER_CRUDE
+- HHTools_Cascadia_Tribal -> TRIBAL
+
+Nuevo Texico:
+- HHTools_NuevoTexico_Civil -> SETTLER/frontier
+- HHTools_NuevoTexico_Rough -> ROUGH_SETTLER/frontier
+- HHTools_NuevoTexico_Raider -> strict RAIDER_CRUDE
+- HHTools_NuevoTexico_Tribal -> TRIBAL
+
+Nuevo Texico Raider hard rule:
+- allowed: crude spears/vanilla primitive weapons, scrap melee, pipe guns,
+  common pistols/revolvers, caravan/sawn-off/single shotguns, varmint/hunting
+  and lever rifles
+- boss-only: a small number of ordinary T2 ballistic weapons
+- forbidden: all laser, plasma, Gauss, pulse, minigun, power-armor weapon,
+  BoS, Enclave, NCR-signature, and Unique pools
+
+Mutant factions:
+- HHTools_Mutant_Army -> SUPER_MUTANT military
+- HHTools_Mutant_SuperMutant -> SUPER_MUTANT
+- HHTools_Mutant_Ghoul -> GHOUL_SETTLEMENT
+- HHTools_Mutant_Critter -> TRIBAL/T0-T1
+- HHTools_Mutant_Numen -> SETTLER/T1 with limited T2 guards
+- HHTools_Mutant_Slanter -> TRIBAL/T0-T1
+
+Abstract base FactionDefs are not live factions and are excluded:
+- FalloutTribalClan
+- HHTools_Factionbase
+- HHTools_Raider
+- HHTools_Settler_Democratic
+- HHTools_Settler_Despotic
+- HHTools_Greenway_IdeoBase
+
+Other FIP:
+- Arktos_FireAnts -> no handheld weapons
+- BigMT_ExperimentFaction -> SUPER_MUTANT when FIP-Big MT is enabled; the
+  current playlist has removed Big MT, so its patch must remain conditional
+- Mechanoid/RobCo replacement faction -> no external weapons for integrated-arm
+  robots; RobCo_Gen1Synth may use T1/T2 firearms only after its equipment
+  support is confirmed functional
+
+5.3 Vanilla Expanded factions retained by FIP
+----------------------------------------------
+
+- VFEE_Deserters -> DESERTER / Circle of Steel
+- VFEE_NewFamily -> WHITESPRING/ENCLAVE service and ceremonial guard pool
+- VFED_NewSafehaven -> DESERTER / Circle of Steel
+- VFEM2_MerchantGuild | FIP label: caravan companies -> CARAVAN_COMPANY
+- VFET_WildMen -> unarmed/T0 primitive only
+- VFET_WildMenGroup -> no separate loadout; group helper/hidden faction
+- GR_RoamingMonstrosities -> no handheld weapons
+
+Player factions, no automatic NPC equipment replacement:
+- VFEM2_PlayerKingdom
+- VFES_PlayerSettlement
+- VQE_NewVaultPlayerFaction
+
+Explicitly filtered VE factions:
+- SettlerCivil
+- SettlerRough
+- SettlerSavage
+- VFEM2_KingdomCivil
+- VFEM2_KingdomRough
+- VFEM2_KingdomSavage
+- VFEM2_CivilClan
+- VFEM2_ClanRough
+- VFEM2_ClanSavage
+
+5.4 Installed FCP factions
+--------------------------
+
+Brotherhood:
+- FCP_Faction_BoS -> BROTHERHOOD
+- FCP_Faction_BoS_Lost_Hills -> BROTHERHOOD, conservative/laser-heavy
+- FCP_Faction_BoS_Midwest -> BROTHERHOOD, more ballistic/heavy weapons
+- FCP_Faction_BoS_Lyons_Pride_Remnants -> BROTHERHOOD, balanced
+- FCP_Faction_BoS_Outcast_Remnants -> BROTHERHOOD, ballistic and laser-heavy
+- Brotherhood player faction Defs -> no forced random player equipment
+
+Major factions:
+- FCP_Faction_Enclave -> ENCLAVE
+- FCP_Faction_NCR -> NCR
+- FCP_Faction_NCR_Deserters -> MILITARY with NCR signatures at reduced rate
+- FCP_Faction_Caesars_Legion -> LEGION
+- FCP_Faction_GreatKhans -> GREAT_KHANS
+
+Raiders and settlers:
+- FCP_Faction_Powder_Gangers -> POWDER_GANGERS
+- FCP_Faction_Raider -> RAIDER_CRUDE, with T2 boss pool
+- FCP_Faction_Wasteland_Settlers -> SETTLER
+- FCP_Faction_Hidden_Wastelanders -> SETTLER/T1
+- FCP_Faction_Hidden_Wastelander_Techprint_Traders -> CARAVAN_COMPANY with
+  limited T2/T3 guard access
+
+No handheld weapons:
+- FCP_Faction_Molerat
+
+FCP player factions do not need forced NPC pools:
+- FCP_Faction_Enclave_Player
+- FCP_Faction_NCR_Player
+- all FCP Brotherhood player variants
+
+
+6. DONAUSTAHL IMPLEMENTATION DESIGN
+===================================
+
+Why PawnKinds must be patched
+-----------------------------
+
+FactionDef does not directly choose a weapon. Its pawnGroupMakers choose
+PawnKindDefs; each PawnKindDef then filters weapons through weaponTags and
+weaponMoney. Patching only FactionDef would not prevent a Nuevo Texico raider
+from receiving an inappropriate weapon.
+
+Recommended structure
+---------------------
+
+Add optional Donaustahl load folders:
+- LoadFolders/FCP_BallisticWeapons
+- LoadFolders/FCP_EnergyWeapons
+- LoadFolders/FCP_MeleeWeapons
+- LoadFolders/FCP_UnarmedWeapons
+- LoadFolders/FCP_BOS
+- LoadFolders/FCP_Enclave
+- LoadFolders/FCP_NCR
+- LoadFolders/FCP_Factions
+- LoadFolders/HHTools_FCPWeapons
+- LoadFolders/Vanilla_FCPWeapons
+- LoadFolders/VFEEmpire_FCPWeapons
+- LoadFolders/VFEDeserters_FCPWeapons
+- LoadFolders/VFEMedieval2_FCPWeapons
+- LoadFolders/VFETribals_FCPWeapons
+- LoadFolders/VGeneticsE_FCPWeapons
+
+Use LoadFolders.xml package checks instead of broad PatchOperationFindMod
+wrappers. Donaustahl's About.xml must load after every FCP weapon/faction
+package and every target FIP/VE faction mod it patches.
+
+Verified FCP packageIds for those checks:
+- Rick.FCP.BallisticWeapons
+- Rick.FCP.EnergyWeapons
+- Rick.FCP.MeleeWeapons
+- Rick.FCP.UnarmedWeapons
+- Rick.FCP.BOS
+- Rick.FCP.Enclave
+- Rick.FCP.NCR
+- Rick.FCP.Legion
+- Rick.FCP.GreatKhans
+- Rick.FCP.Raiders
+- Rick.FCP.Wastelanders
+
+Patch stages
+------------
+
+1) Weapon classification
+   Add the new role, tier, Unique, and signature tags to FCP ThingDefs.
+
+2) Unique isolation
+   Ensure all 37 Unique weapons have only FIPW_Unique for availability and are
+   never added to generic PawnKind tags. Existing personal/story tags can stay.
+
+3) PawnKind profiles
+   Replace broad vanilla tags on faction combat PawnKinds with curated FIP
+   availability tags. Patch civilians, hunters, fighters, leaders, traders,
+   heavy troops, and specialists separately.
+
+4) Faction-specific cloning where required
+   If two factions share one PawnKind but require different doctrines, clone
+   that PawnKind in Donaustahl and replace only the appropriate
+   pawnGroupMakers option. Do not globally alter a shared PawnKind and thereby
+   leak Enclave weapons into another faction.
+
+5) Weapon budgets
+   Set weaponMoney ranges so T3/T4 weapons actually fit only elite PawnKinds.
+   Tags prevent forbidden technology; budgets control quality and frequency.
+
+6) Heavy/species restrictions
+   Keep miniguns, shoulder weapons, K9000, and power-armor rifles out of normal
+   human pools. Only appropriate heavy, power-armored, Cyberdog, or super-mutant
+   PawnKinds receive their special tags.
+
+7) Preserve fallback weapons
+   Every patched PawnKind needs at least one valid weapon in every supported
+   mod combination. A melee fallback prevents "no usable weapon" generation
+   errors when only part of FCP is active.
+
+Do not use direct percentage claims in a simple weaponTags list
+---------------------------------------------------------------
+
+weaponTags form an allowed set; they do not express 40/30/20/10 weights.
+Approximate the profile through role-specific PawnKinds and weaponMoney.
+For strict percentages, use separate PawnKind variants with explicit
+pawnGroupMakers weights or a small, transparent generation component.
+
+
+7. REQUIRED VALIDATION BEFORE RELEASE
+=====================================
+
+1) Resolve the duplicate FCP_Gun_Anti_Material_Rifle source.
+2) Parse all Donaustahl XML and verify every XPath against the intended mod.
+3) Build a loaded-Def audit containing each weapon's final FIP tags.
+4) Spawn at least 20 raid groups and 20 trader groups for every patched faction.
+5) Check leaders, traders, hunters, ordinary fighters, and heavy units
+   separately.
+6) Assert forbidden pools:
+   - Nuevo Texico Raider: zero energy/T3/T4/Unique
+   - tribes: zero advanced energy
+   - ordinary settlers: zero plasma/Gauss/pulse/heavy
+   - ordinary NCR troopers: zero plasma and no Ranger-only sidearms
+   - non-Brotherhood: zero BoS signature weapons
+   - non-Enclave: zero Enclave signature weapons
+   - every random group: zero Unique weapons
+7) Repeat with each optional FCP weapon module disabled to verify fallbacks.
+8) Test both raids and traders; RimWorld may use different group makers and
+   PawnKinds for the two.

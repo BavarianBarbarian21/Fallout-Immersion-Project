@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_VaultHighTech</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_VaultHighTech</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_VaultHighTech</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_VaultHighTech</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="AncientSoldier"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>355~900</weaponMoney>
+    </value>
+  </Operation>
+</Patch>

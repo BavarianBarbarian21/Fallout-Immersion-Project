@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Civil"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_CascadiaCivil_Civilian>4</HHTools_CascadiaCivil_Civilian>
+            <HHTools_CascadiaCivil_Fighter>14</HHTools_CascadiaCivil_Fighter>
+            <HHTools_CascadiaCivil_Trader>2</HHTools_CascadiaCivil_Trader>
+            <HHTools_CascadiaCivil_Leader>1</HHTools_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_CascadiaCivil_Civilian>20</HHTools_CascadiaCivil_Civilian>
+            <HHTools_CascadiaCivil_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_CascadiaCivil_Child>
+            <HHTools_CascadiaCivil_Fighter>6</HHTools_CascadiaCivil_Fighter>
+            <HHTools_CascadiaCivil_Trader>4</HHTools_CascadiaCivil_Trader>
+            <HHTools_CascadiaCivil_Leader>2</HHTools_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_CascadiaCivil_Trader>1</HHTools_CascadiaCivil_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_CascadiaCivil_Civilian>3</HHTools_CascadiaCivil_Civilian>
+            <HHTools_CascadiaCivil_Fighter>10</HHTools_CascadiaCivil_Fighter>
+            <HHTools_CascadiaCivil_Leader>1</HHTools_CascadiaCivil_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_CascadiaCivil_Civilian>12</HHTools_CascadiaCivil_Civilian>
+            <HHTools_CascadiaCivil_Fighter>10</HHTools_CascadiaCivil_Fighter>
+            <HHTools_CascadiaCivil_Trader>3</HHTools_CascadiaCivil_Trader>
+            <HHTools_CascadiaCivil_Leader>2</HHTools_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaCivil_Miner>1</HHTools_CascadiaCivil_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaCivil_Hunter>1</HHTools_CascadiaCivil_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaCivil_Logger>1</HHTools_CascadiaCivil_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaCivil_Farmer>1</HHTools_CascadiaCivil_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Rough"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_CascadiaRough_Civilian>4</HHTools_CascadiaRough_Civilian>
+            <HHTools_CascadiaRough_Fighter>14</HHTools_CascadiaRough_Fighter>
+            <HHTools_CascadiaRough_Trader>2</HHTools_CascadiaRough_Trader>
+            <HHTools_CascadiaRough_Leader>1</HHTools_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_CascadiaRough_Civilian>20</HHTools_CascadiaRough_Civilian>
+            <HHTools_CascadiaRough_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_CascadiaRough_Child>
+            <HHTools_CascadiaRough_Fighter>6</HHTools_CascadiaRough_Fighter>
+            <HHTools_CascadiaRough_Trader>4</HHTools_CascadiaRough_Trader>
+            <HHTools_CascadiaRough_Leader>2</HHTools_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_CascadiaRough_Trader>1</HHTools_CascadiaRough_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_CascadiaRough_Civilian>3</HHTools_CascadiaRough_Civilian>
+            <HHTools_CascadiaRough_Fighter>10</HHTools_CascadiaRough_Fighter>
+            <HHTools_CascadiaRough_Leader>1</HHTools_CascadiaRough_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_CascadiaRough_Civilian>12</HHTools_CascadiaRough_Civilian>
+            <HHTools_CascadiaRough_Fighter>10</HHTools_CascadiaRough_Fighter>
+            <HHTools_CascadiaRough_Trader>3</HHTools_CascadiaRough_Trader>
+            <HHTools_CascadiaRough_Leader>2</HHTools_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRough_Miner>1</HHTools_CascadiaRough_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRough_Hunter>1</HHTools_CascadiaRough_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRough_Logger>1</HHTools_CascadiaRough_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRough_Farmer>1</HHTools_CascadiaRough_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Raider"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_CascadiaRaider_Civilian>6</HHTools_CascadiaRaider_Civilian>
+            <HHTools_CascadiaRaider_Fighter>16</HHTools_CascadiaRaider_Fighter>
+            <HHTools_CascadiaRaider_Leader>3</HHTools_CascadiaRaider_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_CascadiaRaider_Trader>1</HHTools_CascadiaRaider_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_CascadiaRaider_Civilian>4</HHTools_CascadiaRaider_Civilian>
+            <HHTools_CascadiaRaider_Fighter>10</HHTools_CascadiaRaider_Fighter>
+            <HHTools_CascadiaRaider_Leader>2</HHTools_CascadiaRaider_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_CascadiaRaider_Civilian>10</HHTools_CascadiaRaider_Civilian>
+            <HHTools_CascadiaRaider_Fighter>12</HHTools_CascadiaRaider_Fighter>
+            <HHTools_CascadiaRaider_Trader>2</HHTools_CascadiaRaider_Trader>
+            <HHTools_CascadiaRaider_Leader>3</HHTools_CascadiaRaider_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRaider_Miner>1</HHTools_CascadiaRaider_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRaider_Hunter>1</HHTools_CascadiaRaider_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRaider_Logger>1</HHTools_CascadiaRaider_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaRaider_Farmer>1</HHTools_CascadiaRaider_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Tribal"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_CascadiaTribal_Civilian>4</HHTools_CascadiaTribal_Civilian>
+            <HHTools_CascadiaTribal_Fighter>14</HHTools_CascadiaTribal_Fighter>
+            <HHTools_CascadiaTribal_Leader>2</HHTools_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_CascadiaTribal_Civilian>20</HHTools_CascadiaTribal_Civilian>
+            <HHTools_CascadiaTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_CascadiaTribal_Child>
+            <HHTools_CascadiaTribal_Fighter>8</HHTools_CascadiaTribal_Fighter>
+            <HHTools_CascadiaTribal_Trader>4</HHTools_CascadiaTribal_Trader>
+            <HHTools_CascadiaTribal_Leader>2</HHTools_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_CascadiaTribal_Trader>1</HHTools_CascadiaTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_CascadiaTribal_Fighter>10</HHTools_CascadiaTribal_Fighter>
+            <HHTools_CascadiaTribal_Leader>2</HHTools_CascadiaTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_CascadiaTribal_Civilian>12</HHTools_CascadiaTribal_Civilian>
+            <HHTools_CascadiaTribal_Fighter>10</HHTools_CascadiaTribal_Fighter>
+            <HHTools_CascadiaTribal_Trader>3</HHTools_CascadiaTribal_Trader>
+            <HHTools_CascadiaTribal_Leader>2</HHTools_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <HHTools_CascadiaTribal_Fighter>10</HHTools_CascadiaTribal_Fighter>
+            <HHTools_CascadiaTribal_Leader>3</HHTools_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaTribal_Miner>1</HHTools_CascadiaTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaTribal_Hunter>1</HHTools_CascadiaTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaTribal_Logger>1</HHTools_CascadiaTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CascadiaTribal_Farmer>1</HHTools_CascadiaTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Civil"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_NuevoTexicoCivil_Civilian>4</HHTools_NuevoTexicoCivil_Civilian>
+            <HHTools_NuevoTexicoCivil_Fighter>14</HHTools_NuevoTexicoCivil_Fighter>
+            <HHTools_NuevoTexicoCivil_Trader>2</HHTools_NuevoTexicoCivil_Trader>
+            <HHTools_NuevoTexicoCivil_Leader>1</HHTools_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_NuevoTexicoCivil_Civilian>20</HHTools_NuevoTexicoCivil_Civilian>
+            <HHTools_NuevoTexicoCivil_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_NuevoTexicoCivil_Child>
+            <HHTools_NuevoTexicoCivil_Fighter>6</HHTools_NuevoTexicoCivil_Fighter>
+            <HHTools_NuevoTexicoCivil_Trader>4</HHTools_NuevoTexicoCivil_Trader>
+            <HHTools_NuevoTexicoCivil_Leader>2</HHTools_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_NuevoTexicoCivil_Trader>1</HHTools_NuevoTexicoCivil_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_NuevoTexicoCivil_Civilian>3</HHTools_NuevoTexicoCivil_Civilian>
+            <HHTools_NuevoTexicoCivil_Fighter>10</HHTools_NuevoTexicoCivil_Fighter>
+            <HHTools_NuevoTexicoCivil_Leader>1</HHTools_NuevoTexicoCivil_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_NuevoTexicoCivil_Civilian>12</HHTools_NuevoTexicoCivil_Civilian>
+            <HHTools_NuevoTexicoCivil_Fighter>10</HHTools_NuevoTexicoCivil_Fighter>
+            <HHTools_NuevoTexicoCivil_Trader>3</HHTools_NuevoTexicoCivil_Trader>
+            <HHTools_NuevoTexicoCivil_Leader>2</HHTools_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoCivil_Miner>1</HHTools_NuevoTexicoCivil_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoCivil_Hunter>1</HHTools_NuevoTexicoCivil_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoCivil_Logger>1</HHTools_NuevoTexicoCivil_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoCivil_Farmer>1</HHTools_NuevoTexicoCivil_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Rough"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_NuevoTexicoRough_Civilian>4</HHTools_NuevoTexicoRough_Civilian>
+            <HHTools_NuevoTexicoRough_Fighter>14</HHTools_NuevoTexicoRough_Fighter>
+            <HHTools_NuevoTexicoRough_Trader>2</HHTools_NuevoTexicoRough_Trader>
+            <HHTools_NuevoTexicoRough_Leader>1</HHTools_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_NuevoTexicoRough_Civilian>20</HHTools_NuevoTexicoRough_Civilian>
+            <HHTools_NuevoTexicoRough_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_NuevoTexicoRough_Child>
+            <HHTools_NuevoTexicoRough_Fighter>6</HHTools_NuevoTexicoRough_Fighter>
+            <HHTools_NuevoTexicoRough_Trader>4</HHTools_NuevoTexicoRough_Trader>
+            <HHTools_NuevoTexicoRough_Leader>2</HHTools_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_NuevoTexicoRough_Trader>1</HHTools_NuevoTexicoRough_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_NuevoTexicoRough_Civilian>3</HHTools_NuevoTexicoRough_Civilian>
+            <HHTools_NuevoTexicoRough_Fighter>10</HHTools_NuevoTexicoRough_Fighter>
+            <HHTools_NuevoTexicoRough_Leader>1</HHTools_NuevoTexicoRough_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_NuevoTexicoRough_Civilian>12</HHTools_NuevoTexicoRough_Civilian>
+            <HHTools_NuevoTexicoRough_Fighter>10</HHTools_NuevoTexicoRough_Fighter>
+            <HHTools_NuevoTexicoRough_Trader>3</HHTools_NuevoTexicoRough_Trader>
+            <HHTools_NuevoTexicoRough_Leader>2</HHTools_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRough_Miner>1</HHTools_NuevoTexicoRough_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRough_Hunter>1</HHTools_NuevoTexicoRough_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRough_Logger>1</HHTools_NuevoTexicoRough_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRough_Farmer>1</HHTools_NuevoTexicoRough_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Raider"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_NuevoTexicoRaider_Civilian>6</HHTools_NuevoTexicoRaider_Civilian>
+            <HHTools_NuevoTexicoRaider_Fighter>16</HHTools_NuevoTexicoRaider_Fighter>
+            <HHTools_NuevoTexicoRaider_Leader>3</HHTools_NuevoTexicoRaider_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_NuevoTexicoRaider_Trader>1</HHTools_NuevoTexicoRaider_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_NuevoTexicoRaider_Civilian>4</HHTools_NuevoTexicoRaider_Civilian>
+            <HHTools_NuevoTexicoRaider_Fighter>10</HHTools_NuevoTexicoRaider_Fighter>
+            <HHTools_NuevoTexicoRaider_Leader>2</HHTools_NuevoTexicoRaider_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_NuevoTexicoRaider_Civilian>10</HHTools_NuevoTexicoRaider_Civilian>
+            <HHTools_NuevoTexicoRaider_Fighter>12</HHTools_NuevoTexicoRaider_Fighter>
+            <HHTools_NuevoTexicoRaider_Trader>2</HHTools_NuevoTexicoRaider_Trader>
+            <HHTools_NuevoTexicoRaider_Leader>3</HHTools_NuevoTexicoRaider_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRaider_Miner>1</HHTools_NuevoTexicoRaider_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRaider_Hunter>1</HHTools_NuevoTexicoRaider_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRaider_Logger>1</HHTools_NuevoTexicoRaider_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoRaider_Farmer>1</HHTools_NuevoTexicoRaider_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Tribal"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_NuevoTexicoTribal_Civilian>4</HHTools_NuevoTexicoTribal_Civilian>
+            <HHTools_NuevoTexicoTribal_Fighter>14</HHTools_NuevoTexicoTribal_Fighter>
+            <HHTools_NuevoTexicoTribal_Leader>2</HHTools_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_NuevoTexicoTribal_Civilian>20</HHTools_NuevoTexicoTribal_Civilian>
+            <HHTools_NuevoTexicoTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_NuevoTexicoTribal_Child>
+            <HHTools_NuevoTexicoTribal_Fighter>8</HHTools_NuevoTexicoTribal_Fighter>
+            <HHTools_NuevoTexicoTribal_Trader>4</HHTools_NuevoTexicoTribal_Trader>
+            <HHTools_NuevoTexicoTribal_Leader>2</HHTools_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_NuevoTexicoTribal_Trader>1</HHTools_NuevoTexicoTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_NuevoTexicoTribal_Fighter>10</HHTools_NuevoTexicoTribal_Fighter>
+            <HHTools_NuevoTexicoTribal_Leader>2</HHTools_NuevoTexicoTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_NuevoTexicoTribal_Civilian>12</HHTools_NuevoTexicoTribal_Civilian>
+            <HHTools_NuevoTexicoTribal_Fighter>10</HHTools_NuevoTexicoTribal_Fighter>
+            <HHTools_NuevoTexicoTribal_Trader>3</HHTools_NuevoTexicoTribal_Trader>
+            <HHTools_NuevoTexicoTribal_Leader>2</HHTools_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <HHTools_NuevoTexicoTribal_Fighter>10</HHTools_NuevoTexicoTribal_Fighter>
+            <HHTools_NuevoTexicoTribal_Leader>3</HHTools_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoTribal_Miner>1</HHTools_NuevoTexicoTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoTribal_Hunter>1</HHTools_NuevoTexicoTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoTribal_Logger>1</HHTools_NuevoTexicoTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NuevoTexicoTribal_Farmer>1</HHTools_NuevoTexicoTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Ghoul"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_GhoulSettlement_Civilian>4</HHTools_GhoulSettlement_Civilian>
+            <HHTools_GhoulSettlement_Fighter>14</HHTools_GhoulSettlement_Fighter>
+            <HHTools_GhoulSettlement_Trader>2</HHTools_GhoulSettlement_Trader>
+            <HHTools_GhoulSettlement_Leader>1</HHTools_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_GhoulSettlement_Civilian>20</HHTools_GhoulSettlement_Civilian>
+            <HHTools_GhoulSettlement_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_GhoulSettlement_Child>
+            <HHTools_GhoulSettlement_Fighter>6</HHTools_GhoulSettlement_Fighter>
+            <HHTools_GhoulSettlement_Trader>4</HHTools_GhoulSettlement_Trader>
+            <HHTools_GhoulSettlement_Leader>2</HHTools_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_GhoulSettlement_Trader>1</HHTools_GhoulSettlement_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_GhoulSettlement_Civilian>3</HHTools_GhoulSettlement_Civilian>
+            <HHTools_GhoulSettlement_Fighter>10</HHTools_GhoulSettlement_Fighter>
+            <HHTools_GhoulSettlement_Leader>1</HHTools_GhoulSettlement_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_GhoulSettlement_Civilian>12</HHTools_GhoulSettlement_Civilian>
+            <HHTools_GhoulSettlement_Fighter>10</HHTools_GhoulSettlement_Fighter>
+            <HHTools_GhoulSettlement_Trader>3</HHTools_GhoulSettlement_Trader>
+            <HHTools_GhoulSettlement_Leader>2</HHTools_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_GhoulSettlement_Miner>1</HHTools_GhoulSettlement_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_GhoulSettlement_Hunter>1</HHTools_GhoulSettlement_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_GhoulSettlement_Logger>1</HHTools_GhoulSettlement_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_GhoulSettlement_Farmer>1</HHTools_GhoulSettlement_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_SuperMutant"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <HHTools_SuperMutantStronghold_Civilian>4</HHTools_SuperMutantStronghold_Civilian>
+            <HHTools_SuperMutantStronghold_Fighter>14</HHTools_SuperMutantStronghold_Fighter>
+            <HHTools_SuperMutantStronghold_Trader>2</HHTools_SuperMutantStronghold_Trader>
+            <HHTools_SuperMutantStronghold_Leader>1</HHTools_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_SuperMutantStronghold_Civilian>20</HHTools_SuperMutantStronghold_Civilian>
+            <HHTools_SuperMutantStronghold_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_SuperMutantStronghold_Child>
+            <HHTools_SuperMutantStronghold_Fighter>6</HHTools_SuperMutantStronghold_Fighter>
+            <HHTools_SuperMutantStronghold_Trader>4</HHTools_SuperMutantStronghold_Trader>
+            <HHTools_SuperMutantStronghold_Leader>2</HHTools_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_SuperMutantStronghold_Trader>1</HHTools_SuperMutantStronghold_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_SuperMutantStronghold_Civilian>3</HHTools_SuperMutantStronghold_Civilian>
+            <HHTools_SuperMutantStronghold_Fighter>10</HHTools_SuperMutantStronghold_Fighter>
+            <HHTools_SuperMutantStronghold_Leader>1</HHTools_SuperMutantStronghold_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_SuperMutantStronghold_Civilian>12</HHTools_SuperMutantStronghold_Civilian>
+            <HHTools_SuperMutantStronghold_Fighter>10</HHTools_SuperMutantStronghold_Fighter>
+            <HHTools_SuperMutantStronghold_Trader>3</HHTools_SuperMutantStronghold_Trader>
+            <HHTools_SuperMutantStronghold_Leader>2</HHTools_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantStronghold_Miner>1</HHTools_SuperMutantStronghold_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantStronghold_Hunter>1</HHTools_SuperMutantStronghold_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantStronghold_Logger>1</HHTools_SuperMutantStronghold_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantStronghold_Farmer>1</HHTools_SuperMutantStronghold_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Army"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_SuperMutantArmy_Civilian>6</HHTools_SuperMutantArmy_Civilian>
+            <HHTools_SuperMutantArmy_Fighter>16</HHTools_SuperMutantArmy_Fighter>
+            <HHTools_SuperMutantArmy_Leader>3</HHTools_SuperMutantArmy_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_SuperMutantArmy_Trader>1</HHTools_SuperMutantArmy_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_SuperMutantArmy_Civilian>4</HHTools_SuperMutantArmy_Civilian>
+            <HHTools_SuperMutantArmy_Fighter>10</HHTools_SuperMutantArmy_Fighter>
+            <HHTools_SuperMutantArmy_Leader>2</HHTools_SuperMutantArmy_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_SuperMutantArmy_Civilian>10</HHTools_SuperMutantArmy_Civilian>
+            <HHTools_SuperMutantArmy_Fighter>12</HHTools_SuperMutantArmy_Fighter>
+            <HHTools_SuperMutantArmy_Trader>2</HHTools_SuperMutantArmy_Trader>
+            <HHTools_SuperMutantArmy_Leader>3</HHTools_SuperMutantArmy_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantArmy_Miner>1</HHTools_SuperMutantArmy_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantArmy_Hunter>1</HHTools_SuperMutantArmy_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantArmy_Logger>1</HHTools_SuperMutantArmy_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SuperMutantArmy_Farmer>1</HHTools_SuperMutantArmy_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Slanter"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_SlanterTribal_Civilian>4</HHTools_SlanterTribal_Civilian>
+            <HHTools_SlanterTribal_Fighter>14</HHTools_SlanterTribal_Fighter>
+            <HHTools_SlanterTribal_Leader>2</HHTools_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_SlanterTribal_Civilian>20</HHTools_SlanterTribal_Civilian>
+            <HHTools_SlanterTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_SlanterTribal_Child>
+            <HHTools_SlanterTribal_Fighter>8</HHTools_SlanterTribal_Fighter>
+            <HHTools_SlanterTribal_Trader>4</HHTools_SlanterTribal_Trader>
+            <HHTools_SlanterTribal_Leader>2</HHTools_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_SlanterTribal_Trader>1</HHTools_SlanterTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_SlanterTribal_Fighter>10</HHTools_SlanterTribal_Fighter>
+            <HHTools_SlanterTribal_Leader>2</HHTools_SlanterTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_SlanterTribal_Civilian>12</HHTools_SlanterTribal_Civilian>
+            <HHTools_SlanterTribal_Fighter>10</HHTools_SlanterTribal_Fighter>
+            <HHTools_SlanterTribal_Trader>3</HHTools_SlanterTribal_Trader>
+            <HHTools_SlanterTribal_Leader>2</HHTools_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <HHTools_SlanterTribal_Fighter>10</HHTools_SlanterTribal_Fighter>
+            <HHTools_SlanterTribal_Leader>3</HHTools_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SlanterTribal_Miner>1</HHTools_SlanterTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SlanterTribal_Hunter>1</HHTools_SlanterTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SlanterTribal_Logger>1</HHTools_SlanterTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_SlanterTribal_Farmer>1</HHTools_SlanterTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Numen"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_NumenTribal_Civilian>4</HHTools_NumenTribal_Civilian>
+            <HHTools_NumenTribal_Fighter>14</HHTools_NumenTribal_Fighter>
+            <HHTools_NumenTribal_Leader>2</HHTools_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_NumenTribal_Civilian>20</HHTools_NumenTribal_Civilian>
+            <HHTools_NumenTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_NumenTribal_Child>
+            <HHTools_NumenTribal_Fighter>8</HHTools_NumenTribal_Fighter>
+            <HHTools_NumenTribal_Trader>4</HHTools_NumenTribal_Trader>
+            <HHTools_NumenTribal_Leader>2</HHTools_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_NumenTribal_Trader>1</HHTools_NumenTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_NumenTribal_Fighter>10</HHTools_NumenTribal_Fighter>
+            <HHTools_NumenTribal_Leader>2</HHTools_NumenTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_NumenTribal_Civilian>12</HHTools_NumenTribal_Civilian>
+            <HHTools_NumenTribal_Fighter>10</HHTools_NumenTribal_Fighter>
+            <HHTools_NumenTribal_Trader>3</HHTools_NumenTribal_Trader>
+            <HHTools_NumenTribal_Leader>2</HHTools_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <HHTools_NumenTribal_Fighter>10</HHTools_NumenTribal_Fighter>
+            <HHTools_NumenTribal_Leader>3</HHTools_NumenTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NumenTribal_Miner>1</HHTools_NumenTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NumenTribal_Hunter>1</HHTools_NumenTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NumenTribal_Logger>1</HHTools_NumenTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_NumenTribal_Farmer>1</HHTools_NumenTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Critter"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <HHTools_CritterTribal_Civilian>4</HHTools_CritterTribal_Civilian>
+            <HHTools_CritterTribal_Fighter>14</HHTools_CritterTribal_Fighter>
+            <HHTools_CritterTribal_Leader>2</HHTools_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <HHTools_CritterTribal_Civilian>20</HHTools_CritterTribal_Civilian>
+            <HHTools_CritterTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</HHTools_CritterTribal_Child>
+            <HHTools_CritterTribal_Fighter>8</HHTools_CritterTribal_Fighter>
+            <HHTools_CritterTribal_Trader>4</HHTools_CritterTribal_Trader>
+            <HHTools_CritterTribal_Leader>2</HHTools_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <HHTools_CritterTribal_Trader>1</HHTools_CritterTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <HHTools_CritterTribal_Fighter>10</HHTools_CritterTribal_Fighter>
+            <HHTools_CritterTribal_Leader>2</HHTools_CritterTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <HHTools_CritterTribal_Civilian>12</HHTools_CritterTribal_Civilian>
+            <HHTools_CritterTribal_Fighter>10</HHTools_CritterTribal_Fighter>
+            <HHTools_CritterTribal_Trader>3</HHTools_CritterTribal_Trader>
+            <HHTools_CritterTribal_Leader>2</HHTools_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <HHTools_CritterTribal_Fighter>10</HHTools_CritterTribal_Fighter>
+            <HHTools_CritterTribal_Leader>3</HHTools_CritterTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CritterTribal_Miner>1</HHTools_CritterTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CritterTribal_Hunter>1</HHTools_CritterTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CritterTribal_Logger>1</HHTools_CritterTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <HHTools_CritterTribal_Farmer>1</HHTools_CritterTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+</Patch>

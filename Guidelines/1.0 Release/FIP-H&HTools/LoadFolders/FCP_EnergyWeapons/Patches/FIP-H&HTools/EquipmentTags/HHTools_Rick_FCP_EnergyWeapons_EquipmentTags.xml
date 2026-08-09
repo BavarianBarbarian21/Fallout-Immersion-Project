@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Energy Weapons (Rick.FCP.EnergyWeapons). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_AER14_Prototype"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_AER14_Prototype"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_AER14_Prototype"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkI"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkI"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CascadiaRaider</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_LegionElite</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkI"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CascadiaRaider</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_LegionElite</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkII"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkII"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CascadiaRaider</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_LegionElite</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Flamer_MkII"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CascadiaRaider</li>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_LegionElite</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser_MkI"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser_MkI"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gatling_Laser_MkI"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Gauss_Minigun"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gauss_Minigun"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gauss_Minigun"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Gauss_Sniper_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gauss_Sniper_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Gauss_Sniper_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Glock_86_Plasma_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Glock_86_Plasma_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Glock_86_Plasma_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Heavy_Incinerator"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Heavy_Incinerator"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Heavy_Incinerator"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Flame</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Laser_Carbine"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Carbine"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Carbine"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Laser_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Laser_RCW"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_RCW"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_RCW"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Laser_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Laser_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_M72_A2_Gauss_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_M72_A2_Gauss_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_M72_A2_Gauss_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_M72_Gauss_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_M72_Gauss_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_M72_Gauss_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_MF_Hyperbreeder_Alpha"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_MF_Hyperbreeder_Alpha"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_MF_Hyperbreeder_Alpha"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Multiplas_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Multiplas_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Multiplas_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_PPK12_Gauss_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_PPK12_Gauss_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_PPK12_Gauss_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Gauss</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_P_94_Plasma_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_P_94_Plasma_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_P_94_Plasma_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Pew_Pew"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Pew_Pew"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Pew_Pew"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster_MkI"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster_MkI"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Caster_MkI"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Defender"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Defender"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Defender"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Machine_Gun"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Machine_Gun"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Machine_Gun"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Plasma_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Plasma_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Q35_Matter_Modulator"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Q35_Matter_Modulator"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Q35_Matter_Modulator"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Recharger_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Recharger_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Recharger_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Recharger_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Recharger_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Recharger_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Sprtel_Wood_9700_Unique"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Sprtel_Wood_9700_Unique"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Heavy</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Sprtel_Wood_9700_Unique"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Heavy</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Tri_Beam_Laser_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Tri_Beam_Laser_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Tri_Beam_Laser_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Wattz_1000_Laser_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Wattz_1000_Laser_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Wattz_1000_Laser_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_RoughSettler</li>
+          <li>FIPW_Pool_SettlerGuard</li>
+          <li>FIPW_Pool_SimpleLaserTribal</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_USArmy</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Wattz_2000_Laser_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Wattz_2000_Laser_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Wattz_2000_Laser_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_YK32_Pulse_Pistol"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_YK32_Pulse_Pistol"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Pulse</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_YK32_Pulse_Pistol"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Pulse</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_YK42B_Pulse_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_YK42B_Pulse_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Pulse</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_YK42B_Pulse_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Pulse</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

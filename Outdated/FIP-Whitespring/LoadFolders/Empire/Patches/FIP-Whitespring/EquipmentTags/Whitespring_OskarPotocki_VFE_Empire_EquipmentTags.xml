@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Factions Expanded - Empire (OskarPotocki.VFE.Empire). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VEE_Gun_Fletcher"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VEE_Gun_Fletcher"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VEE_Gun_Fletcher"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_AbsolverHelmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_AbsolverHelmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveFallback</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_AbsolverHelmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_AbsolverHelmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveFallback</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_AbsolverHelmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveFallback</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_ArmorAbsolver"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_ArmorAbsolver"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveFallback</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_ArmorAbsolver"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_ArmorAbsolver"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveFallback</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_ArmorAbsolver"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveFallback</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_ArmorDeserter"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_ArmorDeserter"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_ArmorDeserter"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_ArmorDeserter"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_ArmorDeserter"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_DeserterHelmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_DeserterHelmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_DeserterHelmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_DeserterHelmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_DeserterHelmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryCuirass"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryCuirass"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveFallback</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryCuirass"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryCuirass"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveFallback</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryCuirass"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveFallback</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryHelmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryHelmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveFallback</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryHelmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryHelmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveFallback</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_JanissaryHelmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveFallback</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Apparel_TechfriarCrown"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Apparel_TechfriarCrown"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveScientist</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFEE_Apparel_TechfriarCrown"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_TechfriarCrown"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveScientist</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFEE_Apparel_TechfriarCrown"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveScientist</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_Gun_ChargeThumper"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Gun_ChargeThumper"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_Gun_ChargeThumper"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Laser</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_MeleeWeapon_Toxblade"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_MeleeWeapon_Toxblade"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_MeleeWeapon_Toxblade"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFEE_MeleeWeapon_ToxbladeBladelink"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFE_Apparel_StellicRobe"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFE_Apparel_StellicRobe"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveFallback</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFE_Apparel_StellicRobe"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFE_Apparel_StellicRobe"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveFallback</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFE_Apparel_StellicRobe"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveFallback</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

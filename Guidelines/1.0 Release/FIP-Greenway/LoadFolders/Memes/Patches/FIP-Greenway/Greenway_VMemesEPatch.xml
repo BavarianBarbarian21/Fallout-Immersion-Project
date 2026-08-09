@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Giant ants replace vanilla insectoids throughout FIP-Arktos. Keep the
+    gameplay meme, but make its generated ideology prose describe an
+    AntAgonizer-style wasteland cult instead of a generic space-insect faith.
+  -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/generalRules</xpath>
+    <value>
+      <generalRules>
+        <rulesStrings>
+          <li>memeAdjective-&gt;chitinous</li>
+          <li>memeAdjective-&gt;colony-bound</li>
+          <li>memeAdjective-&gt;ant-revering</li>
+          <li>memeCreed-&gt;the colony</li>
+          <li>memeCreed-&gt;ant doctrine</li>
+          <li>memeHyphenPrefix-&gt;ant</li>
+          <li>memeHyphenPrefix-&gt;hive</li>
+          <li>memeConcept-&gt;giant ants</li>
+          <li>memeConcept-&gt;the discipline of the colony</li>
+        </rulesStrings>
+      </generalRules>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/descriptionMaker</xpath>
+    <value>
+      <descriptionMaker>
+        <rules>
+          <rulesStrings>
+            <li>creation(tag=meme_InsectoidSupremacy)-&gt;[deity0_name] placed the first queen beneath the poisoned earth and taught her brood to outlast the folly of humankind.</li>
+            <li>episode(uses=1,tag=meme_InsectoidSupremacy)-&gt;[deity0_name] commanded [deity0_possessive] followers to study the giant ants: one purpose, one colony, and no weakness wasted.</li>
+            <li>intro(tag=meme_InsectoidSupremacy)-&gt;In the ruins of [place_name], the [memberNamePlural] raised a human colony modeled after the ant nests beneath their feet.</li>
+            <li>conflict(tag=meme_InsectoidSupremacy)-&gt;A fearful [foeLeader] ordered every giant ant nest burned, refusing to see anything but vermin.</li>
+            <li>founderJoin(tag=meme_InsectoidSupremacy)-&gt;[founderName] confronted the [foeLeader] and demonstrated that the wasteland's ants could be understood, guided, and survived.</li>
+            <li>victory(tag=meme_InsectoidSupremacy)-&gt;The discipline of the colony prevailed, and even the [foeLeader] was forced to respect the queen and her brood.</li>
+            <li>setup(tag=meme_InsectoidSupremacy)-&gt;[founderName] was a wasteland naturalist who survived for years among irradiated ant colonies and learned to read their trails, pheromones, and warning signs.</li>
+            <li>story(uses=1,tag=meme_InsectoidSupremacy)-&gt;Calling [founder_objective] the AntAgonizer, settlers mocked the armor and sermons until trained giant ants drove off the raiders at their gates.</li>
+            <li>lessonIntro(tag=meme_InsectoidSupremacy)-&gt;The old world collapsed under its own divisions, while the colony endured. This proves that</li>
+            <li>lesson(tag=meme_InsectoidSupremacy)-&gt;discipline, sacrifice, and loyalty to the colony are stronger than isolated human ambition</li>
+            <li>lessonReinforcement(tag=meme_InsectoidSupremacy)-&gt;Giant ants thrive in poisoned soil because every caste serves the whole. The wastes demand the same unity from us.</li>
+            <li>archistBasis(tag=meme_InsectoidSupremacy)-&gt;Pre-War laboratories altered the ant genome, but radiation and survival perfected what their scientists began.</li>
+            <li>archistFact(tag=meme_InsectoidSupremacy)-&gt;The giant ant is living proof that engineered life can escape its makers and master the wasteland.</li>
+            <li>archistProphecy(tag=meme_InsectoidSupremacy)-&gt;[inTheEnd], humanity will either learn the discipline of the colony or be swept aside by it.</li>
+            <li>animistBasis(tag=meme_InsectoidSupremacy)-&gt;The queen beneath the earth embodies endurance, fertility, and the will of the colony.</li>
+            <li>animistFact(tag=meme_InsectoidSupremacy)-&gt;Every worker, soldier, and queen carries the same unbroken purpose through the poisoned land.</li>
+            <li>animistProphecy(tag=meme_InsectoidSupremacy)-&gt;[itIsSaid] those who respect the trails and nests of the giant ants will never be abandoned by the land.</li>
+            <li>serketistProphecy(tag=meme_InsectoidSupremacy)-&gt;[itIsSaid] the faithful will become one colony beneath a queen strong enough to command the wastes.</li>
+            <li>chthonianProphecy(tag=meme_InsectoidSupremacy)-&gt;Deep nests touch forgotten caverns where mutant queens guard secrets no surface dweller was meant to know.</li>
+            <li>esotericismProphecy(tag=meme_InsectoidSupremacy)-&gt;Pheromone trails and the geometry of ant tunnels preserve a language older than any surviving settlement.</li>
+            <li>eschatologismFact(tag=meme_InsectoidSupremacy)-&gt;When the final settlements fall, the colonies beneath them will continue to feed, breed, and expand.</li>
+            <li>introMemo(tag=meme_InsectoidSupremacy)-&gt;Pest control is suspended. All giant ant sightings are to be reported to the colony handler for observation and possible conditioning.</li>
+            <li>alienistProphecy(tag=meme_InsectoidSupremacy)-&gt;The ant strains born from Pre-War experimentation are not mistakes; they are heirs adapted to the world humanity created.</li>
+          </rulesStrings>
+        </rules>
+      </descriptionMaker>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/symbolPacks</xpath>
+    <value>
+      <symbolPacks>
+        <li>
+          <ideoName>AntAgonizer</ideoName>
+          <theme>giant ants</theme>
+          <adjective>chitinous</adjective>
+          <member>ant devotee</member>
+        </li>
+      </symbolPacks>
+    </value>
+  </Operation>
+
+  <!-- The original preset depended on the disabled Egyptian Serketist structure. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Insectoid_Psykers"]/memes</xpath>
+    <value>
+      <memes>
+        <li>VME_InsectoidSupremacy</li>
+        <li>Tunneler</li>
+        <li>Collectivist</li>
+        <li>VME_Gestalt</li>
+      </memes>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RulePackDef[defName="VME_InsectoidHerder"]/rulePack</xpath>
+    <value>
+      <rulePack>
+        <rulesStrings>
+          <li>r_roleName(p=7)-&gt;[firstPart][secondPart]</li>
+          <li>r_roleName-&gt;AntAgonizer</li>
+          <li>firstPart-&gt;Ant </li>
+          <li>firstPart-&gt;Brood </li>
+          <li>firstPart-&gt;Chitin </li>
+          <li>firstPart-&gt;Colony </li>
+          <li>firstPart-&gt;Queen's </li>
+          <li>secondPart(p=4)-&gt;Handler</li>
+          <li>secondPart(p=4)-&gt;Keeper</li>
+          <li>secondPart(p=4)-&gt;Speaker</li>
+          <li>secondPart(p=4)-&gt;Warden</li>
+          <li>secondPart(p=4)-&gt;Caller</li>
+        </rulesStrings>
+      </rulePack>
+    </value>
+  </Operation>
+
+  <!-- Government contradictions across VMemesE and Greenway. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="Greenway_Government_Democratic"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_DemocraticVsAutocracy</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_GodEmperor" or defName="VME_Aristocratic"]/exclusionTags</xpath>
+    <value>
+      <li>FIP_DemocraticVsAutocracy</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_Structure_Authoritarianism" or defName="VME_Structure_CultOfPersonality"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_DemocraticVsAutocracy</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="Greenway_Government_Despotic"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_DespoticVsDemocracy</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_Republic" or defName="VME_Egalitarian"]/exclusionTags</xpath>
+    <value>
+      <li>FIP_DespoticVsDemocracy</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="Greenway_Government_Raider"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_RaiderGovernmentVsPacifism</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_Pacifist"]/exclusionTags</xpath>
+    <value>
+      <li>FIP_RaiderGovernmentVsPacifism</li>
+    </value>
+  </Operation>
+
+  <!-- Do not spend multiple meme slots on the same abolitionist identity. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="Greenway_DesertRanger" or defName="Greenway_Railroad"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_AbolitionistIdentity</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_Emancipation"]/exclusionTags</xpath>
+    <value>
+      <li>FIP_AbolitionistIdentity</li>
+    </value>
+  </Operation>
+
+  <!-- Purging mutation and pursuing forced evolution cannot coexist. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="Greenway_MutantPurge"]</xpath>
+    <value>
+      <exclusionTags>
+        <li>FIP_MutantPurgeVsForcedEvolution</li>
+      </exclusionTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/MemeDef[defName="VME_Fleshcrafters"]/exclusionTags</xpath>
+    <value>
+      <li>FIP_MutantPurgeVsForcedEvolution</li>
+    </value>
+  </Operation>
+
+  <!-- Fallout preset compositions. All referenced Greenway memes already exist. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Human_Hive"]/memes</xpath>
+    <value><memes><li>VME_Gestalt</li><li>Greenway_MutantMasters</li><li>Collectivist</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Egalitarian_Republic"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Democratic</li><li>VME_Republic</li><li>VME_Egalitarian</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Exalted_Gerontocracy"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Tribal</li><li>VME_ExaltedPriesthood</li><li>VME_Elders</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Factory_Drones"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Despotic</li><li>VME_Progressive</li><li>VME_HardcoreIndustrialism</li><li>Collectivist</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Corporate_Overlords"]/memes</xpath>
+    <value><memes><li>VME_Structure_Corporate</li><li>VME_Trader</li><li>VME_HardcoreIndustrialism</li><li>VME_Progressive</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_GodKing_Radicals"]/memes</xpath>
+    <value><memes><li>VME_Structure_CultOfPersonality</li><li>VME_ViolentConversion</li><li>VME_GodEmperor</li><li>Supremacist</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Cosmic_Cultists"]/memes</xpath>
+    <value><memes><li>Greenway_Religion_Hubology</li><li>VME_Astrology</li><li>Transhumanist</li><li>Proselytizer</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Flame_Seers"]/memes</xpath>
+    <value><memes><li>VME_Light</li><li>VME_FireWorship</li><li>Proselytizer</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Dwarven_Artificers"]/memes</xpath>
+    <value><memes><li>VME_Structure_Authoritarianism</li><li>Tunneler</li><li>VME_CraftCulture</li><li>VME_HardcoreIndustrialism</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Nordic_Matriarchy"]/memes</xpath>
+    <value><memes><li>VME_Structure_Pantheism</li><li>Raider</li><li>PainIsVirtue</li><li>FemaleSupremacy</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Steamworld_Neerdowells"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Democratic</li><li>Rancher</li><li>VME_CityBuilders</li><li>HumanPrimacy</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Medieval_Monarchists"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Despotic</li><li>Supremacist</li><li>MaleSupremacy</li><li>VME_Aristocratic</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Pleasure_Extremists"]/memes</xpath>
+    <value><memes><li>VME_Structure_Bacchanalianism</li><li>Greenway_ViceCity</li><li>HighLife</li><li>VME_PartyLife</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Eastern_Revivalists"]/memes</xpath>
+    <value><memes><li>Greenway_Religion_Shi</li><li>VME_Bushido</li><li>VME_Elders</li><li>Transhumanist</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Primitivistic_Nomads"]/memes</xpath>
+    <value><memes><li>Greenway_Government_Tribal</li><li>VME_Nomad</li><li>Greenway_ChemTrade</li><li>Raider</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Pestilent_Doomsayers"]/memes</xpath>
+    <value><memes><li>Greenway_Religion_ChildrenOfAtom</li><li>VME_Fleshcrafters</li><li>VME_HolyDiseases</li><li>PainIsVirtue</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Mechanoid_Technocrat"]/memes</xpath>
+    <value><memes><li>VME_Structure_Omnism</li><li>VME_MechanoidSupremacy</li><li>VME_Scrapper</li><li>Transhumanist</li><li>VME_Gestalt</li></memes></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/IdeoPresetDef[defName="VME_Ecological_Fascists"]/memes</xpath>
+    <value><memes><li>Greenway_Religion_Native</li><li>VME_Vegan</li><li>VME_ViolentConversion</li><li>TreeConnection</li><li>VME_ExaltedPriesthood</li></memes></value>
+  </Operation>
+
+  <!-- Royalty integration is optional in VMemesE. Translatable text lives in
+       the conditionally loaded VMemesE_Royalty language layer. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/MemeDef[defName="VME_Royal"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/MemeDef[defName="VME_Royal"]/exclusionTags</xpath>
+      <value><li>FIP_DemocraticVsAutocracy</li></value>
+    </match>
+  </Operation>
+
+</Patch>

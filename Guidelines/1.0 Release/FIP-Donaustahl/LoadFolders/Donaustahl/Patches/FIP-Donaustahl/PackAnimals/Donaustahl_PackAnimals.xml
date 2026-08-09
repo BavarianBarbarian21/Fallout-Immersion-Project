@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Normalize Muffalo to a low-weight fallback for every loaded NPC trader carrier list. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
+    <value>
+      <Muffalo>1</Muffalo>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader" and not(carriers)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader" and not(carriers)]</xpath>
+      <value>
+        <carriers>
+          <Muffalo>1</Muffalo>
+        </carriers>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- Add Muffalo once to every explicit biome list. Root biome definitions without a list receive one. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals</xpath>
+    <value>
+      <li>Muffalo</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[not(@ParentName) and not(allowedPackAnimals)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/BiomeDef[not(@ParentName) and not(allowedPackAnimals)]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>Muffalo</li>
+        </allowedPackAnimals>
+      </value>
+    </match>
+  </Operation>
+</Patch>

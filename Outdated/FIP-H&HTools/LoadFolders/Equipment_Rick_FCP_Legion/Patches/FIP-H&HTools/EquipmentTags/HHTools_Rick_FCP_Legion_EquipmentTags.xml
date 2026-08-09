@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Caesars Legion (Rick.FCP.Legion). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Caesar_Robes"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Caesar_Robes"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Caesar_Robes"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Caesar_Robes"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Caesar_Robes"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Centurion_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Hood"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Hood"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Hood"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Hood"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Explorer_Hood"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Legate_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Plate"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Plate"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Plate"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Plate"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Plate"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Praetorian_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Praetorian_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Praetorian_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Praetorian_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Praetorian_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Decanus_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Decanus_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Decanus_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Decanus_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Decanus_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Prime_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Decanus_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Decanus_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Decanus_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Decanus_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Decanus_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Recruit_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Tunic"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Tunic"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Tunic"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Tunic"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Tunic"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vest"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vest"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vest"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vest"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vest"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Decanus_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Decanus_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Decanus_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Decanus_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Decanus_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_LegionNative</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_LegionNative</li>
+            <li>FIPA_Pool_LegionRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Veteran_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_LegionNative</li>
+              <li>FIPA_Pool_LegionRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionElite</li>
+        <li>FIPA_Pool_LegionNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionElite</li>
+            <li>FIPA_Pool_LegionNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Legion_Vexillarius_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionElite</li>
+              <li>FIPA_Pool_LegionNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

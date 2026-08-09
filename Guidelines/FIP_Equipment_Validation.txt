@@ -1,0 +1,18 @@
+FIP distributed equipment compatibility validation
+==================================================
+
+Overall result: PASS
+Source equipment declarations: 826
+Generated XML files this run: 49
+Assignment status: assigned=660, internal_not_trade_item=64, unassigned_candidate=17, unique_or_quest_only=64, utility_not_pawn_gear=21
+
+Checks
+------
+[PASS] All generated equipment XML files parse: 49 files checked; 0 errors
+[PASS] Donaustahl owns no equipment compatibility output: generated=0, directories=0
+[PASS] FIP-H&HTools LoadFolders exist: 66 configured; 0 missing
+[PASS] FIP-Whitespring LoadFolders exist: 10 configured; 0 missing
+[PASS] Every assigned item has one generated tag target: expected=724, actual=724, missing=0, unexpected=0, duplicates=0
+[PASS] Every consumed equipment pool has assigned items: 54 consumed; 0 empty
+[PASS] Generated PawnKinds avoid cross-mod ParentName inheritance: 0 unsafe parents
+[PASS] Source inventory contains no XML parse errors: 0 source errors

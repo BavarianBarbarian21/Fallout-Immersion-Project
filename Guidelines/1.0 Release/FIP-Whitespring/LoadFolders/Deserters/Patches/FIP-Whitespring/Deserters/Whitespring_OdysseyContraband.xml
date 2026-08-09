@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- VFE Deserters' Odyssey overrides omit the category and otherwise log a fallback warning. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[(defName="Gun_ChargeRifle_Unique" or defName="Gun_ChargeLance_Unique")]/modExtensions/li[@Class="VFED.ContrabandExtension" and priority="100" and not(category)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[(defName="Gun_ChargeRifle_Unique" or defName="Gun_ChargeLance_Unique")]/modExtensions/li[@Class="VFED.ContrabandExtension" and priority="100" and not(category)]</xpath>
+      <value>
+        <category>VFED_Imperial</category>
+      </value>
+    </match>
+  </Operation>
+</Patch>

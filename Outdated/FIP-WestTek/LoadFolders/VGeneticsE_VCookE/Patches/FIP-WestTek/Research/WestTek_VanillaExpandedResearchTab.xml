@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Merge Vanilla Genetics Expanded into the shared Vanilla Expanded tree. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_HybridImplantology"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticCompatibility"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticMechahybridization"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+
+  <!-- Genetics occupies its own block to the right of Cooking and Brewing. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/researchViewX</xpath>
+    <value>
+      <researchViewX>5</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/researchViewX</xpath>
+    <value>
+      <researchViewX>5</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/researchViewX</xpath>
+    <value>
+      <researchViewX>5</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_HybridImplantology"]/researchViewX</xpath>
+    <value>
+      <researchViewX>7</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticCompatibility"]/researchViewX</xpath>
+    <value>
+      <researchViewX>7</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticMechahybridization"]/researchViewX</xpath>
+    <value>
+      <researchViewX>7</researchViewX>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ResearchTabDef[defName="GR_GeneticReseach"]</xpath>
+  </Operation>
+</Patch>

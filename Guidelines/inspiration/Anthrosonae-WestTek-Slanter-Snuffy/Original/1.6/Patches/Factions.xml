@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase" or @Name="PirateBandBase"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.00666</ATK_Anthrobear>
+					<ATK_Anthrocat>0.00666</ATK_Anthrocat>
+					<ATK_Anthrocow>0.00666</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.00666</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.00666</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.00666</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.00666</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.00666</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.00666</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.00666</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.00666</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.00666</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.00666</ATK_Anthroshark>
+					<ATK_Anthrowah>0.00666</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.00666</ATK_Anthrowolf>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+				<xpath>Defs/FactionDef[defName="OutlanderRefugee"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.00666</ATK_Anthrobear>
+					<ATK_Anthrocat>0.00666</ATK_Anthrocat>
+					<ATK_Anthrocow>0.00666</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.00666</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.00666</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.00666</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.00666</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.00666</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.00666</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.00666</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.00666</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.00666</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.00666</ATK_Anthroshark>
+					<ATK_Anthrowah>0.00666</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.00666</ATK_Anthrowolf>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[defName="Beggars" or defName="Pilgrims"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.00333</ATK_Anthrobear>
+					<ATK_Anthrocat>0.00333</ATK_Anthrocat>
+					<ATK_Anthrocow>0.00333</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.00333</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.00333</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.00333</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.00333</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.00333</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.00333</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.00333</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.00333</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.00333</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.00333</ATK_Anthroshark>
+					<ATK_Anthrowah>0.00333</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.00333</ATK_Anthrowolf>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Odyssey">
+				<xpath>Defs/FactionDef[defName="TradersGuild" or defName="Salvagers"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.0075</ATK_Anthrobear>
+					<ATK_Anthrocat>0.0075</ATK_Anthrocat>
+					<ATK_Anthrocow>0.0075</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.0075</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.0075</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.0075</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.0075</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.0075</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.0075</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.0075</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.0075</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.0075</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.0075</ATK_Anthroshark>
+					<ATK_Anthrowah>0.0075</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.0075</ATK_Anthrowolf>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="WK.Spacefarers">
+				<xpath>Defs/FactionDef[@Name="WK_SpacefarerFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.0075</ATK_Anthrobear>
+					<ATK_Anthrocat>0.0075</ATK_Anthrocat>
+					<ATK_Anthrocow>0.0075</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.0075</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.0075</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.0075</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.0075</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.0075</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.0075</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.0075</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.0075</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.0075</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.0075</ATK_Anthroshark>
+					<ATK_Anthrowah>0.0075</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.0075</ATK_Anthrowolf>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="OskarPotocki.VFE.Pirates">
+				<xpath>Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.00666</ATK_Anthrobear>
+					<ATK_Anthrocat>0.00666</ATK_Anthrocat>
+					<ATK_Anthrocow>0.00666</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.00666</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.00666</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.00666</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.00666</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.00666</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.00666</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.00666</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.00666</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.00666</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.00666</ATK_Anthroshark>
+					<ATK_Anthrowah>0.00666</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.00666</ATK_Anthrowolf>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">
+				<xpath>Defs/FactionDef[defName="SettlerCivil" or defName="SettlerRough" or defName="SettlerSavage"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.00333</ATK_Anthrobear>
+					<ATK_Anthrocat>0.00333</ATK_Anthrocat>
+					<ATK_Anthrocow>0.00333</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.00333</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.00333</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.00333</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.00333</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.00333</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.00333</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.00333</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.00333</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.00333</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.00333</ATK_Anthroshark>
+					<ATK_Anthrowah>0.00333</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.00333</ATK_Anthrowolf>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

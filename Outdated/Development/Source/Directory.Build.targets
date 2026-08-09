@@ -1,0 +1,10 @@
+<Project>
+  <Target Name="ValidateFipBuildEnvironment" BeforeTargets="ResolveAssemblyReferences">
+    <Error
+      Condition="'$(RimWorldManagedDir)' == '' or !Exists('$(RimWorldManagedDir)\Assembly-CSharp.dll')"
+      Text="RimWorld wurde nicht gefunden. Setze RimWorldInstallDir auf das RimWorld-Installationsverzeichnis." />
+    <Error
+      Condition="'$(FipNewModsRoot)' == '' or !Exists('$(FipNewModsRoot)')"
+      Text="Das getrennte Mod-Ausgabeverzeichnis New-Mods wurde nicht gefunden." />
+  </Target>
+</Project>

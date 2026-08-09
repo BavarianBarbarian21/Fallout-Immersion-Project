@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Tools (Rick.FCP.Core.Tools). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Hat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Hat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_MysteriousStranger</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Hat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Hat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_MysteriousStranger</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Hat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_MysteriousStranger</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Special_MysteriousStranger</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Special_MysteriousStranger</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Mysterious_Stranger_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Special_MysteriousStranger</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mark_IV"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mark_IV"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mark_IV"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mark_IV"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mark_IV"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mk_I"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mk_I"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mk_I"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mk_I"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Pipboy3000_Mk_I"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

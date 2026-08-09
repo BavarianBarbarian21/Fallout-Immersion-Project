@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--
+	// Fur presets are used for pawn generation, while
+	// fur colors are used in the "change fur color" window.
+    -->
+
+    <Anthrosonae.FurColorDef Name="ATK_FurColorBase" Abstract="True">
+		<selectionWeight>0</selectionWeight>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- Monochrome and near-monchrome -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Black</defName>
+        <label>black</label>
+        <primaryColor>(60,60,60)</primaryColor>
+        <secondaryColor>(60,60,60)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Gray</defName>
+        <label>gray</label>
+        <primaryColor>(110,110,110)</primaryColor>
+        <secondaryColor>(110,110,110)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+    
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_GrayLight</defName>
+        <label>light gray</label>
+        <primaryColor>(166,166,166)</primaryColor>
+        <secondaryColor>(166,166,166)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_GrayDark</defName>
+        <label>dark gray</label>
+        <primaryColor>(81,81,81)</primaryColor>
+        <secondaryColor>(81,81,81)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_White</defName>
+        <label>white</label>
+        <primaryColor>(250,250,250)</primaryColor>
+        <secondaryColor>(250,250,250)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Cream</defName>
+        <label>cream</label>
+        <primaryColor>(227,209,171)</primaryColor>
+        <secondaryColor>(227,209,171)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+
+    <!-- Browns and tans -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleBrown</defName>
+        <label>pale brown</label>
+        <primaryColor>(130,114,98)</primaryColor>
+        <secondaryColor>(130,114,98)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+    
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepBrown</defName>
+        <label>deep brown</label>
+        <primaryColor>(117,89,71)</primaryColor>
+        <secondaryColor>(117,89,71)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleTan</defName>
+        <label>pale tan</label>
+        <primaryColor>(223,214,183)</primaryColor>
+        <secondaryColor>(223,214,183)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepTan</defName>
+        <label>deep tan</label>
+        <primaryColor>(202,167,106)</primaryColor>
+        <secondaryColor>(202,167,106)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleOrange</defName>
+        <label>pale orange</label>
+        <primaryColor>(194,136,88)</primaryColor>
+        <secondaryColor>(194,136,88)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepOrange</defName>
+        <label>deep orange</label>
+        <primaryColor>(178,100,34)</primaryColor>
+        <secondaryColor>(178,100,34)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_BurntOrange</defName>
+        <label>burnt orange</label>
+        <primaryColor>(119,67,43)</primaryColor>
+        <secondaryColor>(119,67,43)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+
+	<!-- Exotics -->
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleBlue</defName>
+        <label>pale blue</label>
+        <primaryColor>(126,164,204)</primaryColor>
+        <secondaryColor>(126,164,204)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepBlue</defName>
+        <label>deep blue</label>
+        <primaryColor>(61,105,166)</primaryColor>
+        <secondaryColor>(61,105,166)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Purple</defName>
+        <label>purple</label>
+        <primaryColor>(97,87,195)</primaryColor>
+        <secondaryColor>(97,87,195)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleRed</defName>
+        <label>pale red</label>
+        <primaryColor>(201,112,112)</primaryColor>
+        <secondaryColor>(201,112,112)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepRed</defName>
+        <label>deep red</label>
+        <primaryColor>(150,62,62)</primaryColor>
+        <secondaryColor>(150,62,62)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Yellow</defName>
+        <label>deep yellow</label>
+        <primaryColor>(204,199,65)</primaryColor>
+        <secondaryColor>(204,199,65)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_PaleGreen</defName>
+        <label>pale green</label>
+        <primaryColor>(161,213,180)</primaryColor>
+        <secondaryColor>(161,213,180)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+    
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_DeepGreen</defName>
+        <label>deep green</label>
+        <primaryColor>(78,131,105)</primaryColor>
+        <secondaryColor>(78,131,105)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+    
+    <Anthrosonae.FurColorDef ParentName="ATK_FurColorBase">
+        <defName>ATK_FurColor_Pink</defName>
+        <label>pink</label>
+        <primaryColor>(241,192,218)</primaryColor>
+        <secondaryColor>(241,192,218)</secondaryColor>
+    </Anthrosonae.FurColorDef>
+
+</Defs>

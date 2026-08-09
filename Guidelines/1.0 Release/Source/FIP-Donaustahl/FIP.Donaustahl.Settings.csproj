@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>FIP.Donaustahl</RootNamespace>
+    <AssemblyName>FIP_Donaustahl_Settings</AssemblyName>
+    <OutputPath>$(FipReleaseRoot)FIP-Donaustahl\LoadFolders\Donaustahl\Assemblies\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

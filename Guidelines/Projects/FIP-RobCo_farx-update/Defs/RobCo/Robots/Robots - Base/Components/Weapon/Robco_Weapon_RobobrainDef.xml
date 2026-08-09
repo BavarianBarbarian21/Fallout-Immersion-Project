@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Robobrain_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <uiIconPath>Things/Weapons/RobCo_RobobrainHandUI</uiIconPath>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!-- Robobrain Syringer -->
+
+  <ThingDef ParentName="RobCo_Robobrain_BaseGun">
+    <defName>RobCo_Gun_Syringer</defName>
+    <label>robobrain syringer</label>
+    <description>A RobCo-built syringe gun that fires toxin-infused metal needles. It can fire long distances and will poison the target in addition to doing physical damage.\n\nSpecially designed for robobrain model and could be only mounted to its chassis.</description>
+    <graphicData>
+      <texPath>Things/Weapons/RobCo_RobobrainHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <equippedDistanceOffset>-0.15</equippedDistanceOffset>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>2.6</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.92</AccuracyLong>
+      <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_Syringer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_Syringe</defaultProjectile>
+        <warmupTime>2.35</warmupTime>
+        <range>44.9</range>
+        <soundCast>Shot_ToxicNeedleGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+</Defs>

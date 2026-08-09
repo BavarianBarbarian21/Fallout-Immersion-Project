@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Put all Vanilla Cooking and Brewing Expanded research into one shared tree. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_LiquorBrewing"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_MixologyResearch"]/tab</xpath>
+    <value>
+      <tab>VCE_Cooking</tab>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchTabDef[defName="VCE_Cooking"]/label</xpath>
+    <value>
+      <label>Vanilla Expanded</label>
+    </value>
+  </Operation>
+
+  <!-- Cooking already registers the shared tab for schematic research books. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="Schematic"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="BookOutcomeProperties_GainResearch"]/tabs/VCE_Brewing</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ResearchTabDef[defName="VCE_Brewing"]</xpath>
+  </Operation>
+
+  <!-- Keep the brewing branch to the right of the cooking projects. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_LiquorBrewing"]/researchViewX</xpath>
+    <value>
+      <researchViewX>3</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_LiquorBrewing"]/researchViewY</xpath>
+    <value>
+      <researchViewY>0</researchViewY>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_MixologyResearch"]/researchViewX</xpath>
+    <value>
+      <researchViewX>4</researchViewX>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_MixologyResearch"]/researchViewY</xpath>
+    <value>
+      <researchViewY>0</researchViewY>
+    </value>
+  </Operation>
+
+  <!-- Coffees and Teas is optional; move its project only when it exists. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ResearchProjectDef[defName="VBE_EspressoMachine"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VBE_EspressoMachine"]/tab</xpath>
+          <value>
+            <tab>VCE_Cooking</tab>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VBE_EspressoMachine"]/researchViewX</xpath>
+          <value>
+            <researchViewX>3</researchViewX>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="VBE_EspressoMachine"]/researchViewY</xpath>
+          <value>
+            <researchViewY>1</researchViewY>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

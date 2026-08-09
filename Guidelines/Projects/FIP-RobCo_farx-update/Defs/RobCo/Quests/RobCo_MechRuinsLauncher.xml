@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Launcher: listens for research completion or manual trigger and starts the MechRuins one-off quest.
+       - Listens for two signals:
+         * ResearchFinished/RobCo_SpecialTech  (placeholder research signal)
+         * RobCo_Trigger_MechRuins             (manual/dev trigger)
+       - When received, runs the subscript `RobCo_MechRuins_OneOff` then ends.
+       Notes: Replace the research signal name if your research system uses a different naming convention.
+  -->
+
+  <QuestScriptDef>
+    <defName>RobCo_MechRuins_Launcher</defName>
+    <autoAccept>true</autoAccept>
+    <defaultHidden>true</defaultHidden>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->RobCo: Mech Ruins Launcher</li>
+      </rulesStrings>
+    </questNameRules>
+
+    <root Class="QuestNode_AllSignals">
+      <inSignals>
+        <!-- Common placeholder: research finished signal for the research def 'RobCo_SpecialTech' -->
+        <li>ResearchFinished/RobCo_SpecialTech</li>
+        <!-- Manual trigger you can call from other scripts or dev console -->
+        <li>RobCo_Trigger_MechRuins</li>
+      </inSignals>
+      <node Class="QuestNode_Sequence">
+        <nodes>
+          <!-- Run the one-off quest as a subscreened script -->
+          <li Class="QuestNode_SubScript">
+            <def>RobCo_MechRuins_OneOff</def>
+          </li>
+
+          <!-- End the launcher quest after firing once -->
+          <li Class="QuestNode_End" />
+        </nodes>
+      </node>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

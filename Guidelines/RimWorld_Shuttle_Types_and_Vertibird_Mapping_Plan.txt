@@ -1,0 +1,475 @@
+RIMWORLD 1.6 - SHUTTLE TYPES AND PROPOSED VERTIBIRD MAPPING
+============================================================
+
+Audit date: 24 July 2026
+
+Scope
+-----
+- RimWorld Core and all five official DLCs
+- every locally installed Vanilla Expanded mod
+- Rimsential - Spaceports (Continued), packageId zal.spaceports
+- the installed FCP Brotherhood of Steel, Enclave, and Tools mods
+
+This is a catalogue and design proposal only. It does not yet change any Def.
+
+Terminology
+-----------
+"Type" means a visually or functionally distinct craft. Incoming, leaving,
+crashing, landed, and world-map Defs belonging to the same craft are listed
+together and are not falsely counted as separate vehicles.
+
+"Functional" means that the object participates in a shuttle/transport system.
+"Crash only" means an encounter and wreck with no normal usable craft.
+"Decorative" means a prop or ruin.
+
+
+1. RIMWORLD CORE AND OFFICIAL DLCs
+==================================
+
+1) Standard / Imperial shuttle
+   Status: functional
+   Main Defs:
+   - Shuttle
+   - ShuttleIncoming
+   - ShuttleLeaving
+   - ShuttleCrashing
+   - TravelingShuttle
+   Body resource: Things/Building/Misc/Shuttle
+
+2) Crashed standard shuttle
+   Status: wreck state, not another working craft
+   Main Defs:
+   - ShuttleCrashed
+   - ShuttleCrashed_Exitable (Biotech)
+   Body resource: Things/Building/Misc/CrashedShuttle
+
+3) Mechanitor ship
+   Status: crash encounter only
+   Main Def: ShuttleCrashing_Mechanitor
+   Body resource: Things/Building/Misc/MechanitorShip
+
+4) Crashed Mechanitor ship
+   Status: wreck state
+   Main Def: ShuttleCrashed_Exitable_Mechanitor
+   Body resource: Things/Building/Misc/MechanitorShipCrashed
+
+5) Passenger shuttle
+   DLC: Odyssey
+   Status: functional
+   Main Defs:
+   - PassengerShuttle
+   - PassengerShuttleIncoming
+   - PassengerShuttleLeaving
+   - PassengerShuttle world object
+   Body resource: Things/Building/PassengerShuttle/PassengerShuttle
+   Important: this is Graphic_Multi. A single-direction FCP image requires both
+   texPath and graphicClass to be replaced, or matching direction images.
+
+6) Ancient rusted dropship
+   DLC: Odyssey/Ideology content set
+   Status: decorative ruin
+   Def: AncientRustedDropship
+   Body resource: Things/Building/Ruins/AncientRustedDropship
+
+7) Ancient dropship engine
+   Status: decorative wreck component, not a complete craft
+   Def: AncientDropshipEngine
+   Resource: Things/Building/Ruins/AncientDropshipEngine
+
+Supporting resources:
+- Traveling shuttle icon:
+  World/WorldObjects/Expanding/TravelingShuttle
+- Passenger shuttle icon:
+  World/WorldObjects/Expanding/PassengerShuttle
+- Odyssey shuttle engine item:
+  Things/Item/Resource/ShuttleEngine
+
+DLC result:
+- Royalty provides the principal shuttle/TransportShip behavior.
+- Biotech adds the Mechanitor crash family.
+- Odyssey adds the usable passenger shuttle and ancient dropship ruins.
+- Ideology and Anomaly add no separate working shuttle body.
+
+
+2. VANILLA EXPANDED
+===================
+
+Only the following locally installed Vanilla Expanded mods add or replace
+shuttle-like bodies. The other installed VE mods were searched and add none.
+
+2.1 Vanilla Events Expanded
+----------------------------
+
+1) Standard crashed shuttle
+   Status: crash event only
+   Wreck Def: VEE_Shuttle
+   Incoming Def: ShuttleChunkIncoming
+   Wreck texture: Shuttle_Standard_Crashed
+   Skyfaller texture: Shuttle_Standard_Skyfaller
+
+2) Combat crashed shuttle
+   Status: crash event only
+   Wreck Def: VEE_Shuttle_Combat
+   Incoming Def: VEE_ShuttleChunkIncoming_Combat
+   Wreck texture: Shuttle_Combat_Crashed
+   Skyfaller texture: Shuttle_Combat_Skyfaller
+
+3) Heavy crashed shuttle
+   Status: crash event only
+   Wreck Def: VEE_Shuttle_Heavy
+   Incoming Def: VEE_ShuttleChunkIncoming_Heavy
+   Wreck texture: Shuttle_Heavy_Crashed
+   Skyfaller texture: Shuttle_Heavy_Skyfaller
+
+The old ShipChunkShuttle.png is not referenced by active 1.6 Defs.
+
+2.2 Vanilla Textures Expanded
+------------------------------
+
+No new shuttle type.
+
+It supplies an alternate ImperialShuttle and CrashedImperialShuttle skin for
+the vanilla shuttle. Its patch intentionally does not run while VFE Empire is
+active, and its two active images are identical to the VFE Empire images.
+
+2.3 Vanilla Factions Expanded - Empire
+---------------------------------------
+
+1) Imperial shuttle skin
+   Status: visual replacement of vanilla Shuttle; not a new craft Def
+   Texture family: Shuttle/ImperialShuttle/ImperialShuttle
+
+2) Crashed Imperial shuttle skin
+   Status: visual replacement of vanilla ShuttleCrashed
+   Texture: Shuttle/ImperialShuttle/CrashedImperialShuttle
+
+3) Armored shuttle
+   Status: functional and armed
+   Main Defs:
+   - VFEI_ArmoredShuttle
+   - VFEI_ArmoredShuttleIncoming
+   - VFEI_ArmoredShuttleLeaving
+   Body texture: ImperialArmoredShuttle
+   Separate weapon overlay: VFEI_TurretArmoredShuttle /
+   ImperialArmoredShuttle_Autocannon
+
+The autocannon is a separate rendered object. Replacing only the hull leaves
+the Imperial autocannon visible.
+
+2.4 Vanilla Factions Expanded - Deserters
+------------------------------------------
+
+1) Deserter shuttle
+   Status: functional flight family plus a separate static building Def
+   Main Defs:
+   - VFED_DeserterShuttle
+   - VFED_DeserterShuttleIncoming
+   - VFED_DeserterShuttleLeaving
+   - VFED_TravelingDeserterShuttle
+   - VFED_Ship_DeserterShuttle
+   Texture: Structures/Misc/DeserterShuttle
+
+Important: VFED_Ship_DeserterShuttle uses vanilla Shuttle as its landed
+shipThing. The incoming/leaving/world presentation is Deserter-specific.
+
+2.5 Vanilla Furniture Expanded - Props and Decor
+-------------------------------------------------
+
+These are decorative vehicles, but Spaceports reuses several of their images
+for functional visitors.
+
+1) Personal pod
+   Def: VFEPD_Personalpod
+   Status: decorative
+
+2) Superpod
+   Def: VFEPD_Superpod
+   Status: decorative
+
+3) Skip
+   Def: VFEPD_SkipBlack
+   Status: decorative; reused by Spaceports
+   Graphic_Multi with north/east/south images and masks
+
+4) Spacer shuttle
+   Def: VFEPD_SpacerShuttle
+   Status: decorative; reused by Spaceports
+   Graphic_Multi
+
+5) Albatross gunship
+   Active 1.6 Def: VFEPD_AlbatrossBlack
+   Status: decorative; reused by Spaceports
+   Graphic_Multi with masks
+   Older version folders contain blue/red/silver/white Defs, but these are not
+   additional active 1.6 craft.
+
+6) Heavy dropship
+   Def: VFEPD_HeavyDropship
+   Status: decorative; reused by Spaceports
+   Graphic_Multi
+
+7) Heavy cargo shuttle
+   Def: VFEPD_Shuttle_HeavyCargo
+   Status: decorative; reused by Spaceports
+   Graphic_Multi
+
+8) Ancient shuttle
+   Def: VFEPD_AncientShuttle
+   Status: decorative
+   The image is supplied by Vanilla Quests Expanded - Ancients.
+
+Props and Decor also creates decorative copies of existing vanilla, Empire,
+Deserter, passenger-shuttle, and ancient-dropship types. Those copies require
+patching, but they are not additional vehicle designs.
+
+2.6 Other VE references
+-----------------------
+
+- Vanilla Quests Expanded - Ancients supplies the AncientShuttle image used by
+  VFEPD_AncientShuttle.
+- Vanilla Base Generation Expanded places existing shuttle Defs in layouts.
+- Vanilla Aspirations Expanded contains only a shuttle aspiration icon.
+- No further active shuttle body was found in any other locally installed
+  Vanilla Expanded mod.
+
+
+3. RIMSENTIAL - SPACEPORTS (CONTINUED)
+======================================
+
+Spaceports uses one common shuttle implementation and many visual variants.
+Incoming and leaving Defs use the same body family as the landed craft.
+
+3.1 Functional visitor variants
+--------------------------------
+
+1)  Spaceports_RoyaltyShuttle
+2)  Spaceports_ShuttleA
+3)  Spaceports_ShuttleB
+4)  Spaceports_ShuttleC
+5)  Spaceports_ShuttleD
+6)  Spaceports_ShuttleE
+7)  Spaceports_ShuttleF
+8)  Spaceports_ShuttleG
+9)  Spaceports_ShuttleH
+10) Spaceports_ShuttleI
+11) Spaceports_ShuttleJ
+12) Spaceports_ShuttleK
+13) Spaceports_ShuttleSkip
+14) Spaceports_ShuttleSuperpod
+
+These are 14 addressable functional Def variants. A through K are eleven
+distinct native Spaceports bodies. RoyaltyShuttle, Skip, and Superpod inherit
+the common TestShuttle base until compatibility patches redirect them.
+
+3.2 Special Spaceports shuttles
+--------------------------------
+
+15) Spaceports_ShuttleInert
+    Status: static scrap wreck
+    Body: Shuttle_Inert
+
+16) Spaceports_SurpriseShuttle
+    Status: special mysterious/trapped shuttle
+    Body: reuses ShuttleA; not another silhouette
+
+ShuttleA_Crashing is a crash state and uses Shuttle_Inert. It is not a
+seventeenth vehicle.
+
+3.3 Native body files
+---------------------
+
+- ShuttleA.png through ShuttleK.png
+- Shuttle_Inert.png
+- TestShuttle.png
+
+The !Standard and !Personal folders each contain another 13 files. No active
+1.6 Def or patch references either folder. They are alternatives/backups, not
+additional live shuttle types.
+
+3.4 Active VE Props redirections
+---------------------------------
+
+With Props and Decor installed, Spaceports redirects:
+
+- ShuttleB -> Albatross east
+- ShuttleC -> Skip east
+- ShuttleD -> Spacer shuttle east
+- ShuttleG -> Heavy cargo shuttle east
+- ShuttleK -> Heavy dropship east
+- ShuttleSkip -> Skip east
+
+The final Fallout patch must load after this compatibility layer or these six
+redirections will overwrite it.
+
+
+4. AVAILABLE FCP VERTIBIRD FAMILIES
+===================================
+
+4.1 FCP Tools
+-------------
+
+1) Generic light vertibird
+   Non-player transport family:
+   - TransportShipDef FCP_Vertibird
+   - ThingDef FCP_Vertibird
+   - FCP_VertibirdIncoming / FCP_VertibirdLeaving
+   - FCP_TravelingVertibird
+
+2) Craftable light vertibird (Odyssey)
+   - FCP_CraftableVertibird
+   - Ship_CraftableVertibird
+   - shared craftable incoming/leaving/world Defs
+   Body: Things/Vehicles/FCP_Light_Vertibird_east
+
+3) Craftable cargo vertibird (Odyssey)
+   - FCP_CraftableVertibird_Cargo
+   - Ship_CraftableVertibird_Cargo
+   Body: Things/Vehicles/FCP_Cargo_Vertibird_east
+
+4) Craftable gunship vertibird (Odyssey)
+   - FCP_CraftableVertibird_Gunship
+   - Ship_CraftableVertibird_Gunship
+   Body: Things/Vehicles/FCP_Gunship_Vertibird_east
+
+5) Destroyed pre-war US Army vertibird
+   - FCP_Pre_War_Army_Vertibird
+   Status: decorative wreck
+   Body: Things/Building/Ruins/PreWarArmyVertibirdDestroyed
+
+The three usable Tools silhouettes are therefore light, cargo, and gunship.
+
+4.2 FCP Brotherhood of Steel
+-----------------------------
+
+1) Standard Brotherhood vertibird
+   - FCP_BoS_Vertibird transport, landed, incoming, leaving, and world Defs
+   - FCP_BoS_Vertibird_Crashed wreck
+   Body family: Things/Vehicles/Shuttles/BoSVertibird
+   Graphic type: Graphic_Random
+   The folder contains six variants, FCP_BoS_Light_Vertibird_a through _f.
+
+2) Brotherhood Outcast vertibird
+   - FCP_BoS_Outcast_Vertibird family
+   Body: OutcastVertibird/FCP_Outcast_Vertibird
+
+3) Lyons' Pride vertibird
+   - FCP_BoS_Lyons_Pride_Vertibird family
+   Body: LyonVertibird/FCP_Lyons_Vertibird
+
+4.3 FCP Enclave
+---------------
+
+1) Enclave vertibird
+   - FCP_Enclave_Vertibird transport, landed, incoming, leaving, and world Defs
+   - FCP_Enclave_Vertibird_Crashed wreck
+   Body family: Things/Vehicles/Shuttles/EnclaveVertibird
+   Graphic type: Graphic_Random in the FCP Def
+   The folder currently contains one body file, Enclave_Vertibird.png.
+
+
+5. PROPOSED FALLOUT MAPPING
+===========================
+
+This mapping preserves recognizable roles instead of assigning one identical
+image to every craft.
+
+Vanilla and DLC
+---------------
+- Standard / Imperial Shuttle -> Enclave vertibird
+  Reason: Empire is already Whitespring Enclave in FIP.
+- Crashed standard shuttle -> crashed Enclave vertibird
+- Mechanitor ship -> Tools gunship vertibird
+- Crashed Mechanitor ship -> destroyed pre-war Army vertibird
+- Passenger shuttle -> Tools light vertibird
+- Ancient rusted dropship -> destroyed pre-war Army vertibird
+- Ancient dropship engine -> FCP vertibird-engine artwork or a dedicated
+  destroyed-engine crop, not a complete vertibird body
+
+Vanilla Events Expanded
+-----------------------
+- Standard crashed shuttle -> crashed generic/BoS vertibird
+- Combat crashed shuttle -> crashed Tools gunship
+- Heavy crashed shuttle -> crashed Tools cargo vertibird
+
+VFE Empire and Deserters
+------------------------
+- Imperial shuttle skin -> Enclave vertibird
+- Armored Imperial shuttle -> Enclave vertibird or Tools gunship; replace or
+  remove VFEI_TurretArmoredShuttle as part of the same patch
+- Deserter / Circle of Steel shuttle -> Brotherhood Outcast vertibird
+
+VE Props
+--------
+- Personal pod -> light vertibird, reduced drawSize
+- Superpod -> light vertibird
+- Skip -> light vertibird
+- Spacer shuttle -> standard Brotherhood vertibird
+- Albatross gunship -> Tools gunship vertibird
+- Heavy dropship -> Brotherhood or Enclave vertibird
+- Heavy cargo shuttle -> Tools cargo vertibird
+- Ancient shuttle -> destroyed pre-war Army vertibird
+
+Spaceports
+----------
+- RoyaltyShuttle -> Enclave
+- A -> generic light
+- B -> Tools gunship
+- C -> generic light
+- D -> standard Brotherhood
+- E -> Brotherhood Outcast
+- F -> Lyons' Pride
+- G -> Tools cargo
+- H -> Enclave
+- I -> generic light
+- J -> Brotherhood
+- K -> Tools gunship
+- Skip -> generic light
+- Superpod -> generic light
+- Inert -> destroyed pre-war Army vertibird
+- Surprise -> damaged generic light vertibird
+
+The repeated families are intentional: Spaceports has more logical visitor
+variants than FCP currently has unique silhouettes. Faction skins and drawSize
+can preserve variety without inventing unsupported new art.
+
+
+6. IMPLEMENTATION RULES FOR A LATER PATCH
+=========================================
+
+1) Patch every rendered state
+   A complete replacement must include landed ThingDef, Incoming, Leaving,
+   Crashing, crashed wreck, TransportShipDef shipThing link where necessary,
+   and any shuttle-specific world icon.
+
+2) Do not replace shared world resources globally
+   Spaceports uses generic Caravan/TravelingTransportPods resources. Patching
+   those globally would alter unrelated caravans and transport pods.
+
+3) Normalize Graphic_Multi deliberately
+   PassengerShuttle and several VE Props expect direction suffixes. The FCP
+   Tools craft point directly to an east image. Either:
+   - replace graphicClass with Graphic_Single and use the FCP east image; or
+   - create proper north/east/south FCP variants and retain Graphic_Multi.
+   Graphic_Single is the safe first implementation.
+
+4) Preserve or deliberately flatten FCP Graphic_Random
+   Standard Brotherhood and Enclave Vertibirds use Graphic_Random directory
+   paths. A target Def must either keep Graphic_Random and point to the folder,
+   or use Graphic_Single and point to a concrete file. Combining a random
+   directory path with Graphic_Single will produce a missing texture.
+
+5) Patch VFE's armored-shuttle turret separately
+   Otherwise an Imperial autocannon remains floating above a Vertibird.
+
+6) Patch Spaceports last
+   Its VE Props compatibility redirects six bodies. The Fallout replacement
+   must load after both Spaceports and Props and Decor.
+
+7) Keep body and footprint compatible
+   A texture change does not alter size, interaction cell, shadow, drawSize, or
+   landing footprint. Each mapped Vertibird needs a visual in-game check.
+
+8) Recommended ownership
+   The broad "replace every non-Fallout shuttle" layer fits FIP-Donaustahl as
+   optional immersion-overhaul content. Faction-native craft can remain in the
+   individual FIP/FCP compatibility folders.

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <!-- Patch letterText for CompProperties_ProximityLetter -->
+
+  <!-- Patch letterText for CompProperties_LeavingsLetter -->
+
+  <!-- BandNode -->
+  <!-- MechGestator -->
+  <!-- Large MechGestator -->
+  <!-- BasicRecharger -->
+  <!-- StandardRecharger -->
+  <!-- SubcoreEncoder -->
+  <!-- SubcoreSoftscanner -->
+  <!-- SubcoreRipscanner -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/BasicRecharger/RobCo_BasicRecharger</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestator</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/building/mechGestatorCylinderGraphic/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/MechGestator/RobCo_MechGestatorGlass</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/building/mechGestatorTopGraphic/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/MechGestator/RobCo_MechGestatorTop</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/building/mechGestatorCylinderGraphic/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestatorGlass</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/building/mechGestatorTopGraphic/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestatorTop</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="BasicRecharger"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/BasicRecharger/RobCo_BasicRecharger</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="StandardRecharger"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestator</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreEncoder"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreEncoder/RobCo_SubcoreEncoder</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreSoftscanner"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreSoftscanner/RobCo_SubcoreSoftscanner</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="SubcoreRipscanner"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-RobCo/Buildings/SubcoreRipscanner/RobCo_SubcoreRipscanner</texPath>
+    </value>
+  </Operation>
+  <!-- Change MechBooster to RobCo Booster -->
+  <!-- Patch MechGestator recipes -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>RobCo_Eyebot_Recipe</li>
+      <li>RobCo_EyebotDuraframe_Recipe</li>
+      <li>RobCo_MisterFarmhand_Recipe</li>
+      <li>RobCo_MisterHandy_Recipe</li>
+      <li>RobCo_MissNanny_Recipe</li>
+      <li>RobCo_MisterGutsy_Recipe</li>
+      <li>RobCo_Constructron_Recipe</li>
+      <li>RobCo_Factotron_Recipe</li>
+      <li>RobCo_Utilitron_Recipe</li>
+      <li>RobCo_Collectron_Recipe</li>
+      <li>RobCo_Protectron_Recipe</li>
+    </value>
+  </Operation>
+  <!-- Patch LargeMechGestator recipes -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>RobCo_Assaultron_Recipe</li>
+      <li>RobCo_Robobrain_Recipe</li>
+      <li>RobCo_Cyberdog_Recipe</li>
+      <li>RobCo_SentrybotSiegebreaker_Recipe</li>
+      <li>RobCo_SentrybotPestcontrol_Recipe</li>
+      <li>RobCo_SentrybotAnnihilator_Recipe</li>
+    </value>
+  </Operation>
+</Patch>

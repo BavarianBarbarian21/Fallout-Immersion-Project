@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Remove vanilla Structure_* MemeDefs (keeps Greenway_ prefixed defs) --><Patch>
+    <!--Remove all Structures and Cultures (Does this work?)
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/structureMemeWeights</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/factionNameMaker</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/settlementNameMaker</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>//FactionDef/allowedCultures</xpath>
+    </Operation>-->
+    <!-- FactionNameMaker Patch (Useless?)-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+            <factionNameMaker>HHTools_FactionNameMaker_General</factionNameMaker>
+        </value>
+    </Operation>
+    <!-- SettlementNameMaker Patch (Useless?)-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+            <settlementNameMaker>HHTools_SettlementNameMaker_General</settlementNameMaker>
+        </value>
+    </Operation>
+    <!-- Culture (+PawnNameMaker) Patch (Useless?)-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[@Name="FactionBase"]</xpath>
+        <value>
+            <allowedCultures>
+                <li>HHTools_Culture_American</li>
+            </allowedCultures>
+        </value>
+    </Operation>
+</Patch>

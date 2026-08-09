@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Category 3: preserve TraitDefs for existing saves and external references,
+    but prevent all random assignment to newly generated pawns.
+  -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/TraitDef[defName="VTE_Eccentric" or defName="VTE_Brave" or defName="VTE_IronStomach" or defName="VTE_BigBoned" or defName="VTE_Dunce" or defName="VTE_MartialArtist" or defName="VTE_CatPerson" or defName="VTE_DogPerson" or defName="VTE_Prodigy" or defName="VTE_Menagerist" or defName="VTE_Stoner" or defName="VTE_Lush" or defName="VTE_Desensitized" or defName="VTE_Academian" or defName="VTE_Groundbreaker" or defName="VTE_Gastronomist" or defName="VTE_Ecologist" or defName="VTE_Tycoon"]/commonality</xpath>
+    <value>
+      <commonality>0</commonality>
+    </value>
+  </Operation>
+
+  <!-- Absent-mindedness and vanilla Industriousness describe incompatible levels of focus. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraitDef[defName="VTE_AbsentMinded"]/conflictingTraits</xpath>
+    <value>
+      <li>Industriousness</li>
+    </value>
+  </Operation>
+
+  <!-- A pawn should not simultaneously be adapted to both temperature extremes. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraitDef[defName="VTE_HeatInclined"]</xpath>
+    <value>
+      <conflictingTraits>
+        <li>VTE_ColdInclined</li>
+      </conflictingTraits>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraitDef[defName="VTE_ColdInclined"]</xpath>
+    <value>
+      <conflictingTraits>
+        <li>VTE_HeatInclined</li>
+      </conflictingTraits>
+    </value>
+  </Operation>
+
+  <!-- The custom social-anxiety system remains, but cannot stack with vanilla Nerves. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraitDef[defName="VTE_Anxious"]/conflictingTraits</xpath>
+    <value>
+      <li>Nerves</li>
+    </value>
+  </Operation>
+
+  <!-- Avoid spending two trait slots on the same animal-friendly identity when FCP is active. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>FCP - Tools</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/TraitDef[defName="VTE_AnimalLover"]/conflictingTraits</xpath>
+          <value>
+            <li>FCP_Trait_Animal_Friend</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/TraitDef[defName="FCP_Trait_Animal_Friend"]</xpath>
+          <value>
+            <conflictingTraits>
+              <li>VTE_AnimalLover</li>
+            </conflictingTraits>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Insomnia remains distinctive without reducing a pawn to permanent half-efficiency. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/TraitDef[defName="VTE_Insomniac"]/degreeDatas/li/statFactors</xpath>
+    <value>
+      <statFactors>
+        <WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+        <MoveSpeed>0.85</MoveSpeed>
+      </statFactors>
+    </value>
+  </Operation>
+</Patch>

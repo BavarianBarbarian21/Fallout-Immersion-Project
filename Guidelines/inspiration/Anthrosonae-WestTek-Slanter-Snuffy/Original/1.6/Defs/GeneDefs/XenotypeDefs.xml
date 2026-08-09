@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- //// Wishlist 
+	// Anthrodog, which are probably based on German shepherds, and modified from anthrowolf's textures.
+	// Anthropossum.
+	// Anthroraccoon, which are modified from anthrowah's textures.
+	// Partitioning anthrocats into anthrocheetahs, anthroleopards, anthrolynxes, and anthrotigers, with anthrocat being repurposed into a domestic cat.
+	-->
+
+
+	<XenotypeDef Name="ATK_AnthrosonaBase" Abstract="True">
+    	<displayPriority>999</displayPriority>
+		<modExtensions>
+			<li Class="Anthrosonae.XenotypeExtension">
+				<groupName>Anthrosona</groupName>
+				<groupDescription>Anthrosonae are a category of xenogrms designed to resemble an anthropomorphized animal. While they look quite different, generally they are functionally identical to baseliner humans.</groupDescription>
+				<groupIcon>UI/Icons/Xenotypes/Anthrosonae</groupIcon>
+			</li>
+		</modExtensions>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrobear //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrobear</defName>
+		<label>anthrobear</label>
+		<description>Anthrobears are a variant of anthrosonae designed to resemble an anthropomorphized bear. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrobears are a variant of anthrosonae designed to resemble an anthropomorphized bear. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrobear</iconPath>
+		<genes>
+			<li>ATK_AnthrobearFur</li>
+			<li>ATK_AnthrobearEars</li>
+			<li>ATK_AnthrobearTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrocat //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrocat</defName>
+		<label>anthrocat</label>
+		<description>Anthrocats are a variant of anthrosonae designed to resemble an anthropomorphized big cat. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrocats are a variant of anthrosonae designed to resemble an anthropomorphized big cat. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrocat</iconPath>
+		<genes>
+			<li>ATK_AnthrocatFur</li>
+			<li>ATK_AnthrocatEars</li>
+			<li>ATK_AnthrocatTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrocow //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrocow</defName>
+		<label>anthrocow</label>
+		<description>Anthrocows are a variant of anthrosonae designed to resemble anthropomorphized cattle. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrocows are a variant of anthrosonae designed to resemble anthropomorphized cattle. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrocow</iconPath>
+		<genes>
+			<li>ATK_AnthrocowFur</li>
+			<li>ATK_AnthrocowHeadbone</li>
+			<li>ATK_AnthrocowHeadbone_Long</li>
+			<li>ATK_AnthrocowEars</li>
+			<li>ATK_AnthrocowTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrodeer //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrodeer</defName>
+		<label>anthrodeer</label>
+		<description>Anthrodeer are a variant of anthrosonae designed to resemble anthropomorphized deer. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrodeer are a variant of anthrosonae designed to resemble anthropomorphized deer. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrodeer</iconPath>
+		<genes>
+			<li>ATK_AnthrodeerFur</li>
+			<li>ATK_AnthrodeerHeadbone</li>
+			<li>ATK_AnthrodeerHeadbone_Short</li>
+			<li>ATK_AnthrodeerEars</li>
+			<li>ATK_AnthrodeerTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrodrake //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrodrake</defName>
+		<label>anthrodrake</label>
+		<description>Anthrodrake are a variant of anthrosonae designed to resemble an anthropomorphized dragon. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrodrake are a variant of anthrosonae designed to resemble an anthropomorphized dragon. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrodrake</iconPath>
+		<genes>
+			<li>ATK_AnthrodrakeSkin</li>
+			<li>ATK_AnthrodrakeHeadbone</li>
+			<li>ATK_AnthrodrakeHeadbone_Spiraled</li>
+			<li>ATK_AnthrodrakeEars</li>
+			<li>ATK_AnthrodrakeTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrofox //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrofox</defName>
+		<label>anthrofox</label>
+		<description>Anthrofoxes are a variant of anthrosonae designed to resemble an anthropomorphized fox. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrofoxes are a variant of anthrosonae designed to resemble an anthropomorphized fox. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrofox</iconPath>
+		<genes>
+			<li>ATK_AnthrofoxFur</li>
+			<li>ATK_AnthrofoxEars</li>
+			<li>ATK_AnthrofoxTail</li>
+			<li>ATK_AnthrofoxFacialStripes</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrogriff //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrogriff</defName>
+		<label>anthrogriff</label>
+		<description>Anthrogriffs are a variant of anthrosonae designed to resemble an anthropomorphized griffin. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrogriffs are a variant of anthrosonae designed to resemble an anthropomorphized griffin. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrogriff</iconPath>
+		<genes>
+			<li>ATK_AnthrogriffFur</li>
+			<li>ATK_AnthrogriffEars</li>
+			<li>ATK_AnthrogriffTail</li>
+			<li>ATK_AnthrogriffBackbone</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrogoat //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrogoat</defName>
+		<label>anthrogoat</label>
+		<description>Anthrogoats are a variant of anthrosonae designed to resemble an anthropomorphized goat. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrogoats are a variant of anthrosonae designed to resemble an anthropomorphized goat. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrogoat</iconPath>
+		<genes>
+			<li>ATK_AnthrogoatFur</li>
+			<li>ATK_AnthrogoatHeadbone</li>
+			<li>ATK_AnthrogoatHeadbone_Short</li>
+			<li>ATK_AnthrogoatHeadbone_Spiraled</li>
+			<li>ATK_AnthrogoatEars</li>
+			<li>ATK_AnthrogoatEars_Droopy</li>
+			<li>ATK_AnthrogoatTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrohorse //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrohorse</defName>
+		<label>anthrohorse</label>
+		<description>Anthrohorses are a variant of anthrosonae designed to resemble an anthropomorphized horse. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrohorses are a variant of anthrosonae designed to resemble an anthropomorphized horse. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrohorse</iconPath>
+		<genes>
+			<li>ATK_AnthrohorseFur</li>
+			<li>ATK_AnthrohorseEars</li>
+			<li>ATK_AnthrohorseTail</li>
+
+			<li>Headbone_Human</li>
+			<li>Headbone_CenterHorn</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrohyena //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrohyena</defName>
+		<label>anthrohyena</label>
+		<description>Anthrohyenas are a variant of anthrosonae designed to resemble an anthropomorphized hyena. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrohyenas are a variant of anthrosonae designed to resemble an anthropomorphized hyena. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrohyena</iconPath>
+		<genes>
+			<li>ATK_AnthrohyenaFur</li>
+			<li>ATK_AnthrohyenaEars</li>
+			<li>ATK_AnthrohyenaTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthropanda //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthropanda</defName>
+		<label>anthropanda</label>
+		<description>Anthropandas are a variant of anthrosonae designed to resemble an anthropomorphized giant panda. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthropandas are a variant of anthrosonae designed to resemble an anthropomorphized giant panda. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthropanda</iconPath>
+		<genes>
+			<li>ATK_AnthropandaFur</li>
+			<li>ATK_AnthropandaEars</li>
+			<li>ATK_AnthropandaTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrorabbit //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrorabbit</defName>
+		<label>anthrorabbit</label>
+		<description>Anthrorabbits are a variant of anthrosonae designed to resemble an anthropomorphized rabbit. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrorabbits are a variant of anthrosonae designed to resemble an anthropomorphized rabbit. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrorabbit</iconPath>
+		<genes>
+			<li>ATK_AnthrorabbitFur</li>
+			<li>ATK_AnthrorabbitEars</li>
+			<li>ATK_AnthrorabbitTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthroshark //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthroshark</defName>
+		<label>anthroshark</label>
+		<description>Anthrosharks are a variant of anthrosonae designed to resemble an anthropomorphized shark. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrosharks are a variant of anthrosonae designed to resemble an anthropomorphized shark. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthroshark</iconPath>
+		<genes>
+			<li>ATK_AnthrosharkSkin</li>
+			<li>ATK_AnthrosharkEars</li>
+			<li>ATK_AnthrosharkTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrowah //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrowah</defName>
+		<label>anthrowah</label>
+		<description>Anthrowahs are a variant of anthrosonae designed to resemble an anthropomorphized red panda, affectionately nicknamed the wah. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrowahs are a variant of anthrosonae designed to resemble an anthropomorphized red panda. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrowah</iconPath>
+		<genes>
+			<li>ATK_AnthrowahFur</li>
+			<li>ATK_AnthrowahEars</li>
+			<li>ATK_AnthrowahTail</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<!-- //// Anthrowolf //// -->
+	<XenotypeDef ParentName="ATK_AnthrosonaBase">
+		<defName>ATK_Anthrowolf</defName>
+		<label>anthrowolf</label>
+		<description>Anthrowolves are a variant of anthrosonae designed to resemble an anthropomorphized wolf. While they look quite different, generally they are functionally identical to baseliner humans.\n\nSuch xenogerms are commercially available among many spacer-tech and ultra-tech societies, often as part of an exotic fashion trend or to affirm an individual's identity. Contrary to popular belief, anthrosona genes are engineered from the ground-up without any splicing from their animal counterparts.</description>
+		<descriptionShort>Anthrowolves are a variant of anthrosonae designed to resemble an anthropomorphized wolf. While they look quite different, generally they are functionally identical to baseliner humans.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrowolf</iconPath>
+		<genes>
+			<li>ATK_AnthrowolfFur</li>
+			<li>ATK_AnthrowolfEars</li>
+			<li>ATK_AnthrowolfTail</li>
+		</genes>
+	</XenotypeDef>
+
+</Defs>

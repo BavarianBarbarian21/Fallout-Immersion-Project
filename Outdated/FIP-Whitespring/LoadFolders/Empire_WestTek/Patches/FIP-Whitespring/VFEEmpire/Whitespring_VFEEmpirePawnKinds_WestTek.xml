@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- VFE Empire's additional officials and specialists also carry local vanilla xenotype sets. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archcount" or defName="VFEE_Empire_Royal_Marquess" or defName="VFEE_Empire_Royal_Archduke" or defName="VFEE_Empire_Royal_Magister" or defName="VFEE_Empire_Royal_Despot" or defName="VFEE_Empire_Royal_HighStellarch" or defName="VFEE_Empire_Royal_Emperor" or defName="VFEE_Empire_Fighter_Absolver" or defName="VFEE_Empire_Royal_Techfriar"]/xenotypeSet</xpath>
+    <value>
+      <xenotypeSet Inherit="False">
+        <xenotypeChances>
+          <WestTek_Xenotype_PureHumans>0.625</WestTek_Xenotype_PureHumans>
+          <WestTek_Xenotype_VaultDweller>0.375</WestTek_Xenotype_VaultDweller>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Beggar"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Beggar"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_SlaveLowTech</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Beggar"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_SlaveLowTech</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Beggar"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Beggar"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Slave</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Beggar"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Slave</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="PovertyPilgrim"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

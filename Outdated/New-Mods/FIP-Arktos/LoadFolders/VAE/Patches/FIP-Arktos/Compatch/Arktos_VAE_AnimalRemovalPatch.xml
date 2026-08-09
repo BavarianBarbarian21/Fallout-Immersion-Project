@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Wasteland indigo, cats, dogs, and every VAE species used by Arktos are retained.
+       Hidden species keep their defs so other active VE systems can resolve references. -->
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs//li[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", normalize-space(.), "|"))]</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", name(), "|"))]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", name(), "|"))]</xpath>
+    </match>
+  </Operation>
+
+</Patch>

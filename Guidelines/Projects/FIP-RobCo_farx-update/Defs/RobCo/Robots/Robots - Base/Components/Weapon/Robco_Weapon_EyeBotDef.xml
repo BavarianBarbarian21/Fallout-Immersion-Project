@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="RobCo_Eyebot_BaseGun" ParentName="BaseGun" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <smeltable>false</smeltable>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <relicChance>0</relicChance>
+    <graphicData>
+      <texPath>RobCo/Misc/Invisible</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Weapons/RobCo_EyebotLaserUI</uiIconPath>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+  </ThingDef>
+
+  <!-- Eyebot sharpshooter laser -->
+
+  <ThingDef ParentName="RobCo_Eyebot_BaseGun">
+    <defName>RobCo_Gun_Eyebot_Sharpshooter</defName>
+    <label>eyebot sharpshooter laser</label>
+    <description>A precision-tuned blaster using low-beam rounds; slower firing but excellent at range.\n\nSpecially designed for eye-bot model and could be only mounted to its chassis.</description>
+    <statBases>
+      <MarketValue>900</MarketValue>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_Eyebot_Sharpshooter</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>24.9</range>
+        <warmupTime>1.2</warmupTime>
+        <soundCast>RobCo_Shot_LaserLight</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- Eyebot sniper blaster -->
+
+  <ThingDef ParentName="RobCo_Eyebot_BaseGun">
+    <defName>RobCo_Gun_Eyebot_Sniper</defName>
+    <label>eyebot sniper laser</label>
+    <description>A long-range sniper blaster firing high-beam rounds; very slow but extremely accurate at distance.\n\nSpecially designed for eye-bot model and could be only mounted to its chassis.</description>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_Eyebot_Sniper</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_LaserRay</defaultProjectile>
+        <range>39.9</range>
+        <warmupTime>1.2</warmupTime>
+        <soundCast>RobCo_Shot_LaserLight</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- Eyebot sniper stuner -->
+
+  <ThingDef ParentName="RobCo_Eyebot_BaseGun">
+    <defName>RobCo_Gun_Eyebot_Sniper_Stunner</defName>
+    <label>eyebot sniper stunner</label>
+    <description>A long-range sniper blaster with stunning capabilities.\n\nSpecially designed for eye-bot model and could be only mounted to its chassis.</description>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RobCo_Gun_Eyebot_Sniper_Stunner</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RobCo_Bullet_StunnerRay</defaultProjectile>
+        <range>39.9</range>
+        <warmupTime>1</warmupTime>
+        <soundCast>RobCo_Shot_LaserLight</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

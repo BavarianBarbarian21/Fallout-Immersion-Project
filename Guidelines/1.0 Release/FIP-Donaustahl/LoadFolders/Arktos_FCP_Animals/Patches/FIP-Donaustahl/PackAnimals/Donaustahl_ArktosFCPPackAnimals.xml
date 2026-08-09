@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Arktos adds the two regional FCP carriers in addition to global Brahmin and Muffalo. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals/li[.="FCP_Animal_Bighorner" or .="FCP_Animal_Radstag"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals/li[.="FCP_Animal_Bighorner" or .="FCP_Animal_Radstag"]</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals</xpath>
+    <value>
+      <li>FCP_Animal_Bighorner</li>
+      <li>FCP_Animal_Radstag</li>
+    </value>
+  </Operation>
+</Patch>

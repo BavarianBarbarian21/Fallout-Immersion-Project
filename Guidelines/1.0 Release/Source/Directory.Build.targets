@@ -1,0 +1,10 @@
+<Project>
+  <Target Name="ValidateFipBuildEnvironment" BeforeTargets="ResolveAssemblyReferences">
+    <Error
+      Condition="'$(RimWorldManagedDir)' == '' or !Exists('$(RimWorldManagedDir)\Assembly-CSharp.dll')"
+      Text="RimWorld wurde nicht gefunden. Setze RimWorldInstallDir auf das RimWorld-Installationsverzeichnis." />
+    <Error
+      Condition="'$(FipReleaseRoot)' == '' or !Exists('$(FipReleaseRoot)')"
+      Text="Das 1.0-Ausgabeverzeichnis wurde nicht gefunden." />
+  </Target>
+</Project>

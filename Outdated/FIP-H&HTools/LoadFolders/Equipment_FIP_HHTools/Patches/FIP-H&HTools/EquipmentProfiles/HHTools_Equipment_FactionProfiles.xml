@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Civil"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_CascadiaCivil_Civilian>4</FIPD_CascadiaCivil_Civilian>
+            <FIPD_CascadiaCivil_Fighter>14</FIPD_CascadiaCivil_Fighter>
+            <FIPD_CascadiaCivil_Trader>2</FIPD_CascadiaCivil_Trader>
+            <FIPD_CascadiaCivil_Leader>1</FIPD_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_CascadiaCivil_Civilian>20</FIPD_CascadiaCivil_Civilian>
+            <FIPD_CascadiaCivil_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_CascadiaCivil_Child>
+            <FIPD_CascadiaCivil_Fighter>6</FIPD_CascadiaCivil_Fighter>
+            <FIPD_CascadiaCivil_Trader>4</FIPD_CascadiaCivil_Trader>
+            <FIPD_CascadiaCivil_Leader>2</FIPD_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_CascadiaCivil_Trader>1</FIPD_CascadiaCivil_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_CascadiaCivil_Civilian>3</FIPD_CascadiaCivil_Civilian>
+            <FIPD_CascadiaCivil_Fighter>10</FIPD_CascadiaCivil_Fighter>
+            <FIPD_CascadiaCivil_Leader>1</FIPD_CascadiaCivil_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_CascadiaCivil_Civilian>12</FIPD_CascadiaCivil_Civilian>
+            <FIPD_CascadiaCivil_Fighter>10</FIPD_CascadiaCivil_Fighter>
+            <FIPD_CascadiaCivil_Trader>3</FIPD_CascadiaCivil_Trader>
+            <FIPD_CascadiaCivil_Leader>2</FIPD_CascadiaCivil_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaCivil_Miner>1</FIPD_CascadiaCivil_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaCivil_Hunter>1</FIPD_CascadiaCivil_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaCivil_Logger>1</FIPD_CascadiaCivil_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaCivil_Farmer>1</FIPD_CascadiaCivil_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Rough"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_CascadiaRough_Civilian>4</FIPD_CascadiaRough_Civilian>
+            <FIPD_CascadiaRough_Fighter>14</FIPD_CascadiaRough_Fighter>
+            <FIPD_CascadiaRough_Trader>2</FIPD_CascadiaRough_Trader>
+            <FIPD_CascadiaRough_Leader>1</FIPD_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_CascadiaRough_Civilian>20</FIPD_CascadiaRough_Civilian>
+            <FIPD_CascadiaRough_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_CascadiaRough_Child>
+            <FIPD_CascadiaRough_Fighter>6</FIPD_CascadiaRough_Fighter>
+            <FIPD_CascadiaRough_Trader>4</FIPD_CascadiaRough_Trader>
+            <FIPD_CascadiaRough_Leader>2</FIPD_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_CascadiaRough_Trader>1</FIPD_CascadiaRough_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_CascadiaRough_Civilian>3</FIPD_CascadiaRough_Civilian>
+            <FIPD_CascadiaRough_Fighter>10</FIPD_CascadiaRough_Fighter>
+            <FIPD_CascadiaRough_Leader>1</FIPD_CascadiaRough_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_CascadiaRough_Civilian>12</FIPD_CascadiaRough_Civilian>
+            <FIPD_CascadiaRough_Fighter>10</FIPD_CascadiaRough_Fighter>
+            <FIPD_CascadiaRough_Trader>3</FIPD_CascadiaRough_Trader>
+            <FIPD_CascadiaRough_Leader>2</FIPD_CascadiaRough_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRough_Miner>1</FIPD_CascadiaRough_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRough_Hunter>1</FIPD_CascadiaRough_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRough_Logger>1</FIPD_CascadiaRough_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRough_Farmer>1</FIPD_CascadiaRough_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Raider"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_CascadiaRaider_Civilian>6</FIPD_CascadiaRaider_Civilian>
+            <FIPD_CascadiaRaider_Fighter>16</FIPD_CascadiaRaider_Fighter>
+            <FIPD_CascadiaRaider_Leader>3</FIPD_CascadiaRaider_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_CascadiaRaider_Trader>1</FIPD_CascadiaRaider_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_CascadiaRaider_Civilian>4</FIPD_CascadiaRaider_Civilian>
+            <FIPD_CascadiaRaider_Fighter>10</FIPD_CascadiaRaider_Fighter>
+            <FIPD_CascadiaRaider_Leader>2</FIPD_CascadiaRaider_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_CascadiaRaider_Civilian>10</FIPD_CascadiaRaider_Civilian>
+            <FIPD_CascadiaRaider_Fighter>12</FIPD_CascadiaRaider_Fighter>
+            <FIPD_CascadiaRaider_Trader>2</FIPD_CascadiaRaider_Trader>
+            <FIPD_CascadiaRaider_Leader>3</FIPD_CascadiaRaider_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRaider_Miner>1</FIPD_CascadiaRaider_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRaider_Hunter>1</FIPD_CascadiaRaider_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRaider_Logger>1</FIPD_CascadiaRaider_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaRaider_Farmer>1</FIPD_CascadiaRaider_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Cascadia_Tribal"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_CascadiaTribal_Civilian>4</FIPD_CascadiaTribal_Civilian>
+            <FIPD_CascadiaTribal_Fighter>14</FIPD_CascadiaTribal_Fighter>
+            <FIPD_CascadiaTribal_Leader>2</FIPD_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_CascadiaTribal_Civilian>20</FIPD_CascadiaTribal_Civilian>
+            <FIPD_CascadiaTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_CascadiaTribal_Child>
+            <FIPD_CascadiaTribal_Fighter>8</FIPD_CascadiaTribal_Fighter>
+            <FIPD_CascadiaTribal_Trader>4</FIPD_CascadiaTribal_Trader>
+            <FIPD_CascadiaTribal_Leader>2</FIPD_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_CascadiaTribal_Trader>1</FIPD_CascadiaTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_CascadiaTribal_Fighter>10</FIPD_CascadiaTribal_Fighter>
+            <FIPD_CascadiaTribal_Leader>2</FIPD_CascadiaTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_CascadiaTribal_Civilian>12</FIPD_CascadiaTribal_Civilian>
+            <FIPD_CascadiaTribal_Fighter>10</FIPD_CascadiaTribal_Fighter>
+            <FIPD_CascadiaTribal_Trader>3</FIPD_CascadiaTribal_Trader>
+            <FIPD_CascadiaTribal_Leader>2</FIPD_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <FIPD_CascadiaTribal_Fighter>10</FIPD_CascadiaTribal_Fighter>
+            <FIPD_CascadiaTribal_Leader>3</FIPD_CascadiaTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaTribal_Miner>1</FIPD_CascadiaTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaTribal_Hunter>1</FIPD_CascadiaTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaTribal_Logger>1</FIPD_CascadiaTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CascadiaTribal_Farmer>1</FIPD_CascadiaTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Civil"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_NuevoTexicoCivil_Civilian>4</FIPD_NuevoTexicoCivil_Civilian>
+            <FIPD_NuevoTexicoCivil_Fighter>14</FIPD_NuevoTexicoCivil_Fighter>
+            <FIPD_NuevoTexicoCivil_Trader>2</FIPD_NuevoTexicoCivil_Trader>
+            <FIPD_NuevoTexicoCivil_Leader>1</FIPD_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_NuevoTexicoCivil_Civilian>20</FIPD_NuevoTexicoCivil_Civilian>
+            <FIPD_NuevoTexicoCivil_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_NuevoTexicoCivil_Child>
+            <FIPD_NuevoTexicoCivil_Fighter>6</FIPD_NuevoTexicoCivil_Fighter>
+            <FIPD_NuevoTexicoCivil_Trader>4</FIPD_NuevoTexicoCivil_Trader>
+            <FIPD_NuevoTexicoCivil_Leader>2</FIPD_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_NuevoTexicoCivil_Trader>1</FIPD_NuevoTexicoCivil_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_NuevoTexicoCivil_Civilian>3</FIPD_NuevoTexicoCivil_Civilian>
+            <FIPD_NuevoTexicoCivil_Fighter>10</FIPD_NuevoTexicoCivil_Fighter>
+            <FIPD_NuevoTexicoCivil_Leader>1</FIPD_NuevoTexicoCivil_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_NuevoTexicoCivil_Civilian>12</FIPD_NuevoTexicoCivil_Civilian>
+            <FIPD_NuevoTexicoCivil_Fighter>10</FIPD_NuevoTexicoCivil_Fighter>
+            <FIPD_NuevoTexicoCivil_Trader>3</FIPD_NuevoTexicoCivil_Trader>
+            <FIPD_NuevoTexicoCivil_Leader>2</FIPD_NuevoTexicoCivil_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoCivil_Miner>1</FIPD_NuevoTexicoCivil_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoCivil_Hunter>1</FIPD_NuevoTexicoCivil_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoCivil_Logger>1</FIPD_NuevoTexicoCivil_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoCivil_Farmer>1</FIPD_NuevoTexicoCivil_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Rough"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_NuevoTexicoRough_Civilian>4</FIPD_NuevoTexicoRough_Civilian>
+            <FIPD_NuevoTexicoRough_Fighter>14</FIPD_NuevoTexicoRough_Fighter>
+            <FIPD_NuevoTexicoRough_Trader>2</FIPD_NuevoTexicoRough_Trader>
+            <FIPD_NuevoTexicoRough_Leader>1</FIPD_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_NuevoTexicoRough_Civilian>20</FIPD_NuevoTexicoRough_Civilian>
+            <FIPD_NuevoTexicoRough_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_NuevoTexicoRough_Child>
+            <FIPD_NuevoTexicoRough_Fighter>6</FIPD_NuevoTexicoRough_Fighter>
+            <FIPD_NuevoTexicoRough_Trader>4</FIPD_NuevoTexicoRough_Trader>
+            <FIPD_NuevoTexicoRough_Leader>2</FIPD_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_NuevoTexicoRough_Trader>1</FIPD_NuevoTexicoRough_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_NuevoTexicoRough_Civilian>3</FIPD_NuevoTexicoRough_Civilian>
+            <FIPD_NuevoTexicoRough_Fighter>10</FIPD_NuevoTexicoRough_Fighter>
+            <FIPD_NuevoTexicoRough_Leader>1</FIPD_NuevoTexicoRough_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_NuevoTexicoRough_Civilian>12</FIPD_NuevoTexicoRough_Civilian>
+            <FIPD_NuevoTexicoRough_Fighter>10</FIPD_NuevoTexicoRough_Fighter>
+            <FIPD_NuevoTexicoRough_Trader>3</FIPD_NuevoTexicoRough_Trader>
+            <FIPD_NuevoTexicoRough_Leader>2</FIPD_NuevoTexicoRough_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRough_Miner>1</FIPD_NuevoTexicoRough_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRough_Hunter>1</FIPD_NuevoTexicoRough_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRough_Logger>1</FIPD_NuevoTexicoRough_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRough_Farmer>1</FIPD_NuevoTexicoRough_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Raider"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_NuevoTexicoRaider_Civilian>6</FIPD_NuevoTexicoRaider_Civilian>
+            <FIPD_NuevoTexicoRaider_Fighter>16</FIPD_NuevoTexicoRaider_Fighter>
+            <FIPD_NuevoTexicoRaider_Leader>3</FIPD_NuevoTexicoRaider_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_NuevoTexicoRaider_Trader>1</FIPD_NuevoTexicoRaider_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_NuevoTexicoRaider_Civilian>4</FIPD_NuevoTexicoRaider_Civilian>
+            <FIPD_NuevoTexicoRaider_Fighter>10</FIPD_NuevoTexicoRaider_Fighter>
+            <FIPD_NuevoTexicoRaider_Leader>2</FIPD_NuevoTexicoRaider_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_NuevoTexicoRaider_Civilian>10</FIPD_NuevoTexicoRaider_Civilian>
+            <FIPD_NuevoTexicoRaider_Fighter>12</FIPD_NuevoTexicoRaider_Fighter>
+            <FIPD_NuevoTexicoRaider_Trader>2</FIPD_NuevoTexicoRaider_Trader>
+            <FIPD_NuevoTexicoRaider_Leader>3</FIPD_NuevoTexicoRaider_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRaider_Miner>1</FIPD_NuevoTexicoRaider_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRaider_Hunter>1</FIPD_NuevoTexicoRaider_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRaider_Logger>1</FIPD_NuevoTexicoRaider_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoRaider_Farmer>1</FIPD_NuevoTexicoRaider_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_NuevoTexico_Tribal"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_NuevoTexicoTribal_Civilian>4</FIPD_NuevoTexicoTribal_Civilian>
+            <FIPD_NuevoTexicoTribal_Fighter>14</FIPD_NuevoTexicoTribal_Fighter>
+            <FIPD_NuevoTexicoTribal_Leader>2</FIPD_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_NuevoTexicoTribal_Civilian>20</FIPD_NuevoTexicoTribal_Civilian>
+            <FIPD_NuevoTexicoTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_NuevoTexicoTribal_Child>
+            <FIPD_NuevoTexicoTribal_Fighter>8</FIPD_NuevoTexicoTribal_Fighter>
+            <FIPD_NuevoTexicoTribal_Trader>4</FIPD_NuevoTexicoTribal_Trader>
+            <FIPD_NuevoTexicoTribal_Leader>2</FIPD_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_NuevoTexicoTribal_Trader>1</FIPD_NuevoTexicoTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_NuevoTexicoTribal_Fighter>10</FIPD_NuevoTexicoTribal_Fighter>
+            <FIPD_NuevoTexicoTribal_Leader>2</FIPD_NuevoTexicoTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_NuevoTexicoTribal_Civilian>12</FIPD_NuevoTexicoTribal_Civilian>
+            <FIPD_NuevoTexicoTribal_Fighter>10</FIPD_NuevoTexicoTribal_Fighter>
+            <FIPD_NuevoTexicoTribal_Trader>3</FIPD_NuevoTexicoTribal_Trader>
+            <FIPD_NuevoTexicoTribal_Leader>2</FIPD_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <FIPD_NuevoTexicoTribal_Fighter>10</FIPD_NuevoTexicoTribal_Fighter>
+            <FIPD_NuevoTexicoTribal_Leader>3</FIPD_NuevoTexicoTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoTribal_Miner>1</FIPD_NuevoTexicoTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoTribal_Hunter>1</FIPD_NuevoTexicoTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoTribal_Logger>1</FIPD_NuevoTexicoTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NuevoTexicoTribal_Farmer>1</FIPD_NuevoTexicoTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Ghoul"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_GhoulSettlement_Civilian>4</FIPD_GhoulSettlement_Civilian>
+            <FIPD_GhoulSettlement_Fighter>14</FIPD_GhoulSettlement_Fighter>
+            <FIPD_GhoulSettlement_Trader>2</FIPD_GhoulSettlement_Trader>
+            <FIPD_GhoulSettlement_Leader>1</FIPD_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_GhoulSettlement_Civilian>20</FIPD_GhoulSettlement_Civilian>
+            <FIPD_GhoulSettlement_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_GhoulSettlement_Child>
+            <FIPD_GhoulSettlement_Fighter>6</FIPD_GhoulSettlement_Fighter>
+            <FIPD_GhoulSettlement_Trader>4</FIPD_GhoulSettlement_Trader>
+            <FIPD_GhoulSettlement_Leader>2</FIPD_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_GhoulSettlement_Trader>1</FIPD_GhoulSettlement_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_GhoulSettlement_Civilian>3</FIPD_GhoulSettlement_Civilian>
+            <FIPD_GhoulSettlement_Fighter>10</FIPD_GhoulSettlement_Fighter>
+            <FIPD_GhoulSettlement_Leader>1</FIPD_GhoulSettlement_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_GhoulSettlement_Civilian>12</FIPD_GhoulSettlement_Civilian>
+            <FIPD_GhoulSettlement_Fighter>10</FIPD_GhoulSettlement_Fighter>
+            <FIPD_GhoulSettlement_Trader>3</FIPD_GhoulSettlement_Trader>
+            <FIPD_GhoulSettlement_Leader>2</FIPD_GhoulSettlement_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_GhoulSettlement_Miner>1</FIPD_GhoulSettlement_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_GhoulSettlement_Hunter>1</FIPD_GhoulSettlement_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_GhoulSettlement_Logger>1</FIPD_GhoulSettlement_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_GhoulSettlement_Farmer>1</FIPD_GhoulSettlement_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_SuperMutant"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <options>
+            <FIPD_SuperMutantStronghold_Civilian>4</FIPD_SuperMutantStronghold_Civilian>
+            <FIPD_SuperMutantStronghold_Fighter>14</FIPD_SuperMutantStronghold_Fighter>
+            <FIPD_SuperMutantStronghold_Trader>2</FIPD_SuperMutantStronghold_Trader>
+            <FIPD_SuperMutantStronghold_Leader>1</FIPD_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_SuperMutantStronghold_Civilian>20</FIPD_SuperMutantStronghold_Civilian>
+            <FIPD_SuperMutantStronghold_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_SuperMutantStronghold_Child>
+            <FIPD_SuperMutantStronghold_Fighter>6</FIPD_SuperMutantStronghold_Fighter>
+            <FIPD_SuperMutantStronghold_Trader>4</FIPD_SuperMutantStronghold_Trader>
+            <FIPD_SuperMutantStronghold_Leader>2</FIPD_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_SuperMutantStronghold_Trader>1</FIPD_SuperMutantStronghold_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_SuperMutantStronghold_Civilian>3</FIPD_SuperMutantStronghold_Civilian>
+            <FIPD_SuperMutantStronghold_Fighter>10</FIPD_SuperMutantStronghold_Fighter>
+            <FIPD_SuperMutantStronghold_Leader>1</FIPD_SuperMutantStronghold_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_SuperMutantStronghold_Civilian>12</FIPD_SuperMutantStronghold_Civilian>
+            <FIPD_SuperMutantStronghold_Fighter>10</FIPD_SuperMutantStronghold_Fighter>
+            <FIPD_SuperMutantStronghold_Trader>3</FIPD_SuperMutantStronghold_Trader>
+            <FIPD_SuperMutantStronghold_Leader>2</FIPD_SuperMutantStronghold_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantStronghold_Miner>1</FIPD_SuperMutantStronghold_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantStronghold_Hunter>1</FIPD_SuperMutantStronghold_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantStronghold_Logger>1</FIPD_SuperMutantStronghold_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantStronghold_Farmer>1</FIPD_SuperMutantStronghold_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Army"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_SuperMutantArmy_Civilian>6</FIPD_SuperMutantArmy_Civilian>
+            <FIPD_SuperMutantArmy_Fighter>16</FIPD_SuperMutantArmy_Fighter>
+            <FIPD_SuperMutantArmy_Leader>3</FIPD_SuperMutantArmy_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_SuperMutantArmy_Trader>1</FIPD_SuperMutantArmy_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_SuperMutantArmy_Civilian>4</FIPD_SuperMutantArmy_Civilian>
+            <FIPD_SuperMutantArmy_Fighter>10</FIPD_SuperMutantArmy_Fighter>
+            <FIPD_SuperMutantArmy_Leader>2</FIPD_SuperMutantArmy_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_SuperMutantArmy_Civilian>10</FIPD_SuperMutantArmy_Civilian>
+            <FIPD_SuperMutantArmy_Fighter>12</FIPD_SuperMutantArmy_Fighter>
+            <FIPD_SuperMutantArmy_Trader>2</FIPD_SuperMutantArmy_Trader>
+            <FIPD_SuperMutantArmy_Leader>3</FIPD_SuperMutantArmy_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantArmy_Miner>1</FIPD_SuperMutantArmy_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantArmy_Hunter>1</FIPD_SuperMutantArmy_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantArmy_Logger>1</FIPD_SuperMutantArmy_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SuperMutantArmy_Farmer>1</FIPD_SuperMutantArmy_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Slanter"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_SlanterTribal_Civilian>4</FIPD_SlanterTribal_Civilian>
+            <FIPD_SlanterTribal_Fighter>14</FIPD_SlanterTribal_Fighter>
+            <FIPD_SlanterTribal_Leader>2</FIPD_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_SlanterTribal_Civilian>20</FIPD_SlanterTribal_Civilian>
+            <FIPD_SlanterTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_SlanterTribal_Child>
+            <FIPD_SlanterTribal_Fighter>8</FIPD_SlanterTribal_Fighter>
+            <FIPD_SlanterTribal_Trader>4</FIPD_SlanterTribal_Trader>
+            <FIPD_SlanterTribal_Leader>2</FIPD_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_SlanterTribal_Trader>1</FIPD_SlanterTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_SlanterTribal_Fighter>10</FIPD_SlanterTribal_Fighter>
+            <FIPD_SlanterTribal_Leader>2</FIPD_SlanterTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_SlanterTribal_Civilian>12</FIPD_SlanterTribal_Civilian>
+            <FIPD_SlanterTribal_Fighter>10</FIPD_SlanterTribal_Fighter>
+            <FIPD_SlanterTribal_Trader>3</FIPD_SlanterTribal_Trader>
+            <FIPD_SlanterTribal_Leader>2</FIPD_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <FIPD_SlanterTribal_Fighter>10</FIPD_SlanterTribal_Fighter>
+            <FIPD_SlanterTribal_Leader>3</FIPD_SlanterTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SlanterTribal_Miner>1</FIPD_SlanterTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SlanterTribal_Hunter>1</FIPD_SlanterTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SlanterTribal_Logger>1</FIPD_SlanterTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_SlanterTribal_Farmer>1</FIPD_SlanterTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Numen"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_NumenTribal_Civilian>4</FIPD_NumenTribal_Civilian>
+            <FIPD_NumenTribal_Fighter>14</FIPD_NumenTribal_Fighter>
+            <FIPD_NumenTribal_Leader>2</FIPD_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_NumenTribal_Civilian>20</FIPD_NumenTribal_Civilian>
+            <FIPD_NumenTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_NumenTribal_Child>
+            <FIPD_NumenTribal_Fighter>8</FIPD_NumenTribal_Fighter>
+            <FIPD_NumenTribal_Trader>4</FIPD_NumenTribal_Trader>
+            <FIPD_NumenTribal_Leader>2</FIPD_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_NumenTribal_Trader>1</FIPD_NumenTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_NumenTribal_Fighter>10</FIPD_NumenTribal_Fighter>
+            <FIPD_NumenTribal_Leader>2</FIPD_NumenTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_NumenTribal_Civilian>12</FIPD_NumenTribal_Civilian>
+            <FIPD_NumenTribal_Fighter>10</FIPD_NumenTribal_Fighter>
+            <FIPD_NumenTribal_Trader>3</FIPD_NumenTribal_Trader>
+            <FIPD_NumenTribal_Leader>2</FIPD_NumenTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <FIPD_NumenTribal_Fighter>10</FIPD_NumenTribal_Fighter>
+            <FIPD_NumenTribal_Leader>3</FIPD_NumenTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NumenTribal_Miner>1</FIPD_NumenTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NumenTribal_Hunter>1</FIPD_NumenTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NumenTribal_Logger>1</FIPD_NumenTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_NumenTribal_Farmer>1</FIPD_NumenTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="HHTools_Mutant_Critter"]</xpath>
+    <value>
+      <pawnGroupMakers Inherit="False">
+        <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <FIPD_CritterTribal_Civilian>4</FIPD_CritterTribal_Civilian>
+            <FIPD_CritterTribal_Fighter>14</FIPD_CritterTribal_Fighter>
+            <FIPD_CritterTribal_Leader>2</FIPD_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Peaceful</kindDef>
+          <options>
+            <FIPD_CritterTribal_Civilian>20</FIPD_CritterTribal_Civilian>
+            <FIPD_CritterTribal_Child MayRequire="Ludeon.RimWorld.Biotech">10</FIPD_CritterTribal_Child>
+            <FIPD_CritterTribal_Fighter>8</FIPD_CritterTribal_Fighter>
+            <FIPD_CritterTribal_Trader>4</FIPD_CritterTribal_Trader>
+            <FIPD_CritterTribal_Leader>2</FIPD_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Trader</kindDef>
+          <traders>
+            <FIPD_CritterTribal_Trader>1</FIPD_CritterTribal_Trader>
+          </traders>
+          <carriers>
+            <Horse>2</Horse>
+            <FCP_Animal_Radstag MayRequire="Rick.FCP.Animals">1</FCP_Animal_Radstag>
+            <FCP_Animal_Bighorner MayRequire="Rick.FCP.Animals">4</FCP_Animal_Bighorner>
+            <FCP_Animal_Brahmin MayRequire="Rick.FCP.Animals">8</FCP_Animal_Brahmin>
+          </carriers>
+          <guards>
+            <FIPD_CritterTribal_Fighter>10</FIPD_CritterTribal_Fighter>
+            <FIPD_CritterTribal_Leader>2</FIPD_CritterTribal_Leader>
+          </guards>
+        </li>
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+            <FIPD_CritterTribal_Civilian>12</FIPD_CritterTribal_Civilian>
+            <FIPD_CritterTribal_Fighter>10</FIPD_CritterTribal_Fighter>
+            <FIPD_CritterTribal_Trader>3</FIPD_CritterTribal_Trader>
+            <FIPD_CritterTribal_Leader>2</FIPD_CritterTribal_Leader>
+          </options>
+        </li>
+        <li>
+          <kindDef>Settlement_RangedOnly</kindDef>
+          <options>
+            <FIPD_CritterTribal_Fighter>10</FIPD_CritterTribal_Fighter>
+            <FIPD_CritterTribal_Leader>3</FIPD_CritterTribal_Leader>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Miners</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CritterTribal_Miner>1</FIPD_CritterTribal_Miner>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Hunters</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CritterTribal_Hunter>1</FIPD_CritterTribal_Hunter>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Loggers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CritterTribal_Logger>1</FIPD_CritterTribal_Logger>
+          </options>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">
+          <kindDef>Farmers</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <FIPD_CritterTribal_Farmer>1</FIPD_CritterTribal_Farmer>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+</Patch>

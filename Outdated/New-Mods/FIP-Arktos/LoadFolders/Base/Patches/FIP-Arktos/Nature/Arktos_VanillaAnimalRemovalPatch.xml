@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Keep removed species as compatibility anchors, but purge them from generator lists. -->
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs//li[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", normalize-space(.), "|"))]</xpath>
+  </Operation>
+
+  <!-- Remove hidden animals from faction carrier and combat-option dictionaries. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/FactionDef//*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+  </Operation>
+
+  <!-- Clean up wildlife dictionaries added by every loaded mod. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+    </match>
+  </Operation>
+
+</Patch>

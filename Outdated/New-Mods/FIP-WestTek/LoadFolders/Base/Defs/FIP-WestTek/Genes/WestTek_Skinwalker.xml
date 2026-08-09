@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef>
+    <defName>WestTek_Gene_SkinwalkerMutation</defName>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <label>skinwalker mutation</label>
+    <description>This pawn carries an unstable experimental fauna mutation, allowing controlled transformation into a Skinwalker form.</description>
+    <iconPath>UI/Icons/Genes/WestTek_SkinwalkerMutation</iconPath>
+    <displayOrderInCategory>500</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <biostatArc>1</biostatArc>
+    <abilities>
+      <li>WestTek_Ability_SkinwalkerShift</li>
+    </abilities>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>WestTek_Gene_SkinwalkerRaccoonShape</defName>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <label>skinwalker raccoon shape</label>
+    <description>The Skinwalker form collapses the pawn's silhouette toward its old raccoon ancestry.</description>
+    <iconPath>FIP-WestTek/Misc/WestTek_Placeholder</iconPath>
+    <displayOrderInCategory>501</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+<statOffsets>
+      <MoveSpeed>0.30</MoveSpeed>
+      <MeleeDPS>0.25</MeleeDPS>
+    </statOffsets>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Animal/Raccoon/Raccoon</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1.25, 1.25)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>95</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <AbilityDef>
+    <defName>WestTek_Ability_SkinwalkerShift</defName>
+    <label>skinwalker shift</label>
+    <description>Shift between stabilized S'Lanter form and unstable Skinwalker form.</description>
+    <iconPath>FIP-WestTek/Misc/WestTek_Placeholder</iconPath>
+    <targetRequired>false</targetRequired>
+    <cooldownTicksRange>60000~60000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <warmupTime>1</warmupTime>
+      <range>0</range>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FIP.WestTek.CompProperties_AbilitySkinwalkerShift" />
+    </comps>
+  </AbilityDef>
+
+</Defs>

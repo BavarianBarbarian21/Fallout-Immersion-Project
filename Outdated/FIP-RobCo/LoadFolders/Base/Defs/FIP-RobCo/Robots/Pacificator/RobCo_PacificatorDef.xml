@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Name="RobCo_PacificatorBase" ParentName="BaseMechanoid" Abstract="True">
+		<statBases>
+			<MarketValue>3000</MarketValue>
+			<MoveSpeed>3.0</MoveSpeed>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<MechEnergyLossPerHP>0.50</MechEnergyLossPerHP>
+		</statBases>
+		<race>
+			<body>RobCo_Assaultron</body>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<soundCallIntervalRange>6000~12000</soundCallIntervalRange>
+			<soundCallIntervalFriendlyFactor>2</soundCallIntervalFriendlyFactor>
+			<baseBodySize>1.5</baseBodySize>
+			<baseHealthScale>4.0</baseHealthScale>
+			<mechWeightClass>Medium</mechWeightClass>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+		</race>
+		<butcherProducts>
+			<Steel>10</Steel>
+		</butcherProducts>
+		<tools>
+			<li>
+				<label>chassis</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.0</cooldownTime>
+				<linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<RecipeDef Name="RobCo_PacificatorBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+		<gestationCycles>8</gestationCycles>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>200</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>120</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<displayPriority>350</displayPriority>
+	</RecipeDef>
+
+	<ThingDef ParentName="RobCo_PacificatorBase">
+		<defName>RobCo_Pacificator</defName>
+		<label>pacificator</label>
+		<description>A placeholder boss-level artillery robot intended for the Pacificator branch.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="RobCo_HugeRobotKind">
+		<defName>RobCo_Pacificator</defName>
+		<label>pacificator</label>
+		<race>RobCo_Pacificator</race>
+		<combatPower>900</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>FIP-RobCo/Robots/Pacificator/Pacificator</texPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.8</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<RecipeDef ParentName="RobCo_PacificatorBase_Recipe">
+		<defName>RobCo_Pacificator_Recipe</defName>
+		<label>restore pacificator</label>
+		<description>Restore a Pacificator chassis.</description>
+		<researchPrerequisites>
+			<li>RobCo_OS</li>
+			<li>RobCo_Choice_Pacificator</li>
+		</researchPrerequisites>
+		<products>
+			<RobCo_Pacificator>1</RobCo_Pacificator>
+		</products>
+	</RecipeDef>
+</Defs>

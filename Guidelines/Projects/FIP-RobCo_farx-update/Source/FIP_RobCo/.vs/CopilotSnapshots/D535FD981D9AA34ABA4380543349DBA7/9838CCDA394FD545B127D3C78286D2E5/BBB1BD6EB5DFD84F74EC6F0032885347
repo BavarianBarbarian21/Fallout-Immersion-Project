@@ -1,0 +1,16 @@
+﻿using RimWorld;
+using Verse;
+
+namespace FIP_RobCo
+{
+    [DefOf]
+    public static class JobDefOf_FIPRobCo
+    {
+        public static JobDef ReloadAbilityFromMap;
+
+        static JobDefOf_FIPRobCo()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(JobDefOf_FIPRobCo));
+        }
+    }
+}

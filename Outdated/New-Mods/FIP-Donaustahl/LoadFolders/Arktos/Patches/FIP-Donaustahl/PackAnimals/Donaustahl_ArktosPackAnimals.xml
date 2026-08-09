@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- All concrete Arktos biomes inherit from this abstract biome family. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals/li[.="Horse"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals/li[.="Horse"]</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[@Name="Arktos_Nature"]/allowedPackAnimals</xpath>
+    <value>
+      <li>Horse</li>
+    </value>
+  </Operation>
+</Patch>

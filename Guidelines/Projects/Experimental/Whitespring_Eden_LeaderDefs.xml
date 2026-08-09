@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Experimental FCP-style premade leader prototype for FIP-Whitespring.
+    This copies the CharacterDef + CharacterRole_FactionLeader pattern used in FCP,
+    but it is intentionally parked under Guidelines/Projects/Experimental for now.
+  -->
+
+  <PawnKindDef ParentName="Empire_Royal_Stellarch">
+    <defName>FIP_Whitespring_Unique_Pawnkind_JohnHenryEden</defName>
+    <label>John-Henry Eden</label>
+    <showInDebugSpawner>false</showInDebugSpawner>
+    <defaultFactionDef>Empire</defaultFactionDef>
+    <factionLeader>true</factionLeader>
+  </PawnKindDef>
+
+  <FCP.Core.CharacterDef>
+    <defName>FIP_Character_Whitespring_JohnHenryEden</defName>
+    <pawnKind>FIP_Whitespring_Unique_Pawnkind_JohnHenryEden</pawnKind>
+    <faction>Empire</faction>
+    <xenotype>Baseliner</xenotype>
+    <roles>
+      <li Class="FCP.Core.CharacterRole_FactionLeader">
+        <seniority>1000</seniority>
+      </li>
+    </roles>
+    <definitions>
+      <li Class="FCP.Core.CharacterStoryDefinition">
+        <firstName>John-Henry</firstName>
+        <lastName>Eden</lastName>
+        <nickname>President Eden</nickname>
+        <gender>Male</gender>
+        <age>62</age>
+      </li>
+      <li Class="FCP.Core.CharacterAppearanceDefinition">
+        <hairColor>(170, 170, 170)</hairColor>
+        <hairDef>Mop</hairDef>
+        <beardDef>NoBeard</beardDef>
+        <skinColorOverride>(225, 198, 178)</skinColorOverride>
+        <headTypeDef>Male_AverageNormal</headTypeDef>
+        <bodyTypeDef>Male</bodyTypeDef>
+      </li>
+    </definitions>
+  </FCP.Core.CharacterDef>
+</Defs>

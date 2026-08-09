@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Keep Arktos wildlife plus the scimitar cat and bog hound. -->
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingSetMakerDef//li[normalize-space(.)="EggFlamingoFertilized" or normalize-space(.)="EggPeacockFertilized" or normalize-space(.)="EggPenguinFertilized"]</xpath>
+  </Operation>
+
+  <!-- Cottonmouth remains a valid rare catch; only removed species leave the pawn pools. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingSetMakerDef//li[thingSetMaker/pawnKind="Capybara" or thingSetMaker/pawnKind="Monkey" or thingSetMaker/pawnKind="Crow" or thingSetMaker/pawnKind="Flamingo" or thingSetMaker/pawnKind="MonitorLizard"]</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
+    </match>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_American_Male</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstName] [lastName]</li>
+        <li>firstName(p=10)->[firstNameA]</li>
+        <li>lastName(p=10)->[lastNameA]</li>
+        <li>firstName->[firstNameB]</li>
+        <li>lastName->[lastNameB]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstNameA->Names/WestTek_Names_American_Male</li>
+        <li>lastNameA->Names/WestTek_Names_American_Last</li>
+        <li>firstNameB->Names/WestTek_Names_Chinese_Male</li>
+        <li>lastNameB->Names/WestTek_Names_Chinese_Last</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_American_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstName] [lastName]</li>
+        <li>firstName(p=10)->[firstNameA]</li>
+        <li>lastName(p=10)->[lastNameA]</li>
+        <li>firstName->[firstNameB]</li>
+        <li>lastName->[lastNameB]</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>firstNameA->Names/WestTek_Names_American_Female</li>
+        <li>lastNameA->Names/WestTek_Names_American_Last</li>
+        <li>firstNameB->Names/WestTek_Names_Chinese_Female</li>
+        <li>lastNameB->Names/WestTek_Names_Chinese_Last</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_SuperMutant_Male</defName>
+    <include><li>WestTek_PawnNameMaker_American_Male</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Mutant</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_Mutant_Female</defName>
+    <include><li>WestTek_PawnNameMaker_American_Female</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Mutant</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_Ghoul_Male</defName>
+    <include><li>WestTek_PawnNameMaker_American_Male</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Ghoul</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_Ghoul_Female</defName>
+    <include><li>WestTek_PawnNameMaker_American_Female</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Ghoul</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_Numen_Male</defName>
+    <include><li>WestTek_PawnNameMaker_American_Male</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Numen</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>WestTek_PawnNameMaker_Numen_Female</defName>
+    <include><li>WestTek_PawnNameMaker_American_Female</li></include>
+    <rulePack>
+      <rulesStrings><li>r_name->[firstName] '[nickNameName]' [lastName]</li></rulesStrings>
+      <rulesFiles><li>nickName->Names/WestTek_Names_Numen</li></rulesFiles>
+    </rulePack>
+  </RulePackDef>
+</Defs>

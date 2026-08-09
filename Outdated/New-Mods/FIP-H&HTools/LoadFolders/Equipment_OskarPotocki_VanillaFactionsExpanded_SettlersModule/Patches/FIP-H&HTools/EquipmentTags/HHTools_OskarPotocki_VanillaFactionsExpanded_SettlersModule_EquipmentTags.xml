@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Factions Expanded - Settlers (OskarPotocki.VanillaFactionsExpanded.SettlersModule). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_GreatDress"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_GreatDress"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_GreatDress"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_GreatDress"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_GreatDress"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="Apparel_Vest"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="Apparel_Vest"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="Apparel_Vest"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_Vest"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="Apparel_Vest"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Gun_DoubleActionRevolver"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_DoubleActionRevolver"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_ArizonaCowboy</li>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_NuevoTexicoFrontier</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T1_Wasteland</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_DoubleActionRevolver"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_ArizonaCowboy</li>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_NuevoTexicoFrontier</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T1_Wasteland</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Gun_DoubleBarreledShotgun"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_DoubleBarreledShotgun"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Shotgun</li>
+          <li>FIPW_T1_Wasteland</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_DoubleBarreledShotgun"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Shotgun</li>
+          <li>FIPW_T1_Wasteland</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Gun_HuntingRifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_HuntingRifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_ArizonaCowboy</li>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_NuevoTexicoFrontier</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T1_Wasteland</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Gun_HuntingRifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_ArizonaCowboy</li>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_NuevoTexicoFrontier</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T1_Wasteland</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Headgear_Bandana"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Headgear_Bandana"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFES_Headgear_Bandana"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_Bandana"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_Bandana"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Headgear_FlatCap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Headgear_FlatCap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFES_Headgear_FlatCap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_FlatCap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_FlatCap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Headgear_Sombrero"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Headgear_Sombrero"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_WastelanderGeneric</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VFES_Headgear_Sombrero"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_Sombrero"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Raider</li>
+            <li>FIPA_Pool_Settler</li>
+            <li>FIPA_Pool_WastelanderGeneric</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VFES_Headgear_Sombrero"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Raider</li>
+              <li>FIPA_Pool_Settler</li>
+              <li>FIPA_Pool_WastelanderGeneric</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Tomahawk"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Tomahawk"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Numen</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RegionalRaider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_Slanter</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Tribal</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T0_Improvised</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Tomahawk"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Numen</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_RegionalRaider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_Slanter</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Tribal</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T0_Improvised</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VFES_Weapon_GrenadeDynamite"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Weapon_GrenadeDynamite"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T1_Wasteland</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VFES_Weapon_GrenadeDynamite"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Caravan</li>
+          <li>FIPW_Pool_Ghoul</li>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_Settler</li>
+          <li>FIPW_Pool_SlaveLowTech</li>
+          <li>FIPW_Pool_Wastelander</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T1_Wasteland</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

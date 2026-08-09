@@ -1,0 +1,38 @@
+﻿using RimWorld;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+
+namespace FIP_RobCo
+{
+    public class Projectile_FatManPolluting : Projectile_DoomsdayRocket
+    {
+        public int pollutionCells = 24; // optional tuning value
+
+        protected override void Impact(Thing hitThing, bool blockedByShield = false)
+        {
+            Map map = Map;
+            IntVec3 center = Position;
+
+            base.Impact(hitThing, blockedByShield);
+
+            if (map == null || !ModsConfig.BiotechActive) return;
+
+            // Randomly pollute cells in explosion area
+            var cells = GenRadial.RadialCellsAround(center, def.projectile.explosionRadius, true);
+            int applied = 0;
+            foreach (IntVec3 c in cells.InRandomOrder())
+            {
+                if (!c.InBounds(map)) continue;
+                if (map.pollutionGrid.IsPolluted(c)) continue;
+
+                map.pollutionGrid.SetPolluted(c, true);
+                applied++;
+                if (applied >= pollutionCells) break;
+            }
+        }
+    }
+}

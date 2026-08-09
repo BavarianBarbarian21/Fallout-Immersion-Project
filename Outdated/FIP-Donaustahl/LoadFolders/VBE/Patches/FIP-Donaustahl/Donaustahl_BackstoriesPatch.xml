@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Category 3: keep the Defs for save compatibility, but remove every random
+    spawn category so these backstories can no longer be assigned to new pawns.
+  -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BackstoryDef[defName="VBE_PirateChef" or defName="VBE_Housecarl" or defName="VBE_FanaticInventor" or defName="VBE_IndustrialGunsmith" or defName="VBE_SlaveTrader" or defName="VBE_MidworldNomad" or defName="VBE_StarfighterMaintainer" or defName="VBE_Watchman" or defName="VBE_AimlessDilettante" or defName="VBE_LoneTraveller" or defName="VBE_Cannonfodder" or defName="VBE_CyberDilettante" or defName="VBE_WalkerEngineer" or defName="VBE_Propagandist" or defName="VBE_AddictedGamer" or defName="VBE_StructuralEngineer" or defName="VBE_ForgottenChild" or defName="VBE_IndustrialTinkerer" or defName="VBE_Commenter" or defName="VBE_ResearchScientist" or defName="VBE_UrbworldWarStudent" or defName="VBE_FringeShitposter" or defName="VBE_Rudie" or defName="VBE_PreservationistRuler" or defName="VBE_Apprentice" or defName="VBE_MedievalPage" or defName="VBE_CultLeader" or defName="VBE_AdventurousDreamer" or defName="VBE_MidworldProgrammer" or defName="VBE_Landsknecht" or defName="VBE_CriminalPriest" or defName="VBE_IndustrialSoldier" or defName="VBE_Chemist" or defName="VBE_ReluctantCadet" or defName="VBE_OrphanThief" or defName="VBE_PrivateContractor" or defName="VBE_MattressTester" or defName="VBE_ExtranetTroll" or defName="VBE_PirateKid" or defName="VBE_IncompetentPilot" or defName="VBE_Marauder" or defName="VBE_ArchotechFanatic" or defName="VBE_Masterofceremonies" or defName="VBE_CoginTheMachine" or defName="VBE_MedicineProdigy" or defName="VBE_CorruptPolitician" or defName="VBE_DeepSpaceScrapper" or defName="VBE_StewCooker" or defName="VBE_StarvingArtist" or defName="VBE_GalleryJanitor" or defName="VBE_HostessInTraining" or defName="VBE_TunerPunk" or defName="VBE_OliveFarmer" or defName="VBE_BlacksmithApprentice" or defName="VBE_Jeweler" or defName="VBE_BloodKnight" or defName="VBE_MedievalOrphan" or defName="VBE_StrangeChild" or defName="VBE_PodChild" or defName="VBE_ChildSoldier" or defName="VBE_Catastrophe" or defName="VBE_Doomsayer" or defName="VBE_EnlistedTeen" or defName="VBE_BountyHunter" or defName="VBE_Thane" or defName="VBE_TraineeCombatMedic" or defName="VBE_OldWarSurvivor" or defName="VBE_PrivateerCaptain" or defName="VBE_CenturionsDeputy" or defName="VBE_NoirDetective" or defName="VBE_CosplayEnthusiast" or defName="VBE_MilitarySurplusSupplier" or defName="VBE_CommunityDoctor" or defName="VBE_RetiredSoldier" or defName="VBE_FieldTechnician" or defName="VBE_GardenCurator" or defName="VBE_SupplyCoordinator" or defName="VBE_GalacticMedic" or defName="VBE_GalleyChef" or defName="VBE_StarshipScamp" or defName="VBE_EngineHelper" or defName="VBE_RefugeeRunner" or defName="VBE_WarOrphan" or defName="VBE_MilitiaRecruit" or defName="VBE_JungleScout" or defName="VBE_StorytellersKin" or defName="VBE_HerbalKin"]/spawnCategories/li</xpath>
+  </Operation>
+
+  <!-- Category 2 mechanical cleanup: remove arbitrary work bans. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BackstoryDef[defName="VBE_Freak" or defName="VBE_ForcedPrimitivist" or defName="VBE_InformationSponge" or defName="VBE_Pushover" or defName="VBE_Informant" or defName="VBE_CorporateSpy" or defName="VBE_ProsecutedWarVeteran" or defName="VBE_TrainDriver" or defName="VBE_CorporateMascot" or defName="VBE_AnimatronicMechanic" or defName="VBE_DeposedRoyalty" or defName="VBE_Bioweapon" or defName="VBE_NatureLover" or defName="VBE_Rocker" or defName="VBE_LiteraryCritic" or defName="VBE_PathologicalLiar" or defName="VBE_Blackguard" or defName="VBE_AndroidHunter"]/workDisables</xpath>
+  </Operation>
+
+  <!-- Category 2 mechanical cleanup: remove personality and body traits that the stories do not justify. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BackstoryDef[defName="VBE_Freak" or defName="VBE_Pushover" or defName="VBE_Informant" or defName="VBE_CorporateSpy" or defName="VBE_ProsecutedWarVeteran" or defName="VBE_TrainDriver" or defName="VBE_AnimatronicMechanic" or defName="VBE_Bioweapon" or defName="VBE_NatureLover" or defName="VBE_PathologicalLiar" or defName="VBE_LifelongPersonalAssistant"]/forcedTraits</xpath>
+  </Operation>
+
+  <!-- Sideshow work teaches performance, not an inability to care or socialize. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_Freak"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Artistic>3</Artistic>
+        <Social>-2</Social>
+        <Intellectual>-2</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- Exile harms trust without making social work physically impossible. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_ForcedPrimitivist"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Construction>-1</Construction>
+        <Mining>-1</Mining>
+        <Plants>3</Plants>
+        <Animals>2</Animals>
+        <Crafting>3</Crafting>
+        <Medicine>1</Medicine>
+        <Social>-3</Social>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- Industrial espionage rewards covers, technical sabotage and research. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_CorporateSpy"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Shooting>1</Shooting>
+        <Crafting>2</Crafting>
+        <Social>4</Social>
+        <Intellectual>2</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- A convicted veteran has focused combat training, not a blanket penalty to every civilian skill. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_ProsecutedWarVeteran"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Shooting>4</Shooting>
+        <Melee>2</Melee>
+        <Social>-2</Social>
+        <Intellectual>-1</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- Failed FEV conditioning leaves broad deficits, but no arbitrary total work bans. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_Bioweapon"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Shooting>3</Shooting>
+        <Melee>3</Melee>
+        <Medicine>3</Medicine>
+        <Artistic>-2</Artistic>
+        <Social>-3</Social>
+        <Intellectual>-2</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- Formal literary education should increase, not destroy, intellectual skill. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_LiteraryCritic"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Artistic>6</Artistic>
+        <Social>2</Social>
+        <Intellectual>3</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- A self-sufficient drifter is capable, but prolonged suspicion hurts people skills. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_Blackguard"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Melee>4</Melee>
+        <Construction>4</Construction>
+        <Crafting>4</Crafting>
+        <Artistic>-1</Artistic>
+        <Social>-2</Social>
+        <Intellectual>-2</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+
+  <!-- Bring the synth hunter down from its overpowered original profile. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_AndroidHunter"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Shooting>5</Shooting>
+        <Melee>3</Melee>
+        <Medicine>2</Medicine>
+        <Intellectual>2</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_AndroidHunter"]/forcedTraits</xpath>
+    <value>
+      <forcedTraits>
+        <Abrasive />
+      </forcedTraits>
+    </value>
+  </Operation>
+
+  <!-- The conditioned assistant is broadly trained but only explicitly barred from violence. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_LifelongPersonalAssistant"]/skillGains</xpath>
+    <value>
+      <skillGains>
+        <Cooking>2</Cooking>
+        <Plants>2</Plants>
+        <Animals>2</Animals>
+        <Medicine>2</Medicine>
+        <Social>4</Social>
+        <Intellectual>1</Intellectual>
+      </skillGains>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BackstoryDef[defName="VBE_LifelongPersonalAssistant"]/workDisables</xpath>
+    <value>
+      <workDisables>
+        <li>Violent</li>
+      </workDisables>
+    </value>
+  </Operation>
+</Patch>

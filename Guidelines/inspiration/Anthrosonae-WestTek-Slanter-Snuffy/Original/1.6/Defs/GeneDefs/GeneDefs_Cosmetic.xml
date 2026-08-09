@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- //// Fur //// -->
+	<GeneDef Name="ATK_AnthrosonaFurBase" Abstract="True">
+		<geneClass>Anthrosonae.FurGene</geneClass>
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<displayOrderInCategory>100</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<iconColor>(0.75,0.75,0.75)</iconColor>
+		<exclusionTags>
+			<li>Skin</li>
+			<li>SkinColorOverride</li>
+			<li>Fur</li>
+			<li>BeardStyle</li>
+			<li>Bodies</li>
+			<li>Body</li>
+		</exclusionTags>
+		<hairTagFilter>
+			<whitelist>false</whitelist>
+			<tags><li>Shaved</li></tags> 
+		</hairTagFilter>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags><li>NoBeard</li></tags>
+		</beardTagFilter>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>true</tattoosVisible>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrobearFur</defName>
+		<label>anthrobear fur</label>
+		<labelShortAdj>anthrobear furred</labelShortAdj>
+		<description>Carriers of this gene grow bear-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrobearFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrobear_Average_Male</li>
+			<li>ATK_Anthrobear_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrobear</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_Grizzly</li>
+                    <li>ATK_FurPreset_BlackBear</li>
+					<li>ATK_FurPreset_BrownBear</li>
+                    <li>ATK_FurPreset_White</li>
+                    <li>ATK_FurPreset_DeepBrown</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrocatFur</defName>
+		<label>anthrocat fur</label>
+		<labelShortAdj>anthrocat furred</labelShortAdj>
+		<description>Carriers of this gene grow cat-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocatFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrocat_Average_Male</li>
+			<li>ATK_Anthrocat_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrocat</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_Leopard</li>
+                    <li>ATK_FurPreset_SnowLeopard</li>
+                    <li>ATK_FurPreset_White</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrocowFur</defName>
+		<label>anthrocow fur</label>
+		<labelShortAdj>anthrocow furred</labelShortAdj>
+		<description>Carriers of this gene grow cow-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocowFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrocow_Average_Male</li>
+			<li>ATK_Anthrocow_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrocow</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_GrayLight</li>
+                    <li>ATK_FurPreset_White</li>
+					<li>ATK_FurPreset_PaleTan</li>
+					<li>ATK_FurPreset_BurntOrange</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrodeerFur</defName>
+		<label>anthrodeer fur</label>
+		<labelShortAdj>anthrodeer furred</labelShortAdj>
+		<description>Carriers of this gene grow deer-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodeerFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrodeer_Average_Male</li>
+			<li>ATK_Anthrodeer_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrodeer</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_Deer</li>
+                    <li>ATK_FurPreset_Caribou</li>
+                    <li>ATK_FurPreset_DeepOrange</li>
+                    <li>ATK_FurPreset_BurntOrange</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrodrakeSkin</defName>
+		<label>anthrodrake scales</label>
+		<labelShortAdj>anthrodrake scaled</labelShortAdj>
+		<description>Carriers of this gene grow dragon-like scales all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodrakeSkin</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrodrake_Average_Male</li>
+			<li>ATK_Anthrodrake_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrodrake</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_SilverDrake</li>
+                    <li>ATK_FurPreset_GoldDrake</li>
+                    <li>ATK_FurPreset_JadeDrake</li>
+
+                    <li>ATK_FurPreset_PaleBlue</li>
+                    <li>ATK_FurPreset_PaleBlueWhite</li>
+                    <li>ATK_FurPreset_DeepBlue</li>
+                    <li>ATK_FurPreset_DeepBlueWhite</li>
+                    <li>ATK_FurPreset_Purple</li>
+                    <li>ATK_FurPreset_PurpleWhite</li>
+                    <li>ATK_FurPreset_PaleRed</li>
+                    <li>ATK_FurPreset_DeepRed</li>
+                    <li>ATK_FurPreset_DeepRedWhite</li>
+                    <li>ATK_FurPreset_DeepRedCream</li>
+                    <li>ATK_FurPreset_Yellow</li>
+                    <li>ATK_FurPreset_YellowWhite</li>
+                    <li>ATK_FurPreset_PaleGreen</li>
+                    <li>ATK_FurPreset_PaleGreenWhite</li>
+                    <li>ATK_FurPreset_DeepGreen</li>
+                    <li>ATK_FurPreset_DeepGreenWhite</li>
+                    <li>ATK_FurPreset_Pink</li>
+                    <li>ATK_FurPreset_PinkWhite</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrofoxFur</defName>
+		<label>anthrofox fur</label>
+		<labelShortAdj>anthrofox furred</labelShortAdj>
+		<description>Carriers of this gene grow fox-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrofoxFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrofox_Average_Male</li>
+			<li>ATK_Anthrofox_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrofox</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_RedFox</li>
+                    <li>ATK_FurPreset_Fennec</li>
+                    <li>ATK_FurPreset_BlackGray</li>
+                    <li>ATK_FurPreset_GrayLightWhite</li>
+                    <li>ATK_FurPreset_White</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrogoatFur</defName>
+		<label>anthrogoat fur</label>
+		<labelShortAdj>Anthrogoat furred</labelShortAdj>
+		<description>Carriers of this gene grow goat-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrogoat_Average_Male</li>
+			<li>ATK_Anthrogoat_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrogoat</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+					<li>ATK_FurPreset_Goat</li>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_White</li>
+					<li>ATK_FurPreset_DeepBrown</li>
+					<li>ATK_FurPreset_PaleTan</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrogriffFur</defName>
+		<label>Anthrogriff feathers</label>
+		<labelShortAdj>Anthrogriff feathered</labelShortAdj>
+		<description>Carriers of this gene grow griffin-like feathers all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogriffFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrogriff_Average_Male</li>
+			<li>ATK_Anthrogriff_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrogriff</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_White</li>
+                    <li>ATK_FurPreset_PaleTan</li>
+                    <li>ATK_FurPreset_DeepOrange</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrohorseFur</defName>
+		<label>anthrohorse fur</label>
+		<labelShortAdj>anthrohorse furred</labelShortAdj>
+		<description>Carriers of this gene grow horse-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohorseFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrohorse_Average_Male</li>
+			<li>ATK_Anthrohorse_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrohorse</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+					<li>ATK_FurPreset_BlueRoan</li>
+					<li>ATK_FurPreset_Haflinger</li>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_BlackWhite</li>
+                    <li>ATK_FurPreset_White</li>
+                    <li>ATK_FurPreset_DeepBrown</li>
+					<li>ATK_FurPreset_BurntOrangeWhite</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrohyenaFur</defName>
+		<label>anthrohyena fur</label>
+		<labelShortAdj>anthrohyena furred</labelShortAdj>
+		<description>Carriers of this gene grow hyena-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohyenaFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrohyena_Average_Male</li>
+			<li>ATK_Anthrohyena_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrohyena</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors><li>ATK_FurPreset_SpottedHyena</li></allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthropandaFur</defName>
+		<label>anthropanda fur</label>
+		<labelShortAdj>anthropanda furred</labelShortAdj>
+		<description>Carriers of this gene grow panda-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthropandaFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthropanda_Average_Male</li>
+			<li>ATK_Anthropanda_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthropanda</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors><li>ATK_FurPreset_Panda</li></allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrorabbitFur</defName>
+		<label>anthrorabbit fur</label>
+		<labelShortAdj>anthrorabbit furred</labelShortAdj>
+		<description>Carriers of this gene grow rabbit-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrorabbitFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrorabbit_Average_Male</li>
+			<li>ATK_Anthrorabbit_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrorabbit</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+					<li>ATK_FurPreset_Hare</li>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_White</li>
+					<li>ATK_FurPreset_PaleBrown</li>
+					<li>ATK_FurPreset_DeepTan</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrosharkSkin</defName>
+		<label>anthroshark scales</label>
+		<labelShortAdj>anthroshark scaled</labelShortAdj>
+		<description>Carriers of this gene grow shark-like scales all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrosharkSkin</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthroshark_Average_Male</li>
+			<li>ATK_Anthroshark_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthroshark</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_BlueShark</li>
+                    <li>ATK_FurPreset_LemonShark</li>
+                    <li>ATK_FurPreset_GrayWhite</li>
+                    <li>ATK_FurPreset_GrayLightWhite</li>
+                    <li>ATK_FurPreset_White</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrowahFur</defName>
+		<label>anthrowah fur</label>
+		<labelShortAdj>anthrowah furred</labelShortAdj>
+		<description>Carriers of this gene grow red panda-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowahFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrowah_Average_Male</li>
+			<li>ATK_Anthrowah_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrowah</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors><li>ATK_FurPreset_RedPanda</li></allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFurBase">
+		<defName>ATK_AnthrowolfFur</defName>
+		<label>anthrowolf fur</label>
+		<labelShortAdj>anthrowolf furred</labelShortAdj>
+		<description>Carriers of this gene grow wolf-like fur all over their body.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowolfFur</iconPath>
+		<skinColorOverride>(255,255,255)</skinColorOverride>
+		<forcedHeadTypes>
+			<li>ATK_Anthrowolf_Average_Male</li>
+			<li>ATK_Anthrowolf_Average_Female</li>
+		</forcedHeadTypes>
+		<fur>ATK_Anthrowolf</fur>
+		<modExtensions>
+			<li Class="Anthrosonae.FurColors">
+                <allowedFurColors>
+                    <li>ATK_FurPreset_TimberWolf</li>
+                    <li>ATK_FurPreset_RedWolf</li>
+					<li>ATK_FurPreset_Coyote</li>
+                    <li>ATK_FurPreset_Black</li>
+                    <li>ATK_FurPreset_BlackGray</li>
+                    <li>ATK_FurPreset_GrayLightWhite</li>
+                    <li>ATK_FurPreset_White</li>
+                </allowedFurColors>
+            </li>
+		</modExtensions>
+	</GeneDef>
+
+
+	<!-- //// Headbone //// -->
+	<GeneDef Name="ATK_AnthrosonaHeadboneBase" ParentName="GeneHeadboneBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+    	<endogeneCategory>Headbone</endogeneCategory>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<displayOrderInCategory>400</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<exclusionTags><li>Headbone</li></exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrocowHeadbone</defName>
+		<label>anthrocow mini-horns</label>
+		<description>Carriers of this gene have small cow-like horns.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocowHeadboneA</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrocowHeadboneA</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrocowHeadbone_Long</defName>
+		<label>anthrocow long-horns</label>
+		<description>Carriers of this gene have long cow-like horns.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocowHeadboneB</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrocowHeadboneB</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrodeerHeadbone</defName>
+		<label>long anthrodeer antlers</label>
+		<description>Carriers of this gene have long deer-like antlers.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodeerHeadboneA</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrodeerHeadboneA</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrodeerHeadbone_Short</defName>
+		<label>short anthrodeer antlers</label>
+		<description>Carriers of this gene have short deer-like antlers.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodeerHeadboneB</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrodeerHeadboneB</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrodrakeHeadbone</defName>
+		<label>straight anthrodrake horns</label>
+		<description>Carriers of this gene have long dragon-like horns.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodrakeHeadboneA</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrodrakeHeadboneA</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrodrakeHeadbone_Spiraled</defName>
+		<label>spiraled anthrodrake horns</label>
+		<description>Carriers of this gene have dragon-like horns with a spiraled shape.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodrakeHeadboneB</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrodrakeHeadboneB</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrogoatHeadbone</defName>
+		<label>straight anthrogoat horns</label>
+		<description>Carriers of this gene have long goat-like horns.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatHeadboneA</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrogoatHeadboneA</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrogoatHeadbone_Short</defName>
+		<label>short anthrogoat horns</label>
+		<description>Carriers of this gene have short goat-like horns.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatHeadboneB</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrogoatHeadboneB</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaHeadboneBase">
+		<defName>ATK_AnthrogoatHeadbone_Spiraled</defName>
+		<label>spiraled anthrogoat horns</label>
+		<description>Carriers of this gene have goat-like horns with a spiraled shape.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatHeadboneC</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Headbones/AnthrogoatHeadboneC</texPath>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Custom</colorType>
+				<drawData>
+					<defaultData><layer>80</layer></defaultData>
+					<dataNorth><layer>10</layer></dataNorth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+
+	<!-- //// Ears //// -->
+	<GeneDef Name="ATK_AnthrosonaEarsBase" ParentName="GeneEarsBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<displayOrderInCategory>200</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<exclusionTags><li>Ears</li></exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrobearEars</defName>
+		<label>anthrobear ears</label>
+		<description>Carriers of this gene have bear-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrobearEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrobearEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrocatEars</defName>
+		<label>anthrocat ears</label>
+		<description>Carriers of this gene have cat-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocatEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrocatEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrocowEars</defName>
+		<label>anthrocow ears</label>
+		<description>Carriers of this gene have cow-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocowEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrocowEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrodeerEars</defName>
+		<label>anthrodeer ears</label>
+		<description>Carriers of this gene have deer-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodeerEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrodeerEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrodrakeEars</defName>
+		<label>anthrodrake ears</label>
+		<description>Carriers of this gene have dragon-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodrakeEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrodrakeEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrofoxEars</defName>
+		<label>anthrofox ears</label>
+		<description>Carriers of this gene have fox-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrofoxEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrofoxEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrogoatEars</defName>
+		<label>straight anthrogoat ears</label>
+		<description>Carriers of this gene have goat-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatEarsA</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrogoatEarsA</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrogoatEars_Droopy</defName>
+		<label>droopy anthrogoat ears</label>
+		<description>Carriers of this gene have droopy goat-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatEarsB</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrogoatEarsB</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrogriffEars</defName>
+		<label>Anthrogriff ears</label>
+		<description>Carriers of this gene have griffin-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogriffEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrogriffEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrohorseEars</defName>
+		<label>anthrohorse ears</label>
+		<description>Carriers of this gene have horse-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohorseEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrohorseEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrohyenaEars</defName>
+		<label>anthrohyena ears</label>
+		<description>Carriers of this gene have hyena-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohyenaEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrohyenaEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthropandaEars</defName>
+		<label>anthropanda ears</label>
+		<description>Carriers of this gene have panda-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthropandaEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthropandaEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrorabbitEars</defName>
+		<label>anthrorabbit ears</label>
+		<description>Carriers of this gene have rabbit-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrorabbitEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrorabbitEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrosharkEars</defName>
+		<label>anthroshark ears</label>
+		<description>Carriers of this gene have shark-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrosharkEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrosharkEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrowahEars</defName>
+		<label>anthrowah ears</label>
+		<description>Carriers of this gene have red panda-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowahEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrowahEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaEarsBase">
+		<defName>ATK_AnthrowolfEars</defName>
+		<label>anthrowolf ears</label>
+		<description>Carriers of this gene have wolf-like ears.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowolfEars</iconPath>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/Ears/AnthrowolfEars</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<defaultData><layer>70</layer></defaultData>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+
+	<!-- //// Tails //// -->
+	<GeneDef Name="ATK_AnthrosonaTailBase" ParentName="GeneTailBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<iconColor>(0.75,0.75,0.75)</iconColor>
+		<displayOrderInCategory>300</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+    	<randomChosen>true</randomChosen>
+		<exclusionTags><li>Tail</li></exclusionTags>
+	</GeneDef>
+
+	<!-- //// Default tail offsets //// -->
+	<!--
+	<dataNorth>
+		<offset>(0,0,-0.5)</offset>
+		<layer>90</layer>
+	</dataNorth>
+	<dataSouth><offset>(-0.1,0,-0.25)</offset></dataSouth>
+	<dataEast><offset>(-0.55,0,-0.25)</offset></dataEast>
+	<dataWest><offset>(0.55,0,-0.25)</offset></dataWest>
+	-->
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrobearTail</defName>
+		<label>anthrobear tail</label>
+		<description>Carriers of this gene have a bear-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrobearTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrobearTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,-0.42)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.1,0,-0.18)</offset></dataSouth>
+					<dataEast><offset>(-0.65,0,-0.29)</offset></dataEast>
+					<dataWest><offset>(0.65,0,-0.29)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrocatTail</defName>
+		<label>anthrocat tail</label>
+		<description>Carriers of this gene have a cat-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocatTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrocatTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.04,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.14,0,-0.25)</offset></dataSouth>
+					<dataEast><offset>(-0.55,0,-0.25)</offset></dataEast>
+					<dataWest><offset>(0.55,0,-0.25)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrocowTail</defName>
+		<label>anthrocow tail</label>
+		<description>Carriers of this gene have a cow-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocowTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrocowTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.03,0,-0.31)</offset></dataSouth>
+					<dataEast><offset>(-0.65,0,-0.3)</offset></dataEast>
+					<dataWest><offset>(0.65,0,-0.3)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrodeerTail</defName>
+		<label>anthrodeer tail</label>
+		<description>Carriers of this gene have a deer-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodeerTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrodeerTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<visibleFacing>
+					<li>East</li>
+					<li>North</li>
+					<li>West</li>
+				</visibleFacing>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,-0.53)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.1,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.6,0,-0.29)</offset></dataEast>
+					<dataWest><offset>(0.6,0,-0.29)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrodrakeTail</defName>
+		<label>anthrodrake tail</label>
+		<description>Carriers of this gene have a dragon-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrodrakeTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrodrakeTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.13,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.58,0,-0.28)</offset></dataEast>
+					<dataWest><offset>(0.58,0,-0.28)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrofoxTail</defName>
+		<label>anthrofox tail</label>
+		<description>Carriers of this gene have a fox-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrofoxTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrofoxTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.13,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.61,0,-0.28)</offset></dataEast>
+					<dataWest><offset>(0.61,0,-0.28)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrogoatTail</defName>
+		<label>anthrogoat tail</label>
+		<description>Carriers of this gene have a goat-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogoatTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrogoatTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<visibleFacing>
+					<li>East</li>
+					<li>North</li>
+					<li>West</li>
+				</visibleFacing>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(-0.01,0,-0.45)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.09,0,-0.22)</offset></dataSouth>
+					<dataEast><offset>(-0.55,0,-0.25)</offset></dataEast>
+					<dataWest><offset>(0.55,0,-0.25)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrogriffTail</defName>
+		<label>Anthrogriff tail</label>
+		<description>Carriers of this gene have a griffin-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogriffTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrogriffTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1,1)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.45)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.11,0,-0.2)</offset></dataSouth>
+					<dataEast><offset>(-0.54,0,-0.25)</offset></dataEast>
+					<dataWest><offset>(0.54,0,-0.25)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrohorseTail</defName>
+		<label>anthrohorse tail</label>
+		<description>Carriers of this gene have a horse-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohorseTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrohorseTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(0.9,0.9)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.6)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.11,0,-0.25)</offset></dataSouth>
+					<dataEast><offset>(-0.54,0,-0.3)</offset></dataEast>
+					<dataWest><offset>(0.54,0,-0.3)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrohyenaTail</defName>
+		<label>anthrohyena tail</label>
+		<description>Carriers of this gene have a hyena-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrohyenaTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrohyenaTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.04,0,-0.53)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.44,0,-0.18)</offset></dataSouth>
+					<dataEast><offset>(-0.34,0,-0.39)</offset></dataEast>
+					<dataWest><offset>(0.34,0,-0.39)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthropandaTail</defName>
+		<label>anthropanda tail</label>
+		<description>Carriers of this gene have a panda-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthropandaTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthropandaTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,-0.42)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.1,0,-0.18)</offset></dataSouth>
+					<dataEast><offset>(-0.65,0,-0.29)</offset></dataEast>
+					<dataWest><offset>(0.65,0,-0.29)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrorabbitTail</defName>
+		<label>anthrorabbit tail</label>
+		<description>Carriers of this gene have a rabbit-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrorabbitTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrorabbitTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<visibleFacing>
+					<li>East</li>
+					<li>North</li>
+					<li>West</li>
+				</visibleFacing>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.1,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.6,0,-0.28)</offset></dataEast>
+					<dataWest><offset>(0.6,0,-0.28)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrosharkTail</defName>
+		<label>anthroshark tail</label>
+		<description>Carriers of this gene have a shark-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrosharkTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrosharkTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(0.9,0.9)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,-0.55)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.25,0,-0.36)</offset></dataSouth>
+					<dataEast><offset>(-0.53,0,-0.25)</offset></dataEast>
+					<dataWest><offset>(0.53,0,-0.25)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrowahTail</defName>
+		<label>anthrowah tail</label>
+		<description>Carriers of this gene have a red panda-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowahTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrowahTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.05,0,-0.53)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.15,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.61,0,-0.3)</offset></dataEast>
+					<dataWest><offset>(0.61,0,-0.3)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaTailBase">
+		<defName>ATK_AnthrowolfTail</defName>
+		<label>anthrowolf tail</label>
+		<description>Carriers of this gene have a wolf-like tail.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrowolfTail</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Tails/AnthrowolfTail</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+				<overrideMeshSize>(1.2,1.2)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0.03,0,-0.5)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth><offset>(-0.13,0,-0.28)</offset></dataSouth>
+					<dataEast><offset>(-0.6,0,-0.28)</offset></dataEast>
+					<dataWest><offset>(0.6,0,-0.28)</offset></dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+
+	<!-- //// Backbone //// -->
+	<GeneDef Name="ATK_AnthrosonaBackboneBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<iconColor>(0.75,0.75,0.75)</iconColor>
+		<displayOrderInCategory>500</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<exclusionTags>
+			<li>Backbone</li>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaBackboneBase">
+		<defName>ATK_AnthrogriffBackbone</defName>
+		<label>anthrogriff wings</label>
+		<description>Carriers of this gene grow griffin-like, cosmetic wings.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrogriffBackbone</iconPath>
+		<renderNodeProperties>
+			<li>
+				<workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+				<texPath>Things/Pawn/Humanlike/Anthrosonae/BodyAttachments/Backbones/AnthrogriffBackbone</texPath>
+				<shaderTypeDef>CutoutComplex</shaderTypeDef>
+				<colorType>Hair</colorType>
+        		<overrideMeshSize>(1.4,1.4)</overrideMeshSize>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh,Rotting</rotDrawMode>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData><layer>-2</layer></defaultData>
+					<dataNorth>
+						<offset>(0,0,0)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0,0,0)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.05,0,0)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.05,0,0)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+
+	<!-- //// Facial overlays //// -->
+	<GeneDef Name="ATK_AnthrosonaFacialOverlayBase" Abstract="True">
+		<biostatCpx>0</biostatCpx>
+		<displayCategory>ATK_Cosmetic_Anthrosonae</displayCategory>
+		<iconColor>(0.75,0.75,0.75)</iconColor>
+		<displayOrderInCategory>500</displayOrderInCategory>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<exclusionTags>
+			<li>Backbone</li>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFacialOverlayBase">
+		<defName>ATK_AnthrocheeFacialStripes</defName>
+		<label>anthrocat facial stripes</label>
+		<description>Carriers of this gene have cheetah-like stripes on their face.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrocheeFacialStripes</iconPath>
+		<renderNodeProperties>
+		<li>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+			<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/FacialOverlays/AnthrocheeFacialStripes</texPath>
+			<parentTagDef>Head</parentTagDef>
+			<colorType>Skin</colorType>
+			<useRottenColor>true</useRottenColor>
+			<rotDrawMode>Fresh,Rotting</rotDrawMode>
+			<visibleFacing>
+				<li>East</li>
+				<li>South</li>
+				<li>West</li>
+			</visibleFacing>
+			<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+			<baseLayer>51</baseLayer>
+		</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef ParentName="ATK_AnthrosonaFacialOverlayBase">
+		<defName>ATK_AnthrofoxFacialStripes</defName>
+		<label>anthrofox facial stripes</label>
+		<description>Carriers of this gene have fox-like stripes on their face.</description>
+		<iconPath>UI/Icons/Genes/Anthrosonae/Gene_AnthrofoxFacialStripes</iconPath>
+		<renderNodeProperties>
+		<li>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+			<texPath>Things/Pawn/Humanlike/Anthrosonae/HeadAttachments/FacialOverlays/AnthrofoxFacialStripes</texPath>
+			<parentTagDef>Head</parentTagDef>
+			<colorType>Skin</colorType>
+			<useRottenColor>true</useRottenColor>
+			<rotDrawMode>Fresh,Rotting</rotDrawMode>
+			<visibleFacing>
+				<li>East</li>
+				<li>South</li>
+				<li>West</li>
+			</visibleFacing>
+			<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+			<baseLayer>51</baseLayer>
+		</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+</Defs>

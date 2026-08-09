@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Clothing and worn utility equipment are never valid FIP relics. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[relicChance and (apparel or contains(@Name, "Apparel") or contains(@Name, "Armor") or contains(@ParentName, "Apparel") or contains(@ParentName, "Armor"))]/relicChance</xpath>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Weapons may inherit relic eligibility from a weapon base or declare it directly. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[relicChance and (weaponTags or weaponClasses or tools or verbs or contains(@Name, "Weapon") or contains(@Name, "Gun") or contains(@Name, "Melee") or contains(@ParentName, "Weapon") or contains(@ParentName, "Gun") or contains(@ParentName, "Melee"))]/relicChance</xpath>
+    <success>Always</success>
+  </Operation>
+</Patch>

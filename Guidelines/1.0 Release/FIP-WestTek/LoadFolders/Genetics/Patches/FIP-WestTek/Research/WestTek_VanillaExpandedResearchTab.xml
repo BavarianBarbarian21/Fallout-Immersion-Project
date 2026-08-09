@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Many Vanilla Expanded modules each declare the same ResearchTabDef. Collapse
+    those duplicate instances into one canonical tab before moving Genetics into
+    it. This integration belongs to the Genetics compatibility layer and no longer
+    depends on Vanilla Cooking Expanded.
+  -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ResearchTabDef[defName="VanillaExpanded"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+      <ResearchTabDef>
+        <defName>VanillaExpanded</defName>
+        <label>Vanilla Expanded</label>
+      </ResearchTabDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[starts-with(defName,"GR_")]/tab</xpath>
+    <value>
+      <tab>VanillaExpanded</tab>
+    </value>
+  </Operation>
+
+  <!-- Keep the Genetics topology, positioned below the existing shared tree. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/researchViewX</xpath>
+    <value><researchViewX>3</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/researchViewY</xpath>
+    <value><researchViewY>8.5</researchViewY></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/researchViewX</xpath>
+    <value><researchViewX>3</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticEngineering"]/researchViewY</xpath>
+    <value><researchViewY>9.5</researchViewY></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/researchViewX</xpath>
+    <value><researchViewX>3</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticDuplication"]/researchViewY</xpath>
+    <value><researchViewY>10.5</researchViewY></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticMechahybridization"]/researchViewX</xpath>
+    <value><researchViewX>5</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticMechahybridization"]/researchViewY</xpath>
+    <value><researchViewY>8.5</researchViewY></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_HybridImplantology"]/researchViewX</xpath>
+    <value><researchViewX>5</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_HybridImplantology"]/researchViewY</xpath>
+    <value><researchViewY>9.5</researchViewY></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticCompatibility"]/researchViewX</xpath>
+    <value><researchViewX>5</researchViewX></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticCompatibility"]/researchViewY</xpath>
+    <value><researchViewY>10.5</researchViewY></value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ResearchTabDef[defName="GR_GeneticReseach"]</xpath>
+  </Operation>
+</Patch>

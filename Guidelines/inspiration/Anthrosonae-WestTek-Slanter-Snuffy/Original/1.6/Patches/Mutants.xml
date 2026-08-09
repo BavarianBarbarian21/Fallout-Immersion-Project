@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Anomaly">
+				<xpath>Defs/MutantDef[defName="Ghoul"]/disablesGenes</xpath>
+				<value>
+					<li>ATK_AnthrobearFur</li>
+					<li>ATK_AnthrocatFur</li>
+					<li>ATK_AnthrocowFur</li>
+					<li>ATK_AnthrodeerFur</li>
+					<li>ATK_AnthrodrakeSkin</li>
+					<li>ATK_AnthrofoxFur</li>
+					<li>ATK_AnthrogoatFur</li>
+					<li>ATK_AnthrogriffFur</li>
+					<li>ATK_AnthrohorseFur</li>
+					<li>ATK_AnthrohyenaFur</li>
+					<li>ATK_AnthropandaFur</li>
+					<li>ATK_AnthrorabbitFur</li>
+					<li>ATK_AnthrosharkSkin</li>
+					<li>ATK_AnthrowahFur</li>
+					<li>ATK_AnthrowolfFur</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

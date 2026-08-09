@@ -1,0 +1,673 @@
+RIMWORLD 1.6 – SHUTTLE-TEXTUR-INVENTAR
+========================================
+
+Stand: 23.07.2026
+
+Untersuchter Umfang
+-------------------
+- RimWorld Core und alle lokal installierten offiziellen DLCs
+- alle derzeit lokal installierten Vanilla-Expanded-Mods
+- Rimsential - Spaceports (Continued), PackageId zal.spaceports
+- aktive 1.6-Defs, Patches und Texturen
+
+Wichtig:
+- Offizielle RimWorld-Texturen liegen in gepackten Unity-Assets. Deshalb ist dort
+  der XML-Ressourcenpfad angegeben und kein frei zugänglicher PNG-Dateipfad.
+- Bei Mods sind die tatsächlich vorhandenen PNG-Dateien angegeben.
+- "Graphic_Multi" lädt Richtungsvarianten über einen gemeinsamen Basispfad.
+- UI-Symbole, Weltkarten-Symbole, Landeplätze und unbenutzte Altdateien sind
+  getrennt von den eigentlichen Shuttle-Körpern aufgeführt.
+
+
+1. RIMWORLD CORE UND DLCs
+=========================
+
+1.1 Eigentliche Shuttle-, Dropship- und Wrackgrafiken
+-----------------------------------------------------
+
+1) Standard-/Imperial-Shuttle
+   Ressourcenpfad:
+   Things/Building/Misc/Shuttle
+
+   Verwendet von:
+   - ThingDef Shuttle
+   - abstrakter ThingDef ShuttleSkyfallerBase
+   - ShuttleIncoming und ShuttleLeaving erben die Skyfaller-Grafik
+   - ShuttleCrashing erbt sie ebenfalls
+
+   Grafiktyp:
+   Graphic_Single
+
+   Hinweis:
+   Dieselbe Körpergrafik wird für das gelandete Shuttle und den Flug verwendet.
+
+2) Abgestürztes Standard-Shuttle
+   Ressourcenpfad:
+   Things/Building/Misc/CrashedShuttle
+
+   Verwendet von:
+   - ThingDef ShuttleCrashed
+   - Biotech-ThingDef ShuttleCrashed_Exitable erbt diese Grafik
+
+   Grafiktyp:
+   Graphic_Single (von Shuttle geerbt)
+
+3) Mechanitor-Schiff im Flug beziehungsweise beim Absturz
+   Ressourcenpfad:
+   Things/Building/Misc/MechanitorShip
+
+   Verwendet von:
+   - Biotech-ThingDef ShuttleCrashing_Mechanitor
+
+   Grafiktyp:
+   Graphic_Single (vom Shuttle-Skyfaller geerbt)
+
+4) Abgestürztes Mechanitor-Schiff
+   Ressourcenpfad:
+   Things/Building/Misc/MechanitorShipCrashed
+
+   Verwendet von:
+   - Biotech-ThingDef ShuttleCrashed_Exitable_Mechanitor
+
+   Grafiktyp:
+   Graphic_Single (vom abgestürzten Shuttle geerbt)
+
+5) Odyssey-Passagiershuttle
+   Ressourcen-Basispfad:
+   Things/Building/PassengerShuttle/PassengerShuttle
+
+   Verwendet von:
+   - ThingDef PassengerShuttle
+   - PassengerShuttleIncoming
+   - PassengerShuttleLeaving
+
+   Grafiktyp:
+   Graphic_Multi, CutoutComplex
+
+   FCP-Anforderung:
+   Ein einfacher einzelner Ersatz reicht hier nicht, solange Graphic_Multi
+   beibehalten wird. Der FCP-Ersatz braucht die passenden Richtungsdateien und
+   gegebenenfalls Masken, oder der Patch muss die GraphicClass ändern.
+
+6) Antikes verrostetes Dropship
+   Ressourcenpfad:
+   Things/Building/Ruins/AncientRustedDropship
+
+   Verwendet von:
+   - ThingDef AncientRustedDropship
+
+   Grafiktyp:
+   Graphic_Single
+
+7) Antikes Dropship-Triebwerk
+   Ressourcenpfad:
+   Things/Building/Ruins/AncientDropshipEngine
+
+   Verwendet von:
+   - ThingDef AncientDropshipEngine
+
+   Grafiktyp:
+   Graphic_Single
+
+   Hinweis:
+   Das ist nur ein Wrackteil und kein vollständiges Shuttle. Es ist für einen
+   vollständigen visuellen Fallout-Umbau trotzdem relevant.
+
+
+1.2 Shuttle-bezogene Weltkarten- und Gegenstandsgrafiken
+--------------------------------------------------------
+
+8) Weltkarten-Symbol des normalen fliegenden Shuttles
+   World/WorldObjects/Expanding/TravelingShuttle
+
+   Verwendet von:
+   - ShuttleWorldObjectBase
+   - Royalty-WorldObject TravelingShuttle
+
+9) Weltkarten-Symbol des Odyssey-Passagiershuttles
+   World/WorldObjects/Expanding/PassengerShuttle
+
+   Verwendet von:
+   - Odyssey-WorldObject PassengerShuttle
+
+10) Odyssey-Shuttletriebwerk als Gegenstand
+    Things/Item/Resource/ShuttleEngine
+
+    Verwendet von:
+    - ThingDef ShuttleEngine
+
+Gemeinsam verwendete, nicht shuttle-spezifische Grafik:
+World/WorldObjects/Caravan
+
+Diese generische Weltkarten-Textur wird unter anderem als Grundgrafik reisender
+Shuttles verwendet. Sie sollte nicht global durch ein Shuttle ersetzt werden.
+
+
+1.3 DLC-Zusammenfassung
+-----------------------
+- Royalty bringt die TransportShipDef und Shuttle-Nutzung, verwendet für den
+  Körper aber die in Core definierten Shuttle-Ressourcen.
+- Biotech ergänzt das Mechanitor-Schiff und ein begehbares abgestürztes Shuttle.
+- Odyssey ergänzt das Passagiershuttle, sein Weltkarten-Symbol und das
+  Shuttletriebwerk als Ressource.
+- Ideology und Anomaly ergänzen keine eigenen Shuttle-Körpertexturen.
+
+
+2. VANILLA EXPANDED
+===================
+
+Es wurden alle lokal installierten Vanilla-Expanded-Mods geprüft. Eigene oder
+direkt verwendete Shuttle-Grafiken wurden nur in den nachfolgenden Mods gefunden.
+
+
+2.1 Vanilla Events Expanded
+----------------------------
+
+Aktive Shuttle-Wrackgrafiken:
+
+1) Textures\Things\Buildings_Exotic\Shuttle_Crashed\Shuttle_Standard_Crashed.png
+   Def: VEE_Shuttle
+
+2) Textures\Things\Buildings_Exotic\Shuttle_Crashed\Shuttle_Combat_Crashed.png
+   Def: VEE_Shuttle_Combat
+
+3) Textures\Things\Buildings_Exotic\Shuttle_Crashed\Shuttle_Heavy_Crashed.png
+   Def: VEE_Shuttle_Heavy
+
+Aktive Flug-/Absturz-Skyfaller:
+
+4) Textures\Skyfallers\Shuttle_Standard_Skyfaller.png
+   Def: ShuttleChunkIncoming
+
+5) Textures\Skyfallers\Shuttle_Combat_Skyfaller.png
+   Def: VEE_ShuttleChunkIncoming_Combat
+
+6) Textures\Skyfallers\Shuttle_Heavy_Skyfaller.png
+   Def: VEE_ShuttleChunkIncoming_Heavy
+
+Unbenutzte Altdatei:
+
+7) Textures\Things\Buildings_Exotic\ShipChunkShuttle.png
+
+Die 1.6-Defs verweisen nicht mehr auf ShipChunkShuttle.png. Für den FCP-Patch
+müssen daher primär sechs und nicht sieben VEE-Grafiken ersetzt werden.
+
+
+2.2 Vanilla Textures Expanded
+------------------------------
+
+Aktuelle 1.6-Dateien:
+
+1) 1.6\Textures\Shuttle\ImperialShuttle\ImperialShuttle.png
+2) 1.6\Textures\Shuttle\ImperialShuttle\CrashedImperialShuttle.png
+
+Diese Option ersetzt normalerweise:
+- Shuttle
+- ShuttleCrashed
+- ShuttleSkyfallerBase
+
+Aber:
+Der VTE-Patch wird ausdrücklich nicht ausgeführt, wenn
+"Vanilla Factions Expanded - Empire" aktiv ist. Außerdem sind beide Dateien
+bitgenau identisch mit den gleichnamigen Dateien aus VFE Empire. In der aktuellen
+Modkombination bestimmt daher VFE Empire diese beiden Grafiken.
+
+Die Ordner 1.4 und 1.5 enthalten zusätzliche Versionskopien derselben beiden
+Dateien. Sie sind für RimWorld 1.6 nicht aktiv und werden nicht als zusätzliche
+Modelle gezählt.
+
+
+2.3 Vanilla Factions Expanded - Empire
+---------------------------------------
+
+1) Textures\Shuttle\ImperialShuttle\ImperialShuttle.png
+   Verwendet für:
+   - Vanilla ThingDef Shuttle über 1.6\Patches\Shuttle.xml
+   - Vanilla ShuttleSkyfallerBase
+   - Props-and-Decor-Def VFEPD_ImperialShuttle
+
+2) Textures\Shuttle\ImperialShuttle\CrashedImperialShuttle.png
+   Verwendet für:
+   - Vanilla ThingDef ShuttleCrashed über 1.6\Patches\Shuttle.xml
+   - Props-and-Decor-Def VFEPD_ImperialShuttleCrashed
+
+3) Textures\Shuttle\ImperialArmoredShuttle\ImperialArmoredShuttle.png
+   Verwendet für:
+   - VFEI_ArmoredShuttle
+   - VFEI_ArmoredShuttleIncoming
+   - VFEI_ArmoredShuttleLeaving
+
+4) Textures\Shuttle\ImperialArmoredShuttle\ImperialArmoredShuttle_Autocannon.png
+   Verwendet für:
+   - VFEI_TurretArmoredShuttle
+
+   Wichtig:
+   Die Kanone ist ein separates Turret-Overlay. Wenn nur der Shuttle-Körper
+   ersetzt wird, bleibt die imperiale Doppelkanone sichtbar.
+
+5) Textures\Shuttle\ImperialArmoredShuttle\ImperialArmoredShuttle_Skyfaller.png
+   Verwendet für:
+   - Props-and-Decor-Def VFEPD_ArmoredImperialShuttle
+
+   Hinweis:
+   Das echte fliegende VFE-Empire-Shuttle verwendet Datei 3. Datei 5 wird in
+   RimWorld 1.6 als dekoratives Props-and-Decor-Objekt verwendet.
+
+
+2.4 Vanilla Factions Expanded - Deserters
+------------------------------------------
+
+Eigentlicher Shuttle-Körper:
+
+1) Textures\Structures\Misc\DeserterShuttle.png
+
+Verwendet für:
+- VFED_DeserterShuttle
+- VFED_DeserterShuttleSkyfallerBase
+- VFED_DeserterShuttleIncoming
+- VFED_DeserterShuttleLeaving
+- VFED_TravelingDeserterShuttle als expandierendes Weltkarten-Symbol
+- Props-and-Decor-Def VFEPD_DeserterShuttle
+
+Besonderheit:
+VFED_Ship_DeserterShuttle verwendet als gelandetes shipThing den Vanilla-Def
+Shuttle, während die ankommende, abfliegende und reisende Darstellung die
+DeserterShuttle-Grafik nutzt. Der separate Def VFED_DeserterShuttle wird in
+Deserter-Strukturen verwendet. Für eine durchgehend einheitliche FCP-Grafik
+müssen deshalb sowohl der Vanilla-Shuttle-Def als auch die VFED-Skyfaller
+berücksichtigt werden.
+
+Zusätzliche Shuttle-Symbole:
+
+2) Textures\DeserterServices\Service_CallShuttle.png
+   UI-Symbol des Dienstes VFED_CallShuttle
+
+3) Textures\WorldObjects\QuestIcon_ShuttleStagingPost.png
+   Weltkarten-Symbol von VFED_ShuttleStagingPost
+
+
+2.5 Vanilla Furniture Expanded - Props and Decor
+-------------------------------------------------
+
+Diese Fahrzeuge sind dekorative, außer Betrieb befindliche Props. Sie sind
+dennoch besonders wichtig, weil Rimsential Spaceports bei aktivem VE Props
+mehrere echte Spaceport-Shuttles auf genau diese Texturen umleitet.
+
+A) Personal pod – 1 Datei
+
+Textures\Things\Building\Spaceships\PersonalPod\PersonalPod.png
+
+Basispfad:
+Things/Building/Spaceships/PersonalPod/PersonalPod
+
+Def:
+VFEPD_Personalpod
+
+B) Superpod – 1 Datei
+
+Textures\Things\Building\Spaceships\Superpod\Superpod.png
+
+Basispfad:
+Things/Building/Spaceships/Superpod/Superpod
+
+Def:
+VFEPD_Superpod
+
+C) Skip – 6 Dateien
+
+Textures\Things\Building\Spaceships\Skip\Skip_east.png
+Textures\Things\Building\Spaceships\Skip\Skip_eastm.png
+Textures\Things\Building\Spaceships\Skip\Skip_north.png
+Textures\Things\Building\Spaceships\Skip\Skip_northm.png
+Textures\Things\Building\Spaceships\Skip\Skip_south.png
+Textures\Things\Building\Spaceships\Skip\Skip_southm.png
+
+Basispfad:
+Things/Building/Spaceships/Skip/Skip
+
+Def:
+VFEPD_SkipBlack
+
+D) Spacer shuttle – 3 Dateien
+
+Textures\Things\Building\Spaceships\SpacerShuttle\SpacerShuttle_east.png
+Textures\Things\Building\Spaceships\SpacerShuttle\SpacerShuttle_north.png
+Textures\Things\Building\Spaceships\SpacerShuttle\SpacerShuttle_south.png
+
+Basispfad:
+Things/Building/Spaceships/SpacerShuttle/SpacerShuttle
+
+Def:
+VFEPD_SpacerShuttle
+
+E) Albatross/Gunship – 6 Dateien
+
+Textures\Things\Building\Spaceships\Albatross\Albatross_east.png
+Textures\Things\Building\Spaceships\Albatross\Albatross_eastm.png
+Textures\Things\Building\Spaceships\Albatross\Albatross_north.png
+Textures\Things\Building\Spaceships\Albatross\Albatross_northm.png
+Textures\Things\Building\Spaceships\Albatross\Albatross_south.png
+Textures\Things\Building\Spaceships\Albatross\Albatross_southm.png
+
+Basispfad:
+Things/Building/Spaceships/Albatross/Albatross
+
+Def:
+VFEPD_AlbatrossBlack
+
+F) Heavy dropship – 3 Dateien
+
+Textures\Things\Building\Spaceships\HeavyDropship\HeavyDropship_east.png
+Textures\Things\Building\Spaceships\HeavyDropship\HeavyDropship_north.png
+Textures\Things\Building\Spaceships\HeavyDropship\HeavyDropship_south.png
+
+Basispfad:
+Things/Building/Spaceships/HeavyDropship/HeavyDropship
+
+Def:
+VFEPD_HeavyDropship
+
+G) Heavy cargo shuttle – 3 Dateien
+
+Textures\Things\Building\Spaceships\Shuttle_HeavyCargo\Shuttle_HeavyCargo_east.png
+Textures\Things\Building\Spaceships\Shuttle_HeavyCargo\Shuttle_HeavyCargo_north.png
+Textures\Things\Building\Spaceships\Shuttle_HeavyCargo\Shuttle_HeavyCargo_south.png
+
+Basispfad:
+Things/Building/Spaceships/Shuttle_HeavyCargo/Shuttle_HeavyCargo
+
+Def:
+VFEPD_Shuttle_HeavyCargo
+
+Zusätzliche Struktur, kein Fahrzeug:
+
+Textures\Things\Building\Spaceships\Misc\Shuttle_Bay.png
+
+Basispfad:
+Things/Building/Spaceships/Misc/Shuttle_Bay
+
+Def:
+VFEPD_ShipPart_Shuttle_Bay
+
+Direkt referenzierte, aber nicht von Props and Decor gelieferte Grafiken:
+- VFEPD_Shuttle -> Things/Building/Misc/Shuttle (RimWorld Core)
+- VFEPD_ShuttleCrashed -> Things/Building/Misc/CrashedShuttle (Core)
+- VFEPD_PassengerShuttle -> Odyssey-Passagiershuttle
+- VFEPD_AncientRustedDropship -> Core
+- VFEPD_AncientDropshipEngine -> Core
+- VFEPD_ImperialShuttle und VFEPD_ImperialShuttleCrashed -> VFE Empire
+- VFEPD_ArmoredImperialShuttle -> VFE Empire
+- VFEPD_DeserterShuttle -> VFE Deserters
+- VFEPD_AncientShuttle -> Vanilla Quests Expanded - Ancients
+
+
+2.6 Vanilla Quests Expanded - Ancients
+---------------------------------------
+
+1) Textures\Things\Building\Props\AncientShuttle.png
+
+Ressourcenpfad:
+Things/Building/Props/AncientShuttle
+
+Verwendet von:
+- Props-and-Decor-Def VFEPD_AncientShuttle, wenn das Ancients-Modul aktiv ist
+
+Der Ancients-Mod selbst enthält in seiner aktuellen 1.6-XML keinen eigenen Def,
+der direkt auf diese Datei verweist. Die Datei wird durch die bedingte
+Props-and-Decor-Integration genutzt.
+
+
+2.7 Vanilla Aspirations Expanded
+---------------------------------
+
+Nur UI, kein Shuttle-Körper:
+
+Textures\UI\AspirationIcons\Aspiration_ObtainShuttle.png
+
+
+2.8 Vanilla Base Generation Expanded
+-------------------------------------
+
+Enthält Layout-Verweise wie:
+- VBGEDestroyedShuttle
+- VBGEEmpireShuttle1
+
+Es liefert dafür keine neue Shuttle-Textur, sondern platziert bereits vorhandene
+Shuttle-Defs beziehungsweise Grafiken.
+
+
+2.9 Ergebnis der Prüfung aller übrigen installierten VE-Mods
+-------------------------------------------------------------
+
+In den übrigen lokal installierten Vanilla-Expanded-Mods wurden keine weiteren
+aktiven 1.6-Shuttle-, Dropship- oder TransportShip-Körpertexturen gefunden.
+
+Nicht als Shuttle gezählt wurden:
+- komplette Gravships und einzelne Gravship-Bauteile
+- normale Drop Pods
+- Raumstations- und Schiffswandteile
+- beliebige Texturen, deren Ordner nur das Wort "Spaceships" enthält, ohne ein
+  Shuttle, Dropship, Lander oder verwandtes Kleinfahrzeug darzustellen
+
+
+3. RIMSENTIAL - SPACEPORTS (CONTINUED)
+======================================
+
+3.1 Eigene aktive Shuttle-Ressourcen im Hauptordner
+---------------------------------------------------
+
+Der Mod besitzt 13 direkt adressierbare Shuttle-Körperdateien:
+
+1)  Textures\Buildings\Shuttles\ShuttleA.png
+2)  Textures\Buildings\Shuttles\ShuttleB.png
+3)  Textures\Buildings\Shuttles\ShuttleC.png
+4)  Textures\Buildings\Shuttles\ShuttleD.png
+5)  Textures\Buildings\Shuttles\ShuttleE.png
+6)  Textures\Buildings\Shuttles\ShuttleF.png
+7)  Textures\Buildings\Shuttles\ShuttleG.png
+8)  Textures\Buildings\Shuttles\ShuttleH.png
+9)  Textures\Buildings\Shuttles\ShuttleI.png
+10) Textures\Buildings\Shuttles\ShuttleJ.png
+11) Textures\Buildings\Shuttles\ShuttleK.png
+12) Textures\Buildings\Shuttles\Shuttle_Inert.png
+13) Textures\Buildings\Shuttles\TestShuttle.png
+
+Alle Spaceports-Shuttle-Defs erben Graphic_Single. Daher sind keine
+Richtungsvarianten erforderlich, solange der FCP-Patch Graphic_Single beibehält.
+
+
+3.2 Spaceports-Def-Zuordnung ohne VE-Props-Überschreibung
+---------------------------------------------------------
+
+Spaceports_ShuttleA       -> Buildings/Shuttles/ShuttleA
+Spaceports_ShuttleB       -> Buildings/Shuttles/ShuttleB
+Spaceports_ShuttleC       -> Buildings/Shuttles/ShuttleC
+Spaceports_ShuttleD       -> Buildings/Shuttles/ShuttleD
+Spaceports_ShuttleE       -> Buildings/Shuttles/ShuttleE
+Spaceports_ShuttleF       -> Buildings/Shuttles/ShuttleF
+Spaceports_ShuttleG       -> Buildings/Shuttles/ShuttleG
+Spaceports_ShuttleH       -> Buildings/Shuttles/ShuttleH
+Spaceports_ShuttleI       -> Buildings/Shuttles/ShuttleI
+Spaceports_ShuttleJ       -> Buildings/Shuttles/ShuttleJ
+Spaceports_ShuttleK       -> Buildings/Shuttles/ShuttleK
+Spaceports_ShuttleInert   -> Buildings/Shuttles/Shuttle_Inert
+Spaceports_SurpriseShuttle-> Buildings/Shuttles/ShuttleA
+
+Über TestShuttle beziehungsweise den abstrakten Basis-Def:
+- Spaceports_RoyaltyShuttle
+- Spaceports_ShuttleSkip, bevor der VE-Props-Patch greift
+- Spaceports_ShuttleSuperpod
+- abstrakter Spaceports_ShuttleBase
+- Basispfade der Spaceports-Skyfaller
+
+Der Absturz-Skyfaller ShuttleA_Crashing verwendet Shuttle_Inert.
+
+
+3.3 Tatsächlich wirksame VE-Props-Überschreibungen
+--------------------------------------------------
+
+Wenn "Vanilla Furniture Expanded - Props and Decor" aktiv ist, ersetzt
+Rimsential Spaceports die folgenden eigenen Grafiken:
+
+Spaceports_ShuttleB, ShuttleB_Incoming und ShuttleB_Leaving:
+Things/Building/Spaceships/Albatross/Albatross_east
+
+Spaceports_ShuttleC, ShuttleC_Incoming und ShuttleC_Leaving:
+Things/Building/Spaceships/Skip/Skip_east
+
+Spaceports_ShuttleD, ShuttleD_Incoming und ShuttleD_Leaving:
+Things/Building/Spaceships/SpacerShuttle/SpacerShuttle_east
+
+Spaceports_ShuttleG, ShuttleG_Incoming und ShuttleG_Leaving:
+Things/Building/Spaceships/Shuttle_HeavyCargo/Shuttle_HeavyCargo_east
+
+Spaceports_ShuttleK, ShuttleK_Incoming und ShuttleK_Leaving:
+Things/Building/Spaceships/HeavyDropship/HeavyDropship_east
+
+Spaceports_ShuttleSkip, ShuttleSkip_Incoming und ShuttleSkip_Leaving:
+Things/Building/Spaceships/Skip/Skip_east
+
+Damit bleiben bei der aktuell untersuchten Kombination von den 13 eigenen
+Spaceports-Hauptdateien direkt in Benutzung:
+- ShuttleA.png
+- ShuttleE.png
+- ShuttleF.png
+- ShuttleH.png
+- ShuttleI.png
+- ShuttleJ.png
+- Shuttle_Inert.png
+- TestShuttle.png
+
+ShuttleB, C, D, G und K liegen weiterhin im Mod, werden aber durch die aktiven
+VE-Props-Kompatibilitätspatches umgeleitet.
+
+
+3.4 Zusätzliche, nicht referenzierte Shuttle-Sammlungen
+-------------------------------------------------------
+
+Unter Textures\Buildings\Shuttles liegen zwei weitere vollständige Sammlungen:
+
+Textures\Buildings\Shuttles\!Standard\
+- ShuttleA.png bis ShuttleK.png
+- Shuttle_Inert.png
+- TestShuttle.png
+
+Textures\Buildings\Shuttles\!Personal\
+- ShuttleA.png bis ShuttleK.png
+- Shuttle_Inert.png
+- TestShuttle.png
+
+Das sind zusammen 26 zusätzliche Dateien.
+
+Ergebnis der Referenzprüfung:
+- Die !Standard-Dateien sind bitgenaue Kopien der 13 Hauptdateien.
+- Die !Personal-Dateien sind größtenteils alternative Bilder.
+- Keine aktive 1.6-XML-Def und kein gefundener 1.6-Patch verweist auf
+  Buildings/Shuttles/!Standard oder Buildings/Shuttles/!Personal.
+- Für den normalen FCP-Def-Patch müssen diese 26 Dateien nicht ersetzt werden.
+
+
+3.5 Spaceports-Unterstützungsgrafiken
+-------------------------------------
+
+Landeplatz:
+
+Textures\Buildings\ShuttleLandingPad\ShuttleLandingPad.png
+
+Def:
+Spaceports_ShuttleLandingPad
+
+Kein Fahrzeug, trotz Shuttle im Namen:
+
+Textures\Things\Item\ArchoShuttle\ArchoShuttle.png
+Textures\Things\Item\ArchoShuttle\ArchoShuttleA.png
+Textures\Things\Item\ArchoShuttle\ArchoShuttleB.png
+Textures\Things\Item\ArchoShuttle\ArchoShuttleC.png
+
+Diese gehören zu Apparel_ArchoShuttle.
+
+Textures\Things\Item\ShuttleComm\ShuttleComm.png
+Textures\Things\Item\ShuttleComm\ShuttleCommA.png
+Textures\Things\Item\ShuttleComm\ShuttleCommB.png
+Textures\Things\Item\ShuttleComm\ShuttleCommC.png
+Textures\Things\Item\ShuttleComm\ShuttleCommD.png
+
+Diese gehören zu Apparel_ShuttleComm.
+
+Spaceports verwendet für sein reisendes Shuttle kein eigenes Weltkartenbild:
+- expandingIconTexture: World/WorldObjects/Expanding/TravelingTransportPods
+- texture: World/WorldObjects/Caravan
+
+Beides sind geteilte Vanilla-Ressourcen und sollten nicht global nur für
+Spaceports überschrieben werden.
+
+
+4. KURZE ZÄHLUNG
+================
+
+Vanilla/Core/DLC:
+- 7 relevante Ressourcen-Basispfade für Shuttle-Körper, Wracks und das
+  Dropship-Triebwerk
+- 2 shuttle-spezifische Weltkarten-Symbole
+- 1 Shuttletriebwerk-Gegenstand
+- Die physischen PNG-Dateien sind in Unity-Assets gepackt.
+
+Vanilla Expanded, aktive 1.6-Fahrzeug-/Wrack-/Propdateien im erweiterten
+Shuttle-Sinn:
+- 6 Vanilla Events Expanded
+- 23 Props-and-Decor-Kleinfahrzeugdateien einschließlich Richtungen und Masken
+- 5 VFE-Empire-Dateien
+- 1 VFE-Deserters-Shuttle
+- 1 Ancient-Shuttle-Datei
+= 36 physische PNG-Dateien
+
+Zusätzlich:
+- 2 VTE-Dateien, die die beiden VFE-Empire-Imperial-Shuttle-Dateien duplizieren
+- 3 shuttle-bezogene VE-UI-/Weltkartensymbole
+- 1 Shuttle-Bay-Struktur
+- 1 alte, in 1.6 unbenutzte VEE-Datei
+
+Rimsential Spaceports:
+- 13 Shuttle-Körperdateien im Hauptordner
+- 26 nicht referenzierte Alternative-/Sicherungskopien
+- 1 Landeplatzgrafik
+- 9 shuttle-benannte Gegenstands-/Apparelgrafiken
+= 49 physische Dateien mit Shuttle-Bezug im Mod
+
+Bei gleichzeitig aktivem VE Props werden nur 8 der 13 Spaceports-Hauptbilder
+direkt verwendet; fünf Varianten und das Skip werden auf VE-Texturen umgeleitet.
+
+
+5. EMPFOHLENE FCP-PATCH-REIHENFOLGE
+===================================
+
+1) Vanilla/Royalty-Shuttle:
+   Shuttle, ShuttleCrashed und ShuttleSkyfallerBase
+
+2) Biotech:
+   ShuttleCrashing_Mechanitor und ShuttleCrashed_Exitable_Mechanitor
+
+3) Odyssey:
+   PassengerShuttle, PassengerShuttleIncoming, PassengerShuttleLeaving und
+   das eigene Weltkarten-Symbol
+
+4) Vanilla Events Expanded:
+   alle drei Wrack- und alle drei Skyfaller-Grafiken
+
+5) VFE Empire:
+   normales Imperial-Shuttle, abgestürztes Shuttle, Armored Shuttle,
+   Autocannon-Overlay und dekoratives Armored-Shuttle-Prop
+
+6) VFE Deserters:
+   VFED_DeserterShuttle, VFED_DeserterShuttleSkyfallerBase und bei Bedarf die
+   beiden UI-/Weltkarten-Symbole
+
+7) VE Props:
+   die sieben Kleinfahrzeugsets sowie bei Bedarf AncientShuttle und Shuttle Bay
+
+8) Rimsential Spaceports:
+   alle Spaceports-Shuttle-ThingDefs und ihre Incoming-/Leaving-Skyfaller
+   nach den VE-Props-Kompatibilitätspatches überschreiben
+
+Dadurch greifen die FCP-Pfade unabhängig davon, ob Spaceports zuvor eigene
+Grafiken oder die VE-Props-Integration ausgewählt hat.

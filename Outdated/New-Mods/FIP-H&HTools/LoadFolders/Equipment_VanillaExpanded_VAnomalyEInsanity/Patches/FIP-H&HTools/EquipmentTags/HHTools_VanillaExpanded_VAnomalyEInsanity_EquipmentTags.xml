@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Anomaly Expanded - Insanity (VanillaExpanded.VAnomalyEInsanity). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VAEI_Apparel_Gag"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VAEI_Apparel_Gag"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VAEI_Apparel_Gag"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VAEI_Apparel_Gag"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VAEI_Apparel_Gag"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VAEI_Apparel_StraitJacket"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VAEI_Apparel_StraitJacket"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+        <li>FIPA_Pool_Slave</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VAEI_Apparel_StraitJacket"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VAEI_Apparel_StraitJacket"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+            <li>FIPA_Pool_Slave</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VAEI_Apparel_StraitJacket"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+              <li>FIPA_Pool_Slave</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

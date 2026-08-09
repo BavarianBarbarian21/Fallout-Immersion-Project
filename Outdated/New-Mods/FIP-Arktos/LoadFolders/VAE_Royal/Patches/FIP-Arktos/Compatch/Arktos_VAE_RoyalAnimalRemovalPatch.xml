@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Crane and pheasant remain in Arktos. Other Royal Animals keep compatibility
+       defs but are removed from biome spawn dictionaries. -->
+
+  <!-- Royal Animals can add these species to other biome dictionaries. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
+    </match>
+  </Operation>
+
+</Patch>

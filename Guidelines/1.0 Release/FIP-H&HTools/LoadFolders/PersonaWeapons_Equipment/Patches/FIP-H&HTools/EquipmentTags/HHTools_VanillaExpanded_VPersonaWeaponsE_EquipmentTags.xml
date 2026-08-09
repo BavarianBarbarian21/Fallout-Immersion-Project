@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Persona Weapons Expanded (VanillaExpanded.VPersonaWeaponsE). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPWE_MeleeWeapon_PsyfocusStaffBladelink"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

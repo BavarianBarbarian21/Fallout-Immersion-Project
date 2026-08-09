@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - New California Republic (Rick.FCP.NCR). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Accessories_NCR_Bandoleer"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Accessories_NCR_Bandoleer"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Accessories_NCR_Bandoleer"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Accessories_NCR_Bandoleer"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Accessories_NCR_Bandoleer"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Accessories_NCR_Mantle"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Accessories_NCR_Mantle"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Accessories_NCR_Mantle"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Accessories_NCR_Mantle"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Accessories_NCR_Mantle"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Vest"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Vest"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Vest"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Vest"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Guard_Vest"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Over_Shirt"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Over_Shirt"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Over_Shirt"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Over_Shirt"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCRCF_Over_Shirt"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Dress"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Dress"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Dress"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Dress"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Dress"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Suit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Suit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Suit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Suit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ambassador_Suit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret_1st_Recon"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret_1st_Recon"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret_1st_Recon"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret_1st_Recon"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Beret_1st_Recon"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Engineer_Jumpsuit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Engineer_Jumpsuit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Engineer_Jumpsuit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Engineer_Jumpsuit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Engineer_Jumpsuit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Goggles_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Goggles_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Goggles_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Goggles_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Goggles_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Face_Wrap_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_General_Cap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_General_Cap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_General_Cap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_General_Cap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_General_Cap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Generals_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Generals_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Generals_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Generals_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Generals_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Goggles_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Goggles_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Goggles_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Goggles_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Goggles_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_MP_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_MP_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_MP_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_MP_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_MP_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Presidents_Suit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Presidents_Suit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Presidents_Suit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Presidents_Suit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Presidents_Suit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Casual"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Casual"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Casual"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Casual"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Casual"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Brown"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Brown"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Brown"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Brown"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Brown"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Grey"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Grey"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Grey"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Grey"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Grey"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Patrol"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Patrol"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Patrol"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Patrol"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Patrol"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Tan"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Tan"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Tan"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Tan"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Hat_Tan"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Patrol_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Patrol_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Patrol_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Patrol_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Patrol_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Red_Scarf"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Red_Scarf"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Red_Scarf"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Red_Scarf"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Red_Scarf"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Vest"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Vest"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Vest"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Vest"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Vest"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Duster"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Duster"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Duster"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Duster"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Duster"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Ranger_Veteran_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegionalElite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegionalElite</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegionalElite</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegionalElite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegionalElite</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Salvaged_Power_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegionalElite</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Scout_Recon_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Scout_Recon_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Scout_Recon_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Scout_Recon_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Scout_Recon_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Bandoleer_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Bandoleer_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Bandoleer_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Bandoleer_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Bandoleer_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Fatigues"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Fatigues"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Fatigues"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Fatigues"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Fatigues"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_MP_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_MP_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_MP_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_MP_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_MP_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Mantle_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Mantle_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Mantle_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Mantle_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Mantle_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Vest"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Vest"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Vest"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Vest"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegional</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Trooper_Vest"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegional</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_NCR_Veteran_Ranger_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Veteran_Ranger_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+        <li>FIPA_Pool_NCRRegionalElite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_NCR_Veteran_Ranger_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Veteran_Ranger_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+            <li>FIPA_Pool_NCRRegionalElite</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_NCR_Veteran_Ranger_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+              <li>FIPA_Pool_NCRRegionalElite</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Duster"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Duster"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Duster"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Duster"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Duster"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_FactionUnique</li>
+        <li>FIPA_Pool_NCRNative</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_FactionUnique</li>
+            <li>FIPA_Pool_NCRNative</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Ranger_Ricks_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_FactionUnique</li>
+              <li>FIPA_Pool_NCRNative</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Anti_Material_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Anti_Material_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRRegionalElite</li>
+          <li>FIPW_Role_Sniper</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Anti_Material_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRRegionalElite</li>
+          <li>FIPW_Role_Sniper</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_NCR_Hunting_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_NCR_Hunting_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRSurplus</li>
+          <li>FIPW_Pool_SimpleFirearmTribal</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T1_Wasteland</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_NCR_Hunting_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRSurplus</li>
+          <li>FIPW_Pool_SimpleFirearmTribal</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T1_Wasteland</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Ranger_Ricks_Big_Iron_Revolver"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Ranger_Ricks_Big_Iron_Revolver"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_Unique</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Ranger_Ricks_Big_Iron_Revolver"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_Unique</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Ranger_Sequoia"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Ranger_Sequoia"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRRegionalElite</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Ranger_Sequoia"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRRegionalElite</li>
+          <li>FIPW_Role_Sidearm</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Service_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Service_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRSurplus</li>
+          <li>FIPW_Pool_SimpleFirearmTribal</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Service_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_NCRNative</li>
+          <li>FIPW_Pool_NCRRegional</li>
+          <li>FIPW_Pool_NCRSurplus</li>
+          <li>FIPW_Pool_SimpleFirearmTribal</li>
+          <li>FIPW_Role_Rifle</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

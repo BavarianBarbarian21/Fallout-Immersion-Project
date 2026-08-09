@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Psycasts Expanded (VanillaExpanded.VPsycastsE). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_Apparel_EltexCape"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_Apparel_EltexCape"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VPE_Apparel_EltexCape"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Apparel_EltexCape"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Apparel_EltexCape"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_Apparel_EltexMask"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_Apparel_EltexMask"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VPE_Apparel_EltexMask"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Apparel_EltexMask"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Apparel_EltexMask"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_HeatPearls"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_HeatPearls"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VPE_HeatPearls"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_HeatPearls"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_HeatPearls"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexDagger"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexDagger"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexDagger"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexMace"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexMace"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexMace"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexSword"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexSword"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_MeleeWeapon_EltexSword"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CultPrimitive</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VPE_Psyring"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VPE_Psyring"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_Cult</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VPE_Psyring"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Psyring"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_Cult</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VPE_Psyring"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_Cult</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+</Patch>

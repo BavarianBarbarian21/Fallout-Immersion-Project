@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Wasteland indigo artwork for the renamed VAE anaconda. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/bodyGraphicData/texPath | Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/femaleGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Snakes/WastelandIndigo/Arktos_WastelandIndigo_v7</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/bodyGraphicData</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/femaleGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/femaleGraphicData/graphicClass</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda"]/lifeStages/li/femaleGraphicData</xpath>
+      <value><graphicClass>Graphic_Multi</graphicClass></value>
+    </nomatch>
+  </Operation>
+
+</Patch>

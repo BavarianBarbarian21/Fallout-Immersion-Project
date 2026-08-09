@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="HoraxCult"]</xpath>
+    <value>
+      <xenotypeSet>
+        <xenotypeChances>
+          <WestTek_Xenotype_Atlantic MayRequire="FIP.WestTek">0.5</WestTek_Xenotype_Atlantic>
+          <WestTek_Xenotype_NatL MayRequire="FIP.WestTek">0.3</WestTek_Xenotype_NatL>
+          <WestTek_Xenotype_Cascadia MayRequire="FIP.WestTek">0.2</WestTek_Xenotype_Cascadia>
+        </xenotypeChances>
+      </xenotypeSet>
+    </value>
+  </Operation>
+</Patch>

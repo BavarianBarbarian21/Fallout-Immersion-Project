@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_RawCoffee"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_RawTea"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_RawTobacco"]/graphicData/texPath</xpath>
+    <value>
+      <texPath>Things/Items/Condiments/Lucky38_Canned</texPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_Plant_Coffee"]/plant/sowTags</xpath>
+    <value>
+      <sowTags/>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_Plant_Tea"]/plant/sowTags</xpath>
+    <value>
+      <sowTags/>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VBE_Plant_Tobacco"]/plant/sowTags</xpath>
+    <value>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VBE_RawCoffee"]</xpath>
+    <value>
+      <li>FCP_Raw_Honey_Mesquite</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VBE_RawCoffee"]</xpath>
+    <value>
+      <li>FCP_Raw_Honey_Mesquite</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VBE_RawCoffee"]</xpath>
+    <value>
+      <li>FCP_Raw_Honey_Mesquite</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="VBE_RawTea"]</xpath>
+    <value>
+      <li>FCP_Raw_Mutated_Fern</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="VBE_RawTea"]</xpath>
+    <value>
+      <li>FCP_Raw_Mutated_Fern</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="VBE_RawTea"]</xpath>
+    <value>
+      <li>FCP_Raw_Mutated_Fern</li>
+    </value>
+  </Operation>
+
+</Patch>

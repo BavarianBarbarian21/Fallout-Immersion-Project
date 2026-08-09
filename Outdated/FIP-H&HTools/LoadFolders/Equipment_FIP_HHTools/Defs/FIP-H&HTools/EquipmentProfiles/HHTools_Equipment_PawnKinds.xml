@@ -1,0 +1,2827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_CascadiaCivil_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_CascadiaCivil_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_CascadiaCivil_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_CascadiaCivil_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_CascadiaCivil_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaCivil_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaCivil_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaCivil_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaCivil_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_CascadiaRough_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_CascadiaRough_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_CascadiaRough_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_CascadiaRough_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_CascadiaRough_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRough_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRough_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRough_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRough_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase">
+    <defName>FIPD_CascadiaRaider_Civilian</defName>
+    <label>squatter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_CascadiaRaider_Fighter</defName>
+    <label>raider</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_CascadiaRaider_Trader</defName>
+    <label>fence</label>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>55</combatPower>
+    <weaponMoney>200~300</weaponMoney>
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryEliteTierBase">
+    <defName>FIPD_CascadiaRaider_Leader</defName>
+    <label>boss</label>
+    <labelPlural>bosses</labelPlural>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRaider_Miner</defName>
+    <label>raider miner</label>
+    <combatPower>38</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRaider_Hunter</defName>
+    <label>raider hunter</label>
+    <combatPower>48</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~220</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRaider_Logger</defName>
+    <label>raider logger</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaRaider_Farmer</defName>
+    <label>raider farmer</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_CascadiaRaider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_CascadiaRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>FIPD_CascadiaTribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_CascadiaTribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_CascadiaTribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>FIPD_CascadiaTribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <requiredWorkTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChildBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_CascadiaTribal_Child</defName>
+    <label>tribal child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaTribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaTribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaTribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CascadiaTribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_NuevoTexicoCivil_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_NuevoTexicoCivil_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_NuevoTexicoCivil_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_NuevoTexicoCivil_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_NuevoTexicoCivil_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoCivil_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoCivil_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoCivil_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoCivil_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_NuevoTexicoRough_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_NuevoTexicoRough_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_NuevoTexicoRough_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_NuevoTexicoRough_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_NuevoTexicoRough_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRough_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRough_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRough_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRough_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_RoughSettler</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase">
+    <defName>FIPD_NuevoTexicoRaider_Civilian</defName>
+    <label>squatter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_NuevoTexicoRaider_Fighter</defName>
+    <label>raider</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_NuevoTexicoRaider_Trader</defName>
+    <label>fence</label>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>55</combatPower>
+    <weaponMoney>200~300</weaponMoney>
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryEliteTierBase">
+    <defName>FIPD_NuevoTexicoRaider_Leader</defName>
+    <label>boss</label>
+    <labelPlural>bosses</labelPlural>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRaider_Miner</defName>
+    <label>raider miner</label>
+    <combatPower>38</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRaider_Hunter</defName>
+    <label>raider hunter</label>
+    <combatPower>48</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~220</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRaider_Logger</defName>
+    <label>raider logger</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoRaider_Farmer</defName>
+    <label>raider farmer</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Wastelander</li>
+      <li>FIPW_Pool_Raider</li>
+      <li>FIPW_Pool_NuevoTexicoRaider</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Raider</li>
+      <li>FIPA_Pool_NuevoTexicoRaider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>FIPD_NuevoTexicoTribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_NuevoTexicoTribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_NuevoTexicoTribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>FIPD_NuevoTexicoTribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <requiredWorkTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChildBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_NuevoTexicoTribal_Child</defName>
+    <label>tribal child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoTribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoTribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoTribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NuevoTexicoTribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Tribal</li>
+      <li>FIPW_Pool_SimpleLaserTribal</li>
+      <li>FIPW_Pool_NuevoTexicoFrontier</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_GhoulSettlement_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_GhoulSettlement_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_GhoulSettlement_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_GhoulSettlement_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+      <li>FIPW_Pool_SettlerGuard</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+      <li>FIPA_Pool_SettlerGuard</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_GhoulSettlement_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_GhoulSettlement_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_GhoulSettlement_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_GhoulSettlement_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_GhoulSettlement_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Ghoul</li>
+      <li>FIPW_Pool_Settler</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Ghoul</li>
+      <li>FIPA_Pool_WastelanderGeneric</li>
+      <li>FIPA_Pool_Settler</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>FIPD_SuperMutantStronghold_Civilian</defName>
+    <label>settler</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="GuardBase">
+    <defName>FIPD_SuperMutantStronghold_Fighter</defName>
+    <label>settlement guard</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TraderBase">
+    <defName>FIPD_SuperMutantStronghold_Trader</defName>
+    <label>settlement trader</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>FIPD_SuperMutantStronghold_Leader</defName>
+    <label>settlement mayor</label>
+    <labelPlural>settlement mayors</labelPlural>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Villager_Child" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_SuperMutantStronghold_Child</defName>
+    <label>settlement child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantStronghold_Miner</defName>
+    <label>miner</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantStronghold_Hunter</defName>
+    <label>hunter</label>
+    <combatPower>52</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~250</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantStronghold_Logger</defName>
+    <label>logger</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsChance>0.06</techHediffsChance>
+    <techHediffsMoney>50~600</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="VillagerBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantStronghold_Farmer</defName>
+    <label>farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>200~400</apparelMoney>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase">
+    <defName>FIPD_SuperMutantArmy_Civilian</defName>
+    <label>squatter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_SuperMutantArmy_Fighter</defName>
+    <label>raider</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="PirateKindBase">
+    <defName>FIPD_SuperMutantArmy_Trader</defName>
+    <label>fence</label>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>55</combatPower>
+    <weaponMoney>200~300</weaponMoney>
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MercenaryEliteTierBase">
+    <defName>FIPD_SuperMutantArmy_Leader</defName>
+    <label>boss</label>
+    <labelPlural>bosses</labelPlural>
+    <factionLeader>true</factionLeader>
+    <canBeSapper>true</canBeSapper>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantArmy_Miner</defName>
+    <label>raider miner</label>
+    <combatPower>38</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Miner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>DrillArm</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantArmy_Hunter</defName>
+    <label>raider hunter</label>
+    <combatPower>48</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Hunter</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_Tailcap</li>
+    </apparelRequired>
+    <weaponMoney>140~220</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantArmy_Logger</defName>
+    <label>raider logger</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Logger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="DrifterBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SuperMutantArmy_Farmer</defName>
+    <label>raider farmer</label>
+    <combatPower>34</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>Farmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.2~1.2</gearHealthRange>
+    <apparelRequired>
+      <li>Apparel_CowboyHat</li>
+    </apparelRequired>
+    <weaponMoney>65~125</weaponMoney>
+    <apparelMoney>150~320</apparelMoney>
+    <techHediffsMoney>1000~1000</techHediffsMoney>
+    <techHediffsTags>
+      <li>FieldHand</li>
+    </techHediffsTags>
+    <techHediffsChance>0.6</techHediffsChance>
+    <techHediffsMaxAmount>1</techHediffsMaxAmount>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_SuperMutant</li>
+      <li>FIPW_Pool_Raider</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Raider</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>FIPD_SlanterTribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_SlanterTribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_SlanterTribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>FIPD_SlanterTribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <requiredWorkTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChildBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_SlanterTribal_Child</defName>
+    <label>tribal child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SlanterTribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SlanterTribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SlanterTribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_SlanterTribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>FIPD_NumenTribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_NumenTribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_NumenTribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>FIPD_NumenTribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <requiredWorkTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChildBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_NumenTribal_Child</defName>
+    <label>tribal child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NumenTribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NumenTribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NumenTribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_NumenTribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>FIPD_CritterTribal_Civilian</defName>
+    <label>tribal</label>
+    <combatPower>38</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>160~300</apparelMoney>
+    <weaponMoney>80~100</weaponMoney>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_CritterTribal_Fighter</defName>
+    <label>tribal warrior</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter">
+    <defName>FIPD_CritterTribal_Trader</defName>
+    <label>tribal trader</label>
+    <trader>true</trader>
+    <apparelRequired Inherit="False">
+      <li>Apparel_TribalHeaddress</li>
+    </apparelRequired>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChiefBase">
+    <defName>FIPD_CritterTribal_Leader</defName>
+    <label>chief</label>
+    <labelPlural>chiefs</labelPlural>
+    <requiredWorkTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalChildBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FIPD_CritterTribal_Child</defName>
+    <label>tribal child</label>
+    <weaponTags Inherit="False" />
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CritterTribal_Miner</defName>
+    <label>tribal miner</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalMiner</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="Tribal_Hunter" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CritterTribal_Hunter</defName>
+    <label>tribal hunter</label>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CritterTribal_Logger</defName>
+    <label>tribal logger</label>
+    <combatPower>40</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalLogger</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>FIPD_CritterTribal_Farmer</defName>
+    <label>tribal farmer</label>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>TribalFarmer</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>180~350</apparelMoney>
+    <weaponMoney>80~80</weaponMoney>
+    <apparelRequired>
+      <li>Apparel_Shadecone</li>
+    </apparelRequired>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.03</techHediffsChance>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>17~27</initialResistanceRange>
+    <weaponTags Inherit="False">
+      <li>FIPW_Pool_Numen</li>
+      <li>FIPW_Pool_Slanter</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>FIPA_Pool_Numen</li>
+      <li>FIPA_Pool_Slanter</li>
+      <li>FIPA_Pool_Tribal</li>
+    </apparelTags>
+  </PawnKindDef>
+</Defs>

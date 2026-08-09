@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - The Enclave (Rick.FCP.Enclave). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Advanced_Power_Armor_MkII_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_APA</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveCombatArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveCombatArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveCombatArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveCombatArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveCombatArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Combat_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveCombatArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Hellfire_Power_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_Hellfire</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Cap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Cap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveOfficer</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Cap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Cap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveOfficer</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Cap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveOfficer</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Coat"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Coat"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveOfficer</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Coat"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Coat"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveOfficer</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Officer_Coat"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveOfficer</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Boots"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Boots"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveScientist</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Boots"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Boots"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveScientist</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Boots"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveScientist</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Glove"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Glove"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveScientist</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Glove"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Glove"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveScientist</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Glove"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveScientist</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveScientist</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveScientist</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveScientist</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Outfit"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Outfit"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveScientist</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Outfit"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Outfit"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveScientist</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Scientist_Outfit"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveScientist</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Sturdy_Combat_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Sturdy_Combat_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveCombatArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Sturdy_Combat_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Sturdy_Combat_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveCombatArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Sturdy_Combat_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveCombatArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Cap"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Cap"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Cap"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Cap"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Cap"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Uniform"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Uniform"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclaveRemnant</li>
+        <li>FIPA_Pool_EnclaveTrooper</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Uniform"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Uniform"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclaveRemnant</li>
+            <li>FIPA_Pool_EnclaveTrooper</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_Trooper_Uniform"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclaveRemnant</li>
+              <li>FIPA_Pool_EnclaveTrooper</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Power_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_X02</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor_Helmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor_Helmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Class_PowerArmor</li>
+        <li>FIPA_Pool_EnclaveNative</li>
+        <li>FIPA_Pool_EnclavePowerArmor</li>
+        <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor_Helmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor_Helmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Class_PowerArmor</li>
+            <li>FIPA_Pool_EnclaveNative</li>
+            <li>FIPA_Pool_EnclavePowerArmor</li>
+            <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="FCP_Apparel_Enclave_X02_Tesla_Power_Armor_Helmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Class_PowerArmor</li>
+              <li>FIPA_Pool_EnclaveNative</li>
+              <li>FIPA_Pool_EnclavePowerArmor</li>
+              <li>FIPA_Pool_EnclavePowerArmor_Tesla</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Enclave_Advanced_Multiplas_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Advanced_Multiplas_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Advanced_Multiplas_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Enclave_Assault_Plasma_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Assault_Plasma_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Assault_Plasma_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_Cannon"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_Cannon"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_Cannon"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_SMG"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_SMG"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_Plasma_SMG"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Gun_Enclave_SMELE_Plasma_Rifle"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_SMELE_Plasma_Rifle"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Gun_Enclave_SMELE_Plasma_Rifle"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveNative</li>
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Role_Plasma</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

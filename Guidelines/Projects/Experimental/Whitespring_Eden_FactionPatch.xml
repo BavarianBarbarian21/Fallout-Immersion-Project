@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Experimental patch snippet for swapping the Empire faction's fixed leader to Eden.
+    If this gets promoted into FIP-Whitespring proper, it should live in the normal
+    Whitespring patch load path instead of Guidelines/Projects/Experimental.
+  -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Empire"]/fixedLeaderKinds</xpath>
+    <value>
+      <fixedLeaderKinds>
+        <li>FIP_Whitespring_Unique_Pawnkind_JohnHenryEden</li>
+      </fixedLeaderKinds>
+    </value>
+  </Operation>
+</Patch>

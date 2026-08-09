@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Empire"]/factionIconPath</xpath>
+    <value>
+      <factionIconPath>FIP-Whitespring/Whitespring_Whitespring</factionIconPath>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/FactionDef[defName="Empire"]/colorSpectrum</xpath>
+    <value>
+      <colorSpectrum>
+        <li>(1, 1, 1)</li>
+      </colorSpectrum>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Knight"]/labelFemale</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[defName="Empire_Royal_Baron"]/labelFemale</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/RoyalTitleDef[defName="Emperor"]/labelFemale</xpath>
+  </Operation>
+</Patch>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for Vanilla Quests Expanded - Cryptoforge (vanillaquestsexpanded.cryptoforge). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_Apparel_CryptoHeavyHelmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_Apparel_CryptoHeavyHelmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQE_Apparel_CryptoHeavyHelmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_CryptoHeavyHelmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_CryptoHeavyHelmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_Apparel_CryptoLightHelmet"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_Apparel_CryptoLightHelmet"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQE_Apparel_CryptoLightHelmet"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_CryptoLightHelmet"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_Apparel_CryptoLightHelmet"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_CryptoArmor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_CryptoArmor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQE_CryptoArmor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_CryptoArmor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_CryptoArmor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_CryptoHeavyArmor"]/apparel/tags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_CryptoHeavyArmor"]/apparel/tags</xpath>
+      <value>
+        <li>FIPA_Pool_CircleOfSteel</li>
+        <li>FIPA_Pool_VaultHighTech</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationConditional">
+      <xpath>/Defs/*[defName="VQE_CryptoHeavyArmor"]/apparel</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_CryptoHeavyArmor"]/apparel</xpath>
+        <value>
+          <tags>
+            <li>FIPA_Pool_CircleOfSteel</li>
+            <li>FIPA_Pool_VaultHighTech</li>
+          </tags>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/*[defName="VQE_CryptoHeavyArmor"]</xpath>
+        <value>
+          <apparel>
+            <tags>
+              <li>FIPA_Pool_CircleOfSteel</li>
+              <li>FIPA_Pool_VaultHighTech</li>
+            </tags>
+          </apparel>
+        </value>
+      </nomatch>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_MeleeWeapon_Cryptoaxe"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_MeleeWeapon_Cryptoaxe"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_MeleeWeapon_Cryptoaxe"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="VQE_Weapon_Cryptobolter"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_Weapon_Cryptobolter"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="VQE_Weapon_Cryptobolter"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Other</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

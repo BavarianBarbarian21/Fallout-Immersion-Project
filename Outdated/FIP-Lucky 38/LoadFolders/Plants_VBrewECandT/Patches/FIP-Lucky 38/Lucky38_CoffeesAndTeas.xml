@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/RecipeDef[defName="VBE_MakeCoffee" or defName="VBE_MakeTea" or defName="VBE_MakeCoffeeFast" or defName="VBE_ReheatCoffee" or defName="VBE_BrewLatteCoffee" or defName="VBE_BrewMochaCoffee" or defName="VBE_BrewIrishCoffee" or defName="VBE_BrewCannibalCoffee" or defName="VBE_MakeTeaFast" or defName="VBE_MakeBlackTea" or defName="VBE_MakeYuenYeung" or defName="VBE_MakeKombucha" or defName="VBE_BrewLemonCoffee" or defName="VBE_MakeLemonTea" or defName="VBE_MakeEarlGreyTea"]/recipeUsers</xpath>
+        <value>
+          <recipeUsers>
+            <li>VBE_EspressoMachineBuilding</li>
+          </recipeUsers>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

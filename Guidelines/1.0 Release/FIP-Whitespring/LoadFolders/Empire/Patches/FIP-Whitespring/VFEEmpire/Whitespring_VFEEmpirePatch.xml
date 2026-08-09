@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <!-- Vanilla Expanded Empire patches -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!-- AbilityDefs/Abilities.xml -->
+      <!-- DamageDefs/Damages_MeleeWeapon.xml -->
+
+
+      <!-- DamageDefs/Damages_Ranged.xml -->
+
+      <!-- Drugs/Aperitif.xml -->
+
+
+
+      <!-- FactionDefs/Factions_Hidden.xml -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/factionIconPath</xpath>
+        <value>
+          <factionIconPath>FIP-Whitespring/Whitespring_HHTools_CircleOfSteel</factionIconPath>
+        </value>
+      </li>
+
+      <!-- FactionDefs/Factions_Player.xml -->
+
+      <!-- HediffDefs/Hediffs_Global_Misc.xml -->
+
+
+
+
+      <!-- HistoryEventDef/HistoryEventDefs.xml -->
+      <!-- IncidentDefs/Incidents_World_Quests.xml -->
+      <!-- InteractionDefs/Interactions_Social.xml -->
+      <!-- Misc.xml -->
+
+
+      <!-- Misc/Expectations.xml -->
+      <!-- Misc/HonorDefs.xml -->
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archcount"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RoyalTitleDef[defName="VFEE_Archduke"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RoyalTitleDef[defName="VFEE_Despot"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RoyalTitleDef[defName="VFEE_Magister"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/RoyalTitleDef[defName="VFEE_Marquess"]/labelFemale</xpath>
+      </li>
+      <!-- Misc/RoyaltyTabDefs.xml -->
+      <!-- Misc/TitheTypeDefs.xml -->
+      <!-- PawnKinds/PawnKinds_Deserter.xml -->
+
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archcount"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Archduke"]/labelFemale</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Marquess"]/labelFemale</xpath>
+      </li>
+      <!-- PawnKinds/PawnKinds_Empire.xml -->
+
+      <!-- QuestScriptDef/Permit_CallTechfriar.xml -->
+
+
+      <!-- QuestScriptDef/Script_Absolver.xml -->
+
+      <!-- ResearchProjectDefs/ResearchProjects_1.xml -->
+
+
+
+      <!-- Rituals/ArtExhibition.xml -->
+
+
+
+
+
+
+
+      <!-- Rituals/BestowHonor.xml -->
+
+
+
+
+      <!-- Rituals/BestowTitle.xml -->
+
+
+
+
+
+
+
+
+      <!-- Rituals/Parade.xml -->
+
+
+
+
+      <!-- Rituals/RoyalAddress.xml -->
+
+
+
+
+
+
+
+
+
+
+      <!-- Rituals/RoyalBall.xml -->
+
+
+
+
+
+
+
+      <!-- Rooms/RoomRoles.xml -->
+
+
+      <!-- RoyalTitles/RoyalPermits_Empire.xml -->
+      <!-- RoyalTitles/RoyalTitles_Empire.xml -->
+      <!-- Scenarios/Scenarios_Classic.xml -->
+
+
+
+      <!-- Storyteller/Storytellers.xml -->
+
+
+      <!-- TerrainDefs/Terrain_Ash.xml -->
+
+
+      <!-- ThingDefs_Buildings/Buildings_Art.xml -->
+
+
+
+      <!-- ThingDefs_Buildings/Buildings_Exotic.xml -->
+
+
+      <!-- ThingDefs_Buildings/Buildings_Furniture.xml -->
+
+
+
+
+
+
+
+      <!-- ThingDefs_Buildings/Buildings_Misc.xml -->
+
+
+
+      <!-- ThingDefs_Buildings/Buildings_MusicalInstruments.xml -->
+
+
+
+
+      <!-- ThingDefs_Buildings/Buildings_Security_Turrets.xml -->
+
+
+
+
+      <!-- ThingDefs_Misc/Apparel_Headgear.xml -->
+
+
+      <!-- ThingDefs_Misc/Apparel_Royal.xml -->
+
+      <!-- ThingDefs_Misc/Apparel_Various.xml -->
+
+
+      <!-- ThingDefs_Misc/Ethereal_Skyfallers.xml -->
+
+
+
+      <!-- ThingDefs_Misc/FloorCoverings.xml -->
+      <!-- ThingDefs_Misc/Weapons/MeleeBladelink.xml -->
+
+
+
+
+
+      <!-- ThingDefs_Misc/Weapons/MeleeUltratech.xml -->
+
+
+
+
+
+      <!-- ThingDefs_Misc/Weapons/RangedSpacer.xml -->
+
+
+
+
+
+
+
+
+
+      <!-- ThoughtDefs/Thoughts_Honors.xml -->
+
+
+
+
+      <!-- ThoughtDefs/Thoughts_Memory_Ritual.xml -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ThoughtDefs/Thoughts_Memory_Royal.xml -->
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ToolCapacityDefs/ToolCapacity.xml -->
+
+
+    </operations>
+  </Operation>
+</Patch>

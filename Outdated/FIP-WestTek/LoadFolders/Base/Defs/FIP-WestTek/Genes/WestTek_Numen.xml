@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Ears-->
+<GeneDef ParentName="GeneEarsBase">
+  <defName>WestTek_SaplingGrowth</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>sapling growth</label>
+  <description>Carriers of this gene develop small living saplings that sprout from their bodies. These symbiotic growths are characteristic of the Numen lineage, sustained by the host's mutated physiology.</description>
+  <geneClass>FIP.WestTek.Gene_WestTekSaplingGrowth</geneClass>
+
+  <iconPath>UI/Icons/Genes/Gene_SaplingGrowth</iconPath>
+
+  <renderNodeProperties>
+    <li>
+      <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+      <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+
+      <texPath>Things/Pawn/Humanlike/HeadAttachments/Saplings/Saplings</texPath>
+
+      <colorType>Skin</colorType>
+
+      <parentTagDef>Head</parentTagDef>
+
+      <useSkinShader>true</useSkinShader>
+      <useRottenColor>true</useRottenColor>
+
+      <rotDrawMode>Fresh, Rotting</rotDrawMode>
+
+      <drawData>
+        <defaultData>
+          <layer>70</layer>
+        </defaultData>
+      </drawData>
+    </li>
+  </renderNodeProperties>
+
+  <symbolPack>
+    <prefixSymbols>
+      <li><symbol>plant</symbol></li>
+      <li><symbol>flora</symbol></li>
+      <li><symbol>sapling</symbol></li>
+      <li><symbol>leaf</symbol></li>
+      <li><symbol>vine</symbol></li>
+    </prefixSymbols>
+
+    <suffixSymbols>
+      <li><symbol>plant</symbol></li>
+      <li><symbol>sapling</symbol></li>
+      <li><symbol>sprout</symbol></li>
+      <li><symbol>flora</symbol></li>
+      <li><symbol>leaf</symbol></li>
+    </suffixSymbols>
+  </symbolPack>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_FEVSymbioticSenses</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>flowering senses</label>
+  <description>The subject's sensory organs bloom into a responsive plant-human symbiosis.</description>
+  <iconPath>UI/Icons/Genes/WestTek_FloweringSenses</iconPath>
+  <displayOrderInCategory>610</displayOrderInCategory>
+  <biostatCpx>2</biostatCpx>
+  <biostatMet>-1</biostatMet>
+<!-- Ability später:
+  <abilities>
+    <li>WestTek_Ability_Flowering</li>
+  </abilities>
+  -->
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_FEVSymbioticMotorics</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>growing strong</label>
+  <description>The subject's limbs and connective tissue are reinforced by living FEV flora.</description>
+  <iconPath>UI/Icons/Genes/WestTek_GrowingStrong</iconPath>
+  <displayOrderInCategory>611</displayOrderInCategory>
+  <biostatCpx>2</biostatCpx>
+  <biostatMet>-1</biostatMet>
+  <statOffsets>
+    <MoveSpeed>0.15</MoveSpeed>
+    <MeleeDPS>0.25</MeleeDPS>
+  </statOffsets>
+  <!-- Ability später:
+  <abilities>
+    <li>WestTek_Ability_GrowingStrong</li>
+  </abilities>
+  -->
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_FEVSymbioticOrgans</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>rooted organs</label>
+  <description>The subject's internal organs are stabilized by invasive but beneficial root systems.</description>
+  <iconPath>UI/Icons/Genes/WestTek_RootedOrgans</iconPath>
+  <displayOrderInCategory>612</displayOrderInCategory>
+  <biostatCpx>2</biostatCpx>
+  <biostatMet>-1</biostatMet>
+  <statFactors>
+    <ImmunityGainSpeed>1.15</ImmunityGainSpeed>
+    <ToxicResistance>1.25</ToxicResistance>
+  </statFactors>
+  <!-- Ability später:
+  <abilities>
+    <li>WestTek_Ability_Rooted</li>
+  </abilities>
+  -->
+</GeneDef>
+
+<GeneDef ParentName="GeneSkinColorOverride">
+  <defName>WestTek_Gene_SolarPowered</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <selectionWeight>0</selectionWeight>
+  <label>solar powered</label>
+  <labelShortAdj>solar</labelShortAdj>
+  <description>The subject's skin contains FEV-adapted chlorophyll tissue. They slowly replenish nutrition while standing in direct daylight.</description>
+  <geneClass>FIP.WestTek.Gene_WestTekSolarPowered</geneClass>
+  <iconPath>UI/Icons/Genes/WestTek_SolarPowered</iconPath>
+  <skinColorOverride>(92, 135, 74)</skinColorOverride>
+  <hairColorOverride>(55, 86, 45)</hairColorOverride>
+  <displayOrderInCategory>620</displayOrderInCategory>
+  <randomBrightnessFactor>0</randomBrightnessFactor>
+  <biostatCpx>2</biostatCpx>
+  <biostatMet>-2</biostatMet>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_Gene_Myceline</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>myceline</label>
+  <description>The subject's nervous system resonates with old root networks and Gauranlen-like organisms.</description>
+  <iconPath>UI/Icons/Genes/WestTek_Myceline</iconPath>
+  <displayOrderInCategory>621</displayOrderInCategory>
+  <biostatCpx>2</biostatCpx>
+  <biostatMet>-1</biostatMet>
+</GeneDef>
+
+<ThoughtDef>
+  <defName>WestTek_MycelineNetwork</defName>
+  <workerClass>FIP.WestTek.ThoughtWorker_WestTek_MycelineNetwork</workerClass>
+  <stages>
+    <li>
+      <label>near mycelial network</label>
+      <description>I can feel the old roots thinking beneath me.</description>
+      <baseMoodEffect>6</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<GeneDef>
+  <defName>WestTek_Gene_Starched</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>starched</label>
+  <description>The subject feels metabolically stable under open sky and has an instinctive affinity for cultivation.</description>
+  <iconPath>UI/Icons/Genes/WestTek_Starched</iconPath>
+  <displayOrderInCategory>622</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>-1</biostatMet>
+</GeneDef>
+
+<ThoughtDef>
+  <defName>WestTek_StarchedOutside</defName>
+  <workerClass>FIP.WestTek.ThoughtWorker_WestTek_StarchedOutside</workerClass>
+  <stages>
+    <li>
+      <label>under open sky</label>
+      <description>The open air keeps my starch reserves calm and balanced.</description>
+      <baseMoodEffect>10</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<GeneDef>
+  <defName>WestTek_Gene_Heterotroph</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>heterotroph</label>
+  <description>The subject's fungal metabolism thrives away from direct sunlight but reacts poorly to bright exposure.</description>
+  <iconPath>UI/Icons/Genes/WestTek_Heterotroph</iconPath>
+  <displayOrderInCategory>623</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>1</biostatMet>
+</GeneDef>
+
+<ThoughtDef>
+  <defName>WestTek_HeterotrophDark</defName>
+  <workerClass>FIP.WestTek.ThoughtWorker_WestTek_HeterotrophDark</workerClass>
+  <stages>
+    <li>
+      <label>away from sunlight</label>
+      <description>The shaded air lets my fungal metabolism settle.</description>
+      <baseMoodEffect>10</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<ThoughtDef>
+  <defName>WestTek_HeterotrophSunlight</defName>
+  <workerClass>FIP.WestTek.ThoughtWorker_WestTek_HeterotrophSunlight</workerClass>
+  <stages>
+    <li>
+      <label>under harsh sunlight</label>
+      <description>The light burns through my fungal tissues.</description>
+      <baseMoodEffect>-5</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+
+<GeneDef>
+  <defName>WestTek_Gene_SporeCarrier</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <selectionWeight>0</selectionWeight>
+  <label>spore carrier</label>
+  <description>The subject carries infectious FEV spores and can force compatible victims into the Spore Carrier strain.</description>
+  <iconPath>UI/Icons/Genes/WestTek_SporeCarrier</iconPath>
+  <displayOrderInCategory>624</displayOrderInCategory>
+  <biostatCpx>4</biostatCpx>
+  <biostatMet>-2</biostatMet>
+  <abilities>
+    <li>WestTek_Ability_SporeInfect</li>
+  </abilities>
+</GeneDef>
+
+<AbilityDef>
+  <defName>WestTek_Ability_SporeInfect</defName>
+  <label>spore infect</label>
+  <description>Infect a compatible human pawn with unstable FEV spores, transforming them into a Spore Carrier.</description>
+  <iconPath>UI/Abilities/WestTek_SporeInfect</iconPath>
+  <targetRequired>true</targetRequired>
+  <cooldownTicksRange>180000~180000</cooldownTicksRange>
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <range>3.9</range>
+    <warmupTime>1.5</warmupTime>
+    <requireLineOfSight>true</requireLineOfSight>
+    <targetParams>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetAnimals>false</canTargetAnimals>
+      <canTargetMechs>false</canTargetMechs>
+      <canTargetBuildings>false</canTargetBuildings>
+      <canTargetItems>false</canTargetItems>
+    </targetParams>
+  </verbProperties>
+  <comps>
+    <li Class="FIP.WestTek.CompProperties_AbilitySporeInfect" />
+  </comps>
+</AbilityDef>
+
+<!-- Numen symbiote abilities -->
+
+<HediffDef><defName>WestTek_NumenBuff_Eye</defName><label>ocular bloom</label><description>FEV flora sharpens the host's sight.</description><isBad>false</isBad><stages><li><statOffsets><ShootingAccuracyPawn>0.08</ShootingAccuracyPawn></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Ear</defName><label>resonant canopy</label><description>FEV flora heightens the host's threat perception.</description><isBad>false</isBad><stages><li><statOffsets><MeleeHitChance>0.05</MeleeHitChance></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Nose</defName><label>spore scent</label><description>FEV flora filters hostile chemicals through scent membranes.</description><isBad>false</isBad><stages><li><statFactors><ToxicResistance>1.20</ToxicResistance></statFactors></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Jaw</defName><label>thornbite</label><description>FEV flora hardens the jaw into a brief combat bloom.</description><isBad>false</isBad><stages><li><statOffsets><MeleeDPS>0.20</MeleeDPS></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Tongue</defName><label>nectar speech</label><description>FEV flora sweetens the host's voice and scent.</description><isBad>false</isBad><stages><li><statOffsets><SocialImpact>0.15</SocialImpact></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Arm</defName><label>vine surge</label><description>FEV flora floods the arm with gripping vine strength.</description><isBad>false</isBad><stages><li><statOffsets><MeleeDPS>0.35</MeleeDPS></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Hand</defName><label>root touch</label><description>FEV flora steadies the host's fingers for careful tending.</description><isBad>false</isBad><stages><li><statOffsets><MedicalTendQuality>0.05</MedicalTendQuality></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Leg</defName><label>springvine stride</label><description>FEV flora launches the host into a short burst of speed.</description><isBad>false</isBad><stages><li><statOffsets><MoveSpeed>0.30</MoveSpeed></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Foot</defName><label>clinging roots</label><description>FEV flora anchors the host's steps and improves movement.</description><isBad>false</isBad><stages><li><statOffsets><MoveSpeed>0.18</MoveSpeed></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Spine</defName><label>braced trunk</label><description>FEV flora braces the host's spine against strain.</description><isBad>false</isBad><stages><li><statOffsets><MoveSpeed>0.12</MoveSpeed><MentalBreakThreshold>-0.03</MentalBreakThreshold></statOffsets></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Stomach</defName><label>root digestion</label><description>FEV flora purges hostile matter from the gut.</description><isBad>false</isBad><stages><li><statFactors><ToxicResistance>1.15</ToxicResistance></statFactors></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Heart</defName><label>heartwood pulse</label><description>FEV flora drives a living immune pulse through the host.</description><isBad>false</isBad><stages><li><statFactors><ImmunityGainSpeed>1.15</ImmunityGainSpeed></statFactors></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Lung</defName><label>green breath</label><description>FEV flora filters the host's breath through living membranes.</description><isBad>false</isBad><stages><li><statFactors><ToxicResistance>1.20</ToxicResistance></statFactors></li></stages></HediffDef>
+<HediffDef><defName>WestTek_NumenBuff_Kidney</defName><label>deep filtration</label><description>FEV flora accelerates the host's blood filtration.</description><isBad>false</isBad><stages><li><statFactors><ToxicResistance>1.25</ToxicResistance></statFactors></li></stages></HediffDef>
+
+<AbilityDef Name="WestTek_NumenAbilityBase" Abstract="True">
+  <iconPath>FIP-WestTek/Misc/Placeholder</iconPath>
+  <targetRequired>false</targetRequired>
+  <cooldownTicksRange>60000~60000</cooldownTicksRange>
+  <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  <statBases>
+    <Ability_Duration>20</Ability_Duration>
+  </statBases>
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <drawAimPie>false</drawAimPie>
+    <requireLineOfSight>false</requireLineOfSight>
+    <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+    <warmupTime>0.5</warmupTime>
+    <range>0</range>
+    <targetable>false</targetable>
+    <targetParams>
+      <canTargetSelf>True</canTargetSelf>
+    </targetParams>
+  </verbProperties>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_Flowering</defName>
+  <label>flowering senses</label>
+  <description>Focus the host's flowering sensory symbiotes.</description>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_GrowingStrong</defName>
+  <label>growing strong</label>
+  <description>Focus the host's motoric flora growth.</description>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase">
+  <defName>WestTek_Ability_Rooted</defName>
+  <label>rooted organs</label>
+  <description>Focus the host's rooted organ symbiotes.</description>
+</AbilityDef>
+
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenEye</defName><label>ocular bloom</label><description>Sharpen sight through the eye symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Eye</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenEar</defName><label>resonant canopy</label><description>Read nearby motion through the ear symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Ear</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenNose</defName><label>spore scent</label><description>Filter toxins through the nose symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Nose</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenJaw</defName><label>thornbite</label><description>Harden the jaw symbiote for close combat.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Jaw</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenTongue</defName><label>nectar speech</label><description>Sweeten speech through the tongue symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Tongue</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenArm</defName><label>vine surge</label><description>Flood the arm symbiote with vine strength.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Arm</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenHand</defName><label>root touch</label><description>Steady the hand symbiote for tending.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Hand</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenLeg</defName><label>springvine stride</label><description>Launch into a short burst of speed.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Leg</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenFoot</defName><label>clinging roots</label><description>Anchor and quicken the foot symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Foot</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenSpine</defName><label>braced trunk</label><description>Brace the spine symbiote against strain.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Spine</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenStomach</defName><label>root digestion</label><description>Purge hostile matter through the stomach symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Stomach</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenHeart</defName><label>heartwood pulse</label><description>Pulse immunity through the heart symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Heart</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenLung</defName><label>green breath</label><description>Filter air through the lung symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Lung</hediffDef></li></comps></AbilityDef>
+<AbilityDef ParentName="WestTek_NumenAbilityBase"><defName>WestTek_Ability_NumenKidney</defName><label>deep filtration</label><description>Accelerate toxin filtering through the kidney symbiote.</description><comps><li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>WestTek_NumenBuff_Kidney</hediffDef></li></comps></AbilityDef>
+
+<GeneDef><defName>WestTek_NumenAbility_Eye</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>ocular bloom</label><description>This Numen's eye symbiote can briefly sharpen sight.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenEye</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Ear</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>resonant canopy</label><description>This Numen's ear symbiote can read nearby motion.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenEar</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Nose</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>spore scent</label><description>This Numen's nose symbiote can filter hostile toxins.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenNose</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Jaw</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>thornbite</label><description>This Numen's jaw symbiote can harden for close combat.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenJaw</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Tongue</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>nectar speech</label><description>This Numen's tongue symbiote can sweeten speech.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenTongue</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Arm</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>vine surge</label><description>This Numen's arm symbiote can surge with vine strength.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenArm</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Hand</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>root touch</label><description>This Numen's hand symbiote can steady medical tending.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenHand</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Leg</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>springvine stride</label><description>This Numen's leg symbiote can launch a burst of speed.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenLeg</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Foot</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>clinging roots</label><description>This Numen's foot symbiote can anchor and quicken movement.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenFoot</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Spine</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>braced trunk</label><description>This Numen's spine symbiote can brace body and mind.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenSpine</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Stomach</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>root digestion</label><description>This Numen's stomach symbiote can purge hostile matter.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenStomach</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Heart</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>heartwood pulse</label><description>This Numen's heart symbiote can pulse immune strength.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenHeart</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Lung</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>green breath</label><description>This Numen's lung symbiote can filter poisoned air.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenLung</li></abilities></GeneDef>
+<GeneDef><defName>WestTek_NumenAbility_Kidney</defName><canGenerateInGeneSet>false</canGenerateInGeneSet><label>deep filtration</label><description>This Numen's kidney symbiote can accelerate toxin filtering.</description><iconPath>FIP-WestTek/Misc/Placeholder</iconPath><abilities><li>WestTek_Ability_NumenKidney</li></abilities></GeneDef>
+
+<GeneDef>
+  <defName>WestTek_ExtremeSkillLoss</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>extreme skill loss</label>
+  <description>Carriers of this gene forget skills twice as fast.</description>
+  <iconPath>UI/Icons/Genes/WestTek_ExtremeSkillLoss</iconPath>
+  <displayOrderInCategory>630</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>4</biostatMet>
+  <exclusionTags>
+    <li>WestTek_SkillLoss</li>
+  </exclusionTags>
+  <modExtensions>
+    <li Class="FIP.WestTek.WestTekFloraGeneExtension">
+      <skillLossMultiplier>2</skillLossMultiplier>
+    </li>
+  </modExtensions>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_SevereSkillLoss</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>severe skill loss</label>
+  <description>Carriers of this gene forget skills 50% faster.</description>
+  <iconPath>UI/Icons/Genes/WestTek_SevereSkillLoss</iconPath>
+  <displayOrderInCategory>631</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>2</biostatMet>
+  <exclusionTags>
+    <li>WestTek_SkillLoss</li>
+  </exclusionTags>
+  <modExtensions>
+    <li Class="FIP.WestTek.WestTekFloraGeneExtension">
+      <skillLossMultiplier>1.5</skillLossMultiplier>
+    </li>
+  </modExtensions>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_MinorSkillLoss</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>minor skill loss</label>
+  <description>Carriers of this gene forget skills half as fast.</description>
+  <iconPath>UI/Icons/Genes/WestTek_MinorSkillLoss</iconPath>
+  <displayOrderInCategory>632</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>-3</biostatMet>
+  <exclusionTags>
+    <li>WestTek_SkillLoss</li>
+  </exclusionTags>
+  <modExtensions>
+    <li Class="FIP.WestTek.WestTekFloraGeneExtension">
+      <skillLossMultiplier>0.5</skillLossMultiplier>
+    </li>
+  </modExtensions>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_NoSkillLoss</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>no skill loss</label>
+  <description>Carriers of this gene do not forget skills.</description>
+  <iconPath>UI/Icons/Genes/WestTek_NoSkillLoss</iconPath>
+  <displayOrderInCategory>633</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>-5</biostatMet>
+  <exclusionTags>
+    <li>WestTek_SkillLoss</li>
+  </exclusionTags>
+  <modExtensions>
+    <li Class="FIP.WestTek.WestTekFloraGeneExtension">
+      <skillLossMultiplier>0</skillLossMultiplier>
+    </li>
+  </modExtensions>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_SkillDegradation</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>skill degradation</label>
+  <description>Carriers of this gene slowly lose skill experience even below normal decay thresholds.</description>
+  <iconPath>UI/Icons/Genes/WestTek_SkillDegradation</iconPath>
+  <displayOrderInCategory>634</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>2</biostatMet>
+  <exclusionTags>
+    <li>WestTek_SkillLoss</li>
+  </exclusionTags>
+  <modExtensions>
+    <li Class="FIP.WestTek.WestTekFloraGeneExtension">
+      <skillDegradation>true</skillDegradation>
+    </li>
+  </modExtensions>
+</GeneDef>
+
+<GeneDef>
+  <defName>WestTek_NoStudy</defName>
+  <canGenerateInGeneSet>false</canGenerateInGeneSet>
+  <label>no study</label>
+  <description>Carriers of this gene cannot learn new skills.</description>
+  <iconPath>UI/Icons/Genes/WestTek_NoStudy</iconPath>
+  <displayOrderInCategory>635</displayOrderInCategory>
+  <biostatCpx>1</biostatCpx>
+  <biostatMet>4</biostatMet>
+  <exclusionTags>
+    <li>Learning</li>
+  </exclusionTags>
+  <statFactors>
+    <GlobalLearningFactor>0</GlobalLearningFactor>
+  </statFactors>
+</GeneDef>
+
+
+</Defs>

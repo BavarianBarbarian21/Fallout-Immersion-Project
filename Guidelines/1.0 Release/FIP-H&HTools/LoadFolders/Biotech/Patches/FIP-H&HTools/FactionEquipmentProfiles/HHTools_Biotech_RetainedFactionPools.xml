@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Sanguophage"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Sanguophage"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Sanguophage"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Sanguophage"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Sanguophage"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Sanguophage"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_CultPrimitive</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="SanguophageThrall"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_Cult</li>
+          <li>FIPA_Pool_Tribal</li>
+          <li>FIPA_Pool_WastelanderGeneric</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

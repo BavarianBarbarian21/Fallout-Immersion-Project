@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="ConnectedTreeDied"]/durationDays</xpath>
+    <value>
+      <durationDays>10</durationDays>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="ConnectedTreeDied"]/stages/li/baseMoodEffect</xpath>
+    <value>
+      <baseMoodEffect>-15</baseMoodEffect>
+    </value>
+  </Operation>
+</Patch>

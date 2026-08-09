@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>FIP.RobCo</RootNamespace>
+    <AssemblyName>FIP_RobCo_Harmony</AssemblyName>
+    <OutputPath>$(FipReleaseRoot)FIP-RobCo\LoadFolders\Harmony\Assemblies\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FIP.RobCo.csproj" Private="false" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>

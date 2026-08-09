@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Generated additive tags for FCP - Unarmed Weapons (Rick.FCP.UnarmedWeapons). -->
+  <!-- Original source tags are preserved. Missing targets are skipped safely. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Ballistic_Fist"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Ballistic_Fist"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Ballistic_Fist"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Boxing_Glove"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Boxing_Glove"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T0_Improvised</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Boxing_Glove"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T0_Improvised</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Displacer_Glove"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Displacer_Glove"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Displacer_Glove"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Industrial_Fist"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Industrial_Fist"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Industrial_Fist"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_Raider</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T2_Service</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Power_Fist"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Power_Fist"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T3_Advanced</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Power_Fist"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T3_Advanced</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/*[defName="FCP_Unarmed_Zap_Glove"]/weaponTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Zap_Glove"]/weaponTags</xpath>
+      <value>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/*[defName="FCP_Unarmed_Zap_Glove"]</xpath>
+      <value>
+        <weaponTags>
+          <li>FIPW_Pool_CircleOfSteel</li>
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_SuperMutant</li>
+          <li>FIPW_Pool_VaultHighTech</li>
+          <li>FIPW_Role_Melee</li>
+          <li>FIPW_T4_Elite</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Settlement_Civilian" or defName="HHTools_Settlement_Miner" or defName="HHTools_Settlement_Hunter" or defName="HHTools_Settlement_Logger" or defName="HHTools_Settlement_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Settlement_Fighter" or defName="HHTools_Settlement_Trader" or defName="HHTools_Settlement_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+        <li>FIPW_Pool_SettlerGuard</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Settlement_Civilian" or defName="HHTools_Settlement_Fighter" or defName="HHTools_Settlement_Trader" or defName="HHTools_Settlement_Leader" or defName="HHTools_Settlement_Child" or defName="HHTools_Settlement_Miner" or defName="HHTools_Settlement_Hunter" or defName="HHTools_Settlement_Logger" or defName="HHTools_Settlement_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Settler</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Raider_Civilian" or defName="HHTools_Raider_Fighter" or defName="HHTools_Raider_Trader" or defName="HHTools_Raider_Leader" or defName="HHTools_Raider_Miner" or defName="HHTools_Raider_Hunter" or defName="HHTools_Raider_Logger" or defName="HHTools_Raider_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Raider</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Raider_Civilian" or defName="HHTools_Raider_Fighter" or defName="HHTools_Raider_Trader" or defName="HHTools_Raider_Leader" or defName="HHTools_Raider_Miner" or defName="HHTools_Raider_Hunter" or defName="HHTools_Raider_Logger" or defName="HHTools_Raider_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Raider</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Tribal_Civilian" or defName="HHTools_Tribal_Fighter" or defName="HHTools_Tribal_Trader" or defName="HHTools_Tribal_Leader" or defName="HHTools_Tribal_Miner" or defName="HHTools_Tribal_Hunter" or defName="HHTools_Tribal_Logger" or defName="HHTools_Tribal_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Tribal</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Tribal_Civilian" or defName="HHTools_Tribal_Fighter" or defName="HHTools_Tribal_Trader" or defName="HHTools_Tribal_Leader" or defName="HHTools_Tribal_Child" or defName="HHTools_Tribal_Miner" or defName="HHTools_Tribal_Hunter" or defName="HHTools_Tribal_Logger" or defName="HHTools_Tribal_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_Tribal</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Settlement_Civilian" or defName="HHTools_California_Settlement_Miner" or defName="HHTools_California_Settlement_Hunter" or defName="HHTools_California_Settlement_Logger" or defName="HHTools_California_Settlement_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+        <li>FIPW_Pool_NCRRegional</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Settlement_Fighter" or defName="HHTools_California_Settlement_Trader" or defName="HHTools_California_Settlement_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+        <li>FIPW_Pool_SettlerGuard</li>
+        <li>FIPW_Pool_NCRRegional</li>
+        <li>FIPW_Pool_NCRRegionalElite</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Settlement_Civilian" or defName="HHTools_California_Settlement_Fighter" or defName="HHTools_California_Settlement_Trader" or defName="HHTools_California_Settlement_Leader" or defName="HHTools_California_Settlement_Child" or defName="HHTools_California_Settlement_Miner" or defName="HHTools_California_Settlement_Hunter" or defName="HHTools_California_Settlement_Logger" or defName="HHTools_California_Settlement_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_NCRRegional</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Settlement_Fighter" or defName="HHTools_California_Settlement_Trader" or defName="HHTools_California_Settlement_Leader"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_NCRRegional</li>
+        <li>FIPA_Pool_NCRRegionalElite</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Raider_Civilian" or defName="HHTools_California_Raider_Miner" or defName="HHTools_California_Raider_Hunter" or defName="HHTools_California_Raider_Logger" or defName="HHTools_California_Raider_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Raider</li>
+        <li>FIPW_Pool_CaliforniaRaider</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Raider_Fighter" or defName="HHTools_California_Raider_Trader" or defName="HHTools_California_Raider_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Raider</li>
+        <li>FIPW_Pool_CaliforniaRaider</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Raider_Civilian" or defName="HHTools_California_Raider_Fighter" or defName="HHTools_California_Raider_Trader" or defName="HHTools_California_Raider_Leader" or defName="HHTools_California_Raider_Miner" or defName="HHTools_California_Raider_Hunter" or defName="HHTools_California_Raider_Logger" or defName="HHTools_California_Raider_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_CaliforniaRaider</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Tribal_Civilian" or defName="HHTools_California_Tribal_Miner" or defName="HHTools_California_Tribal_Hunter" or defName="HHTools_California_Tribal_Logger" or defName="HHTools_California_Tribal_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Tribal</li>
+        <li>FIPW_Pool_SimpleLaserTribal</li>
+        <li>FIPW_Pool_NCRSurplus</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Tribal_Fighter" or defName="HHTools_California_Tribal_Trader" or defName="HHTools_California_Tribal_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Tribal</li>
+        <li>FIPW_Pool_SimpleLaserTribal</li>
+        <li>FIPW_Pool_NCRSurplus</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_California_Tribal_Civilian" or defName="HHTools_California_Tribal_Fighter" or defName="HHTools_California_Tribal_Trader" or defName="HHTools_California_Tribal_Leader" or defName="HHTools_California_Tribal_Child" or defName="HHTools_California_Tribal_Miner" or defName="HHTools_California_Tribal_Hunter" or defName="HHTools_California_Tribal_Logger" or defName="HHTools_California_Tribal_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_Tribal</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Settlement_Civilian" or defName="HHTools_Arizona_Settlement_Miner" or defName="HHTools_Arizona_Settlement_Hunter" or defName="HHTools_Arizona_Settlement_Logger" or defName="HHTools_Arizona_Settlement_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Settlement_Fighter" or defName="HHTools_Arizona_Settlement_Trader" or defName="HHTools_Arizona_Settlement_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Settler</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+        <li>FIPW_Pool_SettlerGuard</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Settlement_Civilian" or defName="HHTools_Arizona_Settlement_Fighter" or defName="HHTools_Arizona_Settlement_Trader" or defName="HHTools_Arizona_Settlement_Leader" or defName="HHTools_Arizona_Settlement_Child" or defName="HHTools_Arizona_Settlement_Miner" or defName="HHTools_Arizona_Settlement_Hunter" or defName="HHTools_Arizona_Settlement_Logger" or defName="HHTools_Arizona_Settlement_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Settler</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Settlement_Fighter" or defName="HHTools_Arizona_Settlement_Trader" or defName="HHTools_Arizona_Settlement_Leader"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Settler</li>
+        <li>FIPA_Pool_SettlerGuard</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Raider_Civilian" or defName="HHTools_Arizona_Raider_Miner" or defName="HHTools_Arizona_Raider_Hunter" or defName="HHTools_Arizona_Raider_Logger" or defName="HHTools_Arizona_Raider_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Raider</li>
+        <li>FIPW_Pool_ArizonaRaider</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Raider_Fighter" or defName="HHTools_Arizona_Raider_Trader" or defName="HHTools_Arizona_Raider_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Wastelander</li>
+        <li>FIPW_Pool_Raider</li>
+        <li>FIPW_Pool_ArizonaRaider</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Raider_Civilian" or defName="HHTools_Arizona_Raider_Fighter" or defName="HHTools_Arizona_Raider_Trader" or defName="HHTools_Arizona_Raider_Leader" or defName="HHTools_Arizona_Raider_Miner" or defName="HHTools_Arizona_Raider_Hunter" or defName="HHTools_Arizona_Raider_Logger" or defName="HHTools_Arizona_Raider_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_WastelanderGeneric</li>
+        <li>FIPA_Pool_Raider</li>
+        <li>FIPA_Pool_ArizonaRaider</li>
+        <li>FIPA_Pool_LegionRegional</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Tribal_Civilian" or defName="HHTools_Arizona_Tribal_Miner" or defName="HHTools_Arizona_Tribal_Hunter" or defName="HHTools_Arizona_Tribal_Logger" or defName="HHTools_Arizona_Tribal_Farmer"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Tribal</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Tribal_Fighter" or defName="HHTools_Arizona_Tribal_Trader" or defName="HHTools_Arizona_Tribal_Leader"]/weaponTags</xpath>
+    <value>
+      <weaponTags Inherit="False">
+        <li>FIPW_Pool_Tribal</li>
+        <li>FIPW_Pool_ArizonaCowboy</li>
+      </weaponTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_Arizona_Tribal_Civilian" or defName="HHTools_Arizona_Tribal_Fighter" or defName="HHTools_Arizona_Tribal_Trader" or defName="HHTools_Arizona_Tribal_Leader" or defName="HHTools_Arizona_Tribal_Child" or defName="HHTools_Arizona_Tribal_Miner" or defName="HHTools_Arizona_Tribal_Hunter" or defName="HHTools_Arizona_Tribal_Logger" or defName="HHTools_Arizona_Tribal_Farmer"]/apparelTags</xpath>
+    <value>
+      <apparelTags Inherit="False">
+        <li>FIPA_Pool_Tribal</li>
+      </apparelTags>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="HHTools_TribalChiefBase"]/apparelRequired</xpath>
+    <value>
+      <apparelRequired Inherit="False">
+        <li>Apparel_TribalHeaddress</li>
+      </apparelRequired>
+    </value>
+  </Operation>
+</Patch>

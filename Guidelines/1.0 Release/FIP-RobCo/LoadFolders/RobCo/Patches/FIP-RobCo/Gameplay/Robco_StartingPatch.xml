@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
+    <xpath>/Defs/QuestScriptDef[defName="MechanitorStartingMech"]/root[@Class="QuestNode_Root_MechanitorStartingMech"]/mechTypes</xpath>
+    <value>
+      <mechTypes>
+        <li>RobCo_Constructron</li>
+        <li>RobCo_Collectron</li>
+        <li>RobCo_Factotron</li>
+        <li>RobCo_Utilitron</li>
+      </mechTypes>
+    </value>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationRemoveUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Lifter"]</xpath>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationRemoveUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_StartingMech" and ./mechKind="Mech_Constructoid"]</xpath>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationAddUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts</xpath>
+    <value>
+      <li Class="ScenPart_StartingMech"><def>StartingMech</def><mechKind>RobCo_Constructron</mechKind><overseenByPlayerPawnChance>1</overseenByPlayerPawnChance></li>
+      <li Class="ScenPart_StartingMech"><def>StartingMech</def><mechKind>RobCo_Factotron</mechKind><overseenByPlayerPawnChance>1</overseenByPlayerPawnChance></li>
+      <li Class="ScenPart_StartingMech"><def>StartingMech</def><mechKind>RobCo_Utilitron</mechKind><overseenByPlayerPawnChance>1</overseenByPlayerPawnChance></li>
+      <li Class="ScenPart_StartingMech"><def>StartingMech</def><mechKind>RobCo_Collectron</mechKind><overseenByPlayerPawnChance>1</overseenByPlayerPawnChance></li>
+    </value>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/label</xpath>
+    <value><label>The RobCo Mechanic</label></value>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/description</xpath>
+    <value><description>People failed you long before machines ever did. You put your faith in RobCo steel, old-world code, and the quiet certainty of tools that obey. After rebuilding four service robots from scavenged parts, your work drew the wrong kind of attention. You left settled territory for an isolated stretch of wasteland where no one could confiscate your machines or tell you what they were for.
+
+Note: Your starting mechanic and specialized robots cover different jobs, but missing skills can still make this a difficult scenario.</description></value>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/summary</xpath>
+    <value><summary>One RobCo mechanic and four refurbished service robots.</summary></value>
+  </Operation>
+  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
+    <xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+    <value><text>People failed you long before machines ever did. So you put your faith in RobCo steel, old-world code, and the quiet certainty of tools that obey.
+
+You arrive in the wasteland as a RobCo mechanic with a handful of loyal service bots and a chance to build something cleaner than the world that came before. Keep the machines running, and they might keep you alive.</text></value>
+  </Operation>
+</Patch>

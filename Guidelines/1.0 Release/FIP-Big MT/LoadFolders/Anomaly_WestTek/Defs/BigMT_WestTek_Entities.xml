@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FIP - Big MT: WestTek Entities
+  Adds Crazed Super Mutants and Nightkin as Anomaly-integrated hostile entities.
+  Requires FIP - WestTek active.
+
+  These entities use WestTek xenotypes as their biological base, but appear as
+  Anomaly-driven hostiles — Super Mutants and Nightkin who have been affected by
+  Big MT's broadcast signal and have become uncontrollably aggressive.
+
+  Crazed Super Mutant: WestTek_Xenotype_SuperMutantFirst — driven berserk by
+    the Big MT signal. Appears in Anomaly encounter groups as a basic-tier entity.
+    Can be captured and studied for West Tek research progress.
+
+  Nightkin: WestTek_Xenotype_SuperMutantSecond — Stealth Boy-addicted Super Mutant.
+    Appears as an advanced-tier entity. Harder to contain. Studying one provides
+    classified West Tek research data.
+
+  NOTE: Nightkin stealth mechanics require C# hooks for full invisibility behavior.
+    In this initial version they function as tough melee hunters. The WestTek
+    research chain integration is defined in BigMT_WestTek_Research.xml.
+-->
+<Defs>
+
+  <!-- ==================== CRAZED SUPER MUTANT ==================== -->
+
+  <PawnKindDef>
+    <defName>BigMT_CrazedSuperMutant</defName>
+    <label>crazed super mutant</label>
+    <race>Human</race>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_SuperMutantFirst>1</WestTek_Xenotype_SuperMutantFirst>
+      </xenotypeChances>
+    </xenotypeSet>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>80</maxGenerationAge>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
+    <defaultFactionType>BigMT_ExperimentFaction</defaultFactionType>
+    <combatPower>80</combatPower>
+    <isFighter>true</isFighter>
+    <trader>false</trader>
+    <apparelMoney>
+      <min>0</min>
+      <max>0</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <disabledWorkTags>
+      <li>Firefighting</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Cooking</li>
+      <li>PlantWork</li>
+      <li>Intellectual</li>
+      <li>Artistic</li>
+      <li>Crafting</li>
+      <li>Mining</li>
+      <li>Constructing</li>
+    </disabledWorkTags>
+    <skills>
+      <li>
+        <skill>Melee</skill>
+        <range>8~14</range>
+      </li>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <!-- ==================== NIGHTKIN ==================== -->
+
+  <PawnKindDef>
+    <defName>BigMT_Nightkin</defName>
+    <label>nightkin</label>
+    <race>Human</race>
+    <xenotypeSet>
+      <xenotypeChances>
+        <WestTek_Xenotype_SuperMutantSecond>1</WestTek_Xenotype_SuperMutantSecond>
+      </xenotypeChances>
+    </xenotypeSet>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>120</maxGenerationAge>
+    <initialWillRange>5~10</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+    <defaultFactionType>BigMT_ExperimentFaction</defaultFactionType>
+    <combatPower>130</combatPower>
+    <isFighter>true</isFighter>
+    <trader>false</trader>
+    <apparelMoney>
+      <min>0</min>
+      <max>0</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <disabledWorkTags>
+      <li>Firefighting</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Cooking</li>
+      <li>PlantWork</li>
+      <li>Intellectual</li>
+      <li>Artistic</li>
+      <li>Crafting</li>
+      <li>Mining</li>
+      <li>Constructing</li>
+    </disabledWorkTags>
+    <skills>
+      <li>
+        <skill>Melee</skill>
+        <range>12~18</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+</Defs>

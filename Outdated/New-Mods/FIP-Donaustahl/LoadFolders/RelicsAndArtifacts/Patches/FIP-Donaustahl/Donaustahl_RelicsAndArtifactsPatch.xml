@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Relics and Artifacts makes all craftable apparel eligible through these parents. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[@Name="ApparelMakeableBase" or @Name="ArmorSmithableBase" or @Name="ArmorMachineableBase" or @Name="PsychicApparelBase"]/relicChance</xpath>
+    <success>Always</success>
+  </Operation>
+</Patch>

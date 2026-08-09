@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Slasher"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Gunner"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Elite"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Heavy"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_EnclaveRemnant</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Citizen"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False" />
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]</xpath>
+      <value>
+        <weaponTags Inherit="False" />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="TradersGuild_Child"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveRemnant</li>
+          <li>FIPA_Pool_EnclaveFallback</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Pirate"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Scrapper"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]/weaponTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]/weaponTags</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]</xpath>
+      <value>
+        <weaponTags Inherit="False">
+          <li>FIPW_Pool_Enclave</li>
+          <li>FIPW_Pool_EnclaveFallback</li>
+        </weaponTags>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]/apparelTags</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]/apparelTags</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Salvager_Elite"]</xpath>
+      <value>
+        <apparelTags Inherit="False">
+          <li>FIPA_Pool_EnclaveFallback</li>
+          <li>FIPA_Pool_EnclaveTrooper</li>
+          <li>FIPA_Pool_EnclaveCombatArmor</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

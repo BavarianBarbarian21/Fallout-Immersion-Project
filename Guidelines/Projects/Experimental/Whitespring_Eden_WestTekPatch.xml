@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Experimental WestTek compatibility layer.
+    When FIP-WestTek is active, Eden should use the WestTek pure human xenotype.
+  -->
+
+  <Operation Class="PatchOperationReplace" MayRequire="FIP.WestTek">
+    <xpath>Defs/FCP.Core.CharacterDef[defName="FIP_Character_Whitespring_JohnHenryEden"]/xenotype</xpath>
+    <value>
+      <xenotype>WestTek_Xenotype_PureHumans</xenotype>
+    </value>
+  </Operation>
+</Patch>

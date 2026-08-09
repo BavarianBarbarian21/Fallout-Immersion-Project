@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Inheritability -->
+	<Operation Class="VEF.PatchOperationToggableSequence">
+		<enabled>false</enabled>
+		<label>Enable inheritability:</label>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/XenotypeDef[@Name="ATK_AnthrosonaBase"]</xpath>
+				<value><inheritable>true</inheritable></value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/XenotypeDef[defName="Sanguophage"]/doubleXenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.002</ATK_Anthrobear>
+					<ATK_Anthrocat>0.002</ATK_Anthrocat>
+					<ATK_Anthrocow>0.002</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.002</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.002</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.002</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.002</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.002</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.002</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.002</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.002</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.002</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.002</ATK_Anthroshark>
+					<ATK_Anthrowah>0.002</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.002</ATK_Anthrowolf>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+
+	<!-- Unnatural fur colors -->
+	<Operation Class="VEF.PatchOperationToggableSequence">
+		<enabled>true</enabled>
+		<label>Enable unnatural fur colors:</label>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="ATK_AnthrobearFur" or defName="ATK_AnthrocatFur" or defName="ATK_AnthrocowFur" or defName="ATK_AnthrodeerFur" or defName="ATK_AnthrofoxFur" or defName="ATK_AnthrogriffFur" or defName="ATK_AnthrogoatFur" or defName="ATK_AnthrorabbitFur" or defName="ATK_AnthrosharkFur" or defName="ATK_AnthrowolfFur"]/modExtensions/li[@Class="Anthrosonae.FurColors"]/allowedFurColors</xpath>
+				<value>
+                    <li>ATK_FurPreset_PaleBlueWhite</li>
+                    <li>ATK_FurPreset_DeepBlueWhite</li>
+                    <li>ATK_FurPreset_PurpleWhite</li>
+                    <li>ATK_FurPreset_DeepRedWhite</li>
+                    <li>ATK_FurPreset_DeepRedCream</li>
+                    <li>ATK_FurPreset_YellowWhite</li>
+                    <li>ATK_FurPreset_PaleGreenWhite</li>
+                    <li>ATK_FurPreset_DeepGreenWhite</li>
+                    <li>ATK_FurPreset_PinkWhite</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="ATK_AnthrohyenaFur"]/modExtensions/li[@Class="Anthrosonae.FurColors"]/allowedFurColors</xpath>
+				<value>
+                    <li>ATK_FurPreset_GrayDarkGray</li>
+                    <li>ATK_FurPreset_GrayLightWhite</li>
+                    <li>ATK_FurPreset_White</li>
+					
+                    <li>ATK_FurPreset_PaleBlueWhite</li>
+                    <li>ATK_FurPreset_DeepBlueWhite</li>
+                    <li>ATK_FurPreset_PurpleWhite</li>
+                    <li>ATK_FurPreset_DeepRedWhite</li>
+                    <li>ATK_FurPreset_DeepRedCream</li>
+                    <li>ATK_FurPreset_YellowWhite</li>
+                    <li>ATK_FurPreset_PaleGreenWhite</li>
+                    <li>ATK_FurPreset_DeepGreenWhite</li>
+                    <li>ATK_FurPreset_PinkWhite</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="ATK_AnthrowahFur"]/modExtensions/li[@Class="Anthrosonae.FurColors"]/allowedFurColors</xpath>
+				<value>
+                    <li>ATK_FurPreset_GrayBlack</li>
+
+                    <li>ATK_FurPreset_PaleBlueBlack</li>
+                    <li>ATK_FurPreset_DeepBlueBlack</li>
+                    <li>ATK_FurPreset_PurpleBlack</li>
+                    <li>ATK_FurPreset_DeepRedBlack</li>
+                    <li>ATK_FurPreset_DeepRedCream</li>
+                    <li>ATK_FurPreset_YellowBlack</li>
+                    <li>ATK_FurPreset_PaleGreenBlack</li>
+                    <li>ATK_FurPreset_DeepGreenBlack</li>
+                    <li>ATK_FurPreset_PinkBlack</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Genepack generation
+	// Contributed by bit_synergy on Discord
+	-->
+	<Operation Class="VEF.PatchOperationToggableSequence">
+		<enabled>false</enabled>
+		<label>Enable anthrosonae genes generating in genepacks:</label>
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/GeneDef[@Name="ATK_AnthrosonaFurBase" or @Name="ATK_AnthrosonaHeadboneBase" or @Name="ATK_AnthrosonaEarsBase" or @Name="ATK_AnthrosonaTailBase" or @Name="ATK_AnthrosonaBackboneBase" or @Name="ATK_AnthrosonaFacialOverlayBase"]/canGenerateInGeneSet</xpath>
+				<value><canGenerateInGeneSet>true</canGenerateInGeneSet></value>
+			</li>
+		</operations>
+	</Operation>
+
+
+	<!-- Debug pawns -->
+	<Operation Class="VEF.PatchOperationToggableSequence">
+		<enabled>false</enabled>
+		<label>Enable debug pawns:</label>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<PawnKindDef Name="ATK_AnthrosonaColonistBase" Abstract="True">
+    					<defaultFactionType>PlayerColony</defaultFactionType>
+						<race>Human</race>
+						<combatPower>30</combatPower>
+						<isFighter>false</isFighter>
+						<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+						<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+						<forceNormalGearQuality>true</forceNormalGearQuality>
+						<humanPregnancyChance>0.06</humanPregnancyChance>
+    					<chemicalAddictionChance>0.06</chemicalAddictionChance>
+						<apparelTags><li>IndustrialBasic</li></apparelTags>
+						<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+						<apparelMoney>350~600</apparelMoney>
+						<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+						<techHediffsChance>0.03</techHediffsChance>
+						<techHediffsMoney>50~800</techHediffsMoney>
+						<techHediffsTags>
+							<li>Poor</li>
+							<li>Simple</li>
+							<li>ImplantEmpireCommon</li>
+						</techHediffsTags>
+						<techHediffsDisallowTags><li>PainCauser</li></techHediffsDisallowTags>
+						<initialResistanceRange>13~21</initialResistanceRange>
+						<initialWillRange>0~0</initialWillRange>
+    					<useFactionXenotypes>false</useFactionXenotypes>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrobearColonist</defName>
+						<label>anthrobear colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrobear>999</ATK_Anthrobear>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrocatColonist</defName>
+						<label>anthrocat colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrocat>999</ATK_Anthrocat>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrocowColonist</defName>
+						<label>anthrocow colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrocow>999</ATK_Anthrocow>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrodeerColonist</defName>
+						<label>anthrodeer colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrodeer>999</ATK_Anthrodeer>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrodrakeColonist</defName>
+						<label>anthrodrake colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrodrake>999</ATK_Anthrodrake>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrofoxColonist</defName>
+						<label>anthrofox colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrofox>999</ATK_Anthrofox>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrogoatColonist</defName>
+						<label>anthrogoat colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrogoat>999</ATK_Anthrogoat>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrogriffColonist</defName>
+						<label>anthrogriff colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrogriff>999</ATK_Anthrogriff>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrohorseColonist</defName>
+						<label>anthrohorse colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrohorse>999</ATK_Anthrohorse>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrohyenaColonist</defName>
+						<label>anthrohyena colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrohyena>999</ATK_Anthrohyena>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthropandaColonist</defName>
+						<label>anthropanda colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthropanda>999</ATK_Anthropanda>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrorabbitColonist</defName>
+						<label>anthrorabbit colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrorabbit>999</ATK_Anthrorabbit>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrosharkColonist</defName>
+						<label>anthroshark colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthroshark>999</ATK_Anthroshark>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrowahColonist</defName>
+						<label>anthrowah colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrowah>999</ATK_Anthrowah>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+
+					<PawnKindDef ParentName="ATK_AnthrosonaColonistBase">
+						<defName>ATK_AnthrowolfColonist</defName>
+						<label>anthrowolf colonist</label>
+						<xenotypeSet>
+							<xenotypeChances>
+								<ATK_Anthrowolf>999</ATK_Anthrowolf>
+							</xenotypeChances>
+						</xenotypeSet>
+					</PawnKindDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

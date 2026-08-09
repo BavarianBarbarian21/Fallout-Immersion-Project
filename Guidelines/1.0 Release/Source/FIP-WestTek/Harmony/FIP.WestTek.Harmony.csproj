@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>FIP.WestTek</RootNamespace>
+    <AssemblyName>FIP_WestTek_Harmony</AssemblyName>
+    <OutputPath>$(FipReleaseRoot)FIP-WestTek\LoadFolders\Harmony\Assemblies\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FIP.WestTek.csproj" Private="false" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>

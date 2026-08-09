@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+  <!-- AncientComplex_Mechanitor -->
+  <!--Mechanoid (Faction)-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="Mechanoid"]/factionIconPath</xpath>
+    <value>
+      <factionIconPath>FIP-H&amp;HTools/HHTools_Mechanist</factionIconPath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="Mechanoid"]/colorSpectrum</xpath>
+    <value>
+      <colorSpectrum>
+        <li>(1, 1, 1)</li>
+      </colorSpectrum>
+    </value>
+  </Operation>
+  <!-- Patch MechanitorShip questDescription -->
+
+  <!-- Patch MechanitorShip mechGroups to spawn 1 Eyebot and 2 Protectrons -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/QuestScriptDef[defName="MechanitorShip"]/root/mechGroups</xpath>
+    <value>
+      <mechGroups>
+        <li>
+          <options>
+            <li>
+              <pawnKind>RobCo_Eyebot</pawnKind>
+              <weight>1</weight>
+              <requireOneOf>true</requireOneOf>
+            </li>
+            <li>
+              <pawnKind>RobCo_Protectron</pawnKind>
+              <weight>2</weight>
+            </li>
+          </options>
+        </li>
+      </mechGroups>
+    </value>
+  </Operation>
+  <!-- Patch MechanitorShip questContentRules -->
+
+
+
+
+
+
+  <!-- Raid spawn changes -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers</xpath>
+    <value>
+      <pawnGroupMakers>
+        <li>
+          <!-- All types-->
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <RobCo_MisterGutsy>20</RobCo_MisterGutsy>
+            <RobCo_Protectron>20</RobCo_Protectron>
+            <RobCo_Assaultron>2</RobCo_Assaultron>
+            <RobCo_SentrybotAnnihilator>10</RobCo_SentrybotAnnihilator>
+            <RobCo_SentrybotPestcontrol>5</RobCo_SentrybotPestcontrol>
+            <RobCo_EyebotDuraframe>40</RobCo_EyebotDuraframe>
+            <RobCo_Robobrain>2</RobCo_Robobrain>
+            <RobCo_AssaultronSheepsquatch>1</RobCo_AssaultronSheepsquatch>
+            <RobCo_SentrybotDeathbot>1</RobCo_SentrybotDeathbot>
+          </options>
+        </li>
+        <li>
+          <!-- Sentry only -->
+          <kindDef>Combat</kindDef>
+          <commonality>30</commonality>
+          <options>
+            <RobCo_SentrybotAnnihilator>10</RobCo_SentrybotAnnihilator>
+            <RobCo_SentrybotSiegebreaker>5</RobCo_SentrybotSiegebreaker>
+            <RobCo_SentrybotPestcontrol>5</RobCo_SentrybotPestcontrol>
+          </options>
+        </li>
+        <li>
+          <!-- Eyebot only -->
+          <kindDef>Combat</kindDef>
+          <commonality>30</commonality>
+          <options>
+            <RobCo_EyebotDuraframe>10</RobCo_EyebotDuraframe>
+          </options>
+        </li>
+        <li>
+          <!-- breach raids -->
+          <kindDef>Combat</kindDef>
+          <commonality>1</commonality>
+          <options>
+            <RobCo_Protectron>10</RobCo_Protectron>
+            <RobCo_MisterGutsy>10</RobCo_MisterGutsy>
+            <RobCo_Assaultron>5</RobCo_Assaultron>
+            <RobCo_SentrybotAnnihilator>10</RobCo_SentrybotAnnihilator>
+            <RobCo_SentrybotSiegebreaker>1</RobCo_SentrybotSiegebreaker>
+            <RobCo_EyebotDuraframe>20</RobCo_EyebotDuraframe>
+          </options>
+        </li>
+      </pawnGroupMakers>
+    </value>
+  </Operation>
+  <!-- Ancient gestator building change -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientMechGestatorTank"]/comps/li[@Class="CompProperties_MechGestatorTank"]/triggeredMessage</xpath>
+    <value>
+      <triggeredMessage>A {0_labelShort} has emerged from a Robco charging bot.</triggeredMessage>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="AncientMechGestatorTank"]/comps/li[@Class="CompProperties_MechGestatorTank"]/mechKindOptions</xpath>
+    <value>
+      <mechKindOptions>
+        <RobCo_MisterGutsy/>
+        <RobCo_Assaultron/>
+        <RobCo_Protectron/>
+        <RobCo_SentrybotAnnihilator/>
+        <RobCo_Robobrain/>
+      </mechKindOptions>
+    </value>
+  </Operation>
+  <!-- Mech capsule, assembler, and drop beacon changes -->
+</Patch>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[@Name="SpaceRefugeeBase"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.0075</ATK_Anthrobear>
+					<ATK_Anthrocat>0.0075</ATK_Anthrocat>
+					<ATK_Anthrocow>0.0075</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.0075</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.0075</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.0075</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.0075</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.0075</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.0075</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.0075</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.0075</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.0075</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.0075</ATK_Anthroshark>
+					<ATK_Anthrowah>0.0075</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.0075</ATK_Anthrowolf>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="WK.Spacefarers">
+				<xpath>Defs/PawnKindDef[defName="WK_Spacefarer_Grunt" or defName="WK_Spacefarer_Gunner" or defName="WK_Spacefarer_Sniper" or defName="WK_Spacefarer_Thumper" or defName="WK_Spacefarer_Marine" or defName="WK_Spacefarer_Grenadier" or defName="WK_Spacefarer_Jumper" or defName="WK_Spacefarer_Mechanitor"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<ATK_Anthrobear>0.0075</ATK_Anthrobear>
+					<ATK_Anthrocat>0.0075</ATK_Anthrocat>
+					<ATK_Anthrocow>0.0075</ATK_Anthrocow>
+					<ATK_Anthrodeer>0.0075</ATK_Anthrodeer>
+					<ATK_Anthrodrake>0.0075</ATK_Anthrodrake>
+					<ATK_Anthrofox>0.0075</ATK_Anthrofox>
+					<ATK_Anthrogoat>0.0075</ATK_Anthrogoat>
+					<ATK_Anthrogriff>0.0075</ATK_Anthrogriff>
+					<ATK_Anthrohorse>0.0075</ATK_Anthrohorse>
+					<ATK_Anthrohyena>0.0075</ATK_Anthrohyena>
+					<ATK_Anthropanda>0.0075</ATK_Anthropanda>
+					<ATK_Anthrorabbit>0.0075</ATK_Anthrorabbit>
+					<ATK_Anthroshark>0.0075</ATK_Anthroshark>
+					<ATK_Anthrowah>0.0075</ATK_Anthrowah>
+					<ATK_Anthrowolf>0.0075</ATK_Anthrowolf>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
