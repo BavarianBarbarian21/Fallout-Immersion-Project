@@ -1,6 +1,6 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 21:51:38 +02:00
+Generated: 2026-08-12 22:12:20 +02:00
 
 Overall result: **PASS** - 91/91 checks passed.
 
@@ -141,7 +141,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All textures are in unconditional module folders | 537 texture files; misplaced: 0; optional Texture directories: 0 |
+| PASS | All textures are in unconditional module folders | 538 texture files; misplaced: 0; optional Texture directories: 0 |
 | PASS | All FIP texture paths resolve with exact casing | 305 references / 145 unique; missing: 0; case mismatches: 0 |
 | PASS | Numen cosmetics and Skinwalker head use validated invisible directional placeholders | six 128x128 fully transparent PNG contracts; invalid or missing: 0 |
 | PASS | Skinwalker raccoon art replaces the human silhouette instead of overlaying it | FurDef body replacement for seven vanilla body types, transparent head, no AttachmentBody overlay, six directional art files: True |
@@ -170,7 +170,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs | optional Harmony integration reuses About/ModIcon.png and Preview.png: True |
+| PASS | H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs | dedicated 128x128 icon with native background fallback: True |
 
 ## Translations
 
@@ -185,7 +185,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:04.53 |
+| PASS | Managed solution builds | exit 0;   FIP.HHTools -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-H&HTools\LoadFolders\HHTools\Assemblies\FIP_HHTools.dll   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:03.53 |
 
 ## Documented non-colliding overlaps
 

@@ -21,6 +21,7 @@ internal static class HHToolsExpansionListPatch
 {
     private const string PackageId = "FIP.HHTools";
     private const string ExpansionDefName = "FIP_HHTools_MainMenu";
+    private const string MainMenuIconPath = "FIP-H&HTools/UI/MainMenu/FIP_Title_Logo";
     private static ExpansionDef expansion;
 
     private static void Postfix(List<ExpansionDef> __result)
@@ -30,14 +31,16 @@ internal static class HHToolsExpansionListPatch
             return;
         }
 
-        expansion ??= CreateExpansion();
+        ExpansionDef visualFallback = __result.FirstOrDefault(item => item?.isCore == true)
+            ?? __result.FirstOrDefault(item => item != null);
+        expansion ??= CreateExpansion(visualFallback);
         if (expansion != null)
         {
             __result.Add(expansion);
         }
     }
 
-    private static ExpansionDef CreateExpansion()
+    private static ExpansionDef CreateExpansion(ExpansionDef visualFallback)
     {
         ModMetaData mod = ModLister.GetActiveModWithIdentifier(PackageId);
         if (mod == null)
@@ -45,8 +48,12 @@ internal static class HHToolsExpansionListPatch
             return null;
         }
 
-        Texture2D icon = mod.Icon ?? BaseContent.BadTex;
-        Texture2D preview = mod.PreviewImage ?? icon;
+        Texture2D icon = ContentFinder<Texture2D>.Get(MainMenuIconPath, false) ?? BaseContent.BadTex;
+        Texture2D background = GetNativeVisual<Texture2D>(visualFallback, "BG", "cachedBG") ?? BaseContent.BadTex;
+        List<Texture2D> previewImages = GetNativeVisual<List<Texture2D>>(
+            visualFallback,
+            "PreviewImages",
+            "cachedPreviewImages") ?? new List<Texture2D>();
         ExpansionDef result = new()
         {
             defName = ExpansionDefName,
@@ -59,8 +66,19 @@ internal static class HHToolsExpansionListPatch
 
         AccessTools.Field(typeof(ExpansionDef), "cachedIcon").SetValue(result, icon);
         AccessTools.Field(typeof(ExpansionDef), "cachedNotOwnedIcon").SetValue(result, icon);
-        AccessTools.Field(typeof(ExpansionDef), "cachedBG").SetValue(result, preview);
-        AccessTools.Field(typeof(ExpansionDef), "cachedPreviewImages").SetValue(result, new List<Texture2D> { preview });
+        AccessTools.Field(typeof(ExpansionDef), "cachedBG").SetValue(result, background);
+        AccessTools.Field(typeof(ExpansionDef), "cachedPreviewImages").SetValue(result, previewImages ?? new List<Texture2D>());
         return result;
+    }
+
+    private static T GetNativeVisual<T>(ExpansionDef source, string propertyName, string fieldName) where T : class
+    {
+        if (source == null)
+        {
+            return null;
+        }
+
+        T value = AccessTools.Property(typeof(ExpansionDef), propertyName)?.GetValue(source) as T;
+        return value ?? AccessTools.Field(typeof(ExpansionDef), fieldName)?.GetValue(source) as T;
     }
 }

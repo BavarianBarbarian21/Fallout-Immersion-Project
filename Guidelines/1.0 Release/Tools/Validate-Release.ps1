@@ -733,9 +733,11 @@ $hhtoolsExpansionSource = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-H&H
 $hhtoolsHarmonyNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Harmony'
 $hhtoolsExpansionContract = $hhtoolsHarmonyNode -and $hhtoolsHarmonyNode.GetAttribute('IfModActive') -ceq 'brrainz.harmony' -and
     $hhtoolsExpansionSource.Contains('ModLister.GetActiveModWithIdentifier(PackageId)') -and
-    $hhtoolsExpansionSource.Contains('mod.Icon') -and $hhtoolsExpansionSource.Contains('mod.PreviewImage') -and
+    $hhtoolsExpansionSource.Contains('FIP-H&HTools/UI/MainMenu/FIP_Title_Logo') -and
+    $hhtoolsExpansionSource.Contains('item?.isCore == true') -and
+    -not $hhtoolsExpansionSource.Contains('mod.Icon') -and -not $hhtoolsExpansionSource.Contains('mod.PreviewImage') -and
     -not $hhtoolsExpansionSource.Contains('DefDatabase<ExpansionDef>')
-Add-Check 'Main menu' 'H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs' ([bool]$hhtoolsExpansionContract) "optional Harmony integration reuses About/ModIcon.png and Preview.png: $([bool]$hhtoolsExpansionContract)"
+Add-Check 'Main menu' 'H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs' ([bool]$hhtoolsExpansionContract) "dedicated 128x128 icon with native background fallback: $([bool]$hhtoolsExpansionContract)"
 
 # Translation identity and the intentional new meaning of FIP.Sunset.
 $translationErrors = [Collections.Generic.List[string]]::new()
