@@ -7,11 +7,20 @@ namespace FIP.Whitespring;
 
 public sealed class WhitespringSettings : ModSettings
 {
-    public bool restoreStorytellers;
+    public bool onlyImmersiveStorytellers = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreStorytellers, "restoreStorytellers", false);
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?["onlyImmersiveStorytellers"] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?["restoreStorytellers"] != null;
+        Scribe_Values.Look(ref onlyImmersiveStorytellers, "onlyImmersiveStorytellers", true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, "restoreStorytellers", false);
+            onlyImmersiveStorytellers = !legacyRestore;
+        }
     }
 }
 
@@ -24,7 +33,6 @@ public sealed class WhitespringSettingsMod : Mod
     public WhitespringSettingsMod(ModContentPack content) : base(content)
     {
         settings = GetSettings<WhitespringSettings>();
-        CaptureAndApply();
         LongEventHandler.ExecuteWhenFinished(CaptureAndApply);
     }
 
@@ -34,12 +42,17 @@ public sealed class WhitespringSettingsMod : Mod
     {
         Listing_Standard listing = new();
         listing.Begin(inRect);
-        bool value = settings.restoreStorytellers;
-        listing.CheckboxLabeled("Restore storytellers", ref value,
-            "Restores Ariadne Archduchess and Damocles without FIP text changes. Restart required.");
-        if (value != settings.restoreStorytellers)
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive storytellers");
+        Text.Font = GameFont.Small;
+        listing.Label("Keep storyteller selection focused on the curated Fallout experience.");
+        listing.GapLine();
+        bool value = settings.onlyImmersiveStorytellers;
+        listing.CheckboxLabeled("Only immersive storytellers", ref value,
+            "Hides Ariadne Archduchess and Damocles from storyteller selection. Restart required.");
+        if (value != settings.onlyImmersiveStorytellers)
         {
-            settings.restoreStorytellers = value;
+            settings.onlyImmersiveStorytellers = value;
             CaptureAndApply();
         }
         listing.End();
@@ -66,7 +79,7 @@ public sealed class WhitespringSettingsMod : Mod
                 OriginalVisibility[defName] = def.listVisible;
             }
 
-            def.listVisible = settings.restoreStorytellers ? OriginalVisibility[defName] : false;
+            def.listVisible = settings.onlyImmersiveStorytellers ? false : OriginalVisibility[defName];
         }
     }
 }

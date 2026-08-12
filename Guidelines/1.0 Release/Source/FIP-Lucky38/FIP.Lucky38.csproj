@@ -8,4 +8,8 @@
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Settings\**\*.cs" />
+  </ItemGroup>
 </Project>

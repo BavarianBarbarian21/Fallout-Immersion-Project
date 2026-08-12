@@ -8,11 +8,20 @@ namespace FIP.RobCo;
 
 public sealed class RobCoModSettings : ModSettings
 {
-    public bool restoreMechanoids;
+    public bool onlyImmersiveMechanoids = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreMechanoids, "restoreMechanoids", false);
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?["onlyImmersiveMechanoids"] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?["restoreMechanoids"] != null;
+        Scribe_Values.Look(ref onlyImmersiveMechanoids, "onlyImmersiveMechanoids", true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, "restoreMechanoids", false);
+            onlyImmersiveMechanoids = !legacyRestore;
+        }
     }
 }
 
@@ -26,6 +35,11 @@ public sealed class RobCoMod : Mod
         : base(content)
     {
         Settings = GetSettings<RobCoModSettings>();
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            RobCoDefSettingsApplier.Initialize();
+            ApplySettings();
+        });
     }
 
     public override string SettingsCategory()
@@ -51,7 +65,13 @@ public sealed class RobCoMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        bool updatedValue = Settings.restoreMechanoids;
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive mechanoids");
+        Text.Font = GameFont.Small;
+        listing.Label("Keep mechanitor progression, encounters, and production focused on the RobCo roster.");
+        listing.GapLine();
+
+        bool updatedValue = Settings.onlyImmersiveMechanoids;
         Rect row = listing.GetRect(28f);
         if (MechIcon != null)
         {
@@ -59,14 +79,15 @@ public sealed class RobCoMod : Mod
         }
 
         Rect settingRect = new(row.x + 28f, row.y, row.width - 28f, row.height);
-        Widgets.CheckboxLabeled(settingRect, "Restore Mechanoids", ref updatedValue);
+        Widgets.CheckboxLabeled(settingRect, "Only immersive mechanoids", ref updatedValue);
         TooltipHandler.TipRegion(
             row,
-            "Restores the complete native Mechanitor state: gestators, threats, raids, starts, quests, tanks, Royalty spawns, and Basic Mechtech. Restart required; use a new world for raid and faction changes.");
+            "Suppresses the replaced native Mechanitor state: gestators, threats, raids, starts, quests, tanks, Royalty spawns, and Basic Mechtech. Restart required; use a new world for raid and faction changes.");
 
-        if (updatedValue != Settings.restoreMechanoids)
+        if (updatedValue != Settings.onlyImmersiveMechanoids)
         {
-            Settings.restoreMechanoids = updatedValue;
+            Settings.onlyImmersiveMechanoids = updatedValue;
+            ApplySettings();
         }
 
         listing.End();
@@ -75,7 +96,10 @@ public sealed class RobCoMod : Mod
     public override void WriteSettings()
     {
         base.WriteSettings();
+        ApplySettings();
     }
+
+    private static void ApplySettings() => RobCoDefSettingsApplier.Apply(Settings.onlyImmersiveMechanoids);
 }
 
 internal static class RobCoDefSettingsApplier
@@ -126,6 +150,11 @@ internal static class RobCoDefSettingsApplier
             return;
         }
 
+        if (DefDatabase<PawnKindDef>.AllDefsListForReading.Count == 0)
+        {
+            return;
+        }
+
         CaptureRecipes("MechGestator");
         CaptureRecipes("LargeMechGestator");
 
@@ -158,6 +187,11 @@ internal static class RobCoDefSettingsApplier
         if (!initialized)
         {
             Initialize();
+        }
+
+        if (!initialized)
+        {
+            return;
         }
 
         ApplyRecipes("MechGestator", removeVanillaMechanoids ? CivilWorkbenchRecipeDefNames : null);

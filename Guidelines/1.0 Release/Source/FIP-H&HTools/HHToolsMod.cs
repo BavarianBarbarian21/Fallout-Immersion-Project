@@ -7,23 +7,37 @@ namespace FIP.HHTools;
 
 public sealed class HHToolsModSettings : ModSettings
 {
-    public bool restoreFactions;
-    public bool restoreScenarios;
-    public bool restoreBuildings;
-    public bool restoreWeapons;
-    public bool restoreApparel;
-    public bool restoreQuests;
-    public bool restoreStorytellers;
+    public bool onlyImmersiveFactions = true;
+    public bool onlyImmersiveScenarios = true;
+    public bool onlyImmersiveBuildings = true;
+    public bool onlyImmersiveWeapons = true;
+    public bool onlyImmersiveApparel = true;
+    public bool onlyImmersiveQuests = true;
+    public bool onlyImmersiveStorytellers = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreFactions, "restoreFactions", false);
-        Scribe_Values.Look(ref restoreScenarios, "restoreScenarios", false);
-        Scribe_Values.Look(ref restoreBuildings, "restoreBuildings", false);
-        Scribe_Values.Look(ref restoreWeapons, "restoreWeapons", false);
-        Scribe_Values.Look(ref restoreApparel, "restoreApparel", false);
-        Scribe_Values.Look(ref restoreQuests, "restoreQuests", false);
-        Scribe_Values.Look(ref restoreStorytellers, "restoreStorytellers", false);
+        LookImmersive(ref onlyImmersiveFactions, "onlyImmersiveFactions", "restoreFactions");
+        LookImmersive(ref onlyImmersiveScenarios, "onlyImmersiveScenarios", "restoreScenarios");
+        LookImmersive(ref onlyImmersiveBuildings, "onlyImmersiveBuildings", "restoreBuildings");
+        LookImmersive(ref onlyImmersiveWeapons, "onlyImmersiveWeapons", "restoreWeapons");
+        LookImmersive(ref onlyImmersiveApparel, "onlyImmersiveApparel", "restoreApparel");
+        LookImmersive(ref onlyImmersiveQuests, "onlyImmersiveQuests", "restoreQuests");
+        LookImmersive(ref onlyImmersiveStorytellers, "onlyImmersiveStorytellers", "restoreStorytellers");
+    }
+
+    private static void LookImmersive(ref bool value, string key, string legacyKey)
+    {
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?[key] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?[legacyKey] != null;
+        Scribe_Values.Look(ref value, key, true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, legacyKey, false);
+            value = !legacyRestore;
+        }
     }
 }
 
@@ -35,8 +49,6 @@ public sealed class HHToolsMod : Mod
         : base(content)
     {
         Settings = GetSettings<HHToolsModSettings>();
-        HHToolsRestoreApplier.Initialize();
-        HHToolsRestoreApplier.Apply(Settings);
         LongEventHandler.ExecuteWhenFinished(() =>
         {
             HHToolsRestoreApplier.Initialize();
@@ -54,45 +66,57 @@ public sealed class HHToolsMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        bool factions = Settings.restoreFactions;
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive world generation");
+        Text.Font = GameFont.Small;
+        listing.Label("Enabled options keep replaced Medieval, Tribal, and Settlers content out of normal selection and generation.");
+        listing.GapLine();
+
+        bool factions = Settings.onlyImmersiveFactions;
         listing.CheckboxLabeled(
-            "Restore factions",
+            "Only immersive factions",
             ref factions,
-            "Restores the Core, Biotech, Settlers, and Medieval faction templates to faction selection and world generation. Requires a new world.");
+            "Hides the replaced Core, Biotech, Settlers, and Medieval faction templates from selection and world generation. Requires a new world.");
 
-        bool scenarios = Settings.restoreScenarios;
-        listing.CheckboxLabeled("Restore scenarios", ref scenarios, "Restores the Medieval and Settlers scenarios hidden by FIP. Restart required.");
+        bool scenarios = Settings.onlyImmersiveScenarios;
+        listing.CheckboxLabeled("Only immersive scenarios", ref scenarios, "Hides the original Medieval and Settlers scenarios, including New Kingdom. Restart required.");
 
-        bool buildings = Settings.restoreBuildings;
-        listing.CheckboxLabeled("Restore buildings", ref buildings, "Restores Medieval construction designations and categories. Restart required.");
+        listing.Gap();
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive content pools");
+        Text.Font = GameFont.Small;
+        listing.GapLine();
 
-        bool weapons = Settings.restoreWeapons;
-        listing.CheckboxLabeled("Restore weapons", ref weapons, "Restores Medieval weapons to crafting and normal generation. Restart required.");
+        bool buildings = Settings.onlyImmersiveBuildings;
+        listing.CheckboxLabeled("Only immersive buildings", ref buildings, "Hides replaced Medieval construction designations and categories. Restart required.");
 
-        bool apparel = Settings.restoreApparel;
-        listing.CheckboxLabeled("Restore apparel", ref apparel, "Restores Medieval apparel and shields to crafting and normal generation. Restart required.");
+        bool weapons = Settings.onlyImmersiveWeapons;
+        listing.CheckboxLabeled("Only immersive weapons", ref weapons, "Removes replaced Medieval weapons from crafting and normal generation. Restart required.");
 
-        bool quests = Settings.restoreQuests;
-        listing.CheckboxLabeled("Restore quests", ref quests, "Restores disabled Medieval and Settlers quests. Restart required.");
+        bool apparel = Settings.onlyImmersiveApparel;
+        listing.CheckboxLabeled("Only immersive apparel", ref apparel, "Removes replaced Medieval apparel and shields from crafting and normal generation. Restart required.");
 
-        bool storytellers = Settings.restoreStorytellers;
-        listing.CheckboxLabeled("Restore storytellers", ref storytellers, "Restores Maynard, Talon, and Diego Dire without FIP text overrides. Restart required.");
+        bool quests = Settings.onlyImmersiveQuests;
+        listing.CheckboxLabeled("Only immersive quests", ref quests, "Disables the replaced Medieval and Settlers quests. Restart required.");
 
-        if (factions != Settings.restoreFactions
-            || scenarios != Settings.restoreScenarios
-            || buildings != Settings.restoreBuildings
-            || weapons != Settings.restoreWeapons
-            || apparel != Settings.restoreApparel
-            || quests != Settings.restoreQuests
-            || storytellers != Settings.restoreStorytellers)
+        bool storytellers = Settings.onlyImmersiveStorytellers;
+        listing.CheckboxLabeled("Only immersive storytellers", ref storytellers, "Hides Maynard, Talon, and Diego Dire from storyteller selection. Restart required.");
+
+        if (factions != Settings.onlyImmersiveFactions
+            || scenarios != Settings.onlyImmersiveScenarios
+            || buildings != Settings.onlyImmersiveBuildings
+            || weapons != Settings.onlyImmersiveWeapons
+            || apparel != Settings.onlyImmersiveApparel
+            || quests != Settings.onlyImmersiveQuests
+            || storytellers != Settings.onlyImmersiveStorytellers)
         {
-            Settings.restoreFactions = factions;
-            Settings.restoreScenarios = scenarios;
-            Settings.restoreBuildings = buildings;
-            Settings.restoreWeapons = weapons;
-            Settings.restoreApparel = apparel;
-            Settings.restoreQuests = quests;
-            Settings.restoreStorytellers = storytellers;
+            Settings.onlyImmersiveFactions = factions;
+            Settings.onlyImmersiveScenarios = scenarios;
+            Settings.onlyImmersiveBuildings = buildings;
+            Settings.onlyImmersiveWeapons = weapons;
+            Settings.onlyImmersiveApparel = apparel;
+            Settings.onlyImmersiveQuests = quests;
+            Settings.onlyImmersiveStorytellers = storytellers;
             HHToolsRestoreApplier.Apply(Settings);
         }
 

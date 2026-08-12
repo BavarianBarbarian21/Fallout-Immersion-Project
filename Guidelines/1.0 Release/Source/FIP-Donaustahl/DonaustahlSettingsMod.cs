@@ -7,15 +7,29 @@ namespace FIP.Donaustahl;
 
 public sealed class DonaustahlSettings : ModSettings
 {
-    public bool restoreBackstories;
-    public bool restoreEquipmentRelics;
-    public bool restoreStorytellers;
+    public bool onlyImmersiveBackstories = true;
+    public bool onlyImmersiveEquipmentRelics = true;
+    public bool onlyImmersiveStorytellers = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreBackstories, "restoreBackstories", false);
-        Scribe_Values.Look(ref restoreEquipmentRelics, "restoreEquipmentRelics", false);
-        Scribe_Values.Look(ref restoreStorytellers, "restoreStorytellers", false);
+        LookImmersive(ref onlyImmersiveBackstories, "onlyImmersiveBackstories", "restoreBackstories");
+        LookImmersive(ref onlyImmersiveEquipmentRelics, "onlyImmersiveEquipmentRelics", "restoreEquipmentRelics");
+        LookImmersive(ref onlyImmersiveStorytellers, "onlyImmersiveStorytellers", "restoreStorytellers");
+    }
+
+    private static void LookImmersive(ref bool value, string key, string legacyKey)
+    {
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?[key] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?[legacyKey] != null;
+        Scribe_Values.Look(ref value, key, true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, legacyKey, false);
+            value = !legacyRestore;
+        }
     }
 }
 
@@ -26,9 +40,11 @@ public sealed class DonaustahlSettingsMod : Mod
     public DonaustahlSettingsMod(ModContentPack content) : base(content)
     {
         Settings = GetSettings<DonaustahlSettings>();
-        DonaustahlRestoreApplier.Initialize();
-        ApplySettings();
-        LongEventHandler.ExecuteWhenFinished(ApplySettings);
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            DonaustahlRestoreApplier.Initialize();
+            ApplySettings();
+        });
     }
 
     public override string SettingsCategory() => "FIP - Donaustahl";
@@ -38,23 +54,29 @@ public sealed class DonaustahlSettingsMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        bool backstories = Settings.restoreBackstories;
-        listing.CheckboxLabeled("Restore removed backstories", ref backstories,
-            "Restores all Vanilla and Vanilla Expanded backstories suppressed by Donaustahl. Restart required.");
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive core content");
+        Text.Font = GameFont.Small;
+        listing.Label("Enabled options suppress replaced vanilla content while keeping its Defs available for compatibility.");
+        listing.GapLine();
 
-        bool relics = Settings.restoreEquipmentRelics;
-        listing.CheckboxLabeled("Restore equipment relics", ref relics,
-            "Restores original relic eligibility for apparel, armour, weapons, and artifacts. Restart required.");
+        bool backstories = Settings.onlyImmersiveBackstories;
+        listing.CheckboxLabeled("Only immersive backstories", ref backstories,
+            "Hides the Vanilla and Vanilla Expanded backstories replaced by Donaustahl. Restart required.");
 
-        bool storytellers = Settings.restoreStorytellers;
-        listing.CheckboxLabeled("Restore storytellers", ref storytellers,
-            "Restores Cassandra, Phoebe, and Randy without FIP text changes. Restart required.");
+        bool relics = Settings.onlyImmersiveEquipmentRelics;
+        listing.CheckboxLabeled("Only immersive equipment relics", ref relics,
+            "Removes original relic eligibility from apparel, armour, weapons, and artifacts covered by FIP. Restart required.");
 
-        if (backstories != Settings.restoreBackstories || relics != Settings.restoreEquipmentRelics || storytellers != Settings.restoreStorytellers)
+        bool storytellers = Settings.onlyImmersiveStorytellers;
+        listing.CheckboxLabeled("Only immersive storytellers", ref storytellers,
+            "Hides Cassandra, Phoebe, and Randy from storyteller selection. Restart required.");
+
+        if (backstories != Settings.onlyImmersiveBackstories || relics != Settings.onlyImmersiveEquipmentRelics || storytellers != Settings.onlyImmersiveStorytellers)
         {
-            Settings.restoreBackstories = backstories;
-            Settings.restoreEquipmentRelics = relics;
-            Settings.restoreStorytellers = storytellers;
+            Settings.onlyImmersiveBackstories = backstories;
+            Settings.onlyImmersiveEquipmentRelics = relics;
+            Settings.onlyImmersiveStorytellers = storytellers;
             ApplySettings();
         }
 
@@ -82,6 +104,11 @@ internal static class DonaustahlRestoreApplier
     public static void Initialize()
     {
         if (initialized)
+        {
+            return;
+        }
+
+        if (DefDatabase<StorytellerDef>.GetNamedSilentFail("Cassandra") == null)
         {
             return;
         }
@@ -124,7 +151,7 @@ internal static class DonaustahlRestoreApplier
             BackstoryDef def = DefDatabase<BackstoryDef>.GetNamedSilentFail(defName);
             if (def != null)
             {
-                def.shuffleable = settings.restoreBackstories ? shuffleable : false;
+                def.shuffleable = settings.onlyImmersiveBackstories ? false : shuffleable;
             }
         }
 
@@ -133,7 +160,7 @@ internal static class DonaustahlRestoreApplier
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
             if (def != null)
             {
-                def.relicChance = settings.restoreEquipmentRelics ? relicChance : 0f;
+                def.relicChance = settings.onlyImmersiveEquipmentRelics ? 0f : relicChance;
             }
         }
 
@@ -142,7 +169,7 @@ internal static class DonaustahlRestoreApplier
             StorytellerDef def = DefDatabase<StorytellerDef>.GetNamedSilentFail(defName);
             if (def != null)
             {
-                def.listVisible = settings.restoreStorytellers ? listVisible : false;
+                def.listVisible = settings.onlyImmersiveStorytellers ? false : listVisible;
             }
         }
     }

@@ -10,19 +10,33 @@ namespace FIP.Arktos;
 
 public sealed class ArktosSettings : ModSettings
 {
-    public bool restoreNativeWildlife;
-    public bool restoreBiotechWildlife;
-    public bool restoreVanillaAnimalsExpandedWildlife;
-    public bool restoreRoyalAnimalsWildlife;
-    public bool restoreOdysseyWildlife;
+    public bool onlyImmersiveNativeWildlife = true;
+    public bool onlyImmersiveBiotechWildlife = true;
+    public bool onlyImmersiveVanillaAnimalsExpandedWildlife = true;
+    public bool onlyImmersiveRoyalAnimalsWildlife = true;
+    public bool onlyImmersiveOdysseyWildlife = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreNativeWildlife, "restoreNativeWildlife", false);
-        Scribe_Values.Look(ref restoreBiotechWildlife, "restoreBiotechWildlife", false);
-        Scribe_Values.Look(ref restoreVanillaAnimalsExpandedWildlife, "restoreVanillaAnimalsExpandedWildlife", false);
-        Scribe_Values.Look(ref restoreRoyalAnimalsWildlife, "restoreRoyalAnimalsWildlife", false);
-        Scribe_Values.Look(ref restoreOdysseyWildlife, "restoreOdysseyWildlife", false);
+        LookImmersive(ref onlyImmersiveNativeWildlife, "onlyImmersiveNativeWildlife", "restoreNativeWildlife");
+        LookImmersive(ref onlyImmersiveBiotechWildlife, "onlyImmersiveBiotechWildlife", "restoreBiotechWildlife");
+        LookImmersive(ref onlyImmersiveVanillaAnimalsExpandedWildlife, "onlyImmersiveVanillaAnimalsExpandedWildlife", "restoreVanillaAnimalsExpandedWildlife");
+        LookImmersive(ref onlyImmersiveRoyalAnimalsWildlife, "onlyImmersiveRoyalAnimalsWildlife", "restoreRoyalAnimalsWildlife");
+        LookImmersive(ref onlyImmersiveOdysseyWildlife, "onlyImmersiveOdysseyWildlife", "restoreOdysseyWildlife");
+    }
+
+    private static void LookImmersive(ref bool value, string key, string legacyKey)
+    {
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?[key] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?[legacyKey] != null;
+        Scribe_Values.Look(ref value, key, true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, legacyKey, false);
+            value = !legacyRestore;
+        }
     }
 }
 
@@ -33,9 +47,11 @@ public sealed class ArktosSettingsMod : Mod
     public ArktosSettingsMod(ModContentPack content) : base(content)
     {
         Settings = GetSettings<ArktosSettings>();
-        ArktosWildlifeApplier.Initialize();
-        ApplySettings();
-        LongEventHandler.ExecuteWhenFinished(ApplySettings);
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            ArktosWildlifeApplier.Initialize();
+            ApplySettings();
+        });
     }
 
     public override string SettingsCategory() => "FIP - Arktos";
@@ -45,31 +61,37 @@ public sealed class ArktosSettingsMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        bool native = Settings.restoreNativeWildlife;
-        listing.CheckboxLabeled("Restore native wildlife", ref native,
-            "Restores native wildlife outside Arktos biomes. Trader and caravan sources are never changed. Requires a new world.");
-        bool biotech = Settings.restoreBiotechWildlife;
-        listing.CheckboxLabeled("Restore Biotech wildlife", ref biotech,
-            "Restores Toxalope and Waste Rat outside Arktos biomes. Requires a new world.");
-        bool vae = Settings.restoreVanillaAnimalsExpandedWildlife;
-        listing.CheckboxLabeled("Restore Vanilla Animals Expanded wildlife", ref vae,
-            "Restores suppressed VAE wildlife outside Arktos biomes. Requires a new world.");
-        bool royal = Settings.restoreRoyalAnimalsWildlife;
-        listing.CheckboxLabeled("Restore Royal Animals wildlife", ref royal,
-            "Restores suppressed Royal Animals wildlife outside Arktos biomes. Requires a new world.");
-        bool odyssey = Settings.restoreOdysseyWildlife;
-        listing.CheckboxLabeled("Restore Odyssey wildlife", ref odyssey,
-            "Restores suppressed Odyssey wildlife outside Arktos biomes. Requires a new world.");
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive wildlife");
+        Text.Font = GameFont.Small;
+        listing.Label("Enabled options keep the curated Arktos ecosystem and suppress the corresponding original wildlife outside Arktos biomes.");
+        listing.GapLine();
 
-        if (native != Settings.restoreNativeWildlife || biotech != Settings.restoreBiotechWildlife
-            || vae != Settings.restoreVanillaAnimalsExpandedWildlife || royal != Settings.restoreRoyalAnimalsWildlife
-            || odyssey != Settings.restoreOdysseyWildlife)
+        bool native = Settings.onlyImmersiveNativeWildlife;
+        listing.CheckboxLabeled("Only immersive native wildlife", ref native,
+            "Hides the selected native wildlife outside Arktos biomes. Trader and caravan sources are never changed. Requires a new world.");
+        bool biotech = Settings.onlyImmersiveBiotechWildlife;
+        listing.CheckboxLabeled("Only immersive Biotech wildlife", ref biotech,
+            "Hides Toxalope and Waste Rat outside Arktos biomes. Requires a new world.");
+        bool vae = Settings.onlyImmersiveVanillaAnimalsExpandedWildlife;
+        listing.CheckboxLabeled("Only immersive Vanilla Animals Expanded wildlife", ref vae,
+            "Hides the replaced Vanilla Animals Expanded wildlife outside Arktos biomes. Requires a new world.");
+        bool royal = Settings.onlyImmersiveRoyalAnimalsWildlife;
+        listing.CheckboxLabeled("Only immersive Royal Animals wildlife", ref royal,
+            "Hides the replaced Royal Animals wildlife outside Arktos biomes. Requires a new world.");
+        bool odyssey = Settings.onlyImmersiveOdysseyWildlife;
+        listing.CheckboxLabeled("Only immersive Odyssey wildlife", ref odyssey,
+            "Hides the replaced Odyssey wildlife outside Arktos biomes. Requires a new world.");
+
+        if (native != Settings.onlyImmersiveNativeWildlife || biotech != Settings.onlyImmersiveBiotechWildlife
+            || vae != Settings.onlyImmersiveVanillaAnimalsExpandedWildlife || royal != Settings.onlyImmersiveRoyalAnimalsWildlife
+            || odyssey != Settings.onlyImmersiveOdysseyWildlife)
         {
-            Settings.restoreNativeWildlife = native;
-            Settings.restoreBiotechWildlife = biotech;
-            Settings.restoreVanillaAnimalsExpandedWildlife = vae;
-            Settings.restoreRoyalAnimalsWildlife = royal;
-            Settings.restoreOdysseyWildlife = odyssey;
+            Settings.onlyImmersiveNativeWildlife = native;
+            Settings.onlyImmersiveBiotechWildlife = biotech;
+            Settings.onlyImmersiveVanillaAnimalsExpandedWildlife = vae;
+            Settings.onlyImmersiveRoyalAnimalsWildlife = royal;
+            Settings.onlyImmersiveOdysseyWildlife = odyssey;
             ApplySettings();
         }
 
@@ -134,6 +156,11 @@ internal static class ArktosWildlifeApplier
             return;
         }
 
+        if (DefDatabase<BiomeDef>.AllDefsListForReading.Count == 0)
+        {
+            return;
+        }
+
         foreach (BiomeDef biomeDef in DefDatabase<BiomeDef>.AllDefsListForReading)
         {
             if (biomeDef == null || biomeDef.defName == null)
@@ -166,11 +193,11 @@ internal static class ArktosWildlifeApplier
     {
         Initialize();
         HashSet<string> suppressed = new(StringComparer.OrdinalIgnoreCase);
-        AddUnlessRestored(suppressed, NativeAnimalDefNames, settings.restoreNativeWildlife);
-        AddUnlessRestored(suppressed, BiotechAnimalDefNames, settings.restoreBiotechWildlife);
-        AddUnlessRestored(suppressed, VanillaAnimalsExpandedDefNames, settings.restoreVanillaAnimalsExpandedWildlife);
-        AddUnlessRestored(suppressed, RoyalAnimalsDefNames, settings.restoreRoyalAnimalsWildlife);
-        AddUnlessRestored(suppressed, OdysseyAnimalDefNames, settings.restoreOdysseyWildlife);
+        AddIfImmersive(suppressed, NativeAnimalDefNames, settings.onlyImmersiveNativeWildlife);
+        AddIfImmersive(suppressed, BiotechAnimalDefNames, settings.onlyImmersiveBiotechWildlife);
+        AddIfImmersive(suppressed, VanillaAnimalsExpandedDefNames, settings.onlyImmersiveVanillaAnimalsExpandedWildlife);
+        AddIfImmersive(suppressed, RoyalAnimalsDefNames, settings.onlyImmersiveRoyalAnimalsWildlife);
+        AddIfImmersive(suppressed, OdysseyAnimalDefNames, settings.onlyImmersiveOdysseyWildlife);
 
         foreach ((string biomeDefName, BiomeState state) in OriginalStatesByBiomeDefName)
         {
@@ -210,9 +237,9 @@ internal static class ArktosWildlifeApplier
         }
     }
 
-    private static void AddUnlessRestored(HashSet<string> destination, IEnumerable<string> animalDefNames, bool restored)
+    private static void AddIfImmersive(HashSet<string> destination, IEnumerable<string> animalDefNames, bool onlyImmersive)
     {
-        if (!restored)
+        if (onlyImmersive)
         {
             destination.UnionWith(animalDefNames);
         }

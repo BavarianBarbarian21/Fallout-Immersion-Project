@@ -10,11 +10,20 @@ namespace FIP.Lucky38;
 
 public sealed class Lucky38Settings : ModSettings
 {
-    public bool restoreResearchTree;
+    public bool onlyImmersiveResearchTree = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreResearchTree, "restoreResearchTree", false);
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?["onlyImmersiveResearchTree"] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?["restoreResearchTree"] != null;
+        Scribe_Values.Look(ref onlyImmersiveResearchTree, "onlyImmersiveResearchTree", true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, "restoreResearchTree", false);
+            onlyImmersiveResearchTree = !legacyRestore;
+        }
     }
 }
 
@@ -25,9 +34,11 @@ public sealed class Lucky38SettingsMod : Mod
     public Lucky38SettingsMod(ModContentPack content) : base(content)
     {
         settings = GetSettings<Lucky38Settings>();
-        Lucky38ResearchTreeApplier.Initialize();
-        ApplySettings();
-        LongEventHandler.ExecuteWhenFinished(ApplySettings);
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            Lucky38ResearchTreeApplier.Initialize();
+            ApplySettings();
+        });
     }
 
     public override string SettingsCategory() => "FIP - Lucky 38";
@@ -36,12 +47,17 @@ public sealed class Lucky38SettingsMod : Mod
     {
         Listing_Standard listing = new();
         listing.Begin(inRect);
-        bool value = settings.restoreResearchTree;
-        listing.CheckboxLabeled("Restore research tree", ref value,
-            "Restores the separate Brewing research tab, project positions, and schematic research-book tabs. Restart required.");
-        if (value != settings.restoreResearchTree)
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive research");
+        Text.Font = GameFont.Small;
+        listing.Label("Keep overlapping research integrated into the curated FIP technology tree.");
+        listing.GapLine();
+        bool value = settings.onlyImmersiveResearchTree;
+        listing.CheckboxLabeled("Only immersive research tree", ref value,
+            "Integrates Brewing projects into Cooking and hides the separate Brewing and schematic tabs. Restart required.");
+        if (value != settings.onlyImmersiveResearchTree)
         {
-            settings.restoreResearchTree = value;
+            settings.onlyImmersiveResearchTree = value;
             ApplySettings();
         }
         listing.End();
@@ -53,7 +69,7 @@ public sealed class Lucky38SettingsMod : Mod
         ApplySettings();
     }
 
-    private static void ApplySettings() => Lucky38ResearchTreeApplier.Apply(settings.restoreResearchTree);
+    private static void ApplySettings() => Lucky38ResearchTreeApplier.Apply(settings.onlyImmersiveResearchTree);
 }
 
 internal static class Lucky38ResearchTreeApplier
@@ -85,6 +101,11 @@ internal static class Lucky38ResearchTreeApplier
             return;
         }
 
+        if (DefDatabase<ResearchTabDef>.AllDefsListForReading.Count == 0)
+        {
+            return;
+        }
+
         brewingTab = DefDatabase<ResearchTabDef>.GetNamedSilentFail("VCE_Brewing");
         cookingTab = DefDatabase<ResearchTabDef>.GetNamedSilentFail("VCE_Cooking");
         foreach (string defName in new[] { "VBE_LiquorBrewing", "VBE_MixologyResearch", "VBE_EspressoMachine" })
@@ -108,14 +129,14 @@ internal static class Lucky38ResearchTreeApplier
         initialized = true;
     }
 
-    public static void Apply(bool restore)
+    public static void Apply(bool onlyImmersive)
     {
         Initialize();
         RestoreResearchTabsToSource();
         RestoreProjectStates();
         RestoreSchematicTabs();
 
-        if (restore)
+        if (!onlyImmersive)
         {
             return;
         }

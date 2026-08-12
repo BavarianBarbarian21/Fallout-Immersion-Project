@@ -246,62 +246,80 @@ foreach ($contract in $storytellerFolderContracts) {
 Add-Check 'Storytellers' 'Visibility-patch folders have exact provider conditions' ($storytellerFolderErrors.Count -eq 0) $(if ($storytellerFolderErrors.Count) { $storytellerFolderErrors -join '; ' } else { 'Donaustahl base plus six provider-specific optional folders' })
 
 $storytellerVisibilityContracts = @(
-    [pscustomobject]@{ DefName = 'Cassandra';                 Module = 'FIP-Donaustahl';  RelativePath = 'LoadFolders\Donaustahl\Patches\FIP-Donaustahl\Storytellers\Donaustahl_RemoveVanillaStorytellers.xml' },
-    [pscustomobject]@{ DefName = 'Phoebe';                   Module = 'FIP-Donaustahl';  RelativePath = 'LoadFolders\Donaustahl\Patches\FIP-Donaustahl\Storytellers\Donaustahl_RemoveVanillaStorytellers.xml' },
-    [pscustomobject]@{ DefName = 'Randy';                    Module = 'FIP-Donaustahl';  RelativePath = 'LoadFolders\Donaustahl\Patches\FIP-Donaustahl\Storytellers\Donaustahl_RemoveVanillaStorytellers.xml' },
-    [pscustomobject]@{ DefName = 'VFEM_MaynardMedieval';     Module = 'FIP-H&HTools';    RelativePath = 'LoadFolders\Medieval2\Patches\FIP-H&HTools\Storytellers\HHTools_RemoveMaynardMedieval.xml' },
-    [pscustomobject]@{ DefName = 'VFET_TalonTribal';         Module = 'FIP-H&HTools';    RelativePath = 'LoadFolders\Tribals\Patches\FIP-H&HTools\Storytellers\HHTools_RemoveTalonTribal.xml' },
-    [pscustomobject]@{ DefName = 'VFES_DD';                  Module = 'FIP-H&HTools';    RelativePath = 'LoadFolders\Settlers\Patches\FIP-H&HTools\Storytellers\HHTools_RemoveDiegoDire.xml' },
-    [pscustomobject]@{ DefName = 'VPE_Basilicus';            Module = 'FIP-Hubris';      RelativePath = 'LoadFolders\Psycasts\Patches\FIP-Hubris\Storytellers\Hubris_RemoveBasilicus.xml' },
-    [pscustomobject]@{ DefName = 'VFEE_AriadneArchduchess';  Module = 'FIP-Whitespring'; RelativePath = 'LoadFolders\Empire\Patches\FIP-Whitespring\Storytellers\Whitespring_RemoveAriadneArchduchess.xml' },
-    [pscustomobject]@{ DefName = 'VFED_Damocles';            Module = 'FIP-Whitespring'; RelativePath = 'LoadFolders\Deserters\Patches\FIP-Whitespring\Storytellers\Whitespring_RemoveDamocles.xml' }
+    [pscustomobject]@{ DefName = 'Cassandra';                 Source = 'FIP-Donaustahl\DonaustahlSettingsMod.cs' },
+    [pscustomobject]@{ DefName = 'Phoebe';                   Source = 'FIP-Donaustahl\DonaustahlSettingsMod.cs' },
+    [pscustomobject]@{ DefName = 'Randy';                    Source = 'FIP-Donaustahl\DonaustahlSettingsMod.cs' },
+    [pscustomobject]@{ DefName = 'VFEM_MaynardMedieval';     Source = 'FIP-H&HTools\HHToolsRestoreApplier.cs' },
+    [pscustomobject]@{ DefName = 'VFET_TalonTribal';         Source = 'FIP-H&HTools\HHToolsRestoreApplier.cs' },
+    [pscustomobject]@{ DefName = 'VFES_DD';                  Source = 'FIP-H&HTools\HHToolsRestoreApplier.cs' },
+    [pscustomobject]@{ DefName = 'VPE_Basilicus';            Source = 'FIP-Hubris\HubrisSettingsMod.cs' },
+    [pscustomobject]@{ DefName = 'VFEE_AriadneArchduchess';  Source = 'FIP-Whitespring\WhitespringSettingsMod.cs' },
+    [pscustomobject]@{ DefName = 'VFED_Damocles';            Source = 'FIP-Whitespring\WhitespringSettingsMod.cs' }
+)
+$storytellerSettingsSources = @(
+    'FIP-Donaustahl\DonaustahlSettingsMod.cs',
+    'FIP-H&HTools\HHToolsMod.cs',
+    'FIP-Hubris\HubrisSettingsMod.cs',
+    'FIP-Whitespring\WhitespringSettingsMod.cs'
 )
 $storytellerVisibilityErrors = [Collections.Generic.List[string]]::new()
-$allStorytellerVisibilityTargets = [Collections.Generic.List[object]]::new()
 $storytellerDefDeletions = [Collections.Generic.List[object]]::new()
 foreach ($mod in $gameplay) {
     foreach ($file in Get-ChildItem -LiteralPath $mod.FullName -File -Recurse -Filter *.xml) {
         [xml]$xml = [IO.File]::ReadAllText($file.FullName)
-        foreach ($operation in $xml.SelectNodes('/Patch/Operation[@Class="PatchOperationConditional"][xpath[contains(., "StorytellerDef") and contains(., "/listVisible")]]')) {
-            $allStorytellerVisibilityTargets.Add([pscustomobject]@{
-                Module = $mod.Name
-                File = $file.FullName
-                XPath = $operation.SelectSingleNode('xpath').InnerText.Trim()
-                MatchClass = $operation.SelectSingleNode('match').GetAttribute('Class')
-                MatchXPath = $operation.SelectSingleNode('match/xpath').InnerText.Trim()
-                MatchValue = $operation.SelectSingleNode('match/value/listVisible').InnerText.Trim()
-                NoMatchClass = $operation.SelectSingleNode('nomatch').GetAttribute('Class')
-                NoMatchXPath = $operation.SelectSingleNode('nomatch/xpath').InnerText.Trim()
-                NoMatchValue = $operation.SelectSingleNode('nomatch/value/listVisible').InnerText.Trim()
-            })
-        }
         foreach ($xpath in $xml.SelectNodes('//Operation[@Class="PatchOperationRemove"]/xpath[contains(., "StorytellerDef")]')) {
             $storytellerDefDeletions.Add([pscustomobject]@{ Module = $mod.Name; File = $file.FullName; XPath = $xpath.InnerText.Trim() })
         }
     }
 }
 foreach ($contract in $storytellerVisibilityContracts) {
-    $path = Join-Path (Join-Path $ReleaseRoot $contract.Module) $contract.RelativePath
+    $path = Join-Path $SourceRoot $contract.Source
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
         $storytellerVisibilityErrors.Add("$($contract.DefName): missing $path")
         continue
     }
-    $defXPath = "/Defs/StorytellerDef[defName=`"$($contract.DefName)`"]"
-    $visibleXPath = "$defXPath/listVisible"
-    $matches = @($allStorytellerVisibilityTargets | Where-Object {
-        $_.Module -ceq $contract.Module -and $_.File -ceq $path -and
-        $_.XPath -ceq $visibleXPath -and $_.MatchClass -ceq 'PatchOperationReplace' -and
-        $_.MatchXPath -ceq $visibleXPath -and $_.MatchValue -ceq 'false' -and
-        $_.NoMatchClass -ceq 'PatchOperationAdd' -and $_.NoMatchXPath -ceq $defXPath -and
-        $_.NoMatchValue -ceq 'false'
-    })
-    if ($matches.Count -ne 1) { $storytellerVisibilityErrors.Add("$($contract.DefName): expected one exact false visibility contract in $($contract.Module), found $($matches.Count)") }
+    $text = [IO.File]::ReadAllText($path)
+    if (-not $text.Contains("`"$($contract.DefName)`"")) {
+        $storytellerVisibilityErrors.Add("$($contract.DefName): absent from $($contract.Source)")
+    }
 }
-$expectedStorytellerXPaths = @($storytellerVisibilityContracts | ForEach-Object { "/Defs/StorytellerDef[defName=`"$($_.DefName)`"]/listVisible" })
-$actualStorytellerXPaths = @($allStorytellerVisibilityTargets | ForEach-Object XPath)
-$storytellerVisibilitySetExact = $allStorytellerVisibilityTargets.Count -eq 9 -and (Same-Set $actualStorytellerXPaths $expectedStorytellerXPaths)
-Add-Check 'Storytellers' 'Nine non-FCP storytellers are hidden exactly once by their owners' ($storytellerVisibilityErrors.Count -eq 0 -and $storytellerVisibilitySetExact) $(if ($storytellerVisibilityErrors.Count) { $storytellerVisibilityErrors -join '; ' } else { 'Cassandra, Phoebe, Randy, Maynard, Talon, Diego, Basilicus, Ariadne and Damocles' })
+foreach ($relativePath in $storytellerSettingsSources) {
+    $path = Join-Path $SourceRoot $relativePath
+    $text = [IO.File]::ReadAllText($path)
+    if ($text -notmatch 'onlyImmersiveStorytellers\s*=\s*true') { $storytellerVisibilityErrors.Add("${relativePath}: immersive-only default missing") }
+    if (-not $text.Contains('LongEventHandler.ExecuteWhenFinished')) { $storytellerVisibilityErrors.Add("${relativePath}: deferred Def application missing") }
+}
+$hhtoolsStorytellerApplierText = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-H&HTools\HHToolsRestoreApplier.cs'))
+if ($hhtoolsStorytellerApplierText -notmatch 'listVisible\s*=\s*hide\s*\?\s*false\s*:\s*visible') { $storytellerVisibilityErrors.Add('FIP-H&HTools: reversible storyteller visibility application missing') }
+Add-Check 'Storytellers' 'Nine non-FCP storytellers are settings-controlled and immersive-only by default' ($storytellerVisibilityErrors.Count -eq 0) $(if ($storytellerVisibilityErrors.Count) { $storytellerVisibilityErrors -join '; ' } else { 'Cassandra, Phoebe, Randy, Maynard, Talon, Diego, Basilicus, Ariadne and Damocles; deferred until Def loading completes' })
 Add-Check 'Storytellers' 'Storyteller defs remain valid for DefOf and code references' ($storytellerDefDeletions.Count -eq 0) "$($storytellerDefDeletions.Count) StorytellerDef deletion operations"
+
+$settingsSourcePaths = @(
+    'FIP-Arktos\FIP.Arktos.Settings\ArktosSettingsMod.cs',
+    'FIP-Donaustahl\DonaustahlSettingsMod.cs',
+    'FIP-Greenway\GreenwayMod.cs',
+    'FIP-H&HTools\HHToolsMod.cs',
+    'FIP-Hubris\HubrisSettingsMod.cs',
+    'FIP-Lucky38\Settings\Lucky38SettingsMod.cs',
+    'FIP-RobCo\RobCoMod.cs',
+    'FIP-WestTek\WestTekSettingsMod.cs',
+    'FIP-Whitespring\WhitespringSettingsMod.cs'
+)
+$settingsSourceText = @($settingsSourcePaths | ForEach-Object { [IO.File]::ReadAllText((Join-Path $SourceRoot $_)) }) -join "`n"
+$immersiveFieldCount = [regex]::Matches($settingsSourceText, 'public bool onlyImmersive\w+\s*=\s*true;').Count
+$immersiveLabelCount = [regex]::Matches($settingsSourceText, '"Only immersive [^"]+"').Count
+$restoreLabelCount = [regex]::Matches($settingsSourceText, '"Restore [^"]+"').Count
+$deferredSettingsCount = [regex]::Matches($settingsSourceText, 'LongEventHandler\.ExecuteWhenFinished').Count
+Add-Check 'Mod options' 'All content filters use positive immersive-only defaults and labels' ($immersiveFieldCount -eq 23 -and $immersiveLabelCount -eq 23 -and $restoreLabelCount -eq 0) "immersive-only defaults: $immersiveFieldCount; labels: $immersiveLabelCount; Restore labels: $restoreLabelCount"
+Add-Check 'Mod options' 'All nine settings modules defer Def-dependent startup work' ($deferredSettingsCount -eq 9) "$deferredSettingsCount deferred settings initializers"
+$settingsPatchOperationText = @(
+    [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-RobCo\PatchOperationUnlessRestoreMechanoids.cs')),
+    [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-WestTek\PatchOperationUnlessRestoreXenotypes.cs'))
+) -join "`n"
+$directSettingsPatchContract = $settingsPatchOperationText.Contains('RobCoMod.Settings?.onlyImmersiveMechanoids ?? true') -and
+    $settingsPatchOperationText.Contains('WestTekMod.Settings?.onlyImmersiveXenotypes ?? true') -and
+    -not $settingsPatchOperationText.Contains('GenFilePaths.ConfigFolderPath')
+Add-Check 'Mod options' 'XML patch operations read the already-created settings instances' $directSettingsPatchContract "direct settings lookup without guessed config filenames: $directSettingsPatchContract"
 
 $directFipStorytellers = [Collections.Generic.List[string]]::new()
 $storytellerLanguageEntries = [Collections.Generic.List[object]]::new()
@@ -493,16 +511,21 @@ Add-Check 'Naming' "S'Lanter-family display spelling is canonical" ($slanterSpel
 # High-risk gameplay regressions reported during the 1.0 smoke test.
 $greenwayMemesPath = Join-Path $ReleaseRoot 'FIP-Greenway\LoadFolders\Memes\Patches\FIP-Greenway\Greenway_VMemesEPatch.xml'
 [xml]$greenwayMemesXml = [IO.File]::ReadAllText($greenwayMemesPath)
-$originHideOperation = $greenwayMemesXml.SelectSingleNode('/Patch/Operation[@Class="PatchOperationAdd" and xpath[contains(.,''starts-with(defName,"VME_Structure_")'')]]')
-$originFactionWeightRemoval = $greenwayMemesXml.SelectSingleNode('/Patch/Operation[@Class="PatchOperationRemove"]/xpath[text()=''/Defs/FactionDef/structureMemeWeights/*[starts-with(name(),"VME_Structure_")]'']')
 $originDefRemoval = $greenwayMemesXml.SelectSingleNode('/Patch/Operation[@Class="PatchOperationRemove"]/xpath[contains(.,''/Defs/MemeDef[starts-with(defName,"VME_Structure_")]'')]')
 $originDependencyRemoval = $greenwayMemesXml.SelectSingleNode('/Patch/Operation[@Class="PatchOperationRemove"]/xpath[contains(.,''requiredMemes'') or contains(.,''associatedMeme'')]')
 $originPresetReferences = @($greenwayMemesXml.SelectNodes('/Patch/Operation/value//*[not(*)]') | Where-Object { $_.InnerText.Trim().StartsWith('VME_Structure_', [StringComparison]::Ordinal) })
 $greenwayMemesLanguagePath = Join-Path $ReleaseRoot 'FIP-Greenway\LoadFolders\Memes\Languages\English\DefInjected\MemeDef\Greenway_Memes.xml'
 [xml]$greenwayMemesLanguageXml = [IO.File]::ReadAllText($greenwayMemesLanguagePath)
 $originLanguageKeys = @($greenwayMemesLanguageXml.SelectNodes('/LanguageData/*[starts-with(name(),"VME_Structure_")]'))
-$originVisibilityContract = $originHideOperation -and $originHideOperation.SelectSingleNode('value/hiddenInChooseMemes').InnerText -ceq 'true' -and $originHideOperation.SelectSingleNode('value/randomizationSelectionWeightFactor').InnerText -ceq '0' -and $originFactionWeightRemoval -and -not $originDefRemoval -and -not $originDependencyRemoval -and $originPresetReferences.Count -eq 6 -and $originLanguageKeys.Count -eq 18
-Add-Check 'Ideology' 'All Vanilla Memes Expanded origins stay internal but are hidden and excluded from random ideologies' ([bool]$originVisibilityContract) "family hide and zero-weight operation, faction random weights removed, Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
+$greenwaySettingsText = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-Greenway\GreenwayMod.cs'))
+$originRuntimeContract = $greenwaySettingsText -match 'onlyImmersiveIdeologyOrigins\s*=\s*true' -and
+    $greenwaySettingsText.Contains('LongEventHandler.ExecuteWhenFinished') -and
+    $greenwaySettingsText.Contains('StartsWith("VME_Structure_"') -and
+    $greenwaySettingsText.Contains('hiddenInChooseMemes = hideVanillaIdeologyOrigins || originalState.Hidden') -and
+    $greenwaySettingsText.Contains('randomizationSelectionWeightFactor = hideVanillaIdeologyOrigins ? 0f : originalState.RandomizationWeight') -and
+    $greenwaySettingsText.Contains('structureMemeWeights?.RemoveAll')
+$originVisibilityContract = $originRuntimeContract -and -not $originDefRemoval -and -not $originDependencyRemoval -and $originPresetReferences.Count -eq 6 -and $originLanguageKeys.Count -eq 18
+Add-Check 'Ideology' 'Vanilla Memes Expanded origins stay internal and are settings-controlled' ([bool]$originVisibilityContract) "immersive-only default with deferred reversible hide/zero-weight application: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
 
 $tribalsFenceNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals'
 $tribalsArchitectNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals_Architect'

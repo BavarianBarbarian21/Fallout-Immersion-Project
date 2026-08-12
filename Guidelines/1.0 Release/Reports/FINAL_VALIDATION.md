@@ -1,8 +1,8 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 18:36:31 +02:00
+Generated: 2026-08-12 19:18:59 +02:00
 
-Overall result: **FAIL** - 84/86 checks passed.
+Overall result: **PASS** - 89/89 checks passed.
 
 This is a static release audit plus a full managed-code build. LoadFolder combinations are simulated from their declared conditions; an actual RimWorld GUI launch is not performed by this script.
 
@@ -83,11 +83,19 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | Status | Check | Details |
 |---|---|---|
 | PASS | Visibility-patch folders have exact provider conditions | Donaustahl base plus six provider-specific optional folders |
-| FAIL | Nine non-FCP storytellers are hidden exactly once by their owners | Cassandra: expected one exact false visibility contract in FIP-Donaustahl, found 0; Phoebe: expected one exact false visibility contract in FIP-Donaustahl, found 0; Randy: expected one exact false visibility contract in FIP-Donaustahl, found 0; VFEM_MaynardMedieval: expected one exact false visibility contract in FIP-H&HTools, found 0; VFET_TalonTribal: expected one exact false visibility contract in FIP-H&HTools, found 0; VFES_DD: expected one exact false visibility contract in FIP-H&HTools, found 0; VPE_Basilicus: expected one exact false visibility contract in FIP-Hubris, found 0; VFEE_AriadneArchduchess: expected one exact false visibility contract in FIP-Whitespring, found 0; VFED_Damocles: expected one exact false visibility contract in FIP-Whitespring, found 0 |
+| PASS | Nine non-FCP storytellers are settings-controlled and immersive-only by default | Cassandra, Phoebe, Randy, Maynard, Talon, Diego, Basilicus, Ariadne and Damocles; deferred until Def loading completes |
 | PASS | Storyteller defs remain valid for DefOf and code references | 0 StorytellerDef deletion operations |
 | PASS | FIP defines no replacement storytellers | FCP remains the sole content owner |
 | PASS | FIP does not rename or redescribe hidden storytellers | 0 non-FCP StorytellerDef translation keys |
 | PASS | All six FCP storytellers retain every shipped translation | 60 entries: 6 storytellers x label/description x 5 languages |
+
+## Mod options
+
+| Status | Check | Details |
+|---|---|---|
+| PASS | All content filters use positive immersive-only defaults and labels | immersive-only defaults: 23; labels: 23; Restore labels: 0 |
+| PASS | All nine settings modules defer Def-dependent startup work | 9 deferred settings initializers |
+| PASS | XML patch operations read the already-created settings instances | direct settings lookup without guessed config filenames: True |
 
 ## Runtime schema
 
@@ -119,7 +127,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| FAIL | All Vanilla Memes Expanded origins stay internal but are hidden and excluded from random ideologies | family hide and zero-weight operation, faction random weights removed, Def deletion absent, retained preset references: 6; retained language keys: 18 |
+| PASS | Vanilla Memes Expanded origins stay internal and are settings-controlled | immersive-only default with deferred reversible hide/zero-weight application: True; Def deletion absent, retained preset references: 6; retained language keys: 18 |
 
 ## Research
 
@@ -170,7 +178,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | Skipped by caller; no build result recorded in this run |
+| PASS | Managed solution builds | exit 0;   FIP.Arktos.Aqueduct -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-Arktos\LoadFolders\Arktos\Assemblies\FIP.Arktos.Aqueduct.dll   FIP.Lucky38 -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-Lucky 38\LoadFolders\Harmony\Assemblies\FIP_Lucky38_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:01.90 |
 
 ## Documented non-colliding overlaps
 

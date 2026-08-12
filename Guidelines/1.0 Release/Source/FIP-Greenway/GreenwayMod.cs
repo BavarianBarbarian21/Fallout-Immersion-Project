@@ -8,15 +8,29 @@ namespace FIP.Greenway;
 
 public sealed class GreenwayModSettings : ModSettings
 {
-    public bool restoreIdeologyOrigins;
-    public bool restoreMemes;
-    public bool restoreFactions;
+    public bool onlyImmersiveIdeologyOrigins = true;
+    public bool onlyImmersiveMemes = true;
+    public bool onlyImmersiveFactions = true;
 
     public override void ExposeData()
     {
-        Scribe_Values.Look(ref restoreIdeologyOrigins, "restoreIdeologyOrigins", false);
-        Scribe_Values.Look(ref restoreMemes, "restoreMemes", false);
-        Scribe_Values.Look(ref restoreFactions, "restoreFactions", false);
+        LookImmersive(ref onlyImmersiveIdeologyOrigins, "onlyImmersiveIdeologyOrigins", "restoreIdeologyOrigins");
+        LookImmersive(ref onlyImmersiveMemes, "onlyImmersiveMemes", "restoreMemes");
+        LookImmersive(ref onlyImmersiveFactions, "onlyImmersiveFactions", "restoreFactions");
+    }
+
+    private static void LookImmersive(ref bool value, string key, string legacyKey)
+    {
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasNewValue = loading && Scribe.loader.curXmlParent?[key] != null;
+        bool hasLegacyValue = loading && Scribe.loader.curXmlParent?[legacyKey] != null;
+        Scribe_Values.Look(ref value, key, true);
+        if (loading && !hasNewValue && hasLegacyValue)
+        {
+            bool legacyRestore = false;
+            Scribe_Values.Look(ref legacyRestore, legacyKey, false);
+            value = !legacyRestore;
+        }
     }
 }
 
@@ -28,12 +42,14 @@ public sealed class GreenwayMod : Mod
         : base(content)
     {
         Settings = GetSettings<GreenwayModSettings>();
-        GreenwayVanillaIdeologyOriginApplier.Initialize();
-        GreenwayVanillaMemeApplier.Initialize();
-        GreenwayVanillaIdeologyFactionApplier.Initialize();
-        GreenwayVanillaExpandedFactionMemeApplier.Initialize();
-        ApplySettings();
-        LongEventHandler.ExecuteWhenFinished(ApplySettings);
+        LongEventHandler.ExecuteWhenFinished(() =>
+        {
+            GreenwayVanillaIdeologyOriginApplier.Initialize();
+            GreenwayVanillaMemeApplier.Initialize();
+            GreenwayVanillaIdeologyFactionApplier.Initialize();
+            GreenwayVanillaExpandedFactionMemeApplier.Initialize();
+            ApplySettings();
+        });
     }
 
     public override string SettingsCategory()
@@ -46,31 +62,37 @@ public sealed class GreenwayMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        bool updatedOriginsValue = Settings.restoreIdeologyOrigins;
+        Text.Font = GameFont.Medium;
+        listing.Label("Immersive ideology");
+        Text.Font = GameFont.Small;
+        listing.Label("Enabled options keep ideology generation focused on the curated FIP selection.");
+        listing.GapLine();
+
+        bool updatedOriginsValue = Settings.onlyImmersiveIdeologyOrigins;
         listing.CheckboxLabeled(
-            "Restore ideology origins",
+            "Only immersive ideology origins",
             ref updatedOriginsValue,
-            "Restores the native and Vanilla Memes Expanded ideology origins to the chooser and random ideology generation. Restart recommended.");
+            "Hides the replaced native and Vanilla Memes Expanded origins from the chooser and random ideology generation. Restart recommended.");
 
-        bool updatedMemesValue = Settings.restoreMemes;
+        bool updatedMemesValue = Settings.onlyImmersiveMemes;
         listing.CheckboxLabeled(
-            "Restore memes",
+            "Only immersive memes",
             ref updatedMemesValue,
-            "Restores native and Vanilla Expanded memes to the chooser and random ideology generation. Restart recommended.");
+            "Hides the replaced native and Vanilla Expanded memes from the chooser and random ideology generation. Restart recommended.");
 
-        bool updatedFactionValue = Settings.restoreFactions;
+        bool updatedFactionValue = Settings.onlyImmersiveFactions;
         listing.CheckboxLabeled(
-            "Restore factions",
+            "Only immersive factions",
             ref updatedFactionValue,
-            "Restores faction variants hidden by Greenway to faction selection and world generation. Requires a new world.");
+            "Hides the faction variants replaced by Greenway from faction selection and world generation. Requires a new world.");
 
-        if (updatedOriginsValue != Settings.restoreIdeologyOrigins
-            || updatedMemesValue != Settings.restoreMemes
-            || updatedFactionValue != Settings.restoreFactions)
+        if (updatedOriginsValue != Settings.onlyImmersiveIdeologyOrigins
+            || updatedMemesValue != Settings.onlyImmersiveMemes
+            || updatedFactionValue != Settings.onlyImmersiveFactions)
         {
-            Settings.restoreIdeologyOrigins = updatedOriginsValue;
-            Settings.restoreMemes = updatedMemesValue;
-            Settings.restoreFactions = updatedFactionValue;
+            Settings.onlyImmersiveIdeologyOrigins = updatedOriginsValue;
+            Settings.onlyImmersiveMemes = updatedMemesValue;
+            Settings.onlyImmersiveFactions = updatedFactionValue;
             ApplySettings();
         }
 
@@ -85,10 +107,10 @@ public sealed class GreenwayMod : Mod
 
     private static void ApplySettings()
     {
-        GreenwayVanillaMemeApplier.Apply(!Settings.restoreMemes);
-        GreenwayVanillaIdeologyOriginApplier.Apply(!Settings.restoreIdeologyOrigins);
-        GreenwayVanillaExpandedFactionMemeApplier.Apply(!Settings.restoreMemes && !Settings.restoreIdeologyOrigins);
-        GreenwayVanillaIdeologyFactionApplier.Apply(!Settings.restoreFactions);
+        GreenwayVanillaMemeApplier.Apply(Settings.onlyImmersiveMemes);
+        GreenwayVanillaIdeologyOriginApplier.Apply(Settings.onlyImmersiveIdeologyOrigins);
+        GreenwayVanillaExpandedFactionMemeApplier.Apply(Settings.onlyImmersiveMemes && Settings.onlyImmersiveIdeologyOrigins);
+        GreenwayVanillaIdeologyFactionApplier.Apply(Settings.onlyImmersiveFactions);
     }
 }
 

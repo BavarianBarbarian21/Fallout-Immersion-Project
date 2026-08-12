@@ -59,6 +59,11 @@ internal static class HHToolsRestoreApplier
             return;
         }
 
+        if (DefDatabase<FactionDef>.GetNamedSilentFail("OutlanderCivil") == null)
+        {
+            return;
+        }
+
         CaptureFactions();
         CaptureScenarios();
         CaptureQuests();
@@ -71,12 +76,17 @@ internal static class HHToolsRestoreApplier
     public static void Apply(HHToolsModSettings settings)
     {
         Initialize();
-        ApplyFactions(!settings.restoreFactions);
-        ApplyScenarios(!settings.restoreScenarios);
-        ApplyBuildings(!settings.restoreBuildings);
-        ApplyItems(!settings.restoreWeapons, !settings.restoreApparel);
-        ApplyQuests(!settings.restoreQuests);
-        ApplyStorytellers(!settings.restoreStorytellers);
+        if (!initialized)
+        {
+            return;
+        }
+
+        ApplyFactions(settings.onlyImmersiveFactions);
+        ApplyScenarios(settings.onlyImmersiveScenarios);
+        ApplyBuildings(settings.onlyImmersiveBuildings);
+        ApplyItems(settings.onlyImmersiveWeapons, settings.onlyImmersiveApparel);
+        ApplyQuests(settings.onlyImmersiveQuests);
+        ApplyStorytellers(settings.onlyImmersiveStorytellers);
     }
 
     private static void CaptureFactions()
