@@ -529,6 +529,11 @@ $originRuntimeContract = $greenwaySettingsText -match 'onlyImmersiveIdeologyOrig
     $greenwaySettingsText.Contains('IdeoUtility.IsMemeAllowedFor')
 $originVisibilityContract = $originRuntimeContract -and -not $originDefRemoval -and -not $originDependencyRemoval -and $originPresetReferences.Count -eq 6 -and $originLanguageKeys.Count -eq 18
 Add-Check 'Ideology' 'Vanilla Memes Expanded origins stay internal and are settings-controlled' ([bool]$originVisibilityContract) "immersive-only default with deferred reversible hide/zero-weight application and curated faction fallback: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
+$greenwayStoryPatternPath = Join-Path $ReleaseRoot 'FIP-Greenway\LoadFolders\Greenway\Defs\FIP-Greenway\Ideology\Government\Greenway_StructureDef.xml'
+$greenwayStoryPatternText = [IO.File]::ReadAllText($greenwayStoryPatternPath)
+$placeGrammarContract = -not $greenwayStoryPatternText.Contains('[place_powerCenter]') -and
+    [regex]::Matches($greenwayStoryPatternText, '\[place_community\]').Count -ge 3
+Add-Check 'Ideology' 'Greenway story grammar works with places that omit optional power-center rules' $placeGrammarContract "no place_powerCenter dependency; place_community fallback available for Sophiamunda and every standard PlaceDef: $placeGrammarContract"
 
 $tribalsFenceNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals'
 $tribalsArchitectNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals_Architect'

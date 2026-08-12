@@ -1,8 +1,8 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 20:18:02 +02:00
+Generated: 2026-08-12 20:40:13 +02:00
 
-Overall result: **PASS** - 90/90 checks passed.
+Overall result: **PASS** - 91/91 checks passed.
 
 This is a static release audit plus a full managed-code build. LoadFolder combinations are simulated from their declared conditions; an actual RimWorld GUI launch is not performed by this script.
 
@@ -128,6 +128,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | Status | Check | Details |
 |---|---|---|
 | PASS | Vanilla Memes Expanded origins stay internal and are settings-controlled | immersive-only default with deferred reversible hide/zero-weight application and curated faction fallback: True; Def deletion absent, retained preset references: 6; retained language keys: 18 |
+| PASS | Greenway story grammar works with places that omit optional power-center rules | no place_powerCenter dependency; place_community fallback available for Sophiamunda and every standard PlaceDef: True |
 
 ## Research
 
@@ -184,7 +185,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:01.63 |
+| PASS | Managed solution builds | exit 0;   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:04.99 |
 
 ## Documented non-colliding overlaps
 
