@@ -1,6 +1,6 @@
-# FIP 1.0 Release – refaktorierte Arbeitskopie
+# FIP 1.0 Release – Entwicklungsunterlagen
 
-Dieser Ordner enthält die vollständig refaktorierte FIP-1.0-Arbeitskopie für RimWorld 1.6. Die Quellordner im Repository-Root und `New-Mods/` dienten ausschließlich als Referenz und blieben unverändert.
+Die spielbaren FIP-1.0-Module liegen als kanonische Release-Dateien direkt im Repository-Root. Dieser Ordner enthält die zugehörigen Entwicklungsunterlagen, Berichte, C#-Quellen und Prüfwerkzeuge. Historische Vorstufen und die früheren Modstände liegen unter `Outdated/`.
 
 Enthalten sind:
 
@@ -11,4 +11,4 @@ Enthalten sind:
 
 Big MT verwendet absichtlich die ehemalige Sunset-Package-ID `FIP.Sunset` und die Workshop-ID `3760676309`. Der bedingungslos geladene `BigMT`-Ordner bleibt ohne Anomaly sicher; sämtliche Anomaly-Inhalte liegen in exakt bedingten LoadFolders.
 
-Die technischen Ergebnisse und die bewusst akzeptierten Kombinationen sind in `Reports/FINAL_VALIDATION.md` dokumentiert. `Tools/Validate-Release.ps1` kann die reproduzierbaren Struktur-, XML-, Asset- und Ownership-Prüfungen erneut ausführen.
+Die technischen Ergebnisse und die bewusst akzeptierten Kombinationen sind in `Reports/FINAL_VALIDATION.md` dokumentiert. `Tools/Validate-Release.ps1` prüft standardmäßig die Root-Module und verwendet die Quellen aus diesem Ordner. Die übrigen Skripte dokumentieren den abgeschlossenen Umbau und sind nicht als wiederholbare Migration der aktuellen Root-Struktur gedacht.

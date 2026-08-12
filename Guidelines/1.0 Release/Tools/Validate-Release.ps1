@@ -1,12 +1,15 @@
 param(
-    [string]$ReleaseRoot = (Split-Path -Parent $PSScriptRoot),
+    [string]$ReleaseRoot = (Join-Path $PSScriptRoot '..\..\..'),
+    [string]$SourceRoot = (Join-Path $PSScriptRoot '..\Source'),
+    [string]$ReportPath = (Join-Path $PSScriptRoot '..\Reports\FINAL_VALIDATION.md'),
     [switch]$SkipBuild
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $ReleaseRoot = [IO.Path]::GetFullPath($ReleaseRoot)
-$ReportPath = Join-Path $ReleaseRoot 'Reports\FINAL_VALIDATION.md'
+$SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
+$ReportPath = [IO.Path]::GetFullPath($ReportPath)
 $checks = [Collections.Generic.List[object]]::new()
 
 function Add-Check {
@@ -82,7 +85,7 @@ $translations = @(Get-ChildItem -LiteralPath $ReleaseRoot -Directory -Filter 'FI
 $buildPassed = $true
 $buildDetails = 'Skipped by caller; no build result recorded in this run'
 if (-not $SkipBuild) {
-    $solution = Get-ChildItem -LiteralPath (Join-Path $ReleaseRoot 'Source') -File -Filter *.sln | Select-Object -First 1
+    $solution = Get-ChildItem -LiteralPath $SourceRoot -File -Filter *.sln | Select-Object -First 1
     if (-not $solution) {
         $buildPassed = $false
         $buildDetails = 'No solution file found'
@@ -618,7 +621,7 @@ Add-Check 'Assets' 'Overgrown use their own green Plantskin gene while Numen rem
 $superGenePath = Join-Path $westTekBase 'Defs\FIP-WestTek\Genes\Westtek_Xenotype_Genes.xml'
 [xml]$superGeneXml = [IO.File]::ReadAllText($superGenePath)
 $superGene = $superGeneXml.SelectSingleNode('/Defs/GeneDef[defName="WestTek_Gene_SuperMutant"]')
-$superHarmonySourcePath = Join-Path $ReleaseRoot 'Source\FIP-WestTek\Harmony\SuperMutantRenderPatch.cs'
+$superHarmonySourcePath = Join-Path $SourceRoot 'FIP-WestTek\Harmony\SuperMutantRenderPatch.cs'
 $superHarmonySource = [IO.File]::ReadAllText($superHarmonySourcePath)
 $westHarmonyNode = Find-LoadFolderNode 'FIP-WestTek' 'LoadFolders/Harmony'
 $superBodyTextures = @('south','east','north') | ForEach-Object { Join-Path $westTekBase "Textures\Things\Pawn\Humanlike\Bodies\WestTek\SuperMutant\WestTek_Naked_Hulk_$_.png" }
@@ -690,7 +693,7 @@ $assemblyIdentityDuplicates = @($assemblyInfo | Group-Object Name | Where-Object
 Add-Check 'Assemblies' 'No private 0Harmony.dll is bundled' ($bundledHarmony.Count -eq 0) "$($bundledHarmony.Count) found"
 Add-Check 'Assemblies' 'Harmony references are optional-only' ($baseAssemblyHarmonyRefs.Count -eq 0 -and $optionalHarmonyAssemblies.Count -eq 3 -and $optionalHarmonyBad.Count -eq 0) "base Harmony references: $($baseAssemblyHarmonyRefs.Count); optional Harmony assemblies: $($optionalHarmonyAssemblies.Count)"
 Add-Check 'Assemblies' 'Assembly identities are unique' ($assemblyIdentityDuplicates.Count -eq 0) "$($assemblyInfo.Count) assemblies; duplicate identities: $($assemblyIdentityDuplicates.Count)"
-$sourceText = @(Get-ChildItem -LiteralPath (Join-Path $ReleaseRoot 'Source') -File -Recurse -Filter *.cs | ForEach-Object { [IO.File]::ReadAllText($_.FullName) }) -join "`n"
+$sourceText = @(Get-ChildItem -LiteralPath $SourceRoot -File -Recurse -Filter *.cs | ForEach-Object { [IO.File]::ReadAllText($_.FullName) }) -join "`n"
 $harmonyIds = @('FIP.Lucky38.VanillaTradingExpanded', 'FIP.RobCo.SyntheticPawns', 'FIP.WestTek')
 $idsPresent = @($harmonyIds | Where-Object { $sourceText.Contains($_) })
 $unpatchCount = [regex]::Matches($sourceText, '\bUnpatch(?:All)?\s*\(').Count

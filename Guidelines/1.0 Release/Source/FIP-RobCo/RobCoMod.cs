@@ -16,11 +16,11 @@ public sealed class RobCoModSettings : ModSettings
     }
 }
 
+[StaticConstructorOnStartup]
 public sealed class RobCoMod : Mod
 {
     internal static RobCoModSettings Settings;
-    private static readonly Texture2D MechIcon = ContentFinder<Texture2D>.Get(
-        "FIP-RobCo/Misc/RobCo_AssaultronHeadUI", false);
+    private Texture2D mechIcon;
 
     public RobCoMod(ModContentPack content)
         : base(content)
@@ -31,6 +31,19 @@ public sealed class RobCoMod : Mod
     public override string SettingsCategory()
     {
         return "FIP - RobCo";
+    }
+
+    private Texture2D MechIcon
+    {
+        get
+        {
+            if (mechIcon == null)
+            {
+                mechIcon = ContentFinder<Texture2D>.Get("FIP-RobCo/Misc/RobCo_AssaultronHeadUI", false);
+            }
+
+            return mechIcon;
+        }
     }
 
     public override void DoSettingsWindowContents(Rect inRect)

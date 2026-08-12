@@ -1,8 +1,8 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-08 09:25:06 +02:00
+Generated: 2026-08-12 18:36:31 +02:00
 
-Overall result: **PASS** - 86/86 checks passed.
+Overall result: **FAIL** - 84/86 checks passed.
 
 This is a static release audit plus a full managed-code build. LoadFolder combinations are simulated from their declared conditions; an actual RimWorld GUI launch is not performed by this script.
 
@@ -83,7 +83,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | Status | Check | Details |
 |---|---|---|
 | PASS | Visibility-patch folders have exact provider conditions | Donaustahl base plus six provider-specific optional folders |
-| PASS | Nine non-FCP storytellers are hidden exactly once by their owners | Cassandra, Phoebe, Randy, Maynard, Talon, Diego, Basilicus, Ariadne and Damocles |
+| FAIL | Nine non-FCP storytellers are hidden exactly once by their owners | Cassandra: expected one exact false visibility contract in FIP-Donaustahl, found 0; Phoebe: expected one exact false visibility contract in FIP-Donaustahl, found 0; Randy: expected one exact false visibility contract in FIP-Donaustahl, found 0; VFEM_MaynardMedieval: expected one exact false visibility contract in FIP-H&HTools, found 0; VFET_TalonTribal: expected one exact false visibility contract in FIP-H&HTools, found 0; VFES_DD: expected one exact false visibility contract in FIP-H&HTools, found 0; VPE_Basilicus: expected one exact false visibility contract in FIP-Hubris, found 0; VFEE_AriadneArchduchess: expected one exact false visibility contract in FIP-Whitespring, found 0; VFED_Damocles: expected one exact false visibility contract in FIP-Whitespring, found 0 |
 | PASS | Storyteller defs remain valid for DefOf and code references | 0 StorytellerDef deletion operations |
 | PASS | FIP defines no replacement storytellers | FCP remains the sole content owner |
 | PASS | FIP does not rename or redescribe hidden storytellers | 0 non-FCP StorytellerDef translation keys |
@@ -119,7 +119,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All Vanilla Memes Expanded origins stay internal but are hidden and excluded from random ideologies | family hide and zero-weight operation, faction random weights removed, Def deletion absent, retained preset references: 6; retained language keys: 18 |
+| FAIL | All Vanilla Memes Expanded origins stay internal but are hidden and excluded from random ideologies | family hide and zero-weight operation, faction random weights removed, Def deletion absent, retained preset references: 6; retained language keys: 18 |
 
 ## Research
 
@@ -132,7 +132,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All textures are in unconditional module folders | 501 texture files; misplaced: 0; optional Texture directories: 0 |
+| PASS | All textures are in unconditional module folders | 489 texture files; misplaced: 0; optional Texture directories: 0 |
 | PASS | All FIP texture paths resolve with exact casing | 291 references / 133 unique; missing: 0; case mismatches: 0 |
 | PASS | Numen cosmetics and Skinwalker head use validated invisible directional placeholders | six 128x128 fully transparent PNG contracts; invalid or missing: 0 |
 | PASS | Skinwalker raccoon art replaces the human silhouette instead of overlaying it | FurDef body replacement for seven vanilla body types, transparent head, no AttachmentBody overlay, six directional art files: True |
@@ -145,7 +145,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 |---|---|---|
 | PASS | No cross-module direct Def identities | 1255 direct defs; 0 collisions |
 | PASS | No cross-module English language keys | 3694 entries; 0 collisions |
-| PASS | No cross-module concrete XPath plus field targets | 8166 target signatures; 0 collisions |
+| PASS | No cross-module concrete XPath plus field targets | 7988 target signatures; 0 collisions |
 | PASS | Only documented root-XPath overlaps remain | Defs/FactionDef[defName="AncientsHostile"]; Defs/FactionDef[defName="Ancients"]; /Defs |
 
 ## Assemblies
@@ -154,7 +154,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 |---|---|---|
 | PASS | No private 0Harmony.dll is bundled | 0 found |
 | PASS | Harmony references are optional-only | base Harmony references: 0; optional Harmony assemblies: 3 |
-| PASS | Assembly identities are unique | 22 assemblies; duplicate identities: 0 |
+| PASS | Assembly identities are unique | 27 assemblies; duplicate identities: 0 |
 | PASS | Unique Harmony IDs and no unpatching | IDs: FIP.Lucky38.VanillaTradingExpanded, FIP.RobCo.SyntheticPawns, FIP.WestTek; Unpatch calls: 0 |
 
 ## Translations
@@ -170,7 +170,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\Guidelines\1.0 Release\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll   FIP.Arktos.Aqueduct -> C:\Users\Matthias\Desktop\Fallout Immersion Project\Guidelines\1.0 Release\FIP-Arktos\LoadFolders\Arktos\Assemblies\FIP.Arktos.Aqueduct.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:01.30 |
+| PASS | Managed solution builds | Skipped by caller; no build result recorded in this run |
 
 ## Documented non-colliding overlaps
 
