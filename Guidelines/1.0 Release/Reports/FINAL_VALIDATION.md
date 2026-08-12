@@ -1,8 +1,8 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 19:18:59 +02:00
+Generated: 2026-08-12 20:18:02 +02:00
 
-Overall result: **PASS** - 89/89 checks passed.
+Overall result: **PASS** - 90/90 checks passed.
 
 This is a static release audit plus a full managed-code build. LoadFolder combinations are simulated from their declared conditions; an actual RimWorld GUI launch is not performed by this script.
 
@@ -127,7 +127,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Vanilla Memes Expanded origins stay internal and are settings-controlled | immersive-only default with deferred reversible hide/zero-weight application: True; Def deletion absent, retained preset references: 6; retained language keys: 18 |
+| PASS | Vanilla Memes Expanded origins stay internal and are settings-controlled | immersive-only default with deferred reversible hide/zero-weight application and curated faction fallback: True; Def deletion absent, retained preset references: 6; retained language keys: 18 |
 
 ## Research
 
@@ -161,9 +161,15 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | Status | Check | Details |
 |---|---|---|
 | PASS | No private 0Harmony.dll is bundled | 0 found |
-| PASS | Harmony references are optional-only | base Harmony references: 0; optional Harmony assemblies: 3 |
-| PASS | Assembly identities are unique | 27 assemblies; duplicate identities: 0 |
-| PASS | Unique Harmony IDs and no unpatching | IDs: FIP.Lucky38.VanillaTradingExpanded, FIP.RobCo.SyntheticPawns, FIP.WestTek; Unpatch calls: 0 |
+| PASS | Harmony references are optional-only | base Harmony references: 0; optional Harmony assemblies: 4 |
+| PASS | Assembly identities are unique | 28 assemblies; duplicate identities: 0 |
+| PASS | Unique Harmony IDs and no unpatching | IDs: FIP.HHTools.MainMenuExpansion, FIP.Lucky38.VanillaTradingExpanded, FIP.RobCo.SyntheticPawns, FIP.WestTek; Unpatch calls: 0 |
+
+## Main menu
+
+| Status | Check | Details |
+|---|---|---|
+| PASS | H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs | optional Harmony integration reuses About/ModIcon.png and Preview.png: True |
 
 ## Translations
 
@@ -178,7 +184,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.Arktos.Aqueduct -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-Arktos\LoadFolders\Arktos\Assemblies\FIP.Arktos.Aqueduct.dll   FIP.Lucky38 -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-Lucky 38\LoadFolders\Harmony\Assemblies\FIP_Lucky38_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:01.90 |
+| PASS | Managed solution builds | exit 0;   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:01.63 |
 
 ## Documented non-colliding overlaps
 

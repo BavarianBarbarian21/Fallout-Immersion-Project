@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -109,7 +110,7 @@ public sealed class GreenwayMod : Mod
     {
         GreenwayVanillaMemeApplier.Apply(Settings.onlyImmersiveMemes);
         GreenwayVanillaIdeologyOriginApplier.Apply(Settings.onlyImmersiveIdeologyOrigins);
-        GreenwayVanillaExpandedFactionMemeApplier.Apply(Settings.onlyImmersiveMemes && Settings.onlyImmersiveIdeologyOrigins);
+        GreenwayVanillaExpandedFactionMemeApplier.Apply(Settings.onlyImmersiveMemes, Settings.onlyImmersiveIdeologyOrigins);
         GreenwayVanillaIdeologyFactionApplier.Apply(Settings.onlyImmersiveFactions);
     }
 }
@@ -191,6 +192,17 @@ internal static class GreenwayVanillaIdeologyOriginApplier
             memeDef.hiddenInChooseMemes = hideVanillaIdeologyOrigins || originalState.Hidden;
             memeDef.randomizationSelectionWeightFactor = hideVanillaIdeologyOrigins ? 0f : originalState.RandomizationWeight;
         }
+    }
+
+    internal static bool IsSuppressedOrigin(MemeDef memeDef)
+    {
+        if (memeDef?.defName == null)
+        {
+            return false;
+        }
+
+        return TargetMemeDefNames.Any(defName => string.Equals(defName, memeDef.defName, StringComparison.OrdinalIgnoreCase))
+            || memeDef.defName.StartsWith("VME_Structure_", StringComparison.OrdinalIgnoreCase);
     }
 }
 
@@ -329,6 +341,7 @@ internal static class GreenwayVanillaExpandedFactionMemeApplier
     private sealed class FactionMemeState
     {
         public List<MemeDef> AllowedMemes;
+        public List<MemeDef> DisallowedMemes;
         public List<MemeWeight> StructureMemeWeights;
     }
 
@@ -343,28 +356,24 @@ internal static class GreenwayVanillaExpandedFactionMemeApplier
                 continue;
             }
 
-            bool hasVanillaExpandedOrigin = factionDef.structureMemeWeights != null
-                && factionDef.structureMemeWeights.Exists(weight => weight?.meme?.defName != null
-                    && weight.meme.defName.StartsWith("VME_Structure_", StringComparison.OrdinalIgnoreCase));
-            bool hasAnonymity = factionDef.allowedMemes != null
-                && factionDef.allowedMemes.Exists(meme => meme?.defName == "VME_Anonymity");
-
-            if (!hasVanillaExpandedOrigin && !hasAnonymity)
-            {
-                continue;
-            }
-
             OriginalStatesByFactionDefName[factionDef.defName] = new FactionMemeState
             {
                 AllowedMemes = factionDef.allowedMemes == null ? null : new List<MemeDef>(factionDef.allowedMemes),
+                DisallowedMemes = factionDef.disallowedMemes == null ? null : new List<MemeDef>(factionDef.disallowedMemes),
                 StructureMemeWeights = factionDef.structureMemeWeights == null ? null : new List<MemeWeight>(factionDef.structureMemeWeights)
             };
         }
     }
 
-    public static void Apply(bool hideVanillaExpandedOrigins)
+    public static void Apply(bool hideVanillaExpandedMemes, bool hideVanillaExpandedOrigins)
     {
         Initialize();
+        List<MemeDef> curatedStructureMemes = DefDatabase<MemeDef>.AllDefsListForReading
+            .Where(IsCuratedStructureMeme)
+            .ToList();
+        List<MemeDef> suppressedStructureMemes = DefDatabase<MemeDef>.AllDefsListForReading
+            .Where(GreenwayVanillaIdeologyOriginApplier.IsSuppressedOrigin)
+            .ToList();
 
         foreach ((string factionDefName, FactionMemeState state) in OriginalStatesByFactionDefName)
         {
@@ -375,16 +384,56 @@ internal static class GreenwayVanillaExpandedFactionMemeApplier
             }
 
             factionDef.allowedMemes = state.AllowedMemes == null ? null : new List<MemeDef>(state.AllowedMemes);
+            factionDef.disallowedMemes = state.DisallowedMemes == null ? null : new List<MemeDef>(state.DisallowedMemes);
             factionDef.structureMemeWeights = state.StructureMemeWeights == null ? null : new List<MemeWeight>(state.StructureMemeWeights);
 
-            if (!hideVanillaExpandedOrigins)
+            if (hideVanillaExpandedMemes)
             {
-                continue;
+                factionDef.allowedMemes?.RemoveAll(meme => meme?.defName == "VME_Anonymity");
             }
 
-            factionDef.allowedMemes?.RemoveAll(meme => meme?.defName == "VME_Anonymity");
-            factionDef.structureMemeWeights?.RemoveAll(weight => weight?.meme?.defName != null
-                && weight.meme.defName.StartsWith("VME_Structure_", StringComparison.OrdinalIgnoreCase));
+            if (hideVanillaExpandedOrigins)
+            {
+                factionDef.structureMemeWeights?.RemoveAll(weight => GreenwayVanillaIdeologyOriginApplier.IsSuppressedOrigin(weight?.meme));
+                factionDef.disallowedMemes ??= new List<MemeDef>();
+                foreach (MemeDef memeDef in suppressedStructureMemes)
+                {
+                    if (!factionDef.disallowedMemes.Contains(memeDef))
+                    {
+                        factionDef.disallowedMemes.Add(memeDef);
+                    }
+                }
+                EnsureCuratedStructureMemeAvailable(factionDef, curatedStructureMemes);
+            }
+        }
+    }
+
+    private static bool IsCuratedStructureMeme(MemeDef memeDef)
+    {
+        return memeDef?.category == MemeCategory.Structure
+            && memeDef.randomizationSelectionWeightFactor > 0f
+            && string.Equals(memeDef.modContentPack?.PackageId, "FIP.Greenway", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static void EnsureCuratedStructureMemeAvailable(FactionDef factionDef, List<MemeDef> curatedStructureMemes)
+    {
+        if (curatedStructureMemes.Count == 0
+            || curatedStructureMemes.Any(memeDef => IdeoUtility.IsMemeAllowedFor(memeDef, factionDef)))
+        {
+            return;
+        }
+
+        factionDef.structureMemeWeights ??= new List<MemeWeight>();
+        foreach (MemeDef memeDef in curatedStructureMemes)
+        {
+            if (!factionDef.structureMemeWeights.Any(weight => weight?.meme == memeDef && weight.selectionWeight > 0f))
+            {
+                factionDef.structureMemeWeights.Add(new MemeWeight
+                {
+                    meme = memeDef,
+                    selectionWeight = 1f
+                });
+            }
         }
     }
 }

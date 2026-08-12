@@ -523,9 +523,12 @@ $originRuntimeContract = $greenwaySettingsText -match 'onlyImmersiveIdeologyOrig
     $greenwaySettingsText.Contains('StartsWith("VME_Structure_"') -and
     $greenwaySettingsText.Contains('hiddenInChooseMemes = hideVanillaIdeologyOrigins || originalState.Hidden') -and
     $greenwaySettingsText.Contains('randomizationSelectionWeightFactor = hideVanillaIdeologyOrigins ? 0f : originalState.RandomizationWeight') -and
-    $greenwaySettingsText.Contains('structureMemeWeights?.RemoveAll')
+    $greenwaySettingsText.Contains('structureMemeWeights?.RemoveAll') -and
+    $greenwaySettingsText.Contains('factionDef.disallowedMemes.Add(memeDef)') -and
+    $greenwaySettingsText.Contains('EnsureCuratedStructureMemeAvailable') -and
+    $greenwaySettingsText.Contains('IdeoUtility.IsMemeAllowedFor')
 $originVisibilityContract = $originRuntimeContract -and -not $originDefRemoval -and -not $originDependencyRemoval -and $originPresetReferences.Count -eq 6 -and $originLanguageKeys.Count -eq 18
-Add-Check 'Ideology' 'Vanilla Memes Expanded origins stay internal and are settings-controlled' ([bool]$originVisibilityContract) "immersive-only default with deferred reversible hide/zero-weight application: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
+Add-Check 'Ideology' 'Vanilla Memes Expanded origins stay internal and are settings-controlled' ([bool]$originVisibilityContract) "immersive-only default with deferred reversible hide/zero-weight application and curated faction fallback: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
 
 $tribalsFenceNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals'
 $tribalsArchitectNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Tribals_Architect'
@@ -714,13 +717,20 @@ $optionalHarmonyAssemblies = @($assemblyInfo | Where-Object { $_.File.FullName -
 $optionalHarmonyBad = @($optionalHarmonyAssemblies | Where-Object { $_.References -notcontains '0Harmony' })
 $assemblyIdentityDuplicates = @($assemblyInfo | Group-Object Name | Where-Object Count -gt 1)
 Add-Check 'Assemblies' 'No private 0Harmony.dll is bundled' ($bundledHarmony.Count -eq 0) "$($bundledHarmony.Count) found"
-Add-Check 'Assemblies' 'Harmony references are optional-only' ($baseAssemblyHarmonyRefs.Count -eq 0 -and $optionalHarmonyAssemblies.Count -eq 3 -and $optionalHarmonyBad.Count -eq 0) "base Harmony references: $($baseAssemblyHarmonyRefs.Count); optional Harmony assemblies: $($optionalHarmonyAssemblies.Count)"
+Add-Check 'Assemblies' 'Harmony references are optional-only' ($baseAssemblyHarmonyRefs.Count -eq 0 -and $optionalHarmonyAssemblies.Count -eq 4 -and $optionalHarmonyBad.Count -eq 0) "base Harmony references: $($baseAssemblyHarmonyRefs.Count); optional Harmony assemblies: $($optionalHarmonyAssemblies.Count)"
 Add-Check 'Assemblies' 'Assembly identities are unique' ($assemblyIdentityDuplicates.Count -eq 0) "$($assemblyInfo.Count) assemblies; duplicate identities: $($assemblyIdentityDuplicates.Count)"
 $sourceText = @(Get-ChildItem -LiteralPath $SourceRoot -File -Recurse -Filter *.cs | ForEach-Object { [IO.File]::ReadAllText($_.FullName) }) -join "`n"
-$harmonyIds = @('FIP.Lucky38.VanillaTradingExpanded', 'FIP.RobCo.SyntheticPawns', 'FIP.WestTek')
+$harmonyIds = @('FIP.HHTools.MainMenuExpansion', 'FIP.Lucky38.VanillaTradingExpanded', 'FIP.RobCo.SyntheticPawns', 'FIP.WestTek')
 $idsPresent = @($harmonyIds | Where-Object { $sourceText.Contains($_) })
 $unpatchCount = [regex]::Matches($sourceText, '\bUnpatch(?:All)?\s*\(').Count
-Add-Check 'Assemblies' 'Unique Harmony IDs and no unpatching' ($idsPresent.Count -eq 3 -and $unpatchCount -eq 0) "IDs: $($idsPresent -join ', '); Unpatch calls: $unpatchCount"
+Add-Check 'Assemblies' 'Unique Harmony IDs and no unpatching' ($idsPresent.Count -eq 4 -and $unpatchCount -eq 0) "IDs: $($idsPresent -join ', '); Unpatch calls: $unpatchCount"
+$hhtoolsExpansionSource = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-H&HTools\Harmony\HHToolsMainMenuExpansion.cs'))
+$hhtoolsHarmonyNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Harmony'
+$hhtoolsExpansionContract = $hhtoolsHarmonyNode -and $hhtoolsHarmonyNode.GetAttribute('IfModActive') -ceq 'brrainz.harmony' -and
+    $hhtoolsExpansionSource.Contains('ModLister.GetActiveModWithIdentifier(PackageId)') -and
+    $hhtoolsExpansionSource.Contains('mod.Icon') -and $hhtoolsExpansionSource.Contains('mod.PreviewImage') -and
+    -not $hhtoolsExpansionSource.Contains('DefDatabase<ExpansionDef>')
+Add-Check 'Main menu' 'H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs' ([bool]$hhtoolsExpansionContract) "optional Harmony integration reuses About/ModIcon.png and Preview.png: $([bool]$hhtoolsExpansionContract)"
 
 # Translation identity and the intentional new meaning of FIP.Sunset.
 $translationErrors = [Collections.Generic.List[string]]::new()

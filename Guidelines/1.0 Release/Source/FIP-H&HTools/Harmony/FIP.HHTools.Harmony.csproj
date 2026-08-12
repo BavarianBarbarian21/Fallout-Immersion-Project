@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>FIP.HHTools</RootNamespace>
+    <AssemblyName>FIP_HHTools_Harmony</AssemblyName>
+    <OutputPath>$(FipReleaseRoot)FIP-H&amp;HTools\LoadFolders\Harmony\Assemblies\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>
