@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>FIP_Axolotl</defName>
+    <label>axolotl</label>
+    <description>A small freshwater salamander whose exposed gills and regenerative body let it survive in Arktos' creeks, flooded ruins, and irradiated wetlands. Axolotls are harmless scavenging critters, prized more for their striking colors than for meat or leather.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>40</MarketValue>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>32</ComfyTemperatureMax>
+      <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
+      <Wildness>0.5</Wildness>
+    </statBases>
+    <uiIconScale>1.6</uiIconScale>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.08</baseHungerRate>
+      <baseHealthScale>0.29</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <trainability>None</trainability>
+      <petness>0.2</petness>
+      <lifeExpectancy>10</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Iguana_Wounded</soundWounded>
+          <soundDeath>Pawn_Iguana_Death</soundDeath>
+          <soundCall>Pawn_Iguana_Call</soundCall>
+          <soundAngry>Pawn_Iguana_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundEating>Reptile_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li>
+        <li>(0.24, 0, 0)</li>
+        <li>(0.0, 0, -0.18)</li>
+        <li>(-0.24, 0, 0)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>FIP_Axolotl</defName>
+    <label>axolotl</label>
+    <race>FIP_Axolotl</race>
+    <combatPower>28</combatPower>
+    <ecoSystemWeight>0.2</ecoSystemWeight>
+    <wildGroupSize>2~5</wildGroupSize>
+    <alternateGraphicChance>0.916667</alternateGraphicChance>
+    <alternateGraphics>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_02</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_03</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_04</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_05</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_06</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_07</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_08</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_09</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_10</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_11</texPath></li>
+      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_12</texPath></li>
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.7</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

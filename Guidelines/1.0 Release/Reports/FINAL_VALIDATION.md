@@ -1,6 +1,6 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 20:40:13 +02:00
+Generated: 2026-08-12 21:51:38 +02:00
 
 Overall result: **PASS** - 91/91 checks passed.
 
@@ -35,7 +35,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All release XML is well formed | 1519 files parsed; 0 invalid |
+| PASS | All release XML is well formed | 1520 files parsed; 0 invalid |
 
 ## Requirements
 
@@ -141,8 +141,8 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All textures are in unconditional module folders | 489 texture files; misplaced: 0; optional Texture directories: 0 |
-| PASS | All FIP texture paths resolve with exact casing | 291 references / 133 unique; missing: 0; case mismatches: 0 |
+| PASS | All textures are in unconditional module folders | 537 texture files; misplaced: 0; optional Texture directories: 0 |
+| PASS | All FIP texture paths resolve with exact casing | 305 references / 145 unique; missing: 0; case mismatches: 0 |
 | PASS | Numen cosmetics and Skinwalker head use validated invisible directional placeholders | six 128x128 fully transparent PNG contracts; invalid or missing: 0 |
 | PASS | Skinwalker raccoon art replaces the human silhouette instead of overlaying it | FurDef body replacement for seven vanilla body types, transparent head, no AttachmentBody overlay, six directional art files: True |
 | PASS | Overgrown use their own green Plantskin gene while Numen remain unfurred | Plantskin reuses Furskin body and head art with Skin color; only Overgrown carry it: True |
@@ -152,7 +152,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | No cross-module direct Def identities | 1255 direct defs; 0 collisions |
+| PASS | No cross-module direct Def identities | 1257 direct defs; 0 collisions |
 | PASS | No cross-module English language keys | 3694 entries; 0 collisions |
 | PASS | No cross-module concrete XPath plus field targets | 7988 target signatures; 0 collisions |
 | PASS | Only documented root-XPath overlaps remain | Defs/FactionDef[defName="AncientsHostile"]; Defs/FactionDef[defName="Ancients"]; /Defs |
@@ -185,7 +185,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:04.99 |
+| PASS | Managed solution builds | exit 0;   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll   FIP.WestTek.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-WestTek\LoadFolders\Harmony\Assemblies\FIP_WestTek_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:04.53 |
 
 ## Documented non-colliding overlaps
 
