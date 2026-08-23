@@ -50,7 +50,7 @@
 			</li>
 		</tools>
 	</ThingDef>
-	<RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<RecipeDef Name="RobCo_LibertyPrimeBase_Recipe" ParentName="BaseMechanoidResurrectionRecipe" Abstract="True">
 		<gestationCycles>25</gestationCycles>
 		<researchPrerequisites>
 			<li>RobCo_OS</li>
@@ -103,7 +103,7 @@
 						<li>RobCo_PlatinumChip</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>1</count>
 			</li>
 			<li>
 				<filter>
@@ -114,6 +114,11 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Corpse_RobCo_LibertyPrime</li>
+			</thingDefs>
+		</fixedIngredientFilter>
 		<displayPriority>600</displayPriority>
 	</RecipeDef>
 	<!--  Liberty Prime   -->
@@ -157,14 +162,56 @@
 		</abilities>
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_LibertyPrimeBase_Recipe">
-		<defName>RobCo_LibertyPrime_Recipe</defName>
+		<defName>RobCo_RestoreLibertyPrime</defName>
 		<label>restore Liberty Prime</label>
-		<description>Restore Liberty Prime.</description>
-		<products>
-			<RobCo_LibertyPrime>1</RobCo_LibertyPrime>
-		</products>
+		<description>Restore the unique Liberty Prime chassis recovered from the RobCo vault. The platinum chip is integrated into its command system and consumed permanently.</description>
 		<descriptionHyperlinks>
 			<ThingDef>RobCo_LibertyPrime</ThingDef>
 		</descriptionHyperlinks>
+	</RecipeDef>
+	<!--
+		Save-compatibility shell for pre-quest-overhaul Bill_ProductionMech
+		instances. It is intentionally not assigned to any building. Loaded saves
+		cancel these obsolete bills and eject their ingredients before play resumes.
+	-->
+	<RecipeDef ParentName="BaseMechanoidRecipe">
+		<defName>RobCo_LibertyPrime_Recipe</defName>
+		<label>obsolete Liberty Prime production project</label>
+		<description>Compatibility definition for an obsolete Liberty Prime production bill. Existing bills are cancelled and their ingredients returned when the save loads.</description>
+		<gestationCycles>25</gestationCycles>
+		<ingredients>
+			<li>
+				<filter><thingDefs><li>Steel</li></thingDefs></filter>
+				<count>600</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+				<count>450</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Uranium</li></thingDefs></filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>NanostructuringChip</li></thingDefs></filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>RobCo_PlatinumChip</li></thingDefs></filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Corpse_RobCo_LibertyPrime</li></thingDefs></filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<displayPriority>600</displayPriority>
+		<products>
+			<RobCo_LibertyPrime>1</RobCo_LibertyPrime>
+		</products>
 	</RecipeDef>
 </Defs>

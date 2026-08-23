@@ -349,11 +349,9 @@ Add-Check 'Ownership' 'Big MT is safe without Anomaly' ($bigMtDirectDefs.Count -
 $bigMtAboutPath = Join-Path $bigMt 'About\About.xml'
 $bigMtEntitiesPath = Join-Path $bigMt 'LoadFolders\Anomaly_WestTek\Defs\BigMT_WestTek_Entities.xml'
 $bigMtFactionPath = Join-Path $bigMt 'LoadFolders\Anomaly_WestTek\Defs\BigMT_WestTek_Faction.xml'
-$bigMtResearchPath = Join-Path $bigMt 'LoadFolders\Anomaly_WestTek\Defs\BigMT_WestTek_Research.xml'
 [xml]$bigMtAboutXml = [IO.File]::ReadAllText($bigMtAboutPath)
 [xml]$bigMtEntitiesXml = [IO.File]::ReadAllText($bigMtEntitiesPath)
 [xml]$bigMtFactionXml = [IO.File]::ReadAllText($bigMtFactionPath)
-[xml]$bigMtResearchXml = [IO.File]::ReadAllText($bigMtResearchPath)
 $bigMtLoadAfter = @($bigMtAboutXml.SelectNodes('/ModMetaData/loadAfter/li') | ForEach-Object { $_.InnerText.Trim() })
 $bigMtRequiredOrder = @('Ludeon.RimWorld.Anomaly', 'VanillaExpanded.VAnomalyEInsanity', 'FIP.WestTek')
 $bigMtOrderExact = $bigMtLoadAfter.Count -eq $bigMtRequiredOrder.Count -and @($bigMtRequiredOrder | Where-Object { $bigMtLoadAfter -cnotcontains $_ }).Count -eq 0
@@ -378,9 +376,9 @@ $bigMtFactionNode = $bigMtFactionXml.SelectSingleNode('/Defs/FactionDef')
 $bigMtFactionRequired = $bigMtFactionNode -and $bigMtFactionNode.GetAttribute('ParentName') -ceq 'FactionBase' -and $bigMtFactionNode.SelectSingleNode('backstoryFilters/li/categories/li') -and $bigMtFactionNode.SelectSingleNode('raidLootValueFromPointsCurve/points/li') -and $bigMtFactionNode.SelectSingleNode('maxPawnCostPerTotalPointsCurve/points/li')
 Add-Check 'Runtime schema' 'Big MT humanlike faction supplies inherited and raid-generation requirements' ([bool]$bigMtFactionRequired) "FactionBase, backstory filter, raid loot curve and maximum pawn-cost curve present: $([bool]$bigMtFactionRequired)"
 
-$holdingPlatformRefs = @($bigMtResearchXml.SelectNodes('/Defs/ResearchProjectDef/prerequisites/li[text()="HoldingPlatform"]'))
-$entityContainmentRefs = @($bigMtResearchXml.SelectNodes('/Defs/ResearchProjectDef/prerequisites/li[text()="EntityContainment"]'))
-Add-Check 'Runtime schema' 'Big MT research references the Anomaly EntityContainment Def' ($holdingPlatformRefs.Count -eq 0 -and $entityContainmentRefs.Count -ge 1) "obsolete HoldingPlatform refs: $($holdingPlatformRefs.Count); EntityContainment refs: $($entityContainmentRefs.Count)"
+$bigMtWestTekFolder = Join-Path $bigMt 'LoadFolders\Anomaly_WestTek'
+$bigMtWestTekResearchRefs = @(Get-ChildItem -LiteralPath $bigMtWestTekFolder -File -Recurse -Filter *.xml | Select-String -Pattern 'BigMT_WestTek|BigMT_FEVSuperMutantAnalysis|BigMT_NightkinContainment|BigMT_WestTekSynthesis')
+Add-Check 'Runtime schema' 'Big MT defines no standalone West Tek research tab' ($bigMtWestTekResearchRefs.Count -eq 0) "obsolete research references: $($bigMtWestTekResearchRefs.Count)"
 
 $luckyProps = Find-LoadFolderNode 'FIP-Lucky 38' 'LoadFolders/FCP_Plants_CoffeeTea_PropsAndDecor'
 $luckyPropsExact = $luckyProps -and $luckyProps.GetAttribute('IfModActiveAll') -ceq 'Rick.FCP.Plants,VanillaExpanded.VBrewECandT,VanillaExpanded.VFEPropsandDecor'
@@ -722,22 +720,13 @@ $optionalHarmonyAssemblies = @($assemblyInfo | Where-Object { $_.File.FullName -
 $optionalHarmonyBad = @($optionalHarmonyAssemblies | Where-Object { $_.References -notcontains '0Harmony' })
 $assemblyIdentityDuplicates = @($assemblyInfo | Group-Object Name | Where-Object Count -gt 1)
 Add-Check 'Assemblies' 'No private 0Harmony.dll is bundled' ($bundledHarmony.Count -eq 0) "$($bundledHarmony.Count) found"
-Add-Check 'Assemblies' 'Harmony references are optional-only' ($baseAssemblyHarmonyRefs.Count -eq 0 -and $optionalHarmonyAssemblies.Count -eq 4 -and $optionalHarmonyBad.Count -eq 0) "base Harmony references: $($baseAssemblyHarmonyRefs.Count); optional Harmony assemblies: $($optionalHarmonyAssemblies.Count)"
+Add-Check 'Assemblies' 'Harmony references are optional-only' ($baseAssemblyHarmonyRefs.Count -eq 0 -and $optionalHarmonyAssemblies.Count -eq 3 -and $optionalHarmonyBad.Count -eq 0) "base Harmony references: $($baseAssemblyHarmonyRefs.Count); optional Harmony assemblies: $($optionalHarmonyAssemblies.Count)"
 Add-Check 'Assemblies' 'Assembly identities are unique' ($assemblyIdentityDuplicates.Count -eq 0) "$($assemblyInfo.Count) assemblies; duplicate identities: $($assemblyIdentityDuplicates.Count)"
 $sourceText = @(Get-ChildItem -LiteralPath $SourceRoot -File -Recurse -Filter *.cs | ForEach-Object { [IO.File]::ReadAllText($_.FullName) }) -join "`n"
-$harmonyIds = @('FIP.HHTools.MainMenuExpansion', 'FIP.Lucky38.VanillaTradingExpanded', 'FIP.RobCo.SyntheticPawns', 'FIP.WestTek')
+$harmonyIds = @('FIP.Lucky38.VanillaTradingExpanded', 'FIP.RobCo.SyntheticPawns', 'FIP.WestTek')
 $idsPresent = @($harmonyIds | Where-Object { $sourceText.Contains($_) })
 $unpatchCount = [regex]::Matches($sourceText, '\bUnpatch(?:All)?\s*\(').Count
-Add-Check 'Assemblies' 'Unique Harmony IDs and no unpatching' ($idsPresent.Count -eq 4 -and $unpatchCount -eq 0) "IDs: $($idsPresent -join ', '); Unpatch calls: $unpatchCount"
-$hhtoolsExpansionSource = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-H&HTools\Harmony\HHToolsMainMenuExpansion.cs'))
-$hhtoolsHarmonyNode = Find-LoadFolderNode 'FIP-H&HTools' 'LoadFolders/Harmony'
-$hhtoolsExpansionContract = $hhtoolsHarmonyNode -and $hhtoolsHarmonyNode.GetAttribute('IfModActive') -ceq 'brrainz.harmony' -and
-    $hhtoolsExpansionSource.Contains('ModLister.GetActiveModWithIdentifier(PackageId)') -and
-    $hhtoolsExpansionSource.Contains('FIP-H&HTools/UI/MainMenu/FIP_Title_Logo') -and
-    $hhtoolsExpansionSource.Contains('item?.isCore == true') -and
-    -not $hhtoolsExpansionSource.Contains('mod.Icon') -and -not $hhtoolsExpansionSource.Contains('mod.PreviewImage') -and
-    -not $hhtoolsExpansionSource.Contains('DefDatabase<ExpansionDef>')
-Add-Check 'Main menu' 'H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs' ([bool]$hhtoolsExpansionContract) "dedicated 128x128 icon with native background fallback: $([bool]$hhtoolsExpansionContract)"
+Add-Check 'Assemblies' 'Unique Harmony IDs and no unpatching' ($idsPresent.Count -eq 3 -and $unpatchCount -eq 0) "IDs: $($idsPresent -join ', '); Unpatch calls: $unpatchCount"
 
 # Translation identity and the intentional new meaning of FIP.Sunset.
 $translationErrors = [Collections.Generic.List[string]]::new()

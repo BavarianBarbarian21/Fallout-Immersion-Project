@@ -1,8 +1,8 @@
 # FIP 1.0 - final validation
 
-Generated: 2026-08-12 22:12:20 +02:00
+Generated: 2026-08-24 00:09:44 +02:00
 
-Overall result: **PASS** - 91/91 checks passed.
+Overall result: **PASS** - 90/90 checks passed.
 
 This is a static release audit plus a full managed-code build. LoadFolder combinations are simulated from their declared conditions; an actual RimWorld GUI launch is not performed by this script.
 
@@ -35,7 +35,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All release XML is well formed | 1520 files parsed; 0 invalid |
+| PASS | All release XML is well formed | 1519 files parsed; 0 invalid |
 
 ## Requirements
 
@@ -106,7 +106,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | PASS | Big MT PawnKindDefs use SkillRange and prisoner ranges required by RimWorld 1.6 | legacy skill fields: 0; skill range nodes: 3; pawn kinds missing will/resistance: 0 |
 | PASS | Big MT faction uses RimWorld 1.6 PawnGenOption dictionary syntax | legacy li options: 0; direct pawn-kind weights: 2 |
 | PASS | Big MT humanlike faction supplies inherited and raid-generation requirements | FactionBase, backstory filter, raid loot curve and maximum pawn-cost curve present: True |
-| PASS | Big MT research references the Anomaly EntityContainment Def | obsolete HoldingPlatform refs: 0; EntityContainment refs: 1 |
+| PASS | Big MT defines no standalone West Tek research tab | obsolete research references: 0 |
 
 ## Scenarios
 
@@ -141,8 +141,8 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | All textures are in unconditional module folders | 538 texture files; misplaced: 0; optional Texture directories: 0 |
-| PASS | All FIP texture paths resolve with exact casing | 305 references / 145 unique; missing: 0; case mismatches: 0 |
+| PASS | All textures are in unconditional module folders | 537 texture files; misplaced: 0; optional Texture directories: 0 |
+| PASS | All FIP texture paths resolve with exact casing | 307 references / 145 unique; missing: 0; case mismatches: 0 |
 | PASS | Numen cosmetics and Skinwalker head use validated invisible directional placeholders | six 128x128 fully transparent PNG contracts; invalid or missing: 0 |
 | PASS | Skinwalker raccoon art replaces the human silhouette instead of overlaying it | FurDef body replacement for seven vanilla body types, transparent head, no AttachmentBody overlay, six directional art files: True |
 | PASS | Overgrown use their own green Plantskin gene while Numen remain unfurred | Plantskin reuses Furskin body and head art with Skin color; only Overgrown carry it: True |
@@ -152,9 +152,9 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | No cross-module direct Def identities | 1257 direct defs; 0 collisions |
-| PASS | No cross-module English language keys | 3694 entries; 0 collisions |
-| PASS | No cross-module concrete XPath plus field targets | 7988 target signatures; 0 collisions |
+| PASS | No cross-module direct Def identities | 1264 direct defs; 0 collisions |
+| PASS | No cross-module English language keys | 3688 entries; 0 collisions |
+| PASS | No cross-module concrete XPath plus field targets | 7992 target signatures; 0 collisions |
 | PASS | Only documented root-XPath overlaps remain | Defs/FactionDef[defName="AncientsHostile"]; Defs/FactionDef[defName="Ancients"]; /Defs |
 
 ## Assemblies
@@ -162,15 +162,9 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 | Status | Check | Details |
 |---|---|---|
 | PASS | No private 0Harmony.dll is bundled | 0 found |
-| PASS | Harmony references are optional-only | base Harmony references: 0; optional Harmony assemblies: 4 |
-| PASS | Assembly identities are unique | 28 assemblies; duplicate identities: 0 |
-| PASS | Unique Harmony IDs and no unpatching | IDs: FIP.HHTools.MainMenuExpansion, FIP.Lucky38.VanillaTradingExpanded, FIP.RobCo.SyntheticPawns, FIP.WestTek; Unpatch calls: 0 |
-
-## Main menu
-
-| Status | Check | Details |
-|---|---|---|
-| PASS | H&H Tools joins the native expansion strip without declaring unofficial ExpansionDefs | dedicated 128x128 icon with native background fallback: True |
+| PASS | Harmony references are optional-only | base Harmony references: 0; optional Harmony assemblies: 3 |
+| PASS | Assembly identities are unique | 27 assemblies; duplicate identities: 0 |
+| PASS | Unique Harmony IDs and no unpatching | IDs: FIP.Lucky38.VanillaTradingExpanded, FIP.RobCo.SyntheticPawns, FIP.WestTek; Unpatch calls: 0 |
 
 ## Translations
 
@@ -185,7 +179,7 @@ This is a static release audit plus a full managed-code build. LoadFolder combin
 
 | Status | Check | Details |
 |---|---|---|
-| PASS | Managed solution builds | exit 0;   FIP.HHTools -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-H&HTools\LoadFolders\HHTools\Assemblies\FIP_HHTools.dll   FIP.RobCo.Harmony -> C:\Users\Matthias\Desktop\Fallout Immersion Project\FIP-RobCo\LoadFolders\Harmony\Assemblies\FIP_RobCo_Harmony.dll  Der Buildvorgang wurde erfolgreich ausgeführt.     0 Warnung(en)     0 Fehler  Verstrichene Zeit 00:00:03.53 |
+| PASS | Managed solution builds | Skipped by caller; no build result recorded in this run |
 
 ## Documented non-colliding overlaps
 

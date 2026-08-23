@@ -11,6 +11,7 @@ public static class RobCoQuestDefOf
     public static ResearchProjectDef UltraMechtech;
     public static WorldObjectDef RobCo_CourierCamp;
     public static WorldObjectDef RobCo_VaultSite;
+    public static SitePartDef RobCo_CourierTrail;
     public static SitePartDef RobCo_AncientVault;
     public static LetterDef RobCo_PlatinumChipOpportunity;
 

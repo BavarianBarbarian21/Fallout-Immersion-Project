@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--
+		The Courser is a human pawn, not a mechanoid. This recipe is therefore
+		loaded only beside the narrowly scoped Harmony bill factory patch that
+		avoids vanilla Bill_ResurrectMech's mech-energy/overseer assumptions.
+	-->
+	<RecipeDef ParentName="BaseMechanoidRecipe">
+		<defName>RobCo_RestoreQuestCourser</defName>
+		<label>restore university Courser</label>
+		<description>Restore the unique Courser recovered from the University vault. The platinum chip is integrated into the Courser's synthetic control framework and consumed permanently.</description>
+		<jobString>Restoring Courser.</jobString>
+		<mechResurrection>true</mechResurrection>
+		<gestationCycles>8</gestationCycles>
+		<researchPrerequisites>
+			<li>RobCo_OS</li>
+			<li>RobCo_Choice_Synths</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter><thingDefs><li>Corpse_Human</li></thingDefs></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Steel</li></thingDefs></filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>RobCo_PlatinumChip</li></thingDefs></filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Corpse_Human</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RobCo_RestorationGantry</li>
+		</recipeUsers>
+		<displayPriority>550</displayPriority>
+	</RecipeDef>
+</Defs>

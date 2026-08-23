@@ -132,11 +132,11 @@ internal static class RobCoDefSettingsApplier
         "RobCo_Gen1Synth_Recipe",
         "RobCo_SecuritronMkI_Recipe",
         "RobCo_SecuritronMkII_Recipe",
+        "RobCo_Scurrybot_Recipe",
+        "RobCo_RoboScorpion_Recipe",
         "RobCo_SentrybotSiegebreaker_Recipe",
         "RobCo_SentrybotPestcontrol_Recipe",
-        "RobCo_SentrybotAnnihilator_Recipe",
-        "RobCo_WarMachine_Recipe",
-        "RobCo_LibertyPrime_Recipe"
+        "RobCo_SentrybotAnnihilator_Recipe"
     };
 
     private static readonly Dictionary<string, List<RecipeDef>> OriginalRecipesByThingDef = new();

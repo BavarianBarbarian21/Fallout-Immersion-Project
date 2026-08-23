@@ -27,8 +27,11 @@ public class ChoiceLetter_RobCoPlatinumChipOpportunity : ChoiceLetter
                 DiaOption option = new(RobCoQuestUtility.FormatOptionLabel(branch, faction));
                 option.action = delegate
                 {
-                    Current.Game.GetComponent<RobCoQuestGameComponent>()?.AcceptOffer(branch, faction);
-                    Find.LetterStack.RemoveLetter(this);
+                    RobCoQuestGameComponent component = Current.Game.GetComponent<RobCoQuestGameComponent>();
+                    if (component?.AcceptOffer(branch, faction) == true)
+                    {
+                        Find.LetterStack.RemoveLetter(this);
+                    }
                 };
                 yield return option;
             }
@@ -40,8 +43,6 @@ public class ChoiceLetter_RobCoPlatinumChipOpportunity : ChoiceLetter
                 Find.LetterStack.RemoveLetter(this);
             };
             yield return ignore;
-
-            yield return Option_Close;
         }
     }
 

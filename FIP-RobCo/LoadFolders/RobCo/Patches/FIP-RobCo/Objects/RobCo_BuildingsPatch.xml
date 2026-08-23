@@ -12,6 +12,20 @@
   <!-- SubcoreEncoder -->
   <!-- SubcoreSoftscanner -->
   <!-- SubcoreRipscanner -->
+  <!-- Keep the vanilla building behavior while enabling RobCo's additional
+       real-time foreground and glow texture passes. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="MechGestatorBase"]/thingClass</xpath>
+    <value>
+      <thingClass>FIP.RobCo.Building_RobCoMechGestator</thingClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="SubcoreScannerBase"]/thingClass</xpath>
+    <value>
+      <thingClass>FIP.RobCo.Building_RobCoSubcoreScanner</thingClass>
+    </value>
+  </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="MechGestator"]/graphicData/texPath</xpath>
     <value>
@@ -49,18 +63,6 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="BasicRecharger"]/graphicData/texPath</xpath>
-    <value>
-      <texPath>FIP-RobCo/Buildings/BasicRecharger/RobCo_BasicRecharger</texPath>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="StandardRecharger"]/graphicData/texPath</xpath>
-    <value>
-      <texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestator</texPath>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="SubcoreEncoder"]/graphicData/texPath</xpath>
     <value>
       <texPath>FIP-RobCo/Buildings/SubcoreEncoder/RobCo_SubcoreEncoder</texPath>
@@ -80,7 +82,7 @@
   </Operation>
   <!-- Change MechBooster to RobCo Booster -->
   <!-- Patch MechGestator recipes -->
-  <Operation Class="FIP.RobCo.PatchOperationAddUnlessRestoreMechanoids">
+  <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
     <value>
       <li>RobCo_Eyebot_Recipe</li>
@@ -94,15 +96,21 @@
       <li>RobCo_Utilitron_Recipe</li>
       <li>RobCo_Collectron_Recipe</li>
       <li>RobCo_Protectron_Recipe</li>
+      <li>RobCo_Liberator_Recipe</li>
     </value>
   </Operation>
   <!-- Patch LargeMechGestator recipes -->
-  <Operation Class="FIP.RobCo.PatchOperationAddUnlessRestoreMechanoids">
+  <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
     <value>
       <li>RobCo_Assaultron_Recipe</li>
       <li>RobCo_Robobrain_Recipe</li>
       <li>RobCo_Cyberdog_Recipe</li>
+      <li>RobCo_Gen1Synth_Recipe</li>
+      <li>RobCo_SecuritronMkI_Recipe</li>
+      <li>RobCo_SecuritronMkII_Recipe</li>
+      <li>RobCo_Scurrybot_Recipe</li>
+      <li>RobCo_RoboScorpion_Recipe</li>
       <li>RobCo_SentrybotSiegebreaker_Recipe</li>
       <li>RobCo_SentrybotPestcontrol_Recipe</li>
       <li>RobCo_SentrybotAnnihilator_Recipe</li>

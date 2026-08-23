@@ -131,16 +131,45 @@
 		</lifeStages>
 	</PawnKindDef>
 
-	<RecipeDef ParentName="RobCo_RoboscorpionBase_Recipe">
+	<RecipeDef ParentName="BaseMechanoidResurrectionRecipe">
 		<defName>RobCo_RoboScorpionQueen_Recipe</defName>
 		<label>restore giant roboscorpion queen</label>
-		<description>Restore the giant Roboscorpion queen.</description>
+		<description>Restore the unique giant Roboscorpion queen recovered from the Big MT vault. The platinum chip is integrated into its command system and consumed permanently.</description>
+		<gestationCycles>12</gestationCycles>
 		<researchPrerequisites>
 			<li>RobCo_OS</li>
 			<li>RobCo_Choice_ThinkTank</li>
 		</researchPrerequisites>
-		<products>
-			<RobCo_RoboScorpionQueen>1</RobCo_RoboScorpionQueen>
-		</products>
+		<ingredients>
+			<li>
+				<filter><thingDefs><li>Corpse_RobCo_RoboScorpionQueen</li></thingDefs></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Steel</li></thingDefs></filter>
+				<count>400</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+				<count>250</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter><thingDefs><li>RobCo_PlatinumChip</li></thingDefs></filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Corpse_RobCo_RoboScorpionQueen</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<displayPriority>500</displayPriority>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_RoboScorpionQueen</ThingDef>
+		</descriptionHyperlinks>
 	</RecipeDef>
 </Defs>

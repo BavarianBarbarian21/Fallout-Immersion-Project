@@ -20,10 +20,6 @@
 		<IncidentTargetTags>
 			<li>Map_TempIncident</li>
 		</IncidentTargetTags>
-		<comps>
-			<li Class="WorldObjectCompProperties_FormCaravan" />
-			<li Class="WorldObjectCompProperties_TimedDetectionRaids" />
-		</comps>
 	</WorldObjectDef>
 
 	<WorldObjectDef ParentName="Site">
@@ -33,6 +29,25 @@
 		<worldObjectClass>FIP.RobCo.RobCoVaultSite</worldObjectClass>
 		<texture>World/WorldObjects/Sites/GenericSite</texture>
 	</WorldObjectDef>
+
+	<!-- Sites require at least one SitePart.  This deliberately has no linked
+	     GenStep: the courier itself is spawned and tracked by RobCoCourierCamp. -->
+	<SitePartDef>
+		<defName>RobCo_CourierTrail</defName>
+		<label>courier trail</label>
+		<description>A temporary trail where a RobCo platinum-chip courier can be intercepted.</description>
+		<siteTexture>World/WorldObjects/Camp</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Camp</expandingIconTexture>
+		<approachOrderString>Intercept {0}</approachOrderString>
+		<approachingReportString>Intercepting {0}.</approachingReportString>
+		<considerEnteringAsAttack>true</considerEnteringAsAttack>
+		<arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+		<wantsThreatPoints>false</wantsThreatPoints>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<tags>
+			<li>RobCo_CourierTrail</li>
+		</tags>
+	</SitePartDef>
 
 	<SitePartDef>
 		<defName>RobCo_AncientVault</defName>
@@ -58,6 +73,27 @@
 		<order>471</order>
 		<genStep Class="FIP.RobCo.GenStep_RobCoVaultThreats" />
 	</GenStepDef>
+
+	<!-- Dedicated quest-recovery body.  The explicit xenotype set prevents the
+	     University branch from producing an ordinary baseliner or a second
+	     Pacificator corpse. -->
+	<PawnKindDef ParentName="SpaceRefugeeBase">
+		<defName>RobCo_QuestCourser</defName>
+		<label>courser</label>
+		<labelPlural>coursers</labelPlural>
+		<apparelMoney>800~1800</apparelMoney>
+		<gearHealthRange>0.5~0.8</gearHealthRange>
+		<!-- Required for every concrete humanlike PawnKindDef in RimWorld 1.6.
+		     The restored Courser joins directly, so it has no recruitment gate. -->
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>0~0</initialResistanceRange>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<RobCo_Gen4Synth>1</RobCo_Gen4Synth>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+	</PawnKindDef>
 
 	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
 		<defName>RobCo_PlatinumBranch_CEO</defName>
@@ -115,17 +151,17 @@
 		<stage2LetterText>The courier's logs point to a buried Big MT think tank vault. A giant Roboscorpion queen was kept there as a testbed for post-war battlefield intelligence.</stage2LetterText>
 	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 
-	<FIP.RobCo.RobCoPlatinumQuestBranchDef>
+	<FIP.RobCo.RobCoPlatinumQuestBranchDef MayRequire="brrainz.harmony">
 		<defName>RobCo_PlatinumBranch_University</defName>
 		<label>University branch</label>
 		<courierNumber>6</courierNumber>
 		<chipTitle>the University</chipTitle>
 		<stage2EnemyPawnKind>RobCo_SecuritronMkII</stage2EnemyPawnKind>
-		<stage2CorpsePawnKind>RobCo_Pacificator</stage2CorpsePawnKind>
+		<stage2CorpsePawnKind>RobCo_QuestCourser</stage2CorpsePawnKind>
 		<unlockResearch>RobCo_Choice_Synths</unlockResearch>
 		<stage1TargetPoints>700</stage1TargetPoints>
 		<stage2ThreatPoints>3000</stage2ThreatPoints>
 		<stage2LetterLabel>University vault recovered</stage2LetterLabel>
-		<stage2LetterText>The courier's route points to a forgotten university vault filled with synthetic personnel archives and dormant robotic test platforms.</stage2LetterText>
+		<stage2LetterText>The courier's route points to a forgotten university vault filled with synthetic personnel archives. A preserved Courser body is still sealed inside, awaiting restoration.</stage2LetterText>
 	</FIP.RobCo.RobCoPlatinumQuestBranchDef>
 </Defs>

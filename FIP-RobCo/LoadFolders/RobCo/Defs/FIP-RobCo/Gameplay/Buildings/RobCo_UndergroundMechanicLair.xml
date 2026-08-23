@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--
+		Save-compatibility shell for colonies that already contain the former
+		underground mechanic lair. Keep its original defName and concrete class:
+		RimWorld serializes the placed Building_WorkTable instance and changing the
+		Def to Building_MechGestator makes vanilla mech bills cast it incorrectly.
+		With no designationCategory this legacy table cannot be built anew.
+	-->
 	<ThingDef ParentName="BuildingBase">
 		<defName>RobCo_UndergroundMechanicLair</defName>
-		<label>underground mechanic lair</label>
-		<description>A 5x5 maintenance bay intended for repairing the largest RobCo war machines and other giant machine chassis.</description>
+		<label>underground mechanic lair (legacy)</label>
+		<description>A legacy RobCo maintenance bay retained so existing colonies can load it safely. New prototype restorations use the RobCo restoration gantry.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/TableMachining</texPath>
@@ -28,7 +35,6 @@
 			<Plasteel>120</Plasteel>
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
-		<designationCategory>Production</designationCategory>
 		<researchPrerequisites>
 			<li>RobCo_OS</li>
 		</researchPrerequisites>
@@ -43,5 +49,108 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<tickerType>Never</tickerType>
 		<uiIconScale>0.9</uiIconScale>
+	</ThingDef>
+
+	<!--
+		This is a real mech gestator rather than a normal worktable. Special-project
+		recipes resurrect the exact quest chassis placed inside it, preserving the
+		pawn and preventing the player from manufacturing replacement boss robots.
+	-->
+	<ThingDef ParentName="MechGestatorBase">
+		<defName>RobCo_RestorationGantry</defName>
+		<label>RobCo restoration gantry</label>
+		<description>A 5x5 RobCo heavy-maintenance gantry for restoring irreplaceable prototype machines recovered from pre-War vaults. Its reconstruction cradle accepts an intact prototype chassis and permanently integrates the platinum chip into the repaired machine.</description>
+		<thingClass>FIP.RobCo.Building_RobCoMechGestator</thingClass>
+		<graphicData>
+			<texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestator</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(7.5,6.25)</drawSize>
+			<shadowData>
+				<volume>(4.8, 4.5, 3.2)</volume>
+			</shadowData>
+		</graphicData>
+		<interactionCellOffset>(0,0,-3)</interactionCellOffset>
+		<statBases>
+			<MaxHitPoints>700</MaxHitPoints>
+			<WorkToBuild>30000</WorkToBuild>
+			<Mass>90</Mass>
+			<Flammability>0.25</Flammability>
+		</statBases>
+		<size>(5,5)</size>
+		<costList>
+			<Steel>600</Steel>
+			<Plasteel>250</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<researchPrerequisites>
+			<li>RobCo_OS</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<uiOrder>2410</uiOrder>
+		<building>
+			<barDrawData>
+				<north><preRotationOffset>(-2.1, 2.15)</preRotationOffset><size>(0.9, 0.14)</size></north>
+				<south><preRotationOffset>(-2.1, 2.05)</preRotationOffset><size>(0.9, 0.14)</size></south>
+				<east><preRotationOffset>(2.1, -2.15)</preRotationOffset><size>(0.9, 0.14)</size></east>
+				<west><preRotationOffset>(-2.1, -2.15)</preRotationOffset><size>(0.9, 0.14)</size></west>
+			</barDrawData>
+			<formingGraphicData>
+				<texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>(2.5,2.5)</drawSize>
+			</formingGraphicData>
+			<formingMechBobSpeed>0.0005</formingMechBobSpeed>
+			<formingMechYBobDistance>0.08</formingMechYBobDistance>
+			<formingMechPerRotationOffset>
+				<li>(0, 0, 0.225)</li>
+				<li>(-0.15, 0, 0.225)</li>
+				<li>(0, 0, 0.225)</li>
+				<li>(0.15, 0, 0.225)</li>
+			</formingMechPerRotationOffset>
+			<maxFormedMechDrawSize>(3.1,3.1)</maxFormedMechDrawSize>
+			<mechGestatorCylinderGraphic>
+				<texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestatorGlass</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(7.5,6.25)</drawSize>
+				<shaderType>Transparent</shaderType>
+			</mechGestatorCylinderGraphic>
+			<mechGestatorTopGraphic>
+				<texPath>FIP-RobCo/Buildings/LargeMechGestator/RobCo_LargeMechGestatorTop</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(7.5,6.25)</drawSize>
+			</mechGestatorTopGraphic>
+			<gestatorFormingMote>
+				<north>MechGestatorFormingLarge_North</north>
+				<east>MechGestatorFormingLarge_East</east>
+				<west>MechGestatorFormingLarge_West</west>
+				<south>MechGestatorFormingLarge_South</south>
+			</gestatorFormingMote>
+			<gestatorCycleCompleteMote>
+				<north>MechGestatorCycleCompleteLarge_North</north>
+				<east>MechGestatorCycleCompleteLarge_East</east>
+				<west>MechGestatorCycleCompleteLarge_West</west>
+				<south>MechGestatorCycleCompleteLarge_South</south>
+			</gestatorCycleCompleteMote>
+			<gestatorFormedMote>
+				<north>MechGestatorFormedLarge_North</north>
+				<east>MechGestatorFormedLarge_East</east>
+				<west>MechGestatorFormedLarge_West</west>
+				<south>MechGestatorFormedLarge_South</south>
+			</gestatorFormedMote>
+		</building>
+		<recipes>
+			<li>RobCo_RestoreLibertyPrime</li>
+			<li>RobCo_RestoreWarMachine</li>
+			<li>RobCo_Pacificator_Recipe</li>
+			<li>RobCo_RoboScorpionQueen_Recipe</li>
+		</recipes>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1500</basePowerConsumption>
+				<idlePowerDraw>100</idlePowerDraw>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>

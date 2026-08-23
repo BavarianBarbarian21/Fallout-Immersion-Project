@@ -41,9 +41,17 @@
 		</tools>
 	</ThingDef>
 
-	<RecipeDef Name="RobCo_PacificatorBase_Recipe" ParentName="BaseMechanoidRecipe" Abstract="True">
+	<RecipeDef Name="RobCo_PacificatorBase_Recipe" ParentName="BaseMechanoidResurrectionRecipe" Abstract="True">
 		<gestationCycles>8</gestationCycles>
 		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Corpse_RobCo_Pacificator</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 			<li>
 				<filter>
 					<thingDefs>
@@ -68,7 +76,20 @@
 				</filter>
 				<count>2</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RobCo_PlatinumChip</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Corpse_RobCo_Pacificator</li>
+			</thingDefs>
+		</fixedIngredientFilter>
 		<displayPriority>350</displayPriority>
 	</RecipeDef>
 
@@ -98,13 +119,13 @@
 	<RecipeDef ParentName="RobCo_PacificatorBase_Recipe">
 		<defName>RobCo_Pacificator_Recipe</defName>
 		<label>restore pacificator</label>
-		<description>Restore a Pacificator chassis.</description>
+		<description>Restore the unique Pacificator chassis recovered from the RobCo vault. The platinum chip is integrated into its command system and consumed permanently.</description>
 		<researchPrerequisites>
 			<li>RobCo_OS</li>
 			<li>RobCo_Choice_Pacificator</li>
 		</researchPrerequisites>
-		<products>
-			<RobCo_Pacificator>1</RobCo_Pacificator>
-		</products>
+		<descriptionHyperlinks>
+			<ThingDef>RobCo_Pacificator</ThingDef>
+		</descriptionHyperlinks>
 	</RecipeDef>
 </Defs>

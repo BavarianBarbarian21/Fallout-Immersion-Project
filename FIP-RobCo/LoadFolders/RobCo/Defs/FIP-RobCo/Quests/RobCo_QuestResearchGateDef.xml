@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- These five unobtainable analysis targets are intentional research-tree
+	     locks. The quest completes only the chosen gate's unique analysis ID;
+	     that project still needs normal research and the other four stay locked. -->
+	<ThingDef Name="RobCoQuestResearchGateBase" ParentName="SubcoreBase" Abstract="True">
+		<description>An internal quest gate. This item cannot be obtained during normal play; choose the corresponding Platinum Chip courier contract to unlock this RobCo special project.</description>
+		<graphicData>
+			<texPath>FIP-RobCo/Misc/RobCo_PlatinumChip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCoQuestResearchGateBase">
+		<defName>RobCo_QuestResearchGate_LibertyPrime</defName>
+		<label>Questitem (Liberty Prime path)</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202602</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Quest gate analyzed: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>{RESEARCH} has been unlocked.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>This quest-only gate is not intended to exist in normal play.</activateDescString>
+				<jobString>Analyze quest gate</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Quest-only research gate.</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCoQuestResearchGateBase">
+		<defName>RobCo_QuestResearchGate_WarMachine</defName>
+		<label>Questitem (War Machine path)</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202603</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Quest gate analyzed: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>{RESEARCH} has been unlocked.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>This quest-only gate is not intended to exist in normal play.</activateDescString>
+				<jobString>Analyze quest gate</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Quest-only research gate.</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCoQuestResearchGateBase">
+		<defName>RobCo_QuestResearchGate_Pacificator</defName>
+		<label>Questitem (Pacificator path)</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202604</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Quest gate analyzed: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>{RESEARCH} has been unlocked.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>This quest-only gate is not intended to exist in normal play.</activateDescString>
+				<jobString>Analyze quest gate</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Quest-only research gate.</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCoQuestResearchGateBase">
+		<defName>RobCo_QuestResearchGate_Synths</defName>
+		<label>Questitem (Synth path)</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202605</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Quest gate analyzed: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>{RESEARCH} has been unlocked.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>This quest-only gate is not intended to exist in normal play.</activateDescString>
+				<jobString>Analyze quest gate</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Quest-only research gate.</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="RobCoQuestResearchGateBase">
+		<defName>RobCo_QuestResearchGate_ThinkTank</defName>
+		<label>Questitem (Think Tank path)</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1804202606</analysisID>
+				<requiresMechanitor>true</requiresMechanitor>
+				<analysisDurationHours>1</analysisDurationHours>
+				<destroyedOnAnalyzed>false</destroyedOnAnalyzed>
+				<completedLetterLabel>Quest gate analyzed: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>{RESEARCH} has been unlocked.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>This quest-only gate is not intended to exist in normal play.</activateDescString>
+				<jobString>Analyze quest gate</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Quest-only research gate.</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
