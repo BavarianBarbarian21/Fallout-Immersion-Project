@@ -131,10 +131,27 @@
         <bleedRate>0</bleedRate>
     </BodyPartDef>
 
-    <!-- Specific to Eyebot since they don't have a part that can manipulate -->
+    <!-- Armless robots with integrated equipment weapons still need a
+         ManipulationLimbCore for RimWorld's weapon generator. -->
     <BodyPartDef ParentName="MechanicalThorax">
         <defName>RobCo_ChassisCanManipulate</defName>
         <label>chassis</label>
+        <tags>
+            <li>ManipulationLimbCore</li>
+        </tags>
+    </BodyPartDef>
+
+    <!-- Cyberdogs use their sonic emitter as an equipment weapon rather than
+         a native race verb, so it supplies their virtual manipulation limb. -->
+    <BodyPartDef>
+        <defName>RobCo_IntegratedWeaponMount</defName>
+        <label>integrated weapon mount</label>
+        <hitPoints>15</hitPoints>
+        <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+        <skinCovered>false</skinCovered>
+        <solid>true</solid>
+        <alive>false</alive>
+        <bleedRate>0</bleedRate>
         <tags>
             <li>ManipulationLimbCore</li>
         </tags>

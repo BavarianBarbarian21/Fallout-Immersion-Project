@@ -4,7 +4,9 @@
 		<defName>RobCo_Liberator</defName>
 		<label>liberator</label>
 		<corePart>
-			<def>RobCo_Chassis</def>
+			<!-- The built-in laser is represented as equipment, so the chassis
+			     must provide Manipulation during pawn generation. -->
+			<def>RobCo_ChassisCanManipulate</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<groups><li>Torso</li></groups>
