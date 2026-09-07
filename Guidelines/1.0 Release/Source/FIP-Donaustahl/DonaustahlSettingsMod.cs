@@ -57,20 +57,20 @@ public sealed class DonaustahlSettingsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive core content");
         Text.Font = GameFont.Small;
-        listing.Label("Enabled options suppress replaced vanilla content while keeping its Defs available for compatibility.");
+        listing.Label("These options hide content that does not fit the Fallout setting. Disable an option to restore that content. All options are enabled by default.");
         listing.GapLine();
 
         bool backstories = Settings.onlyImmersiveBackstories;
         listing.CheckboxLabeled("Only immersive backstories", ref backstories,
-            "Hides the Vanilla and Vanilla Expanded backstories replaced by Donaustahl. Restart required.");
+            "Removes certain character backstories that do not fit FIP. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool relics = Settings.onlyImmersiveEquipmentRelics;
         listing.CheckboxLabeled("Only immersive equipment relics", ref relics,
-            "Removes original relic eligibility from apparel, armour, weapons, and artifacts covered by FIP. Restart required.");
+            "Prevents ordinary clothing, armour, and weapons from being chosen as ideology relics. Disable this option to allow them again. Enabled by default. Restart required.");
 
         bool storytellers = Settings.onlyImmersiveStorytellers;
         listing.CheckboxLabeled("Only immersive storytellers", ref storytellers,
-            "Hides Cassandra, Phoebe, and Randy from storyteller selection. Restart required.");
+            "Removes Cassandra, Phoebe, and Randy from storyteller selection. Disable this option to restore them. Enabled by default. Restart required.");
 
         if (backstories != Settings.onlyImmersiveBackstories || relics != Settings.onlyImmersiveEquipmentRelics || storytellers != Settings.onlyImmersiveStorytellers)
         {
@@ -176,7 +176,8 @@ internal static class DonaustahlRestoreApplier
 
     private static bool IsEquipment(ThingDef def)
     {
-        return def.apparel != null || def.IsWeapon || def.defName.Contains("Apparel") || def.defName.Contains("Armor")
-            || def.defName.Contains("Weapon") || def.defName.Contains("Gun") || def.defName.Contains("Melee");
+        // Inherited apparel/weapon properties identify equipment after loading;
+        // substrings also matched unrelated things such as weapon display cases.
+        return def.apparel != null || def.IsWeapon;
     }
 }

@@ -113,20 +113,7 @@
     </value>
   </Operation>
   -->
-  <!-- Settings-controlled construction suppression is applied after defs load.
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[designationCategory="Structure" and defName!="VFEM2_Palisade"]/designationCategory</xpath>
-  </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[category="Building" and starts-with(defName,"VFEM2_") and defName!="VFEM2_Palisade" and defName!="VFEM2_ArcheryTarget" and defName!="VFEM2_TrainingDummy"]/designationCategory</xpath>
-  </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/VFEMedieval.CobblestoneWallTemplateDef/designatorDropdown</xpath>
-  </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[comps/li/@Class="VFEMedieval.CompProperties_EditHeraldic"]/designationCategory</xpath>
-  </Operation>
-  -->
+  <!-- Building visibility is applied by HHToolsRestoreApplier, scoped to Medieval buildings. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="VFEM2_ArcheryTarget"]/graphicData/texPath</xpath>
     <value>
@@ -145,41 +132,7 @@
       <uiIconPath>FIP-H&amp;HTools/TrainingDummy/HHTools_TrainingDummy_MenuIcon</uiIconPath>
     </value>
   </Operation>
-  <!-- Settings-controlled equipment and quest suppression is applied after defs load.
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/thingCategories/li[text()="Textiles"]</xpath>
-  </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]</xpath>
-    <value>
-      <generateCommonality>0</generateCommonality>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock" or starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_") or defName="VFEM2_Apparel_TorchBelt"]/recipeMaker/recipeUsers</xpath>
-    <value>
-      <recipeUsers Inherit="False" />
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath>
-    <value>
-      <generateAllowChance>0</generateAllowChance>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_Skirmish"]/rootSelectionWeight</xpath>
-    <value>
-      <rootSelectionWeight>0</rootSelectionWeight>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/QuestScriptDef[defName="VFEM2_OpportunitySite_SiegeCamp"]/rootSelectionWeight</xpath>
-    <value>
-      <rootSelectionWeight>0</rootSelectionWeight>
-    </value>
-  </Operation>
-  -->
+  <!-- Equipment and textiles use HHTools_OptionalMedievalContent.xml; quests use HHToolsRestoreApplier. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath>
     <value>

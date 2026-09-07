@@ -45,11 +45,11 @@ public sealed class WhitespringSettingsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive storytellers");
         Text.Font = GameFont.Small;
-        listing.Label("Keep storyteller selection focused on the curated Fallout experience.");
+        listing.Label("This option hides storytellers that do not fit FIP. Disable it to restore them. It is enabled by default.");
         listing.GapLine();
         bool value = settings.onlyImmersiveStorytellers;
         listing.CheckboxLabeled("Only immersive storytellers", ref value,
-            "Hides Ariadne Archduchess and Damocles from storyteller selection. Restart required.");
+            "Removes Ariadne Archduchess and Damocles from storyteller selection. Disable this option to restore them. Enabled by default. Restart required.");
         if (value != settings.onlyImmersiveStorytellers)
         {
             settings.onlyImmersiveStorytellers = value;

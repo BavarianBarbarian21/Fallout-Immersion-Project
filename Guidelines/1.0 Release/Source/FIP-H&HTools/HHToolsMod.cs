@@ -12,6 +12,8 @@ public sealed class HHToolsModSettings : ModSettings
     public bool onlyImmersiveBuildings = true;
     public bool onlyImmersiveWeapons = true;
     public bool onlyImmersiveApparel = true;
+    public bool onlyImmersiveTextiles = true;
+    public bool onlyImmersiveIdeologyOrigins = true;
     public bool onlyImmersiveQuests = true;
     public bool onlyImmersiveStorytellers = true;
 
@@ -22,6 +24,8 @@ public sealed class HHToolsModSettings : ModSettings
         LookImmersive(ref onlyImmersiveBuildings, "onlyImmersiveBuildings", "restoreBuildings");
         LookImmersive(ref onlyImmersiveWeapons, "onlyImmersiveWeapons", "restoreWeapons");
         LookImmersive(ref onlyImmersiveApparel, "onlyImmersiveApparel", "restoreApparel");
+        LookImmersive(ref onlyImmersiveTextiles, "onlyImmersiveTextiles", "restoreTextiles");
+        LookImmersive(ref onlyImmersiveIdeologyOrigins, "onlyImmersiveIdeologyOrigins", "restoreIdeologyOrigins");
         LookImmersive(ref onlyImmersiveQuests, "onlyImmersiveQuests", "restoreQuests");
         LookImmersive(ref onlyImmersiveStorytellers, "onlyImmersiveStorytellers", "restoreStorytellers");
     }
@@ -69,17 +73,17 @@ public sealed class HHToolsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive world generation");
         Text.Font = GameFont.Small;
-        listing.Label("Enabled options keep replaced Medieval, Tribal, and Settlers content out of normal selection and generation.");
+        listing.Label("These options hide content that FIP replaces. Disable an option to restore that content. All options are enabled by default.");
         listing.GapLine();
 
         bool factions = Settings.onlyImmersiveFactions;
         listing.CheckboxLabeled(
             "Only immersive factions",
             ref factions,
-            "Hides the replaced Core, Biotech, Settlers, and Medieval faction templates from selection and world generation. Requires a new world.");
+            "Removes original factions that are replaced by FIP factions. Disable this option to restore them. Enabled by default. Start a new world after changing it.");
 
         bool scenarios = Settings.onlyImmersiveScenarios;
-        listing.CheckboxLabeled("Only immersive scenarios", ref scenarios, "Hides the original Medieval and Settlers scenarios, including New Kingdom. Restart required.");
+        listing.CheckboxLabeled("Only immersive scenarios", ref scenarios, "Removes original Medieval and Settlers starting scenarios, such as New Kingdom. Disable this option to restore them. Enabled by default. Restart required.");
 
         listing.Gap();
         Text.Font = GameFont.Medium;
@@ -88,25 +92,33 @@ public sealed class HHToolsMod : Mod
         listing.GapLine();
 
         bool buildings = Settings.onlyImmersiveBuildings;
-        listing.CheckboxLabeled("Only immersive buildings", ref buildings, "Hides replaced Medieval construction designations and categories. Restart required.");
+        listing.CheckboxLabeled("Only immersive buildings", ref buildings, "Removes most Medieval buildings that FIP replaces. Normal walls and unrelated buildings are unaffected. Disable this option to restore the Medieval buildings. Enabled by default. Restart required.");
 
         bool weapons = Settings.onlyImmersiveWeapons;
-        listing.CheckboxLabeled("Only immersive weapons", ref weapons, "Removes replaced Medieval weapons from crafting and normal generation. Restart required.");
+        listing.CheckboxLabeled("Only immersive weapons", ref weapons, "Removes Medieval weapons that do not fit FIP from crafting and normal gameplay. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool apparel = Settings.onlyImmersiveApparel;
-        listing.CheckboxLabeled("Only immersive apparel", ref apparel, "Removes replaced Medieval apparel and shields from crafting and normal generation. Restart required.");
+        listing.CheckboxLabeled("Only immersive apparel", ref apparel, "Removes Medieval clothing, armour, and shields that do not fit FIP. Disable this option to restore them. Enabled by default. Restart required.");
+
+        bool textiles = Settings.onlyImmersiveTextiles;
+        listing.CheckboxLabeled("Only immersive textiles", ref textiles, "Removes Medieval textiles that do not fit FIP from normal item selection. Disable this option to restore them. Enabled by default. Restart required.");
+
+        bool origins = Settings.onlyImmersiveIdeologyOrigins;
+        listing.CheckboxLabeled("Only immersive Medieval ideology origins", ref origins, "Removes the Medieval Norse ideology origin. Disable this option to restore it. Enabled by default. Restart required.");
 
         bool quests = Settings.onlyImmersiveQuests;
-        listing.CheckboxLabeled("Only immersive quests", ref quests, "Disables the replaced Medieval and Settlers quests. Restart required.");
+        listing.CheckboxLabeled("Only immersive quests", ref quests, "Removes certain Medieval and Settlers quests that do not fit FIP. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool storytellers = Settings.onlyImmersiveStorytellers;
-        listing.CheckboxLabeled("Only immersive storytellers", ref storytellers, "Hides Maynard, Talon, and Diego Dire from storyteller selection. Restart required.");
+        listing.CheckboxLabeled("Only immersive storytellers", ref storytellers, "Removes Maynard, Talon, and Diego Dire from storyteller selection. Disable this option to restore them. Enabled by default. Restart required.");
 
         if (factions != Settings.onlyImmersiveFactions
             || scenarios != Settings.onlyImmersiveScenarios
             || buildings != Settings.onlyImmersiveBuildings
             || weapons != Settings.onlyImmersiveWeapons
             || apparel != Settings.onlyImmersiveApparel
+            || textiles != Settings.onlyImmersiveTextiles
+            || origins != Settings.onlyImmersiveIdeologyOrigins
             || quests != Settings.onlyImmersiveQuests
             || storytellers != Settings.onlyImmersiveStorytellers)
         {
@@ -115,6 +127,8 @@ public sealed class HHToolsMod : Mod
             Settings.onlyImmersiveBuildings = buildings;
             Settings.onlyImmersiveWeapons = weapons;
             Settings.onlyImmersiveApparel = apparel;
+            Settings.onlyImmersiveTextiles = textiles;
+            Settings.onlyImmersiveIdeologyOrigins = origins;
             Settings.onlyImmersiveQuests = quests;
             Settings.onlyImmersiveStorytellers = storytellers;
             HHToolsRestoreApplier.Apply(Settings);

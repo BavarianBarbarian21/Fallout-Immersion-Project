@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. Trader and caravan sources stay untouched. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>native</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs//li[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", normalize-space(.), "|"))]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/FactionDef//*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
+        </match>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

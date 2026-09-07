@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. ThingSetMaker and caravan sources stay untouched. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>odyssey</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingSetMakerDef//li[normalize-space(.)="EggFlamingoFertilized" or normalize-space(.)="EggPeacockFertilized" or normalize-space(.)="EggPenguinFertilized"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingSetMakerDef//li[thingSetMaker/pawnKind="Capybara" or thingSetMaker/pawnKind="Monkey" or thingSetMaker/pawnKind="Crow" or thingSetMaker/pawnKind="Flamingo" or thingSetMaker/pawnKind="MonitorLizard"]</xpath>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
+        </match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
+        </match>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

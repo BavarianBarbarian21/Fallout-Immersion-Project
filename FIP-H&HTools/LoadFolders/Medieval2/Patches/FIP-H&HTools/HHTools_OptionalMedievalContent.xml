@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="FIP.HHTools.PatchOperationIfImmersive">
+    <setting>weapons</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock"]/generateCommonality</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock"]</xpath>
+        <value><generateCommonality>0</generateCommonality></value>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock"]/recipeMaker/recipeUsers</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_MeleeWeapon_") or defName="VFEM2_ThrowingAxe" or defName="VFEM2_Gun_Arquebus" or defName="VFEM2_Gun_HandCannon" or defName="VFEM2_Arbalest" or defName="VFEM2_Warbow" or defName="VFEM2_Gun_Musket" or defName="VFEM2_Gun_Flintlock"]/recipeMaker</xpath>
+        <value><recipeUsers Inherit="False" /></value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="FIP.HHTools.PatchOperationIfImmersive">
+    <setting>apparel</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_")]/generateCommonality</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_")]</xpath>
+        <value><generateCommonality>0</generateCommonality></value>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_")]/recipeMaker/recipeUsers</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[starts-with(defName,"VFEM2_Apparel_") or starts-with(defName,"VFEM2_Shield_")]/recipeMaker</xpath>
+        <value><recipeUsers Inherit="False" /></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="VFEM2_Apparel_TorchBelt"]/generateAllowChance</xpath>
+        <value><generateAllowChance>0</generateAllowChance></value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="FIP.HHTools.PatchOperationIfImmersive">
+    <setting>textiles</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[thingCategories/li="Textiles" and starts-with(defName,"VFEM2_")]/thingCategories/li[text()="Textiles"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="FIP.HHTools.PatchOperationIfImmersive">
+    <setting>buildings</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/VFEMedieval.CobblestoneWallTemplateDef/designatorDropdown</xpath>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

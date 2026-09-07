@@ -50,11 +50,11 @@ public sealed class Lucky38SettingsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive research");
         Text.Font = GameFont.Small;
-        listing.Label("Keep overlapping research integrated into the curated FIP technology tree.");
+        listing.Label("This option combines overlapping research to better fit FIP. Disable it to restore the original research layout. It is enabled by default.");
         listing.GapLine();
         bool value = settings.onlyImmersiveResearchTree;
         listing.CheckboxLabeled("Only immersive research tree", ref value,
-            "Integrates Brewing projects into Cooking and hides the separate Brewing and schematic tabs. Restart required.");
+            "Moves Brewing research into the Cooking tree and removes the separate Brewing category. Disable this option to restore the original layout. Enabled by default. Restart required.");
         if (value != settings.onlyImmersiveResearchTree)
         {
             settings.onlyImmersiveResearchTree = value;

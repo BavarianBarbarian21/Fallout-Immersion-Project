@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>royalAnimals</setting>
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
+        <match Class="PatchOperationRemove">
+          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
+        </match>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

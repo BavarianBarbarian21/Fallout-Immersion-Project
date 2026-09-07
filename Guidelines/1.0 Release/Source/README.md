@@ -7,15 +7,16 @@ Release-Module im Repository-Root. Historische Projektstände unter
 ## Enthaltene Projekte
 
 - FIP-Arktos: 15 getrennte, save- und reflection-kompatibel beibehaltene
-  Assemblies.
+  Assemblies sowie die ModSettings-Assembly.
+- Donaustahl, Hubris und Whitespring: jeweils eine ModSettings-Assembly.
 - FIP-Greenway: eine Assembly.
 - FIP-H&HTools: eine Assembly.
-- FIP-Lucky 38: eine Assembly.
-- FIP-RobCo: eine Assembly.
-- FIP-WestTek: eine Assembly.
+- FIP-Lucky 38: Settings- und Harmony-Assembly.
+- FIP-RobCo: Basis- und Harmony-Assembly.
+- FIP-WestTek: Basis- und Harmony-Assembly.
 
-Die Projektmappe `FIP.Managed.sln` enthält damit 20 Projekte. Big MT ist nicht
-enthalten und bleibt aus dieser Version vollständig ausgeschlossen.
+Die Projektmappe `FIP.Managed.sln` enthält auch alle neun ModSettings-Module.
+Big MT hat hier kein C#-Projekt; sein spielbares Modul liegt im Repository-Root.
 
 ## Gemeinsamer Build
 
@@ -39,5 +40,6 @@ dotnet build .\FIP.Managed.sln -c Release
 
 Für eine reine Prüfung müssen `OutputPath`, `BaseIntermediateOutputPath` und
 `MSBuildProjectExtensionsPath` auf ein temporäres Verzeichnis umgeleitet
-werden. Der abschließende Refactoring-Build aller 20 Projekte lief isoliert mit
-0 Warnungen und 0 Fehlern.
+werden. Die Modoptionen können nach dem Build mit
+`../Tools/ModOptionsRegression/Run.ps1` gegen die erzeugten Assemblies geprüft
+werden. Umfang und Grenzen stehen in der dortigen README.
