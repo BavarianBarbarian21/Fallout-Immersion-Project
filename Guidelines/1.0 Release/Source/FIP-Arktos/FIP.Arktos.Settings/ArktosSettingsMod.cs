@@ -54,19 +54,19 @@ public sealed class ArktosSettingsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive wildlife");
         Text.Font = GameFont.Small;
-        listing.Label("These options let FIP remove animals that do not fit the Fallout setting. Disable an option to restore that group of animals. All options are enabled by default.");
+        listing.Label("These options keep animals that do not fit the Fallout setting out of normal traders and generic animal incidents. Disable an option to allow that group again. All options are enabled by default.");
         listing.GapLine();
 
         listing.CheckboxLabeled("Only immersive native wildlife", ref Settings.onlyImmersiveNativeWildlife,
-            "Removes certain unimmersive base-game animals, such as elephants and thrumbos, from the wild, traders, and other encounters. Disable this option to restore them. Enabled by default. Restart required.");
+            "Prevents certain base-game animals, such as elephants and thrumbos, from appearing with traders or in generic animal incidents. Their defs and any special content made specifically for them remain available. Disable this option to allow them again. Enabled by default. Restart required.");
         listing.CheckboxLabeled("Only immersive Biotech wildlife", ref Settings.onlyImmersiveBiotechWildlife,
-            "Removes Toxalopes and Waste Rats from appearing in the wild. Disable this option to restore them. Enabled by default. Restart required.");
+            "Prevents Toxalopes and Waste Rats from appearing with traders or in generic animal incidents. Their defs and special content remain available. Disable this option to allow them again. Enabled by default. Restart required.");
         listing.CheckboxLabeled("Only immersive Vanilla Animals Expanded wildlife", ref Settings.onlyImmersiveVanillaAnimalsExpandedWildlife,
-            "Removes certain Vanilla Animals Expanded animals, such as lions, from the wild, traders, and other encounters. Disable this option to restore them. Enabled by default. Restart required.");
+            "Prevents certain Vanilla Animals Expanded animals, such as lions, from appearing with traders or in generic animal incidents. Their defs and special content remain available. Disable this option to allow them again. Enabled by default. Restart required.");
         listing.CheckboxLabeled("Only immersive Royal Animals wildlife", ref Settings.onlyImmersiveRoyalAnimalsWildlife,
-            "Removes certain Royal Animals wildlife that does not fit FIP. Disable this option to restore it. Enabled by default. Restart required.");
+            "Prevents selected Royal Animals wildlife from appearing with traders or in generic animal incidents. Their defs and special content remain available. Disable this option to allow them again. Enabled by default. Restart required.");
         listing.CheckboxLabeled("Only immersive Odyssey wildlife", ref Settings.onlyImmersiveOdysseyWildlife,
-            "Removes certain Odyssey animals that do not fit FIP from the wild and other encounters. Disable this option to restore them. Enabled by default. Restart required.");
+            "Prevents selected Odyssey animals from appearing with traders, in generic animal incidents, and as ordinary rare fishing catches. Their defs and special content remain available. Disable this option to allow them again. Enabled by default. Restart required.");
 
         listing.End();
     }

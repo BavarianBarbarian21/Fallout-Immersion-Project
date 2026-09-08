@@ -158,19 +158,38 @@ internal static class Program
 
     private static void TestHHTools()
     {
+        var legacySettings = (ModSettings)Activator.CreateInstance(Type("FIP.HHTools.HHToolsModSettings"));
+        Scribe.mode = LoadSaveMode.LoadingVars;
+        Scribe.loader.curXmlParent = Xml("<settings><onlyImmersiveBuildings>false</onlyImmersiveBuildings></settings>").DocumentElement;
+        legacySettings.ExposeData();
+        Check(!(bool)legacySettings.GetType().GetField("onlyImmersiveWallStructures").GetValue(legacySettings)
+            && !(bool)legacySettings.GetType().GetField("onlyImmersiveFurniture").GetValue(legacySettings), "legacy building option migrates to both precise building options");
+        Scribe.mode = LoadSaveMode.Inactive;
+        Scribe.loader.curXmlParent = null;
+
         var settings = Settings("FIP.HHTools.HHToolsMod", "FIP.HHTools.HHToolsModSettings");
         var structure = Add(new DesignationCategoryDef { defName = "Structure" });
-        var walls = new[] { "Wall", "Door", "FCP_ConcreteWall", "OtherMod_Wall", "VFEM2_Palisade", "VFEM2_ArcheryTarget", "VFEM2_TrainingDummy", "VFEM2_CobblestoneWall_Granite", "VFEM2_Hearth" }
+        var walls = new[] { "Wall", "Door", "FCP_ConcreteWall", "OtherMod_Wall", "VFEM2_Palisade", "VFEM2_ArcheryTarget", "VFEM2_TrainingDummy", "VFEM2_Apiary", "VFEM2_AlchemicalWorkbench", "VFEM2_CobblestoneWall_Granite", "VFEM2_Hearth", "VFEM2_FurBed" }
             .Select(n => Add(Thing(n, d => { d.category = ThingCategory.Building; d.designationCategory = structure; }))).ToList();
         var faction = Add(new FactionDef { defName = "OutlanderCivil", displayInFactionSelection = true, startingCountAtWorldCreation = 3, requiredCountAtGameStart = 1, maxConfigurableAtWorldCreation = 7, settlementGenerationWeight = 0.6f });
         var scenario = Add(new ScenarioDef { defName = "VFEM2_NewKingdom", scenario = new Scenario { showInUI = true } });
         var quest = Add(new QuestScriptDef { defName = "VFEM2_OpportunitySite_Skirmish", rootSelectionWeight = 1.7f });
         var teller = Add(new StorytellerDef { defName = "VFEM_MaynardMedieval", listVisible = true });
         Call("FIP.HHTools.HHToolsRestoreApplier", "Apply", settings);
-        Check(walls.Take(7).All(w => w.designationCategory == structure), "vanilla, FCP, unrelated walls and Medieval exceptions remain buildable");
-        Check(walls.Skip(7).All(w => w.designationCategory == null), "only replaced Medieval buildings hidden");
+        Check(walls.Take(9).All(w => w.designationCategory == structure), "unrelated and explicitly retained Medieval buildings remain buildable");
+        Check(walls.Skip(9).All(w => w.designationCategory == null), "selected Medieval walls and furniture hidden");
         Check(!faction.displayInFactionSelection && faction.startingCountAtWorldCreation == 0 && !scenario.scenario.showInUI && quest.rootSelectionWeight == 0 && !teller.listVisible, "H&H named content hidden");
-        foreach (string field in new[] { "onlyImmersiveBuildings", "onlyImmersiveFactions", "onlyImmersiveScenarios", "onlyImmersiveQuests", "onlyImmersiveStorytellers" }) Set(settings, field, false);
+
+        Set(settings, "onlyImmersiveWallStructures", false);
+        Call("FIP.HHTools.HHToolsRestoreApplier", "Apply", settings);
+        Check(walls[9].designationCategory == structure && walls[10].designationCategory == null && walls[11].designationCategory == null, "wall option restores walls without restoring furniture");
+
+        Set(settings, "onlyImmersiveWallStructures", true);
+        Set(settings, "onlyImmersiveFurniture", false);
+        Call("FIP.HHTools.HHToolsRestoreApplier", "Apply", settings);
+        Check(walls[9].designationCategory == null && walls[10].designationCategory == structure && walls[11].designationCategory == structure, "furniture option restores furniture without restoring walls");
+
+        foreach (string field in new[] { "onlyImmersiveWallStructures", "onlyImmersiveFurniture", "onlyImmersiveFactions", "onlyImmersiveScenarios", "onlyImmersiveQuests", "onlyImmersiveStorytellers" }) Set(settings, field, false);
         Call("FIP.HHTools.HHToolsRestoreApplier", "Apply", settings);
         Check(walls.All(w => w.designationCategory == structure), "building categories restored exactly");
         Check(faction.displayInFactionSelection && faction.startingCountAtWorldCreation == 3 && faction.requiredCountAtGameStart == 1 && faction.maxConfigurableAtWorldCreation == 7 && faction.settlementGenerationWeight == 0.6f && scenario.scenario.showInUI && quest.rootSelectionWeight == 1.7f && teller.listVisible, "H&H source values restored");
@@ -178,17 +197,22 @@ internal static class Program
         const string path = "FIP-H&HTools/LoadFolders/Medieval2/Patches/FIP-H&HTools/HHTools_OptionalMedievalContent.xml";
         const string norse = "FIP-H&HTools/LoadFolders/Medieval2_Ideology/Patches/FIP-H&HTools/HHTools_VFEMedieval2_Ideology_Compat.xml";
         string source = "<Defs>" + string.Join("", new[] { "VFEM2_MeleeWeapon_Sword", "VFEM2_Apparel_Helmet", "VFEM2_Apparel_TorchBelt", "FCP_Gun", "Apparel_Duster" }.Select(n => $"<ThingDef><defName>{n}</defName><generateCommonality>0.7</generateCommonality><generateAllowChance>0.8</generateAllowChance><recipeMaker><recipeUsers><li>Smithy</li></recipeUsers></recipeMaker></ThingDef>"))
+            + "<PawnKindDef><defName>VFEM2_TestPawn</defName><weaponTags><li>VFEM2_Warbow</li><li>Gun</li></weaponTags><apparelRequired><li>VFEM2_Apparel_Helmet</li><li>Apparel_Pants</li></apparelRequired></PawnKindDef>"
             + "<ThingDef><defName>VFEM2_Hardweave</defName><thingCategories><li>Textiles</li></thingCategories></ThingDef><VFEMedieval.CobblestoneWallTemplateDef><designatorDropdown>Walls</designatorDropdown></VFEMedieval.CobblestoneWallTemplateDef><MemeDef><defName>VFEM2_Structure_Norse</defName><randomizationSelectionWeightFactor>1</randomizationSelectionWeightFactor></MemeDef></Defs>";
         foreach (bool enabled in new[] { false, true, false })
         {
-            foreach (string field in new[] { "onlyImmersiveWeapons", "onlyImmersiveApparel", "onlyImmersiveTextiles", "onlyImmersiveBuildings", "onlyImmersiveIdeologyOrigins" }) Set(settings, field, enabled);
+            foreach (string field in new[] { "onlyImmersiveWeapons", "onlyImmersiveApparel", "onlyImmersiveWallStructures", "onlyImmersiveIdeologyOrigins" }) Set(settings, field, enabled);
             var xml = Xml(source); PatchFile(xml, path); PatchFile(xml, norse);
             if (!enabled) { Check(xml.OuterXml == Xml(source).OuterXml, "disabled H&H source gates leave all XML unchanged"); continue; }
             Check(xml.SelectNodes("/Defs/ThingDef[starts-with(defName,'VFEM2_')]/recipeMaker/recipeUsers/li").Count == 0, "Medieval crafting recipe users removed before generation");
             Check(xml.SelectNodes("/Defs/ThingDef[defName='FCP_Gun' or defName='Apparel_Duster']/recipeMaker/recipeUsers/li").Count == 2, "unrelated crafting intact");
             Check(xml.SelectSingleNode("/Defs/ThingDef[defName='VFEM2_MeleeWeapon_Sword']/generateAllowChance").InnerText == "0.8", "weapon allow chance not broadened beyond original patch");
             Check(xml.SelectSingleNode("/Defs/ThingDef[defName='VFEM2_Apparel_TorchBelt']/generateAllowChance").InnerText == "0", "TorchBelt original special rule");
-            Check(xml.SelectSingleNode("/Defs/ThingDef[defName='VFEM2_Hardweave']/thingCategories/li") == null, "Medieval textile category gate");
+            Check(xml.SelectSingleNode("/Defs/ThingDef[defName='VFEM2_Hardweave']/thingCategories/li").InnerText == "Textiles", "Medieval textiles remain fully available");
+            Check(xml.SelectSingleNode("/Defs/PawnKindDef[defName='VFEM2_TestPawn']/weaponTags/li[.='VFEM2_Warbow']") == null, "direct Medieval weapon tag removed from pawn generation");
+            Check(xml.SelectSingleNode("/Defs/PawnKindDef[defName='VFEM2_TestPawn']/weaponTags/li[.='Gun']") != null, "unrelated pawn weapon tag retained");
+            Check(xml.SelectSingleNode("/Defs/PawnKindDef[defName='VFEM2_TestPawn']/apparelRequired/li[.='VFEM2_Apparel_Helmet']") == null, "required Medieval apparel removed from pawn generation");
+            Check(xml.SelectSingleNode("/Defs/PawnKindDef[defName='VFEM2_TestPawn']/apparelRequired/li[.='Apparel_Pants']") != null, "vanilla required apparel retained");
             Check(xml.SelectSingleNode("/Defs/MemeDef/hiddenInChooseMemes").InnerText == "true", "Norse origin gate");
         }
         Set(settings, "onlyImmersiveWeapons", true);
@@ -209,21 +233,29 @@ internal static class Program
             "FIP-Arktos/LoadFolders/Odyssey/Patches/FIP-Arktos/Nature/Arktos_OdysseyAnimalRemovalPatch.xml"
         };
         const string source = "<Defs>"
-            + "<BiomeDef><defName>TestBiome</defName><wildAnimals><Elephant>1</Elephant><Toxalope>1</Toxalope><AEXP_Lion>1</AEXP_Lion><VAERoy_RoyalTiger>1</VAERoy_RoyalTiger><Tiger>1</Tiger><OtherMod_Animal>1</OtherMod_Animal></wildAnimals></BiomeDef>"
-            + "<ThingSetMakerDef><defName>TraderStock</defName><items><li>Elephant</li><li>Toxalope</li><li>AEXP_Lion</li><li>VAERoy_RoyalTiger</li><li>Tiger</li><li>OtherMod_Animal</li><li>EggFlamingoFertilized</li><li><thingSetMaker><pawnKind>Crow</pawnKind></thingSetMaker></li></items></ThingSetMakerDef>"
+            + "<BiomeDef><defName>TestBiome</defName><wildAnimals><Elephant>1</Elephant><Toxalope>1</Toxalope><AEXP_Lion>1</AEXP_Lion><VAERoy_RoyalTiger>1</VAERoy_RoyalTiger><Tiger>1</Tiger></wildAnimals></BiomeDef>"
+            + "<ThingDef><defName>Elephant</defName><tradeTags><li>AnimalCommon</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>Toxalope</defName><tradeTags><li>AnimalUncommon</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>AEXP_Lion</defName><tradeTags><li>AnimalUncommon</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>VAERoy_RoyalTiger</defName><tradeTags><li>AnimalExotic</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>Tiger</defName><tradeTags><li>AnimalExotic</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>OtherMod_Animal</defName><tradeTags><li>AnimalCommon</li></tradeTags><race><canArriveManhunter>true</canArriveManhunter></race></ThingDef>"
+            + "<ThingDef><defName>EggChickenFertilized</defName><tradeability>All</tradeability><comps><li><hatcherPawn>Chicken</hatcherPawn></li></comps></ThingDef>"
+            + "<ThingDef><defName>EggEmuUnfertilized</defName><tradeability>All</tradeability></ThingDef>"
+            + "<ThingDef><defName>AEXP_EggCrocodileFertilized</defName><tradeability>All</tradeability><comps><li><hatcherPawn>AEXP_Crocodile</hatcherPawn></li></comps></ThingDef>"
+            + "<ThingDef><defName>AEXP_EggPlatypusUnfertilized</defName><tradeability>All</tradeability></ThingDef>"
+            + "<ThingDef><defName>VAERoy_EggMegaChickenFertilized</defName><tradeability>All</tradeability><comps><li><hatcherPawn>VAERoy_Megachicken</hatcherPawn></li></comps></ThingDef>"
+            + "<ThingDef><defName>VAERoy_EggMegaChickenUnfertilized</defName><tradeability>All</tradeability></ThingDef>"
+            + "<ThingDef><defName>EggFlamingoFertilized</defName><tradeability>All</tradeability></ThingDef>"
+            + "<ThingDef><defName>EggAlligatorUnfertilized</defName><tradeability>All</tradeability></ThingDef>"
+            + "<ThingSetMakerDef><defName>RareFishingCatches_Hot</defName><items><li>EggFlamingoFertilized</li><li><thingSetMaker><pawnKind>Crow</pawnKind></thingSetMaker></li></items></ThingSetMakerDef>"
+            + "<ThingSetMakerDef><defName>DedicatedCrowEvent</defName><items><li><thingSetMaker><pawnKind>Crow</pawnKind></thingSetMaker></li></items></ThingSetMakerDef>"
             + "<FactionDef><defName>TestFaction</defName><carriers><Elephant>1</Elephant><OtherMod_Animal>1</OtherMod_Animal></carriers></FactionDef>"
             + "</Defs>";
 
         foreach (string option in options) Set(settings, option, false);
         for (int i = 0; i < files.Length; i++)
         {
-            string archivedPath = Directory.GetFiles(Path.Combine(root, "Outdated/New-Mods/FIP-Arktos"), Path.GetFileName(files[i]), SearchOption.AllDirectories).Single();
-            var archivedPatch = new XmlDocument(); archivedPatch.Load(archivedPath);
-            var activePatch = new XmlDocument(); activePatch.Load(Path.Combine(root, files[i]));
-            string[] archivedXpaths = archivedPatch.SelectNodes("//xpath").Cast<XmlNode>().Select(n => n.InnerText).ToArray();
-            string[] activeXpaths = activePatch.SelectNodes("//xpath").Cast<XmlNode>().Select(n => n.InnerText).ToArray();
-            Check(archivedXpaths.SequenceEqual(activeXpaths), "Arktos removal scope exactly matches archived patch: " + Path.GetFileName(files[i]));
-
             var disabled = Xml(source);
             PatchFile(disabled, files[i]);
             Check(disabled.OuterXml == Xml(source).OuterXml, "disabled Arktos gate leaves source XML unchanged: " + options[i]);
@@ -235,38 +267,46 @@ internal static class Program
             Set(settings, options[i], true);
             var enabled = Xml(source);
             PatchFile(enabled, files[i]);
-            Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/OtherMod_Animal") != null, "Arktos preserves unrelated biome animals: " + options[i]);
-            Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='OtherMod_Animal']") != null, "Arktos preserves unrelated encounter entries: " + options[i]);
+            Check(enabled.SelectNodes("/Defs/BiomeDef/wildAnimals/*").Count == 5, "Arktos leaves biome spawn lists untouched: " + options[i]);
+            Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='OtherMod_Animal']/tradeTags/li") != null, "Arktos preserves unrelated trader tags: " + options[i]);
 
             if (i == 0)
             {
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/Elephant") == null, "native option removes original biome target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='Elephant']") == null, "native option removes original trader target");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Elephant']/tradeTags/li") == null, "native option removes original trader tag");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Elephant']/race/canArriveManhunter").InnerText == "false", "native option blocks generic manhunter selection");
                 Check(enabled.SelectSingleNode("/Defs/FactionDef/carriers/Elephant") == null, "native option removes original faction dictionary target");
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/AEXP_Lion") != null, "native option leaves VAE independent");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='EggChickenFertilized']/tradeability").InnerText == "None", "native option keeps egg def while preventing trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='EggEmuUnfertilized']/tradeability").InnerText == "None", "native option also prevents unfertilized egg trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='AEXP_Lion']/tradeTags/li") != null, "native option leaves VAE independent");
             }
             else if (i == 1)
             {
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/Toxalope") == null, "Biotech option removes original biome target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='Toxalope']") != null, "Biotech option keeps non-biome references like original patch");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Toxalope']/tradeTags/li") == null, "Biotech option removes trader tag");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Toxalope']/race/canArriveManhunter").InnerText == "false", "Biotech option blocks generic manhunter selection");
             }
             else if (i == 2)
             {
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/AEXP_Lion") == null, "VAE option removes lion from biomes");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='AEXP_Lion']") == null, "VAE option removes lion from trader and encounter lists");
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/Elephant") != null, "VAE option leaves native wildlife independent");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='AEXP_Lion']/tradeTags/li") == null, "VAE option removes lion trader tag");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='AEXP_Lion']/race/canArriveManhunter").InnerText == "false", "VAE option blocks lion in generic manhunter incidents");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='AEXP_EggCrocodileFertilized']/tradeability").InnerText == "None", "VAE option keeps egg def while preventing trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='AEXP_EggPlatypusUnfertilized']/tradeability").InnerText == "None", "VAE option also prevents unfertilized egg trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Elephant']/tradeTags/li") != null, "VAE option leaves native wildlife independent");
             }
             else if (i == 3)
             {
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/VAERoy_RoyalTiger") == null, "Royal Animals option removes original biome target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='VAERoy_RoyalTiger']") != null, "Royal Animals option keeps non-biome references like original patch");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='VAERoy_RoyalTiger']/tradeTags/li") == null, "Royal Animals option removes trader tag");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='VAERoy_RoyalTiger']/race/canArriveManhunter").InnerText == "false", "Royal Animals option blocks generic manhunter selection");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='VAERoy_EggMegaChickenFertilized']/tradeability").InnerText == "None", "Royal Animals option keeps egg def while preventing trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='VAERoy_EggMegaChickenUnfertilized']/tradeability").InnerText == "None", "Royal Animals option also prevents unfertilized egg trader stock");
             }
             else
             {
-                Check(enabled.SelectSingleNode("/Defs/BiomeDef/wildAnimals/Tiger") == null, "Odyssey option removes original biome target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='Tiger']") == null, "Odyssey option removes original encounter target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[normalize-space(.)='EggFlamingoFertilized']") == null, "Odyssey option removes original egg target");
-                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef/items/li[thingSetMaker/pawnKind='Crow']") == null, "Odyssey option removes original nested pawn target");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='Tiger']/tradeTags/li") == null, "Odyssey option removes trader tag");
+                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef[defName='RareFishingCatches_Hot']//li[normalize-space(.)='EggFlamingoFertilized']") == null, "Odyssey option removes egg from generic rare fishing catches");
+                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef[defName='RareFishingCatches_Hot']//li[thingSetMaker/pawnKind='Crow']") == null, "Odyssey option removes animal from generic rare fishing catches");
+                Check(enabled.SelectSingleNode("/Defs/ThingSetMakerDef[defName='DedicatedCrowEvent']//li[thingSetMaker/pawnKind='Crow']") != null, "Odyssey option preserves dedicated animal content");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='EggFlamingoFertilized']/tradeability").InnerText == "None", "Odyssey option keeps egg def while preventing trader stock");
+                Check(enabled.SelectSingleNode("/Defs/ThingDef[defName='EggAlligatorUnfertilized']/tradeability").InnerText == "None", "Odyssey option also prevents unfertilized egg trader stock");
             }
         }
     }

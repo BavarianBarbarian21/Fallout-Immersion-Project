@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -40,7 +39,8 @@ internal static class HHToolsRestoreApplier
     private static readonly Dictionary<string, bool> ScenarioStates = new();
     private static readonly Dictionary<string, float> QuestStates = new();
     private static readonly Dictionary<string, bool> StorytellerStates = new();
-    private static readonly Dictionary<string, BuildingState> BuildingStates = new();
+    private static readonly Dictionary<string, BuildingState> WallStructureStates = new();
+    private static readonly Dictionary<string, BuildingState> FurnitureStates = new();
     private static bool initialized;
 
     public static void Initialize()
@@ -73,7 +73,8 @@ internal static class HHToolsRestoreApplier
 
         ApplyFactions(settings.onlyImmersiveFactions);
         ApplyScenarios(settings.onlyImmersiveScenarios);
-        ApplyBuildings(settings.onlyImmersiveBuildings);
+        ApplyBuildings(WallStructureStates, settings.onlyImmersiveWallStructures);
+        ApplyBuildings(FurnitureStates, settings.onlyImmersiveFurniture);
         ApplyQuests(settings.onlyImmersiveQuests);
         ApplyStorytellers(settings.onlyImmersiveStorytellers);
     }
@@ -193,35 +194,57 @@ internal static class HHToolsRestoreApplier
     {
         foreach (ThingDef def in DefDatabase<ThingDef>.AllDefsListForReading)
         {
-            if (def == null || !IsTargetBuilding(def))
+            if (def == null || def.category != ThingCategory.Building || def.defName.NullOrEmpty())
             {
                 continue;
             }
 
-            BuildingStates[def.defName] = new BuildingState
+            Dictionary<string, BuildingState> target = IsWallStructure(def.defName)
+                ? WallStructureStates
+                : IsFurniture(def.defName) ? FurnitureStates : null;
+            if (target == null)
+            {
+                continue;
+            }
+
+            target[def.defName] = new BuildingState
             {
                 DesignationCategory = def.designationCategory
             };
         }
     }
 
-    private static bool IsTargetBuilding(ThingDef def)
+    private static bool IsWallStructure(string defName)
     {
-        if (def.defName == "VFEM2_Palisade" || def.defName == "VFEM2_ArcheryTarget" || def.defName == "VFEM2_TrainingDummy")
-        {
-            return false;
-        }
-
-        // The old Sunset XML selected every Structure def, including vanilla
-        // walls. Only the replaced Medieval buildings belong to this option.
-        return def.category == ThingCategory.Building
-            && ((def.defName != null && def.defName.StartsWith("VFEM2_"))
-                || def.comps?.Any(comp => comp?.GetType().FullName == "VFEMedieval.CompProperties_EditHeraldic") == true);
+        return defName == "VFEM2_Turret_WallMountedArbalest"
+            || defName == "VFEM2_Turret_WallMountedArquebus"
+            || defName == "VFEM2_2x1CastleDoor"
+            || defName == "VFEM2_3x1CastleDoor"
+            || defName == "VFEM2_4x1CastleDoor"
+            || defName == "VFEM2_2x1CastleGate"
+            || defName == "VFEM2_3x1CastleGate"
+            || defName == "VFEM2_4x1CastleGate"
+            || defName == "VFEM2_CastleWall"
+            || defName == "VFEM2_LowCastleWall"
+            || defName == "VFEM2_ClothWall"
+            || defName == "VFEM2_TimberedWall"
+            || defName.StartsWith("VFEM2_CobblestoneWall_");
     }
 
-    private static void ApplyBuildings(bool hide)
+    private static bool IsFurniture(string defName)
     {
-        foreach ((string defName, BuildingState state) in BuildingStates)
+        return defName == "VFEM2_FurBed"
+            || defName == "VFEM2_DoubleFurBed"
+            || defName == "VFEM2_Hearth"
+            || defName == "VFEM2_StandingBanner"
+            || defName == "VFEM2_HeraldicRugNarrow"
+            || defName == "VFEM2_HeraldicRugBroad"
+            || defName == "VFEM2_HeraldicRugGrand";
+    }
+
+    private static void ApplyBuildings(Dictionary<string, BuildingState> states, bool hide)
+    {
+        foreach ((string defName, BuildingState state) in states)
         {
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
             if (def == null)

@@ -9,10 +9,10 @@ public sealed class HHToolsModSettings : ModSettings
 {
     public bool onlyImmersiveFactions = true;
     public bool onlyImmersiveScenarios = true;
-    public bool onlyImmersiveBuildings = true;
+    public bool onlyImmersiveWallStructures = true;
+    public bool onlyImmersiveFurniture = true;
     public bool onlyImmersiveWeapons = true;
     public bool onlyImmersiveApparel = true;
-    public bool onlyImmersiveTextiles = true;
     public bool onlyImmersiveIdeologyOrigins = true;
     public bool onlyImmersiveQuests = true;
     public bool onlyImmersiveStorytellers = true;
@@ -21,13 +21,51 @@ public sealed class HHToolsModSettings : ModSettings
     {
         LookImmersive(ref onlyImmersiveFactions, "onlyImmersiveFactions", "restoreFactions");
         LookImmersive(ref onlyImmersiveScenarios, "onlyImmersiveScenarios", "restoreScenarios");
-        LookImmersive(ref onlyImmersiveBuildings, "onlyImmersiveBuildings", "restoreBuildings");
+        LookBuildingOptions();
         LookImmersive(ref onlyImmersiveWeapons, "onlyImmersiveWeapons", "restoreWeapons");
         LookImmersive(ref onlyImmersiveApparel, "onlyImmersiveApparel", "restoreApparel");
-        LookImmersive(ref onlyImmersiveTextiles, "onlyImmersiveTextiles", "restoreTextiles");
         LookImmersive(ref onlyImmersiveIdeologyOrigins, "onlyImmersiveIdeologyOrigins", "restoreIdeologyOrigins");
         LookImmersive(ref onlyImmersiveQuests, "onlyImmersiveQuests", "restoreQuests");
         LookImmersive(ref onlyImmersiveStorytellers, "onlyImmersiveStorytellers", "restoreStorytellers");
+    }
+
+    private void LookBuildingOptions()
+    {
+        bool loading = Scribe.mode == LoadSaveMode.LoadingVars;
+        bool hasWallStructures = loading && (Scribe.loader.curXmlParent?["onlyImmersiveWallStructures"] != null
+            || Scribe.loader.curXmlParent?["restoreWallStructures"] != null);
+        bool hasFurniture = loading && (Scribe.loader.curXmlParent?["onlyImmersiveFurniture"] != null
+            || Scribe.loader.curXmlParent?["restoreFurniture"] != null);
+        bool hasLegacyBuildings = loading && Scribe.loader.curXmlParent?["onlyImmersiveBuildings"] != null;
+        bool hasLegacyRestore = loading && Scribe.loader.curXmlParent?["restoreBuildings"] != null;
+
+        LookImmersive(ref onlyImmersiveWallStructures, "onlyImmersiveWallStructures", "restoreWallStructures");
+        LookImmersive(ref onlyImmersiveFurniture, "onlyImmersiveFurniture", "restoreFurniture");
+
+        if (loading && (!hasWallStructures || !hasFurniture) && (hasLegacyBuildings || hasLegacyRestore))
+        {
+            bool legacyValue = true;
+            if (hasLegacyBuildings)
+            {
+                Scribe_Values.Look(ref legacyValue, "onlyImmersiveBuildings", true);
+            }
+            else
+            {
+                bool legacyRestore = false;
+                Scribe_Values.Look(ref legacyRestore, "restoreBuildings", false);
+                legacyValue = !legacyRestore;
+            }
+
+            if (!hasWallStructures)
+            {
+                onlyImmersiveWallStructures = legacyValue;
+            }
+
+            if (!hasFurniture)
+            {
+                onlyImmersiveFurniture = legacyValue;
+            }
+        }
     }
 
     private static void LookImmersive(ref bool value, string key, string legacyKey)
@@ -91,17 +129,17 @@ public sealed class HHToolsMod : Mod
         Text.Font = GameFont.Small;
         listing.GapLine();
 
-        bool buildings = Settings.onlyImmersiveBuildings;
-        listing.CheckboxLabeled("Only immersive buildings", ref buildings, "Removes most Medieval buildings that FIP replaces. Normal walls and unrelated buildings are unaffected. Disable this option to restore the Medieval buildings. Enabled by default. Restart required.");
+        bool wallStructures = Settings.onlyImmersiveWallStructures;
+        listing.CheckboxLabeled("Only immersive wall structures", ref wallStructures, "Hides Medieval castle walls, gates, doors, cobblestone walls, cloth and timbered walls, and wall-mounted Medieval weapons from the build menu. Disable this option to make them buildable again. Enabled by default. Restart required.");
+
+        bool furniture = Settings.onlyImmersiveFurniture;
+        listing.CheckboxLabeled("Only immersive furniture", ref furniture, "Hides Medieval fur beds, the hearth, and heraldic rugs and banners from the build menu. Disable this option to make them buildable again. Enabled by default. Restart required.");
 
         bool weapons = Settings.onlyImmersiveWeapons;
         listing.CheckboxLabeled("Only immersive weapons", ref weapons, "Removes Medieval weapons that do not fit FIP from crafting and normal gameplay. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool apparel = Settings.onlyImmersiveApparel;
         listing.CheckboxLabeled("Only immersive apparel", ref apparel, "Removes Medieval clothing, armour, and shields that do not fit FIP. Disable this option to restore them. Enabled by default. Restart required.");
-
-        bool textiles = Settings.onlyImmersiveTextiles;
-        listing.CheckboxLabeled("Only immersive textiles", ref textiles, "Removes Medieval textiles that do not fit FIP from normal item selection. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool origins = Settings.onlyImmersiveIdeologyOrigins;
         listing.CheckboxLabeled("Only immersive Medieval ideology origins", ref origins, "Removes the Medieval Norse ideology origin. Disable this option to restore it. Enabled by default. Restart required.");
@@ -114,20 +152,20 @@ public sealed class HHToolsMod : Mod
 
         if (factions != Settings.onlyImmersiveFactions
             || scenarios != Settings.onlyImmersiveScenarios
-            || buildings != Settings.onlyImmersiveBuildings
+            || wallStructures != Settings.onlyImmersiveWallStructures
+            || furniture != Settings.onlyImmersiveFurniture
             || weapons != Settings.onlyImmersiveWeapons
             || apparel != Settings.onlyImmersiveApparel
-            || textiles != Settings.onlyImmersiveTextiles
             || origins != Settings.onlyImmersiveIdeologyOrigins
             || quests != Settings.onlyImmersiveQuests
             || storytellers != Settings.onlyImmersiveStorytellers)
         {
             Settings.onlyImmersiveFactions = factions;
             Settings.onlyImmersiveScenarios = scenarios;
-            Settings.onlyImmersiveBuildings = buildings;
+            Settings.onlyImmersiveWallStructures = wallStructures;
+            Settings.onlyImmersiveFurniture = furniture;
             Settings.onlyImmersiveWeapons = weapons;
             Settings.onlyImmersiveApparel = apparel;
-            Settings.onlyImmersiveTextiles = textiles;
             Settings.onlyImmersiveIdeologyOrigins = origins;
             Settings.onlyImmersiveQuests = quests;
             Settings.onlyImmersiveStorytellers = storytellers;

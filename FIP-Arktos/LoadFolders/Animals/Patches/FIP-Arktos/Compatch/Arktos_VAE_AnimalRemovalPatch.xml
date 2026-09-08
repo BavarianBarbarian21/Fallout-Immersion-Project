@@ -3,16 +3,11 @@
   <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
     <setting>vanillaAnimalsExpanded</setting>
     <operations>
-      <li Class="PatchOperationRemove">
-        <success>Always</success>
-        <xpath>Defs//li[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", normalize-space(.), "|"))]</xpath>
-      </li>
-      <li Class="PatchOperationConditional">
-        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", name(), "|"))]</xpath>
-        <match Class="PatchOperationRemove">
-          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", name(), "|"))]</xpath>
-        </match>
-      </li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]/tradeTags/li</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]/race/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]/race</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_EggCrocodileUnfertilized|AEXP_EggCrocodileFertilized|AEXP_EggPlatypusUnfertilized|AEXP_EggPlatypusFertilized|", concat("|", defName, "|"))]/tradeability</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_EggCrocodileUnfertilized|AEXP_EggCrocodileFertilized|AEXP_EggPlatypusUnfertilized|AEXP_EggPlatypusFertilized|", concat("|", defName, "|"))]</xpath><value><tradeability>None</tradeability></value></li>
     </operations>
   </Operation>
 </Patch>

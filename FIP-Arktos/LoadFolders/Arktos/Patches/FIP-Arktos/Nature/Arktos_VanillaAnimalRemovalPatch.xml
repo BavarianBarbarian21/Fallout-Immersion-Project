@@ -3,20 +3,12 @@
   <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
     <setting>native</setting>
     <operations>
-      <li Class="PatchOperationRemove">
-        <success>Always</success>
-        <xpath>Defs//li[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", normalize-space(.), "|"))]</xpath>
-      </li>
-      <li Class="PatchOperationRemove">
-        <success>Always</success>
-        <xpath>Defs/FactionDef//*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
-      </li>
-      <li Class="PatchOperationConditional">
-        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
-        <match Class="PatchOperationRemove">
-          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath>
-        </match>
-      </li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", defName, "|"))]/tradeTags/li</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", defName, "|"))]/race/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", defName, "|"))]/race</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/FactionDef//*[contains("|Alpaca|Alphabeaver|Bear_Grizzly|Boomalope|Boomrat|Capybara|Cassowary|Chicken|Chinchilla|Cow|Deer|Donkey|Dromedary|Elephant|Elk|Emu|Fox_Fennec|Gazelle|Goat|GuineaPig|Hare|Ibex|Monkey|Ostrich|Panther|Pig|Rhinoceros|Sheep|Thrumbo|Warg|Yak|", concat("|", name(), "|"))]</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|EggChickenUnfertilized|EggChickenFertilized|EggCassowaryUnfertilized|EggCassowaryFertilized|EggEmuUnfertilized|EggEmuFertilized|EggOstrichUnfertilized|EggOstrichFertilized|", concat("|", defName, "|"))]/tradeability</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[contains("|EggChickenUnfertilized|EggChickenFertilized|EggCassowaryUnfertilized|EggCassowaryFertilized|EggEmuUnfertilized|EggEmuFertilized|EggOstrichUnfertilized|EggOstrichFertilized|", concat("|", defName, "|"))]</xpath><value><tradeability>None</tradeability></value></li>
     </operations>
   </Operation>
 </Patch>

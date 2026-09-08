@@ -68,7 +68,7 @@ public sealed class RobCoMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive mechanoids");
         Text.Font = GameFont.Small;
-        listing.Label("This option replaces original mechanoid content with the RobCo version. Disable it to restore the original content. It is enabled by default.");
+        listing.Label("This option makes RobCo mechanoids the normal mechanoid content. Disable it to restore the original alternatives. It is enabled by default.");
         listing.GapLine();
 
         bool updatedValue = Settings.onlyImmersiveMechanoids;
@@ -82,7 +82,7 @@ public sealed class RobCoMod : Mod
         Widgets.CheckboxLabeled(settingRect, "Only immersive mechanoids", ref updatedValue);
         TooltipHandler.TipRegion(
             row,
-            "Removes original mechanoids and related Mechanitor content that RobCo replaces. Disable this option to restore the original content. Enabled by default. Restart required; start a new world for encounter changes.");
+            "Prevents original mechanoids from appearing in normal encounters and hides their boss-summoning buildings from the build menu. The original defs remain available for compatibility. Disable this option to restore the original alternatives. Enabled by default. Restart required; start a new world for encounter changes.");
 
         if (updatedValue != Settings.onlyImmersiveMechanoids)
         {

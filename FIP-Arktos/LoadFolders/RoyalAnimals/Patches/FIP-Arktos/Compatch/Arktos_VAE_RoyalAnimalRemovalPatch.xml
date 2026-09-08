@@ -3,12 +3,11 @@
   <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
     <setting>royalAnimals</setting>
     <operations>
-      <li Class="PatchOperationConditional">
-        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
-        <match Class="PatchOperationRemove">
-          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[name()="VAERoy_AngoraRabbit" or name()="VAERoy_Megachicken" or name()="VAERoy_Orangutan" or name()="VAERoy_RoyalTiger"]</xpath>
-        </match>
-      </li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]/tradeTags/li</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]/race/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]/race</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_EggMegaChickenUnfertilized" or defName="VAERoy_EggMegaChickenFertilized"]/tradeability</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_EggMegaChickenUnfertilized" or defName="VAERoy_EggMegaChickenFertilized"]</xpath><value><tradeability>None</tradeability></value></li>
     </operations>
   </Operation>
 </Patch>

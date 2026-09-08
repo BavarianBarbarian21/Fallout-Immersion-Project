@@ -5,23 +5,33 @@
     <operations>
       <li Class="PatchOperationRemove">
         <success>Always</success>
-        <xpath>Defs/ThingSetMakerDef//li[normalize-space(.)="EggFlamingoFertilized" or normalize-space(.)="EggPeacockFertilized" or normalize-space(.)="EggPenguinFertilized"]</xpath>
+        <xpath>Defs/ThingSetMakerDef[(defName="RareFishingCatches_Hot" or defName="RareFishingCatches_Cold" or defName="RareFishingCatches_Temperate" or defName="RareFishingCatches_Tropical")]//li[normalize-space(.)="EggFlamingoFertilized" or normalize-space(.)="EggPeacockFertilized" or normalize-space(.)="EggPenguinFertilized"]</xpath>
       </li>
       <li Class="PatchOperationRemove">
         <success>Always</success>
-        <xpath>Defs/ThingSetMakerDef//li[thingSetMaker/pawnKind="Capybara" or thingSetMaker/pawnKind="Monkey" or thingSetMaker/pawnKind="Crow" or thingSetMaker/pawnKind="Flamingo" or thingSetMaker/pawnKind="MonitorLizard"]</xpath>
+        <xpath>Defs/ThingSetMakerDef[(defName="RareFishingCatches_Hot" or defName="RareFishingCatches_Cold" or defName="RareFishingCatches_Temperate" or defName="RareFishingCatches_Tropical")]//li[thingSetMaker/pawnKind="Capybara" or thingSetMaker/pawnKind="Monkey" or thingSetMaker/pawnKind="Crow" or thingSetMaker/pawnKind="Flamingo" or thingSetMaker/pawnKind="MonitorLizard"]</xpath>
       </li>
-      <li Class="PatchOperationConditional">
-        <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
-        <match Class="PatchOperationRemove">
-          <xpath>Defs//li[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", normalize-space(.), "|"))]</xpath>
-        </match>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]/tradeTags/li</xpath>
       </li>
-      <li Class="PatchOperationConditional">
-        <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
-        <match Class="PatchOperationRemove">
-          <xpath>Defs/BiomeDef/*[name()="wildAnimals" or name()="coastalWildAnimals" or name()="pollutionWildAnimals"]/*[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", name(), "|"))]</xpath>
-        </match>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]/race/canArriveManhunter</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]/race</xpath>
+        <value><canArriveManhunter>false</canArriveManhunter></value>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|EggCrowUnfertilized|EggCrowFertilized|EggMacawUnfertilized|EggMacawFertilized|EggFlamingoUnfertilized|EggFlamingoFertilized|EggPeacockUnfertilized|EggPeacockFertilized|EggPenguinUnfertilized|EggPenguinFertilized|EggMonitorLizardUnfertilized|EggMonitorLizardFertilized|EggAlligatorUnfertilized|EggAlligatorFertilized|", concat("|", defName, "|"))]/tradeability</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|EggCrowUnfertilized|EggCrowFertilized|EggMacawUnfertilized|EggMacawFertilized|EggFlamingoUnfertilized|EggFlamingoFertilized|EggPeacockUnfertilized|EggPeacockFertilized|EggPenguinUnfertilized|EggPenguinFertilized|EggMonitorLizardUnfertilized|EggMonitorLizardFertilized|EggAlligatorUnfertilized|EggAlligatorFertilized|", concat("|", defName, "|"))]</xpath>
+        <value><tradeability>None</tradeability></value>
       </li>
     </operations>
   </Operation>

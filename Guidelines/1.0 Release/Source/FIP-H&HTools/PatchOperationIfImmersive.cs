@@ -14,10 +14,10 @@ public sealed class PatchOperationIfImmersive : PatchOperationSequence
         HHToolsModSettings settings = HHToolsMod.Settings;
         bool enabled = setting switch
         {
-            "buildings" => settings?.onlyImmersiveBuildings ?? true,
+            "wallStructures" => settings?.onlyImmersiveWallStructures ?? true,
+            "furniture" => settings?.onlyImmersiveFurniture ?? true,
             "weapons" => settings?.onlyImmersiveWeapons ?? true,
             "apparel" => settings?.onlyImmersiveApparel ?? true,
-            "textiles" => settings?.onlyImmersiveTextiles ?? true,
             "ideologyOrigins" => settings?.onlyImmersiveIdeologyOrigins ?? true,
             _ => throw new System.InvalidOperationException("Unknown H&H removal setting: " + setting)
         };
