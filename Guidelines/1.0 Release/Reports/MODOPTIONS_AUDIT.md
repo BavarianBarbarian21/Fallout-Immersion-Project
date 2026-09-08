@@ -30,7 +30,7 @@ VFEM2-Inhalte. Die Strukturoption versteckt Burgmauern, niedrige Burgmauern,
 Burgtore und Burgtüren, Stoff-, Fachwerk- und Kopfsteinpflastermauern sowie die
 beiden wandmontierten Waffen. Die Möbeloption versteckt Fellbetten, Herd,
 heraldische Teppiche und das Standbanner. Alle anderen VFEM2-Gebäude und Böden
-bleiben baubar, darunter Bienenstock, Weinfass, Draught Stations, Chemdrench
+bleiben baubar, darunter Bienenstock, Weinfass, Draught Stations, Napalm Carpet
 sowie normale und feine Ledermatten.
 
 ## Alle 25 Optionen in neun Modulen
