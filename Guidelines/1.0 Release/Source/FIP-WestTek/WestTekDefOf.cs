@@ -48,6 +48,8 @@ internal static class WestTekDefOf
     public static XenotypeDef WestTek_Xenotype_SNuffy = null;
 
     public static GeneDef WestTek_Gene_SkinwalkerMutation = null;
+    public static GeneDef WestTek_Gene_SkinwalkerRaccoonShape = null;
+    public static GeneDef WestTek_Gene_SLanterFeatures = null;
 
     public static GeneDef WestTek_White = null;
     public static GeneDef WestTek_Gray = null;

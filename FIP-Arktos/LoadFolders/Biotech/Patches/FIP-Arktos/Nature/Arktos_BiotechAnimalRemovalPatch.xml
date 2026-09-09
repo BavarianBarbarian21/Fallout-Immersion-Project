@@ -4,8 +4,8 @@
     <setting>biotech</setting>
     <operations>
       <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="Toxalope" or defName="WasteRat"]/tradeTags/li</xpath></li>
-      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="Toxalope" or defName="WasteRat"]/race/canArriveManhunter</xpath></li>
-      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[defName="Toxalope" or defName="WasteRat"]/race</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/PawnKindDef[defName="Toxalope" or defName="WasteRat"]/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/PawnKindDef[defName="Toxalope" or defName="WasteRat"]</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
     </operations>
   </Operation>
 </Patch>

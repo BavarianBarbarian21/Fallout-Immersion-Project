@@ -29,15 +29,19 @@ public sealed class CompAbilityEffect_SkinwalkerShift : CompAbilityEffect
             return;
         }
 
-        if (!WestTekFaunaMutationUtility.IsSLanter(pawn) && !WestTekFaunaMutationUtility.IsSkinwalker(pawn))
+        if (!WestTekFaunaMutationUtility.CanUseSkinwalkerShift(pawn))
         {
             Messages.Message("Only S'Lanter-derived Skinwalkers can use this transformation.", MessageTypeDefOf.RejectInput, historical: false);
             return;
         }
 
-        bool wasSkinwalker = WestTekFaunaMutationUtility.IsSkinwalker(pawn);
+        bool wasSkinwalker = WestTekFaunaMutationUtility.IsInSkinwalkerForm(pawn);
 
-        WestTekFaunaMutationUtility.ToggleSkinwalkerForm(pawn);
+        if (!WestTekFaunaMutationUtility.ToggleSkinwalkerForm(pawn))
+        {
+            Messages.Message("The Skinwalker transformation could not stabilize.", MessageTypeDefOf.RejectInput, historical: false);
+            return;
+        }
 
         if (wasSkinwalker)
         {
@@ -65,7 +69,7 @@ public sealed class CompAbilityEffect_SkinwalkerShift : CompAbilityEffect
             return true;
         }
 
-        if (!WestTekFaunaMutationUtility.IsSLanter(pawn) && !WestTekFaunaMutationUtility.IsSkinwalker(pawn))
+        if (!WestTekFaunaMutationUtility.CanUseSkinwalkerShift(pawn))
         {
             reason = "Only S'Lanter-derived Skinwalkers can use this transformation.";
             return true;
