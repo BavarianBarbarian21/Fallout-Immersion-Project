@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>royalAnimals</setting>
+    <operations>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]/tradeTags/li</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/PawnKindDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/PawnKindDef[defName="VAERoy_AngoraRabbit" or defName="VAERoy_Megachicken" or defName="VAERoy_Orangutan" or defName="VAERoy_RoyalTiger"]</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_EggMegaChickenUnfertilized" or defName="VAERoy_EggMegaChickenFertilized"]/tradeability</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[defName="VAERoy_EggMegaChickenUnfertilized" or defName="VAERoy_EggMegaChickenFertilized"]</xpath><value><tradeability>None</tradeability></value></li>
+    </operations>
+  </Operation>
 </Patch>

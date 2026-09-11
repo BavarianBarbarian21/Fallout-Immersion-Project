@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. ThingSetMaker and caravan sources stay untouched. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>odyssey</setting>
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingSetMakerDef[(defName="RareFishingCatches_Hot" or defName="RareFishingCatches_Cold" or defName="RareFishingCatches_Temperate" or defName="RareFishingCatches_Tropical")]//li[normalize-space(.)="EggFlamingoFertilized" or normalize-space(.)="EggPeacockFertilized" or normalize-space(.)="EggPenguinFertilized"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingSetMakerDef[(defName="RareFishingCatches_Hot" or defName="RareFishingCatches_Cold" or defName="RareFishingCatches_Temperate" or defName="RareFishingCatches_Tropical")]//li[thingSetMaker/pawnKind="Capybara" or thingSetMaker/pawnKind="Monkey" or thingSetMaker/pawnKind="Crow" or thingSetMaker/pawnKind="Flamingo" or thingSetMaker/pawnKind="MonitorLizard"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]/tradeTags/li</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/PawnKindDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]/canArriveManhunter</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/PawnKindDef[contains("|Alligator|AlphaThrumbo|Crow|Flamingo|Gorilla|Hippo|LavaSnail|Macaw|Mastodon|Megavole|MonitorLizard|Panda|Peacock|Penguin|PrairieDog|StoneCrab|Tiger|Wolf_Great|", concat("|", defName, "|"))]</xpath>
+        <value><canArriveManhunter>false</canArriveManhunter></value>
+      </li>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|EggCrowUnfertilized|EggCrowFertilized|EggMacawUnfertilized|EggMacawFertilized|EggFlamingoUnfertilized|EggFlamingoFertilized|EggPeacockUnfertilized|EggPeacockFertilized|EggPenguinUnfertilized|EggPenguinFertilized|EggMonitorLizardUnfertilized|EggMonitorLizardFertilized|EggAlligatorUnfertilized|EggAlligatorFertilized|", concat("|", defName, "|"))]/tradeability</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[contains("|EggCrowUnfertilized|EggCrowFertilized|EggMacawUnfertilized|EggMacawFertilized|EggFlamingoUnfertilized|EggFlamingoFertilized|EggPeacockUnfertilized|EggPeacockFertilized|EggPenguinUnfertilized|EggPenguinFertilized|EggMonitorLizardUnfertilized|EggMonitorLizardFertilized|EggAlligatorUnfertilized|EggAlligatorFertilized|", concat("|", defName, "|"))]</xpath>
+        <value><tradeability>None</tradeability></value>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

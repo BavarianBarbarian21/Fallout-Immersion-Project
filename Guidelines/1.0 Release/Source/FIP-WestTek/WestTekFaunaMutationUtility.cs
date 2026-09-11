@@ -49,9 +49,15 @@ public static class WestTekFaunaMutationUtility
         return pawn?.genes?.Xenotype == WestTekDefOf.WestTek_Xenotype_SLanter;
     }
 
-    public static bool IsSkinwalker(Pawn pawn)
+    public static bool IsLegacySkinwalkerXenotype(Pawn pawn)
     {
         return pawn?.genes?.Xenotype == WestTekDefOf.WestTek_Xenotype_Skinwalker;
+    }
+
+    public static bool IsInSkinwalkerForm(Pawn pawn)
+    {
+        return IsLegacySkinwalkerXenotype(pawn)
+            || HasActiveGene(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerRaccoonShape);
     }
 
     public static bool IsSNuffy(Pawn pawn)
@@ -81,9 +87,20 @@ public static class WestTekFaunaMutationUtility
         return pawn.genes.GenesListForReading.Any(gene => gene.def == geneDef);
     }
 
+    public static bool HasActiveGene(Pawn pawn, GeneDef geneDef)
+    {
+        return pawn?.genes != null && geneDef != null && pawn.genes.HasActiveGene(geneDef);
+    }
+
     public static bool HasSkinwalkerMutation(Pawn pawn)
     {
         return HasGene(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerMutation);
+    }
+
+    public static bool CanUseSkinwalkerShift(Pawn pawn)
+    {
+        return HasSkinwalkerMutation(pawn)
+            && (IsSLanter(pawn) || IsLegacySkinwalkerXenotype(pawn));
     }
 
     private static bool CanReceiveFurGene(Pawn pawn)
@@ -95,7 +112,7 @@ public static class WestTekFaunaMutationUtility
             return true;
         }
 
-        return IsSkinwalker(pawn) && HasSkinwalkerMutation(pawn);
+        return IsLegacySkinwalkerXenotype(pawn) && HasSkinwalkerMutation(pawn);
     }
 
     public static bool HasAnyFurGene(Pawn pawn)
@@ -263,36 +280,113 @@ public static class WestTekFaunaMutationUtility
         RefreshGraphics(pawn);
     }
 
-    public static void ToggleSkinwalkerForm(Pawn pawn)
+    public static bool ToggleSkinwalkerForm(Pawn pawn)
     {
         if (pawn?.genes == null)
         {
+            return false;
+        }
+
+        // Saves made with the old implementation stored the active form as a
+        // separate xenotype. Convert that marker in place, retaining all
+        // unrelated xenogenes and the existing transformation ability.
+        if (IsLegacySkinwalkerXenotype(pawn))
+        {
+            MigrateLegacySkinwalkerToSLanter(pawn);
+            RefreshGraphics(pawn);
+            return true;
+        }
+
+        if (!IsSLanter(pawn) || !HasSkinwalkerMutation(pawn))
+        {
+            return false;
+        }
+
+        Gene currentForm = pawn.genes.GetGene(WestTekDefOf.WestTek_Gene_SkinwalkerRaccoonShape);
+        if (currentForm != null)
+        {
+            pawn.genes.RemoveGene(currentForm);
+        }
+        else
+        {
+            Gene skinwalkerForm = pawn.genes.AddGene(
+                WestTekDefOf.WestTek_Gene_SkinwalkerRaccoonShape,
+                xenogene: true
+            );
+
+            OverrideSLanterAppearance(pawn, skinwalkerForm);
+        }
+
+        RefreshGraphics(pawn);
+        return true;
+    }
+
+    private static void MigrateLegacySkinwalkerToSLanter(Pawn pawn)
+    {
+        pawn.genes.SetXenotypeDirect(WestTekDefOf.WestTek_Xenotype_SLanter);
+
+        foreach (GeneDef geneDef in WestTekDefOf.WestTek_Xenotype_SLanter.genes)
+        {
+            AddRequiredSLanterEndogene(pawn, geneDef);
+        }
+
+        // The mutation xenogene is deliberately retained. Removing it would
+        // destroy and recreate the currently executing ability, losing its
+        // runtime state. Only the obsolete form payload is removed.
+        RemoveAllXenogenesOfDef(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerRaccoonShape);
+        RemoveLegacyDuplicateXenogene(pawn, DefDatabase<GeneDef>.GetNamedSilentFail("DarkVision"));
+        RemoveLegacyDuplicateXenogene(pawn, DefDatabase<GeneDef>.GetNamedSilentFail("NakedSpeed"));
+        RemoveLegacyDuplicateXenogene(pawn, DefDatabase<GeneDef>.GetNamedSilentFail("RobustDigestion"));
+
+        WestTekSpecialUtility.AssignGeneratedSpecials(pawn);
+        AssignRandomFurGene(pawn);
+    }
+
+    private static void AddRequiredSLanterEndogene(Pawn pawn, GeneDef geneDef)
+    {
+        if (geneDef != null && !pawn.genes.HasEndogene(geneDef))
+        {
+            pawn.genes.AddGene(geneDef, xenogene: false);
+        }
+    }
+
+    private static void RemoveLegacyDuplicateXenogene(Pawn pawn, GeneDef geneDef)
+    {
+        if (geneDef != null && pawn.genes.HasEndogene(geneDef))
+        {
+            RemoveAllXenogenesOfDef(pawn, geneDef);
+        }
+    }
+
+    private static void RemoveAllXenogenesOfDef(Pawn pawn, GeneDef geneDef)
+    {
+        for (int index = pawn.genes.Xenogenes.Count - 1; index >= 0; index--)
+        {
+            Gene gene = pawn.genes.Xenogenes[index];
+            if (gene.def == geneDef)
+            {
+                pawn.genes.RemoveGene(gene);
+            }
+        }
+    }
+
+    private static void OverrideSLanterAppearance(Pawn pawn, Gene skinwalkerForm)
+    {
+        if (skinwalkerForm == null)
+        {
             return;
         }
 
-        if (IsSkinwalker(pawn))
-        {
-            pawn.genes.SetXenotype(WestTekDefOf.WestTek_Xenotype_SLanter);
-            AddEndogeneIfMissing(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerMutation);
-            WestTekSpecialUtility.AssignGeneratedSpecials(pawn);
-            AssignRandomFurGene(pawn);
-            RefreshGraphics(pawn);
-            return;
-        }
-
-        if (IsSLanter(pawn) && HasSkinwalkerMutation(pawn))
-        {
-            pawn.genes.SetXenotype(WestTekDefOf.WestTek_Xenotype_Skinwalker);
-            AddEndogeneIfMissing(pawn, WestTekDefOf.WestTek_Gene_SkinwalkerMutation);
-            WestTekSpecialUtility.AssignGeneratedSpecials(pawn);
-            AssignRandomFurGene(pawn);
-            RefreshGraphics(pawn);
-        }
+        pawn.genes.GetGene(WestTekDefOf.WestTek_Gene_SLanterFeatures)?.OverrideBy(skinwalkerForm);
     }
 
     public static void RefreshGraphics(Pawn pawn)
     {
-        pawn?.Drawer?.renderer?.SetAllGraphicsDirty();
+        if (pawn?.Drawer?.renderer != null)
+        {
+            pawn.Drawer.renderer.renderTree?.SetDirty();
+            pawn.Drawer.renderer.SetAllGraphicsDirty();
+        }
 
         if (pawn != null)
         {

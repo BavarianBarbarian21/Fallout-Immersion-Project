@@ -44,11 +44,11 @@ public sealed class HubrisSettingsMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive storytellers");
         Text.Font = GameFont.Small;
-        listing.Label("Keep storyteller selection focused on the curated Fallout experience.");
+        listing.Label("This option hides a storyteller that does not fit FIP. Disable it to restore that storyteller. It is enabled by default.");
         listing.GapLine();
         bool value = settings.onlyImmersiveStorytellers;
         listing.CheckboxLabeled("Only immersive storytellers", ref value,
-            "Hides Basilicus from storyteller selection. Restart required.");
+            "Removes Basilicus from storyteller selection. Disable this option to restore him. Enabled by default. Restart required.");
         if (value != settings.onlyImmersiveStorytellers)
         {
             settings.onlyImmersiveStorytellers = value;

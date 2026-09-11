@@ -116,4 +116,11 @@
       <li>RobCo_SentrybotAnnihilator_Recipe</li>
     </value>
   </Operation>
+  <!-- RobCo supplies its own boss callers. Keep the original defs available for
+       compatibility, but hide their construction entries while the immersive
+       mechanoid option is enabled. -->
+  <Operation Class="FIP.RobCo.PatchOperationRemoveUnlessRestoreMechanoids">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[(defName="BurnoutMechlinkBooster" or defName="MechbandDish")]/designationCategory</xpath>
+  </Operation>
 </Patch>

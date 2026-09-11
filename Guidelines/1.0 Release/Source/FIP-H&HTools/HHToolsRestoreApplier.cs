@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -34,22 +33,14 @@ internal static class HHToolsRestoreApplier
     private sealed class BuildingState
     {
         public DesignationCategoryDef DesignationCategory;
-        public List<ThingCategoryDef> ThingCategories;
-    }
-
-    private sealed class ItemState
-    {
-        public float GenerateCommonality;
-        public float GenerateAllowChance;
-        public List<RecipeDef> Recipes;
     }
 
     private static readonly Dictionary<string, FactionState> FactionStates = new();
     private static readonly Dictionary<string, bool> ScenarioStates = new();
     private static readonly Dictionary<string, float> QuestStates = new();
     private static readonly Dictionary<string, bool> StorytellerStates = new();
-    private static readonly Dictionary<string, BuildingState> BuildingStates = new();
-    private static readonly Dictionary<string, ItemState> ItemStates = new();
+    private static readonly Dictionary<string, BuildingState> WallStructureStates = new();
+    private static readonly Dictionary<string, BuildingState> FurnitureStates = new();
     private static bool initialized;
 
     public static void Initialize()
@@ -69,7 +60,6 @@ internal static class HHToolsRestoreApplier
         CaptureQuests();
         CaptureStorytellers();
         CaptureBuildings();
-        CaptureItems();
         initialized = true;
     }
 
@@ -83,8 +73,8 @@ internal static class HHToolsRestoreApplier
 
         ApplyFactions(settings.onlyImmersiveFactions);
         ApplyScenarios(settings.onlyImmersiveScenarios);
-        ApplyBuildings(settings.onlyImmersiveBuildings);
-        ApplyItems(settings.onlyImmersiveWeapons, settings.onlyImmersiveApparel);
+        ApplyBuildings(WallStructureStates, settings.onlyImmersiveWallStructures);
+        ApplyBuildings(FurnitureStates, settings.onlyImmersiveFurniture);
         ApplyQuests(settings.onlyImmersiveQuests);
         ApplyStorytellers(settings.onlyImmersiveStorytellers);
     }
@@ -204,34 +194,57 @@ internal static class HHToolsRestoreApplier
     {
         foreach (ThingDef def in DefDatabase<ThingDef>.AllDefsListForReading)
         {
-            if (def == null || !IsTargetBuilding(def))
+            if (def == null || def.category != ThingCategory.Building || def.defName.NullOrEmpty())
             {
                 continue;
             }
 
-            BuildingStates[def.defName] = new BuildingState
+            Dictionary<string, BuildingState> target = IsWallStructure(def.defName)
+                ? WallStructureStates
+                : IsFurniture(def.defName) ? FurnitureStates : null;
+            if (target == null)
             {
-                DesignationCategory = def.designationCategory,
-                ThingCategories = def.thingCategories == null ? null : new List<ThingCategoryDef>(def.thingCategories)
+                continue;
+            }
+
+            target[def.defName] = new BuildingState
+            {
+                DesignationCategory = def.designationCategory
             };
         }
     }
 
-    private static bool IsTargetBuilding(ThingDef def)
+    private static bool IsWallStructure(string defName)
     {
-        if (def.defName == "VFEM2_Palisade" || def.defName == "VFEM2_ArcheryTarget" || def.defName == "VFEM2_TrainingDummy")
-        {
-            return false;
-        }
-
-        return def.designationCategory?.defName == "Structure"
-            || (def.defName != null && def.defName.StartsWith("VFEM2_") && def.category == ThingCategory.Building);
+        return defName == "VFEM2_Turret_WallMountedArbalest"
+            || defName == "VFEM2_Turret_WallMountedArquebus"
+            || defName == "VFEM2_2x1CastleDoor"
+            || defName == "VFEM2_3x1CastleDoor"
+            || defName == "VFEM2_4x1CastleDoor"
+            || defName == "VFEM2_2x1CastleGate"
+            || defName == "VFEM2_3x1CastleGate"
+            || defName == "VFEM2_4x1CastleGate"
+            || defName == "VFEM2_CastleWall"
+            || defName == "VFEM2_LowCastleWall"
+            || defName == "VFEM2_ClothWall"
+            || defName == "VFEM2_TimberedWall"
+            || defName.StartsWith("VFEM2_CobblestoneWall_");
     }
 
-    private static void ApplyBuildings(bool hide)
+    private static bool IsFurniture(string defName)
     {
-        ThingCategoryDef textiles = DefDatabase<ThingCategoryDef>.GetNamedSilentFail("Textiles");
-        foreach ((string defName, BuildingState state) in BuildingStates)
+        return defName == "VFEM2_FurBed"
+            || defName == "VFEM2_DoubleFurBed"
+            || defName == "VFEM2_Hearth"
+            || defName == "VFEM2_StandingBanner"
+            || defName == "VFEM2_HeraldicRugNarrow"
+            || defName == "VFEM2_HeraldicRugBroad"
+            || defName == "VFEM2_HeraldicRugGrand";
+    }
+
+    private static void ApplyBuildings(Dictionary<string, BuildingState> states, bool hide)
+    {
+        foreach ((string defName, BuildingState state) in states)
         {
             ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
             if (def == null)
@@ -240,59 +253,6 @@ internal static class HHToolsRestoreApplier
             }
 
             def.designationCategory = hide ? null : state.DesignationCategory;
-            def.thingCategories = state.ThingCategories == null ? null : new List<ThingCategoryDef>(state.ThingCategories);
-            if (hide && def.defName != null && def.defName.StartsWith("VFEM2_"))
-            {
-                def.thingCategories?.Remove(textiles);
-            }
-        }
-    }
-
-    private static void CaptureItems()
-    {
-        foreach (ThingDef def in DefDatabase<ThingDef>.AllDefsListForReading)
-        {
-            if (def == null || !IsTargetWeapon(def) && !IsTargetApparel(def))
-            {
-                continue;
-            }
-
-            ItemStates[def.defName] = new ItemState
-            {
-                GenerateCommonality = def.generateCommonality,
-                GenerateAllowChance = def.generateAllowChance,
-                Recipes = def.recipes == null ? null : new List<RecipeDef>(def.recipes)
-            };
-        }
-    }
-
-    private static bool IsTargetWeapon(ThingDef def)
-    {
-        return def.defName != null && (def.defName.StartsWith("VFEM2_MeleeWeapon_")
-            || def.defName == "VFEM2_ThrowingAxe" || def.defName == "VFEM2_Gun_Arquebus"
-            || def.defName == "VFEM2_Gun_HandCannon" || def.defName == "VFEM2_Arbalest"
-            || def.defName == "VFEM2_Warbow" || def.defName == "VFEM2_Gun_Musket" || def.defName == "VFEM2_Gun_Flintlock");
-    }
-
-    private static bool IsTargetApparel(ThingDef def)
-    {
-        return def.defName != null && (def.defName.StartsWith("VFEM2_Apparel_") || def.defName.StartsWith("VFEM2_Shield_"));
-    }
-
-    private static void ApplyItems(bool hideWeapons, bool hideApparel)
-    {
-        foreach ((string defName, ItemState state) in ItemStates)
-        {
-            ThingDef def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
-            if (def == null)
-            {
-                continue;
-            }
-
-            bool hide = IsTargetWeapon(def) ? hideWeapons : hideApparel;
-            def.generateCommonality = hide ? 0f : state.GenerateCommonality;
-            def.generateAllowChance = hide ? 0f : state.GenerateAllowChance;
-            def.recipes = hide ? new List<RecipeDef>() : state.Recipes == null ? null : new List<RecipeDef>(state.Recipes);
         }
     }
 }

@@ -66,26 +66,26 @@ public sealed class GreenwayMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive ideology");
         Text.Font = GameFont.Small;
-        listing.Label("Enabled options keep ideology generation focused on the curated FIP selection.");
+        listing.Label("These options hide ideology content that does not fit FIP. Disable an option to restore that content. All options are enabled by default.");
         listing.GapLine();
 
         bool updatedOriginsValue = Settings.onlyImmersiveIdeologyOrigins;
         listing.CheckboxLabeled(
             "Only immersive ideology origins",
             ref updatedOriginsValue,
-            "Hides the replaced native and Vanilla Memes Expanded origins from the chooser and random ideology generation. Restart recommended.");
+            "Removes certain original ideology origins from player choice and randomly generated ideologies. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool updatedMemesValue = Settings.onlyImmersiveMemes;
         listing.CheckboxLabeled(
             "Only immersive memes",
             ref updatedMemesValue,
-            "Hides the replaced native and Vanilla Expanded memes from the chooser and random ideology generation. Restart recommended.");
+            "Removes certain original ideology memes that do not fit FIP. Disable this option to restore them. Enabled by default. Restart required.");
 
         bool updatedFactionValue = Settings.onlyImmersiveFactions;
         listing.CheckboxLabeled(
             "Only immersive factions",
             ref updatedFactionValue,
-            "Hides the faction variants replaced by Greenway from faction selection and world generation. Requires a new world.");
+            "Removes certain original faction variants that Greenway replaces. Disable this option to restore them. Enabled by default. Start a new world after changing it.");
 
         if (updatedOriginsValue != Settings.onlyImmersiveIdeologyOrigins
             || updatedMemesValue != Settings.onlyImmersiveMemes
@@ -146,12 +146,9 @@ internal static class GreenwayVanillaIdeologyOriginApplier
             Capture(memeDefName);
         }
 
-        foreach (MemeDef memeDef in DefDatabase<MemeDef>.AllDefsListForReading)
+        foreach (string memeDefName in new[] { "VME_Structure_Serketist", "VME_Structure_SecularSpirituality" })
         {
-            if (memeDef?.defName != null && memeDef.defName.StartsWith("VME_Structure_", StringComparison.OrdinalIgnoreCase))
-            {
-                Capture(memeDef.defName);
-            }
+            Capture(memeDefName);
         }
 
         initialized = initialized || OriginalStatesByMemeDefName.Count > 0;
@@ -202,7 +199,8 @@ internal static class GreenwayVanillaIdeologyOriginApplier
         }
 
         return TargetMemeDefNames.Any(defName => string.Equals(defName, memeDef.defName, StringComparison.OrdinalIgnoreCase))
-            || memeDef.defName.StartsWith("VME_Structure_", StringComparison.OrdinalIgnoreCase);
+            || memeDef.defName == "VME_Structure_Serketist"
+            || memeDef.defName == "VME_Structure_SecularSpirituality";
     }
 }
 
@@ -226,8 +224,10 @@ internal static class GreenwayVanillaMemeApplier
                 continue;
             }
 
-            ModContentPack modContentPack = memeDef.modContentPack;
-            if (modContentPack == null || !IsTargetPackage(modContentPack.PackageId))
+            // Origins have their own independent switch. The original XML
+            // suppresses only Anonymity from VMemesE, not every VE meme.
+            if (memeDef.category == MemeCategory.Structure
+                || (!IsTargetPackage(memeDef.modContentPack?.PackageId) && memeDef.defName != "VME_Anonymity"))
             {
                 continue;
             }
@@ -267,8 +267,7 @@ internal static class GreenwayVanillaMemeApplier
     private static bool IsTargetPackage(string packageId)
     {
         return !string.IsNullOrEmpty(packageId)
-            && (packageId.StartsWith("ludeon.rimworld", StringComparison.OrdinalIgnoreCase)
-                || packageId.StartsWith("vanillaexpanded.", StringComparison.OrdinalIgnoreCase));
+            && packageId.StartsWith("ludeon.rimworld", StringComparison.OrdinalIgnoreCase);
     }
 }
 

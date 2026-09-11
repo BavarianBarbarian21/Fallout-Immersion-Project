@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- Legacy save compatibility only. New Skinwalkers retain the S'Lanter
+       xenotype and express WestTek_Gene_SkinwalkerRaccoonShape as a form. -->
   <XenotypeDef>
     <defName>WestTek_Xenotype_Skinwalker</defName>
     <label>skinwalker</label>
-    <description>A violently unstable fauna mutation derived from the S'Lanter genome. Skinwalkers can shift back into their stabilized S'Lanter form.</description>
+    <description>A S'Lanter caught in an unstable Skinwalker expression. This separate xenotype is retained only so older subjects can return safely to their standard S'Lanter form.</description>
+    <descriptionShort>An older, unstable expression of the S'Lanter Skinwalker mutation.</descriptionShort>
     <iconPath>UI/Icons/Xenotypes/Yttakin</iconPath>
     <inheritable>false</inheritable>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <canGenerateAsCombatant>false</canGenerateAsCombatant>
+    <displayPriority>-10000</displayPriority>
 
     <genes>
       <li>WestTek_Gene_SkinwalkerMutation</li>

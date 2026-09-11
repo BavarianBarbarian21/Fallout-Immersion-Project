@@ -1,5 +1,11 @@
 # FIP 1.0 – ModSettings-Refaktorierung
 
+> Historischer Bericht des ersten Umbaus. Aktuelle Schalterlogik, Korrekturen
+> und Prüfungen vom 07.09.2026 stehen in
+> [Reports/MODOPTIONS_AUDIT.md](Reports/MODOPTIONS_AUDIT.md).
+> Insbesondere die unten beschriebenen Arktos-Biom-Ausnahmen und die globale
+> WestTek-Auswahlliste gelten nicht mehr.
+
 Alle neuen Schalter sind absichtlich Ladezeit-Einstellungen. Nach einer Änderung
 RimWorld neu starten; bei Fraktionen, Szenarien, Raids und Pawn-Generierung eine
 neue Welt starten. Die Standardwerte bilden den bisherigen FIP-Zustand ab – mit

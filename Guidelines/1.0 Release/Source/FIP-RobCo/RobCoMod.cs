@@ -68,7 +68,7 @@ public sealed class RobCoMod : Mod
         Text.Font = GameFont.Medium;
         listing.Label("Immersive mechanoids");
         Text.Font = GameFont.Small;
-        listing.Label("Keep mechanitor progression, encounters, and production focused on the RobCo roster.");
+        listing.Label("This option makes RobCo mechanoids the normal mechanoid content. Disable it to restore the original alternatives. It is enabled by default.");
         listing.GapLine();
 
         bool updatedValue = Settings.onlyImmersiveMechanoids;
@@ -82,7 +82,7 @@ public sealed class RobCoMod : Mod
         Widgets.CheckboxLabeled(settingRect, "Only immersive mechanoids", ref updatedValue);
         TooltipHandler.TipRegion(
             row,
-            "Suppresses the replaced native Mechanitor state: gestators, threats, raids, starts, quests, tanks, Royalty spawns, and Basic Mechtech. Restart required; use a new world for raid and faction changes.");
+            "Prevents original mechanoids from appearing in normal encounters and hides their boss-summoning buildings from the build menu. The original defs remain available for compatibility. Disable this option to restore the original alternatives. Enabled by default. Restart required; start a new world for encounter changes.");
 
         if (updatedValue != Settings.onlyImmersiveMechanoids)
         {
@@ -140,6 +140,8 @@ internal static class RobCoDefSettingsApplier
     };
 
     private static readonly Dictionary<string, List<RecipeDef>> OriginalRecipesByThingDef = new();
+    private static readonly System.Reflection.FieldInfo AllRecipesCache = typeof(ThingDef).GetField(
+        "allRecipesCached", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
     private static readonly Dictionary<string, (bool isFighter, bool allowInMechClusters)> OriginalPawnKindFlagsByDefName = new();
     private static bool initialized;
 
@@ -245,6 +247,7 @@ internal static class RobCoDefSettingsApplier
         if (recipeDefNames == null)
         {
             thingDef.recipes = originalRecipes.ToList();
+            AllRecipesCache?.SetValue(thingDef, null);
             return;
         }
 
@@ -259,5 +262,6 @@ internal static class RobCoDefSettingsApplier
         }
 
         thingDef.recipes = configuredRecipes;
+        AllRecipesCache?.SetValue(thingDef, null);
     }
 }

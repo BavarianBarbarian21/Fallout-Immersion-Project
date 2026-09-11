@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Wildlife spawn suppression is applied by FIP_Arktos_Settings. -->
+  <Operation Class="FIP.Arktos.PatchOperationIfImmersive">
+    <setting>vanillaAnimalsExpanded</setting>
+    <operations>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]/tradeTags/li</xpath></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/PawnKindDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]/canArriveManhunter</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/PawnKindDef[contains("|AEXP_Giraffe|AEXP_Zebra|AEXP_Wildebeest|AEXP_Crocodile|AEXP_Cheetah|AEXP_Boombat|AEXP_Kangaroo|AEXP_Koala|AEXP_Platypus|AEXP_BlackBear|AEXP_Hyena|AEXP_Lion|AEXP_Camel|AEXP_Megascorpion|AEXP_RedPanda|AEXP_Jaguar|AEXP_Lemur|AEXP_Mandrill|AEXP_Tapir|AEXP_IndianElephant|AEXP_MegaWolverine|", concat("|", defName, "|"))]</xpath><value><canArriveManhunter>false</canArriveManhunter></value></li>
+      <li Class="PatchOperationRemove"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_EggCrocodileUnfertilized|AEXP_EggCrocodileFertilized|AEXP_EggPlatypusUnfertilized|AEXP_EggPlatypusFertilized|", concat("|", defName, "|"))]/tradeability</xpath></li>
+      <li Class="PatchOperationAdd"><success>Always</success><xpath>Defs/ThingDef[contains("|AEXP_EggCrocodileUnfertilized|AEXP_EggCrocodileFertilized|AEXP_EggPlatypusUnfertilized|AEXP_EggPlatypusFertilized|", concat("|", defName, "|"))]</xpath><value><tradeability>None</tradeability></value></li>
+    </operations>
+  </Operation>
 </Patch>

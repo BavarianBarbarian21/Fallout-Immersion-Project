@@ -91,7 +91,9 @@ if (-not $SkipBuild) {
         $buildDetails = 'No solution file found'
     }
     else {
-        $buildOutput = @(& dotnet build $solution.FullName -c Release --nologo 2>&1)
+        # Validation uses the already-restored lock/assets files. This keeps the
+        # check reproducible in offline and sandboxed release environments.
+        $buildOutput = @(& dotnet build $solution.FullName -c Release --nologo --no-restore 2>&1)
         $buildExit = $LASTEXITCODE
         $buildPassed = $buildExit -eq 0
         $buildDetails = "exit $buildExit; $(@($buildOutput | Select-Object -Last 8) -join ' ')"
@@ -310,13 +312,17 @@ $immersiveFieldCount = [regex]::Matches($settingsSourceText, 'public bool onlyIm
 $immersiveLabelCount = [regex]::Matches($settingsSourceText, '"Only immersive [^"]+"').Count
 $restoreLabelCount = [regex]::Matches($settingsSourceText, '"Restore [^"]+"').Count
 $deferredSettingsCount = [regex]::Matches($settingsSourceText, 'LongEventHandler\.ExecuteWhenFinished').Count
-Add-Check 'Mod options' 'All content filters use positive immersive-only defaults and labels' ($immersiveFieldCount -eq 23 -and $immersiveLabelCount -eq 23 -and $restoreLabelCount -eq 0) "immersive-only defaults: $immersiveFieldCount; labels: $immersiveLabelCount; Restore labels: $restoreLabelCount"
-Add-Check 'Mod options' 'All nine settings modules defer Def-dependent startup work' ($deferredSettingsCount -eq 9) "$deferredSettingsCount deferred settings initializers"
+$plainDescriptionCount = [regex]::Matches($settingsSourceText, '"[^"\r\n]*Disable this option[^"\r\n]*Enabled by default[^"\r\n]*"').Count
+Add-Check 'Mod options' 'All content filters use positive immersive-only defaults and labels' ($immersiveFieldCount -eq 25 -and $immersiveLabelCount -eq 25 -and $restoreLabelCount -eq 0) "immersive-only defaults: $immersiveFieldCount; labels: $immersiveLabelCount; Restore labels: $restoreLabelCount"
+Add-Check 'Mod options' 'Every option explains how to restore content and states its default' ($plainDescriptionCount -eq 25) "$plainDescriptionCount of 25 descriptions use plain restore/default wording"
+Add-Check 'Mod options' 'Def-dependent runtime work is deferred; Arktos and WestTek gate source XML' ($deferredSettingsCount -eq 7) "$deferredSettingsCount deferred settings initializers; Arktos and WestTek use load-time gates"
 $settingsPatchOperationText = @(
+    [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-Arktos\FIP.Arktos.Settings\PatchOperationIfImmersive.cs')),
     [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-RobCo\PatchOperationUnlessRestoreMechanoids.cs')),
     [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-WestTek\PatchOperationUnlessRestoreXenotypes.cs'))
 ) -join "`n"
-$directSettingsPatchContract = $settingsPatchOperationText.Contains('RobCoMod.Settings?.onlyImmersiveMechanoids ?? true') -and
+$directSettingsPatchContract = $settingsPatchOperationText.Contains('ArktosSettingsMod.Settings') -and
+    $settingsPatchOperationText.Contains('RobCoMod.Settings?.onlyImmersiveMechanoids ?? true') -and
     $settingsPatchOperationText.Contains('WestTekMod.Settings?.onlyImmersiveXenotypes ?? true') -and
     -not $settingsPatchOperationText.Contains('GenFilePaths.ConfigFolderPath')
 Add-Check 'Mod options' 'XML patch operations read the already-created settings instances' $directSettingsPatchContract "direct settings lookup without guessed config filenames: $directSettingsPatchContract"
@@ -518,7 +524,9 @@ $originLanguageKeys = @($greenwayMemesLanguageXml.SelectNodes('/LanguageData/*[s
 $greenwaySettingsText = [IO.File]::ReadAllText((Join-Path $SourceRoot 'FIP-Greenway\GreenwayMod.cs'))
 $originRuntimeContract = $greenwaySettingsText -match 'onlyImmersiveIdeologyOrigins\s*=\s*true' -and
     $greenwaySettingsText.Contains('LongEventHandler.ExecuteWhenFinished') -and
-    $greenwaySettingsText.Contains('StartsWith("VME_Structure_"') -and
+    $greenwaySettingsText.Contains('"VME_Structure_Serketist"') -and
+    $greenwaySettingsText.Contains('"VME_Structure_SecularSpirituality"') -and
+    -not $greenwaySettingsText.Contains('StartsWith("VME_Structure_"') -and
     $greenwaySettingsText.Contains('hiddenInChooseMemes = hideVanillaIdeologyOrigins || originalState.Hidden') -and
     $greenwaySettingsText.Contains('randomizationSelectionWeightFactor = hideVanillaIdeologyOrigins ? 0f : originalState.RandomizationWeight') -and
     $greenwaySettingsText.Contains('structureMemeWeights?.RemoveAll') -and
@@ -526,7 +534,7 @@ $originRuntimeContract = $greenwaySettingsText -match 'onlyImmersiveIdeologyOrig
     $greenwaySettingsText.Contains('EnsureCuratedStructureMemeAvailable') -and
     $greenwaySettingsText.Contains('IdeoUtility.IsMemeAllowedFor')
 $originVisibilityContract = $originRuntimeContract -and -not $originDefRemoval -and -not $originDependencyRemoval -and $originPresetReferences.Count -eq 6 -and $originLanguageKeys.Count -eq 18
-Add-Check 'Ideology' 'Vanilla Memes Expanded origins stay internal and are settings-controlled' ([bool]$originVisibilityContract) "immersive-only default with deferred reversible hide/zero-weight application and curated faction fallback: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
+Add-Check 'Ideology' 'Only originally suppressed VMemesE origins are settings-controlled' ([bool]$originVisibilityContract) "Serketist/SecularSpirituality only, with reversible hide/zero-weight application and curated faction fallback: $originRuntimeContract; Def deletion absent, retained preset references: $($originPresetReferences.Count); retained language keys: $($originLanguageKeys.Count)"
 $greenwayStoryPatternPath = Join-Path $ReleaseRoot 'FIP-Greenway\LoadFolders\Greenway\Defs\FIP-Greenway\Ideology\Government\Greenway_StructureDef.xml'
 $greenwayStoryPatternText = [IO.File]::ReadAllText($greenwayStoryPatternPath)
 $placeGrammarContract = -not $greenwayStoryPatternText.Contains('[place_powerCenter]') -and
@@ -704,12 +712,53 @@ Add-Check 'Collisions' 'Only documented root-XPath overlaps remain' $rootXpathEx
 # Assembly placement and Harmony isolation.
 $releaseDlls = @(Get-ChildItem -LiteralPath $gameplay.FullName -File -Recurse -Filter *.dll)
 $bundledHarmony = @($releaseDlls | Where-Object Name -IEQ '0Harmony.dll')
+$metadataReaderType = 'FipValidation.AssemblyInspector' -as [type]
+if (-not $metadataReaderType) {
+    Add-Type -AssemblyName System.Reflection.Metadata
+    Add-Type -TypeDefinition @'
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection.Metadata;
+using System.Reflection.PortableExecutable;
+
+namespace FipValidation
+{
+    public static class AssemblyInspector
+    {
+        public static string GetName(string path)
+        {
+            using (FileStream stream = File.OpenRead(path))
+            using (PEReader pe = new PEReader(stream))
+            {
+                MetadataReader metadata = pe.GetMetadataReader();
+                return metadata.GetString(metadata.GetAssemblyDefinition().Name);
+            }
+        }
+
+        public static string[] GetReferences(string path)
+        {
+            List<string> names = new List<string>();
+            using (FileStream stream = File.OpenRead(path))
+            using (PEReader pe = new PEReader(stream))
+            {
+                MetadataReader metadata = pe.GetMetadataReader();
+                foreach (AssemblyReferenceHandle handle in metadata.AssemblyReferences)
+                {
+                    names.Add(metadata.GetString(metadata.GetAssemblyReference(handle).Name));
+                }
+            }
+            return names.ToArray();
+        }
+    }
+}
+'@
+}
 $assemblyInfo = [Collections.Generic.List[object]]::new()
 foreach ($dll in $releaseDlls) {
     try {
-        $assembly = [Reflection.Assembly]::ReflectionOnlyLoadFrom($dll.FullName)
-        $refs = @($assembly.GetReferencedAssemblies() | ForEach-Object Name)
-        $assemblyInfo.Add([pscustomobject]@{ File = $dll; Name = $assembly.GetName().Name; References = $refs })
+        $refs = @([FipValidation.AssemblyInspector]::GetReferences($dll.FullName))
+        $assemblyInfo.Add([pscustomobject]@{ File = $dll; Name = [FipValidation.AssemblyInspector]::GetName($dll.FullName); References = $refs })
     }
     catch {
         $assemblyInfo.Add([pscustomobject]@{ File = $dll; Name = $dll.BaseName; References = @("ERROR: $($_.Exception.Message)") })
