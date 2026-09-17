@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Normalize Muffalo to a low-weight fallback for every loaded NPC trader carrier list. -->
+  <!-- Normalize the Arktos Pack Rat to a regular option for every loaded NPC trader carrier list. -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
     <match Class="PatchOperationRemove">
@@ -11,7 +11,7 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
     <value>
-      <Muffalo>1</Muffalo>
+      <Muffalo>2</Muffalo>
     </value>
   </Operation>
 
@@ -21,7 +21,7 @@
       <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader" and not(carriers)]</xpath>
       <value>
         <carriers>
-          <Muffalo>1</Muffalo>
+          <Muffalo>2</Muffalo>
         </carriers>
       </value>
     </match>

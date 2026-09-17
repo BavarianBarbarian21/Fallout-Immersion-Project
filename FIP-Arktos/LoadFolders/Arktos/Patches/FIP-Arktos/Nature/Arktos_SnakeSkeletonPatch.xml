@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Cottonmouth uses the vanilla cobra def and the shared Arktos snake skeleton. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/dessicatedBodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Snakes/Common/Arktos_SnakeSkeleton</texPath>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+      <value>
+        <graphicClass>Graphic_Single</graphicClass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/dessicatedBodyGraphicData</xpath>
+      <value>
+        <graphicClass>Graphic_Single</graphicClass>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

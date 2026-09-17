@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Axolotls can be selected by every non-extreme Arktos biome, but the
+       runtime requirement suppresses them on maps without fresh water. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[(defName="Arktos_Preserve" or defName="Arktos_Creek" or defName="Arktos_CentralValley" or defName="Arktos_BrahminWoods" or defName="Arktos_Aqueduct" or defName="Arktos_Floodplains" or defName="Arktos_Mojave" or defName="Arktos_Canyon" or defName="Arktos_Marina" or defName="Arktos_Redwood" or defName="Arktos_Sequoia" or defName="Arktos_Crater" or defName="Arktos_Ruin" or defName="Arktos_Wasteland" or defName="Arktos_Malpais" or defName="Arktos_CranberryBog")]/wildAnimals[not(FIP_Axolotl)]</xpath>
+    <value>
+      <FIP_Axolotl>0.18</FIP_Axolotl>
+    </value>
+  </Operation>
+
+  <!-- Beachlurks belong exclusively to coastalWildAnimals. Every Arktos
+       biome that has a coastal list already contains them there. -->
+  <Operation Class="PatchOperationRemove" MayRequire="Rick.FCP.Animals">
+    <xpath>/Defs/BiomeDef/wildAnimals/FCP_Animal_Beachlurk</xpath>
+  </Operation>
+
+  <!-- Lakelurks use the ordinary wildlife pool rather than the coast-only
+       pool. Existing freshwater-biome entries already do so; Marina was the
+       one remaining coastal entry. -->
+  <Operation Class="PatchOperationRemove" MayRequire="Rick.FCP.Animals">
+    <xpath>/Defs/BiomeDef/coastalWildAnimals/FCP_Animal_Lakelurk</xpath>
+  </Operation>
+  <Operation Class="PatchOperationAdd" MayRequire="Rick.FCP.Animals">
+    <xpath>/Defs/BiomeDef[defName="Arktos_Marina"]/wildAnimals[not(FCP_Animal_Lakelurk)]</xpath>
+    <value>
+      <FCP_Animal_Lakelurk>0.08</FCP_Animal_Lakelurk>
+    </value>
+  </Operation>
+</Patch>

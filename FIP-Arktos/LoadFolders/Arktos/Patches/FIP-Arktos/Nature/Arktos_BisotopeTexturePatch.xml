@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Both young life stages use the same sex-independent Bisotope artwork. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[position() &lt; 3]/bodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Young</texPath>
+    </value>
+  </Operation>
+
+  <!-- Adult bodyGraphicData is the male fallback; females receive their own set below. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/bodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Male</texPath>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
+      <value>
+        <graphicClass>Graphic_Multi</graphicClass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/bodyGraphicData</xpath>
+      <value>
+        <graphicClass>Graphic_Multi</graphicClass>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/femaleGraphicData</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/femaleGraphicData</xpath>
+      <value>
+        <femaleGraphicData>
+          <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Female</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </femaleGraphicData>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]</xpath>
+      <value>
+        <femaleGraphicData>
+          <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Female</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </femaleGraphicData>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Calves and juveniles share one skeleton; adult males use the horned male skeleton. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[position() &lt; 3]/dessicatedBodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Young_skeleton</texPath>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/dessicatedBodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Male_skeleton</texPath>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+      <value>
+        <graphicClass>Graphic_Single</graphicClass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/dessicatedBodyGraphicData</xpath>
+      <value>
+        <graphicClass>Graphic_Single</graphicClass>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/femaleDessicatedBodyGraphicData</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/femaleDessicatedBodyGraphicData</xpath>
+      <value>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Female_skeleton</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]</xpath>
+      <value>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>FIP-Arktos/Animals/Bisotope/Arktos_Bisotope_Female_skeleton</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>3</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

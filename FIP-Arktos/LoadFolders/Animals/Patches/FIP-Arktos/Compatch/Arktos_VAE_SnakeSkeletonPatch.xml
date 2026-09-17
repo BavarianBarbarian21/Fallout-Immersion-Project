@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- VAE's wasteland indigo and rattlesnake share the Arktos snake skeleton. -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda" or defName="AEXP_Rattlesnake"]/lifeStages/li/dessicatedBodyGraphicData/texPath</xpath>
+        <value>
+          <texPath>FIP-Arktos/Animals/Snakes/Common/Arktos_SnakeSkeleton</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda" or defName="AEXP_Rattlesnake"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda" or defName="AEXP_Rattlesnake"]/lifeStages/li/dessicatedBodyGraphicData/graphicClass</xpath>
+          <value>
+            <graphicClass>Graphic_Single</graphicClass>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/PawnKindDef[defName="AEXP_Anaconda" or defName="AEXP_Rattlesnake"]/lifeStages/li/dessicatedBodyGraphicData</xpath>
+          <value>
+            <graphicClass>Graphic_Single</graphicClass>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>
