@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VGE_EmergencyGenerator"]/comps/li[@Class="CompProperties_Interactable"]/jobString</xpath>
+        <value><jobString>activate emergency Hellion generator</jobString></value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ScenarioDef[defName="VGE_TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
+        <value><text>Your Hellion engine is completely overheated from the chase. You managed to drop into this empty pocket of orbit to bleed off the heat, but the emergency cooldown cycle will take hours.
+
+You are not safe here. Your pursuers are tracking your signature, and their Hellion will drop into your local space soon. They will not hesitate to breach your hull.
+
+Use this time to patch up your crew, fortify your aircraft, and prepare to repel boarders. Once the engine cooldown finishes, select the pilot console and launch to escape.</text></value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
