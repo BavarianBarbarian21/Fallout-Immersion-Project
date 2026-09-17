@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Pack Rats are domesticated caravan animals, not members of Arktos wildlife. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals</xpath>
+    <value>
+      <li>Muffalo</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/BiomeDef[not(@ParentName) and not(allowedPackAnimals)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/BiomeDef[not(@ParentName) and not(allowedPackAnimals)]</xpath>
+      <value>
+        <allowedPackAnimals>
+          <li>Muffalo</li>
+        </allowedPackAnimals>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- Restore Pack Rats as a normal option for every faction that fields caravan traders. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
+    <value>
+      <Muffalo>2</Muffalo>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader" and not(carriers)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader" and not(carriers)]</xpath>
+      <value>
+        <carriers>
+          <Muffalo>2</Muffalo>
+        </carriers>
+      </value>
+    </match>
+  </Operation>
+</Patch>

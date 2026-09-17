@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[(defName="Bullfrog" or defName="ColossusToad") and not(modExtensions)]</xpath>
+    <value>
+      <modExtensions />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bullfrog" or defName="ColossusToad"]/modExtensions</xpath>
+    <value>
+      <li Class="FIP.Arktos.ModExtension_BiomeFeatureRequirements">
+        <requireFreshWater>true</requireFreshWater>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[(defName="Arktos_Preserve" or defName="Arktos_Creek" or defName="Arktos_CentralValley" or defName="Arktos_BrahminWoods" or defName="Arktos_Aqueduct" or defName="Arktos_Floodplains" or defName="Arktos_Mojave" or defName="Arktos_Canyon" or defName="Arktos_Marina" or defName="Arktos_Redwood" or defName="Arktos_Sequoia" or defName="Arktos_Crater" or defName="Arktos_Ruin" or defName="Arktos_Wasteland" or defName="Arktos_Malpais" or defName="Arktos_CranberryBog")]/wildAnimals[not(Bullfrog)]</xpath>
+    <value>
+      <Bullfrog>0.12</Bullfrog>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[(defName="Arktos_Preserve" or defName="Arktos_Creek" or defName="Arktos_CentralValley" or defName="Arktos_BrahminWoods" or defName="Arktos_Aqueduct" or defName="Arktos_Floodplains" or defName="Arktos_Mojave" or defName="Arktos_Canyon" or defName="Arktos_Marina" or defName="Arktos_Redwood" or defName="Arktos_Sequoia" or defName="Arktos_Crater" or defName="Arktos_Ruin" or defName="Arktos_Wasteland" or defName="Arktos_Malpais" or defName="Arktos_CranberryBog")]/wildAnimals[not(ColossusToad)]</xpath>
+    <value>
+      <ColossusToad>0.06</ColossusToad>
+    </value>
+  </Operation>
+</Patch>

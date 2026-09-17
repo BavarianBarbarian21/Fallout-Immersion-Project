@@ -1,5 +1,52 @@
 # TranslationSync
 
+## FIP 1.0 runtime-export workflow
+
+The authoritative 1.0 workflow starts with the development mod `FIP-Yes Man`.
+It captures one English snapshot with Core plus every DLC and a second English
+snapshot with the intended final mod list. Its comparison produces the complete
+internal `FIP - English Language Pack` while excluding entries whose identity and value are
+unchanged from Core plus DLC.
+
+After both exports have been created, run:
+
+```powershell
+.\Tools\TranslationSync\Initialize-FIPTranslationMods.ps1 -Force
+```
+
+This synchronizes `FIP-English Language Pack` into the repository root and rebuilds
+placeholder copies for the supported release languages:
+
+- Simplified Chinese (`ChineseSimplified`)
+- Russian (`Russian`)
+- German (`German`)
+- Spanish (`Spanish`)
+- French (`French`)
+- Brazilian Portuguese (`PortugueseBrazilian`)
+- Korean (`Korean`)
+- Japanese (`Japanese`)
+- Polish (`Polish`)
+- Italian (`Italian`)
+- Traditional Chinese (`ChineseTraditional`)
+- Ukrainian (`Ukrainian`)
+- Dutch (`Dutch`)
+- Czech (`Czech`)
+
+The 1.0 translation pipeline must remain free to run. Paid API providers and
+billable API keys are intentionally outside its design. The production Yes Man
+worker uses project-local Argos models. Traditional Chinese is generated through
+the English-to-Chinese Argos model followed by an OpenCC `s2t` conversion. The
+worker also retains estimate/test modes and the legacy `google-gtx` fallback.
+
+All copied values remain English until the machine/human translation stage
+replaces them. The previous generated language packages are archived under
+`Guidelines/Legacy Translation Mods` and are not source material for key
+coverage, though they can still be consulted for established terminology.
+
+`New-FIPTranslation.ps1` provides the same copy operation for one language mod.
+The older static scanner described below remains available for legacy work but
+is not the source of truth for the 1.0 key set.
+
 `Invoke-TranslationSync.ps1` is a part-driven translation sync tool for the four translation mods you described:
 
 - `part1` / `fip`: all `FIP-*` mods in this repository, excluding non-mod folders and translation folders.

@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- Giant mole rat artwork: FCP molerat anatomy with a caravan-beast hump. -->
+  <!-- Pack Rat pup: one dedicated, sex-independent directional set. -->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[1]/bodyGraphicData/texPath</xpath>
     <value>
-      <texPath>FIP-Arktos/Animals/GiantMoleRat/Arktos_GiantMoleRat_v6</texPath>
+      <texPath>FIP-Arktos/Animals/PackRat/Arktos_PackRat_Baby</texPath>
     </value>
   </Operation>
+
+  <!-- Juvenile and adult Pack Rats deterministically select one of six complete sets. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[position() &gt; 1]/bodyGraphicData/texPath</xpath>
+    <value>
+      <texPath>FIP-Arktos/Animals/PackRat/Adult</texPath>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
-    <match Class="PatchOperationReplace">
+    <match Class="PatchOperationRemove">
       <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData/graphicClass</xpath>
-      <value><graphicClass>Graphic_Single</graphicClass></value>
     </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/bodyGraphicData</xpath>
-      <value><graphicClass>Graphic_Single</graphicClass></value>
-    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[1]/bodyGraphicData</xpath>
+    <value>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[position() &gt; 1]/bodyGraphicData</xpath>
+    <value>
+      <graphicClass>Graphic_Random</graphicClass>
+    </value>
+  </Operation>
+
+  <!-- Pack Rats do not have sex-specific artwork. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/femaleGraphicData</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/femaleGraphicData</xpath>
+    </match>
+  </Operation>
+
+  <!-- Do not let another alternate set replace the dedicated pup graphic. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/alternateGraphics | Defs/PawnKindDef[defName="Muffalo"]/alternateGraphicChance</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/PawnKindDef[defName="Muffalo"]/alternateGraphics | Defs/PawnKindDef[defName="Muffalo"]/alternateGraphicChance</xpath>
+    </match>
   </Operation>
 
   <!-- Cottonmouth artwork for the renamed vanilla cobra. -->
@@ -38,5 +72,4 @@
       <value><graphicClass>Graphic_Multi</graphicClass></value>
     </nomatch>
   </Operation>
-
 </Patch>

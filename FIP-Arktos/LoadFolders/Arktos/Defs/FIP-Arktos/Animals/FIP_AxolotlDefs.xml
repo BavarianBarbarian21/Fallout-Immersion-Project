@@ -5,6 +5,11 @@
     <defName>FIP_Axolotl</defName>
     <label>axolotl</label>
     <description>A small freshwater salamander whose exposed gills and regenerative body let it survive in Arktos' creeks, flooded ruins, and irradiated wetlands. Axolotls are harmless scavenging critters, prized more for their striking colors than for meat or leather.</description>
+    <modExtensions>
+      <li Class="FIP.Arktos.ModExtension_BiomeFeatureRequirements">
+        <requireFreshWater>true</requireFreshWater>
+      </li>
+    </modExtensions>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
       <MarketValue>40</MarketValue>
@@ -88,17 +93,50 @@
     <wildGroupSize>2~5</wildGroupSize>
     <alternateGraphicChance>0.916667</alternateGraphicChance>
     <alternateGraphics>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_02</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_03</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_04</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_05</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_06</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_07</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_08</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_09</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_10</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_11</texPath></li>
-      <li><texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_12</texPath></li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_02</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_02_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_03</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_03_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_04</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_04_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_05</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_05_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_06</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_06_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_07</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_07_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_08</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_08_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_09</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_09_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_10</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_10_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_11</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_11_Swimming</swimmingTexPath>
+      </li>
+      <li>
+        <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_12</texPath>
+        <swimmingTexPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_12_Swimming</swimmingTexPath>
+      </li>
     </alternateGraphics>
     <lifeStages>
       <li>
@@ -107,6 +145,11 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>0.7</drawSize>
         </bodyGraphicData>
+        <swimmingGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01_Swimming</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.7</drawSize>
+        </swimmingGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
           <drawSize>0.7</drawSize>
@@ -118,6 +161,11 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>0.9</drawSize>
         </bodyGraphicData>
+        <swimmingGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01_Swimming</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.9</drawSize>
+        </swimmingGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
           <drawSize>0.9</drawSize>
@@ -129,6 +177,11 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.1</drawSize>
         </bodyGraphicData>
+        <swimmingGraphicData>
+          <texPath>FIP-Arktos/Animals/Axolotl/FIP_Axolotl_01_Swimming</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </swimmingGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Iguana/Dessicated_Iguana</texPath>
           <drawSize>1.1</drawSize>

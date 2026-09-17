@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Brahmin dominate NPC trader carrier selection; Muffalo remains the weight-1 fallback. -->
+  <!-- Brahmin remain the most common Fallout carrier without crowding Pack Rats out. -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/FCP_Animal_Brahmin</xpath>
     <match Class="PatchOperationRemove">
@@ -11,7 +11,7 @@
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
     <value>
-      <FCP_Animal_Brahmin>100</FCP_Animal_Brahmin>
+      <FCP_Animal_Brahmin>8</FCP_Animal_Brahmin>
     </value>
   </Operation>
 
