@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Horses retain their ordinary vanilla role as uncommon wildlife in suitable climates. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="Arktos_Preserve" or defName="Arktos_Creek" or defName="Arktos_CentralValley" or defName="Arktos_BrahminWoods" or defName="Arktos_Floodplains" or defName="Arktos_Redwood" or defName="Arktos_Sequoia"]/wildAnimals[not(Horse)]</xpath>
+    <value>
+      <Horse>0.20</Horse>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="Arktos_GlacialPlain" or defName="Arktos_Tundra" or defName="Arktos_Aqueduct" or defName="Arktos_Marina" or defName="Arktos_Divide" or defName="Arktos_CranberryBog"]/wildAnimals[not(Horse)]</xpath>
+    <value>
+      <Horse>0.15</Horse>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="Arktos_Mojave" or defName="Arktos_Canyon" or defName="Arktos_Malpais"]/wildAnimals[not(Horse)]</xpath>
+    <value>
+      <Horse>0.10</Horse>
+    </value>
+  </Operation>
+
+</Patch>

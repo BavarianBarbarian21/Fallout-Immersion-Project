@@ -172,45 +172,4 @@
 			<ThingDef>RobCo_WarMachine</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	<!--
-		Save-compatibility shell for pre-quest-overhaul Bill_ProductionMech
-		instances. It is intentionally not assigned to any building. Loaded saves
-		cancel these obsolete bills and eject their ingredients before play resumes.
-	-->
-	<RecipeDef ParentName="BaseMechanoidRecipe">
-		<defName>RobCo_WarMachine_Recipe</defName>
-		<label>obsolete War Machine production project</label>
-		<description>Compatibility definition for an obsolete War Machine production bill. Existing bills are cancelled and their ingredients returned when the save loads.</description>
-		<gestationCycles>20</gestationCycles>
-		<ingredients>
-			<li>
-				<filter><thingDefs><li>Steel</li></thingDefs></filter>
-				<count>400</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
-				<count>300</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Uranium</li></thingDefs></filter>
-				<count>50</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
-				<count>4</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>RobCo_PlatinumChip</li></thingDefs></filter>
-				<count>2</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Corpse_RobCo_WarMachine</li></thingDefs></filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<displayPriority>500</displayPriority>
-		<products>
-			<RobCo_WarMachine>1</RobCo_WarMachine>
-		</products>
-	</RecipeDef>
 </Defs>

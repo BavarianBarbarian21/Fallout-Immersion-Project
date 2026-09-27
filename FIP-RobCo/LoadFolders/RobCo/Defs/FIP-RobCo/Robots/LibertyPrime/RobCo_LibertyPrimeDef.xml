@@ -169,49 +169,4 @@
 			<ThingDef>RobCo_LibertyPrime</ThingDef>
 		</descriptionHyperlinks>
 	</RecipeDef>
-	<!--
-		Save-compatibility shell for pre-quest-overhaul Bill_ProductionMech
-		instances. It is intentionally not assigned to any building. Loaded saves
-		cancel these obsolete bills and eject their ingredients before play resumes.
-	-->
-	<RecipeDef ParentName="BaseMechanoidRecipe">
-		<defName>RobCo_LibertyPrime_Recipe</defName>
-		<label>obsolete Liberty Prime production project</label>
-		<description>Compatibility definition for an obsolete Liberty Prime production bill. Existing bills are cancelled and their ingredients returned when the save loads.</description>
-		<gestationCycles>25</gestationCycles>
-		<ingredients>
-			<li>
-				<filter><thingDefs><li>Steel</li></thingDefs></filter>
-				<count>600</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
-				<count>450</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Uranium</li></thingDefs></filter>
-				<count>100</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>NanostructuringChip</li></thingDefs></filter>
-				<count>2</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
-				<count>6</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>RobCo_PlatinumChip</li></thingDefs></filter>
-				<count>3</count>
-			</li>
-			<li>
-				<filter><thingDefs><li>Corpse_RobCo_LibertyPrime</li></thingDefs></filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<displayPriority>600</displayPriority>
-		<products>
-			<RobCo_LibertyPrime>1</RobCo_LibertyPrime>
-		</products>
-	</RecipeDef>
 </Defs>

@@ -2367,7 +2367,7 @@ L'acqua del serbatoio di pesce si adatta alla sua temperatura dell'aria ambienta
   <Blueprint_RobCo_CommsConsole.label>Console di comunicazione RobCo (pronte)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>RobCo piatto (blueprint)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>Ricevitore RobCo (blueprint)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_RestorationGantry.label>RobCo restauro gantry (blueprint)</Blueprint_RobCo_RestorationGantry.label>
+  <Blueprint_RobCo_UndergroundMechanicLair.label>RobCo restauro gantry (blueprint)</Blueprint_RobCo_UndergroundMechanicLair.label>
   <Blueprint_SCP_ChemDrill.label>Escavatore alimentato Chemfuel (blueprint)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>sedia avanzata (blueprint)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>panca (stampa blu)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ One Hellion può supportare fino a sei propulsori VTOL pesanti.</Frame_LargeThru
   <Frame_RobCo_MechbandDish.label>RobCo piatto (costruzione)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>Migliora le prestazioni della console dei comms.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>Ricevitore RobCo (costruzione)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_RestorationGantry.description>A 5x5 RobCo gantry di manutenzione pesante per il ripristino di macchine prototipi insostituibili recuperate dalle volte pre-War. La sua culla di ricostruzione accetta un telaio prototipo intatto e integra permanentemente il chip di platino nella macchina riparata.</Frame_RobCo_RestorationGantry.description>
-  <Frame_RobCo_RestorationGantry.label>RobCo restauro gantry (costruzione)</Frame_RobCo_RestorationGantry.label>
+  <Frame_RobCo_UndergroundMechanicLair.description>A 5x5 RobCo gantry di manutenzione pesante per il ripristino di macchine prototipi insostituibili recuperate dalle volte pre-War. La sua culla di ricostruzione accetta un telaio prototipo intatto e integra permanentemente il chip di platino nella macchina riparata.</Frame_RobCo_UndergroundMechanicLair.description>
+  <Frame_RobCo_UndergroundMechanicLair.label>RobCo restauro gantry (costruzione)</Frame_RobCo_UndergroundMechanicLair.label>
   <Frame_SCP_ChemDrill.description>Un escavatore di perforazione a base di Chemfuel alimentato per estrarre minerali da profondità sotto la superficie. Ottimo per il caravaning grazie alla sua portabilità.</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>Escavatore alimentato Chemfuel (costruzione)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>Una soluzione di seduta di fascia alta, di ultima generazione con ammortizzazione adattativa, calibrazione postura e tessuti intelligenti traspirante. Progettato per il massimo comfort a lungo termine e eleganti interni moderni.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ I vostri ricercatori possono ora iniziare ad adattare il sistema operativo RobCo
   <RobCo_Receiver.comps.0.useLabel>Summon Hydra minaccia</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>Migliora le prestazioni della console dei comms.</RobCo_Receiver.description>
   <RobCo_Receiver.label>Ricevitore RobCo</RobCo_Receiver.label>
-  <RobCo_RestorationGantry.description>A 5x5 RobCo gantry di manutenzione pesante per il ripristino di macchine prototipi insostituibili recuperate dalle volte pre-War. La sua culla di ricostruzione accetta un telaio prototipo intatto e integra permanentemente il chip di platino nella macchina riparata.</RobCo_RestorationGantry.description>
-  <RobCo_RestorationGantry.label>RobCo restauro</RobCo_RestorationGantry.label>
+  <RobCo_UndergroundMechanicLair.description>A 5x5 RobCo gantry di manutenzione pesante per il ripristino di macchine prototipi insostituibili recuperate dalle volte pre-War. La sua culla di ricostruzione accetta un telaio prototipo intatto e integra permanentemente il chip di platino nella macchina riparata.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>RobCo restauro</RobCo_UndergroundMechanicLair.label>
   <RobCo_RoboScorpion.description>Un automa di combattimento Big MT modellato dopo un radscorpion. Gli spillatori armati tengono in posizione gli obiettivi mentre una coda articolata li traccia con un'arma energetica integrata. I Roboscorpions combinano un movimento simile agli animali con la logica sperimentale del Think Tank, rendendoli cacciatori persistenti a distanza ravvicinata e media.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>roboscorpione</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>telaio</RobCo_RoboScorpion.tools.0.label>
@@ -12330,8 +12330,6 @@ I vostri ricercatori possono ora iniziare ad adattare il sistema operativo RobCo
   <RobCo_SentrybotSiegebreakerLauncher.label>Lanciarazzi Sentrybot</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>Un proiettore a raggi a testa alta uscita costruito intorno a un ciclo di carica lungo e un grande raggio di esplosione. La scarica produce calore significativo ed è più efficace quando viene licenziato dalla gamma di stallo.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>RobCo pecore testa laser</RobCo_SheepsquatchHeadLaser.label>
-  <RobCo_UndergroundMechanicLair.description>Una baia di manutenzione RobCo legacy mantenuto in modo che le colonie esistenti possono caricare in modo sicuro. Nuovi restauri prototipi utilizzano l'gantry di restauro RobCo.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>lair meccanico sotterraneo (legacy)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>Un'unità Protectron dotata di un attacco di perforazione pesante al posto di un laser a mano standard, destinato a lavori di estrazione e scavo. È stato contratto per operazioni di estrazione mineraria pre-War per l'estrazione di risorse sotterranee. Il braccio di trapano lo rende più lento di un Protectron standard, ma gli conferisce una notevole capacità di chiusura.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>utilitronizzazione</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>telaio</RobCo_Utilitron.tools.0.label>

@@ -1,0 +1,607 @@
+FIP - Big Empty Guidelines
+==========================
+
+Identity
+--------
+- The mod's public name is "FIP - Big Empty".
+- The package ID is "FIP.BigMT", preserving the identity of the original Big Empty workshop mod.
+- The mod must never use Sunset's package ID or present itself as a copy, remake, sequel, replacement upload, "Big Empty 2", or similarly renamed duplicate.
+- The existing workshop publication identity must be preserved when this mod is published.
+
+Current scope
+-------------
+- The initial mod is an empty foundation. The guidelines are documentation, not implemented content.
+- Do not add Defs, DefInjected overrides, patches, recipes, DLLs, textures, generated values, or gameplay changes until the specific implementation has been explicitly approved.
+- Do not populate unfinished systems with guessed values, placeholder entities, arbitrary stats, generated factions, encounter groups, equipment pools, or speculative integrations.
+- Do not add compatibility relics or content retained only for old saves.
+
+Anomaly entities
+----------------
+- Vanilla Anomaly entities remain unchanged for now. Their labels, descriptions, graphics, stats, behavior, factions, codex entries, and mechanics must not be repurposed as unrelated Fallout entities.
+- A later, separately approved rework may replace entities completely. Until then, do not simulate replacements by renaming the original entities.
+- In particular, Sightstealer is not a roboscorpion, Revenant is not a nightkin, Gorehulk is not a behemoth, Metalhorror is not a trauma harness, Noctol is not a nightstalker, Devourer is not a centaur, and Ghoul is not a robobrain subject.
+
+Approved exceptions
+-------------------
+- The fleshbeast family as FEV creatures is an approved future concept, not a current implementation.
+- A ZAX supercomputer embedded in and directing the FEV mass is an approved future concept.
+- Related concepts such as FEV creatures, a Master-like controlling organism, and a ZAX unit may be developed later, but their exact names, text, mappings, and implementation must be agreed first.
+- Renaming "Inhumanized" to "lobotomization" is an approved future concept. It is not implemented in the empty foundation.
+- These conceptual approvals do not authorize DefInjected entries or any other game changes by themselves.
+
+Ghouls
+------
+- Do not rename or reinterpret Anomaly's Ghoul content.
+- Fallout already has its own ghouls; Big Empty must not create a second ghoul concept by relabeling unrelated Anomaly content.
+
+Change policy
+-------------
+- Every new entity mapping, gameplay value, faction, pawn kind, research project, integration, or compatibility patch requires an explicit design decision.
+- When a name or design is still undecided, leave the original content unchanged and record the open decision here instead of inventing a temporary replacement.
+
+
+Vanilla Anomaly audit and conversion concepts
+==============================================
+
+Status of this section
+----------------------
+- This is design research only. Nothing in this section authorizes an XML patch, Def, texture, DLL, stat change, or implementation.
+- The audit is based on the locally installed RimWorld 1.6 Anomaly Defs. Its authoritative entity list is the 27-entry vanilla EntityCodexEntryDef catalog, with mechanically relevant subtypes listed separately.
+- "Locked" means that the concept is wanted, not that it has been implemented.
+- "Maybe" means that the idea is worth developing but is not approved as a final mapping or name.
+- "Open" means that no rename or replacement has been selected.
+- "Reject" means that the earlier mapping should not be reused.
+
+Group A: Campaign spine - void monolith and ending
+--------------------------------------------------
+
+1. Void monolith
+Vanilla role:
+- The central Anomaly progression controller, not merely scenery or an antenna.
+- Technical level 0, Inactive: a fallen monolith. Investigating it begins the Anomaly research system.
+- Level 1, Stirring: intermittent psychic humming; basic entities become relevant and a sightstealer arrival is triggered on reaching the level.
+- Level 2, Waking: requires seven Basic codex discoveries; increases the anomaly threat tier and triggers the pit gate.
+- Level 3, VoidAwakened: requires twelve Advanced codex discoveries and begins the irreversible endgame awakening sequence.
+- Level 4, Gleaming: the fully awakened portal state after the surface structures have been activated.
+- Postgame branches are Embraced and Disrupted. The former leaves the conduit open and inhumanizes a pawn; the latter closes it and collapses the monolith.
+- Its visual footprint grows through several attachment graphics as the levels advance.
+Conversion status: OPEN.
+Design requirements:
+- "Big MT antenna" or "Big Mountain antenna" is not approved merely because the object emits a signal. Any replacement must explain the entire progression, changing footprint, research gates, entity escalation, endgame assault, teleportation, and final player choice.
+- Candidate direction A: an experimental Big MT command-and-control array that progressively comes online.
+- Candidate direction B: a buried West Tek/Big MT installation whose surface apparatus expands while deeper systems awaken.
+- Candidate direction C: a ZAX-linked experimental relay, provided ZAX is treated as its own Big Empty system and not confused with Fallout 1's Master.
+- Do not decide between these directions without a separate design pass.
+
+2. Void structures
+Vanilla role:
+- Several indestructible structures manifest during the endgame.
+- They kill nearby plants, must each be activated by a colonist, and their activation drives escalating darkness and entity attacks.
+- Activating all of them changes the monolith into its final portal state.
+Conversion status: OPEN.
+Design note:
+- "Think Tank installation" is too vague. Possible replacements are auxiliary relay towers, power couplers, buried laboratory uplinks, or field stabilizers, but their link to the main campaign device must be explicit.
+
+3. Void node
+Vanilla role:
+- The final interactive object inside the destination reached through the awakened monolith.
+- It presents the ending choice: disrupt the link or embrace it.
+- Embracing permanently changes the selected pawn; disrupting closes the campaign threat.
+Conversion status: OPEN.
+Design note:
+- "Broadcast node" is not approved. The node is a finale decision interface, not a normal antenna component.
+
+
+Group B: Fleshmass ecosystem and underground complex
+----------------------------------------------------
+
+4. Harbinger tree
+Vanilla role:
+- A self-healing organic tree with a bioferrite skeleton.
+- Consumes nearby corpses and raw meat; feeding it allows the grove to expand.
+- Can be harvested for twisted meat and bioferrite and also acts as a special meditation focus.
+Conversion status: MAYBE - Spore Plant.
+Design warning:
+- "Spore Plant" is visually and thematically promising, but Fallout spore plants do not normally consume corpses to grow a grove or produce metal.
+- A full version must explain meat consumption, colony spreading, and Saturnite production, possibly as a Big MT-engineered fungal/metal bioforge rather than an ordinary Mojave spore plant.
+
+5. Fleshbeasts - one family with four regular subtypes
+Vanilla shared role:
+- Cancerous flesh organisms with linked or redundant nervous systems.
+- They can be captured, studied, and harvested like other entities.
+- Several variants split into smaller forms on death, so the group is a gameplay hierarchy rather than unrelated monsters.
+Conversion status: MAYBE - FEV aberration family.
+Rule:
+- Exact final labels are not approved. Generic temporary names such as FEV hulk, FEV soldier, FEV spiker, and FEV crawler must not be implemented until the naming pass is complete.
+
+5a. Fingerspike
+- Smallest and fastest regular fleshbeast.
+- Dog-sized, has a ranged keratin-spike attack, and is the final product of several splitting chains.
+- Fallout conversion hook: small FEV sub-organism or detached limb organism.
+
+5b. Trispike
+- Man-sized ranged attacker.
+- Its limbs can survive independently; on death it may split into fingerspikes.
+- Fallout conversion hook: unstable multi-core FEV organism. The death split is the mechanic that the art and lore must explain.
+
+5c. Toughspike
+- Armored man-sized ranged attacker with hardened spike projectiles.
+- Its corpse dissolves into liquefied flesh if not processed quickly.
+- Fallout conversion hook: deliberately engineered ranged FEV organism or biological security specimen.
+
+5d. Bulbfreak
+- Large, slow clawed melee amalgam with high combat weight.
+- On death it bursts into a group of smaller fleshbeasts.
+- Fallout conversion hook: gestation carrier or mobile FEV growth, not automatically a super mutant behemoth.
+
+6. Dreadmeld
+Vanilla role:
+- Boss-sized underground fleshbeast with strong regeneration.
+- Digs through rock, inhabits the undercave, and is psychically linked to the flesh of its burrow.
+Conversion status: MAYBE - Master-like FEV amalgam or primary underground experiment.
+Design requirement:
+- It should remain the apex of the fleshbeast hierarchy if that hierarchy is retained.
+
+7. Fleshmass heart
+Vanilla role:
+- A spreading map infestation rather than a normal pawn.
+- Grows flesh terrain and walls, acid-spitting defensive organs, nerve bundles, and fleshbeast defenders.
+- Regenerates too quickly to kill normally. The player must destroy and analyze neural lumps from spawned nerve bundles before the heart can be killed.
+Conversion status: STRONG MAYBE - expanding FEV biomass or Master-like growth.
+Design requirement:
+- The conversion must preserve the investigation loop: contain growth, reach nerve bundles, analyze samples, then attack the core.
+
+8. Fleshmass nucleus
+Vanilla role:
+- The portable core left after defeating the heart.
+- Regenerates and accumulates flesh. If activity reaches its limit, it grows back into a fleshmass heart.
+- Can be captured, studied, and suppressed.
+Conversion status: OPEN within the approved Master/FEV/ZAX concept space.
+Important lore distinction:
+- Fallout 1's Master was Richard Grey, a human transformed by prolonged immersion in Mariposa's FEV. He later experimented on animals and humans, modified himself further, assimilated organisms, and developed a neural link to computer systems.
+- The Master was not a ZAX computer that generated flesh. His biomass came from his own FEV mutation and later assimilation.
+- A ZAX directing an FEV mass can be an original Big Empty concept, but must be presented as a separate experiment inspired by the Master, not as a retelling of the Master's canonical origin.
+
+9. Pit gate
+Vanilla role:
+- A newly opened surface hole leading to a separately generated underground flesh cavern.
+- The expedition descends, fights fleshbeasts, searches the living cave, and confronts the dreadmeld.
+Conversion status: STRONG MAYBE - collapsed access into a buried research installation.
+Preferred direction:
+- Do not call an unexplained fresh hole a finished service tunnel.
+- A better Fallout structure is a chemical or FEV pool whose undermined ground collapses into an old West Tek/Big MT shaft, or a breach resembling the descent into the Glow.
+- The undercave can become a ruined laboratory/bunker overgrown by flesh, but that requires a full texture and map-generation concept rather than labels alone.
+
+
+Group C: Corpses, altered humans, and resurrection
+--------------------------------------------------
+
+10. Shambler
+Vanilla role:
+- A dead human or animal corpse reanimated by archites.
+- Slow, painless, mindless, relentless, unable to work, and normally expires from metabolic exhaustion after several days.
+- Captured shamblers stop expiring. Vanilla attack groups include swarmers, soldiers, and a shambler gorehulk.
+Conversion status: OPEN.
+Warnings:
+- FEV does not canonically reanimate arbitrary corpses, so "FEV zombie" is a poor explanation.
+- Fallout ghouls already exist in WestTek and must not be duplicated by relabeling shamblers.
+- Possible mechanic-first directions are Big MT corpse-control technology, Y-17-style autonomous medical systems, or a carefully redesigned Sierra Madre/Ghost People concept. Each would require more than a rename because vanilla reanimates any exposed corpse.
+
+11. Ghoul
+Vanilla role:
+- A living pawn converted with an archotech shard into a controllable melee-only mutant.
+- Cannot work or use ordinary equipment, never sleeps, ignores pain, requires raw meat, can become hostile from hunger, can receive special prosthetic upgrades, and can later be resurrected with serum.
+Conversion status: REJECT as a new Big Empty ghoul concept.
+Rule:
+- Fallout ghouls already belong to WestTek. Do not rename Anomaly's Ghoul to robobrain subject or create a second incompatible Fallout ghoul system.
+- If this mechanic is ever retained, it needs a distinct creature concept and an explicit integration decision with WestTek.
+
+12. Gorehulk
+Vanilla role:
+- Distorted humanoid artillery creature.
+- Launches volleys of keratin spines at range; its body is deliberately less effective in melee.
+Conversion status: OPEN.
+Strong mechanic candidate:
+- Sheepsquatch has poisoned quills and a powerful physical presence, making it a much closer Fallout-76 mechanical candidate than a super mutant behemoth.
+- A final Sheepsquatch conversion would still need new graphics and review of the missing charge/ram behavior.
+
+13. Death pall
+Vanilla role:
+- A one-to-three-day corpse-gray outdoor weather event.
+- Reanimates unroofed non-mechanoid corpses as shamblers. Roofed, buried, burned, destroyed, or indoor corpses are protected.
+Conversion status: OPEN.
+Rejected shortcut:
+- "FEV aerosol cloud" is not sufficient because the mechanic resurrects corpses instead of mutating living subjects.
+Possible direction:
+- The Sierra Madre Cloud is visually and thematically close, and Ghost People provide a companion creature theme, but the Cloud does not canonically reanimate arbitrary corpses. Using it requires either a deliberately loose adaptation or code that narrows valid corpses.
+
+14. Unnatural corpse
+Vanilla role:
+- A warm, waxy duplicate corpse linked to one living pawn.
+- It follows that pawn between maps, returns after disposal, inflicts psychological pressure, and eventually awakens to copy and replace the original.
+- Its study unlocks death refusal.
+Conversion status: STRONG MAYBE - failed Big MT clone, replacement body, or biological duplicate.
+Design note:
+- This pairs naturally with a cloning experiment and should be considered together with the corrupted duplicator obelisk.
+
+
+Group D: Stealth, darkness, infection, and psychic hunters
+---------------------------------------------------------
+
+15. Sightstealer
+Vanilla role:
+- Fragile, fast pack hunter that is psychically invisible until close to a victim or otherwise revealed.
+- Silent arrival and proximity detection are central to the threat.
+Conversion status: OPEN.
+Rejected mapping:
+- It is not a roboscorpion. Roboscorpions are large robots and do not match invisible pack-ambush gameplay.
+Possible hooks:
+- A cloaked Big MT experiment, a stealth-field mutant, or a cryptid designed around ambush. Do not reuse Nightkin automatically because WestTek already owns normal Nightkin.
+
+16. Noctolith
+Vanilla role:
+- One of three objective pillars spawned during unnatural darkness.
+- The darkness ends early only when all are destroyed. Damaging one summons noctols, and each destroyed pillar yields a shard.
+Conversion status: STRONG MAYBE as part of the Mothman/night event, not as a generic FEV containment pod.
+Possible direction:
+- Mothman effigy, beacon, nest marker, or cult ritual focus. This connects the objective structure to the Holy Mothman cult and to creatures that thrive in darkness.
+
+17. Noctol
+Vanilla role:
+- Fast, dangerous darkness predator.
+- Light above roughly 30 percent rapidly inflicts pain, slows movement, and greatly lengthens melee cooldown; in darkness it is a serious melee threat.
+- Spawns in waves during unnatural darkness and when noctoliths are attacked.
+Conversion status: STRONG MAYBE - hostile Mothman variant or another light-averse cryptid.
+Warning:
+- "Nightstalker" is a poor rename. Fallout nightstalkers are coyote-rattlesnake hybrids and do not have this light-counter mechanic.
+
+18. Revenant
+Vanilla role:
+- Invisible recurring stalker that selects a victim, becomes visible at close range, hypnotizes and permanently downs that victim, then retreats and hides before hunting again.
+- It opens doors, can be revealed by disruptive effects, and all victims awaken when that specific revenant dies.
+Conversion status: STRONG MAYBE - Flatwoods monster or another psychic cryptid.
+Reason:
+- Fallout's Flatwoods monster has psychic/mind-control associations and alien cloaking/teleportation flavor, which matches hypnosis and elusive stalking better than Nightkin.
+- Final approval requires checking whether the repeated single-victim hunt feels correct for the Flatwoods monster.
+
+19. Metalhorror
+Vanilla role:
+- A hidden parasite inside a host.
+- Silently spreads through valid infection pathways such as close medical, food, social, or entity-contact interactions; investigation and bioferrite evidence expose the chain.
+- When threatened or revealed, the metal organism erupts from hosts and fights as a separate entity.
+Conversion status: OPEN.
+Rejected mapping:
+- A Y-17 trauma harness does not reproduce inside hosts and secretly infect a colony, so "trauma harness" is mechanically wrong.
+Possible hooks:
+- An original Big MT replicator parasite, alien infiltrator organism, or other purpose-built Fallout-like creature. Avoid defaulting to FEV unless mutation and transmission lore are explicitly designed.
+
+Related event: Unnatural darkness (not a separate codex entity)
+Vanilla role:
+- Removes sunlight, blankets unlit tiles in damaging darkness, disables normal outdoor safety, and repeatedly spawns noctols.
+- Three noctoliths are the objectives; destroying them ends the event early.
+Conversion status: STRONG MAYBE - Mothman cult/cryptid event.
+Design note:
+- This is the system that should unify noctoliths, noctols, lighting counterplay, and the evil Mothman cult.
+
+
+Group E: Large standalone creatures and weapons
+------------------------------------------------
+
+20. Chimera
+Vanilla role:
+- Large, aggressive bear-like animal amalgam with several visual variants.
+- Primarily a direct melee threat; it lacks a signature ranged or transformation mechanic.
+Conversion status: OPEN.
+Possible hooks:
+- FEV animal hybrid, Grafton Monster, Blue Devil, Beast of Beckley, or another brute cryptid. A final choice should reserve the more mechanically distinctive cryptids for entities that actually express their special abilities.
+
+21. Devourer
+Vanilla role:
+- Huge creature that can leap several body lengths, swallow a pawn whole, digest the victim alive, and later regurgitate remains.
+- Can participate in attacks from water.
+Conversion status: STRONG MAYBE - giant gulper or another aquatic/ambush predator.
+Rejected mapping:
+- A centaur does not swallow humans whole and is not an aquatic ambush predator. The old centaur rename should not return.
+
+22. Nociosphere
+Vanilla role:
+- Initially docile floating machine that emits an area pain field and grows increasingly unstable.
+- Can be captured and suppressed, but suppression eventually becomes ineffective.
+- When weaponized or hostile it can teleport, create heat spikes, fire a flesh-melting bolt, and emit an agony pulse.
+Conversion status: STRONG MAYBE - Big MT floating combat brain, autonomous Think Tank weapon, or ZAX-linked pain device.
+Design note:
+- "Think Tank brain" is directionally plausible but too generic as a final name. The art, named identity, pain field, instability, and four combat abilities should be designed together.
+
+23. Blood rain
+Vanilla role:
+- A weather event that builds Blood Rage only while pawns and animals are exposed outdoors.
+- Increasing severity improves melee damage but damages mood; at maximum, people berserk and animals become manhunters.
+- It does not mutate pawns. It also reduces ranged accuracy like fog and makes pawns wet.
+Conversion status: OPEN.
+Rejected shortcut:
+- "FEV rain" is mechanically and narratively wrong because no mutation occurs.
+Possible directions:
+- Big MT psychoactive rage agent, airborne combat-stimulant experiment, or another red psychochemical weather system.
+- The Sierra Madre Cloud is visually related but is primarily toxic, not a rage enhancer, so that mapping also needs more work.
+
+
+Group F: Obelisks - one category, three different mechanics
+----------------------------------------------------------
+
+Shared vanilla system:
+- All three are large unstable devices that accumulate activity, can be suppressed by a warden, can be studied, and may trigger automatically at full activity.
+- Damaging them increases activity. Two can eventually be safely deactivated with shards.
+- They should share a Fallout visual language, but they should not all become the same FEV puddle because their actual effects are radically different.
+
+24. Twisted obelisk / mutator
+- Mutates a chosen pawn with a tentacle or fleshmass organ.
+- Uncontrolled activation can produce many flesh mutants.
+Conversion status: STRONG MAYBE - FEV pool, leaking mutation vat, or active biological test station.
+- This is the one obelisk for which the proposed FEV puddle is mechanically strong.
+- Progressive textures could show a small spill developing into tanks, lab tables, pumps, and a mutation altar/workstation.
+
+25. Corrupted obelisk / duplicator
+- Duplicates a willing pawn, with possible flawed outcomes.
+- Uncontrolled activation enters a chaotic duplication loop.
+Conversion status: STRONG MAYBE - Big MT cloning vat or damaged replicator.
+- It pairs with the unnatural corpse/failed-clone storyline.
+- It should not be a FEV puddle unless the cloning mechanic is explicitly explained by a larger apparatus.
+
+26. Warped obelisk / abductor
+- Teleports a willing pawn into a dangerous extradimensional labyrinth from which they must find the mirror obelisk to escape.
+- Uncontrolled activation abducts pawns.
+Conversion status: STRONG MAYBE - malfunctioning Big MT teleportation array or Transportalponder experiment.
+- It should not be a mutation puddle; its defining mechanic is displacement and the generated labyrinth expedition.
+
+
+Group G: Compulsive artifact
+-----------------------------
+
+27. Golden cube
+Vanilla role:
+- Gradually selects colonists and creates escalating interest, fascination, and obsession.
+- Affected pawns interrupt work to play with it, talk about it, build free cube sculptures, suffer withdrawal when separated, and can fall into coma.
+- Destroying their sculptures can provoke berserk rage. The cube cannot be normally destroyed until enough study permits deactivation.
+Conversion status: LOCKED - the Toaster from Fallout: New Vegas, Old World Blues.
+Required direction:
+- Short label: "Toaster".
+- It is the Sink's megalomaniacal artificial personality that wants to burn or destroy the world.
+- Possession of it should drive colonists into extreme fixation. Cube sculptures become toaster shrines, appliance altars, or compulsively assembled toaster monuments.
+- Deactivation/destruction text and visuals must be rewritten around disabling the personality module or otherwise neutralizing the appliance.
+- This requires new textures and full text coverage, not only a label replacement.
+
+
+Supporting material: Bioferrite
+-------------------------------
+
+Vanilla role:
+- Organic/metallic resource produced from contained entities and harbinger trees.
+- Used as a psychic material and fuel; mechanically it is unusually flammable despite providing useful sharp properties and cold insulation.
+Conversion status: LOCKED NAME - "Saturnite".
+Rules:
+- The short label is "Saturnite", not "Saturnite alloy".
+- Descriptions may call it a Saturnite alloy.
+- A simple rename creates a lore/mechanics tension: Fallout Saturnite is strongly heat-resistant, while vanilla bioferrite is also a pressurized fuel and highly flammable in several uses.
+- Before implementation, audit recipes, fuel use, stuff stats, containment harvesting, harbinger-tree production, and every dependent label. Decide whether gameplay stats must change or whether this is a distinct unstable raw Saturnite precursor.
+
+
+Faction and scenario concepts
+=============================
+
+Entities faction
+----------------
+Vanilla facts:
+- Entities is an Anomaly faction, not a Core or Biotech faction.
+- It is hidden, non-humanlike, hostile, and used as the technical faction for fleshbeasts, shamblers, sightstealers, metalhorrors, gorehulks, devourers, noctols, and chimeras.
+Conversion status: MAYBE - "Cryptids".
+Rules:
+- The faction label "Cryptids" and singular/plural "cryptid/cryptids" are sensible.
+- "Legendary Shade/Legendary Shades" has no clear relationship to this faction and should not return.
+- Because the faction includes FEV experiments and other non-cryptid monsters, decide whether "Cryptids" remains broad Fallout slang or whether the faction must be split mechanically.
+
+Horax cult
+-----------
+Vanilla facts:
+- Hidden permanent-enemy human cult faction.
+- Uses psychic ritual sieges, underthralls, highthralls, and gunners; its ideology worships Horax and the void.
+Conversion status: STRONG MAYBE - hostile Mothman cult.
+Direction:
+- Use the hostile/evil Fallout 76 Mothman cult tradition, not the peaceful Enlightened interpretation.
+- The cult should connect to unnatural darkness, noctolith objectives, and hostile Mothman-like entities.
+- "Holy Mothman Cultists" is not final. Candidate hierarchy should be developed from cultist, seer, priest, and prophet language while preserving singular/plural grammar.
+
+Research Expedition player faction
+----------------------------------
+Vanilla facts:
+- This is the player faction used by The Anomaly scenario: three researchers and a ghoul investigate the monolith.
+Conversion status: OPEN.
+Options:
+- Keep "Research Expedition" if the scenario becomes a Big MT/West Tek investigation.
+- Rename it to "New Cult" only if the starting scenario is deliberately rewritten as cult founders. A label-only rename would conflict with the researchers, starting equipment, scenario description, and starting ghoul.
+
+Crazed super mutants and Big Empty nightkin
+--------------------------------------------
+- Do not generate a separate Big Empty faction or duplicate WestTek pawn definitions by default.
+- WestTek already owns the main super mutant and Nightkin systems.
+- A future optional concept may use existing WestTek textures and pawn systems for feral, animalistic, diplomacy-disabled mutants, but only after deciding that this adds a distinct gameplay role.
+- No random stats, equipment pools, faction makers, or pawn groups may be invented to fill this idea.
+
+
+Fallout 76 cryptid reference pool
+=================================
+
+Purpose
+-------
+- This is a candidate pool for total-conversion design, not a one-to-one mapping and not implementation approval.
+- Cryptids should be assigned according to gameplay identity first. If no Anomaly mechanic fits, it is better to leave the mapping open or build a new creature later.
+
+Recognized creatures and design hooks
+-------------------------------------
+
+1. Mothman
+- Nocturnal winged cryptid with multiple temperaments and a major cult tradition.
+- Best Anomaly hooks: unnatural darkness, noctolith objectives, noctol waves, teleport-like appearances, and the Horax-cult replacement.
+
+2. Flatwoods monster
+- Floating alien/cryptid associated with abduction, energy attacks, psychic fear, and mind influence.
+- Best Anomaly hooks: revenant hypnosis and stalking, or nociosphere-style floating psychic combat. Revenant is currently the cleaner narrative match; nociosphere is the cleaner combat-shape match.
+
+3. Grafton Monster
+- Huge headless brute that charges and has vulnerable blowholes.
+- Possible hooks: chimera or another direct melee brute. No current Anomaly entity reproduces its blowhole weak point without new mechanics.
+
+4. Snallygaster
+- Mutated, long-limbed FEV-related creature associated with claws, tongue/acid attacks, and unnatural mobility.
+- Possible hooks: chimera or a redesigned fleshbeast, but the distinctive acid/tongue behavior is missing from current candidates.
+
+5. Wendigo
+- Cannibal-derived fast humanoid predator.
+- Possible hooks: a fast ambush entity, but neither shambler resurrection nor sightstealer invisibility is an exact match. Do not force the mapping.
+
+6. Wendigo colossus
+- Multi-headed giant with devastating vocal/fear effects and spawned wendigos.
+- Possible hook: a boss framework such as dreadmeld, but only with completely new art and behavior support.
+
+7. Sheepsquatch
+- Extremely durable horned brute with powerful ramming attacks and poisonous quills.
+- Strongest existing hook: gorehulk's keratin-spine ranged attack. Charge behavior would need additional design.
+
+8. Mega sloth
+- Huge mutated sloth with a fungal ecosystem growing in its fur; normally calmer than most listed threats but formidable when hostile.
+- Possible hook: chimera body scale. It is a weak fit for a relentlessly hostile entity unless behavior is altered.
+
+9. Blue Devil
+- Large wolf-like cryptid whose howl causes uncontrollable fear.
+- Possible hook: chimera as a large quadruped, but the signature fear howl is absent and should not be ignored.
+
+10. Ogua
+- Massive turtle-like river cryptid that retreats into its shell and becomes protected.
+- No strong current Anomaly match. Its shell-defense loop deserves a custom creature rather than a rename.
+
+11. Jersey Devil and Lesser Devils
+- Aggressive horned, winged/devilish cryptids with a major boss and smaller related creatures.
+- Possible family hook: a boss-plus-minions framework, but no current entity family is an exact mechanical fit.
+
+12. Beast of Beckley
+- Unique pale/albino wolf cryptid and straightforward predator.
+- Possible hook: chimera or a simple animal encounter; low priority because it lacks a distinctive mechanic to recycle.
+
+13. Bigfoot
+- Forest-dwelling large ape-like cryptid introduced as a Fallout 76 creature in the Backwoods update.
+- Mapping remains OPEN until its final Fallout 76 combat behavior is evaluated against the Anomaly roster.
+
+14. Smiling Man
+- Mysterious humanlike encounter associated with cryptid folklore rather than a normal combat monster.
+- Better suited to a creepjoiner or narrative encounter than to a hostile entity pawn.
+
+Classification-dependent additions
+----------------------------------
+- Fallout 76 challenges and sources sometimes count aliens/Zetans, the Flatwoods monster, fog crawlers, and mega sloths as cryptids for gameplay purposes.
+- Aliens/Zetans are useful for psychic, cloaking, teleportation, and abduction mechanics but should remain recognizably alien rather than being folded into FEV.
+- Fog crawlers are large coastal arthropod predators. They are a possible direct-monster conversion but do not supply a clear match for the current special mechanics.
+- Treat classification as a design choice; do not silently rename every member of the hidden Entities faction to a famous cryptid.
+
+Additional non-Fallout cryptid candidates
+-----------------------------------------
+- These are folklore candidates for original Fallout-like adaptations. They are not automatically Fallout canon.
+- Hidebehind: an unseen forest stalker that hides whenever observed. Strong mechanic candidate for sightstealer invisibility or a revenant-style hunt.
+- Chupacabra: nocturnal livestock predator associated with drained animals. Possible fast ambush creature, but it needs a feeding mechanic to feel distinct.
+- Wampus cat: large Appalachian feline/hybrid. Possible chimera visual concept, though it lacks a strong unique mechanic by itself.
+- Hopkinsville goblins: small alien-like creatures attacking in groups. Possible sightstealer pack alternative if the invisibility is reinterpreted as alien concealment.
+- Thunderbird: enormous storm-associated bird. No strong current pawn match because Anomaly lacks a true flying-creature combat loop.
+- Loveland frogman: humanoid amphibian cryptid. Possible aquatic expedition creature, but devourer's swallow mechanic would require a much more monstrous interpretation.
+- Squonk: sorrowful creature said to dissolve into tears. Better as a strange encounter or capture subject than a direct combat entity.
+- Vegetable Man: psychic humanoid folklore creature associated with bodily-fluid feeding. Better suited to a creepjoiner or narrative infiltrator than a generic raid pawn.
+- Indrid Cold / grinning man: humanlike uncanny visitor. Strong narrative-event or creepjoiner concept, not a normal monster faction pawn.
+- Fresno nightcrawler: visually uncanny walking figure with minimal established aggression. Better as a rare ambient encounter unless an original combat identity is designed.
+- Goatman: aggressive human-goat hybrid found in several regional legends. Could become a cult-associated melee cryptid, but should not duplicate Sheepsquatch.
+- Dover demon: small, long-limbed nocturnal humanoid. Possible stealth scout, but currently overlaps sightstealer and Hidebehind roles.
+
+Existing Fallout non-cryptid creature pool
+------------------------------------------
+- Spore plant: visually promising for the harbinger tree. The feeding, grove growth, and Saturnite-production mechanics need a Big MT bioengineering explanation.
+- Spore carrier: humanoid fungal attacker that could support a spore-plant ecosystem, but should not replace corpse-reanimating shamblers without addressing the corpse mechanic.
+- Ghost People: visually and thematically pair with the Sierra Madre Cloud. Their suits and Cloud exposure do not canonically turn arbitrary exposed corpses into new Ghost People.
+- Y-17 trauma harness: autonomous medical harness that continues moving a dead wearer. Strong individual corpse-puppet concept, but not a self-replicating metalhorror or mass weather resurrection explanation.
+- Wanamingo: fast alien-looking mutant and possible original FEV experiment. Useful as a generic or ambush monster, but it has no canonical invisibility or hypnosis.
+- Floater: FEV-derived support organism with ranged biological attacks. Could fill a special ranged role without consuming one of the famous cryptid identities.
+- Centaur: FEV amalgam with ranged spit in several appearances. It does not match the devourer's leap, swimming, and whole-body swallowing loop.
+- Nightstalker: coyote-rattlesnake hybrid. Good fast pack predator, but no canonical vulnerability to light; therefore it is not a faithful noctol conversion.
+- Roboscorpion: armored Big MT robot. It needs robotic armor, weapons, and behavior; sightstealer invisibility and fragile pack tactics are the wrong base.
+- Giant gulper: amphibious ambush predator and the closest existing Fallout shape/gameplay candidate for the swimming, swallowing devourer.
+- Cazador: fast venomous flying pack predator. Could reuse a fast swarm role but needs flight and poison to retain its identity.
+- Think Tank brain chassis: strong basis for a nociosphere conversion if its pain field and combat systems are framed as deliberate Big MT weapons rather than a generic renamed brain.
+
+
+Current decision summary
+========================
+
+Locked concepts
+---------------
+- Golden cube -> Toaster, with full obsession/shrine conversion.
+- Bioferrite short label -> Saturnite; description may say Saturnite alloy. Mechanical conflict must be resolved before implementation.
+- No duplicate Fallout ghoul system.
+- No legacy, compatibility, or old-save Defs.
+
+Strong directions, not final mappings
+-------------------------------------
+- Fleshbeast ecosystem -> coherent FEV/Master-like experiment family.
+- Pit gate -> collapsed entrance into a buried laboratory or Glow-like installation.
+- Fleshmass heart/nucleus -> expanding FEV biomass with a Master-inspired but lore-distinct controller.
+- Unnatural darkness + noctolith + noctol + Horax cult -> hostile Mothman event and cult package.
+- Corrupted obelisk + unnatural corpse -> cloning experiment and failed duplicate package.
+- Twisted obelisk -> FEV pool/mutation apparatus.
+- Warped obelisk -> malfunctioning teleportation array.
+
+Explicitly rejected previous mappings
+-------------------------------------
+- Sightstealer -> roboscorpion.
+- Revenant -> Nightkin as an automatic label-only conversion.
+- Gorehulk -> super mutant behemoth.
+- Metalhorror -> Y-17 trauma harness.
+- Noctol -> nightstalker.
+- Devourer -> centaur.
+- Anomaly Ghoul -> robobrain subject or second Fallout ghoul concept.
+- Death pall -> FEV aerosol without solving corpse reanimation.
+- Blood rain -> FEV rain.
+- Void node -> broadcast node without accounting for its finale-choice mechanic.
+- Entities pawn singular/plural -> Legendary Shade/Legendary Shades.
+
+Open decisions required before any implementation
+-------------------------------------------------
+- Final monolith campaign identity and every stage name.
+- Exact names for the fleshbeast/FEV hierarchy.
+- Whether the flesh controller is a mutant organism, a ZAX, or a deliberately combined original experiment.
+- Exact Mothman creature-to-Def mapping.
+- Cryptid assignments for the remaining standalone entities.
+- Death pall and shambler lore.
+- Blood rain's non-FEV Fallout explanation.
+- Whether Anomaly's Ghoul feature is disabled, left vanilla, or integrated with WestTek through a separately designed system.
+- Whether Research Expedition remains a research team or becomes an explicitly rewritten cult scenario.
+
+
+Research references
+===================
+
+Primary local gameplay data
+---------------------------
+- RimWorld 1.6 Anomaly/Defs/EntityCodexEntryDefs/EntityCodexEntryDefs.xml
+- RimWorld 1.6 Anomaly/Defs/PawnKinds/PawnKinds_Entities.xml
+- RimWorld 1.6 Anomaly/Defs/PawnKinds/PawnKinds_Fleshbeasts.xml
+- RimWorld 1.6 Anomaly/Defs/PawnKinds/PawnKinds_Mutants.xml
+- RimWorld 1.6 Anomaly/Defs/ThingDefs_Races and ThingDefs_Buildings
+- RimWorld 1.6 Anomaly/Defs/GameConditionDefs/GameConditions_Misc.xml
+- RimWorld 1.6 Anomaly/Defs/Misc/MonolithLevels.xml
+- RimWorld 1.6 Anomaly/Defs/FactionDefs/Factions_Misc.xml and Factions_Player.xml
+
+Fallout and supplementary mechanic references
+----------------------------------------------
+- Bethesda Fallout 76 cryptid guide: https://fallout.bethesda.net/en-US/news/fallout-76-cryptid-guide
+- Bethesda Once in a Blue Moon notes for Blue Devil and Ogua: https://fallout.bethesda.net/en-US/news/fallout-76-once-in-a-blue-moon-update-notes-june-20-2023
+- Fallout cryptid overview and classification: https://fallout.fandom.com/wiki/Cryptids
+- Fallout Master history: https://fallout.fandom.com/wiki/Master
+- Old World Blues Toaster history: https://fallout.fandom.com/wiki/Toaster_(character)
+- RimWorld Anomaly event overview: https://rimworldwiki.com/wiki/Events/Anomaly
+- RimWorld blood rain mechanics: https://rimworldwiki.com/wiki/Blood_rain
+- RimWorld golden cube mechanics: https://rimworldwiki.com/wiki/Golden_cube
+- RimWorld unnatural darkness mechanics: https://rimworldwiki.com/wiki/Unnatural_darkness
