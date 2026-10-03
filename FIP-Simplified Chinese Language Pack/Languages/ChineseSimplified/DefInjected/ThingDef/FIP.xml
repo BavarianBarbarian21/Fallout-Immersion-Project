@@ -2367,7 +2367,7 @@
   <Blueprint_RobCo_CommsConsole.label>RobCo 通讯控制台( 蓝印)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>RobCo 菜( 蓝印)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>RobCo 接收器( 蓝印)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>RobCo 修复管道( 蓝印)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>RobCo 修复管道( 蓝印)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>化学燃料动力挖掘机(蓝印)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>高级椅子(蓝印)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>长凳(蓝印)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ X-Cell是战前制药成就的顶峰,是最终的性能增强器.</FCP_Chem_X_Ce
   <Frame_RobCo_MechbandDish.label>RobCo 菜肴( 建筑)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>推动通讯控制台的性能.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>RobCo 接收器(大楼)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>5x5 RobCo重型维修机,用于修复从战前金库取回的不可替代原型机. 其重建摇篮接受完好无损的原型底盘并永久地将白金芯片整合入被修复的机器.</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>RobCo 修复管道(建筑)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>5x5 RobCo重型维修机,用于修复从战前金库取回的不可替代原型机. 其重建摇篮接受完好无损的原型底盘并永久地将白金芯片整合入被修复的机器.</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>RobCo 修复管道(建筑)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>一种化学燃料为从地表下深处取出矿物而提供动力的深层钻探出土机。 因为它的可移动性,对大篷车很有帮助。</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>化学燃料动力挖掘机(建筑)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>高端空间器时代的座椅溶液 有适应性衬垫 姿态校正 和可呼吸的智能织物 被设计为最大限度的长期舒适和柔和的现代内饰.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ Dampens铸造者视线、听力、动作和操纵,</Psytrainer_VPE_PsychicGuidan
   <RobCo_Receiver.comps.0.useLabel>威胁海德拉</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>推动通讯控制台的性能.</RobCo_Receiver.description>
   <RobCo_Receiver.label>RobCo 接收器</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>5x5 RobCo重型维修机,用于修复从战前金库取回的不可替代原型机. 其重建摇篮接受完好无损的原型底盘并永久地将白金芯片整合入被修复的机器.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>RobCo 修复管道</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>5x5 RobCo重型维修机,用于修复从战前金库取回的不可替代原型机. 其重建摇篮接受完好无损的原型底盘并永久地将白金芯片整合入被修复的机器.</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>RobCo 修复管道</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>一个大MT战斗自相机 以弧度蝎子为模型。 装有装甲的针头手将目标固定在地上,而一个清晰的尾巴则用集成能武器跟踪目标. roboscorpions将类似动物的运动与智囊团的实验取向逻辑相结合,使得它们成为了近距离和中距离的持续猎人.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>软体动物</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>底盘</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ Dampens铸造者视线、听力、动作和操纵,</Psytrainer_VPE_PsychicGuidan
   <RobCo_SentrybotSiegebreakerLauncher.label>哨兵机器人火箭发射器</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>高输出头架梁投影仪围绕一个长的充电周期和一个大爆炸半径而建造. 排出物产生显著的热量,在从对峙地射出后最为有效.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>罗布科羊头鼠头激光</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>遗留下来的RobCo维修海湾被保留了下来,这样现有的殖民地就可以安全地装载. 新的原型修复使用RobCo修复干戈.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>地下机械师巢穴(遗产)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>安装有重型钻接装置的防护装置,以取代用于采矿和挖掘工作的标准手式激光器。 它被承包从事战前地下资源开采的采矿作业。 钻臂使得它比标准的"保护"要慢,但使其具有显著的近卫能力.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>功利图</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>底盘</RobCo_Utilitron.tools.0.label>

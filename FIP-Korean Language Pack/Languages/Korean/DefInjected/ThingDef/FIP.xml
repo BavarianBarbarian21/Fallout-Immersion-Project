@@ -2367,7 +2367,7 @@
   <Blueprint_RobCo_CommsConsole.label>RobCo는 콘솔 (블루 프린트)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>RobCo 접시 (blueprint)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>RobCo 수신기 (blueprint)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>RobCo 복원 갠트리 (blueprint)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>RobCo 복원 갠트리 (blueprint)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>Chemfuel 구동 굴삭기 (blueprint)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>고급 의자 (blueprint)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>벤치 (blueprint)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ vacstone 블록을 요구, 궤도 asteroids에서 얻을 수 있습니다.
   <Frame_RobCo_MechbandDish.label>RobCo 접시 (빌딩)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>comms 콘솔의 성능 향상.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>RobCo 수신기 (빌딩)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>5x5 RobCo 휴지통 프로토 타입 머신을 복원하기위한 중점 갠트리. 그것의 재건 크래들는 intact 시제품 포좌를 받아들이고 영구적으로 수선 기계에 platinum 칩을 통합합니다.</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>RobCo 복원 갠트리 (빌딩)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>5x5 RobCo 휴지통 프로토 타입 머신을 복원하기위한 중점 갠트리. 그것의 재건 크래들는 intact 시제품 포좌를 받아들이고 영구적으로 수선 기계에 platinum 칩을 통합합니다.</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>RobCo 복원 갠트리 (빌딩)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>Chemfuel은 표면의 밑에 깊은 곳에서 무기물을 추출하는 깊은 녹슬지 않는 드릴링 굴착기를 강화했습니다. 그것의 portability 때문에 caravaning를 위해 중대한.</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>Chemfuel 구동 굴삭기 (빌딩)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>적응형 쿠션, 자세 교정 및 breathable 스마트 직물을 가진 상한, spacer-era 좌석 솔루션. 최대 장기간의 편안함과 세련된 현대 인테리어 디자인.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ serenity의 말씀
   <RobCo_Receiver.comps.0.useLabel>Summon Hydra 위협</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>comms 콘솔의 성능 향상.</RobCo_Receiver.description>
   <RobCo_Receiver.label>RobCo 수신기</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>5x5 RobCo 휴지통 프로토 타입 머신을 복원하기위한 중점 갠트리. 그것의 재건 크래들는 intact 시제품 포좌를 받아들이고 영구적으로 수선 기계에 platinum 칩을 통합합니다.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>RobCo 복원 gantry</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>5x5 RobCo 휴지통 프로토 타입 머신을 복원하기위한 중점 갠트리. 그것의 재건 크래들는 intact 시제품 포좌를 받아들이고 영구적으로 수선 기계에 platinum 칩을 통합합니다.</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>RobCo 복원 gantry</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>radscorpion 후 모델 큰 MT 전투. 갑옷을 붙은 피그들은 공간에 있는 표적을 붙들고 미립자 꼬리는 통합된 에너지 무기로 그(것)들을 추적합니다. Roboscorpions는 Think Tank의 실험적 타겟팅 논리와 동물 같은 움직임을 결합하여 주변 및 중간 범위에서 지속적 인 사냥꾼을 만듭니다.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>채용정보</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>주요 특징</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ serenity의 말씀
   <RobCo_SentrybotSiegebreakerLauncher.label>Sentrybot 로켓 발사기</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>높은 출력 헤드 마운트 빔 프로젝터는 긴 충전 사이클과 대형 폭발 반경을 내장했습니다. 출력은 뜻깊은 열을 일으켜서 가장 효과적입니다.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>RobCo 양수 머리 레이저</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>레거시 RobCo 유지 보수 만은 기존 식민지가 안전하게로드 할 수 있도록 유지했습니다. 새로운 프로토 타입 복원 사용 RobCo 복원 gantry.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>지하 기계 lair (legacy)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>표준 손 레이저의 장소에 무거운 드릴 부착과 장착 된 Protectron 단위는 광업 및 발굴 작업을 위해 예정되어 있습니다. subterranean 리소스 추출을 위한 사전-War 마이닝 작업을 계약했습니다. 드릴 팔은 표준 Protectron보다 느리게하지만 상당한 근접 쿼터 기능을 제공합니다.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>채용정보</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>주요 특징</RobCo_Utilitron.tools.0.label>

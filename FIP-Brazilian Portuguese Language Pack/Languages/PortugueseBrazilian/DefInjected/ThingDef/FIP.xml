@@ -2367,7 +2367,7 @@ A água do aquário adapta-se à temperatura ambiental do ar, mas não espalha a
   <Blueprint_RobCo_CommsConsole.label>Consola de comunicações RobCo (blueprint)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>Prato RobCo (blueprint)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>Receptor RobCo (blueprint)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>Gantry de restauração RobCo (blueprint)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>Gantry de restauração RobCo (blueprint)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>Escavadeira com combustível químico (blueprint)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>cadeira avançada (blueprint)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>banco (blueprint)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ Um Hellion pode suportar até seis propulsores VTOL pesados.</Frame_LargeThruste
   <Frame_RobCo_MechbandDish.label>RobCo prato (construção)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>Aumenta o desempenho da consola de comunicações.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>Receptor RobCo (construção)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>Um aparelho de manutenção pesada 5x5 RobCo para restaurar máquinas de protótipo insubstituíveis recuperadas de cofres pré-guerra. Seu berço de reconstrução aceita um chassi de protótipo intacto e integra permanentemente o chip de platina na máquina reparada.</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>RobCo restauração gantry (construção)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>Um aparelho de manutenção pesada 5x5 RobCo para restaurar máquinas de protótipo insubstituíveis recuperadas de cofres pré-guerra. Seu berço de reconstrução aceita um chassi de protótipo intacto e integra permanentemente o chip de platina na máquina reparada.</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>RobCo restauração gantry (construção)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>Uma escavadeira de perfuração com combustível químico para extrair minerais de profundidade sob a superfície. Ótimo para caravanas devido à sua portabilidade.</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>Escavadeira com combustível químico (construção)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>Uma solução de lugares de alta qualidade, espaçador-era com amortecimento adaptativo, calibração postural e tecidos respiráveis inteligentes. Projetado para o máximo conforto de longo prazo e interiores modernos elegantes.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ Seus pesquisadores agora podem começar a adaptar o sistema operacional RobCo re
   <RobCo_Receiver.comps.0.useLabel>Invocar a ameaça da HYDRA</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>Aumenta o desempenho da consola de comunicações.</RobCo_Receiver.description>
   <RobCo_Receiver.label>Receptor RobCo</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>Um aparelho de manutenção pesada 5x5 RobCo para restaurar máquinas de protótipo insubstituíveis recuperadas de cofres pré-guerra. Seu berço de reconstrução aceita um chassi de protótipo intacto e integra permanentemente o chip de platina na máquina reparada.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>Garry de restauração RobCo</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>Um aparelho de manutenção pesada 5x5 RobCo para restaurar máquinas de protótipo insubstituíveis recuperadas de cofres pré-guerra. Seu berço de reconstrução aceita um chassi de protótipo intacto e integra permanentemente o chip de platina na máquina reparada.</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>Garry de restauração RobCo</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>Um grande autômato de combate MT modelado após um radscorpion. As pinças blindadas mantêm alvos no lugar enquanto uma cauda articulada os rastreia com uma arma de energia integrada. Roboscorpions combinam o movimento animal com a lógica experimental do Think Tank, tornando-os caçadores persistentes a curto e médio alcance.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>roboscorpion</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>Quadro</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ Seus pesquisadores agora podem começar a adaptar o sistema operacional RobCo re
   <RobCo_SentrybotSiegebreakerLauncher.label>Lança-foguetes Sentrybot</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>Um projetor de feixe montado na cabeça de alta saída construído em torno de um longo ciclo de carga e um grande raio de explosão. A descarga produz calor significativo e é mais eficaz quando disparado a partir da faixa de impasse.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>RobCo ovelhasquatch cabeça laser</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>Um legado da baía de manutenção RobCo retido para que as colônias existentes possam carregá-lo com segurança. Novas restaurações de protótipos usam o dispositivo de restauração RobCo.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>toca mecânica subterrânea (legacia)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>Uma unidade Protectron equipada com uma fixação de perfuração pesada no lugar de um laser de mão padrão, destinado a trabalhos de mineração e escavação. Foi contratada para operações de mineração pré-guerra para extração de recursos subterrâneos. O braço da broca torna-o mais lento do que um protetor padrão, mas dá-lhe capacidade de fechamento de quartos significativos.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>utilitrona</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>Quadro</RobCo_Utilitron.tools.0.label>

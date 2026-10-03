@@ -2367,7 +2367,7 @@ Voda z akvária se přizpůsobuje teplotě vzduchu v prostředí, ale nešíří
   <Blueprint_RobCo_CommsConsole.label>Komunikační konzole RobCo (plán)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>RobCo dish (plán)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>RobCo přijímač (plán)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>RobCo restaurování gangtry (plán)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>RobCo restaurování gangtry (plán)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>Výsadkový bagr poháněný chemickým palivem (plán)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>pokročilá židle (plán)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>lavička (plán)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ Jeden Hellion může podpořit až šest těžkých Vérských trysek.</Frame_La
   <Frame_RobCo_MechbandDish.label>RobCo dish (budova)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>Zvyšuje výkon komunikační konzole.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>RobCo přijímač (budova)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>A 5x5 RobCo těžké-údržba otvor pro obnovu nenahraditelné prototypu stroje získané z předválečných trezorů. Jeho rekonstrukční kolébka přijímá neporušený prototyp podvozku a trvale integruje platinový čip do opraveného stroje.</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>Středisko pro obnovu RobCo (budova)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>A 5x5 RobCo těžké-údržba otvor pro obnovu nenahraditelné prototypu stroje získané z předválečných trezorů. Jeho rekonstrukční kolébka přijímá neporušený prototyp podvozku a trvale integruje platinový čip do opraveného stroje.</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>Středisko pro obnovu RobCo (budova)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>Chemfuel poháněný hlubinným vrtákem pro těžbu minerálů hluboko pod povrchem. Skvělé pro karavan díky jeho přenositelnosti.</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>Čerpadla na palivo (budova)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>Vysoce-koncové, vesmírné-éra sedací řešení s adaptivním polštářem, kalibrace držení těla a prodyšné chytré tkaniny. Navrženo pro maximální dlouhodobý komfort a elegantní moderní interiéry.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ Vaši výzkumní pracovníci nyní mohou začít přizpůsobovat obnovený RobCo
   <RobCo_Receiver.comps.0.useLabel>Výhružka Hydra</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>Zvyšuje výkon komunikační konzole.</RobCo_Receiver.description>
   <RobCo_Receiver.label>RobCo přijímač</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>A 5x5 RobCo těžké-údržba otvor pro obnovu nenahraditelné prototypu stroje získané z předválečných trezorů. Jeho rekonstrukční kolébka přijímá neporušený prototyp podvozku a trvale integruje platinový čip do opraveného stroje.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>Středisko pro obnovu RobCo</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>A 5x5 RobCo těžké-údržba otvor pro obnovu nenahraditelné prototypu stroje získané z předválečných trezorů. Jeho rekonstrukční kolébka přijímá neporušený prototyp podvozku a trvale integruje platinový čip do opraveného stroje.</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>Středisko pro obnovu RobCo</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>Big MT bojový automat modelovaný po radscorpion. Obrněné kleště drží cíle na místě, zatímco kloubový ocas je sleduje integrovanou energetickou zbraní. Roboškorpioni kombinují pohyb jako živočišný s experimentální cílovou logikou Think Tanku, což z nich dělá perzistentní lovce v blízkém a středním dosahu.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>roboštírpion</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>Podvozek</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ Vaši výzkumní pracovníci nyní mohou začít přizpůsobovat obnovený RobCo
   <RobCo_SentrybotSiegebreakerLauncher.label>Spouštěč raket Sentybot</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>Vysokovýstupní paprskový projektor namontovaný na hlavě postavený kolem dlouhého nabíjecího cyklu a velkého poloměru výbuchu. Výboj produkuje značné teplo a je nejúčinnější při vypalování z dosahu setrvačnosti.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>RobCo štípací laser</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>Odkaz RobCo údržbářský prostor zachován tak stávající kolonie mohou naložit bezpečně. Nové prototypy obnovování používají otvor pro obnovu RobCo.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>podzemní mechanický doupě (odkaz)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>Jednotka Protetron vybavená těžkým vrtacím zařízením místo standardního ručního laseru, určeného pro těžbu a těžbu. Byla sjednána na předválečné těžby pro těžbu podzemních zdrojů. Vrtné rameno ji dělá pomalejší než standardní protectron, ale dává jí značnou schopnost blízkých čtvrtí.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>utilitron</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>Podvozek</RobCo_Utilitron.tools.0.label>

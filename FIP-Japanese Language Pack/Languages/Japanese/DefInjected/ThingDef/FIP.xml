@@ -2367,7 +2367,7 @@
   <Blueprint_RobCo_CommsConsole.label>RobCo comms コンソール(ブループリント)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>ロブコ料理(青写真)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>RobCo の受信機(青写真)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>ロブコ修復ガントリー(青写真)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>ロブコ修復ガントリー(青写真)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>Chemfuelによって動力を与えられた掘削機(青写真)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>高度の椅子(青写真)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>ベンチ(ブループリント)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ X-Cellは、事前の医薬品の達成のピナクルで、究極の性能増�
   <Frame_RobCo_MechbandDish.label>ロブコ料理(建物)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>comms コンソールのパフォーマンスをブーストします。</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>ロブコ受信機(建物)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>5x5 RobCo の頑丈なメンテナンスのガントリーは、前輪のボールトから回復可能なプロトタイプマシンを復元する。 その再構成のクレードルは不当なプロトタイプ シャーシを受け入れ、永久に修理された機械にプラチナ チップを統合します。</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>ロブコ復元ガントリー(建物)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>5x5 RobCo の頑丈なメンテナンスのガントリーは、前輪のボールトから回復可能なプロトタイプマシンを復元する。 その再構成のクレードルは不当なプロトタイプ シャーシを受け入れ、永久に修理された機械にプラチナ チップを統合します。</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>ロブコ復元ガントリー(建物)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>ケムフェルは、表面の下からミネラルを抽出するための深層掘削掘削機を採用しました。 ポータビリティによりキャラバン効果が大きい。</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>Chemfuel 動力を与えられた掘削機(建物)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>適応クッション、姿勢校正、通気性のスマートファブリックを備えたハイエンド、スペーサー era シート ソリューション。 最長の快適さと洗練されたモダンなインテリアのために設計されています。</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ Breatheは精神的なエントロピーのストリームを転送します。,
   <RobCo_Receiver.comps.0.useLabel>Summon Hydraの脅威</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>comms コンソールのパフォーマンスをブーストします。</RobCo_Receiver.description>
   <RobCo_Receiver.label>RobCo受信機</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>5x5 RobCo の頑丈なメンテナンスのガントリーは、前輪のボールトから回復可能なプロトタイプマシンを復元する。 その再構成のクレードルは不当なプロトタイプ シャーシを受け入れ、永久に修理された機械にプラチナ チップを統合します。</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>ロブコ修復ガントリー</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>5x5 RobCo の頑丈なメンテナンスのガントリーは、前輪のボールトから回復可能なプロトタイプマシンを復元する。 その再構成のクレードルは不当なプロトタイプ シャーシを受け入れ、永久に修理された機械にプラチナ チップを統合します。</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>ロブコ修復ガントリー</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>radscorpion の後で模倣される大きい MT の戦いの automaton。 装甲ピンサーは、連結されたテールが統合されたエネルギー武器でそれらを追跡しながら、所定の位置にターゲットを保持します。 Roboscorpionsは動物のような動きをThink Tankの実験的なターゲティングロジックと組み合わせ、それらを持続的なハンターを閉じ、中距離で作ります。</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>ロボスコーピオン</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>シャーシ</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ Breatheは精神的なエントロピーのストリームを転送します。,
   <RobCo_SentrybotSiegebreakerLauncher.label>Sentrybotロケットランチャー</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>長い充電サイクルと大きなブラスト半径の周りに構築された高出力ヘッドマウントビームプロジェクター。 排出は重要な熱を作り出し、スタンドオフの範囲から発射されるとき最も有効です。</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>RobCoの羊のヘッド レーザー</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>既存のコロニーが安全に積み込むことができるので、レガシーのロブコメンテナンスベイを保持しました。 新しいプロトタイプ復元は、ロブコ復元ガントリーを使用します。</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>地下整備係(レガシー)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>鉱山および掘削機の仕事のために意図されている標準的な手レーザーの場所で重いドリルの付属品と合うProtecronの単位。 サブテラネア資源抽出の採掘前処理に委託されました。 ドリルアームは、標準のProtecronよりも遅くなりますが、それは重要なクローズクォート機能を提供します。</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>ウチリトロン</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>シャーシ</RobCo_Utilitron.tools.0.label>

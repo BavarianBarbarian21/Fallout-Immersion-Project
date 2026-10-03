@@ -2367,7 +2367,7 @@ El agua del tanque de pescado se adapta a su temperatura ambiente, pero no extie
   <Blueprint_RobCo_CommsConsole.label>Consola de comunicaciones RobCo (blueprint)</Blueprint_RobCo_CommsConsole.label>
   <Blueprint_RobCo_MechbandDish.label>Plato RobCo (blueprint)</Blueprint_RobCo_MechbandDish.label>
   <Blueprint_RobCo_Receiver.label>El receptor RobCo (príncipe)</Blueprint_RobCo_Receiver.label>
-  <Blueprint_RobCo_UndergroundMechanicLair.label>Gante de restauración RobCo (objetivo)</Blueprint_RobCo_UndergroundMechanicLair.label>
+  <Blueprint_RobCo_RestorationGantry.label>Gante de restauración RobCo (objetivo)</Blueprint_RobCo_RestorationGantry.label>
   <Blueprint_SCP_ChemDrill.label>Excavadora motorizada de Chemfuel (blueprint)</Blueprint_SCP_ChemDrill.label>
   <Blueprint_Seat_AdvChair.label>silla avanzada (impreso)</Blueprint_Seat_AdvChair.label>
   <Blueprint_Seat_Bench.label>banco (objetivo)</Blueprint_Seat_Bench.label>
@@ -7077,8 +7077,8 @@ Un Hellion puede soportar hasta seis propulsores de VTOL pesados.</Frame_LargeTh
   <Frame_RobCo_MechbandDish.label>Plato RobCo (construcción)</Frame_RobCo_MechbandDish.label>
   <Frame_RobCo_Receiver.description>Aumenta el rendimiento de la consola de comunicaciones.</Frame_RobCo_Receiver.description>
   <Frame_RobCo_Receiver.label>Receptor RobCo (construcción)</Frame_RobCo_Receiver.label>
-  <Frame_RobCo_UndergroundMechanicLair.description>Un 5x5 RobCo gantry de mantenimiento pesado para restaurar las máquinas de prototipo irreemplazables recuperadas de las bóvedas anteriores a la guerra. Su cuna de reconstrucción acepta un chasis prototipo intacto e integra permanentemente el chip de platino en la máquina reparada.</Frame_RobCo_UndergroundMechanicLair.description>
-  <Frame_RobCo_UndergroundMechanicLair.label>Ganancia de restauración RobCo (construcción)</Frame_RobCo_UndergroundMechanicLair.label>
+  <Frame_RobCo_RestorationGantry.description>Un 5x5 RobCo gantry de mantenimiento pesado para restaurar las máquinas de prototipo irreemplazables recuperadas de las bóvedas anteriores a la guerra. Su cuna de reconstrucción acepta un chasis prototipo intacto e integra permanentemente el chip de platino en la máquina reparada.</Frame_RobCo_RestorationGantry.description>
+  <Frame_RobCo_RestorationGantry.label>Ganancia de restauración RobCo (construcción)</Frame_RobCo_RestorationGantry.label>
   <Frame_SCP_ChemDrill.description>Una excavadora de perforación de corteza profunda de Chemfuel para extraer minerales de profundidad bajo la superficie. Ideal para caravanas debido a su portabilidad.</Frame_SCP_ChemDrill.description>
   <Frame_SCP_ChemDrill.label>excavadora propulsada por Chemfuel (construcción)</Frame_SCP_ChemDrill.label>
   <Frame_Seat_AdvChair.description>Solución de asientos de alta gama con amortiguación adaptativa, calibración de postura y tejidos elegantes transpirables. Diseñado para el máximo confort a largo plazo y elegantes interiores modernos.</Frame_Seat_AdvChair.description>
@@ -12276,8 +12276,8 @@ Sus investigadores ahora pueden comenzar a adaptar el sistema operativo RobCo re
   <RobCo_Receiver.comps.0.useLabel>Amenaza de hidra de limón</RobCo_Receiver.comps.0.useLabel>
   <RobCo_Receiver.description>Aumenta el rendimiento de la consola de comunicaciones.</RobCo_Receiver.description>
   <RobCo_Receiver.label>Receptor RobCo</RobCo_Receiver.label>
-  <RobCo_UndergroundMechanicLair.description>Un 5x5 RobCo gantry de mantenimiento pesado para restaurar las máquinas de prototipo irreemplazables recuperadas de las bóvedas anteriores a la guerra. Su cuna de reconstrucción acepta un chasis prototipo intacto e integra permanentemente el chip de platino en la máquina reparada.</RobCo_UndergroundMechanicLair.description>
-  <RobCo_UndergroundMechanicLair.label>Restauración de RobCo gantry</RobCo_UndergroundMechanicLair.label>
+  <RobCo_RestorationGantry.description>Un 5x5 RobCo gantry de mantenimiento pesado para restaurar las máquinas de prototipo irreemplazables recuperadas de las bóvedas anteriores a la guerra. Su cuna de reconstrucción acepta un chasis prototipo intacto e integra permanentemente el chip de platino en la máquina reparada.</RobCo_RestorationGantry.description>
+  <RobCo_RestorationGantry.label>Restauración de RobCo gantry</RobCo_RestorationGantry.label>
   <RobCo_RoboScorpion.description>Un gran autómata de combate MT modelado después de un estuche. Los pernos armados mantienen objetivos en su lugar mientras que una cola articulada los rastrea con un arma de energía integrada. Los robotscorpiones combinan el movimiento como animal con la lógica de ataque experimental del Think Tank, haciéndolos cazadores persistentes a un alcance cercano y mediano.</RobCo_RoboScorpion.description>
   <RobCo_RoboScorpion.label>roboscorpión</RobCo_RoboScorpion.label>
   <RobCo_RoboScorpion.tools.0.label>chasis</RobCo_RoboScorpion.tools.0.label>
@@ -12330,6 +12330,8 @@ Sus investigadores ahora pueden comenzar a adaptar el sistema operativo RobCo re
   <RobCo_SentrybotSiegebreakerLauncher.label>lanzador de cohetes Sentrybot</RobCo_SentrybotSiegebreakerLauncher.label>
   <RobCo_SheepsquatchHeadLaser.description>Un proyector de haz montado en cabeza de alto rendimiento construido alrededor de un ciclo de carga larga y un gran radio de explosión. La descarga produce calor significativo y es más eficaz cuando se dispara desde el rango de standoff.</RobCo_SheepsquatchHeadLaser.description>
   <RobCo_SheepsquatchHeadLaser.label>Láser cabezal RobCo ovejasquatch</RobCo_SheepsquatchHeadLaser.label>
+  <RobCo_UndergroundMechanicLair.description>Una bahía de mantenimiento RobCo heredada retenida para que las colonias existentes puedan cargarla con seguridad. Las nuevas restauraciones de prototipos utilizan el grupo de restauración RobCo.</RobCo_UndergroundMechanicLair.description>
+  <RobCo_UndergroundMechanicLair.label>metro mecánico lair (legada)</RobCo_UndergroundMechanicLair.label>
   <RobCo_Utilitron.description>Una unidad Protectron equipada con un apego de perforación pesado en lugar de un láser de mano estándar, destinado a trabajos de minería y excavación. Se contrató a operaciones de extracción de recursos subterráneos antes de la guerra. El brazo de perforación lo hace más lento que un Protectron estándar, pero le da una capacidad de cerca significativa.</RobCo_Utilitron.description>
   <RobCo_Utilitron.label>utilitron</RobCo_Utilitron.label>
   <RobCo_Utilitron.tools.0.label>chasis</RobCo_Utilitron.tools.0.label>
