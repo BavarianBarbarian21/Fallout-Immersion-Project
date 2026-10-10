@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RobCo_Bullet_SentryGrenade</defName>
+		<label>sentry grenade</label>
+		<graphicData>
+			<texPath>Things/Projectile/Grenade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Thump</damageDef>
+			<explosionRadius>2.4</explosionRadius>
+			<speed>42</speed>
+		</projectile>
+	</ThingDef>
+
 	<ThingDef Name="RobCo_SentryRocketLauncherBase" ParentName="RobCo_BaseGun" Abstract="True">
-		<label>Sentrybot rocket launcher</label>
-		<description>A salvo rocket launcher integrated into Sentrybot frames. It is intended to break cover, damage structures, and engage grouped targets at range.</description>
+		<label>Sentrybot grenade launcher</label>
+		<description>A slow-firing grenade launcher integrated into Sentrybot frames. It suppresses fortified positions between heavy rocket salvos.</description>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<MarketValue>1000</MarketValue>
@@ -11,19 +26,16 @@
 		</statBases>
 		<verbs>
 			<li>
-				<verbClass>Verb_ShootOneUse</verbClass>
+				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RobCo_Bullet_SentryRocket</defaultProjectile>
-				<forcedMissRadius>2.9</forcedMissRadius>
+				<defaultProjectile>RobCo_Bullet_SentryGrenade</defaultProjectile>
+				<forcedMissRadius>1.9</forcedMissRadius>
 				<warmupTime>4.5</warmupTime>
 				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
 				<range>35.9</range>
-				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
-				<burstShotCount>6</burstShotCount>
-				<soundCast>InfernoCannon_Fire</soundCast>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<onlyManualCast>true</onlyManualCast>
-				<stopBurstWithoutLos>false</stopBurstWithoutLos>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>

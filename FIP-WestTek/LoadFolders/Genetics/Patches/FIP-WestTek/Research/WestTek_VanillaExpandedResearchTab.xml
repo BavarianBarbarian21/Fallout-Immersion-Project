@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!--
-    Many Vanilla Expanded modules each declare the same ResearchTabDef. Collapse
-    those duplicate instances into one canonical tab before moving Genetics into
-    it. This integration belongs to the Genetics compatibility layer and no longer
-    depends on Vanilla Cooking Expanded.
-  -->
+  <!-- Research Tabs -->
   <Operation Class="PatchOperationRemove">
     <xpath>/Defs/ResearchTabDef[defName="VanillaExpanded"]</xpath>
   </Operation>
@@ -14,7 +9,7 @@
     <value>
       <ResearchTabDef>
         <defName>VanillaExpanded</defName>
-        <label>Vanilla Expanded</label>
+        <label/>
       </ResearchTabDef>
     </value>
   </Operation>
@@ -26,7 +21,7 @@
     </value>
   </Operation>
 
-  <!-- Keep the Genetics topology, positioned below the existing shared tree. -->
+  <!-- Genetics -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="GR_GeneticAlteration"]/researchViewX</xpath>
     <value><researchViewX>3</researchViewX></value>

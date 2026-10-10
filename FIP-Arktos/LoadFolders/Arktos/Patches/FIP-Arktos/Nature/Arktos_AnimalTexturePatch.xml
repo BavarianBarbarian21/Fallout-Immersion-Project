@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- Pack Rat pup: one dedicated, sex-independent directional set. -->
+  <!-- Pack Rat -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[1]/bodyGraphicData/texPath</xpath>
     <value>
@@ -9,7 +9,6 @@
     </value>
   </Operation>
 
-  <!-- Juvenile and adult Pack Rats deterministically select one of six complete sets. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[position() &gt; 1]/bodyGraphicData/texPath</xpath>
     <value>
@@ -34,11 +33,26 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[position() &gt; 1]/bodyGraphicData</xpath>
     <value>
-      <graphicClass>Graphic_Random</graphicClass>
+      <graphicClass>FIP.Arktos.Graphic_RandomDirectional</graphicClass>
     </value>
   </Operation>
 
-  <!-- Pack Rats do not have sex-specific artwork. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="Muffalo"]/uiIconPath</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="Muffalo"]/uiIconPath</xpath>
+      <value>
+        <uiIconPath>FIP-Arktos/Animals/PackRat/Adult/01_east</uiIconPath>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="Muffalo"]</xpath>
+      <value>
+        <uiIconPath>FIP-Arktos/Animals/PackRat/Adult/01_east</uiIconPath>
+      </value>
+    </nomatch>
+  </Operation>
+
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/femaleGraphicData</xpath>
     <match Class="PatchOperationRemove">
@@ -46,7 +60,6 @@
     </match>
   </Operation>
 
-  <!-- Do not let another alternate set replace the dedicated pup graphic. -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/PawnKindDef[defName="Muffalo"]/alternateGraphics | Defs/PawnKindDef[defName="Muffalo"]/alternateGraphicChance</xpath>
     <match Class="PatchOperationRemove">
@@ -54,7 +67,7 @@
     </match>
   </Operation>
 
-  <!-- Cottonmouth artwork for the renamed vanilla cobra. -->
+  <!-- Cottonmouth -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Cobra"]/lifeStages/li/bodyGraphicData/texPath</xpath>
     <value>

@@ -1,0 +1,12 @@
+[
+  { op: "add", file: "game:entities/animal/bird/chicken-adult.json", path: "/server/behaviors/-", value: { code: "faunahydration" } },
+  { op: "add", file: "game:entities/animal/bird/chicken-adult.json", path: "/client/behaviors/-", value: { code: "faunahydration" } },
+  { op: "replace", file: "game:entities/animal/bird/chicken-adult.json", path: "/server/behaviors/11/aitasks/7/code", value: "faunahydratedlayegg" },
+  { op: "add", file: "game:entities/animal/bird/chicken-adult.json", path: "/server/behaviors/11/aitasks/8", value: { code: "faunaseekwater", priority: 1.355, movespeed: 0.008, drinkTime: 2, animation: "Walk" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/sheep-adult.json", path: "/server/behaviors/-", value: { code: "faunahydration" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/sheep-adult.json", path: "/client/behaviors/-", value: { code: "faunahydration" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/sheep-adult.json", path: "/server/behaviors/10/aitasks/6", value: { code: "faunaseekwater", priority: 1.36, movespeed: 0.015, drinkTime: 2.5, animation: "Walk" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/goat-adult.json", path: "/server/behaviors/-", value: { code: "faunahydration" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/goat-adult.json", path: "/client/behaviors/-", value: { code: "faunahydration" } },
+  { op: "add", file: "game:entities/animal/mammal/hooved/goat-adult.json", path: "/server/behaviors/12/aitasks/-", value: { code: "faunaseekwater", priority: 1.36, movespeed: 0.008, drinkTime: 3, animation: "Walk" } }
+]

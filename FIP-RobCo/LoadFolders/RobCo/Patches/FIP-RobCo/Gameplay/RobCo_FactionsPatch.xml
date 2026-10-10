@@ -101,13 +101,7 @@
       </pawnGroupMakers>
     </value>
   </Operation>
-  <!-- Ancient gestator building change -->
-  <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
-    <xpath>/Defs/ThingDef[defName="AncientMechGestatorTank"]/comps/li[@Class="CompProperties_MechGestatorTank"]/triggeredMessage</xpath>
-    <value>
-      <triggeredMessage>A {0_labelShort} has emerged from a Robco charging bot.</triggeredMessage>
-    </value>
-  </Operation>
+  <!-- Ancient gestator building change. Visible text is supplied by DefInjected. -->
   <Operation Class="FIP.RobCo.PatchOperationReplaceUnlessRestoreMechanoids">
     <xpath>/Defs/ThingDef[defName="AncientMechGestatorTank"]/comps/li[@Class="CompProperties_MechGestatorTank"]/mechKindOptions</xpath>
     <value>

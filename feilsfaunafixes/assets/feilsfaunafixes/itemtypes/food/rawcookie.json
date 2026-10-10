@@ -1,0 +1,21 @@
+{
+  code: "rawcookie",
+  maxstacksize: 64,
+  variantgroups: [{ code: "type", states: ["spelt", "rye", "flax", "rice", "cassava", "amaranth", "sunflower"] }],
+  creativeinventory: { "general": ["*"], "items": ["*"] },
+  shape: { base: "feilsfaunafixes:item/food/cookie" },
+  textures: { "crumb": { base: "feilsfaunafixes:item/food/rawcookie" } },
+  attributes: {
+    displaycaseable: true,
+    bakingProperties: { temp: 160, levelFrom: 0, levelTo: 0.55, resultCode: "feilsfaunafixes:cookie-{type}" }
+  },
+  nutritionPropsByType: {
+    "*-flax": { satiety: 35, foodcategory: "Grain" },
+    "*-rice": { satiety: 75, foodcategory: "Grain" },
+    "*": { satiety: 65, foodcategory: "Grain" }
+  },
+  transitionableProps: [{ type: "Perish", freshHours: { avg: 72 }, transitionHours: { avg: 24 }, transitionedStack: { type: "item", code: "game:rot" }, transitionRatio: 1 }],
+  guiTransform: { translation: { x: 0, y: 0, z: 0 }, rotation: { x: -30, y: 26, z: 180 }, origin: { x: 0.52, y: 0.07, z: 0.5 }, scale: 4.9 },
+  groundTransform: { translation: { x: 0, y: 0, z: 0 }, rotation: { x: 0, y: 0, z: 1 }, origin: { x: 0.5, y: 0, z: 0.5 }, scale: 4 },
+  tpHandTransform: { translation: { x: -0.69, y: -0.16, z: -0.53 }, rotation: { x: 88, y: -85, z: 2 }, origin: { x: 0.5, y: 0.13, z: 0.5 }, scale: 0.8 }
+}

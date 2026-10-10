@@ -1,0 +1,14 @@
+{
+  code: "charredcookie",
+  maxstacksize: 64,
+  variantgroups: [{ code: "type", states: ["spelt", "rye", "flax", "rice", "cassava", "amaranth", "sunflower"] }],
+  creativeinventory: { "general": ["*"], "items": ["*"] },
+  shape: { base: "feilsfaunafixes:item/food/cookie" },
+  textures: { "crumb": { base: "feilsfaunafixes:item/food/charredcookie" } },
+  attributes: { displaycaseable: true },
+  nutritionProps: { satiety: 35, foodcategory: "Grain" },
+  transitionableProps: [{ type: "Perish", freshHours: { avg: 900 }, transitionHours: { avg: 120 }, transitionedStack: { type: "item", code: "game:rot" }, transitionRatio: 1 }],
+  guiTransform: { translation: { x: 0, y: 0, z: 0 }, rotation: { x: -30, y: 26, z: 180 }, origin: { x: 0.52, y: 0.07, z: 0.5 }, scale: 4.9 },
+  groundTransform: { translation: { x: 0, y: 0, z: 0 }, rotation: { x: 0, y: 0, z: 1 }, origin: { x: 0.5, y: 0, z: 0.5 }, scale: 4.5 },
+  tpHandTransform: { translation: { x: -0.54, y: -0.16, z: -0.4 }, rotation: { x: 88, y: -85, z: 2 }, origin: { x: 0.5, y: 0.13, z: 0.5 }, scale: 1 }
+}

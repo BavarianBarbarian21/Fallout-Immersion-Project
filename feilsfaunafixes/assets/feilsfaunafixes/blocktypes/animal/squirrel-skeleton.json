@@ -1,0 +1,37 @@
+{
+  code: "squirrel-skeleton",
+  class: "BlockRequireSolidGround",
+  behaviors: [{ name: "UnstableFalling" }],
+  creativeinventory: { general: ["*"], decorative: ["*"] },
+  shape: {
+    base: "game:block/bone/carcass/tiny",
+    alternates: [
+      { base: "game:block/bone/carcass/tiny", rotateY: 45 },
+      { base: "game:block/bone/carcass/tiny", rotateY: 90 },
+      { base: "game:block/bone/carcass/tiny", rotateY: 135 },
+      { base: "game:block/bone/carcass/tiny", rotateY: 180 },
+      { base: "game:block/bone/carcass/tiny", rotateY: 225 },
+      { base: "game:block/bone/carcass/tiny", rotateY: 270 }
+    ]
+  },
+  drops: [
+    { type: "block", code: "feilsfaunafixes:squirrel-skeleton", quantity: { avg: 1, var: 0 } }
+  ],
+  randomDrawOffset: true,
+  lightAbsorption: 0,
+  resistance: 1,
+  sidesolid: { all: false },
+  sideopaque: { all: false },
+  selectionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.125, z2: 0.75 },
+  collisionbox: null,
+  materialDensity: 3000,
+  guiTransform: {
+    rotation: { x: -22.5937, y: 132, z: 0 },
+    origin: { x: 0.5, y: 0.08, z: 0.5 },
+    scale: 2
+  },
+  groundTransform: {
+    origin: { x: 0.5, y: 0, z: 0.5 },
+    scale: 2
+  }
+}

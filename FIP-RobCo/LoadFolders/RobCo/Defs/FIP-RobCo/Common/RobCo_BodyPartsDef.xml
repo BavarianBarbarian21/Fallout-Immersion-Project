@@ -131,8 +131,7 @@
         <bleedRate>0</bleedRate>
     </BodyPartDef>
 
-    <!-- Armless robots with integrated equipment weapons still need a
-         ManipulationLimbCore for RimWorld's weapon generator. -->
+    <!-- Robot Chassis -->
     <BodyPartDef ParentName="MechanicalThorax">
         <defName>RobCo_ChassisCanManipulate</defName>
         <label>chassis</label>
@@ -141,8 +140,7 @@
         </tags>
     </BodyPartDef>
 
-    <!-- Cyberdogs use their sonic emitter as an equipment weapon rather than
-         a native race verb, so it supplies their virtual manipulation limb. -->
+    <!-- Cyberdog Weapon Mount -->
     <BodyPartDef>
         <defName>RobCo_IntegratedWeaponMount</defName>
         <label>integrated weapon mount</label>

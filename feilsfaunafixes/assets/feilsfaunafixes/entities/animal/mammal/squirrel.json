@@ -1,0 +1,69 @@
+{
+  code: "squirrel",
+  class: "EntityAgent",
+  tags: ["animal", "huntable", "adult", "habitat-land"],
+  weight: 1.2,
+  hitboxSize: { x: 0.9, y: 1.1 },
+  eyeHeight: 0.46,
+  fallDamageMultiplier: 0,
+  attributes: { handbook: { groupcode: "feilsfaunafixes:creaturegroup-squirrel" } },
+  client: {
+    renderer: "Shape",
+    shape: { base: "feilsfaunafixes:entity/animal/mammal/squirrel" },
+    textures: {
+      "body": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-body" },
+      "dark": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-dark" },
+      "cream": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-cream" },
+      "black": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-black" }
+    },
+    behaviors: [
+      { code: "repulseagents" }, { code: "faunafoliagephysics", stepHeight: 1.1251 },
+      { code: "floatupwhenstuck", onlyWhenDead: true }, { code: "interpolateposition" },
+      { code: "harvestable" }, { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 240 },
+      { code: "faunasquirrelclimber" }, { code: "faunadeathanimation" }
+    ],
+    animations: [
+      { code: "idle", animation: "idle", blendMode: "AddAverage", triggeredBy: { defaultAnim: true } },
+      { code: "walk", animation: "walk", animationSpeed: 1.2 },
+      { code: "run", animation: "run", animationSpeed: 1.8 },
+      { code: "eat", animation: "eat", animationSpeed: 1.2 },
+      { code: "climbup", animation: "climbup", animationSpeed: 1.5, weight: 8, blendMode: "Average" },
+      { code: "climbdown", animation: "climbdown", animationSpeed: 1.5, weight: 8, blendMode: "Average" },
+      { code: "hurt", animation: "run", animationSpeed: 2, weight: 10 },
+      { code: "die", animation: "death", animationSpeed: 1.25, weight: 10, blendMode: "Average", triggeredBy: { onControls: ["dead"] } }
+    ]
+  },
+  server: {
+    behaviors: [
+      { code: "repulseagents" }, { code: "faunafoliagephysics", stepHeight: 1.1251 },
+      { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+      { code: "health", currenthealth: 2, maxhealth: 2 },
+      { code: "deaddecay", hoursToDecay: 72, decayedBlock: "feilsfaunafixes:squirrel-skeleton" },
+      { code: "floatupwhenstuck", onlyWhenDead: true },
+      { code: "harvestable", drops: [
+        { type: "item", code: "game:bushmeat-raw", quantity: { avg: 1, var: 0 } },
+        { type: "item", code: "game:hide-raw-small", quantity: { avg: 1, var: 0 } },
+        { type: "block", code: "feilsfaunafixes:squirrel-skeleton", quantity: { avg: 1, var: 0 } }
+      ]},
+      { code: "breathe" }, { code: "faunasquirrelclimber" },
+      { code: "taskai", aiCreatureType: "LandCreature", aitasks: [
+        { code: "faunasquirrelclimbescape", priority: 5, movespeed: 0.055, animation: "Run", animationSpeed: 2 },
+        { code: "fleeentity", entityCodes: ["player", "wolf-*", "fox-*", "hyena-*", "bear-*"], priority: 4, executionChance: 1, movespeed: 0.065, seekingRange: 14, instafleeOnDamageChance: 1, animation: "Run", animationSpeed: 2 },
+        { code: "faunasquirrelforage", priority: 3, movespeed: 0.018, eatTime: 2.2, animation: "Walk", eatAnimation: "Eat" },
+        { code: "faunasquirreldescend", priority: 2 },
+        { code: "getoutofwater", priority: 1, movespeed: 0.025, animation: "Run" },
+        { code: "idle", priority: 1, minduration: 1000, maxduration: 3500, mincooldown: 2000, maxcooldown: 10000, animation: "Idle" },
+        { code: "wander", priority: 1, movespeed: 0.012, animation: "Walk", preferredLightLevel: 18 },
+        { code: "lookaround", priority: 0.5 }
+      ]},
+      { code: "entitystatetags" }
+    ],
+    spawnconditions: {
+      worldgen: { TriesPerChunk: { avg: 0.10, var: 0 }, tryOnlySurface: true, minLightLevel: 8, groupSize: { dist: "verynarrowgaussian", avg: 1, var: 2 }, insideBlockCodes: ["game:air", "game:tallgrass-*", "game:snowlayer-1"] },
+      runtime: { group: "neutral", chance: 0.003, tryOnlySurface: true, maxQuantity: 5, maxLightLevel: 8, lightLevelType: "onlyBlockLight", groupSize: { dist: "verynarrowgaussian", avg: 1, var: 2 }, insideBlockCodes: ["game:air", "game:tallgrass-*", "game:snowlayer-1"] },
+      climate: { minTemp: -10, maxTemp: 20, minRain: 0.15, maxRain: 1, minForest: 0, maxForest: 1 }
+    }
+  },
+  sounds: { hurt: "game:creature/hare-hurt", death: "game:creature/hare-hurt", idle: { path: "game:creature/hare-idle", pitch: { avg: 1.3, var: 0.2 } } },
+  idleSoundChance: 0.02
+}

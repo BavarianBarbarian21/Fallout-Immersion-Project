@@ -2,7 +2,7 @@
 <Patch>
   <Operation Class="PatchOperationSequence">
     <operations>
-      <!-- Default AUR gun pools are modern real-world kits. Fall back to generic industrial weapons unless FCP ballistic packs are present. -->
+      <!-- Weapons -->
         <li Class="PatchOperationReplace">
           <xpath>/Defs/ThingSetMakerDef[defName="AM_OrdinaryWeapons"]/root/options</xpath>
           <value>

@@ -1,28 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/label</xpath>
-        <value><label>The Hellion</label></value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/description</xpath>
-        <value><description>Your Hellion, a pre-war REPCONN aircraft, sits docked at the orbital relay. As your crew begins salvaging its systems, you realize this is no ordinary pre-war cache - it is a military tracking beacon. The relay crackles to life and broadcasts an intrusion alert to a command hub belonging to US Automated Aerospace Defense. Its orbital batteries are hunting you now, and they will eventually find you wherever you go.
-
-Note: This is a difficult scenario and is not recommended for new players.</description></value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/summary</xpath>
-        <value><summary>A crew of three hunted by robots aboard the Hellion.</summary></value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>/Defs/ScenarioDef[defName="TheGravship"]/scenario/parts/li[@Class="ScenPart_GameStartDialog"]/text</xpath>
-        <value><text>You tripped the wrong military relay, and now US Automated Aerospace Defense has registered your Hellion as an unauthorized aircraft. Its combat robots will arrive soon. Gather the valuable airframe panels, then use the Hellion to flee to a safe landing site on the planet below.
-
-To launch the Hellion, select the cockpit console, then select the launch command. On the world map, select 'view planet' to choose a landing spot on the planet. From now on, wherever you go, the defense network will eventually track the Hellion's engine signature. To stop it, you must find and defeat the aerospace-defense command hub itself.</text></value>
-      </li>
-    </operations>
-  </Operation>
+  <!-- Scenario text is supplied exclusively by Languages/English/DefInjected. -->
 </Patch>

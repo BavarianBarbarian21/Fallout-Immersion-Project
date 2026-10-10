@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Hospitality requests Peaceful pawn groups for visiting guests. Keep these
-       fallbacks only until FCP-NCR supplies its own groups. -->
+  <!-- Hospitality -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef[defName="FCP_Faction_Powder_Gangers"]/pawnGroupMakers/li[kindDef="Peaceful"]</xpath>
     <nomatch Class="PatchOperationAdd">

@@ -30,8 +30,7 @@
 		<texture>World/WorldObjects/Sites/GenericSite</texture>
 	</WorldObjectDef>
 
-	<!-- Sites require at least one SitePart.  This deliberately has no linked
-	     GenStep: the courier itself is spawned and tracked by RobCoCourierCamp. -->
+	<!-- Courier Trail -->
 	<SitePartDef>
 		<defName>RobCo_CourierTrail</defName>
 		<label>courier trail</label>
@@ -74,17 +73,14 @@
 		<genStep Class="FIP.RobCo.GenStep_RobCoVaultThreats" />
 	</GenStepDef>
 
-	<!-- Dedicated quest-recovery body.  The explicit xenotype set prevents the
-	     University branch from producing an ordinary baseliner or a second
-	     Pacificator corpse. -->
+	<!-- Quest Courser -->
 	<PawnKindDef ParentName="SpaceRefugeeBase">
 		<defName>RobCo_QuestCourser</defName>
 		<label>courser</label>
 		<labelPlural>coursers</labelPlural>
 		<apparelMoney>800~1800</apparelMoney>
 		<gearHealthRange>0.5~0.8</gearHealthRange>
-		<!-- Required for every concrete humanlike PawnKindDef in RimWorld 1.6.
-		     The restored Courser joins directly, so it has no recruitment gate. -->
+		<!-- Recruitment -->
 		<initialWillRange>0</initialWillRange>
 		<initialResistanceRange>0~0</initialResistanceRange>
 		<xenotypeSet Inherit="False">

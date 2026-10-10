@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Keep the Fallout animal identities in the defs themselves. English
+    DefInjected entries remain useful for translation/export tooling, but the
+    in-game names must not depend on those entries being loaded.
+  -->
+
+  <!-- Pack rat (vanilla Muffalo) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Muffalo"]/label</xpath>
+    <value><label>pack rat</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Muffalo"]/description</xpath>
+    <value><description>A giant strain of mole rat domesticated throughout the wasteland as a tireless beast of burden. Its broad back can support an improbable stack of salvaged packs, while generations of caravan breeding have made it hardy, docile, and comfortable in almost any climate. Pack rats no longer form wild populations; they are raised and traded wherever caravans travel.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/label</xpath>
+    <value><label>pack rat</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/labelPlural</xpath>
+    <value><labelPlural>pack rats</labelPlural></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/label | Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/labelPlural</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/label | Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li/labelPlural</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[1]</xpath>
+    <value>
+      <label>pack rat pup</label>
+      <labelPlural>pack rat pups</labelPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[2]</xpath>
+    <value>
+      <label>juvenile pack rat</label>
+      <labelPlural>juvenile pack rats</labelPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Muffalo"]/lifeStages/li[3]</xpath>
+    <value>
+      <label>pack rat</label>
+      <labelPlural>pack rats</labelPlural>
+    </value>
+  </Operation>
+
+  <!-- Bisotope (vanilla Bison) -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bison"]/label</xpath>
+    <value><label>bisotope</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bison"]/description</xpath>
+    <value><description>A hulking, isotope-soaked descendant of the Old World bison. Generations of radiation have thickened its hide, warped its horns, and made entire herds dangerously territorial. Tamed bisotopes remain valuable pack animals and wool producers.</description></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/label</xpath>
+    <value><label>bisotope</label></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/labelPlural</xpath>
+    <value><labelPlural>bisotopes</labelPlural></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/label | Defs/PawnKindDef[defName="Bison"]/lifeStages/li/labelPlural</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li/label | Defs/PawnKindDef[defName="Bison"]/lifeStages/li/labelPlural</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[1]</xpath>
+    <value>
+      <label>bisotope calf</label>
+      <labelPlural>bisotope calves</labelPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[2]</xpath>
+    <value>
+      <label>juvenile bisotope</label>
+      <labelPlural>juvenile bisotopes</labelPlural>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]</xpath>
+    <value>
+      <label>bisotope</label>
+      <labelPlural>bisotopes</labelPlural>
+    </value>
+  </Operation>
+
+</Patch>

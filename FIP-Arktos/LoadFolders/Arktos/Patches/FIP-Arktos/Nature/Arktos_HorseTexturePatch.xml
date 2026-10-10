@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- Keep the vanilla Horse pawn while replacing its artwork with one complete Arktos set. -->
+  <!-- Horse -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Horse"]/lifeStages/li/bodyGraphicData/texPath</xpath>
     <value>
@@ -25,7 +25,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Recolor the custom white Arktos artwork without introducing extra coat textures. -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/PawnKindDef[defName="Horse"]/alternateGraphicChance</xpath>
     <match Class="PatchOperationReplace">

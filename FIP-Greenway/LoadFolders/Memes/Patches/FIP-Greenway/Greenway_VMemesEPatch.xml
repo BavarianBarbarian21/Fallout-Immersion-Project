@@ -1,59 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!--
-    Giant ants replace vanilla insectoids throughout FIP-Arktos. Keep the
-    gameplay meme, but make its generated ideology prose describe an
-    AntAgonizer-style wasteland cult instead of a generic space-insect faith.
-  -->
+  <!-- Insectoid Supremacy -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/generalRules</xpath>
     <value>
-      <generalRules>
-        <rulesStrings>
-          <li>memeAdjective-&gt;chitinous</li>
-          <li>memeAdjective-&gt;colony-bound</li>
-          <li>memeAdjective-&gt;ant-revering</li>
-          <li>memeCreed-&gt;the colony</li>
-          <li>memeCreed-&gt;ant doctrine</li>
-          <li>memeHyphenPrefix-&gt;ant</li>
-          <li>memeHyphenPrefix-&gt;hive</li>
-          <li>memeConcept-&gt;giant ants</li>
-          <li>memeConcept-&gt;the discipline of the colony</li>
-        </rulesStrings>
-      </generalRules>
+      <generalRules/>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/descriptionMaker</xpath>
     <value>
       <descriptionMaker>
-        <rules>
-          <rulesStrings>
-            <li>creation(tag=meme_InsectoidSupremacy)-&gt;[deity0_name] placed the first queen beneath the poisoned earth and taught her brood to outlast the folly of humankind.</li>
-            <li>episode(uses=1,tag=meme_InsectoidSupremacy)-&gt;[deity0_name] commanded [deity0_possessive] followers to study the giant ants: one purpose, one colony, and no weakness wasted.</li>
-            <li>intro(tag=meme_InsectoidSupremacy)-&gt;In the ruins of [place_name], the [memberNamePlural] raised a human colony modeled after the ant nests beneath their feet.</li>
-            <li>conflict(tag=meme_InsectoidSupremacy)-&gt;A fearful [foeLeader] ordered every giant ant nest burned, refusing to see anything but vermin.</li>
-            <li>founderJoin(tag=meme_InsectoidSupremacy)-&gt;[founderName] confronted the [foeLeader] and demonstrated that the wasteland's ants could be understood, guided, and survived.</li>
-            <li>victory(tag=meme_InsectoidSupremacy)-&gt;The discipline of the colony prevailed, and even the [foeLeader] was forced to respect the queen and her brood.</li>
-            <li>setup(tag=meme_InsectoidSupremacy)-&gt;[founderName] was a wasteland naturalist who survived for years among irradiated ant colonies and learned to read their trails, pheromones, and warning signs.</li>
-            <li>story(uses=1,tag=meme_InsectoidSupremacy)-&gt;Calling [founder_objective] the AntAgonizer, settlers mocked the armor and sermons until trained giant ants drove off the raiders at their gates.</li>
-            <li>lessonIntro(tag=meme_InsectoidSupremacy)-&gt;The old world collapsed under its own divisions, while the colony endured. This proves that</li>
-            <li>lesson(tag=meme_InsectoidSupremacy)-&gt;discipline, sacrifice, and loyalty to the colony are stronger than isolated human ambition</li>
-            <li>lessonReinforcement(tag=meme_InsectoidSupremacy)-&gt;Giant ants thrive in poisoned soil because every caste serves the whole. The wastes demand the same unity from us.</li>
-            <li>archistBasis(tag=meme_InsectoidSupremacy)-&gt;Pre-War laboratories altered the ant genome, but radiation and survival perfected what their scientists began.</li>
-            <li>archistFact(tag=meme_InsectoidSupremacy)-&gt;The giant ant is living proof that engineered life can escape its makers and master the wasteland.</li>
-            <li>archistProphecy(tag=meme_InsectoidSupremacy)-&gt;[inTheEnd], humanity will either learn the discipline of the colony or be swept aside by it.</li>
-            <li>animistBasis(tag=meme_InsectoidSupremacy)-&gt;The queen beneath the earth embodies endurance, fertility, and the will of the colony.</li>
-            <li>animistFact(tag=meme_InsectoidSupremacy)-&gt;Every worker, soldier, and queen carries the same unbroken purpose through the poisoned land.</li>
-            <li>animistProphecy(tag=meme_InsectoidSupremacy)-&gt;[itIsSaid] those who respect the trails and nests of the giant ants will never be abandoned by the land.</li>
-            <li>serketistProphecy(tag=meme_InsectoidSupremacy)-&gt;[itIsSaid] the faithful will become one colony beneath a queen strong enough to command the wastes.</li>
-            <li>chthonianProphecy(tag=meme_InsectoidSupremacy)-&gt;Deep nests touch forgotten caverns where mutant queens guard secrets no surface dweller was meant to know.</li>
-            <li>esotericismProphecy(tag=meme_InsectoidSupremacy)-&gt;Pheromone trails and the geometry of ant tunnels preserve a language older than any surviving settlement.</li>
-            <li>eschatologismFact(tag=meme_InsectoidSupremacy)-&gt;When the final settlements fall, the colonies beneath them will continue to feed, breed, and expand.</li>
-            <li>introMemo(tag=meme_InsectoidSupremacy)-&gt;Pest control is suspended. All giant ant sightings are to be reported to the colony handler for observation and possible conditioning.</li>
-            <li>alienistProphecy(tag=meme_InsectoidSupremacy)-&gt;The ant strains born from Pre-War experimentation are not mistakes; they are heirs adapted to the world humanity created.</li>
-          </rulesStrings>
-        </rules>
+        <rules/>
       </descriptionMaker>
     </value>
   </Operation>
@@ -61,17 +19,12 @@
     <xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/symbolPacks</xpath>
     <value>
       <symbolPacks>
-        <li>
-          <ideoName>AntAgonizer</ideoName>
-          <theme>giant ants</theme>
-          <adjective>chitinous</adjective>
-          <member>ant devotee</member>
-        </li>
+        <li/>
       </symbolPacks>
     </value>
   </Operation>
 
-  <!-- The original preset depended on the disabled Egyptian Serketist structure. -->
+  <!-- Insectoid Psykers -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/IdeoPresetDef[defName="VME_Insectoid_Psykers"]/memes</xpath>
     <value>
@@ -87,26 +40,11 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/RulePackDef[defName="VME_InsectoidHerder"]/rulePack</xpath>
     <value>
-      <rulePack>
-        <rulesStrings>
-          <li>r_roleName(p=7)-&gt;[firstPart][secondPart]</li>
-          <li>r_roleName-&gt;AntAgonizer</li>
-          <li>firstPart-&gt;Ant </li>
-          <li>firstPart-&gt;Brood </li>
-          <li>firstPart-&gt;Chitin </li>
-          <li>firstPart-&gt;Colony </li>
-          <li>firstPart-&gt;Queen's </li>
-          <li>secondPart(p=4)-&gt;Handler</li>
-          <li>secondPart(p=4)-&gt;Keeper</li>
-          <li>secondPart(p=4)-&gt;Speaker</li>
-          <li>secondPart(p=4)-&gt;Warden</li>
-          <li>secondPart(p=4)-&gt;Caller</li>
-        </rulesStrings>
-      </rulePack>
+      <rulePack/>
     </value>
   </Operation>
 
-  <!-- Government contradictions across VMemesE and Greenway. -->
+  <!-- Governments -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/MemeDef[defName="Greenway_Government_Democratic"]</xpath>
     <value>
@@ -158,7 +96,7 @@
     </value>
   </Operation>
 
-  <!-- Do not spend multiple meme slots on the same abolitionist identity. -->
+  <!-- Abolitionists -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/MemeDef[defName="Greenway_DesertRanger" or defName="Greenway_Railroad"]</xpath>
     <value>
@@ -174,7 +112,7 @@
     </value>
   </Operation>
 
-  <!-- Purging mutation and pursuing forced evolution cannot coexist. -->
+  <!-- Mutants -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/MemeDef[defName="Greenway_MutantPurge"]</xpath>
     <value>
@@ -190,7 +128,7 @@
     </value>
   </Operation>
 
-  <!-- Fallout preset compositions. All referenced Greenway memes already exist. -->
+  <!-- Presets -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/IdeoPresetDef[defName="VME_Human_Hive"]/memes</xpath>
     <value><memes><li>VME_Gestalt</li><li>Greenway_MutantMasters</li><li>Collectivist</li></memes></value>
@@ -264,8 +202,7 @@
     <value><memes><li>Greenway_Religion_Native</li><li>VME_Vegan</li><li>VME_ViolentConversion</li><li>TreeConnection</li><li>VME_ExaltedPriesthood</li></memes></value>
   </Operation>
 
-  <!-- Royalty integration is optional in VMemesE. Translatable text lives in
-       the conditionally loaded VMemesE_Royalty language layer. -->
+  <!-- Royalty -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/MemeDef[defName="VME_Royal"]</xpath>
     <match Class="PatchOperationAdd">

@@ -1,0 +1,15 @@
+{
+  textureWidth: 16,
+  textureHeight: 16,
+  elements: [
+    {
+      name: "Water surface",
+      from: [2.0, 0.0, 4.0],
+      to: [14.0, 0.01, 12.0],
+      renderPass: 4,
+      faces: {
+        up: { texture: "#water", uv: [0, 0, 12, 8] }
+      }
+    }
+  ]
+}

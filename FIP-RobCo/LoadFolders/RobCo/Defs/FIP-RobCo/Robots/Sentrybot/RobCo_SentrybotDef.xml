@@ -99,7 +99,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotSiegebreaker</defName>
 		<label>siegebreaker sentrybot</label>
-		<description>A sentry bot variant configured for fortification assault and anti-armor operations. Its primary weapon system is a rack of high-yield rocket launchers suited to demolishing reinforced structures. It rides on a mecanum wheel base that allows movement across most terrain. Standard sentry bot armor and combat protocols are retained.</description>
+		<description>A sentry bot variant configured for fortification assault and anti-armor operations. Its slow-firing grenade launcher maintains pressure on fortified positions while an integrated rocket battery periodically delivers heavy demolition salvos. It rides on a mecanum wheel base that allows movement across most terrain. Standard sentry bot armor and combat protocols are retained.</description>
 		<race>
 			<lifeStageAges>
 				<li>
@@ -148,6 +148,9 @@
 		<weaponTags>
 			<li>RobCo_SentrybotSiegebreakerLauncher</li>
 		</weaponTags>
+		<abilities>
+			<li>RobCo_SentrybotRocketSalvo</li>
+		</abilities>
 	</PawnKindDef>
 	<RecipeDef ParentName="RobCo_SentrybotBase_Recipe">
 		<defName>RobCo_SentrybotSiegebreaker_Recipe</defName>
@@ -300,7 +303,7 @@
 	<ThingDef ParentName="RobCo_SentrybotBase">
 		<defName>RobCo_SentrybotDeathbot</defName>
 		<label>deathbot</label>
-		<description>A sentry bot carrying a combined full weapons suite: minigun, rocket launcher, flamethrower, and cluster grenade launchers. It is one of the most heavily armed autonomous units encountered in the wasteland. Its central processor contains a nanostructuring chip, suggesting it was used as a testbed for advanced nanotechnology programs before or after the war.</description>
+		<description>A sentry bot carrying a combined weapons suite of minigun, demolition rocket battery, and close-range flamethrower. It is one of the most heavily armed autonomous units encountered in the wasteland. Its central processor contains a nanostructuring chip, suggesting it was used as a testbed for advanced nanotechnology programs before or after the war.</description>
 		<race>
 			<body>RobCo_Sentrybot</body>
 			<intelligence>ToolUser</intelligence>
@@ -333,9 +336,11 @@
 			</li>
 		</lifeStages>
 		<weaponTags>
-			<li>RobCo_SentrybotDeathbotLauncher</li>
-			<li>RobCo_SentrybotDeathbotExterminator</li>
 			<li>RobCo_SentrybotDeathbotMinigun</li>
 		</weaponTags>
+		<abilities>
+			<li>RobCo_DeathbotFlamer</li>
+			<li>RobCo_SentrybotRocketSalvo</li>
+		</abilities>
 	</PawnKindDef>
 </Defs>

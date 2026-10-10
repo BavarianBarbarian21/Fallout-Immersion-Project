@@ -38,8 +38,15 @@
 
 	<ThingDef ParentName="RobCo_BaseGun">
 		<defName>RobCo_SecuritronElectroshock</defName>
-		<label>securitron police laser</label>
-		<description>Upgraded laser platform integrated into a Securitron Mark II with an onboard rocket battery.</description>
+		<label>securitron 9mm submachine gun</label>
+		<description>An upgraded 9mm submachine gun integrated into a Securitron Mark II with an onboard rocket battery.</description>
+		<statBases>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.78</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
 		<graphicData>
 			<texPath>FIP-RobCo/Weapons/Securitron/RobCo_SecuritronArm</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -50,14 +57,14 @@
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
-				<defaultProjectile>RobCo_Bullet_LaserMedium</defaultProjectile>
-				<warmupTime>1.0</warmupTime>
-				<range>26</range>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-				<soundCast>Shot_ChargeRifle</soundCast>
-				<soundCastTail>GunTail_Light</soundCastTail>
-				<muzzleFlashScale>1.2</muzzleFlashScale>
+				<defaultProjectile>RobCo_Bullet_BallisticAuto</defaultProjectile>
+				<warmupTime>0.7</warmupTime>
+				<range>30</range>
+				<burstShotCount>8</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>1.7</muzzleFlashScale>
 			</li>
 		</verbs>
 		<tools>

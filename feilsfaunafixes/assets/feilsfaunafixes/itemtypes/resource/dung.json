@@ -1,0 +1,59 @@
+{
+  code: "dung",
+  maxstacksize: 64,
+  behaviors: [
+    {
+      name: "GroundStorable",
+      properties: {
+        layout: "Stacking",
+        placeRemoveSound: "block/dirt",
+        stackingModel: "game:block/peatpile",
+        stackingTextures: {
+          sides: "feilsfaunafixes:item/resource/dung",
+          peat: "feilsfaunafixes:item/resource/dung"
+        },
+        modelItemsToStackSizeRatio: 1,
+        upSolid: true,
+        stackingCapacity: 32,
+        transferQuantity: 1,
+        bulkTransferQuantity: 4,
+        collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.125, z2: 1 },
+        cbScaleYByLayer: 0.25,
+        burnHoursPerItem: 0.5
+      }
+    }
+  ],
+  shape: { base: "feilsfaunafixes:item/resource/dung" },
+  textures: {
+    material: { base: "feilsfaunafixes:item/resource/dung" }
+  },
+  creativeinventory: { general: ["*"], items: ["*"] },
+  attributes: {
+    displaycaseable: true,
+    shelvable: true,
+    inContainerTexture: { base: "feilsfaunafixes:item/resource/dung" },
+    waterTightContainerProps: {
+      texture: { base: "feilsfaunafixes:item/resource/dung" },
+      itemsPerLitre: 1,
+      isopaque: true,
+      maxStackSize: 64
+    }
+  },
+  materialDensity: 620,
+  combustibleProps: {
+    burnTemperature: 700,
+    burnDuration: 24
+  },
+  guiTransform: {
+    translation: { x: 0, y: -1.5, z: 0 },
+    rotation: { x: -25, y: 35, z: 0 },
+    origin: { x: 0.5, y: 0.25, z: 0.5 },
+    scale: 2.4
+  },
+  groundTransform: {
+    translation: { x: 0, y: 0, z: 0 },
+    rotation: { x: 0, y: 0, z: 0 },
+    origin: { x: 0.5, y: 0.05, z: 0.5 },
+    scale: 2.6
+  }
+}

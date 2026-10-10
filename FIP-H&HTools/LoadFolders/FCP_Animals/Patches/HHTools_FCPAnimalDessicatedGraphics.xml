@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- FCP Animals 1.6 references three dessicated graphics that are not
-       included in the mod. Reuse size-appropriate Vanilla skeletons until
-       FCP provides the missing assets. -->
+  <!-- Desiccated Graphics -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="FCP_Animal_Rad_Raven"]/lifeStages/li/dessicatedBodyGraphicData/texPath</xpath>
     <value>

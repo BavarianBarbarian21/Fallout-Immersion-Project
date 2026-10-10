@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- Both young life stages use the same sex-independent Bisotope artwork. -->
+  <!-- Bisotope -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[position() &lt; 3]/bodyGraphicData/texPath</xpath>
     <value>
@@ -9,7 +9,6 @@
     </value>
   </Operation>
 
-  <!-- Adult bodyGraphicData is the male fallback; females receive their own set below. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[3]/bodyGraphicData/texPath</xpath>
     <value>
@@ -65,7 +64,6 @@
     </nomatch>
   </Operation>
 
-  <!-- Calves and juveniles share one skeleton; adult males use the horned male skeleton. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/PawnKindDef[defName="Bison"]/lifeStages/li[position() &lt; 3]/dessicatedBodyGraphicData/texPath</xpath>
     <value>

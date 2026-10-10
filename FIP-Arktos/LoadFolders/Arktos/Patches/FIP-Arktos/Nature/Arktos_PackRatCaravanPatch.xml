@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Pack Rats are domesticated caravan animals, not members of Arktos wildlife. -->
+  <!-- Pack Rat -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
     <match Class="PatchOperationRemove">
@@ -27,7 +27,6 @@
     </match>
   </Operation>
 
-  <!-- Restore Pack Rats as a normal option for every faction that fields caravan traders. -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
     <match Class="PatchOperationRemove">

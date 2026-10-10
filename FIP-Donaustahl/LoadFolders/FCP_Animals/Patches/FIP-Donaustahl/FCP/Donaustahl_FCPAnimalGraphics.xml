@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- FCP Animals 1.6 references three desiccated textures which are not shipped by the mod. -->
+  <!-- Desiccated Graphics -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/PawnKindDef/lifeStages/li/dessicatedBodyGraphicData/texPath[text()="Animals/Rad_Raven/FCP_Dessicated_Rad_Raven"]</xpath>
     <match Class="PatchOperationReplace">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Normalize the Arktos Pack Rat to a regular option for every loaded NPC trader carrier list. -->
+  <!-- Pack Rat -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/Muffalo</xpath>
     <match Class="PatchOperationRemove">
@@ -27,7 +27,7 @@
     </match>
   </Operation>
 
-  <!-- Add Muffalo once to every explicit biome list. Root biome definitions without a list receive one. -->
+  <!-- Biomes -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="Muffalo"]</xpath>
     <match Class="PatchOperationRemove">

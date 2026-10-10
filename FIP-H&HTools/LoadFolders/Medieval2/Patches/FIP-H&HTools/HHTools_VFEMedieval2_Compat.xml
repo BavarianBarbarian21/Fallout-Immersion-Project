@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Patch>
-  <!-- Settings-controlled faction and scenario suppression is applied after defs load. 
+  <!-- Factions
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/FactionDef[defName="VFEM2_KingdomCivil"]</xpath>
     <value>
@@ -113,7 +113,7 @@
     </value>
   </Operation>
   -->
-  <!-- Building visibility is applied by HHToolsRestoreApplier, scoped to Medieval buildings. -->
+  <!-- Buildings -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="VFEM2_ArcheryTarget"]/graphicData/texPath</xpath>
     <value>
@@ -132,7 +132,7 @@
       <uiIconPath>FIP-H&amp;HTools/TrainingDummy/HHTools_TrainingDummy_MenuIcon</uiIconPath>
     </value>
   </Operation>
-  <!-- Optional equipment and wall structures use HHTools_OptionalMedievalContent.xml; quests use HHToolsRestoreApplier. -->
+  <!-- Merchant Guild -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/FactionDef[defName="VFEM2_MerchantGuild"]/factionNameMaker</xpath>
     <value>

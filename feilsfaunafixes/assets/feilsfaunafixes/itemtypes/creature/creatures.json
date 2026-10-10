@@ -1,0 +1,50 @@
+{
+  code: "creature",
+  class: "ItemCreature",
+  maxstacksize: 64,
+  variantgroups: [
+    { code: "type", states: ["squirrel", "monkey"] }
+  ],
+  shapeByType: {
+    "creature-squirrel": { base: "feilsfaunafixes:entity/animal/mammal/squirrel" },
+    "creature-monkey": { base: "feilsfaunafixes:entity/animal/mammal/monkey" }
+  },
+  texturesByType: {
+    "creature-squirrel": {
+      "body": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-body" },
+      "dark": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-dark" },
+      "cream": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-cream" },
+      "black": { base: "feilsfaunafixes:entity/animal/mammal/squirrel-black" }
+    },
+    "creature-monkey": {
+      "body": { base: "feilsfaunafixes:entity/animal/mammal/monkey-body" },
+      "skin": { base: "feilsfaunafixes:entity/animal/mammal/monkey-skin" },
+      "dark": { base: "feilsfaunafixes:entity/animal/mammal/monkey-dark" },
+      "black": { base: "feilsfaunafixes:entity/animal/mammal/monkey-black" }
+    }
+  },
+  creativeinventory: { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+  materialDensity: 600,
+  heldTpIdleAnimation: "holdunderarm",
+  guiTransformByType: {
+    "creature-squirrel": {
+      rotate: true,
+      translation: { x: 2, y: 1, z: 0 },
+      rotation: { x: 4, y: -59, z: -180 },
+      origin: { x: 0.5, y: 0.35, z: 0.5 },
+      scale: 3.2
+    },
+    "creature-monkey": {
+      rotate: true,
+      translation: { x: 1, y: 0, z: 0 },
+      rotation: { x: 4, y: -59, z: -180 },
+      origin: { x: 0.5, y: 0.5, z: 0.5 },
+      scale: 2.4
+    }
+  },
+  tpHandTransform: {
+    translation: { x: -0.8, y: -0.4, z: -0.5 },
+    rotation: { x: -180, y: 0, z: -156 },
+    scale: 0.65
+  }
+}

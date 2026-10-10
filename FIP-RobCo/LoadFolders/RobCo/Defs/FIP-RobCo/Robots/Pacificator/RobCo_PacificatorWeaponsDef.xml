@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="RobCo_BaseGun">
+		<defName>RobCo_PacificatorTwinCannons</defName>
+		<label>pacificator twin cannons</label>
+		<description>Twin heavy grenade cannons integrated into the Pacificator's armored chassis.</description>
+		<statBases>
+			<MarketValue>2200</MarketValue>
+			<Mass>12</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+		</statBases>
+		<graphicData>
+			<texPath>FIP-RobCo/Weapons/Misc/RobCo_Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+			<li>RobCo_PacificatorTwinCannons</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RobCo_Bullet_SentryGrenade</defaultProjectile>
+				<forcedMissRadius>1.2</forcedMissRadius>
+				<warmupTime>3.5</warmupTime>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<range>35.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+</Defs>

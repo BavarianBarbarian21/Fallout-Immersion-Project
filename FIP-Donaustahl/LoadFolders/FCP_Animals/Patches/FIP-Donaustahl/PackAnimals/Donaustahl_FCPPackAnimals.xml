@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Brahmin remain the most common Fallout carrier without crowding Pack Rats out. -->
+  <!-- Brahmin -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/FactionDef/pawnGroupMakers/li[kindDef="Trader"]/carriers/FCP_Animal_Brahmin</xpath>
     <match Class="PatchOperationRemove">
@@ -15,7 +15,7 @@
     </value>
   </Operation>
 
-  <!-- Brahmin are permitted in every explicit biome list when FCP Animals is active. -->
+  <!-- Biomes -->
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/BiomeDef[not(@ParentName) or allowedPackAnimals[@Inherit="False"]]/allowedPackAnimals/li[.="FCP_Animal_Brahmin"]</xpath>
     <match Class="PatchOperationRemove">

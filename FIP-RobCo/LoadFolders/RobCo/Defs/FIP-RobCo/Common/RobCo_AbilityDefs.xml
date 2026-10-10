@@ -83,10 +83,10 @@
 	<AbilityDef>
 		<defName>RobCo_SecuritronRocketSalvo</defName>
 		<label>rocket salvo</label>
-		<description>Launches a three-rocket saturation strike.</description>
+		<description>Launches a five-rocket saturation strike.</description>
 		<iconPath>FIP-RobCo/Weapons/Sentry/RobCo_SentryRocketLauncher</iconPath>
 		<aiCanUse>true</aiCanUse>
-		<cooldownTicksRange>600~600</cooldownTicksRange>
+		<cooldownTicksRange>1800~1800</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
 		<showPsycastEffects>false</showPsycastEffects>
 		<verbProperties>
@@ -106,7 +106,73 @@
 				<projectileDef>RobCo_Bullet_SecuritronRocket</projectileDef>
 				<forcedMissRadius>1.8</forcedMissRadius>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>3</burstShotCount>
+				<burstShotCount>5</burstShotCount>
+				<usesCharges>false</usesCharges>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RobCo_SentrybotRocketSalvo</defName>
+		<label>rocket salvo</label>
+		<description>Launches six demolition rockets in a saturation strike.</description>
+		<iconPath>FIP-RobCo/Weapons/Sentry/RobCo_SentryRocketLauncher</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>1200~1200</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		<showPsycastEffects>false</showPsycastEffects>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<requireLineOfSight>false</requireLineOfSight>
+			<range>35.9</range>
+			<minRange>12</minRange>
+			<warmupTime>2.5</warmupTime>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="FIP.RobCo.CompProperties_AbilityLaunchProjectileMultiple">
+				<projectileDef>RobCo_Bullet_SentryRocket</projectileDef>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<usesCharges>false</usesCharges>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RobCo_DeathbotFlamer</defName>
+		<label>heavy flamer</label>
+		<description>Projects a short-range incendiary burst from the Deathbot's integrated flamer.</description>
+		<iconPath>UI/Abilities/FireSpew</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<ai_IsIncendiary>true</ai_IsIncendiary>
+		<cooldownTicksRange>1200~1200</cooldownTicksRange>
+		<warmupStartSound>FireSpew_Warmup</warmupStartSound>
+		<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<requireLineOfSight>true</requireLineOfSight>
+			<range>10</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>FireSpew_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFireSpew">
+				<range>10</range>
+				<lineWidthEnd>3</lineWidthEnd>
+				<filthDef>Filth_Ash</filthDef>
+				<damAmount>12</damAmount>
+				<effecterDef>Fire_Spew</effecterDef>
+				<canHitFilledCells>true</canHitFilledCells>
 			</li>
 		</comps>
 	</AbilityDef>
